@@ -30,7 +30,10 @@ enum StoreLauncher {
             let pack = line.offer.packageAmount.rounded() == line.offer.packageAmount
                 ? String(Int(line.offer.packageAmount))
                 : String(line.offer.packageAmount)
-            return "• \(line.line.title) — \(line.packages) × \(pack) \(line.offer.unit.short)"
+            if line.offer.isWeighted {
+                return "• \(line.offer.title ?? line.line.title) — \(Int(line.line.requiredAmount)) \(line.line.unit.short)"
+            }
+            return "• \(line.offer.title ?? line.line.title) — \(line.packages) × \(pack) \(line.offer.unit.short)"
         }
         .joined(separator: "\n")
     }

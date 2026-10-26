@@ -3,6 +3,7 @@ import SwiftData
 
 struct RecipeListView: View {
     @Query(sort: \Recipe.title) private var recipes: [Recipe]
+    @State private var showSettings = false
 
     var body: some View {
         NavigationStack {
@@ -24,6 +25,12 @@ struct RecipeListView: View {
                 }
             }
             .navigationTitle("Рецепты")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button { showSettings = true } label: { Image(systemName: "gearshape") }
+                }
+            }
+            .sheet(isPresented: $showSettings) { SettingsView() }
             .navigationDestination(for: Recipe.self) { RecipeDetailView(recipe: $0) }
             .navigationDestination(for: Build.self) { BuildDetailView(build: $0) }
             .overlay {

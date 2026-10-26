@@ -6,7 +6,12 @@ struct QuoteLine: Hashable, Sendable {
     let offer: StoreOffer
     let packages: Int
 
-    var cost: Decimal { offer.price * Decimal(packages) }
+    var cost: Decimal {
+        if offer.isWeighted, offer.unit == line.unit, offer.packageAmount > 0 {
+            return (offer.price * Decimal(line.requiredAmount / offer.packageAmount)).rounded(scale: 2)
+        }
+        return offer.price * Decimal(packages)
+    }
 }
 
 /// Итог по одному магазину.
@@ -88,5 +93,14 @@ struct CartComparisonService: Sendable {
             return result
         }
         return CartComparator.rank(quotes)
+    }
+}
+
+extension Decimal {
+    func rounded(scale: Int) -> Decimal {
+        var value = self
+        var result = Decimal()
+        NSDecimalRound(&result, &value, scale, .plain)
+        return result
     }
 }

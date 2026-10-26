@@ -18,6 +18,10 @@ struct Store: Identifiable, Hashable, Sendable {
     let appScheme: String?
     let appStoreURL: URL?
     let webURL: URL?
+    /// Город, для которого получен магазин (нужен серверу при запросе цен).
+    var cityId: String? = nil
+    /// Пояснение к доставке, если точные условия неизвестны.
+    var deliveryNote: String? = nil
 }
 
 /// Позиция корзины: что нужно купить для сборки.
@@ -37,6 +41,10 @@ struct StoreOffer: Hashable, Sendable {
     let packageAmount: Double
     let unit: MeasureUnit
     let inStock: Bool
+    /// Название товара в магазине (что именно подобрано).
+    var title: String? = nil
+    /// Весовой товар: цена за packageAmount, покупается ровно нужное количество.
+    var isWeighted: Bool = false
 }
 
 /// Источник цен и магазинов. Для каждого реального источника (партнёрский API,

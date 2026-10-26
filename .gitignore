@@ -11,3 +11,7 @@ xcuserdata/
 # macOS / Windows
 .DS_Store
 Thumbs.db
+__pycache__/
+.venv/
+*.pyc
+backend/screenshot.png

@@ -24,6 +24,9 @@ targets:
         UILaunchScreen: {}
         UISupportedInterfaceOrientations:
           - UIInterfaceOrientationPortrait
+        # Разрешает http к серверу в локальной сети (для разработки).
+        NSAppTransportSecurity:
+          NSAllowsLocalNetworking: true
         # URL-схемы приложений магазинов, которые мы проверяем через canOpenURL.
         # Добавлять сюда реальные схемы, когда они будут известны (лимит Apple — 50).
         LSApplicationQueriesSchemes:

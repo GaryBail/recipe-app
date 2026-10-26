@@ -3,9 +3,15 @@ import SwiftUI
 /// Сравнение корзины по магазинам выбранного города и переход в магазин.
 struct CartComparisonView: View {
     let lines: [CartLine]
-    var provider: any PriceProvider = MockPriceProvider()
+    /// Для превью/тестов; по умолчанию источник выбирается по настройкам.
+    var providerOverride: (any PriceProvider)? = nil
 
     @AppStorage("cityId") private var cityId = "msk"
+    @AppStorage(PriceProviderFactory.serverURLKey) private var serverURL = ""
+
+    private var provider: any PriceProvider {
+        providerOverride ?? PriceProviderFactory.make(serverURL: serverURL)
+    }
     @Environment(\.openURL) private var openURL
 
     @State private var cities: [City] = []
@@ -44,8 +50,8 @@ struct CartComparisonView: View {
             }
         }
         .navigationTitle("Где дешевле")
-        .task { await loadCities() }
-        .task(id: cityId) { await loadQuotes() }
+        .task(id: serverURL) { await loadCities() }
+        .task(id: "\(cityId)|\(serverURL)") { await loadQuotes() }
         .alert(prompt?.title ?? "",
                isPresented: Binding(get: { prompt != nil }, set: { if !$0 { prompt = nil } }),
                presenting: prompt) { p in
@@ -132,9 +138,23 @@ private struct QuoteRow: View {
                 Text(quote.total, format: .currency(code: "RUB").precision(.fractionLength(0)))
                     .font(.headline)
             }
-            Text("Товары \(quote.itemsTotal.formatted(.currency(code: "RUB").precision(.fractionLength(0)))) · доставка \(quote.deliveryFee.formatted(.currency(code: "RUB").precision(.fractionLength(0))))")
-                .font(.caption)
-                .foregroundStyle(.secondary)
+            if let note = quote.store.deliveryNote {
+                Text("Товары \(quote.itemsTotal.formatted(.currency(code: "RUB").precision(.fractionLength(0)))) · \(note.lowercased())")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            } else {
+                Text("Товары \(quote.itemsTotal.formatted(.currency(code: "RUB").precision(.fractionLength(0)))) · доставка \(quote.deliveryFee.formatted(.currency(code: "RUB").precision(.fractionLength(0))))")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+            ForEach(quote.lines, id: \.line.productId) { item in
+                if let title = item.offer.title {
+                    Text("• \(title)")
+                        .font(.caption2)
+                        .foregroundStyle(.secondary)
+                        .lineLimit(1)
+                }
+            }
             if !quote.missing.isEmpty {
                 Text("Нет в наличии: " + quote.missing.map(\.title).joined(separator: ", "))
                     .font(.caption)
