@@ -1,0 +1,13 @@
+# Генерируется XcodeGen из project.yml
+*.xcodeproj/
+RecipeApp/Info.plist
+
+# Xcode
+DerivedData/
+build/
+xcuserdata/
+*.xcuserstate
+
+# macOS / Windows
+.DS_Store
+Thumbs.db

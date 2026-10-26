@@ -1,0 +1,56 @@
+name: RecipeApp
+options:
+  bundleIdPrefix: com.garybail
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MARKETING_VERSION: "0.1.0"
+    CURRENT_PROJECT_VERSION: "1"
+
+targets:
+  RecipeApp:
+    type: application
+    platform: iOS
+    sources:
+      - path: RecipeApp
+    info:
+      path: RecipeApp/Info.plist
+      properties:
+        CFBundleDisplayName: Рецепты
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        # URL-схемы приложений магазинов, которые мы проверяем через canOpenURL.
+        # Добавлять сюда реальные схемы, когда они будут известны (лимит Apple — 50).
+        LSApplicationQueriesSchemes:
+          - storea
+          - storeb
+          - storec
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.garybail.recipeapp
+
+  RecipeAppTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: RecipeAppTests
+    dependencies:
+      - target: RecipeApp
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+
+schemes:
+  RecipeApp:
+    build:
+      targets:
+        RecipeApp: all
+        RecipeAppTests: [test]
+    test:
+      targets:
+        - RecipeAppTests

@@ -1,0 +1,111 @@
+{
+  "products": [
+    { "id": "spaghetti-barilla", "name": "Спагетти №5", "brand": "Barilla", "categoryId": "spaghetti", "barcode": null },
+    { "id": "spaghetti-makfa", "name": "Спагетти", "brand": "Макфа", "categoryId": "spaghetti", "barcode": null },
+    { "id": "spaghetti-dececco", "name": "Спагетти №12", "brand": "De Cecco", "categoryId": "spaghetti", "barcode": null },
+
+    { "id": "guanciale", "name": "Гуанчале", "brand": null, "categoryId": "pork-cured", "barcode": null },
+    { "id": "pancetta", "name": "Панчетта", "brand": null, "categoryId": "pork-cured", "barcode": null },
+    { "id": "bacon-smoked", "name": "Бекон копчёный", "brand": null, "categoryId": "pork-cured", "barcode": null },
+
+    { "id": "pecorino-romano", "name": "Пекорино Романо", "brand": null, "categoryId": "hard-cheese", "barcode": null },
+    { "id": "parmesan", "name": "Пармезан", "brand": null, "categoryId": "hard-cheese", "barcode": null },
+    { "id": "grana-padano", "name": "Грана Падано", "brand": null, "categoryId": "hard-cheese", "barcode": null },
+
+    { "id": "eggs-c0", "name": "Яйца С0", "brand": null, "categoryId": "eggs", "barcode": null },
+    { "id": "eggs-c1", "name": "Яйца С1", "brand": null, "categoryId": "eggs", "barcode": null },
+
+    { "id": "pepper-ground", "name": "Перец чёрный молотый", "brand": null, "categoryId": "black-pepper", "barcode": null },
+    { "id": "pepper-whole", "name": "Перец чёрный горошек", "brand": null, "categoryId": "black-pepper", "barcode": null },
+
+    { "id": "tomato-cherry", "name": "Томаты черри", "brand": null, "categoryId": "tomatoes", "barcode": null },
+    { "id": "tomato-pink", "name": "Томаты розовые", "brand": null, "categoryId": "tomatoes", "barcode": null },
+
+    { "id": "cucumber-short", "name": "Огурцы короткоплодные", "brand": null, "categoryId": "cucumbers", "barcode": null },
+    { "id": "cucumber-long", "name": "Огурцы длинноплодные", "brand": null, "categoryId": "cucumbers", "barcode": null },
+
+    { "id": "feta-greek", "name": "Фета греческая", "brand": null, "categoryId": "feta", "barcode": null },
+    { "id": "feta-brine", "name": "Брынза", "brand": null, "categoryId": "feta", "barcode": null },
+
+    { "id": "olives-kalamata", "name": "Оливки Каламата", "brand": null, "categoryId": "olives", "barcode": null },
+    { "id": "olives-black", "name": "Маслины без косточки", "brand": null, "categoryId": "olives", "barcode": null },
+
+    { "id": "oil-ev", "name": "Масло оливковое Extra Virgin", "brand": null, "categoryId": "olive-oil", "barcode": null },
+    { "id": "oil-pomace", "name": "Масло оливковое рафинированное", "brand": null, "categoryId": "olive-oil", "barcode": null },
+
+    { "id": "onion-red", "name": "Лук красный", "brand": null, "categoryId": "onion", "barcode": null },
+    { "id": "onion-yellow", "name": "Лук репчатый", "brand": null, "categoryId": "onion", "barcode": null },
+
+    { "id": "tvorog-5", "name": "Творог 5%", "brand": null, "categoryId": "tvorog", "barcode": null },
+    { "id": "tvorog-9", "name": "Творог 9%", "brand": null, "categoryId": "tvorog", "barcode": null },
+
+    { "id": "flour-wheat", "name": "Мука пшеничная в/с", "brand": null, "categoryId": "flour", "barcode": null },
+    { "id": "flour-rice", "name": "Мука рисовая", "brand": null, "categoryId": "flour", "barcode": null },
+
+    { "id": "sugar-white", "name": "Сахар белый", "brand": null, "categoryId": "sugar", "barcode": null },
+    { "id": "sugar-cane", "name": "Сахар тростниковый", "brand": null, "categoryId": "sugar", "barcode": null },
+
+    { "id": "sour-cream-15", "name": "Сметана 15%", "brand": null, "categoryId": "sour-cream", "barcode": null },
+    { "id": "sour-cream-20", "name": "Сметана 20%", "brand": null, "categoryId": "sour-cream", "barcode": null }
+  ],
+  "recipes": [
+    {
+      "id": "carbonara",
+      "title": "Паста карбонара",
+      "summary": "Классическая римская паста с яйцом, сыром и свининой.",
+      "servings": 2,
+      "steps": [
+        "Отварите спагетти в подсоленной воде до состояния аль денте.",
+        "Обжарьте нарезанную свинину до хруста без масла.",
+        "Смешайте желтки с тёртым сыром и перцем.",
+        "Соедините пасту со свининой, снимите с огня и вмешайте яичную смесь, добавляя воду от пасты."
+      ],
+      "ingredients": [
+        { "id": "carbonara-pasta", "title": "Спагетти", "categoryId": "spaghetti", "amount": 200, "unit": "g" },
+        { "id": "carbonara-pork", "title": "Свинина вяленая", "categoryId": "pork-cured", "amount": 100, "unit": "g" },
+        { "id": "carbonara-cheese", "title": "Твёрдый сыр", "categoryId": "hard-cheese", "amount": 60, "unit": "g" },
+        { "id": "carbonara-eggs", "title": "Яйца", "categoryId": "eggs", "amount": 3, "unit": "pcs" },
+        { "id": "carbonara-pepper", "title": "Чёрный перец", "categoryId": "black-pepper", "amount": 5, "unit": "g" }
+      ]
+    },
+    {
+      "id": "greek-salad",
+      "title": "Греческий салат",
+      "summary": "Свежие овощи, фета и оливки с оливковым маслом.",
+      "servings": 2,
+      "steps": [
+        "Крупно нарежьте томаты и огурцы.",
+        "Нарежьте лук тонкими полукольцами.",
+        "Добавьте оливки, сверху положите фету.",
+        "Полейте оливковым маслом."
+      ],
+      "ingredients": [
+        { "id": "greek-tomatoes", "title": "Томаты", "categoryId": "tomatoes", "amount": 300, "unit": "g" },
+        { "id": "greek-cucumbers", "title": "Огурцы", "categoryId": "cucumbers", "amount": 200, "unit": "g" },
+        { "id": "greek-feta", "title": "Фета", "categoryId": "feta", "amount": 150, "unit": "g" },
+        { "id": "greek-olives", "title": "Оливки", "categoryId": "olives", "amount": 80, "unit": "g" },
+        { "id": "greek-oil", "title": "Оливковое масло", "categoryId": "olive-oil", "amount": 30, "unit": "ml" },
+        { "id": "greek-onion", "title": "Лук", "categoryId": "onion", "amount": 1, "unit": "pcs" }
+      ]
+    },
+    {
+      "id": "syrniki",
+      "title": "Сырники",
+      "summary": "Нежные творожные сырники на завтрак.",
+      "servings": 3,
+      "steps": [
+        "Разомните творог с яйцом и сахаром.",
+        "Добавьте муку и замесите мягкую массу.",
+        "Сформируйте сырники и обжарьте с двух сторон.",
+        "Подавайте со сметаной."
+      ],
+      "ingredients": [
+        { "id": "syrniki-tvorog", "title": "Творог", "categoryId": "tvorog", "amount": 400, "unit": "g" },
+        { "id": "syrniki-eggs", "title": "Яйца", "categoryId": "eggs", "amount": 1, "unit": "pcs" },
+        { "id": "syrniki-flour", "title": "Мука", "categoryId": "flour", "amount": 60, "unit": "g" },
+        { "id": "syrniki-sugar", "title": "Сахар", "categoryId": "sugar", "amount": 30, "unit": "g" },
+        { "id": "syrniki-sour-cream", "title": "Сметана", "categoryId": "sour-cream", "amount": 100, "unit": "g" }
+      ]
+    }
+  ]
+}
