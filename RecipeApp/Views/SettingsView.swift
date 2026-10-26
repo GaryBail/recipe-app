@@ -3,6 +3,7 @@ import SwiftUI
 struct SettingsView: View {
     @AppStorage(PriceProviderFactory.serverURLKey) private var serverURL = ""
     @AppStorage("cityId") private var cityId = "msk"
+    @AppStorage(UserIdentity.nameKey) private var displayName = ""
     @Environment(\.dismiss) private var dismiss
 
     @State private var cities: [City] = []
@@ -11,6 +12,14 @@ struct SettingsView: View {
     var body: some View {
         NavigationStack {
             Form {
+                Section {
+                    TextField("Имя или ник", text: $displayName)
+                } header: {
+                    Text("Профиль")
+                } footer: {
+                    Text("Под этим именем публикуются ваши сборки и отзывы.")
+                }
+
                 Section {
                     Picker("Город", selection: $cityId) {
                         ForEach(cities) { Text($0.name).tag($0.id) }
@@ -30,9 +39,9 @@ struct SettingsView: View {
                         Text(checkResult).font(.footnote)
                     }
                 } header: {
-                    Text("Сервер цен")
+                    Text("Сервер")
                 } footer: {
-                    Text("Оставьте пустым — будут тестовые магазины и цены.")
+                    Text("Нужен для цен в магазинах и сообщества. Оставьте пустым — будут тестовые цены, сообщество недоступно.")
                 }
             }
             .navigationTitle("Настройки")

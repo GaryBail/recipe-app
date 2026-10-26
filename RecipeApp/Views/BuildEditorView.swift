@@ -2,16 +2,41 @@ import SwiftUI
 import SwiftData
 
 /// Экран сборки: для каждого ингредиента рецепта пользователь выбирает конкретный продукт.
+/// Режимы: новая сборка, новый вариант на основе существующей, редактирование.
 struct BuildEditorView: View {
+    enum Mode {
+        case new
+        case variant(of: Build)
+        case edit(Build)
+    }
+
     let recipe: Recipe
+    let mode: Mode
 
     @Environment(\.modelContext) private var context
     @Environment(\.dismiss) private var dismiss
     @Query(sort: \Product.name) private var products: [Product]
 
-    @State private var name = ""
+    @State private var name: String
     /// ingredientId → productId
-    @State private var selection: [String: String] = [:]
+    @State private var selection: [String: String]
+    @State private var addingProductFor: Ingredient?
+
+    init(recipe: Recipe, mode: Mode = .new) {
+        self.recipe = recipe
+        self.mode = mode
+        switch mode {
+        case .new:
+            _name = State(initialValue: "")
+            _selection = State(initialValue: [:])
+        case .variant(let source):
+            _name = State(initialValue: "\(source.name) — вариант")
+            _selection = State(initialValue: source.selection)
+        case .edit(let build):
+            _name = State(initialValue: build.name)
+            _selection = State(initialValue: build.selection)
+        }
+    }
 
     private var ingredients: [Ingredient] { recipe.sortedIngredients }
 
@@ -19,36 +44,55 @@ struct BuildEditorView: View {
         ingredients.allSatisfy { selection[$0.id] != nil }
     }
 
+    private var title: String {
+        switch mode {
+        case .new: return "Новая сборка"
+        case .variant: return "Новый вариант"
+        case .edit: return "Изменить сборку"
+        }
+    }
+
+    private var defaultName: String { "Моя \(recipe.title.lowercased())" }
+
     var body: some View {
         NavigationStack {
             Form {
                 Section("Название") {
-                    TextField("Моя \(recipe.title.lowercased())", text: $name)
+                    TextField(defaultName, text: $name)
                 }
 
                 Section {
                     ForEach(ingredients) { ingredient in
-                        Picker(selection: binding(for: ingredient)) {
-                            Text("Не выбран").tag(String?.none)
-                            ForEach(products(in: ingredient.categoryId)) { product in
-                                Text(product.displayName).tag(Optional(product.id))
+                        VStack(alignment: .leading, spacing: 6) {
+                            Picker(selection: binding(for: ingredient)) {
+                                Text("Не выбран").tag(String?.none)
+                                ForEach(products(in: ingredient.categoryId)) { product in
+                                    Text(product.displayName).tag(Optional(product.id))
+                                }
+                            } label: {
+                                VStack(alignment: .leading) {
+                                    Text(ingredient.title)
+                                    Text(ingredient.amountText)
+                                        .font(.caption)
+                                        .foregroundStyle(.secondary)
+                                }
                             }
-                        } label: {
-                            VStack(alignment: .leading) {
-                                Text(ingredient.title)
-                                Text(ingredient.amountText)
-                                    .font(.caption)
-                                    .foregroundStyle(.secondary)
-                            }
+                            Button("Добавить свой продукт…") { addingProductFor = ingredient }
+                                .font(.caption)
+                                .buttonStyle(.borderless)
                         }
                     }
                 } header: {
                     Text("Выберите продукты")
                 } footer: {
-                    Text("Сборка сохранится для этого рецепта, позже ей можно будет поделиться.")
+                    if case .edit(let build) = mode, build.isPublished {
+                        Text("Опубликованная версия обновится, когда вы опубликуете сборку заново.")
+                    } else {
+                        Text("Сборка сохранится для этого рецепта, ей можно поделиться в сообществе.")
+                    }
                 }
             }
-            .navigationTitle("Новая сборка")
+            .navigationTitle(title)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
@@ -56,6 +100,11 @@ struct BuildEditorView: View {
                 }
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Сохранить", action: save).disabled(!isComplete)
+                }
+            }
+            .sheet(item: $addingProductFor) { ingredient in
+                NewProductView(categoryId: ingredient.categoryId, categoryTitle: ingredient.title) { product in
+                    selection[ingredient.id] = product.id
                 }
             }
         }
@@ -73,10 +122,17 @@ struct BuildEditorView: View {
     }
 
     private func save() {
-        let trimmed = name.trimmingCharacters(in: .whitespaces)
-        let build = Build(name: trimmed.isEmpty ? "Моя \(recipe.title.lowercased())" : trimmed,
-                          recipe: recipe)
-        context.insert(build)
+        let finalName = name.trimmed.isEmpty ? defaultName : name.trimmed
+        let build: Build
+        if case .edit(let existing) = mode {
+            build = existing
+            build.name = finalName
+            for item in build.items { context.delete(item) }
+            build.items = []
+        } else {
+            build = Build(name: finalName, recipe: recipe)
+            context.insert(build)
+        }
 
         for ingredient in ingredients {
             guard let productId = selection[ingredient.id],
@@ -88,5 +144,49 @@ struct BuildEditorView: View {
 
         try? context.save()
         dismiss()
+    }
+}
+
+/// Добавление своего продукта в категорию (например, сыра, которого нет в каталоге).
+struct NewProductView: View {
+    let categoryId: String
+    let categoryTitle: String
+    var onCreate: (Product) -> Void
+
+    @Environment(\.modelContext) private var context
+    @Environment(\.dismiss) private var dismiss
+    @State private var name = ""
+    @State private var brand = ""
+
+    var body: some View {
+        NavigationStack {
+            Form {
+                Section {
+                    TextField("Название, например «Пармезан 24 мес.»", text: $name)
+                    TextField("Бренд (необязательно)", text: $brand)
+                } footer: {
+                    Text("Продукт появится в категории «\(categoryTitle)».")
+                }
+            }
+            .navigationTitle("Свой продукт")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) { Button("Отмена") { dismiss() } }
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("Добавить") {
+                        let product = Product(id: "user-prod-\(UUID().uuidString.lowercased())",
+                                              name: name.trimmed,
+                                              brand: brand.trimmed.isEmpty ? nil : brand.trimmed,
+                                              categoryId: categoryId, barcode: nil)
+                        context.insert(product)
+                        try? context.save()
+                        onCreate(product)
+                        dismiss()
+                    }
+                    .disabled(name.trimmed.isEmpty)
+                }
+            }
+        }
+        .presentationDetents([.medium])
     }
 }

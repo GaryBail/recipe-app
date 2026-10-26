@@ -4,8 +4,26 @@ import SwiftData
 struct BuildDetailView: View {
     let build: Build
 
+    @Environment(\.modelContext) private var context
+    @Environment(\.dismiss) private var dismiss
+
+    @State private var editorMode: BuildEditorView.Mode?
+    @State private var showPublish = false
+    @State private var remote: CommunityBuildDTO?
+    @State private var errorText: String?
+    @State private var isWorking = false
+    @State private var confirmDelete = false
+
     var body: some View {
         List {
+            if let author = build.authorName {
+                Section {
+                    Label("Сохранено из сообщества, автор: \(author)", systemImage: "person.2")
+                        .font(.footnote)
+                        .foregroundStyle(.secondary)
+                }
+            }
+
             if let recipe = build.recipe {
                 Section("Продукты") {
                     ForEach(recipe.sortedIngredients) { ingredient in
@@ -25,8 +43,219 @@ struct BuildDetailView: View {
                 } label: {
                     Label("Где купить дешевле", systemImage: "cart")
                 }
+                Button {
+                    editorMode = .variant(of: build)
+                } label: {
+                    Label("Сохранить как новый вариант", systemImage: "square.on.square")
+                }
+                Button {
+                    editorMode = .edit(build)
+                } label: {
+                    Label("Изменить", systemImage: "pencil")
+                }
+            }
+
+            Section {
+                if build.isPublished {
+                    if let remote {
+                        HStack {
+                            StarsView(value: remote.ratingAvg ?? 0)
+                            Text(ratingSummary(avg: remote.ratingAvg, count: remote.ratingCount, empty: "Пока нет оценок"))
+                                .font(.footnote)
+                                .foregroundStyle(.secondary)
+                        }
+                    }
+                    Button { showPublish = true } label: {
+                        Label("Опубликовать заново", systemImage: "arrow.triangle.2.circlepath")
+                    }
+                    Button(role: .destructive) { Task { await unpublish() } } label: {
+                        Label("Снять с публикации", systemImage: "eye.slash")
+                    }
+                } else {
+                    Button { showPublish = true } label: {
+                        Label("Поделиться в сообществе", systemImage: "square.and.arrow.up")
+                    }
+                }
+                if let errorText {
+                    Text(errorText).font(.footnote).foregroundStyle(.red)
+                }
+            } header: {
+                Text("Сообщество")
+            } footer: {
+                if !build.isPublished {
+                    Text("Другие пользователи увидят рецепт и ваш набор продуктов и смогут его оценить.")
+                }
+            }
+            .disabled(isWorking)
+
+            Section {
+                Button("Удалить сборку", role: .destructive) { confirmDelete = true }
             }
         }
         .navigationTitle(build.name)
+        .sheet(isPresented: Binding(get: { editorMode != nil }, set: { if !$0 { editorMode = nil } })) {
+            if let recipe = build.recipe, let mode = editorMode {
+                BuildEditorView(recipe: recipe, mode: mode)
+            }
+        }
+        .sheet(isPresented: $showPublish) {
+            PublishBuildView(build: build) { dto in remote = dto }
+        }
+        .confirmationDialog("Удалить сборку?", isPresented: $confirmDelete, titleVisibility: .visible) {
+            Button("Удалить", role: .destructive) { Task { await deleteBuild() } }
+        } message: {
+            if build.isPublished { Text("Публикация в сообществе тоже будет удалена.") }
+        }
+        .task(id: build.remoteId) { await loadRemote() }
     }
+
+    private func loadRemote() async {
+        guard let id = build.remoteId, let client = CommunityClient.fromSettings() else { return }
+        remote = try? await client.build(id: id)
+    }
+
+    private func unpublish() async {
+        guard let id = build.remoteId else { return }
+        guard let client = CommunityClient.fromSettings() else {
+            errorText = "Укажите адрес сервера в настройках"
+            return
+        }
+        isWorking = true
+        defer { isWorking = false }
+        do {
+            try await client.delete(id: id)
+            build.isPublished = false
+            build.remoteId = nil
+            remote = nil
+            try? context.save()
+        } catch {
+            errorText = error.localizedDescription
+        }
+    }
+
+    private func deleteBuild() async {
+        if build.isPublished, let id = build.remoteId, let client = CommunityClient.fromSettings() {
+            try? await client.delete(id: id)
+        }
+        context.delete(build)
+        try? context.save()
+        dismiss()
+    }
+}
+
+/// Публикация сборки: имя автора и название.
+struct PublishBuildView: View {
+    let build: Build
+    var onPublished: (CommunityBuildDTO) -> Void
+
+    @Environment(\.modelContext) private var context
+    @Environment(\.dismiss) private var dismiss
+    @AppStorage(UserIdentity.nameKey) private var displayName = ""
+    @State private var name: String = ""
+    @State private var isSending = false
+    @State private var errorText: String?
+
+    var body: some View {
+        NavigationStack {
+            Form {
+                Section("Как вас подписать") {
+                    TextField("Имя или ник", text: $displayName)
+                }
+                Section("Название сборки") {
+                    TextField(build.name, text: $name)
+                }
+                if build.recipe?.isUserCreated == true {
+                    Section {
+                        Text("Ваш рецепт будет опубликован вместе со сборкой.")
+                            .font(.footnote)
+                    }
+                }
+                if let errorText {
+                    Section { Text(errorText).foregroundStyle(.red) }
+                }
+            }
+            .navigationTitle("Публикация")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) { Button("Отмена") { dismiss() } }
+                ToolbarItem(placement: .confirmationAction) {
+                    if isSending {
+                        ProgressView()
+                    } else {
+                        Button("Опубликовать") { Task { await publish() } }
+                    }
+                }
+            }
+            .onAppear { if name.isEmpty { name = build.name } }
+        }
+    }
+
+    private func publish() async {
+        guard let client = CommunityClient.fromSettings() else {
+            errorText = "Укажите адрес сервера в настройках (⚙️ на главном экране)."
+            return
+        }
+        if !name.trimmed.isEmpty { build.name = name.trimmed }
+        guard let request = CommunityMapper.publishRequest(for: build, authorName: UserIdentity.displayName) else {
+            errorText = "В сборке нет выбранных продуктов."
+            return
+        }
+        isSending = true
+        defer { isSending = false }
+        do {
+            // Повторная публикация заменяет старую версию.
+            if let old = build.remoteId { try? await client.delete(id: old) }
+            let dto = try await client.publish(request)
+            build.isPublished = true
+            build.remoteId = dto.id
+            try? context.save()
+            onPublished(dto)
+            dismiss()
+        } catch {
+            errorText = error.localizedDescription
+        }
+    }
+}
+
+/// Звёзды рейтинга (только отображение).
+struct StarsView: View {
+    let value: Double
+
+    var body: some View {
+        HStack(spacing: 1) {
+            ForEach(1...5, id: \.self) { i in
+                Image(systemName: Double(i) <= value.rounded() ? "star.fill" : "star")
+                    .font(.caption)
+                    .foregroundStyle(.yellow)
+            }
+        }
+        .accessibilityLabel(Text("Рейтинг \(String(format: "%.1f", value)) из 5"))
+    }
+}
+
+/// Выбор оценки.
+struct StarPicker: View {
+    @Binding var stars: Int
+
+    var body: some View {
+        HStack {
+            ForEach(1...5, id: \.self) { i in
+                Button {
+                    stars = i
+                } label: {
+                    Image(systemName: i <= stars ? "star.fill" : "star")
+                        .font(.title2)
+                        .foregroundStyle(.yellow)
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel("\(i) из 5")
+            }
+        }
+    }
+}
+
+/// "4.5 · 12 оценок"
+func ratingSummary(avg: Double?, count: Int, empty: String = "нет оценок") -> String {
+    guard count > 0 else { return empty }
+    return "\(String(format: "%.1f", avg ?? 0)) · \(count) оценок"
 }

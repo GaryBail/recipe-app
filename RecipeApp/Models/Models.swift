@@ -24,6 +24,8 @@ final class Recipe {
     var summary: String
     var servings: Int
     var steps: [String]
+    /// Рецепт создан пользователем (можно удалить).
+    var isUserCreated: Bool = false
 
     @Relationship(deleteRule: .cascade, inverse: \Ingredient.recipe)
     var ingredients: [Ingredient] = []
@@ -104,8 +106,13 @@ final class Build {
     @Attribute(.unique) var id: UUID
     var name: String
     var createdAt: Date
-    /// Задел под этап 2 (публикация в сообщество).
+    /// Опубликована в сообществе.
     var isPublished: Bool
+    /// id опубликованной копии на сервере.
+    var remoteId: String? = nil
+    /// Если сборка сохранена из сообщества — кто автор и откуда.
+    var authorName: String? = nil
+    var sourceRemoteId: String? = nil
     var recipe: Recipe?
 
     @Relationship(deleteRule: .cascade, inverse: \BuildItem.build)
@@ -117,6 +124,12 @@ final class Build {
         self.createdAt = .now
         self.isPublished = false
         self.recipe = recipe
+    }
+
+    /// ingredientId → productId
+    var selection: [String: String] {
+        Dictionary(items.compactMap { item in item.product.map { (item.ingredientId, $0.id) } },
+                   uniquingKeysWith: { first, _ in first })
     }
 
     func product(for ingredient: Ingredient) -> Product? {
@@ -149,5 +162,20 @@ final class BuildItem {
     init(ingredientId: String, product: Product) {
         self.ingredientId = ingredientId
         self.product = product
+    }
+}
+
+extension String {
+    var trimmed: String { trimmingCharacters(in: .whitespacesAndNewlines) }
+}
+
+/// Названия категорий берём из ингредиентов рецептов ("hard-cheese" → "Твёрдый сыр").
+enum CategoryCatalog {
+    static func titles(ingredients: [Ingredient], products: [Product]) -> [(id: String, title: String)] {
+        var map: [String: String] = [:]
+        for i in ingredients where map[i.categoryId] == nil { map[i.categoryId] = i.title }
+        for p in products where map[p.categoryId] == nil { map[p.categoryId] = p.name }
+        return map.map { (id: $0.key, title: $0.value) }
+            .sorted { $0.title.localizedCompare($1.title) == .orderedAscending }
     }
 }
