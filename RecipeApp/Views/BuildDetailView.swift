@@ -55,6 +55,8 @@ struct BuildDetailView: View {
                 }
             }
 
+            PriceWatchSection(build: build)
+
             Section {
                 if build.isPublished {
                     if let remote {
@@ -137,6 +139,9 @@ struct BuildDetailView: View {
         if build.isPublished, let id = build.remoteId, let client = CommunityClient.fromSettings() {
             try? await client.delete(id: id)
         }
+        if build.isWatched, let watches = PriceWatchClient.fromSettings() {
+            try? await watches.delete(id: build.id.uuidString)
+        }
         context.delete(build)
         try? context.save()
         dismiss()
@@ -160,6 +165,7 @@ struct PublishBuildView: View {
                 if let user = AuthSession.shared.user {
                     Section {
                         LabeledContent("Автор", value: user.displayName)
+                        if !user.isEmailVerified { VerifyEmailPrompt() }
                     } footer: {
                         Text("Имя можно изменить в настройках.")
                     }
@@ -191,7 +197,7 @@ struct PublishBuildView: View {
                         ProgressView()
                     } else {
                         Button("Опубликовать") { Task { await publish() } }
-                            .disabled(!AuthSession.shared.isLoggedIn)
+                            .disabled(!(AuthSession.shared.user?.isEmailVerified ?? false))
                     }
                 }
             }
@@ -267,4 +273,93 @@ struct StarPicker: View {
 func ratingSummary(avg: Double?, count: Int, empty: String = "нет оценок") -> String {
     guard count > 0 else { return empty }
     return "\(String(format: "%.1f", avg ?? 0)) · \(count) оценок"
+}
+
+/// «Следить за ценой»: сервер несколько раз в день пересчитывает корзину в магазинах Москвы.
+struct PriceWatchSection: View {
+    let build: Build
+
+    @Environment(\.modelContext) private var context
+    @AppStorage("cityId") private var cityId = "msk"
+    @State private var watch: WatchDTO?
+    @State private var errorText: String?
+    @State private var isWorking = false
+
+    private var session: AuthSession { .shared }
+
+    var body: some View {
+        Section {
+            if !session.isLoggedIn {
+                LoginRequiredButton(title: "Войдите, чтобы следить за ценой")
+            } else {
+                Toggle(isOn: Binding(get: { build.isWatched }, set: { on in Task { await setWatched(on) } })) {
+                    Label("Следить за ценой", systemImage: "bell.badge")
+                }
+                .disabled(isWorking)
+
+                if build.isWatched, let watch {
+                    if let best = watch.best, let total = watch.bestTotal {
+                        LabeledContent("Сейчас дешевле всего") {
+                            Text("\(total.formatted(.currency(code: "RUB").precision(.fractionLength(0)))) · \(StoreNames.name(best.storeId))")
+                        }
+                        if let usual = watch.usual {
+                            LabeledContent("Обычно", value: usual.formatted(.currency(code: "RUB").precision(.fractionLength(0))))
+                        }
+                    } else {
+                        Text("Цены появятся после ближайшей проверки (7:00, 12:00 и 18:00 по Москве).")
+                            .font(.footnote).foregroundStyle(.secondary)
+                    }
+                    if let date = watch.checkedDate {
+                        Text("Проверено \(date.formatted(date: .abbreviated, time: .shortened))")
+                            .font(.caption).foregroundStyle(.secondary)
+                    }
+                }
+            }
+            if let errorText {
+                Text(errorText).font(.footnote).foregroundStyle(.red)
+            }
+        } header: {
+            Text("Цена")
+        } footer: {
+            if cityId != PriceWatchClient.supportedCity {
+                Text("Пока цены проверяются только для Москвы (Пятёрочка и Перекрёсток).")
+            } else {
+                Text("Проверяем Пятёрочку и Перекрёсток в Москве. Напомним не чаще раза в день — когда корзина подешевеет или давно не заглядывали.")
+            }
+        }
+        .task(id: build.isWatched) { await load() }
+    }
+
+    private func load() async {
+        guard build.isWatched, let client = PriceWatchClient.fromSettings() else { return }
+        watch = try? await client.get(id: build.id.uuidString)
+    }
+
+    private func setWatched(_ on: Bool) async {
+        guard let client = PriceWatchClient.fromSettings() else {
+            errorText = "Укажите адрес сервера в настройках."
+            return
+        }
+        isWorking = true
+        errorText = nil
+        defer { isWorking = false }
+        do {
+            if on {
+                guard let request = PriceWatchClient.request(for: build) else {
+                    errorText = "В сборке нет продуктов."
+                    return
+                }
+                watch = try await client.upsert(id: build.id.uuidString, request)
+                let authorized = await PushRegistration.isAuthorized()
+                if !authorized { await PushRegistration.requestAndRegister() }
+            } else {
+                try await client.delete(id: build.id.uuidString)
+                watch = nil
+            }
+            build.isWatched = on
+            try? context.save()
+        } catch {
+            errorText = error.localizedDescription
+        }
+    }
 }

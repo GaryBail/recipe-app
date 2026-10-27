@@ -22,6 +22,7 @@ struct AuthView: View {
     @State private var acceptedRules = false
     @State private var errorText: String?
     @State private var isWorking = false
+    @State private var showVerify = false
 
     private var session: AuthSession { .shared }
 
@@ -114,6 +115,11 @@ struct AuthView: View {
                         }
                     }
                     .disabled(isWorking || formError != nil)
+                    if mode == .login {
+                        NavigationLink("Забыли пароль?") {
+                            ForgotPasswordView(initialEmail: email.trimmed) { dismiss() }
+                        }
+                    }
                 } footer: {
                     if let formError, !(email.isEmpty && password.isEmpty) {
                         Text(formError)
@@ -126,6 +132,13 @@ struct AuthView: View {
                 ToolbarItem(placement: .cancellationAction) { Button("Закрыть") { dismiss() } }
             }
             .onChange(of: mode) { _, _ in errorText = nil }
+            .navigationDestination(isPresented: $showVerify) {
+                VerifyEmailView { dismiss() }
+                    .navigationBarBackButtonHidden()
+                    .toolbar {
+                        ToolbarItem(placement: .cancellationAction) { Button("Позже") { dismiss() } }
+                    }
+            }
         }
     }
 
@@ -140,6 +153,8 @@ struct AuthView: View {
             case .register:
                 try await session.register(email: email.trimmed, password: password,
                                            displayName: displayName.trimmed, cityId: cityId)
+                showVerify = true  // письмо с кодом уже отправлено
+                return
             }
             dismiss()
         } catch {

@@ -85,7 +85,21 @@ struct AccountSection: View {
                 }
                 if let email = user.email {
                     LabeledContent("Email", value: email)
+                    if !user.isEmailVerified {
+                        NavigationLink {
+                            VerifyEmailView()
+                        } label: {
+                            Label("Подтвердить email", systemImage: "envelope.badge")
+                                .foregroundStyle(.orange)
+                        }
+                    }
                 }
+                if user.hasPassword {
+                    NavigationLink("Сменить пароль") { ChangePasswordView() }
+                }
+                Toggle("Напоминания о ценах", isOn: Binding(
+                    get: { user.priceAlertsOn },
+                    set: { on in Task { try? await session.update(priceAlerts: on) } }))
                 if user.hasApple {
                     Label("Вход через Apple", systemImage: "apple.logo").foregroundStyle(.secondary)
                 }
@@ -105,7 +119,7 @@ struct AccountSection: View {
             Text("Аккаунт")
         } footer: {
             if session.isLoggedIn {
-                Text("Под этим именем публикуются ваши сборки и отзывы.")
+                Text("Под этим именем публикуются ваши сборки и отзывы. Напоминания о ценах приходят не чаще раза в день.")
             } else {
                 Text("Нужен, чтобы делиться сборками, ставить оценки и получать уведомления.")
             }

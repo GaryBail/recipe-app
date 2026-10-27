@@ -143,6 +143,7 @@ struct BuildEditorView: View {
         }
 
         try? context.save()
+        PriceWatchClient.resyncIfWatched(build)
         dismiss()
     }
 }

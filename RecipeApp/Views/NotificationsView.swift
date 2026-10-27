@@ -1,3 +1,4 @@
+import SwiftData
 import SwiftUI
 
 struct NotificationsView: View {
@@ -13,12 +14,16 @@ struct NotificationsView: View {
                     LoginRequiredButton(title: "Войти")
                 }
             } else if model.items.isEmpty {
-                Text(isLoading ? "Загрузка…" : "Пока нет уведомлений. Поделитесь сборкой — и здесь появятся оценки.")
+                Text(isLoading ? "Загрузка…" : "Пока нет уведомлений. Поделитесь сборкой или включите «Следить за ценой» в сборке.")
                     .foregroundStyle(.secondary)
             } else {
                 ForEach(model.items) { item in
                     NavigationLink {
-                        CommunityBuildLoader(buildId: item.buildId)
+                        if item.isPrice {
+                            LocalBuildLoader(buildId: item.buildId)
+                        } else {
+                            CommunityBuildLoader(buildId: item.buildId)
+                        }
                     } label: {
                         NotificationRow(item: item)
                     }
@@ -38,10 +43,28 @@ struct NotificationsView: View {
 private struct NotificationRow: View {
     let item: AppNotificationDTO
 
+    private var icon: String {
+        switch item.kind {
+        case "comment": return "text.bubble.fill"
+        case "price_drop": return "tag.fill"
+        case "reminder": return "fork.knife"
+        default: return "star.fill"
+        }
+    }
+
+    private var color: Color {
+        switch item.kind {
+        case "comment": return .accentColor
+        case "price_drop": return .green
+        case "reminder": return .orange
+        default: return .yellow
+        }
+    }
+
     var body: some View {
         HStack(alignment: .top, spacing: 10) {
-            Image(systemName: item.kind == "comment" ? "text.bubble.fill" : "star.fill")
-                .foregroundStyle(item.kind == "comment" ? Color.accentColor : .yellow)
+            Image(systemName: icon)
+                .foregroundStyle(color)
                 .frame(width: 24)
             VStack(alignment: .leading, spacing: 3) {
                 Text(item.title).font(.subheadline.weight(item.isRead ? .regular : .semibold))
@@ -77,5 +100,32 @@ struct NotificationsBell: View {
                 }
         }
         .accessibilityLabel(model.unreadCount > 0 ? "Уведомления, непрочитанных: \(model.unreadCount)" : "Уведомления")
+    }
+}
+
+/// Открывает свою сборку по локальному id (из уведомления о цене).
+struct LocalBuildLoader: View {
+    let buildId: String
+    @Environment(\.modelContext) private var context
+    @State private var build: Build?
+    @State private var notFound = false
+
+    var body: some View {
+        Group {
+            if let build {
+                BuildDetailView(build: build)
+            } else if notFound {
+                ContentUnavailableView("Сборка не найдена", systemImage: "questionmark.folder",
+                                       description: Text("Возможно, она удалена с этого телефона."))
+            } else {
+                ProgressView()
+            }
+        }
+        .task(id: buildId) {
+            guard let uuid = UUID(uuidString: buildId) else { notFound = true; return }
+            let descriptor = FetchDescriptor<Build>(predicate: #Predicate { $0.id == uuid })
+            build = try? context.fetch(descriptor).first
+            notFound = build == nil
+        }
     }
 }

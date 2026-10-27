@@ -8,6 +8,12 @@ struct AccountDTO: Codable, Equatable, Sendable {
     let cityId: String?
     let hasApple: Bool
     let hasPassword: Bool
+    // Опциональные — чтобы читался профиль, сохранённый прошлой версией приложения.
+    let emailVerified: Bool?
+    let priceAlerts: Bool?
+
+    var isEmailVerified: Bool { emailVerified ?? hasApple }
+    var priceAlertsOn: Bool { priceAlerts ?? true }
 }
 
 struct SessionResponse: Decodable {
@@ -89,11 +95,45 @@ final class AuthSession {
         }
     }
 
-    func update(displayName: String? = nil, cityId: String? = nil) async throws {
-        struct Body: Encodable { let displayName: String?; let cityId: String? }
+    func update(displayName: String? = nil, cityId: String? = nil, priceAlerts: Bool? = nil) async throws {
+        struct Body: Encodable { let displayName: String?; let cityId: String?; let priceAlerts: Bool? }
         let me: AccountDTO = try await api.send("PATCH", "auth/me",
-                                                body: Body(displayName: displayName, cityId: cityId))
+                                                body: Body(displayName: displayName, cityId: cityId,
+                                                           priceAlerts: priceAlerts))
         store(me)
+    }
+
+    // MARK: - Email и пароль
+
+    func verifyEmail(code: String) async throws {
+        struct Body: Encodable { let code: String }
+        let me: AccountDTO = try await api.send("POST", "auth/verify-email", body: Body(code: code))
+        store(me)
+    }
+
+    func resendVerificationCode() async throws {
+        let _: APIClient.Empty = try await api.send("POST", "auth/verify-email/send")
+    }
+
+    func forgotPassword(email: String) async throws {
+        struct Body: Encodable { let email: String }
+        let _: APIClient.Empty = try await api.send("POST", "auth/password/forgot", body: Body(email: email))
+    }
+
+    func resetPassword(email: String, code: String, newPassword: String) async throws {
+        struct Body: Encodable { let email: String; let code: String; let newPassword: String }
+        let response: SessionResponse = try await api.send(
+            "POST", "auth/password/reset", body: Body(email: email, code: code, newPassword: newPassword))
+        await apply(response)
+    }
+
+    func changePassword(old: String, new: String) async throws {
+        struct Body: Encodable { let oldPassword: String; let newPassword: String }
+        let response: SessionResponse = try await api.send(
+            "POST", "auth/password/change", body: Body(oldPassword: old, newPassword: new))
+        // Сервер закрыл старые сессии и выдал новую.
+        Keychain.set(response.token, for: APIClient.tokenKey)
+        store(response.user)
     }
 
     func logout() async {

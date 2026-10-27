@@ -58,6 +58,20 @@ struct RecipeListView: View {
                     }
                 }
             }
+            // Нажали на push о цене — открываем свою сборку.
+            .sheet(isPresented: Binding(get: { notifications.pendingLocalBuildId != nil },
+                                        set: { if !$0 { notifications.pendingLocalBuildId = nil } })) {
+                if let id = notifications.pendingLocalBuildId {
+                    NavigationStack {
+                        LocalBuildLoader(buildId: id)
+                            .toolbar {
+                                ToolbarItem(placement: .cancellationAction) {
+                                    Button("Закрыть") { notifications.pendingLocalBuildId = nil }
+                                }
+                            }
+                    }
+                }
+            }
             .navigationDestination(for: Recipe.self) { RecipeDetailView(recipe: $0) }
             .navigationDestination(for: Build.self) { BuildDetailView(build: $0) }
             .overlay {

@@ -4,6 +4,9 @@ import UIKit
 import UserNotifications
 
 struct AppNotificationDTO: Codable, Identifiable, Hashable, Sendable {
+    /// Уведомление о цене своей сборки (а не об оценке в сообществе).
+    var isPrice: Bool { kind == "price_drop" || kind == "reminder" }
+
     let id: Int
     let kind: String
     let buildId: String
@@ -30,8 +33,10 @@ final class NotificationCenterModel {
 
     private(set) var items: [AppNotificationDTO] = []
     private(set) var unreadCount = 0
-    /// Сборка, которую нужно открыть после нажатия на push.
+    /// Сборка сообщества, которую нужно открыть после нажатия на push.
     var pendingBuildId: String?
+    /// Своя сборка (уведомление о цене), которую нужно открыть после нажатия на push.
+    var pendingLocalBuildId: String?
 
     func refresh() async {
         guard AuthSession.shared.isLoggedIn, let api = APIClient.fromSettings() else { return }
@@ -84,6 +89,15 @@ enum PushRegistration {
     static func buildId(from userInfo: [AnyHashable: Any]) -> String? {
         userInfo["build_id"] as? String
     }
+
+    /// id своей сборки из push о цене.
+    static func localBuildId(from userInfo: [AnyHashable: Any]) -> String? {
+        userInfo["local_build_id"] as? String
+    }
+
+    static func isAuthorized() async -> Bool {
+        await UNUserNotificationCenter.current().notificationSettings().authorizationStatus == .authorized
+    }
 }
 
 final class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDelegate {
@@ -112,9 +126,15 @@ final class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCent
     // Нажатие на push — открываем сборку.
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse,
                                 withCompletionHandler completionHandler: @escaping () -> Void) {
-        let buildId = PushRegistration.buildId(from: response.notification.request.content.userInfo)
+        let info = response.notification.request.content.userInfo
+        let buildId = PushRegistration.buildId(from: info)
+        let localBuildId = PushRegistration.localBuildId(from: info)
         Task { @MainActor in
-            NotificationCenterModel.shared.pendingBuildId = buildId
+            if let localBuildId {
+                NotificationCenterModel.shared.pendingLocalBuildId = localBuildId
+            } else {
+                NotificationCenterModel.shared.pendingBuildId = buildId
+            }
             await NotificationCenterModel.shared.refresh()
         }
         completionHandler()

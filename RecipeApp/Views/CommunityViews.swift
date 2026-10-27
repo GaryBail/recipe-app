@@ -232,6 +232,10 @@ struct CommunityBuildDetailView: View {
                 Section("Ваша оценка") {
                     LoginRequiredButton(title: "Войдите, чтобы оценить сборку")
                 }
+            } else if !isMine && !(AuthSession.shared.user?.isEmailVerified ?? false) {
+                Section("Ваша оценка") {
+                    VerifyEmailPrompt()
+                }
             } else if !isMine {
                 Section("Ваша оценка") {
                     StarPicker(stars: $stars)

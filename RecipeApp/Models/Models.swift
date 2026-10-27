@@ -113,6 +113,8 @@ final class Build {
     /// Если сборка сохранена из сообщества — кто автор и откуда.
     var authorName: String? = nil
     var sourceRemoteId: String? = nil
+    /// Включено слежение за ценой (подписка на сервере).
+    var isWatched: Bool = false
     var recipe: Recipe?
 
     @Relationship(deleteRule: .cascade, inverse: \BuildItem.build)
