@@ -120,8 +120,9 @@ final class ScreenshotTests: XCTestCase {
         picker.tap()
         sleep(1)
         snap(name)
-        // закрываем меню, ничего не выбрав
-        app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.05)).tap()
+        // закрываем меню, выбрав «Не выбран» (сыр всё равно ещё не выбран)
+        let none = app.buttons["Не выбран"]
+        if none.waitForExistence(timeout: 2) { none.tap() }
         sleep(1)
     }
 
