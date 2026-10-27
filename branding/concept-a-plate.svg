@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4096FF"/><stop offset="1" stop-color="#2F54EB"/></linearGradient>
+<radialGradient id="glow" cx="0.3" cy="0.2" r="0.8"><stop offset="0" stop-color="#fff" stop-opacity="0.35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+<radialGradient id="plate" cx="0.45" cy="0.4" r="0.6"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E6F0FF"/></radialGradient>
+<filter id="sh" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="22" stdDeviation="24" flood-color="#0B1F66" flood-opacity="0.35"/></filter>
+<filter id="lift" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="18" stdDeviation="14" flood-color="#0B1F66" flood-opacity="0.35"/></filter>
+<linearGradient id="g0" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFC53D"/><stop offset="1" stop-color="#FAAD14"/></linearGradient><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF7875"/><stop offset="1" stop-color="#F5222D"/></linearGradient><linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#95DE64"/><stop offset="1" stop-color="#52C41A"/></linearGradient><linearGradient id="g3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFA940"/><stop offset="1" stop-color="#FA8C16"/></linearGradient>
+</defs>
+<rect width="1024" height="1024" fill="url(#bg)"/><rect width="1024" height="1024" fill="url(#glow)"/>
+<circle cx="500" cy="540" r="330" fill="url(#plate)" filter="url(#sh)"/>
+<circle cx="500" cy="540" r="268" fill="none" stroke="#D6E4FF" stroke-width="6"/>
+<g transform="translate(49.5,-49.5)" filter="url(#lift)"><path d="M500.0,540.0 L505.6,325.1 A215,215 0 0 1 714.9,534.4 Z" fill="url(#g0)" stroke="#fff" stroke-width="10" stroke-linejoin="round"/></g><path d="M500.0,540.0 L714.9,545.6 A215,215 0 0 1 431.8,743.9 Z" fill="url(#g1)" stroke="#fff" stroke-width="10" stroke-linejoin="round"/><path d="M500.0,540.0 L421.2,740.0 A215,215 0 0 1 296.1,471.8 Z" fill="url(#g2)" stroke="#fff" stroke-width="10" stroke-linejoin="round"/><path d="M500.0,540.0 L300.0,461.2 A215,215 0 0 1 494.4,325.1 Z" fill="url(#g3)" stroke="#fff" stroke-width="10" stroke-linejoin="round"/>
+<g fill="#fff"><path d="M820 230 l14 38 38 14 -38 14 -14 38 -14 -38 -38 -14 38 -14z"/><circle cx="760" cy="170" r="10" opacity="0.8"/></g>
+</svg>

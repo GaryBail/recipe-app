@@ -386,7 +386,7 @@ class PriceWatcher:
                 continue  # цена обычная, а напоминали недавно
             kind, title, body = price_message(best)
             item = self.notifications.add(user_id, kind, best.watch["client_id"], best.watch["name"],
-                                          "system", "Рецепты", None, None, title=title, body=body)
+                                          "system", "ВыборВкуса", None, None, title=title, body=body)
             self.watches.log_notice(user_id, kind, best.watch["id"], now)
             tokens = self.notifications.devices(user_id)
             if tokens:

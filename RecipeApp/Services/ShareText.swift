@@ -34,7 +34,7 @@ enum ShareText {
         }
 
         lines.append("")
-        lines.append("Рецепт из приложения «Рецепты»")
+        lines.append("Рецепт из приложения «ВыборВкуса»")
         return lines.joined(separator: "\n")
     }
 
@@ -56,7 +56,7 @@ enum ShareText {
             lines.append("На порцию: \(nutrition.perServing(recipe.servings).shortText)")
         }
         lines.append("")
-        lines.append("Собрано в приложении «Рецепты»")
+        lines.append("Собрано в приложении «ВыборВкуса»")
         return lines.joined(separator: "\n")
     }
 
