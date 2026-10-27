@@ -1,0 +1,13 @@
+name: Probe stores
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["tools/probe_vkusvill.py", ".github/workflows/probe.yml"]
+jobs:
+  vkusvill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tools/probe_vkusvill.py
