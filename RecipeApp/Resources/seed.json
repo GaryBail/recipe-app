@@ -1,111 +1,2662 @@
 {
-  "products": [
-    { "id": "spaghetti-barilla", "name": "Спагетти №5", "brand": "Barilla", "categoryId": "spaghetti", "barcode": null },
-    { "id": "spaghetti-makfa", "name": "Спагетти", "brand": "Макфа", "categoryId": "spaghetti", "barcode": null },
-    { "id": "spaghetti-dececco", "name": "Спагетти №12", "brand": "De Cecco", "categoryId": "spaghetti", "barcode": null },
-
-    { "id": "guanciale", "name": "Гуанчале", "brand": null, "categoryId": "pork-cured", "barcode": null },
-    { "id": "pancetta", "name": "Панчетта", "brand": null, "categoryId": "pork-cured", "barcode": null },
-    { "id": "bacon-smoked", "name": "Бекон копчёный", "brand": null, "categoryId": "pork-cured", "barcode": null },
-
-    { "id": "pecorino-romano", "name": "Пекорино Романо", "brand": null, "categoryId": "hard-cheese", "barcode": null },
-    { "id": "parmesan", "name": "Пармезан", "brand": null, "categoryId": "hard-cheese", "barcode": null },
-    { "id": "grana-padano", "name": "Грана Падано", "brand": null, "categoryId": "hard-cheese", "barcode": null },
-
-    { "id": "eggs-c0", "name": "Яйца С0", "brand": null, "categoryId": "eggs", "barcode": null },
-    { "id": "eggs-c1", "name": "Яйца С1", "brand": null, "categoryId": "eggs", "barcode": null },
-
-    { "id": "pepper-ground", "name": "Перец чёрный молотый", "brand": null, "categoryId": "black-pepper", "barcode": null },
-    { "id": "pepper-whole", "name": "Перец чёрный горошек", "brand": null, "categoryId": "black-pepper", "barcode": null },
-
-    { "id": "tomato-cherry", "name": "Томаты черри", "brand": null, "categoryId": "tomatoes", "barcode": null },
-    { "id": "tomato-pink", "name": "Томаты розовые", "brand": null, "categoryId": "tomatoes", "barcode": null },
-
-    { "id": "cucumber-short", "name": "Огурцы короткоплодные", "brand": null, "categoryId": "cucumbers", "barcode": null },
-    { "id": "cucumber-long", "name": "Огурцы длинноплодные", "brand": null, "categoryId": "cucumbers", "barcode": null },
-
-    { "id": "feta-greek", "name": "Фета греческая", "brand": null, "categoryId": "feta", "barcode": null },
-    { "id": "feta-brine", "name": "Брынза", "brand": null, "categoryId": "feta", "barcode": null },
-
-    { "id": "olives-kalamata", "name": "Оливки Каламата", "brand": null, "categoryId": "olives", "barcode": null },
-    { "id": "olives-black", "name": "Маслины без косточки", "brand": null, "categoryId": "olives", "barcode": null },
-
-    { "id": "oil-ev", "name": "Масло оливковое Extra Virgin", "brand": null, "categoryId": "olive-oil", "barcode": null },
-    { "id": "oil-pomace", "name": "Масло оливковое рафинированное", "brand": null, "categoryId": "olive-oil", "barcode": null },
-
-    { "id": "onion-red", "name": "Лук красный", "brand": null, "categoryId": "onion", "barcode": null },
-    { "id": "onion-yellow", "name": "Лук репчатый", "brand": null, "categoryId": "onion", "barcode": null },
-
-    { "id": "tvorog-5", "name": "Творог 5%", "brand": null, "categoryId": "tvorog", "barcode": null },
-    { "id": "tvorog-9", "name": "Творог 9%", "brand": null, "categoryId": "tvorog", "barcode": null },
-
-    { "id": "flour-wheat", "name": "Мука пшеничная в/с", "brand": null, "categoryId": "flour", "barcode": null },
-    { "id": "flour-rice", "name": "Мука рисовая", "brand": null, "categoryId": "flour", "barcode": null },
-
-    { "id": "sugar-white", "name": "Сахар белый", "brand": null, "categoryId": "sugar", "barcode": null },
-    { "id": "sugar-cane", "name": "Сахар тростниковый", "brand": null, "categoryId": "sugar", "barcode": null },
-
-    { "id": "sour-cream-15", "name": "Сметана 15%", "brand": null, "categoryId": "sour-cream", "barcode": null },
-    { "id": "sour-cream-20", "name": "Сметана 20%", "brand": null, "categoryId": "sour-cream", "barcode": null }
-  ],
-  "recipes": [
+ "version": 2,
+ "rubrics": [
+  {
+   "id": "breakfast",
+   "title": "Завтраки",
+   "symbol": "sunrise"
+  },
+  {
+   "id": "soup",
+   "title": "Супы",
+   "symbol": "takeoutbag.and.cup.and.straw"
+  },
+  {
+   "id": "salad",
+   "title": "Салаты",
+   "symbol": "leaf"
+  },
+  {
+   "id": "main",
+   "title": "Горячее",
+   "symbol": "frying.pan"
+  },
+  {
+   "id": "side",
+   "title": "Гарниры",
+   "symbol": "fork.knife"
+  },
+  {
+   "id": "pastry",
+   "title": "Выпечка и десерты",
+   "symbol": "birthday.cake"
+  }
+ ],
+ "products": [
+  {
+   "id": "spaghetti-barilla",
+   "name": "Спагетти №5",
+   "brand": "Barilla",
+   "categoryId": "spaghetti",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 359,
+    "protein": 12.5,
+    "fat": 1.5,
+    "carbs": 71.0
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "spaghetti-makfa",
+   "name": "Спагетти",
+   "brand": "Макфа",
+   "categoryId": "spaghetti",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 344,
+    "protein": 11.0,
+    "fat": 1.3,
+    "carbs": 72.0
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "spaghetti-dececco",
+   "name": "Спагетти №12",
+   "brand": "De Cecco",
+   "categoryId": "spaghetti",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 353,
+    "protein": 13.0,
+    "fat": 1.5,
+    "carbs": 70.0
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "pasta-penne",
+   "name": "Макароны перья",
+   "brand": null,
+   "categoryId": "pasta-short",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 344,
+    "protein": 11.0,
+    "fat": 1.3,
+    "carbs": 72.0
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "pasta-horns",
+   "name": "Макароны рожки",
+   "brand": null,
+   "categoryId": "pasta-short",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 338,
+    "protein": 10.4,
+    "fat": 1.1,
+    "carbs": 71.0
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "noodles-egg",
+   "name": "Лапша яичная",
+   "brand": null,
+   "categoryId": "noodles",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 348,
+    "protein": 12.0,
+    "fat": 2.0,
+    "carbs": 70.0
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "noodles-vermicelli",
+   "name": "Вермишель",
+   "brand": null,
+   "categoryId": "noodles",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 337,
+    "protein": 10.4,
+    "fat": 1.1,
+    "carbs": 71.5
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "guanciale",
+   "name": "Гуанчале",
+   "brand": null,
+   "categoryId": "pork-cured",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 655,
+    "protein": 6.0,
+    "fat": 69.0,
+    "carbs": 0.0
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "pancetta",
+   "name": "Панчетта",
+   "brand": null,
+   "categoryId": "pork-cured",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 458,
+    "protein": 15.0,
+    "fat": 45.0,
+    "carbs": 0.0
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "bacon-smoked",
+   "name": "Бекон копчёный",
+   "brand": null,
+   "categoryId": "pork-cured",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 500,
+    "protein": 23.0,
+    "fat": 45.0,
+    "carbs": 0.0
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "pecorino-romano",
+   "name": "Пекорино Романо",
+   "brand": null,
+   "categoryId": "hard-cheese",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 387,
+    "protein": 32.0,
+    "fat": 27.0,
+    "carbs": 3.6
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "parmesan",
+   "name": "Пармезан",
+   "brand": null,
+   "categoryId": "hard-cheese",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 392,
+    "protein": 35.8,
+    "fat": 25.8,
+    "carbs": 3.2
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "grana-padano",
+   "name": "Грана Падано",
+   "brand": null,
+   "categoryId": "hard-cheese",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 398,
+    "protein": 33.0,
+    "fat": 29.0,
+    "carbs": 0.0
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "eggs-c0",
+   "name": "Яйца С0",
+   "brand": null,
+   "categoryId": "eggs",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 157,
+    "protein": 12.7,
+    "fat": 11.5,
+    "carbs": 0.7
+   },
+   "gramsPerPiece": 60,
+   "density": null
+  },
+  {
+   "id": "eggs-c1",
+   "name": "Яйца С1",
+   "brand": null,
+   "categoryId": "eggs",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 157,
+    "protein": 12.7,
+    "fat": 11.5,
+    "carbs": 0.7
+   },
+   "gramsPerPiece": 52,
+   "density": null
+  },
+  {
+   "id": "pepper-ground",
+   "name": "Перец чёрный молотый",
+   "brand": null,
+   "categoryId": "black-pepper",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 251,
+    "protein": 10.4,
+    "fat": 3.3,
+    "carbs": 64.0
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "pepper-whole",
+   "name": "Перец чёрный горошек",
+   "brand": null,
+   "categoryId": "black-pepper",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 251,
+    "protein": 10.4,
+    "fat": 3.3,
+    "carbs": 64.0
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "paprika-sweet",
+   "name": "Паприка сладкая молотая",
+   "brand": null,
+   "categoryId": "paprika",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 282,
+    "protein": 14.1,
+    "fat": 12.9,
+    "carbs": 54.0
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "tomato-cherry",
+   "name": "Томаты черри",
+   "brand": null,
+   "categoryId": "tomatoes",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 18,
+    "protein": 0.9,
+    "fat": 0.2,
+    "carbs": 3.9
+   },
+   "gramsPerPiece": 15,
+   "density": null
+  },
+  {
+   "id": "tomato-pink",
+   "name": "Томаты розовые",
+   "brand": null,
+   "categoryId": "tomatoes",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 20,
+    "protein": 1.1,
+    "fat": 0.2,
+    "carbs": 3.7
+   },
+   "gramsPerPiece": 150,
+   "density": null
+  },
+  {
+   "id": "tomato-paste",
+   "name": "Томатная паста",
+   "brand": null,
+   "categoryId": "tomato-paste",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 102,
+    "protein": 5.6,
+    "fat": 1.5,
+    "carbs": 16.7
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "cucumber-short",
+   "name": "Огурцы короткоплодные",
+   "brand": null,
+   "categoryId": "cucumbers",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 15,
+    "protein": 0.8,
+    "fat": 0.1,
+    "carbs": 2.8
+   },
+   "gramsPerPiece": 100,
+   "density": null
+  },
+  {
+   "id": "cucumber-long",
+   "name": "Огурцы длинноплодные",
+   "brand": null,
+   "categoryId": "cucumbers",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 14,
+    "protein": 0.7,
+    "fat": 0.1,
+    "carbs": 2.6
+   },
+   "gramsPerPiece": 250,
+   "density": null
+  },
+  {
+   "id": "pickles-marinated",
+   "name": "Огурцы маринованные",
+   "brand": null,
+   "categoryId": "pickles",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 16,
+    "protein": 0.8,
+    "fat": 0.1,
+    "carbs": 1.7
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "pickles-salted",
+   "name": "Огурцы солёные",
+   "brand": null,
+   "categoryId": "pickles",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 11,
+    "protein": 0.8,
+    "fat": 0.1,
+    "carbs": 1.7
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "feta-greek",
+   "name": "Фета",
+   "brand": null,
+   "categoryId": "feta",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 264,
+    "protein": 14.2,
+    "fat": 21.3,
+    "carbs": 4.1
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "feta-brine",
+   "name": "Брынза",
+   "brand": null,
+   "categoryId": "feta",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 260,
+    "protein": 17.9,
+    "fat": 20.1,
+    "carbs": 0.0
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "olives-kalamata",
+   "name": "Оливки Каламата",
+   "brand": null,
+   "categoryId": "olives",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 239,
+    "protein": 1.6,
+    "fat": 25.0,
+    "carbs": 3.0
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "olives-black",
+   "name": "Маслины без косточки",
+   "brand": null,
+   "categoryId": "olives",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 166,
+    "protein": 0.8,
+    "fat": 15.3,
+    "carbs": 6.3
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "oil-ev",
+   "name": "Масло оливковое Extra Virgin",
+   "brand": null,
+   "categoryId": "olive-oil",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 898,
+    "protein": 0.0,
+    "fat": 99.8,
+    "carbs": 0.0
+   },
+   "gramsPerPiece": null,
+   "density": 0.92
+  },
+  {
+   "id": "oil-pomace",
+   "name": "Масло оливковое рафинированное",
+   "brand": null,
+   "categoryId": "olive-oil",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 898,
+    "protein": 0.0,
+    "fat": 99.8,
+    "carbs": 0.0
+   },
+   "gramsPerPiece": null,
+   "density": 0.92
+  },
+  {
+   "id": "oil-sunflower",
+   "name": "Масло подсолнечное рафинированное",
+   "brand": null,
+   "categoryId": "sunflower-oil",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 899,
+    "protein": 0.0,
+    "fat": 99.9,
+    "carbs": 0.0
+   },
+   "gramsPerPiece": null,
+   "density": 0.92
+  },
+  {
+   "id": "oil-sunflower-raw",
+   "name": "Масло подсолнечное нерафинированное",
+   "brand": null,
+   "categoryId": "sunflower-oil",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 899,
+    "protein": 0.0,
+    "fat": 99.9,
+    "carbs": 0.0
+   },
+   "gramsPerPiece": null,
+   "density": 0.92
+  },
+  {
+   "id": "butter-82",
+   "name": "Масло сливочное 82,5%",
+   "brand": null,
+   "categoryId": "butter",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 748,
+    "protein": 0.6,
+    "fat": 82.5,
+    "carbs": 0.8
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "onion-yellow",
+   "name": "Лук репчатый",
+   "brand": null,
+   "categoryId": "onion",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 41,
+    "protein": 1.4,
+    "fat": 0.0,
+    "carbs": 8.2
+   },
+   "gramsPerPiece": 100,
+   "density": null
+  },
+  {
+   "id": "onion-red",
+   "name": "Лук красный",
+   "brand": null,
+   "categoryId": "onion",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 42,
+    "protein": 1.1,
+    "fat": 0.1,
+    "carbs": 9.3
+   },
+   "gramsPerPiece": 100,
+   "density": null
+  },
+  {
+   "id": "garlic",
+   "name": "Чеснок",
+   "brand": null,
+   "categoryId": "garlic",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 149,
+    "protein": 6.5,
+    "fat": 0.5,
+    "carbs": 29.9
+   },
+   "gramsPerPiece": 5,
+   "density": null
+  },
+  {
+   "id": "carrot",
+   "name": "Морковь",
+   "brand": null,
+   "categoryId": "carrot",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 35,
+    "protein": 1.3,
+    "fat": 0.1,
+    "carbs": 6.9
+   },
+   "gramsPerPiece": 100,
+   "density": null
+  },
+  {
+   "id": "beetroot",
+   "name": "Свёкла",
+   "brand": null,
+   "categoryId": "beetroot",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 42,
+    "protein": 1.5,
+    "fat": 0.1,
+    "carbs": 8.8
+   },
+   "gramsPerPiece": 250,
+   "density": null
+  },
+  {
+   "id": "potato",
+   "name": "Картофель",
+   "brand": null,
+   "categoryId": "potato",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 77,
+    "protein": 2.0,
+    "fat": 0.4,
+    "carbs": 16.3
+   },
+   "gramsPerPiece": 120,
+   "density": null
+  },
+  {
+   "id": "potato-young",
+   "name": "Картофель молодой",
+   "brand": null,
+   "categoryId": "potato",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 61,
+    "protein": 2.4,
+    "fat": 0.4,
+    "carbs": 12.4
+   },
+   "gramsPerPiece": 80,
+   "density": null
+  },
+  {
+   "id": "cabbage-white",
+   "name": "Капуста белокочанная",
+   "brand": null,
+   "categoryId": "cabbage",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 27,
+    "protein": 1.8,
+    "fat": 0.1,
+    "carbs": 4.7
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "sauerkraut",
+   "name": "Капуста квашеная",
+   "brand": null,
+   "categoryId": "sauerkraut",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 23,
+    "protein": 1.8,
+    "fat": 0.1,
+    "carbs": 3.0
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "peas-canned",
+   "name": "Горошек зелёный консервированный",
+   "brand": null,
+   "categoryId": "peas",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 55,
+    "protein": 3.6,
+    "fat": 0.1,
+    "carbs": 9.8
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "pumpkin",
+   "name": "Тыква",
+   "brand": null,
+   "categoryId": "pumpkin",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 22,
+    "protein": 1.0,
+    "fat": 0.1,
+    "carbs": 4.4
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "champignons",
+   "name": "Шампиньоны",
+   "brand": null,
+   "categoryId": "mushrooms",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 27,
+    "protein": 4.3,
+    "fat": 1.0,
+    "carbs": 0.1
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "radish",
+   "name": "Редис",
+   "brand": null,
+   "categoryId": "radish",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 20,
+    "protein": 1.2,
+    "fat": 0.1,
+    "carbs": 3.4
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "lettuce-romaine",
+   "name": "Салат романо",
+   "brand": null,
+   "categoryId": "lettuce",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 17,
+    "protein": 1.2,
+    "fat": 0.3,
+    "carbs": 3.3
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "lettuce-iceberg",
+   "name": "Салат айсберг",
+   "brand": null,
+   "categoryId": "lettuce",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 14,
+    "protein": 0.9,
+    "fat": 0.1,
+    "carbs": 3.0
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "dill",
+   "name": "Укроп",
+   "brand": null,
+   "categoryId": "herbs",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 40,
+    "protein": 2.5,
+    "fat": 0.5,
+    "carbs": 6.3
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "green-onion",
+   "name": "Лук зелёный",
+   "brand": null,
+   "categoryId": "herbs",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 20,
+    "protein": 1.3,
+    "fat": 0.1,
+    "carbs": 3.2
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "lemon",
+   "name": "Лимон",
+   "brand": null,
+   "categoryId": "lemon",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 34,
+    "protein": 0.9,
+    "fat": 0.1,
+    "carbs": 3.0
+   },
+   "gramsPerPiece": 120,
+   "density": null
+  },
+  {
+   "id": "apple-antonovka",
+   "name": "Яблоки Антоновка",
+   "brand": null,
+   "categoryId": "apples",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 48,
+    "protein": 0.3,
+    "fat": 0.3,
+    "carbs": 9.6
+   },
+   "gramsPerPiece": 180,
+   "density": null
+  },
+  {
+   "id": "apple-granny",
+   "name": "Яблоки Гренни Смит",
+   "brand": null,
+   "categoryId": "apples",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 58,
+    "protein": 0.4,
+    "fat": 0.2,
+    "carbs": 13.0
+   },
+   "gramsPerPiece": 180,
+   "density": null
+  },
+  {
+   "id": "beef-shoulder",
+   "name": "Говядина лопатка",
+   "brand": null,
+   "categoryId": "beef",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 187,
+    "protein": 18.6,
+    "fat": 12.4,
+    "carbs": 0.0
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "beef-bone",
+   "name": "Говядина на кости (суповой набор)",
+   "brand": null,
+   "categoryId": "beef",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 218,
+    "protein": 17.0,
+    "fat": 16.0,
+    "carbs": 0.0
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "pork-shoulder",
+   "name": "Свинина лопатка",
+   "brand": null,
+   "categoryId": "pork",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 259,
+    "protein": 16.0,
+    "fat": 21.6,
+    "carbs": 0.0
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "minced-beef",
+   "name": "Фарш говяжий",
+   "brand": null,
+   "categoryId": "minced-meat",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 254,
+    "protein": 17.2,
+    "fat": 20.0,
+    "carbs": 0.0
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "minced-mixed",
+   "name": "Фарш домашний (свинина и говядина)",
+   "brand": null,
+   "categoryId": "minced-meat",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 263,
+    "protein": 17.0,
+    "fat": 21.6,
+    "carbs": 0.0
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "chicken-breast",
+   "name": "Филе куриной грудки",
+   "brand": null,
+   "categoryId": "chicken-fillet",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 113,
+    "protein": 23.6,
+    "fat": 1.9,
+    "carbs": 0.4
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "chicken-thigh",
+   "name": "Бёдра куриные",
+   "brand": null,
+   "categoryId": "chicken-thighs",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 185,
+    "protein": 16.8,
+    "fat": 13.0,
+    "carbs": 0.0
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "sausage-doctor",
+   "name": "Колбаса варёная «Докторская»",
+   "brand": null,
+   "categoryId": "sausage",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 257,
+    "protein": 12.8,
+    "fat": 22.2,
+    "carbs": 1.5
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "sausage-milk",
+   "name": "Колбаса варёная «Молочная»",
+   "brand": null,
+   "categoryId": "sausage",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 252,
+    "protein": 11.7,
+    "fat": 22.8,
+    "carbs": 0.0
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "salmon-fillet",
+   "name": "Филе лосося",
+   "brand": null,
+   "categoryId": "salmon",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 208,
+    "protein": 20.0,
+    "fat": 13.0,
+    "carbs": 0.0
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "trout-fillet",
+   "name": "Филе форели",
+   "brand": null,
+   "categoryId": "salmon",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 148,
+    "protein": 20.0,
+    "fat": 7.0,
+    "carbs": 0.0
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "herring-fillet",
+   "name": "Сельдь слабосолёная, филе",
+   "brand": null,
+   "categoryId": "herring",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 217,
+    "protein": 19.0,
+    "fat": 15.0,
+    "carbs": 0.0
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "milk-25",
+   "name": "Молоко 2,5%",
+   "brand": null,
+   "categoryId": "milk",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 52,
+    "protein": 2.8,
+    "fat": 2.5,
+    "carbs": 4.7
+   },
+   "gramsPerPiece": null,
+   "density": 1.03
+  },
+  {
+   "id": "milk-32",
+   "name": "Молоко 3,2%",
+   "brand": null,
+   "categoryId": "milk",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 59,
+    "protein": 2.9,
+    "fat": 3.2,
+    "carbs": 4.7
+   },
+   "gramsPerPiece": null,
+   "density": 1.03
+  },
+  {
+   "id": "kefir-25",
+   "name": "Кефир 2,5%",
+   "brand": null,
+   "categoryId": "kefir",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 53,
+    "protein": 2.9,
+    "fat": 2.5,
+    "carbs": 4.0
+   },
+   "gramsPerPiece": null,
+   "density": 1.03
+  },
+  {
+   "id": "kefir-1",
+   "name": "Кефир 1%",
+   "brand": null,
+   "categoryId": "kefir",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 40,
+    "protein": 3.0,
+    "fat": 1.0,
+    "carbs": 4.0
+   },
+   "gramsPerPiece": null,
+   "density": 1.03
+  },
+  {
+   "id": "cream-20",
+   "name": "Сливки 20%",
+   "brand": null,
+   "categoryId": "cream",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 205,
+    "protein": 2.8,
+    "fat": 20.0,
+    "carbs": 3.7
+   },
+   "gramsPerPiece": null,
+   "density": 1.0
+  },
+  {
+   "id": "cream-10",
+   "name": "Сливки 10%",
+   "brand": null,
+   "categoryId": "cream",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 118,
+    "protein": 3.0,
+    "fat": 10.0,
+    "carbs": 4.0
+   },
+   "gramsPerPiece": null,
+   "density": 1.0
+  },
+  {
+   "id": "sour-cream-15",
+   "name": "Сметана 15%",
+   "brand": null,
+   "categoryId": "sour-cream",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 158,
+    "protein": 2.6,
+    "fat": 15.0,
+    "carbs": 3.0
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "sour-cream-20",
+   "name": "Сметана 20%",
+   "brand": null,
+   "categoryId": "sour-cream",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 206,
+    "protein": 2.8,
+    "fat": 20.0,
+    "carbs": 3.2
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "tvorog-5",
+   "name": "Творог 5%",
+   "brand": null,
+   "categoryId": "tvorog",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 121,
+    "protein": 17.2,
+    "fat": 5.0,
+    "carbs": 1.8
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "tvorog-9",
+   "name": "Творог 9%",
+   "brand": null,
+   "categoryId": "tvorog",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 159,
+    "protein": 16.7,
+    "fat": 9.0,
+    "carbs": 2.0
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "mayo-67",
+   "name": "Майонез 67%",
+   "brand": null,
+   "categoryId": "mayonnaise",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 627,
+    "protein": 0.3,
+    "fat": 67.0,
+    "carbs": 2.6
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "mayo-30",
+   "name": "Майонез лёгкий 30%",
+   "brand": null,
+   "categoryId": "mayonnaise",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 302,
+    "protein": 0.4,
+    "fat": 30.0,
+    "carbs": 8.0
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "flour-wheat",
+   "name": "Мука пшеничная в/с",
+   "brand": null,
+   "categoryId": "flour",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 334,
+    "protein": 10.3,
+    "fat": 1.1,
+    "carbs": 69.9
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "flour-rice",
+   "name": "Мука рисовая",
+   "brand": null,
+   "categoryId": "flour",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 366,
+    "protein": 6.0,
+    "fat": 1.4,
+    "carbs": 80.0
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "semolina",
+   "name": "Манная крупа",
+   "brand": null,
+   "categoryId": "semolina",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 333,
+    "protein": 10.3,
+    "fat": 1.0,
+    "carbs": 70.6
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "oat-flakes",
+   "name": "Овсяные хлопья",
+   "brand": null,
+   "categoryId": "oats",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 352,
+    "protein": 12.3,
+    "fat": 6.2,
+    "carbs": 61.8
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "buckwheat",
+   "name": "Гречка ядрица",
+   "brand": null,
+   "categoryId": "buckwheat",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 313,
+    "protein": 12.6,
+    "fat": 3.3,
+    "carbs": 57.1
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "rice-long",
+   "name": "Рис длиннозёрный для плова",
+   "brand": null,
+   "categoryId": "rice",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 344,
+    "protein": 6.7,
+    "fat": 0.7,
+    "carbs": 78.9
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "rice-round",
+   "name": "Рис круглозёрный",
+   "brand": null,
+   "categoryId": "rice",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 330,
+    "protein": 7.0,
+    "fat": 1.0,
+    "carbs": 74.0
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "bread-baton",
+   "name": "Батон нарезной",
+   "brand": null,
+   "categoryId": "bread",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 264,
+    "protein": 7.5,
+    "fat": 2.9,
+    "carbs": 51.4
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "sugar-white",
+   "name": "Сахар белый",
+   "brand": null,
+   "categoryId": "sugar",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 398,
+    "protein": 0.0,
+    "fat": 0.0,
+    "carbs": 99.7
+   },
+   "gramsPerPiece": null,
+   "density": null
+  },
+  {
+   "id": "sugar-cane",
+   "name": "Сахар тростниковый",
+   "brand": null,
+   "categoryId": "sugar",
+   "barcode": null,
+   "nutrition": {
+    "kcal": 380,
+    "protein": 0.0,
+    "fat": 0.0,
+    "carbs": 98.0
+   },
+   "gramsPerPiece": null,
+   "density": null
+  }
+ ],
+ "recipes": [
+  {
+   "id": "carbonara",
+   "title": "Паста карбонара",
+   "summary": "Римская паста с яйцом, твёрдым сыром и хрустящей свининой.",
+   "category": "main",
+   "cookMinutes": 25,
+   "servings": 2,
+   "featured": true,
+   "ingredients": [
     {
-      "id": "carbonara",
-      "title": "Паста карбонара",
-      "summary": "Классическая римская паста с яйцом, сыром и свининой.",
-      "servings": 2,
-      "steps": [
-        "Отварите спагетти в подсоленной воде до состояния аль денте.",
-        "Обжарьте нарезанную свинину до хруста без масла.",
-        "Смешайте желтки с тёртым сыром и перцем.",
-        "Соедините пасту со свининой, снимите с огня и вмешайте яичную смесь, добавляя воду от пасты."
-      ],
-      "ingredients": [
-        { "id": "carbonara-pasta", "title": "Спагетти", "categoryId": "spaghetti", "amount": 200, "unit": "g" },
-        { "id": "carbonara-pork", "title": "Свинина вяленая", "categoryId": "pork-cured", "amount": 100, "unit": "g" },
-        { "id": "carbonara-cheese", "title": "Твёрдый сыр", "categoryId": "hard-cheese", "amount": 60, "unit": "g" },
-        { "id": "carbonara-eggs", "title": "Яйца", "categoryId": "eggs", "amount": 3, "unit": "pcs" },
-        { "id": "carbonara-pepper", "title": "Чёрный перец", "categoryId": "black-pepper", "amount": 5, "unit": "g" }
-      ]
+     "id": "carbonara-pasta",
+     "title": "Спагетти",
+     "categoryId": "spaghetti",
+     "amount": 200,
+     "unit": "g"
     },
     {
-      "id": "greek-salad",
-      "title": "Греческий салат",
-      "summary": "Свежие овощи, фета и оливки с оливковым маслом.",
-      "servings": 2,
-      "steps": [
-        "Крупно нарежьте томаты и огурцы.",
-        "Нарежьте лук тонкими полукольцами.",
-        "Добавьте оливки, сверху положите фету.",
-        "Полейте оливковым маслом."
-      ],
-      "ingredients": [
-        { "id": "greek-tomatoes", "title": "Томаты", "categoryId": "tomatoes", "amount": 300, "unit": "g" },
-        { "id": "greek-cucumbers", "title": "Огурцы", "categoryId": "cucumbers", "amount": 200, "unit": "g" },
-        { "id": "greek-feta", "title": "Фета", "categoryId": "feta", "amount": 150, "unit": "g" },
-        { "id": "greek-olives", "title": "Оливки", "categoryId": "olives", "amount": 80, "unit": "g" },
-        { "id": "greek-oil", "title": "Оливковое масло", "categoryId": "olive-oil", "amount": 30, "unit": "ml" },
-        { "id": "greek-onion", "title": "Лук", "categoryId": "onion", "amount": 1, "unit": "pcs" }
-      ]
+     "id": "carbonara-pork",
+     "title": "Свинина вяленая",
+     "categoryId": "pork-cured",
+     "amount": 100,
+     "unit": "g"
     },
     {
-      "id": "syrniki",
-      "title": "Сырники",
-      "summary": "Нежные творожные сырники на завтрак.",
-      "servings": 3,
-      "steps": [
-        "Разомните творог с яйцом и сахаром.",
-        "Добавьте муку и замесите мягкую массу.",
-        "Сформируйте сырники и обжарьте с двух сторон.",
-        "Подавайте со сметаной."
-      ],
-      "ingredients": [
-        { "id": "syrniki-tvorog", "title": "Творог", "categoryId": "tvorog", "amount": 400, "unit": "g" },
-        { "id": "syrniki-eggs", "title": "Яйца", "categoryId": "eggs", "amount": 1, "unit": "pcs" },
-        { "id": "syrniki-flour", "title": "Мука", "categoryId": "flour", "amount": 60, "unit": "g" },
-        { "id": "syrniki-sugar", "title": "Сахар", "categoryId": "sugar", "amount": 30, "unit": "g" },
-        { "id": "syrniki-sour-cream", "title": "Сметана", "categoryId": "sour-cream", "amount": 100, "unit": "g" }
-      ]
+     "id": "carbonara-cheese",
+     "title": "Твёрдый сыр",
+     "categoryId": "hard-cheese",
+     "amount": 60,
+     "unit": "g"
+    },
+    {
+     "id": "carbonara-eggs",
+     "title": "Яйца",
+     "categoryId": "eggs",
+     "amount": 3,
+     "unit": "pcs"
+    },
+    {
+     "id": "carbonara-pepper",
+     "title": "Чёрный перец",
+     "categoryId": "black-pepper",
+     "amount": 5,
+     "unit": "g"
     }
-  ]
+   ],
+   "steps": [
+    "Поставьте варить спагетти в хорошо подсоленной воде.",
+    "Нарежьте свинину брусочками и вытопите на сухой сковороде до хруста.",
+    "Взбейте желтки с тёртым сыром и щедрой порцией перца.",
+    "Переложите пасту в сковороду, снимите с огня и быстро вмешайте яичную смесь, добавляя воду от пасты до кремовой консистенции."
+   ]
+  },
+  {
+   "id": "greek-salad",
+   "title": "Греческий салат",
+   "summary": "Крупно нарезанные овощи, фета, оливки и оливковое масло.",
+   "category": "salad",
+   "cookMinutes": 15,
+   "servings": 2,
+   "featured": true,
+   "ingredients": [
+    {
+     "id": "greek-tomatoes",
+     "title": "Томаты",
+     "categoryId": "tomatoes",
+     "amount": 300,
+     "unit": "g"
+    },
+    {
+     "id": "greek-cucumbers",
+     "title": "Огурцы",
+     "categoryId": "cucumbers",
+     "amount": 200,
+     "unit": "g"
+    },
+    {
+     "id": "greek-feta",
+     "title": "Фета",
+     "categoryId": "feta",
+     "amount": 150,
+     "unit": "g"
+    },
+    {
+     "id": "greek-olives",
+     "title": "Оливки",
+     "categoryId": "olives",
+     "amount": 80,
+     "unit": "g"
+    },
+    {
+     "id": "greek-oil",
+     "title": "Оливковое масло",
+     "categoryId": "olive-oil",
+     "amount": 30,
+     "unit": "ml"
+    },
+    {
+     "id": "greek-onion",
+     "title": "Лук",
+     "categoryId": "onion",
+     "amount": 1,
+     "unit": "pcs"
+    }
+   ],
+   "steps": [
+    "Нарежьте томаты и огурцы крупными кусками.",
+    "Лук нарежьте тонкими полукольцами.",
+    "Соедините овощи с оливками, сверху положите фету пластом.",
+    "Полейте маслом прямо перед подачей."
+   ]
+  },
+  {
+   "id": "syrniki",
+   "title": "Сырники",
+   "summary": "Нежные творожные сырники с румяной корочкой.",
+   "category": "breakfast",
+   "cookMinutes": 30,
+   "servings": 3,
+   "featured": true,
+   "ingredients": [
+    {
+     "id": "syrniki-tvorog",
+     "title": "Творог",
+     "categoryId": "tvorog",
+     "amount": 400,
+     "unit": "g"
+    },
+    {
+     "id": "syrniki-eggs",
+     "title": "Яйца",
+     "categoryId": "eggs",
+     "amount": 1,
+     "unit": "pcs"
+    },
+    {
+     "id": "syrniki-flour",
+     "title": "Мука",
+     "categoryId": "flour",
+     "amount": 60,
+     "unit": "g"
+    },
+    {
+     "id": "syrniki-sugar",
+     "title": "Сахар",
+     "categoryId": "sugar",
+     "amount": 30,
+     "unit": "g"
+    },
+    {
+     "id": "syrniki-sour-cream",
+     "title": "Сметана",
+     "categoryId": "sour-cream",
+     "amount": 100,
+     "unit": "g"
+    }
+   ],
+   "steps": [
+    "Разомните творог вилкой с яйцом и сахаром.",
+    "Вмешайте муку — масса должна быть мягкой, но держать форму.",
+    "Сформируйте шайбы, обваляйте в муке и обжарьте на среднем огне по 3–4 минуты с каждой стороны.",
+    "Подавайте со сметаной."
+   ]
+  },
+  {
+   "id": "borscht",
+   "title": "Борщ",
+   "summary": "Наваристый борщ на говядине со свёклой и капустой.",
+   "category": "soup",
+   "cookMinutes": 150,
+   "servings": 6,
+   "featured": true,
+   "ingredients": [
+    {
+     "id": "borscht-0",
+     "title": "Говядина",
+     "categoryId": "beef",
+     "amount": 600,
+     "unit": "g"
+    },
+    {
+     "id": "borscht-1",
+     "title": "Свёкла",
+     "categoryId": "beetroot",
+     "amount": 300,
+     "unit": "g"
+    },
+    {
+     "id": "borscht-2",
+     "title": "Капуста",
+     "categoryId": "cabbage",
+     "amount": 300,
+     "unit": "g"
+    },
+    {
+     "id": "borscht-3",
+     "title": "Картофель",
+     "categoryId": "potato",
+     "amount": 300,
+     "unit": "g"
+    },
+    {
+     "id": "borscht-4",
+     "title": "Морковь",
+     "categoryId": "carrot",
+     "amount": 1,
+     "unit": "pcs"
+    },
+    {
+     "id": "borscht-5",
+     "title": "Лук",
+     "categoryId": "onion",
+     "amount": 1,
+     "unit": "pcs"
+    },
+    {
+     "id": "borscht-6",
+     "title": "Томатная паста",
+     "categoryId": "tomato-paste",
+     "amount": 50,
+     "unit": "g"
+    },
+    {
+     "id": "borscht-7",
+     "title": "Чеснок",
+     "categoryId": "garlic",
+     "amount": 2,
+     "unit": "pcs"
+    },
+    {
+     "id": "borscht-8",
+     "title": "Сметана",
+     "categoryId": "sour-cream",
+     "amount": 150,
+     "unit": "g"
+    }
+   ],
+   "steps": [
+    "Залейте говядину 2,5 л холодной воды, доведите до кипения, снимите пену и варите 1,5 часа.",
+    "Свёклу натрите и потушите с томатной пастой и ложкой бульона 10 минут.",
+    "Лук и морковь обжарьте до мягкости.",
+    "Мясо выньте и нарежьте. В бульон положите картофель, через 10 минут — капусту.",
+    "Добавьте свёклу, зажарку, мясо и чеснок, проварите 5 минут и дайте настояться. Подавайте со сметаной."
+   ]
+  },
+  {
+   "id": "olivier",
+   "title": "Оливье",
+   "summary": "Тот самый праздничный салат.",
+   "category": "salad",
+   "cookMinutes": 60,
+   "servings": 6,
+   "featured": false,
+   "ingredients": [
+    {
+     "id": "olivier-0",
+     "title": "Картофель",
+     "categoryId": "potato",
+     "amount": 400,
+     "unit": "g"
+    },
+    {
+     "id": "olivier-1",
+     "title": "Морковь",
+     "categoryId": "carrot",
+     "amount": 150,
+     "unit": "g"
+    },
+    {
+     "id": "olivier-2",
+     "title": "Яйца",
+     "categoryId": "eggs",
+     "amount": 4,
+     "unit": "pcs"
+    },
+    {
+     "id": "olivier-3",
+     "title": "Варёная колбаса",
+     "categoryId": "sausage",
+     "amount": 300,
+     "unit": "g"
+    },
+    {
+     "id": "olivier-4",
+     "title": "Огурцы маринованные",
+     "categoryId": "pickles",
+     "amount": 200,
+     "unit": "g"
+    },
+    {
+     "id": "olivier-5",
+     "title": "Зелёный горошек",
+     "categoryId": "peas",
+     "amount": 200,
+     "unit": "g"
+    },
+    {
+     "id": "olivier-6",
+     "title": "Майонез",
+     "categoryId": "mayonnaise",
+     "amount": 150,
+     "unit": "g"
+    }
+   ],
+   "steps": [
+    "Отварите картофель и морковь в мундире, яйца — вкрутую. Остудите.",
+    "Нарежьте всё одинаковым мелким кубиком.",
+    "Добавьте горошек без жидкости.",
+    "Заправьте майонезом перед подачей."
+   ]
+  },
+  {
+   "id": "omelet",
+   "title": "Омлет",
+   "summary": "Пышный омлет на молоке за 10 минут.",
+   "category": "breakfast",
+   "cookMinutes": 10,
+   "servings": 1,
+   "featured": false,
+   "ingredients": [
+    {
+     "id": "omelet-0",
+     "title": "Яйца",
+     "categoryId": "eggs",
+     "amount": 3,
+     "unit": "pcs"
+    },
+    {
+     "id": "omelet-1",
+     "title": "Молоко",
+     "categoryId": "milk",
+     "amount": 90,
+     "unit": "ml"
+    },
+    {
+     "id": "omelet-2",
+     "title": "Сливочное масло",
+     "categoryId": "butter",
+     "amount": 10,
+     "unit": "g"
+    }
+   ],
+   "steps": [
+    "Слегка взбейте яйца с молоком и щепоткой соли.",
+    "Растопите масло на сковороде, влейте смесь.",
+    "Готовьте под крышкой на слабом огне 5–6 минут, пока верх не схватится."
+   ]
+  },
+  {
+   "id": "oatmeal",
+   "title": "Овсяная каша",
+   "summary": "Кремовая овсянка на молоке.",
+   "category": "breakfast",
+   "cookMinutes": 10,
+   "servings": 2,
+   "featured": false,
+   "ingredients": [
+    {
+     "id": "oatmeal-0",
+     "title": "Овсяные хлопья",
+     "categoryId": "oats",
+     "amount": 80,
+     "unit": "g"
+    },
+    {
+     "id": "oatmeal-1",
+     "title": "Молоко",
+     "categoryId": "milk",
+     "amount": 400,
+     "unit": "ml"
+    },
+    {
+     "id": "oatmeal-2",
+     "title": "Сахар",
+     "categoryId": "sugar",
+     "amount": 15,
+     "unit": "g"
+    },
+    {
+     "id": "oatmeal-3",
+     "title": "Сливочное масло",
+     "categoryId": "butter",
+     "amount": 15,
+     "unit": "g"
+    }
+   ],
+   "steps": [
+    "Доведите молоко до кипения со щепоткой соли и сахаром.",
+    "Всыпьте хлопья и варите 5–7 минут, помешивая.",
+    "Снимите с огня, добавьте масло и дайте постоять 2 минуты."
+   ]
+  },
+  {
+   "id": "pancakes",
+   "title": "Блины",
+   "summary": "Тонкие блины на молоке.",
+   "category": "pastry",
+   "cookMinutes": 40,
+   "servings": 4,
+   "featured": true,
+   "ingredients": [
+    {
+     "id": "pancakes-0",
+     "title": "Молоко",
+     "categoryId": "milk",
+     "amount": 500,
+     "unit": "ml"
+    },
+    {
+     "id": "pancakes-1",
+     "title": "Яйца",
+     "categoryId": "eggs",
+     "amount": 2,
+     "unit": "pcs"
+    },
+    {
+     "id": "pancakes-2",
+     "title": "Мука",
+     "categoryId": "flour",
+     "amount": 200,
+     "unit": "g"
+    },
+    {
+     "id": "pancakes-3",
+     "title": "Сахар",
+     "categoryId": "sugar",
+     "amount": 30,
+     "unit": "g"
+    },
+    {
+     "id": "pancakes-4",
+     "title": "Подсолнечное масло",
+     "categoryId": "sunflower-oil",
+     "amount": 30,
+     "unit": "ml"
+    }
+   ],
+   "steps": [
+    "Взбейте яйца с сахаром и щепоткой соли, влейте половину молока.",
+    "Всыпьте муку и размешайте до гладкости, затем влейте остальное молоко и масло.",
+    "Дайте тесту постоять 15 минут.",
+    "Жарьте на разогретой сковороде тонким слоем по минуте с каждой стороны."
+   ]
+  },
+  {
+   "id": "buckwheat-chicken",
+   "title": "Гречка с курицей",
+   "summary": "Сытный ужин в одной сковороде.",
+   "category": "main",
+   "cookMinutes": 35,
+   "servings": 4,
+   "featured": false,
+   "ingredients": [
+    {
+     "id": "buckwheat-chicken-0",
+     "title": "Гречка",
+     "categoryId": "buckwheat",
+     "amount": 200,
+     "unit": "g"
+    },
+    {
+     "id": "buckwheat-chicken-1",
+     "title": "Куриное филе",
+     "categoryId": "chicken-fillet",
+     "amount": 400,
+     "unit": "g"
+    },
+    {
+     "id": "buckwheat-chicken-2",
+     "title": "Лук",
+     "categoryId": "onion",
+     "amount": 1,
+     "unit": "pcs"
+    },
+    {
+     "id": "buckwheat-chicken-3",
+     "title": "Морковь",
+     "categoryId": "carrot",
+     "amount": 1,
+     "unit": "pcs"
+    },
+    {
+     "id": "buckwheat-chicken-4",
+     "title": "Подсолнечное масло",
+     "categoryId": "sunflower-oil",
+     "amount": 20,
+     "unit": "ml"
+    }
+   ],
+   "steps": [
+    "Нарежьте курицу кусочками и обжарьте до румяности.",
+    "Добавьте лук и тёртую морковь, жарьте 5 минут.",
+    "Всыпьте промытую гречку, залейте 400 мл горячей воды, посолите.",
+    "Тушите под крышкой на слабом огне 20 минут."
+   ]
+  },
+  {
+   "id": "chicken-noodle-soup",
+   "title": "Куриный суп с лапшой",
+   "summary": "Лёгкий домашний суп.",
+   "category": "soup",
+   "cookMinutes": 60,
+   "servings": 6,
+   "featured": false,
+   "ingredients": [
+    {
+     "id": "chicken-noodle-soup-0",
+     "title": "Куриные бёдра",
+     "categoryId": "chicken-thighs",
+     "amount": 500,
+     "unit": "g"
+    },
+    {
+     "id": "chicken-noodle-soup-1",
+     "title": "Лапша",
+     "categoryId": "noodles",
+     "amount": 100,
+     "unit": "g"
+    },
+    {
+     "id": "chicken-noodle-soup-2",
+     "title": "Картофель",
+     "categoryId": "potato",
+     "amount": 300,
+     "unit": "g"
+    },
+    {
+     "id": "chicken-noodle-soup-3",
+     "title": "Морковь",
+     "categoryId": "carrot",
+     "amount": 1,
+     "unit": "pcs"
+    },
+    {
+     "id": "chicken-noodle-soup-4",
+     "title": "Лук",
+     "categoryId": "onion",
+     "amount": 1,
+     "unit": "pcs"
+    },
+    {
+     "id": "chicken-noodle-soup-5",
+     "title": "Зелень",
+     "categoryId": "herbs",
+     "amount": 15,
+     "unit": "g"
+    }
+   ],
+   "steps": [
+    "Сварите бульон из курицы с целой луковицей, 40 минут.",
+    "Выньте курицу, разберите мясо.",
+    "В бульон добавьте картофель и морковь, варите 10 минут.",
+    "Всыпьте лапшу и верните мясо, варите ещё 5 минут. Посыпьте зеленью."
+   ]
+  },
+  {
+   "id": "navy-pasta",
+   "title": "Макароны по-флотски",
+   "summary": "Макароны с обжаренным фаршем и луком.",
+   "category": "main",
+   "cookMinutes": 30,
+   "servings": 4,
+   "featured": false,
+   "ingredients": [
+    {
+     "id": "navy-pasta-0",
+     "title": "Макароны",
+     "categoryId": "pasta-short",
+     "amount": 300,
+     "unit": "g"
+    },
+    {
+     "id": "navy-pasta-1",
+     "title": "Фарш",
+     "categoryId": "minced-meat",
+     "amount": 400,
+     "unit": "g"
+    },
+    {
+     "id": "navy-pasta-2",
+     "title": "Лук",
+     "categoryId": "onion",
+     "amount": 1,
+     "unit": "pcs"
+    },
+    {
+     "id": "navy-pasta-3",
+     "title": "Подсолнечное масло",
+     "categoryId": "sunflower-oil",
+     "amount": 20,
+     "unit": "ml"
+    }
+   ],
+   "steps": [
+    "Отварите макароны до готовности.",
+    "Обжарьте лук до золотистого цвета.",
+    "Добавьте фарш и жарьте, разбивая комочки, 10 минут.",
+    "Смешайте с макаронами и прогрейте вместе."
+   ]
+  },
+  {
+   "id": "plov",
+   "title": "Плов",
+   "summary": "Рассыпчатый плов с мясом и морковью.",
+   "category": "main",
+   "cookMinutes": 90,
+   "servings": 6,
+   "featured": true,
+   "ingredients": [
+    {
+     "id": "plov-0",
+     "title": "Рис",
+     "categoryId": "rice",
+     "amount": 400,
+     "unit": "g"
+    },
+    {
+     "id": "plov-1",
+     "title": "Свинина",
+     "categoryId": "pork",
+     "amount": 500,
+     "unit": "g"
+    },
+    {
+     "id": "plov-2",
+     "title": "Морковь",
+     "categoryId": "carrot",
+     "amount": 400,
+     "unit": "g"
+    },
+    {
+     "id": "plov-3",
+     "title": "Лук",
+     "categoryId": "onion",
+     "amount": 2,
+     "unit": "pcs"
+    },
+    {
+     "id": "plov-4",
+     "title": "Подсолнечное масло",
+     "categoryId": "sunflower-oil",
+     "amount": 100,
+     "unit": "ml"
+    },
+    {
+     "id": "plov-5",
+     "title": "Чеснок",
+     "categoryId": "garlic",
+     "amount": 6,
+     "unit": "pcs"
+    }
+   ],
+   "steps": [
+    "Разогрейте масло в казане, обжарьте мясо кусками до корочки.",
+    "Добавьте лук, затем морковь соломкой, жарьте 10 минут. Залейте водой, посолите, тушите 30 минут.",
+    "Выложите промытый рис ровным слоем, долейте воду на 1,5 см выше риса.",
+    "Когда вода впитается, воткните чеснок, накройте и томите 20 минут на минимальном огне."
+   ]
+  },
+  {
+   "id": "caesar",
+   "title": "Салат «Цезарь» с курицей",
+   "summary": "Хрустящий салат с курицей и сыром.",
+   "category": "salad",
+   "cookMinutes": 30,
+   "servings": 3,
+   "featured": true,
+   "ingredients": [
+    {
+     "id": "caesar-0",
+     "title": "Куриное филе",
+     "categoryId": "chicken-fillet",
+     "amount": 300,
+     "unit": "g"
+    },
+    {
+     "id": "caesar-1",
+     "title": "Листья салата",
+     "categoryId": "lettuce",
+     "amount": 200,
+     "unit": "g"
+    },
+    {
+     "id": "caesar-2",
+     "title": "Твёрдый сыр",
+     "categoryId": "hard-cheese",
+     "amount": 40,
+     "unit": "g"
+    },
+    {
+     "id": "caesar-3",
+     "title": "Хлеб для сухариков",
+     "categoryId": "bread",
+     "amount": 100,
+     "unit": "g"
+    },
+    {
+     "id": "caesar-4",
+     "title": "Томаты черри",
+     "categoryId": "tomatoes",
+     "amount": 150,
+     "unit": "g"
+    },
+    {
+     "id": "caesar-5",
+     "title": "Майонез",
+     "categoryId": "mayonnaise",
+     "amount": 60,
+     "unit": "g"
+    },
+    {
+     "id": "caesar-6",
+     "title": "Чеснок",
+     "categoryId": "garlic",
+     "amount": 1,
+     "unit": "pcs"
+    }
+   ],
+   "steps": [
+    "Обжарьте филе, остудите и нарежьте.",
+    "Хлеб нарежьте кубиками и подсушите на сковороде с чесноком.",
+    "Порвите салат руками, добавьте курицу, томаты и сухарики.",
+    "Заправьте майонезом с тёртым сыром и посыпьте сыром сверху."
+   ]
+  },
+  {
+   "id": "vinaigrette",
+   "title": "Винегрет",
+   "summary": "Овощной салат с квашеной капустой.",
+   "category": "salad",
+   "cookMinutes": 60,
+   "servings": 6,
+   "featured": false,
+   "ingredients": [
+    {
+     "id": "vinaigrette-0",
+     "title": "Свёкла",
+     "categoryId": "beetroot",
+     "amount": 300,
+     "unit": "g"
+    },
+    {
+     "id": "vinaigrette-1",
+     "title": "Картофель",
+     "categoryId": "potato",
+     "amount": 300,
+     "unit": "g"
+    },
+    {
+     "id": "vinaigrette-2",
+     "title": "Морковь",
+     "categoryId": "carrot",
+     "amount": 150,
+     "unit": "g"
+    },
+    {
+     "id": "vinaigrette-3",
+     "title": "Огурцы маринованные",
+     "categoryId": "pickles",
+     "amount": 150,
+     "unit": "g"
+    },
+    {
+     "id": "vinaigrette-4",
+     "title": "Квашеная капуста",
+     "categoryId": "sauerkraut",
+     "amount": 200,
+     "unit": "g"
+    },
+    {
+     "id": "vinaigrette-5",
+     "title": "Подсолнечное масло",
+     "categoryId": "sunflower-oil",
+     "amount": 40,
+     "unit": "ml"
+    }
+   ],
+   "steps": [
+    "Отварите или запеките свёклу, картофель и морковь, остудите.",
+    "Нарежьте кубиком, свёклу сначала смешайте с маслом — так она не окрасит остальное.",
+    "Добавьте огурцы и капусту, перемешайте."
+   ]
+  },
+  {
+   "id": "charlotte",
+   "title": "Шарлотка",
+   "summary": "Простой яблочный пирог.",
+   "category": "pastry",
+   "cookMinutes": 60,
+   "servings": 8,
+   "featured": true,
+   "ingredients": [
+    {
+     "id": "charlotte-0",
+     "title": "Яблоки",
+     "categoryId": "apples",
+     "amount": 500,
+     "unit": "g"
+    },
+    {
+     "id": "charlotte-1",
+     "title": "Яйца",
+     "categoryId": "eggs",
+     "amount": 4,
+     "unit": "pcs"
+    },
+    {
+     "id": "charlotte-2",
+     "title": "Сахар",
+     "categoryId": "sugar",
+     "amount": 200,
+     "unit": "g"
+    },
+    {
+     "id": "charlotte-3",
+     "title": "Мука",
+     "categoryId": "flour",
+     "amount": 200,
+     "unit": "g"
+    }
+   ],
+   "steps": [
+    "Разогрейте духовку до 180 °C.",
+    "Взбейте яйца с сахаром в пышную светлую массу, 7–8 минут.",
+    "Аккуратно вмешайте муку.",
+    "Выложите в форму нарезанные яблоки и залейте тестом.",
+    "Выпекайте 40 минут до сухой шпажки."
+   ]
+  },
+  {
+   "id": "cutlets",
+   "title": "Домашние котлеты",
+   "summary": "Сочные котлеты из смешанного фарша.",
+   "category": "main",
+   "cookMinutes": 40,
+   "servings": 4,
+   "featured": false,
+   "ingredients": [
+    {
+     "id": "cutlets-0",
+     "title": "Фарш",
+     "categoryId": "minced-meat",
+     "amount": 500,
+     "unit": "g"
+    },
+    {
+     "id": "cutlets-1",
+     "title": "Лук",
+     "categoryId": "onion",
+     "amount": 1,
+     "unit": "pcs"
+    },
+    {
+     "id": "cutlets-2",
+     "title": "Яйца",
+     "categoryId": "eggs",
+     "amount": 1,
+     "unit": "pcs"
+    },
+    {
+     "id": "cutlets-3",
+     "title": "Батон",
+     "categoryId": "bread",
+     "amount": 60,
+     "unit": "g"
+    },
+    {
+     "id": "cutlets-4",
+     "title": "Молоко",
+     "categoryId": "milk",
+     "amount": 60,
+     "unit": "ml"
+    },
+    {
+     "id": "cutlets-5",
+     "title": "Подсолнечное масло",
+     "categoryId": "sunflower-oil",
+     "amount": 40,
+     "unit": "ml"
+    }
+   ],
+   "steps": [
+    "Замочите батон в молоке.",
+    "Смешайте фарш с мелко натёртым луком, яйцом и отжатым батоном, посолите.",
+    "Сформируйте котлеты мокрыми руками.",
+    "Обжарьте по 3–4 минуты с каждой стороны, затем доведите под крышкой на слабом огне 10 минут."
+   ]
+  },
+  {
+   "id": "mashed-potatoes",
+   "title": "Картофельное пюре",
+   "summary": "Гладкое пюре на молоке и сливочном масле.",
+   "category": "side",
+   "cookMinutes": 30,
+   "servings": 4,
+   "featured": false,
+   "ingredients": [
+    {
+     "id": "mashed-potatoes-0",
+     "title": "Картофель",
+     "categoryId": "potato",
+     "amount": 1000,
+     "unit": "g"
+    },
+    {
+     "id": "mashed-potatoes-1",
+     "title": "Молоко",
+     "categoryId": "milk",
+     "amount": 200,
+     "unit": "ml"
+    },
+    {
+     "id": "mashed-potatoes-2",
+     "title": "Сливочное масло",
+     "categoryId": "butter",
+     "amount": 50,
+     "unit": "g"
+    }
+   ],
+   "steps": [
+    "Отварите очищенный картофель в подсоленной воде до мягкости.",
+    "Слейте воду, подсушите 1 минуту на огне.",
+    "Разомните с маслом, постепенно вливая горячее молоко."
+   ]
+  },
+  {
+   "id": "pumpkin-soup",
+   "title": "Тыквенный крем-суп",
+   "summary": "Бархатный суп со сливками.",
+   "category": "soup",
+   "cookMinutes": 40,
+   "servings": 4,
+   "featured": false,
+   "ingredients": [
+    {
+     "id": "pumpkin-soup-0",
+     "title": "Тыква",
+     "categoryId": "pumpkin",
+     "amount": 600,
+     "unit": "g"
+    },
+    {
+     "id": "pumpkin-soup-1",
+     "title": "Картофель",
+     "categoryId": "potato",
+     "amount": 200,
+     "unit": "g"
+    },
+    {
+     "id": "pumpkin-soup-2",
+     "title": "Лук",
+     "categoryId": "onion",
+     "amount": 1,
+     "unit": "pcs"
+    },
+    {
+     "id": "pumpkin-soup-3",
+     "title": "Сливки",
+     "categoryId": "cream",
+     "amount": 200,
+     "unit": "ml"
+    },
+    {
+     "id": "pumpkin-soup-4",
+     "title": "Сливочное масло",
+     "categoryId": "butter",
+     "amount": 20,
+     "unit": "g"
+    }
+   ],
+   "steps": [
+    "Обжарьте лук на масле до мягкости.",
+    "Добавьте тыкву и картофель кубиками, залейте водой вровень, варите 20 минут.",
+    "Пробейте блендером, влейте сливки и прогрейте, не доводя до кипения."
+   ]
+  },
+  {
+   "id": "buckwheat-mushrooms",
+   "title": "Гречка с грибами",
+   "summary": "Постное блюдо с шампиньонами и луком.",
+   "category": "side",
+   "cookMinutes": 35,
+   "servings": 4,
+   "featured": false,
+   "ingredients": [
+    {
+     "id": "buckwheat-mushrooms-0",
+     "title": "Гречка",
+     "categoryId": "buckwheat",
+     "amount": 200,
+     "unit": "g"
+    },
+    {
+     "id": "buckwheat-mushrooms-1",
+     "title": "Шампиньоны",
+     "categoryId": "mushrooms",
+     "amount": 300,
+     "unit": "g"
+    },
+    {
+     "id": "buckwheat-mushrooms-2",
+     "title": "Лук",
+     "categoryId": "onion",
+     "amount": 1,
+     "unit": "pcs"
+    },
+    {
+     "id": "buckwheat-mushrooms-3",
+     "title": "Подсолнечное масло",
+     "categoryId": "sunflower-oil",
+     "amount": 30,
+     "unit": "ml"
+    }
+   ],
+   "steps": [
+    "Сварите гречку до рассыпчатости.",
+    "Обжарьте лук, добавьте нарезанные грибы и жарьте, пока не уйдёт жидкость.",
+    "Смешайте с гречкой и прогрейте 2–3 минуты."
+   ]
+  },
+  {
+   "id": "okroshka",
+   "title": "Окрошка на кефире",
+   "summary": "Холодный летний суп.",
+   "category": "soup",
+   "cookMinutes": 30,
+   "servings": 4,
+   "featured": false,
+   "ingredients": [
+    {
+     "id": "okroshka-0",
+     "title": "Картофель",
+     "categoryId": "potato",
+     "amount": 300,
+     "unit": "g"
+    },
+    {
+     "id": "okroshka-1",
+     "title": "Огурцы",
+     "categoryId": "cucumbers",
+     "amount": 300,
+     "unit": "g"
+    },
+    {
+     "id": "okroshka-2",
+     "title": "Яйца",
+     "categoryId": "eggs",
+     "amount": 4,
+     "unit": "pcs"
+    },
+    {
+     "id": "okroshka-3",
+     "title": "Варёная колбаса",
+     "categoryId": "sausage",
+     "amount": 300,
+     "unit": "g"
+    },
+    {
+     "id": "okroshka-4",
+     "title": "Редис",
+     "categoryId": "radish",
+     "amount": 200,
+     "unit": "g"
+    },
+    {
+     "id": "okroshka-5",
+     "title": "Кефир",
+     "categoryId": "kefir",
+     "amount": 1000,
+     "unit": "ml"
+    },
+    {
+     "id": "okroshka-6",
+     "title": "Зелень",
+     "categoryId": "herbs",
+     "amount": 30,
+     "unit": "g"
+    }
+   ],
+   "steps": [
+    "Отварите картофель и яйца, остудите.",
+    "Нарежьте всё мелким кубиком, зелень — мелко.",
+    "Залейте холодным кефиром, при желании разбавьте холодной водой, посолите."
+   ]
+  },
+  {
+   "id": "baked-salmon",
+   "title": "Запечённый лосось",
+   "summary": "Рыба с лимоном за 20 минут.",
+   "category": "main",
+   "cookMinutes": 25,
+   "servings": 2,
+   "featured": true,
+   "ingredients": [
+    {
+     "id": "baked-salmon-0",
+     "title": "Рыба",
+     "categoryId": "salmon",
+     "amount": 400,
+     "unit": "g"
+    },
+    {
+     "id": "baked-salmon-1",
+     "title": "Лимон",
+     "categoryId": "lemon",
+     "amount": 1,
+     "unit": "pcs"
+    },
+    {
+     "id": "baked-salmon-2",
+     "title": "Оливковое масло",
+     "categoryId": "olive-oil",
+     "amount": 20,
+     "unit": "ml"
+    },
+    {
+     "id": "baked-salmon-3",
+     "title": "Чёрный перец",
+     "categoryId": "black-pepper",
+     "amount": 2,
+     "unit": "g"
+    }
+   ],
+   "steps": [
+    "Разогрейте духовку до 200 °C.",
+    "Смажьте рыбу маслом, посолите и поперчите, положите сверху ломтики лимона.",
+    "Запекайте 15–18 минут."
+   ]
+  },
+  {
+   "id": "herring-under-coat",
+   "title": "Сельдь под шубой",
+   "summary": "Слоёный салат со свёклой.",
+   "category": "salad",
+   "cookMinutes": 90,
+   "servings": 6,
+   "featured": false,
+   "ingredients": [
+    {
+     "id": "herring-under-coat-0",
+     "title": "Сельдь",
+     "categoryId": "herring",
+     "amount": 300,
+     "unit": "g"
+    },
+    {
+     "id": "herring-under-coat-1",
+     "title": "Свёкла",
+     "categoryId": "beetroot",
+     "amount": 300,
+     "unit": "g"
+    },
+    {
+     "id": "herring-under-coat-2",
+     "title": "Картофель",
+     "categoryId": "potato",
+     "amount": 300,
+     "unit": "g"
+    },
+    {
+     "id": "herring-under-coat-3",
+     "title": "Морковь",
+     "categoryId": "carrot",
+     "amount": 200,
+     "unit": "g"
+    },
+    {
+     "id": "herring-under-coat-4",
+     "title": "Лук",
+     "categoryId": "onion",
+     "amount": 1,
+     "unit": "pcs"
+    },
+    {
+     "id": "herring-under-coat-5",
+     "title": "Яйца",
+     "categoryId": "eggs",
+     "amount": 3,
+     "unit": "pcs"
+    },
+    {
+     "id": "herring-under-coat-6",
+     "title": "Майонез",
+     "categoryId": "mayonnaise",
+     "amount": 200,
+     "unit": "g"
+    }
+   ],
+   "steps": [
+    "Отварите овощи и яйца, остудите и натрите на крупной тёрке.",
+    "Выложите слоями: сельдь с луком, картофель, морковь, яйца, свёкла — каждый слой смажьте майонезом.",
+    "Уберите в холодильник минимум на 2 часа."
+   ]
+  },
+  {
+   "id": "cottage-casserole",
+   "title": "Творожная запеканка",
+   "summary": "Как в детском саду, только вкуснее.",
+   "category": "breakfast",
+   "cookMinutes": 50,
+   "servings": 4,
+   "featured": false,
+   "ingredients": [
+    {
+     "id": "cottage-casserole-0",
+     "title": "Творог",
+     "categoryId": "tvorog",
+     "amount": 500,
+     "unit": "g"
+    },
+    {
+     "id": "cottage-casserole-1",
+     "title": "Яйца",
+     "categoryId": "eggs",
+     "amount": 2,
+     "unit": "pcs"
+    },
+    {
+     "id": "cottage-casserole-2",
+     "title": "Сахар",
+     "categoryId": "sugar",
+     "amount": 60,
+     "unit": "g"
+    },
+    {
+     "id": "cottage-casserole-3",
+     "title": "Манка",
+     "categoryId": "semolina",
+     "amount": 50,
+     "unit": "g"
+    },
+    {
+     "id": "cottage-casserole-4",
+     "title": "Сметана",
+     "categoryId": "sour-cream",
+     "amount": 100,
+     "unit": "g"
+    }
+   ],
+   "steps": [
+    "Смешайте творог, яйца, сахар, манку и сметану, дайте постоять 15 минут.",
+    "Выложите в смазанную форму.",
+    "Выпекайте 35 минут при 180 °C."
+   ]
+  },
+  {
+   "id": "goulash",
+   "title": "Гуляш из говядины",
+   "summary": "Мясо в густой подливе с паприкой.",
+   "category": "main",
+   "cookMinutes": 100,
+   "servings": 4,
+   "featured": false,
+   "ingredients": [
+    {
+     "id": "goulash-0",
+     "title": "Говядина",
+     "categoryId": "beef",
+     "amount": 600,
+     "unit": "g"
+    },
+    {
+     "id": "goulash-1",
+     "title": "Лук",
+     "categoryId": "onion",
+     "amount": 2,
+     "unit": "pcs"
+    },
+    {
+     "id": "goulash-2",
+     "title": "Томатная паста",
+     "categoryId": "tomato-paste",
+     "amount": 50,
+     "unit": "g"
+    },
+    {
+     "id": "goulash-3",
+     "title": "Паприка",
+     "categoryId": "paprika",
+     "amount": 10,
+     "unit": "g"
+    },
+    {
+     "id": "goulash-4",
+     "title": "Мука",
+     "categoryId": "flour",
+     "amount": 20,
+     "unit": "g"
+    },
+    {
+     "id": "goulash-5",
+     "title": "Подсолнечное масло",
+     "categoryId": "sunflower-oil",
+     "amount": 30,
+     "unit": "ml"
+    }
+   ],
+   "steps": [
+    "Обжарьте говядину кусками небольшими партиями.",
+    "Добавьте лук и жарьте 5 минут, затем паприку и муку.",
+    "Вмешайте томатную пасту и 500 мл горячей воды.",
+    "Тушите под крышкой 1–1,5 часа до мягкости мяса."
+   ]
+  }
+ ]
 }

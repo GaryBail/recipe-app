@@ -2,4 +2,6 @@
 fastapi>=0.115
 httpx>=0.27
 PyJWT[crypto]>=2.8
+# Проверка и пережатие фото рецептов
+Pillow>=10
 pytest>=8

@@ -6,6 +6,7 @@ services:
     env_file: .env
     environment:
       COMMUNITY_DB: /data/community.db
+      MEDIA_DIR: /data/media
       # Сервер стоит за Caddy: реальный IP клиента берём из X-Forwarded-For.
       # Безопасно, потому что порт api наружу не открыт — только через Caddy.
       TRUST_PROXY: "1"

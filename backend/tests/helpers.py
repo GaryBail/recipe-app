@@ -67,7 +67,8 @@ def make_client(tmp_path, adapters=(), apple=None, push=None, mailer=None, clock
     mailer = mailer or RecordingMailer()
     app = create_app(PriceService(list(adapters)), db_path=str(tmp_path / "test.db"),
                      apple=(apple or FakeApple()).verifier, push=push or RecordingPush(),
-                     mailer=mailer, limiter_clock=clock, price_watch=False)
+                     mailer=mailer, limiter_clock=clock, price_watch=False,
+                     media_dir=str(tmp_path / "media"))
     app.state.mailer = mailer
     return TestClient(app)
 

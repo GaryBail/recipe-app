@@ -1,6 +1,8 @@
 fastapi>=0.115
 uvicorn[standard]>=0.30
 PyJWT[crypto]>=2.8
+# Проверка и пережатие фото рецептов
+Pillow>=10
 # HTTP/2 для отправки push через APNs
 httpx[http2]>=0.27
 # Библиотеки магазинов (декоратор autotest из human_requests) импортируют pytest при каждом запросе.

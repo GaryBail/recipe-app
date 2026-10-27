@@ -23,6 +23,8 @@ from .ratelimit import RateLimiter, wait_text
 from .community import BlockIn, CommunityStore, PublishIn, RatingIn, ReportIn, open_db
 from .models import CartLineRequest
 from .notifications import APNsPush, DeviceIn, MarkReadIn, NoopPush, NotificationStore, PushSender, describe
+from .recipes_social import (RECIPE_ID_RE, UPLOADS_PER_DAY, BadImage, PhotoReportIn,
+                             RecipeSocialStore)
 from .price_watch import (WATCH_CITIES, PriceWatcher, TooManyWatches, WatchIn, WatchStore, hours_from_env,
                           scheduler_loop)
 from .service import CITIES, PriceService
@@ -54,6 +56,7 @@ class Stores:
     mailer: Mailer
     limiter: RateLimiter
     watches: Any = None
+    recipes: Any = None
 
 
 # Лимиты: (сколько, за сколько секунд)
@@ -246,6 +249,8 @@ def auth_router(s: Stores, current_user, token_dep) -> APIRouter:
         s.notifications.delete_user(user["id"])
         if s.watches is not None:
             s.watches.delete_user(user["id"])
+        if s.recipes is not None:
+            s.recipes.delete_user(user["id"])
         s.auth.delete(user["id"])
 
     return r
@@ -342,6 +347,80 @@ async def send_push(s: Stores, user_id: str, kind: str, build_id: str, build_nam
         s.notifications.remove_device(token)
 
 
+# ---------- Рецепты: лайки, популярное, фото ----------
+
+class CoversIn(BaseModel):
+    ids: list[str] = Field(max_length=200)
+
+
+def recipes_router(s: Stores, current_user, optional_user) -> APIRouter:
+    r = APIRouter(tags=["recipes"])
+
+    def check_id(recipe_id: str) -> str:
+        if not RECIPE_ID_RE.match(recipe_id):
+            raise HTTPException(422, "Некорректный id рецепта")
+        return recipe_id
+
+    def me(user: dict | None) -> str:
+        return user["id"] if user else ""
+
+    @r.get("/recipes/popular")
+    async def popular(limit: int = 10, user: dict | None = Depends(optional_user)):
+        return s.recipes.popular(me(user), limit=max(1, min(limit, 30)))
+
+    @r.post("/recipes/covers")
+    async def covers(body: CoversIn, user: dict | None = Depends(optional_user)):
+        return s.recipes.covers([i for i in body.ids if RECIPE_ID_RE.match(i)], me(user))
+
+    @r.get("/recipes/{recipe_id}")
+    async def summary(recipe_id: str, user: dict | None = Depends(optional_user)):
+        return s.recipes.summary(check_id(recipe_id), me(user))
+
+    @r.put("/recipes/{recipe_id}/like", status_code=204)
+    async def like(recipe_id: str, user: dict = Depends(current_user)):
+        s.recipes.like(check_id(recipe_id), user["id"])
+
+    @r.delete("/recipes/{recipe_id}/like", status_code=204)
+    async def unlike(recipe_id: str, user: dict = Depends(current_user)):
+        s.recipes.unlike(check_id(recipe_id), user["id"])
+
+    @r.get("/me/likes")
+    async def my_likes(user: dict = Depends(current_user)):
+        return s.recipes.liked_ids(user["id"])
+
+    @r.post("/recipes/{recipe_id}/photos", status_code=201)
+    async def upload_photo(recipe_id: str, request: Request, user: dict = Depends(current_user)):
+        """Тело запроса — сам файл (image/jpeg, image/png или image/webp), до 10 МБ."""
+        check_id(recipe_id)
+        if not user["email_verified"]:
+            raise HTTPException(403, "Подтвердите email, чтобы загружать фото")
+        key = f"photos:user:{user['id']}"
+        limit(s, key, UPLOADS_PER_DAY)
+        declared = int(request.headers.get("content-length") or 0)
+        if declared > 10 * 1024 * 1024:
+            raise HTTPException(413, "Фото больше 10 МБ")
+        data = await request.body()
+        try:
+            photo = await asyncio.to_thread(s.recipes.add_photo, recipe_id, user["id"], user["display_name"], data)
+        except BadImage as e:
+            raise HTTPException(422, str(e))
+        s.limiter.hit(key)
+        return photo
+
+    @r.delete("/photos/{photo_id}", status_code=204)
+    async def delete_photo(photo_id: str, user: dict = Depends(current_user)):
+        if not s.recipes.delete_photo(photo_id, user["id"]):
+            raise HTTPException(404, "Фото не найдено или загружено другим пользователем")
+
+    @r.post("/photos/{photo_id}/report", status_code=204)
+    async def report_photo(photo_id: str, body: PhotoReportIn, user: dict = Depends(current_user)):
+        if not s.recipes.photo_exists(photo_id):
+            raise HTTPException(404, "Фото не найдено")
+        s.recipes.report_photo(photo_id, user["id"], body.reason)
+
+    return r
+
+
 # ---------- Слежение за ценами ----------
 
 def watches_router(s: Stores, current_user) -> APIRouter:
@@ -404,7 +483,8 @@ def notifications_router(s: Stores, current_user) -> APIRouter:
 
 def create_app(service: PriceService | None = None, db_path: str | None = None,
                apple: AppleTokenVerifier | None = None, push: PushSender | None = None,
-               mailer: Mailer | None = None, limiter_clock=None, price_watch: bool | None = None) -> FastAPI:
+               mailer: Mailer | None = None, limiter_clock=None, price_watch: bool | None = None,
+               media_dir: str | None = None) -> FastAPI:
     holder: dict[str, Any] = {}
 
     db = open_db(db_path or os.getenv("COMMUNITY_DB", "community.db"))
@@ -420,6 +500,8 @@ def create_app(service: PriceService | None = None, db_path: str | None = None,
     )
 
     s.watches = WatchStore(db)
+    media_dir = media_dir or os.getenv("MEDIA_DIR", "media")
+    s.recipes = RecipeSocialStore(db, media_dir)
     watch_enabled = price_watch if price_watch is not None else os.getenv("PRICE_WATCH", "1") != "0"
 
     @asynccontextmanager
@@ -459,6 +541,10 @@ def create_app(service: PriceService | None = None, db_path: str | None = None,
     app.include_router(community_router(s, current_user, optional_user))
     app.include_router(notifications_router(s, current_user))
     app.include_router(watches_router(s, current_user))
+    app.include_router(recipes_router(s, current_user, optional_user))
+    # Фото рецептов. Имена файлов — случайные id, папка содержит только пережатые картинки.
+    from fastapi.staticfiles import StaticFiles
+    app.mount("/media", StaticFiles(directory=media_dir), name="media")
 
     def svc() -> PriceService:
         return holder["service"]

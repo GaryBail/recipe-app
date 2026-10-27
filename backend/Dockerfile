@@ -33,6 +33,7 @@ USER app
 COPY --chown=app:app app ./app
 
 ENV COMMUNITY_DB=/data/community.db \
+    MEDIA_DIR=/data/media \
     HEADLESS=virtual
 EXPOSE 8000
 HEALTHCHECK --interval=30s --timeout=5s --start-period=20s --retries=3 \
