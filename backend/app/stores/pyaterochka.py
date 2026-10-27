@@ -8,6 +8,7 @@ from decimal import Decimal
 from typing import Any
 
 from ..models import City, Offer, StoreInfo
+from .base import StoreUnavailable
 from ..units import parse_size
 
 log = logging.getLogger(__name__)
@@ -82,7 +83,15 @@ class PyaterochkaAdapter:
             from pyaterochka_api import PyaterochkaAPI  # тяжёлый импорт (браузер)
 
             api = PyaterochkaAPI(headless=self._headless)
-            await api.__aenter__()
+            try:
+                await api.__aenter__()
+            except Exception as e:
+                # Сайт не открылся (блокировка, капча, нет сети) — закрываем браузер, чтобы не висел.
+                try:
+                    await api.close()
+                except Exception:
+                    pass
+                raise StoreUnavailable(f"{self.info.name}: сайт не ответил ({type(e).__name__})") from e
             self._api = api
         return self._api
 

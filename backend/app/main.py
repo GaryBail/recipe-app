@@ -499,7 +499,13 @@ def create_app(service: PriceService | None = None, db_path: str | None = None,
     async def search(store: str, city: str, q: str):
         if store not in svc().adapters:
             raise HTTPException(404, f"Неизвестный магазин: {store}")
-        offers = await svc().search(store, city_or_404(city), q)
+        try:
+            offers = await svc().search(store, city_or_404(city), q)
+        except HTTPException:
+            raise
+        except Exception as e:
+            log.warning("search failed: %s %r: %s", store, q, e)
+            raise HTTPException(502, "Магазин сейчас не отвечает, попробуйте позже")
         return [o.to_json() for o in offers]
 
     @app.post("/offers")

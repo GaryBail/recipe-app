@@ -69,3 +69,14 @@ def test_offers_validation(make_client):
             {"product_id": "x", "query": "Сыр", "required_amount": 0, "unit": "kg"}]}
         assert client.post("/offers", json=bad).status_code == 422
         assert client.post("/offers", json={"store": "zzz", "city": "msk", "lines": []}).status_code == 404
+
+
+def test_search_returns_502_when_store_is_down(make_client):
+    class Down(FakeAdapter):
+        async def search(self, city, query):
+            raise RuntimeError("капча")
+
+    with make_client(Down("a", [])) as client:
+        r = client.get("/search", params={"store": "a", "city": "msk", "q": "молоко"})
+        assert r.status_code == 502
+        assert "не отвечает" in r.json()["detail"]

@@ -5,6 +5,10 @@ from typing import Protocol
 from ..models import City, Offer, StoreInfo
 
 
+class StoreUnavailable(Exception):
+    """Сайт магазина недоступен: блокировка, капча, изменения на сайте или нет сети."""
+
+
 class StoreAdapter(Protocol):
     """Адаптер одного магазина. Для каждого нового магазина пишется свой."""
 

@@ -28,8 +28,13 @@ RecipeApp/
   Resources/seed.json    — стартовые рецепты и продукты
 RecipeAppTests/          — unit-тесты
 backend/                 — сервер: цены и сообщество (Python, FastAPI, SQLite)
-.github/workflows/ios.yml — сборка и тесты на macOS в GitHub Actions
+.github/workflows/       — сборка и тесты iOS (macOS), сервера и Docker-образа
+deploy/                  — Docker Compose, HTTPS (Caddy), установка, обновление, бэкапы
 ```
+
+## Размещение сервера
+
+Пошаговая инструкция для аренды сервера и установки одной командой: [deploy/README.md](deploy/README.md).
 
 ## Как собрать
 
@@ -46,7 +51,7 @@ open RecipeApp.xcodeproj
 ## Дальше
 
 1. Экран выбора города при первом запуске.
-2. Условия доставки магазинов и размещение сервера в интернете.
+2. Условия доставки магазинов.
 3. Модерация жалоб.
 4. Слежение за ценами в других городах и магазинах.
 
