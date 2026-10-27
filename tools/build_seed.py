@@ -14,7 +14,7 @@ SEED_VERSION = 2
 # Рубрики рецептов: id → (название, SF Symbol)
 RUBRICS = {
     "breakfast": ("Завтраки", "sunrise"),
-    "soup": ("Супы", "takeoutbag.and.cup.and.straw"),
+    "soup": ("Супы", "mug"),
     "salad": ("Салаты", "leaf"),
     "main": ("Горячее", "frying.pan"),
     "side": ("Гарниры", "fork.knife"),

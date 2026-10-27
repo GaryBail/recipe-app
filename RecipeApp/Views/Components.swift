@@ -66,7 +66,7 @@ struct RecipeCard: View {
             Text(recipe.title)
                 .font(.subheadline.weight(.semibold))
                 .foregroundStyle(.primary)
-                .lineLimit(2, reservesSpace: true)
+                .lineLimit(2)
                 .multilineTextAlignment(.leading)
             HStack(spacing: 8) {
                 if recipe.cookMinutes > 0 {

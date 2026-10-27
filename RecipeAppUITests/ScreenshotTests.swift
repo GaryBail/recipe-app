@@ -31,7 +31,14 @@ final class ScreenshotTests: XCTestCase {
             tapIfExists(app.buttons["Все"])
         }
 
-        // 3. Рецепт: фото-заглушка, КБЖУ, ингредиенты
+        // 3. Поиск и рецепт: фото-заглушка, КБЖУ, ингредиенты
+        let search = app.searchFields.firstMatch
+        if search.waitForExistence(timeout: 3) {
+            search.tap()
+            search.typeText("карбонара")
+            sleep(1)
+            snap("search")
+        }
         let carbonara = app.buttons.matching(NSPredicate(format: "label CONTAINS 'Паста карбонара'")).firstMatch
         XCTAssertTrue(carbonara.waitForExistence(timeout: 5))
         carbonara.tap()
@@ -146,12 +153,15 @@ final class ScreenshotTests: XCTestCase {
 
     private func backToRoot() {
         for _ in 0..<5 {
-            if app.staticTexts["Популярное"].exists { return }
+            if app.staticTexts["Популярное"].exists || app.searchFields.firstMatch.isHittable { break }
             let back = app.navigationBars.buttons.element(boundBy: 0)
             guard back.exists else { return }
             back.tap()
             sleep(1)
         }
+        // сбросить поиск
+        let cancel = app.buttons["Отменить"].exists ? app.buttons["Отменить"] : app.buttons["Cancel"]
+        if cancel.exists { cancel.tap() }
     }
 
     private func snap(_ name: String) {
