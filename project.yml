@@ -55,7 +55,28 @@ targets:
       base:
         GENERATE_INFOPLIST_FILE: YES
 
+  # Обход экранов со скриншотами (запускается отдельным workflow).
+  RecipeAppUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - path: RecipeAppUITests
+    dependencies:
+      - target: RecipeApp
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        TEST_TARGET_NAME: RecipeApp
+
 schemes:
+  RecipeAppScreenshots:
+    build:
+      targets:
+        RecipeApp: all
+        RecipeAppUITests: [test]
+    test:
+      targets:
+        - RecipeAppUITests
   RecipeApp:
     build:
       targets:

@@ -1,0 +1,103 @@
+name: Screenshots
+
+# Запускает приложение в симуляторе iPhone, проходит по экранам и сохраняет снимки
+# в ветку `screenshots` (папка = текущий коммит main не затрагивается).
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["RecipeApp/**", "RecipeAppUITests/**", "project.yml", ".github/workflows/screenshots.yml"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: screenshots
+  cancel-in-progress: true
+
+jobs:
+  screenshots:
+    runs-on: macos-15
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install XcodeGen
+        run: brew install xcodegen
+
+      - name: Generate Xcode project
+        run: xcodegen generate
+
+      - name: Boot iPhone simulator
+        id: sim
+        run: |
+          UDID=$(xcrun simctl list devices available -j | python3 -c "
+          import json, sys
+          devices = json.load(sys.stdin)['devices']
+          for runtime, items in sorted(devices.items(), reverse=True):
+              if 'iOS' not in runtime:
+                  continue
+              # предпочитаем обычный iPhone Pro (не Max, не SE)
+              for d in sorted(items, key=lambda d: ('Pro' not in d['name'], 'Max' in d['name'] or 'Plus' in d['name'] or 'SE' in d['name'], d['name'])):
+                  if d['name'].startswith('iPhone'):
+                      print(d['udid']); sys.exit(0)
+          sys.exit(1)
+          ")
+          NAME=$(xcrun simctl list devices -j | python3 -c "import json,sys; print(next(d['name'] for v in json.load(sys.stdin)['devices'].values() for d in v if d['udid']=='$UDID'))")
+          echo "udid=$UDID" >> "$GITHUB_OUTPUT"
+          echo "Simulator: $NAME"
+          echo "::notice title=simulator::$NAME"
+          xcrun simctl boot "$UDID"
+          xcrun simctl bootstatus "$UDID" -b
+          xcrun simctl ui "$UDID" appearance light
+          xcrun simctl status_bar "$UDID" override --time "9:41" --dataNetwork wifi --wifiBars 3 \
+            --cellularMode active --cellularBars 4 --batteryState charged --batteryLevel 100
+
+      - name: Run screenshot walkthrough
+        env:
+          TEST_RUNNER_SCREENSHOTS_DIR: ${{ github.workspace }}/screens
+        run: |
+          set -o pipefail
+          mkdir -p screens
+          xcodebuild test \
+            -project RecipeApp.xcodeproj \
+            -scheme RecipeAppScreenshots \
+            -destination "id=${{ steps.sim.outputs.udid }}" \
+            -resultBundlePath result.xcresult \
+            CODE_SIGNING_ALLOWED=NO \
+            | tail -n 80 || echo "::warning::Обход завершился с ошибками — снимки, которые успели сделать, всё равно сохраним"
+          # если тест не смог писать в папку напрямую — достаём снимки из результата
+          if [ -z "$(ls screens 2>/dev/null)" ] && [ -d result.xcresult ]; then
+            xcrun xcresulttool export attachments --path result.xcresult --output-path screens || true
+          fi
+          ls -la screens
+          echo "::notice title=screenshots::$(ls screens | grep -c png) png"
+
+      - name: Test failures (as annotations)
+        if: always()
+        run: |
+          if [ -d result.xcresult ]; then
+            xcrun xcresulttool get test-results summary --path result.xcresult 2>/dev/null \
+              | python3 -c "
+          import json, sys
+          try:
+              d = json.load(sys.stdin)
+          except Exception:
+              sys.exit(0)
+          for f in d.get('testFailures', [])[:10]:
+              print('::warning title=ui test::' + f.get('failureText', '').replace(chr(10), ' ')[:300])
+          print('::notice title=ui result::' + str(d.get('result')) + ' passed=' + str(d.get('passedTests')) + ' failed=' + str(d.get('failedTests')))
+          " || true
+          fi
+
+      - name: Publish to branch "screenshots"
+        if: always()
+        run: |
+          [ -n "$(ls screens/*.png 2>/dev/null)" ] || { echo "нет снимков"; exit 0; }
+          cd screens
+          git init -q -b screenshots
+          git -c user.name="github-actions" -c user.email="actions@github.com" add -A
+          git -c user.name="github-actions" -c user.email="actions@github.com" \
+            commit -q -m "Screenshots for ${GITHUB_SHA::7}"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}" screenshots
+          echo "::notice title=published::branch screenshots, commit ${GITHUB_SHA::7}"

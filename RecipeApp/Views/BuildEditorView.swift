@@ -77,6 +77,7 @@ struct BuildEditorView: View {
                                         .foregroundStyle(.secondary)
                                 }
                             }
+                            .accessibilityIdentifier("picker-\(ingredient.id)")
                             Button("Добавить свой продукт…") { addingProductFor = ingredient }
                                 .font(.caption)
                                 .buttonStyle(.borderless)
