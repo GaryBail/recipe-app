@@ -40,6 +40,9 @@ class RecipeIn(BaseModel):
     servings: int = Field(ge=1, le=100)
     steps: list[str] = Field(default_factory=list, max_length=50)
     ingredients: list[IngredientIn] = Field(min_length=1, max_length=50)
+    # Необязательные поля своих рецептов (появились позже — старые клиенты их не присылают).
+    rubric: str | None = Field(default=None, max_length=30)
+    cook_minutes: int | None = Field(default=None, ge=0, le=24 * 60)
 
 
 class ProductIn(BaseModel):
@@ -222,6 +225,62 @@ class CommunityStore:
         else:
             rows.sort(key=lambda b: (b["score"], b["rating_count"], b["created_at"]), reverse=True)
         return rows[:limit]
+
+    # --- рецепты пользователей ---
+
+    def recipes(self, user_id: str, sort: str = "top", limit: int = 50) -> list[dict[str, Any]]:
+        """Свои рецепты пользователей, опубликованные вместе со сборками.
+
+        Автор рецепта — тот, кто опубликовал первую сборку; текст рецепта берём из его
+        последней публикации. Рейтинг — по всем сборкам рецепта."""
+        builds = [b for b in self.list(user_id, sort="new", limit=10_000) if b["recipe"]["id"].startswith("user-")]
+        grouped: dict[str, list[dict[str, Any]]] = {}
+        for b in builds:
+            grouped.setdefault(b["recipe"]["id"], []).append(b)
+        result = []
+        for recipe_id, items in grouped.items():
+            items.sort(key=lambda b: b["created_at"])
+            first = items[0]
+            own = [b for b in items if b["author_id"] == first["author_id"]]
+            latest = own[-1]
+            count = sum(b["rating_count"] for b in items)
+            total = sum((b["rating_avg"] or 0) * b["rating_count"] for b in items)
+            avg = round(total / count, 2) if count else None
+            best = max(items, key=lambda b: (b["score"], b["rating_count"]))
+            result.append({
+                "recipe": latest["recipe"],
+                "author_id": first["author_id"],
+                "author_name": first["author_name"],
+                "created_at": first["created_at"],
+                "updated_at": latest["created_at"],
+                "builds_count": len(items),
+                "rating_avg": avg,
+                "rating_count": count,
+                "score": round(bayesian_score(avg, count), 3),
+                "best_build_id": best["id"],
+            })
+        if sort == "new":
+            result.sort(key=lambda r: r["created_at"], reverse=True)
+        else:
+            result.sort(key=lambda r: (r["score"], r["builds_count"], r["created_at"]), reverse=True)
+        return result[:limit]
+
+    def choices(self, recipe_id: str, user_id: str, top: int = 3) -> dict[str, Any]:
+        """Какие продукты чаще всего выбирают для каждого ингредиента рецепта."""
+        builds = self.list(user_id, recipe_id=recipe_id, limit=10_000)
+        counts: dict[str, dict[str, int]] = {}
+        products: dict[str, dict[str, Any]] = {}
+        for b in builds:
+            for item in b["items"]:
+                pid = item["product"]["id"]
+                products[pid] = item["product"]
+                per = counts.setdefault(item["ingredient_id"], {})
+                per[pid] = per.get(pid, 0) + 1
+        ingredients = {}
+        for ingredient_id, per in counts.items():
+            ranked = sorted(per.items(), key=lambda kv: (-kv[1], products[kv[0]]["name"]))[:top]
+            ingredients[ingredient_id] = [{"product": products[pid], "count": n} for pid, n in ranked]
+        return {"recipe_id": recipe_id, "builds": len(builds), "ingredients": ingredients}
 
     # --- оценки ---
 

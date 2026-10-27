@@ -46,6 +46,16 @@ class OffersIn(BaseModel):
     lines: list[LineIn]
 
 
+class CartItemIn(BaseModel):
+    sku: str = Field(min_length=1, max_length=40)
+    quantity: float = Field(gt=0, le=1000)
+
+
+class CartLinkIn(BaseModel):
+    store: str
+    items: list[CartItemIn] = Field(min_length=1, max_length=100)
+
+
 @dataclass
 class Stores:
     auth: AuthStore
@@ -86,8 +96,10 @@ def limit(s: Stores, key: str, rule: tuple[int, int]) -> None:
 def default_adapters() -> list[StoreAdapter]:
     from .stores.perekrestok import PerekrestokAdapter
     from .stores.pyaterochka import PyaterochkaAdapter
+    from .stores.vkusvill import VkusVillAdapter
 
-    return [PerekrestokAdapter(headless=headless_mode()), PyaterochkaAdapter(headless=headless_mode())]
+    return [PerekrestokAdapter(headless=headless_mode()), PyaterochkaAdapter(headless=headless_mode()),
+            VkusVillAdapter()]
 
 
 def headless_mode(raw: str | None = None) -> bool | str:
@@ -288,6 +300,16 @@ def community_router(s: Stores, current_user, optional_user) -> APIRouter:
     async def publish(body: PublishIn, user: dict = Depends(verified_user)):
         return s.community.publish(user["id"], user["display_name"], body)
 
+    @r.get("/recipes")
+    async def list_recipes(sort: str = "top", limit: int = 50, user: dict | None = Depends(optional_user)):
+        if sort not in ("top", "new"):
+            raise HTTPException(422, "sort: top | new")
+        return s.community.recipes(me(user), sort=sort, limit=max(1, min(limit, 100)))
+
+    @r.get("/recipes/{recipe_id}/choices")
+    async def choices(recipe_id: str, user: dict | None = Depends(optional_user)):
+        return s.community.choices(recipe_id, me(user))
+
     @r.get("/builds/{build_id}")
     async def get_build(build_id: str, user: dict | None = Depends(optional_user)):
         return found(build_id, me(user))
@@ -365,8 +387,8 @@ def recipes_router(s: Stores, current_user, optional_user) -> APIRouter:
         return user["id"] if user else ""
 
     @r.get("/recipes/popular")
-    async def popular(limit: int = 10, user: dict | None = Depends(optional_user)):
-        return s.recipes.popular(me(user), limit=max(1, min(limit, 30)))
+    async def popular(limit: int = 10, days: int = 30, user: dict | None = Depends(optional_user)):
+        return s.recipes.popular(me(user), limit=max(1, min(limit, 30)), days=max(1, min(days, 365)))
 
     @r.post("/recipes/covers")
     async def covers(body: CoversIn, user: dict | None = Depends(optional_user)):
@@ -601,6 +623,24 @@ def create_app(service: PriceService | None = None, db_path: str | None = None,
         lines = [CartLineRequest(**l.model_dump()) for l in body.lines]
         matches = await svc().match_lines(body.store, city_or_404(body.city), lines)
         return {"offers": {pid: m.to_json() for pid, m in matches.items()}}
+
+    @app.post("/cart-link")
+    async def cart_link(body: CartLinkIn):
+        """Ссылка, которая открывает собранную корзину в магазине (сейчас — только ВкусВилл)."""
+        adapter = svc().adapters.get(body.store)
+        if adapter is None:
+            raise HTTPException(404, f"Неизвестный магазин: {body.store}")
+        make = getattr(adapter, "cart_link", None)
+        if make is None:
+            raise HTTPException(404, "Этот магазин не принимает корзину по ссылке")
+        try:
+            url = await make([(i.sku, i.quantity) for i in body.items])
+        except ValueError as e:
+            raise HTTPException(422, str(e))
+        except Exception as e:
+            log.warning("cart link failed: %s: %s", body.store, e)
+            raise HTTPException(502, "Магазин сейчас не отвечает, попробуйте позже")
+        return {"url": url}
 
     return app
 

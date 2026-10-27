@@ -113,3 +113,45 @@ def test_mine_filter(client, users):
     client.post("/community/builds", json=payload(), headers=users["alice"])
     assert len(client.get("/community/builds", params={"mine": True}, headers=users["alice"]).json()) == 1
     assert client.get("/community/builds", params={"mine": True}, headers=users["bob"]).json() == []
+
+
+def user_recipe_payload(name, recipe_id="user-abc", product="parmesan", product_name="Пармезан"):
+    p = payload(name, recipe_id)
+    p["recipe"]["title"] = "Паста бабушки"
+    p["recipe"]["rubric"] = "main"
+    p["recipe"]["cook_minutes"] = 30
+    p["items"][0]["product"] = {"id": product, "name": product_name, "category_id": "hc"}
+    return p
+
+
+def test_user_recipes_feed(client, users):
+    # каталожные рецепты в ленту рецептов не попадают
+    client.post("/community/builds", json=payload(), headers=users["alice"])
+    first = client.post("/community/builds", json=user_recipe_payload("Оригинал"), headers=users["alice"]).json()
+    client.post("/community/builds", json=user_recipe_payload("Вариант Боба", product="grana", product_name="Грана"),
+                headers=users["bob"])
+    client.put(f"/community/builds/{first['id']}/rating", json={"stars": 5}, headers=users["bob"])
+
+    recipes = client.get("/community/recipes").json()
+    assert len(recipes) == 1
+    r = recipes[0]
+    assert r["recipe"]["id"] == "user-abc"
+    assert r["recipe"]["rubric"] == "main" and r["recipe"]["cook_minutes"] == 30
+    assert r["author_name"] == "Алиса"
+    assert r["builds_count"] == 2
+    assert r["rating_count"] == 1 and r["rating_avg"] == 5
+    assert r["best_build_id"] == first["id"]
+    assert client.get("/community/recipes", params={"sort": "bad"}).status_code == 422
+
+
+def test_popular_choices(client, users):
+    for who, product, name in [("alice", "parmesan", "Пармезан"), ("bob", "parmesan", "Пармезан"),
+                               ("carol", "grana", "Грана")]:
+        client.post("/community/builds", json=user_recipe_payload("x", product=product, product_name=name),
+                    headers=users[who])
+    data = client.get("/community/recipes/user-abc/choices").json()
+    assert data["builds"] == 3
+    top = data["ingredients"]["c"]
+    assert [(c["product"]["id"], c["count"]) for c in top] == [("parmesan", 2), ("grana", 1)]
+    assert client.get("/community/recipes/unknown/choices").json() == {"recipe_id": "unknown", "builds": 0,
+                                                                      "ingredients": {}}

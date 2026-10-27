@@ -21,7 +21,9 @@ MAX_UPLOAD_BYTES = 10 * 1024 * 1024
 MAX_SIDE = 1600
 THUMB_SIDE = 600
 MAX_PIXELS = 50_000_000          # защита от «бомб» с огромным разрешением
-HIDE_AFTER_REPORTS = 3
+# Фото удаляется совсем (вместе с файлами), когда на него пожаловались столько разных людей.
+# Пожаловавшийся перестаёт видеть фото сразу.
+DELETE_AFTER_REPORTS = 3
 POPULAR_DAYS = 30
 UPLOADS_PER_DAY = (20, 24 * 3600)
 
@@ -163,8 +165,9 @@ class RecipeSocialStore:
         rows = self.db.execute(
             "SELECT * FROM recipe_photos WHERE recipe_id = ? AND hidden = 0"
             " AND user_id NOT IN (SELECT blocked_id FROM blocks WHERE user_id = ?)"
+            " AND id NOT IN (SELECT photo_id FROM photo_reports WHERE user_id = ?)"
             " ORDER BY created_at",
-            (recipe_id, me),
+            (recipe_id, me, me),
         ).fetchall()
         return [self._photo_json(r) for r in rows]
 
@@ -183,13 +186,17 @@ class RecipeSocialStore:
         return self.db.execute("SELECT 1 FROM recipe_photos WHERE id = ? AND hidden = 0",
                                (photo_id,)).fetchone() is not None
 
-    def report_photo(self, photo_id: str, user_id: str, reason: str) -> None:
+    def report_photo(self, photo_id: str, user_id: str, reason: str) -> bool:
+        """Жалоба на фото. Возвращает True, если фото удалено по жалобам."""
         self.db.execute("INSERT OR IGNORE INTO photo_reports (photo_id, user_id, reason, created_at) VALUES (?, ?, ?, ?)",
                         (photo_id, user_id, reason, _iso(_now())))
         count = self.db.execute("SELECT COUNT(*) FROM photo_reports WHERE photo_id = ?", (photo_id,)).fetchone()[0]
-        if count >= HIDE_AFTER_REPORTS:
-            self.db.execute("UPDATE recipe_photos SET hidden = 1 WHERE id = ?", (photo_id,))
+        removed = count >= DELETE_AFTER_REPORTS
+        if removed:
+            self.db.execute("DELETE FROM recipe_photos WHERE id = ?", (photo_id,))  # жалобы удалятся каскадом
+            self._remove_files(photo_id)
         self.db.commit()
+        return removed
 
     # --- сводка по рецепту и популярное ---
 
@@ -199,8 +206,8 @@ class RecipeSocialStore:
         return {"recipe_id": recipe_id, "likes": self.likes_count(recipe_id), "liked_by_me": bool(liked),
                 "photos": self.photos(recipe_id, me)}
 
-    def popular(self, me: str, limit: int = 10) -> list[dict[str, Any]]:
-        since = _iso(_now() - timedelta(days=POPULAR_DAYS))
+    def popular(self, me: str, limit: int = 10, days: int = POPULAR_DAYS) -> list[dict[str, Any]]:
+        since = _iso(_now() - timedelta(days=days))
         rows = self.db.execute(
             "SELECT recipe_id, COUNT(*) AS total,"
             " SUM(CASE WHEN created_at >= ? THEN 1 ELSE 0 END) AS recent"

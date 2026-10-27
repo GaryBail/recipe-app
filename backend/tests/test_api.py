@@ -80,3 +80,18 @@ def test_search_returns_502_when_store_is_down(make_client):
         r = client.get("/search", params={"store": "a", "city": "msk", "q": "молоко"})
         assert r.status_code == 502
         assert "не отвечает" in r.json()["detail"]
+
+
+def test_cart_link(make_client):
+    class WithCart(FakeAdapter):
+        async def cart_link(self, items):
+            return "https://shop.example/cart?" + "&".join(f"{sku}={q}" for sku, q in items)
+
+    with make_client(WithCart("a", []), FakeAdapter("b", [])) as client:
+        r = client.post("/cart-link", json={"store": "a", "items": [{"sku": "1", "quantity": 2}]})
+        assert r.status_code == 200
+        assert r.json()["url"] == "https://shop.example/cart?1=2.0"
+        # магазин без передачи корзины
+        assert client.post("/cart-link", json={"store": "b", "items": [{"sku": "1", "quantity": 1}]}).status_code == 404
+        assert client.post("/cart-link", json={"store": "zzz", "items": [{"sku": "1", "quantity": 1}]}).status_code == 404
+        assert client.post("/cart-link", json={"store": "a", "items": []}).status_code == 422

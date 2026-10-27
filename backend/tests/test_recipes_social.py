@@ -128,10 +128,19 @@ def test_reports_hide_photo_and_blocks_filter(client):
     client.post("/community/blocks", json={"user_id": alice_user["id"]}, headers=bob)
     assert client.get("/recipes/borscht", headers=bob).json()["photos"] == []
 
-    for _ in range(3):
+    carol, _ = register(client)
+    assert client.post(f"/photos/{photo['id']}/report", json={"reason": "не еда"}, headers=carol).status_code == 204
+    # пожаловавшийся перестаёт видеть фото сразу, остальные — пока жалоб мало — видят
+    assert client.get("/recipes/borscht", headers=carol).json()["photos"] == []
+    assert len(client.get("/recipes/borscht").json()["photos"]) == 1
+
+    for _ in range(2):
         h, _ = register(client)
         assert client.post(f"/photos/{photo['id']}/report", json={"reason": "не еда"}, headers=h).status_code == 204
+    # третья жалоба — фото удалено вместе с файлами
     assert client.get("/recipes/borscht").json()["photos"] == []
+    assert not (client.media / "photos" / f"{photo['id']}.jpg").exists()
+    assert client.post(f"/photos/{photo['id']}/report", json={"reason": "x"}, headers=carol).status_code == 404
 
 
 def test_account_deletion_removes_photos_and_likes(client):
