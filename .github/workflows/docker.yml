@@ -14,7 +14,14 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Build image
-        run: docker build -t recipe-api backend
+        run: |
+          set -o pipefail
+          if ! docker build --progress=plain -t recipe-api backend 2>&1 | tee build.log; then
+            # хвост лога в аннотацию — её видно без доступа к полным логам
+            tail -n 40 build.log | sed 's/%/%25/g' | awk 'BEGIN{ORS="%0A"} {print}' | sed 's/^/::error title=docker build::/'
+            echo
+            exit 1
+          fi
 
       - name: Start container
         run: |
@@ -52,4 +59,6 @@ jobs:
 
       - name: Logs on failure
         if: failure()
-        run: docker logs api
+        run: |
+          docker logs api 2>&1 | tail -n 40 | sed 's/%/%25/g' | awk 'BEGIN{ORS="%0A"} {print}' | sed 's/^/::error title=api logs::/' || true
+          echo
