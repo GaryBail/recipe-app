@@ -103,6 +103,22 @@ struct APIClient: Sendable {
         (try? JSONDecoder().decode(ErrorBody.self, from: data))?.detail?.message
     }
 
+    /// Загрузка файла: тело запроса — сами байты (например, JPEG).
+    func upload<T: Decodable>(_ path: String, data: Data, contentType: String) async throws -> T {
+        var request = URLRequest(url: baseURL.appendingPathComponent(path))
+        request.httpMethod = "POST"
+        request.timeoutInterval = 60
+        request.setValue(contentType, forHTTPHeaderField: "Content-Type")
+        if let token { request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization") }
+        let (body, response) = try await session.upload(for: request, from: data)
+        return try handle(body, response)
+    }
+
+    /// Абсолютный адрес файла с сервера («/media/photos/…» → «https://…/media/photos/…»).
+    func mediaURL(_ path: String) -> URL? {
+        URL(string: path, relativeTo: baseURL)?.absoluteURL
+    }
+
     func send<T: Decodable>(_ method: String, _ path: String, query: [URLQueryItem] = []) async throws -> T {
         try await send(method, path, query: query, body: Optional<Empty>.none)
     }
@@ -121,6 +137,10 @@ struct APIClient: Sendable {
         }
 
         let (data, response) = try await session.data(for: request)
+        return try handle(data, response)
+    }
+
+    private func handle<T: Decodable>(_ data: Data, _ response: URLResponse) throws -> T {
         let status = (response as? HTTPURLResponse)?.statusCode ?? 0
         switch status {
         case 200..<300:

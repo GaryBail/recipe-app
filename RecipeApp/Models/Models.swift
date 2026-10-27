@@ -26,6 +26,14 @@ final class Recipe {
     var steps: [String]
     /// Рецепт создан пользователем (можно удалить).
     var isUserCreated: Bool = false
+    /// Рубрика каталога: breakfast, soup, salad, main, side, pastry.
+    var rubric: String = ""
+    var cookMinutes: Int = 0
+    /// Показывать в «Популярном», пока нет данных о лайках с сервера.
+    var featured: Bool = false
+    /// В избранном (лайк). Хранится локально и синхронизируется с сервером после входа.
+    var isFavorite: Bool = false
+    var favoritedAt: Date? = nil
 
     @Relationship(deleteRule: .cascade, inverse: \Ingredient.recipe)
     var ingredients: [Ingredient] = []
@@ -85,6 +93,15 @@ final class Product {
     var categoryId: String
     /// Штрихкод — самый надёжный способ сопоставить товар с ассортиментом магазина.
     var barcode: String?
+    /// КБЖУ на 100 г (ориентировочно). hasNutrition = false — данных нет.
+    var hasNutrition: Bool = false
+    var kcal: Double = 0
+    var protein: Double = 0
+    var fat: Double = 0
+    var carbs: Double = 0
+    /// Вес одной штуки, г (для ингредиентов в штуках) и плотность, г/мл (для жидкостей).
+    var gramsPerPiece: Double? = nil
+    var density: Double? = nil
 
     init(id: String, name: String, brand: String?, categoryId: String, barcode: String?) {
         self.id = id

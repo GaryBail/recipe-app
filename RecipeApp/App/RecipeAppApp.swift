@@ -24,14 +24,19 @@ struct RootView: View {
     @Environment(\.scenePhase) private var scenePhase
 
     var body: some View {
-        RecipeListView()
+        RootTabView()
             .task {
-                SeedLoader.seedIfNeeded(context)
+                SeedLoader.sync(context)
                 await AuthSession.shared.refresh()
                 if AuthSession.shared.isLoggedIn {
                     // Токен устройства мог смениться — Apple выдаст его заново.
                     await PushRegistration.requestAndRegister()
+                    await Favorites.sync(context: context)
                 }
+            }
+            .onChange(of: AuthSession.shared.user?.id) { _, id in
+                // Вошли в аккаунт — подтягиваем избранное с сервера и отправляем локальное.
+                if id != nil { Task { await Favorites.sync(context: context) } }
             }
             .onChange(of: scenePhase) { _, phase in
                 if phase == .active {

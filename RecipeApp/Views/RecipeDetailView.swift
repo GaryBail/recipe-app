@@ -1,29 +1,76 @@
-import SwiftUI
+import PhotosUI
 import SwiftData
+import SwiftUI
 
 struct RecipeDetailView: View {
     let recipe: Recipe
 
     @Environment(\.modelContext) private var context
     @Environment(\.dismiss) private var dismiss
+    @Query private var products: [Product]
+    @AppStorage(PriceProviderFactory.serverURLKey) private var serverURL = ""
+
     @State private var isCreatingBuild = false
     @State private var confirmDelete = false
+    @State private var social: RecipeSummaryDTO?
+    @State private var photoItem: PhotosPickerItem?
+    @State private var isUploading = false
+    @State private var photoMessage: String?
+
+    private var session: AuthSession { .shared }
+    private var client: RecipeSocialClient? { RecipeSocialClient.fromSettings() }
 
     var body: some View {
         List {
             Section {
+                photoHeader
+                    .listRowInsets(EdgeInsets())
+                photoActions
+            }
+
+            Section {
                 if !recipe.summary.isEmpty { Text(recipe.summary) }
-                Label("Порций: \(recipe.servings)", systemImage: "person.2")
-                    .foregroundStyle(.secondary)
+                HStack(spacing: 16) {
+                    Label("\(recipe.servings) порц.", systemImage: "person.2")
+                    if recipe.cookMinutes > 0 {
+                        Label("\(recipe.cookMinutes) мин", systemImage: "clock")
+                    }
+                    if let likes = social?.likes, likes > 0 {
+                        Label("\(likes)", systemImage: "heart")
+                    }
+                }
+                .font(.subheadline)
+                .foregroundStyle(.secondary)
                 if recipe.isUserCreated {
                     Label("Ваш рецепт", systemImage: "person.crop.circle")
                         .foregroundStyle(.secondary)
                 }
             }
 
+            Section {
+                NutritionBlock(summary: NutritionCalculator.recipeSummary(recipe, products: products),
+                               servings: recipe.servings)
+            } header: {
+                Text("КБЖУ")
+            } footer: {
+                Text("Ориентировочно, по типичным продуктам. Точные цифры — в вашей сборке с выбранными продуктами.")
+            }
+
             Section("Ингредиенты") {
                 ForEach(recipe.sortedIngredients) { ingredient in
-                    LabeledContent(ingredient.title, value: ingredient.amountText)
+                    HStack(alignment: .firstTextBaseline) {
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text(ingredient.title)
+                            if let p = NutritionCalculator.typicalProduct(for: ingredient, in: products),
+                               let n = NutritionCalculator.nutrition(of: p, amount: ingredient.amount, unit: ingredient.unit) {
+                                Text("≈ \(Int(n.kcal.rounded())) ккал · Б \(Int(n.protein.rounded())) · Ж \(Int(n.fat.rounded())) · У \(Int(n.carbs.rounded()))")
+                                    .font(.caption2.monospacedDigit())
+                                    .foregroundStyle(.secondary)
+                            }
+                        }
+                        Spacer()
+                        Text(ingredient.amountText).foregroundStyle(.secondary)
+                    }
                 }
             }
 
@@ -76,6 +123,18 @@ struct RecipeDetailView: View {
             }
         }
         .navigationTitle(recipe.title)
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {
+                    Favorites.toggle(recipe, context: context)
+                } label: {
+                    Image(systemName: recipe.isFavorite ? "heart.fill" : "heart")
+                        .foregroundStyle(recipe.isFavorite ? Color.red : Color.accentColor)
+                }
+                .accessibilityLabel(recipe.isFavorite ? "Убрать из избранного" : "В избранное")
+            }
+        }
         .sheet(isPresented: $isCreatingBuild) {
             BuildEditorView(recipe: recipe)
         }
@@ -88,6 +147,120 @@ struct RecipeDetailView: View {
             }
         } message: {
             Text("Опубликованные сборки останутся в сообществе, пока вы не снимете их с публикации.")
+        }
+        .task(id: serverURL) { await loadSocial() }
+        .onChange(of: photoItem) { _, item in
+            guard let item else { return }
+            Task { await upload(item) }
+        }
+    }
+
+    // MARK: - Фото
+
+    @ViewBuilder
+    private var photoHeader: some View {
+        let photos = social?.photos ?? []
+        if photos.isEmpty {
+            RecipeImage(url: nil, rubric: recipe.rubric)
+                .frame(height: 200)
+                .clipped()
+                .overlay(alignment: .bottomLeading) {
+                    if client != nil {
+                        Text("Пока нет фото — добавьте первое")
+                            .font(.caption.weight(.medium))
+                            .foregroundStyle(.white)
+                            .padding(.horizontal, 10).padding(.vertical, 6)
+                            .background(.black.opacity(0.3), in: Capsule())
+                            .padding(12)
+                    }
+                }
+        } else {
+            TabView {
+                ForEach(photos.reversed()) { photo in
+                    RecipeImage(url: client?.url(photo.url), rubric: recipe.rubric)
+                        .frame(height: 260)
+                        .clipped()
+                        .overlay(alignment: .bottomLeading) {
+                            Text("Фото: \(photo.authorName)")
+                                .font(.caption2)
+                                .foregroundStyle(.white)
+                                .padding(.horizontal, 8).padding(.vertical, 4)
+                                .background(.black.opacity(0.35), in: Capsule())
+                                .padding(10)
+                        }
+                        .contextMenu { photoMenu(photo) }
+                }
+            }
+            .tabViewStyle(.page(indexDisplayMode: photos.count > 1 ? .automatic : .never))
+            .frame(height: 260)
+        }
+    }
+
+    @ViewBuilder
+    private func photoMenu(_ photo: PhotoDTO) -> some View {
+        if photo.authorId == session.user?.id {
+            Button("Удалить фото", systemImage: "trash", role: .destructive) {
+                Task {
+                    try? await client?.deletePhoto(photo.id)
+                    await loadSocial()
+                }
+            }
+        } else if session.isLoggedIn {
+            Button("Пожаловаться", systemImage: "exclamationmark.bubble") {
+                Task {
+                    try? await client?.reportPhoto(photo.id, reason: "Неподходящее фото")
+                    photoMessage = "Жалоба отправлена. Спасибо!"
+                }
+            }
+        }
+    }
+
+    @ViewBuilder
+    private var photoActions: some View {
+        if client != nil {
+            if !session.isLoggedIn {
+                LoginRequiredButton(title: "Войдите, чтобы добавить фото блюда")
+            } else if !(session.user?.isEmailVerified ?? false) {
+                VerifyEmailPrompt()
+            } else {
+                PhotosPicker(selection: $photoItem, matching: .images) {
+                    HStack {
+                        Label(isUploading ? "Загружаем фото…" : "Добавить фото блюда", systemImage: "camera")
+                        if isUploading { Spacer(); ProgressView() }
+                    }
+                }
+                .disabled(isUploading)
+            }
+            if let photoMessage {
+                Text(photoMessage).font(.footnote).foregroundStyle(.secondary)
+            }
+        }
+    }
+
+    private func loadSocial() async {
+        guard let client else { social = nil; return }
+        social = try? await client.summary(recipeId: recipe.id)
+    }
+
+    private func upload(_ item: PhotosPickerItem) async {
+        guard let client else { return }
+        isUploading = true
+        photoMessage = nil
+        defer {
+            isUploading = false
+            photoItem = nil
+        }
+        do {
+            guard let data = try await item.loadTransferable(type: Data.self),
+                  let jpeg = PhotoPreparation.jpeg(from: data) else {
+                photoMessage = "Не удалось прочитать фото"
+                return
+            }
+            _ = try await client.upload(jpeg: jpeg, recipeId: recipe.id)
+            photoMessage = "Фото добавлено"
+            await loadSocial()
+        } catch {
+            photoMessage = error.localizedDescription
         }
     }
 }

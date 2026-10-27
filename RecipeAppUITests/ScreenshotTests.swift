@@ -15,42 +15,56 @@ final class ScreenshotTests: XCTestCase {
     }
 
     func testWalkThroughScreens() {
-        // 1. Список рецептов (стартовые данные грузятся при первом запуске)
-        XCTAssertTrue(app.staticTexts["Паста карбонара"].waitForExistence(timeout: 15))
-        snap("recipes")
-
-        // 2. Рецепт
-        app.staticTexts["Паста карбонара"].tap()
-        XCTAssertTrue(app.buttons["Собрать продукты"].waitForExistence(timeout: 5))
-        snap("recipe")
+        // 1. Главная
+        XCTAssertTrue(app.staticTexts["Популярное"].waitForExistence(timeout: 15))
+        sleep(1)
+        snap("home")
         app.swipeUp()
-        snap("recipe-bottom")
+        snap("home-all")
+        app.swipeDown()
         app.swipeDown()
 
-        // 3. Новая сборка: выбираем продукт для каждого ингредиента
-        app.buttons["Собрать продукты"].tap()
+        // 2. Рубрика
+        if tapIfExists(app.buttons["Супы"]) {
+            sleep(1)
+            snap("home-soups")
+            tapIfExists(app.buttons["Все"])
+        }
+
+        // 3. Рецепт: фото-заглушка, КБЖУ, ингредиенты
+        let carbonara = app.buttons.matching(NSPredicate(format: "label CONTAINS 'Паста карбонара'")).firstMatch
+        XCTAssertTrue(carbonara.waitForExistence(timeout: 5))
+        carbonara.tap()
+        _ = app.navigationBars["Паста карбонара"].waitForExistence(timeout: 5)
+        sleep(1)
+        snap("recipe")
+        tapIfExists(app.buttons["В избранное"])
+        app.swipeUp()
+        snap("recipe-ingredients")
+
+        // 4. Новая сборка
+        let collect = app.buttons["Собрать продукты"]
+        scrollTo(collect)
+        collect.tap()
         XCTAssertTrue(app.navigationBars["Новая сборка"].waitForExistence(timeout: 5))
-        snap("build-editor-empty")
         choose("carbonara-pasta", "Спагетти №5 · Barilla")
-        snapIfMenuOpen("build-editor-menu", ingredient: "carbonara-cheese")
         choose("carbonara-pork", "Гуанчале")
         choose("carbonara-cheese", "Пармезан")
         choose("carbonara-eggs", "Яйца С0")
         choose("carbonara-pepper", "Перец чёрный молотый")
-        snap("build-editor-filled")
+        snap("build-editor")
         app.buttons["Сохранить"].tap()
 
-        // 4. Сборка
+        // 5. Сборка с КБЖУ
         let build = app.staticTexts["Моя паста карбонара"]
-        if build.waitForExistence(timeout: 5) {
+        scrollTo(build)
+        if build.exists {
             build.tap()
             XCTAssertTrue(app.buttons["Где купить дешевле"].waitForExistence(timeout: 5))
             snap("build")
             app.swipeUp()
-            snap("build-bottom")
+            snap("build-nutrition")
             app.swipeDown()
-
-            // 5. Сравнение магазинов (тестовые цены)
             app.buttons["Где купить дешевле"].tap()
             _ = app.staticTexts["Магазин А"].waitForExistence(timeout: 8)
             sleep(1)
@@ -58,17 +72,22 @@ final class ScreenshotTests: XCTestCase {
         }
         backToRoot()
 
-        // 6. Новый рецепт
-        if tapIfExists(app.buttons["Новый рецепт"]) {
-            _ = app.navigationBars["Новый рецепт"].waitForExistence(timeout: 5)
-            snap("new-recipe")
-            tapIfExists(app.buttons["Отмена"])
+        // 6. Избранное
+        if tapIfExists(app.tabBars.buttons["Избранное"]) {
+            sleep(1)
+            snap("favorites")
         }
 
-        // 7. Настройки и вход
-        if tapIfExists(app.buttons["Настройки"]) {
-            _ = app.navigationBars["Настройки"].waitForExistence(timeout: 5)
-            snap("settings")
+        // 7. Сообщество
+        if tapIfExists(app.tabBars.buttons["Сообщество"]) {
+            sleep(1)
+            snap("community")
+        }
+
+        // 8. Профиль и вход
+        if tapIfExists(app.tabBars.buttons["Профиль"]) {
+            sleep(1)
+            snap("profile")
             if tapIfExists(app.buttons["Войти или зарегистрироваться"]) {
                 sleep(1)
                 snap("auth-login")
@@ -78,20 +97,19 @@ final class ScreenshotTests: XCTestCase {
                 tapIfExists(app.buttons["Закрыть"])
                 sleep(1)
             }
-            tapIfExists(app.buttons["Готово"])
-            sleep(1)
         }
 
-        // 8. Сообщество и уведомления
-        if tapIfExists(app.buttons["Сообщество"]) {
+        // 9. Новый рецепт и уведомления
+        tapIfExists(app.tabBars.buttons["Рецепты"])
+        if tapIfExists(app.buttons["Новый рецепт"]) {
+            _ = app.navigationBars["Новый рецепт"].waitForExistence(timeout: 5)
+            snap("new-recipe")
+            tapIfExists(app.buttons["Отмена"])
             sleep(1)
-            snap("community")
-            backToRoot()
         }
         if tapIfExists(app.buttons["Уведомления"]) {
             sleep(1)
             snap("notifications")
-            backToRoot()
         }
     }
 
@@ -109,21 +127,14 @@ final class ScreenshotTests: XCTestCase {
             option.tap()
         } else {
             XCTFail("Нет варианта «\(product)»")
-            app.tap()
         }
     }
 
-    /// Снимок раскрытого меню выбора продукта — чтобы было видно, как выглядит выбор.
-    private func snapIfMenuOpen(_ name: String, ingredient: String) {
-        let picker = app.buttons["picker-\(ingredient)"]
-        guard picker.waitForExistence(timeout: 3) else { return }
-        picker.tap()
-        sleep(1)
-        snap(name)
-        // закрываем меню, выбрав «Не выбран» (сыр всё равно ещё не выбран)
-        let none = app.buttons["Не выбран"]
-        if none.waitForExistence(timeout: 2) { none.tap() }
-        sleep(1)
+    private func scrollTo(_ element: XCUIElement, maxSwipes: Int = 8) {
+        for _ in 0..<maxSwipes {
+            if element.exists && element.isHittable { return }
+            app.swipeUp()
+        }
     }
 
     @discardableResult
@@ -134,9 +145,9 @@ final class ScreenshotTests: XCTestCase {
     }
 
     private func backToRoot() {
-        for _ in 0..<4 {
+        for _ in 0..<5 {
+            if app.staticTexts["Популярное"].exists { return }
             let back = app.navigationBars.buttons.element(boundBy: 0)
-            if app.staticTexts["Паста карбонара"].exists && app.navigationBars["Рецепты"].exists { return }
             guard back.exists else { return }
             back.tap()
             sleep(1)

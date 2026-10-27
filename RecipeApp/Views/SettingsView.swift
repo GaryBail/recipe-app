@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct SettingsView: View {
+    /// Открыто листом (с кнопкой «Готово») или как вкладка «Профиль».
+    var showsDone = true
     @AppStorage(PriceProviderFactory.serverURLKey) private var serverURL = ""
     @AppStorage("cityId") private var cityId = "msk"
     @Environment(\.dismiss) private var dismiss
@@ -37,10 +39,12 @@ struct SettingsView: View {
                     Text("Нужен для цен в магазинах и сообщества. Оставьте пустым — будут тестовые цены, сообщество недоступно.")
                 }
             }
-            .navigationTitle("Настройки")
-            .navigationBarTitleDisplayMode(.inline)
+            .navigationTitle(showsDone ? "Настройки" : "Профиль")
+            .navigationBarTitleDisplayMode(showsDone ? .inline : .large)
             .toolbar {
-                ToolbarItem(placement: .confirmationAction) { Button("Готово") { dismiss() } }
+                if showsDone {
+                    ToolbarItem(placement: .confirmationAction) { Button("Готово") { dismiss() } }
+                }
             }
             .task(id: serverURL) {
                 cities = (try? await PriceProviderFactory.make(serverURL: serverURL).cities()) ?? []

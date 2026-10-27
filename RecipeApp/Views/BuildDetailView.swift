@@ -27,13 +27,34 @@ struct BuildDetailView: View {
             if let recipe = build.recipe {
                 Section("Продукты") {
                     ForEach(recipe.sortedIngredients) { ingredient in
-                        VStack(alignment: .leading, spacing: 2) {
-                            Text(build.product(for: ingredient)?.displayName ?? "—")
-                            Text("\(ingredient.title), \(ingredient.amountText)")
-                                .font(.caption)
-                                .foregroundStyle(.secondary)
+                        let product = build.product(for: ingredient)
+                        HStack(alignment: .firstTextBaseline) {
+                            VStack(alignment: .leading, spacing: 2) {
+                                Text(product?.displayName ?? "—")
+                                Text("\(ingredient.title), \(ingredient.amountText)")
+                                    .font(.caption)
+                                    .foregroundStyle(.secondary)
+                            }
+                            Spacer()
+                            if let product,
+                               let n = NutritionCalculator.nutrition(of: product, amount: ingredient.amount, unit: ingredient.unit) {
+                                VStack(alignment: .trailing, spacing: 2) {
+                                    Text("\(Int(n.kcal.rounded())) ккал").font(.footnote.monospacedDigit())
+                                    Text("Б \(Int(n.protein.rounded())) · Ж \(Int(n.fat.rounded())) · У \(Int(n.carbs.rounded()))")
+                                        .font(.caption2.monospacedDigit())
+                                        .foregroundStyle(.secondary)
+                                }
+                            }
                         }
                     }
+                }
+
+                Section {
+                    NutritionBlock(summary: NutritionCalculator.buildSummary(build), servings: recipe.servings)
+                } header: {
+                    Text("КБЖУ вашей сборки")
+                } footer: {
+                    Text("Ориентировочно, по справочным значениям выбранных продуктов (сырой вес). У конкретных марок цифры отличаются.")
                 }
             }
 
