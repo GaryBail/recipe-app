@@ -4,25 +4,32 @@ FROM python:3.12-slim
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     PIP_NO_CACHE_DIR=1 \
-    PIP_DISABLE_PIP_VERSION_CHECK=1
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    VIRTUAL_ENV=/opt/venv \
+    PATH=/opt/venv/bin:$PATH
 
 # git — для установки библиотек магазинов из GitHub; xvfb — виртуальный экран для браузера.
 RUN apt-get update \
     && apt-get install -y --no-install-recommends git ca-certificates xvfb \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/* \
+    && useradd --create-home --uid 1000 app \
+    && mkdir -p /data /opt/venv /app \
+    && chown app:app /data /opt/venv /app
 
-WORKDIR /app
-COPY requirements.txt .
-# Системные библиотеки Firefox ставим через playwright (он приходит вместе с camoufox).
-RUN pip install -r requirements.txt \
-    && python -m playwright install-deps firefox \
-    && rm -rf /var/lib/apt/lists/*
-
-RUN useradd --create-home --uid 1000 app && mkdir -p /data && chown app:app /data
+# Пакеты ставим от пользователя app в его окружение: Camoufox записывает файлы модели
+# в папку пакетов и потом должен иметь к ним доступ от того же пользователя.
 USER app
-# Браузер Camoufox и база GeoIP скачиваются в домашнюю папку пользователя app.
-RUN python -m camoufox fetch
+WORKDIR /app
+COPY --chown=app:app requirements.txt .
+RUN python -m venv /opt/venv \
+    && pip install -r requirements.txt \
+    && python -m camoufox fetch
 
+# Системные библиотеки Firefox — от root (через apt).
+USER root
+RUN python -m playwright install-deps firefox && rm -rf /var/lib/apt/lists/*
+
+USER app
 COPY --chown=app:app app ./app
 
 ENV COMMUNITY_DB=/data/community.db \
