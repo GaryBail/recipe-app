@@ -4,9 +4,15 @@ import XCTest
 
 @MainActor
 final class KitchenTests: XCTestCase {
+    /// Контейнер держим до конца теста: если его освободить, контекст падает при первой записи.
+    private var keep: ModelContainer?
+
     private func container() throws -> ModelContainer {
-        try ModelContainer(for: Recipe.self, Ingredient.self, Product.self, Build.self, BuildItem.self, ShoppingItem.self,
-                           configurations: ModelConfiguration(isStoredInMemoryOnly: true))
+        let container = try ModelContainer(for: Recipe.self, Ingredient.self, Product.self, Build.self, BuildItem.self,
+                                           ShoppingItem.self,
+                                           configurations: ModelConfiguration(isStoredInMemoryOnly: true))
+        keep = container
+        return container
     }
 
     /// Рецепт с ингредиентами (категория, количество, единица).
