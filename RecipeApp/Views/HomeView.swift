@@ -118,7 +118,7 @@ struct HomeView: View {
                 heroStat(Double(Rubric.all.count), "рубрик")
                 heroStat(Double(products.count), "продуктов")
             }
-            Text("Выберите продукты — найдём, где корзина дешевле")
+            Text("Ваши любимые рецепты и продукты в одной корзине")
                 .font(.footnote)
                 .foregroundStyle(.white.opacity(0.85))
         }
