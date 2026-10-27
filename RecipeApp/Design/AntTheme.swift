@@ -216,6 +216,8 @@ extension AntSectionHeader where Trailing == EmptyView {
 /// Steps (вертикальные): номер в круге и линия к следующему шагу.
 struct AntSteps: View {
     let steps: [String]
+    /// Для своих рецептов — показываем фото шагов, если пользователь их добавил.
+    var recipeId: String? = nil
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -231,12 +233,24 @@ struct AntSteps: View {
                             Rectangle().fill(Ant.border).frame(width: 1).frame(maxHeight: .infinity)
                         }
                     }
-                    Text(step)
-                        .font(.body)
-                        .foregroundStyle(Ant.text)
-                        .fixedSize(horizontal: false, vertical: true)
-                        .padding(.top, 3)
-                        .padding(.bottom, index < steps.count - 1 ? 16 : 0)
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text(step)
+                            .font(.body)
+                            .foregroundStyle(Ant.text)
+                            .fixedSize(horizontal: false, vertical: true)
+                        if let recipeId, let image = StepPhotoStore.image(recipeId: recipeId, step: index) {
+                            Image(uiImage: image)
+                                .resizable()
+                                .scaledToFill()
+                                .frame(maxWidth: .infinity, maxHeight: 180)
+                                .clipShape(RoundedRectangle(cornerRadius: Ant.radiusLG, style: .continuous))
+                        }
+                        if let duration = StepTimer.duration(in: step) {
+                            AntTag(text: StepTimer.format(duration), palette: Ant.blue, systemImage: "timer")
+                        }
+                    }
+                    .padding(.top, 3)
+                    .padding(.bottom, index < steps.count - 1 ? 16 : 0)
                     Spacer(minLength: 0)
                 }
                 .appear(index: index)

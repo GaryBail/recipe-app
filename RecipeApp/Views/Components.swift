@@ -70,8 +70,14 @@ struct RecipeCard: View {
     let cover: URL?
     let kcalPerServing: Double?
     var imageHeight: CGFloat = 120
+    @AppStorage(DietProfile.allergensKey) private var allergens = ""
+    @AppStorage(DietProfile.vegetarianKey) private var vegetarian = false
 
     private var rubric: Rubric? { Rubric.named(recipe.rubric) }
+    private var hasWarning: Bool {
+        let profile = DietProfile(stored: allergens, vegetarian: vegetarian)
+        return !profile.isEmpty && !profile.fits(recipe)
+    }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -110,6 +116,11 @@ struct RecipeCard: View {
                     if let kcalPerServing {
                         Label("\(Int(kcalPerServing.rounded())) ккал", systemImage: "flame")
                     }
+                    if hasWarning {
+                        Image(systemName: "exclamationmark.triangle.fill")
+                            .foregroundStyle(Ant.orange.base)
+                            .accessibilityLabel("Есть ограничения из вашего профиля")
+                    }
                 }
                 .font(.caption)
                 .foregroundStyle(Ant.textTertiary)
@@ -140,18 +151,20 @@ struct CompactLabelStyle: LabelStyle {
 struct NutritionBlock: View {
     let summary: NutritionSummary
     let servings: Int
+    @AppStorage(DietProfile.dailyKcalKey) private var dailyKcal = 2000
 
     var body: some View {
         let portion = summary.perServing(servings)
+        let percent = DailyNorm(kcal: Double(dailyKcal)).percent(portion)
         VStack(alignment: .leading, spacing: 12) {
             HStack(spacing: 8) {
-                statistic("ккал", portion.kcal, palette: Ant.orange)
-                statistic("белки, г", portion.protein, palette: Ant.red)
-                statistic("жиры, г", portion.fat, palette: Ant.gold)
-                statistic("углев., г", portion.carbs, palette: Ant.blue)
+                statistic("ккал", portion.kcal, percent: percent.kcal, palette: Ant.orange)
+                statistic("белки, г", portion.protein, percent: percent.protein, palette: Ant.red)
+                statistic("жиры, г", portion.fat, percent: percent.fat, palette: Ant.gold)
+                statistic("углев., г", portion.carbs, percent: percent.carbs, palette: Ant.blue)
             }
             macroBar(portion)
-            Text("На порцию (всего порций: \(servings))")
+            Text("На порцию (всего порций: \(servings)). Проценты — от дневной нормы \(dailyKcal) ккал, её можно изменить в профиле.")
                 .font(.caption).foregroundStyle(Ant.textTertiary)
             Text("Всё блюдо: \(summary.total.shortText)")
                 .font(.footnote).foregroundStyle(Ant.textSecondary)
@@ -167,13 +180,18 @@ struct NutritionBlock: View {
         .padding(.vertical, 4)
     }
 
-    private func statistic(_ title: String, _ value: Double, palette: Ant.Palette) -> some View {
+    private func statistic(_ title: String, _ value: Double, percent: Int, palette: Ant.Palette) -> some View {
         VStack(spacing: 2) {
             CountUpText(value: value, font: .title3.weight(.semibold))
                 .foregroundStyle(palette.text)
             Text(title)
                 .font(.caption2)
                 .foregroundStyle(Ant.textTertiary)
+            Text("\(percent)% нормы")
+                .font(.caption2.weight(.medium).monospacedDigit())
+                .foregroundStyle(palette.text)
+                .lineLimit(1)
+                .minimumScaleFactor(0.8)
         }
         .frame(maxWidth: .infinity)
         .padding(.vertical, 8)

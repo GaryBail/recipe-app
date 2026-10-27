@@ -48,7 +48,7 @@ enum ShareText {
         lines.append("")
         for ingredient in recipe.sortedIngredients {
             let product = build.product(for: ingredient)?.displayName ?? ingredient.title
-            lines.append("☐ \(product) — \(ingredient.amountText)")
+            lines.append("☐ \(product) — \(ingredient.amountText(servings: build.effectiveServings))")
         }
         let nutrition = NutritionCalculator.buildSummary(build)
         if nutrition.grams > 0 {

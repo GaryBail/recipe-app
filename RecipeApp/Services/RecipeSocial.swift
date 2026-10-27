@@ -38,8 +38,9 @@ struct RecipeSocialClient: Sendable {
         APIClient.fromSettings().map(RecipeSocialClient.init(api:))
     }
 
-    func popular(limit: Int = 10) async throws -> [PopularDTO] {
-        try await api.send("GET", "recipes/popular", query: [URLQueryItem(name: "limit", value: String(limit))])
+    func popular(limit: Int = 10, days: Int = 30) async throws -> [PopularDTO] {
+        try await api.send("GET", "recipes/popular", query: [URLQueryItem(name: "limit", value: String(limit)),
+                                                             URLQueryItem(name: "days", value: String(days))])
     }
 
     func covers(for ids: [String]) async throws -> [String: PhotoDTO] {

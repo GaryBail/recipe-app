@@ -31,6 +31,35 @@ final class ScreenshotTests: XCTestCase {
             tapIfExists(app.buttons["Все"])
         }
 
+        // 2a. Фильтры и подборки
+        if tapIfExists(app.buttons["До 30 минут"]) {
+            sleep(1)
+            snap("home-filters")
+            tapIfExists(app.buttons["До 30 минут"])
+        }
+        let autumn = app.buttons.matching(NSPredicate(format: "label CONTAINS 'Осень'")).firstMatch
+        if tapIfExists(autumn) {
+            sleep(1)
+            snap("collection")
+            backToRoot()
+        }
+
+        // 2b. «Из того, что есть»
+        if tapIfExists(app.buttons["Что приготовить из того, что есть?"]) {
+            let field = app.textFields.firstMatch
+            if field.waitForExistence(timeout: 3) {
+                for word in ["яйц", "молок", "мук"] {
+                    field.tap()
+                    field.typeText(word + "\n")
+                }
+            }
+            sleep(1)
+            snap("fridge")
+            app.swipeUp()
+            snap("fridge-results")
+            backToRoot()
+        }
+
         // 3. Поиск и рецепт: фото-заглушка, КБЖУ, ингредиенты
         let search = app.searchFields.firstMatch
         if search.waitForExistence(timeout: 3) {
@@ -54,6 +83,19 @@ final class ScreenshotTests: XCTestCase {
         tapIfExists(app.buttons["В избранное"])
         app.swipeUp()
         snap("recipe-ingredients")
+
+        // 3a. Пересчёт порций и список покупок
+        let stepper = app.steppers.firstMatch
+        if stepper.waitForExistence(timeout: 3) {
+            let plus = stepper.buttons.element(boundBy: 1)
+            plus.tap()
+            plus.tap()
+            sleep(1)
+            snap("recipe-servings")
+        }
+        let addToList = app.buttons["В список покупок"]
+        scrollTo(addToList)
+        tapIfExists(addToList)
 
         // 4. Новая сборка
         let collect = app.buttons["Собрать продукты"]
@@ -89,6 +131,43 @@ final class ScreenshotTests: XCTestCase {
         if tapIfExists(app.tabBars.buttons["Избранное"]) {
             sleep(1)
             snap("favorites")
+        }
+
+        // 6a. Покупки и режим «в магазине»
+        if tapIfExists(app.tabBars.buttons["Покупки"]) {
+            sleep(1)
+            snap("shopping")
+            let first = app.buttons.matching(NSPredicate(format: "label CONTAINS 'Спагетти'")).firstMatch
+            tapIfExists(first)
+            let storeMode = app.buttons["store-mode"].exists ? app.buttons["store-mode"] : app.switches["store-mode"]
+            if tapIfExists(storeMode) {
+                sleep(1)
+                snap("shopping-store-mode")
+                tapIfExists(storeMode)
+            }
+        }
+
+        // 6b. Режим готовки с таймером
+        if tapIfExists(app.tabBars.buttons["Рецепты"]) {
+            let search = app.searchFields.firstMatch
+            if search.waitForExistence(timeout: 3) {
+                search.tap()
+                search.typeText("гуляш")
+                let goulash = app.buttons.matching(NSPredicate(format: "label CONTAINS 'Гуляш'")).firstMatch
+                if tapIfExists(goulash, timeout: 5), tapIfExists(app.buttons["Начать готовить"], timeout: 5) {
+                    sleep(1)
+                    for _ in 0..<3 { app.swipeLeft(); usleep(400_000) }
+                    sleep(1)
+                    snap("cooking-mode")
+                    if tapIfExists(app.buttons["Запустить таймер"]) {
+                        sleep(2)
+                        snap("cooking-timer")
+                    }
+                    tapIfExists(app.buttons["Закрыть"])
+                    sleep(1)
+                }
+                backToRoot()
+            }
         }
 
         // 7. Сообщество

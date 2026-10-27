@@ -15,6 +15,8 @@ struct SettingsView: View {
             Form {
                 AccountSection()
 
+                DietSection()
+
                 Section {
                     Picker("Город", selection: $cityId) {
                         ForEach(cities) { Text($0.name).tag($0.id) }
@@ -64,6 +66,50 @@ struct SettingsView: View {
             checkResult = ok ? "✅ Сервер доступен" : "Сервер ответил с ошибкой"
         } catch {
             checkResult = "Нет соединения: \(error.localizedDescription)"
+        }
+    }
+}
+
+/// Питание: аллергии и ограничения (предупреждения в рецептах, фильтр «Мне подходит»)
+/// и дневная норма калорий (проценты в КБЖУ).
+struct DietSection: View {
+    @AppStorage(DietProfile.allergensKey) private var allergens = ""
+    @AppStorage(DietProfile.vegetarianKey) private var vegetarian = false
+    @AppStorage(DietProfile.dailyKcalKey) private var dailyKcal = 2000
+
+    private var selected: Set<Allergen> { DietProfile(stored: allergens, vegetarian: vegetarian).allergens }
+
+    var body: some View {
+        Section {
+            NavigationLink {
+                Form {
+                    Section {
+                        ForEach(Allergen.allCases) { allergen in
+                            Toggle(allergen.title, isOn: Binding(
+                                get: { selected.contains(allergen) },
+                                set: { on in
+                                    var set = selected
+                                    if on { set.insert(allergen) } else { set.remove(allergen) }
+                                    allergens = DietProfile.store(set)
+                                }))
+                        }
+                    } footer: {
+                        Text("Предупредим в рецептах с этими продуктами. Мы определяем их по ингредиентам рецепта — состав конкретной марки проверяйте на упаковке.")
+                    }
+                }
+                .navigationTitle("Аллергии")
+            } label: {
+                LabeledContent("Аллергии и непереносимость",
+                               value: selected.isEmpty ? "нет" : selected.map(\.short).sorted().joined(separator: ", "))
+            }
+            Toggle("Не ем мясо и рыбу", isOn: $vegetarian)
+            Stepper(value: $dailyKcal, in: 1200...4000, step: 100) {
+                LabeledContent("Норма в день", value: "\(dailyKcal) ккал")
+            }
+        } header: {
+            Text("Питание")
+        } footer: {
+            Text("От нормы считаются проценты КБЖУ в рецептах: белки 15 %, жиры 30 %, углеводы 55 % калорий. Это ориентир, а не медицинская рекомендация.")
         }
     }
 }

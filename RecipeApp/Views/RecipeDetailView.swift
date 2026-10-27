@@ -17,6 +17,18 @@ struct RecipeDetailView: View {
     @State private var isUploading = false
     @State private var photoMessage: String?
     @State private var sparks = 0
+    @State private var servingsChoice: Int?
+    @State private var cooking = false
+    @State private var publishing: Build?
+    @AppStorage(DietProfile.allergensKey) private var allergens = ""
+    @AppStorage(DietProfile.vegetarianKey) private var vegetarian = false
+
+    private var servings: Int { servingsChoice ?? recipe.servings }
+    private var warnings: [String] { DietProfile(stored: allergens, vegetarian: vegetarian).warnings(for: recipe) }
+    /// Своя сборка пользователя для публикации рецепта (первая, не из сообщества).
+    private var ownBuild: Build? {
+        recipe.builds.filter { $0.authorName == nil }.sorted { $0.createdAt < $1.createdAt }.first
+    }
 
     private var session: AuthSession { .shared }
     private var client: RecipeSocialClient? { RecipeSocialClient.fromSettings() }
@@ -51,6 +63,29 @@ struct RecipeDetailView: View {
                     Label("Ваш рецепт", systemImage: "person.crop.circle")
                         .foregroundStyle(.secondary)
                 }
+                if !recipe.steps.isEmpty {
+                    Button { cooking = true } label: {
+                        Label("Начать готовить", systemImage: "flame")
+                    }
+                    .buttonStyle(AntButtonStyle(kind: .primary))
+                    .listRowBackground(Color.clear)
+                    .listRowInsets(EdgeInsets(top: 6, leading: 0, bottom: 6, trailing: 0))
+                }
+            }
+
+            if !warnings.isEmpty {
+                Section {
+                    VStack(alignment: .leading, spacing: 6) {
+                        Label("Не подходит по вашему профилю", systemImage: "exclamationmark.triangle.fill")
+                            .font(.subheadline.weight(.semibold))
+                            .foregroundStyle(Ant.orange.text)
+                        ForEach(warnings, id: \.self) { w in
+                            Text("• " + w).font(.footnote).foregroundStyle(Ant.text)
+                        }
+                    }
+                    .padding(.vertical, 4)
+                    .listRowBackground(Ant.orange.bg)
+                }
             }
 
             Section {
@@ -63,21 +98,35 @@ struct RecipeDetailView: View {
             }
 
             Section("Ингредиенты") {
+                Stepper(value: Binding(get: { servings }, set: { servingsChoice = $0 }), in: 1...30) {
+                    HStack {
+                        Text("Порций: \(servings)").font(.body.weight(.medium))
+                        if servings != recipe.servings {
+                            AntTag(text: "в рецепте \(recipe.servings)", palette: Ant.geekblue)
+                        }
+                    }
+                }
+                .accessibilityIdentifier("servings-stepper")
                 ForEach(recipe.sortedIngredients) { ingredient in
                     HStack(alignment: .firstTextBaseline) {
                         VStack(alignment: .leading, spacing: 2) {
                             Text(ingredient.title)
                             if let p = NutritionCalculator.typicalProduct(for: ingredient, in: products),
-                               let n = NutritionCalculator.nutrition(of: p, amount: ingredient.amount, unit: ingredient.unit) {
+                               let n = NutritionCalculator.nutrition(of: p, amount: ingredient.scaledAmount(servings: servings),
+                                                                     unit: ingredient.unit) {
                                 Text("≈ \(Int(n.kcal.rounded())) ккал · Б \(Int(n.protein.rounded())) · Ж \(Int(n.fat.rounded())) · У \(Int(n.carbs.rounded()))")
                                     .font(.caption2.monospacedDigit())
                                     .foregroundStyle(.secondary)
                             }
                         }
                         Spacer()
-                        Text(ingredient.amountText).foregroundStyle(.secondary)
+                        Text(ingredient.amountText(servings: servings))
+                            .foregroundStyle(.secondary)
+                            .contentTransition(.numericText())
+                            .animation(.snappy, value: servings)
                     }
                 }
+                AddToShoppingListButton { ShoppingList.entries(for: recipe, servings: servings) }
             }
 
             Section {
@@ -112,11 +161,33 @@ struct RecipeDetailView: View {
                 }
             }
 
+            if recipe.isUserCreated {
+                Section {
+                    if let build = ownBuild {
+                        if build.isPublished {
+                            Label("Рецепт опубликован в сообществе", systemImage: "checkmark.seal.fill")
+                                .foregroundStyle(Ant.success)
+                        }
+                        Button { publishing = build } label: {
+                            Label(build.isPublished ? "Обновить публикацию" : "Опубликовать рецепт",
+                                  systemImage: "globe")
+                        }
+                    } else {
+                        Text("Соберите продукты — рецепт публикуется вместе с вашим набором.")
+                            .font(.footnote).foregroundStyle(.secondary)
+                    }
+                } header: {
+                    Text("Поделиться рецептом")
+                } footer: {
+                    Text("Рецепт появится в «Сообществе» → «Рецепты». Другие смогут сохранить его, собрать свои продукты и оценить. Фото к шагам остаются на вашем телефоне.")
+                }
+            }
+
             CommunityBuildsSection(recipeId: recipe.id)
 
             if !recipe.steps.isEmpty {
                 Section("Приготовление") {
-                    AntSteps(steps: recipe.steps)
+                    AntSteps(steps: recipe.steps, recipeId: recipe.isUserCreated ? recipe.id : nil)
                         .padding(.vertical, 6)
                 }
             }
@@ -156,11 +227,18 @@ struct RecipeDetailView: View {
             }
         }
         .sheet(isPresented: $isCreatingBuild) {
-            BuildEditorView(recipe: recipe)
+            BuildEditorView(recipe: recipe, servings: servings)
+        }
+        .sheet(item: $publishing) { build in
+            PublishBuildView(build: build) { _ in }
+        }
+        .fullScreenCover(isPresented: $cooking) {
+            CookingModeView(recipe: recipe, servings: servings)
         }
         .confirmationDialog("Удалить рецепт и все его сборки?", isPresented: $confirmDelete,
                             titleVisibility: .visible) {
             Button("Удалить", role: .destructive) {
+                StepPhotoStore.deleteAll(recipeId: recipe.id)
                 context.delete(recipe)
                 try? context.save()
                 dismiss()

@@ -26,18 +26,26 @@ struct BuildDetailView: View {
 
             if let recipe = build.recipe {
                 Section("Продукты") {
+                    Stepper(value: Binding(get: { build.effectiveServings },
+                                           set: { build.servings = $0 == recipe.servings ? nil : $0
+                                                  try? context.save()
+                                                  PriceWatchClient.resyncIfWatched(build) }),
+                            in: 1...30) {
+                        Text("Порций: \(build.effectiveServings)").font(.body.weight(.medium))
+                    }
                     ForEach(recipe.sortedIngredients) { ingredient in
                         let product = build.product(for: ingredient)
+                        let amount = ingredient.scaledAmount(servings: build.effectiveServings)
                         HStack(alignment: .firstTextBaseline) {
                             VStack(alignment: .leading, spacing: 2) {
                                 Text(product?.displayName ?? "—")
-                                Text("\(ingredient.title), \(ingredient.amountText)")
+                                Text("\(ingredient.title), \(ingredient.unit.format(amount))")
                                     .font(.caption)
                                     .foregroundStyle(.secondary)
                             }
                             Spacer()
                             if let product,
-                               let n = NutritionCalculator.nutrition(of: product, amount: ingredient.amount, unit: ingredient.unit) {
+                               let n = NutritionCalculator.nutrition(of: product, amount: amount, unit: ingredient.unit) {
                                 VStack(alignment: .trailing, spacing: 2) {
                                     Text("\(Int(n.kcal.rounded())) ккал").font(.footnote.monospacedDigit())
                                     Text("Б \(Int(n.protein.rounded())) · Ж \(Int(n.fat.rounded())) · У \(Int(n.carbs.rounded()))")
@@ -64,6 +72,7 @@ struct BuildDetailView: View {
                 } label: {
                     Label("Где купить дешевле", systemImage: "cart")
                 }
+                AddToShoppingListButton { ShoppingList.entries(for: build) }
                 ShareLink(item: ShareText.build(build), subject: Text(build.name)) {
                     Label("Отправить список покупок", systemImage: "paperplane")
                 }

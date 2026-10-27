@@ -1,3 +1,4 @@
+import PhotosUI
 import SwiftUI
 import SwiftData
 
@@ -30,6 +31,14 @@ struct RecipeEditorView: View {
     @State private var servings = 2
     @State private var stepsText = ""
     @State private var drafts: [IngredientDraft] = [IngredientDraft()]
+    @State private var rubric = "main"
+    @State private var cookMinutes = 30
+    /// Необязательные фото к шагам: номер шага → JPEG.
+    @State private var stepPhotos: [Int: Data] = [:]
+
+    private var steps: [String] {
+        stepsText.split(whereSeparator: \.isNewline).map { String($0).trimmed }.filter { !$0.isEmpty }
+    }
 
     private var categories: [(id: String, title: String)] {
         CategoryCatalog.titles(ingredients: allIngredients, products: products)
@@ -47,6 +56,10 @@ struct RecipeEditorView: View {
                     TextField("Коротко о блюде", text: $summary, axis: .vertical)
                         .lineLimit(2...4)
                     Stepper("Порций: \(servings)", value: $servings, in: 1...20)
+                    Picker("Рубрика", selection: $rubric) {
+                        ForEach(Rubric.all) { Text($0.title).tag($0.id) }
+                    }
+                    Stepper("Время: \(cookMinutes) мин", value: $cookMinutes, in: 5...600, step: 5)
                 }
 
                 Section {
@@ -77,7 +90,55 @@ struct RecipeEditorView: View {
                 } header: {
                     Text("Приготовление")
                 } footer: {
-                    Text("Каждый шаг — с новой строки.")
+                    Text("Каждый шаг — с новой строки. Время в шаге («варите 20 минут») станет таймером в режиме готовки.")
+                }
+
+                if !steps.isEmpty {
+                    Section {
+                        ForEach(Array(steps.enumerated()), id: \.offset) { index, step in
+                            HStack(spacing: 12) {
+                                if let data = stepPhotos[index], let image = UIImage(data: data) {
+                                    Image(uiImage: image).resizable().scaledToFill()
+                                        .frame(width: 52, height: 52)
+                                        .clipShape(RoundedRectangle(cornerRadius: Ant.radius, style: .continuous))
+                                } else {
+                                    RoundedRectangle(cornerRadius: Ant.radius, style: .continuous)
+                                        .fill(Ant.fill)
+                                        .frame(width: 52, height: 52)
+                                        .overlay(Image(systemName: "camera").foregroundStyle(Ant.textTertiary))
+                                }
+                                VStack(alignment: .leading, spacing: 2) {
+                                    Text("Шаг \(index + 1)").font(.caption).foregroundStyle(.secondary)
+                                    Text(step).font(.subheadline).lineLimit(2)
+                                }
+                                Spacer()
+                                if stepPhotos[index] != nil {
+                                    Button(role: .destructive) { stepPhotos[index] = nil } label: {
+                                        Image(systemName: "xmark.circle.fill")
+                                    }
+                                    .buttonStyle(.borderless)
+                                    .accessibilityLabel("Убрать фото шага \(index + 1)")
+                                }
+                                PhotosPicker(selection: Binding(get: { nil }, set: { item in
+                                    guard let item else { return }
+                                    Task {
+                                        if let data = try? await item.loadTransferable(type: Data.self),
+                                           let jpeg = PhotoPreparation.jpeg(from: data, maxSide: 1600) {
+                                            stepPhotos[index] = jpeg
+                                        }
+                                    }
+                                }), matching: .images) {
+                                    Image(systemName: stepPhotos[index] == nil ? "plus.circle" : "arrow.triangle.2.circlepath")
+                                }
+                                .buttonStyle(.borderless)
+                                .accessibilityLabel("Фото к шагу \(index + 1)")
+                            }
+                        }
+                    } header: {
+                        Text("Фото к шагам")
+                    } footer: {
+                        Text("Необязательно. Фото хранятся на вашем телефоне и видны в рецепте и в режиме готовки.")
+                    }
                 }
             }
             .navigationTitle("Новый рецепт")
@@ -98,11 +159,16 @@ struct RecipeEditorView: View {
 
     private func save() {
         let recipeId = "user-\(UUID().uuidString.lowercased())"
-        let steps = stepsText.split(whereSeparator: \.isNewline).map { String($0).trimmed }.filter { !$0.isEmpty }
+        let steps = self.steps
         let recipe = Recipe(id: recipeId, title: title.trimmed, summary: summary.trimmed,
                             servings: servings, steps: steps)
         recipe.isUserCreated = true
+        recipe.rubric = rubric
+        recipe.cookMinutes = cookMinutes
         context.insert(recipe)
+        for (index, data) in stepPhotos where index < steps.count {
+            try? StepPhotoStore.save(data, recipeId: recipeId, step: index)
+        }
 
         let build = Build(name: "Моя сборка", recipe: recipe)
         context.insert(build)

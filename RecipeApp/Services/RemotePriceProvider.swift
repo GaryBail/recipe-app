@@ -121,6 +121,23 @@ struct RemotePriceProvider: PriceProvider {
 
     func cartDeepLink(for quote: CartQuote) -> URL? { nil }
 
+    struct CartItemDTO: Encodable { let sku: String; let quantity: Double }
+    struct CartLinkRequest: Encodable { let store: String; let items: [CartItemDTO] }
+    struct CartLinkResponse: Decodable { let url: String }
+
+    func cartLink(for quote: CartQuote) async throws -> URL? {
+        guard CartTransfer.stores.contains(quote.store.id) else { return nil }
+        let items = CartTransfer.items(for: quote).map { CartItemDTO(sku: $0.sku, quantity: $0.quantity) }
+        guard !items.isEmpty else { return nil }
+        var request = URLRequest(url: baseURL.appendingPathComponent("cart-link"))
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = try JSONEncoder().encode(CartLinkRequest(store: quote.store.id, items: items))
+        request.timeoutInterval = 30
+        let response = try JSONDecoder().decode(CartLinkResponse.self, from: try await load(request))
+        return URL(string: response.url)
+    }
+
     // MARK: - Helpers
 
     /// "Спагетти №5 · Barilla" → "Спагетти №5 Barilla"
@@ -138,7 +155,7 @@ struct RemotePriceProvider: PriceProvider {
                                            packageAmount: o.packageAmount,
                                            unit: MeasureUnit(rawValue: o.unit) ?? .pieces,
                                            inStock: o.inStock, title: o.title,
-                                           isWeighted: o.isWeighted)
+                                           isWeighted: o.isWeighted, sku: o.sku)
         }
         return result
     }

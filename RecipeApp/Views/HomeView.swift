@@ -8,6 +8,8 @@ import SwiftUI
 final class HomeModel {
     private(set) var popular: [PopularDTO] = []
     private(set) var covers: [String: PhotoDTO] = [:]
+    /// Популярное за 7 дней — для подборки «Хиты недели».
+    private(set) var weekPopular: [PopularDTO] = []
     private var client: RecipeSocialClient? { RecipeSocialClient.fromSettings() }
 
     func load(recipeIds: [String]) async {
@@ -17,6 +19,7 @@ final class HomeModel {
             return
         }
         popular = (try? await client.popular(limit: 10)) ?? []
+        weekPopular = (try? await client.popular(limit: 10, days: 7)) ?? []
         covers = (try? await client.covers(for: recipeIds)) ?? covers
     }
 
@@ -36,6 +39,11 @@ struct HomeView: View {
     @State private var search = ""
     @State private var rubric: String? = nil
     @State private var showNewRecipe = false
+    @State private var filters: Set<RecipeFilter> = []
+    @AppStorage(DietProfile.allergensKey) private var allergens = ""
+    @AppStorage(DietProfile.vegetarianKey) private var vegetarian = false
+
+    private var profile: DietProfile { DietProfile(stored: allergens, vegetarian: vegetarian) }
 
     private var myRecipes: [Recipe] { recipes.filter(\.isUserCreated) }
 
@@ -49,11 +57,13 @@ struct HomeView: View {
 
     private var filtered: [Recipe] {
         let query = search.trimmed.lowercased()
+        let profile = profile
         return recipes.filter { recipe in
             (rubric == nil || recipe.rubric == rubric)
                 && (query.isEmpty
                     || recipe.title.lowercased().contains(query)
                     || recipe.ingredients.contains { $0.title.lowercased().contains(query) })
+                && filters.allSatisfy { $0.matches(recipe, kcalPerServing: kcal(recipe), profile: profile) }
         }
     }
 
@@ -71,7 +81,9 @@ struct HomeView: View {
                     if search.isEmpty {
                         hero
                         popularSection
+                        collectionsSection
                         rubricChips
+                        filterChips
                     }
                     if search.isEmpty && rubric == nil && !myRecipes.isEmpty {
                         grid(title: "Мои рецепты", items: myRecipes)
@@ -103,8 +115,9 @@ struct HomeView: View {
 
     private var gridTitle: String {
         if !search.isEmpty { return filtered.isEmpty ? "Ничего не нашлось" : "Найдено" }
-        if let rubric, let r = Rubric.named(rubric) { return r.title }
-        return "Все рецепты"
+        if filtered.isEmpty { return "Ничего не подошло — снимите часть фильтров" }
+        let base = rubric.flatMap { Rubric.named($0)?.title } ?? "Все рецепты"
+        return filters.isEmpty ? base : "\(base): \(filtered.count)"
     }
 
     /// Баннер: «аврора» на фоне, заголовок проявляется по словам, счётчики добегают.
@@ -121,6 +134,18 @@ struct HomeView: View {
             Text("Ваши любимые рецепты и продукты в одной корзине")
                 .font(.footnote)
                 .foregroundStyle(.white.opacity(0.85))
+            NavigationLink {
+                FridgeView()
+            } label: {
+                Label("Что приготовить из того, что есть?", systemImage: "refrigerator")
+                    .font(.subheadline.weight(.semibold))
+                    .padding(.horizontal, 12).padding(.vertical, 8)
+                    .frame(maxWidth: .infinity)
+                    .foregroundStyle(Ant.primary)
+                    .background(.white, in: RoundedRectangle(cornerRadius: Ant.radiusLG, style: .continuous))
+            }
+            .buttonStyle(AntPressStyle())
+            .padding(.top, 4)
         }
         .padding(Ant.padding)
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -179,6 +204,48 @@ struct HomeView: View {
                 ForEach(Rubric.all) { r in
                     chip(title: r.title, symbol: r.symbol, icon: r.icon, selected: rubric == r.id) {
                         rubric = rubric == r.id ? nil : r.id
+                    }
+                }
+            }
+            .padding(.vertical, 2)
+        }
+        .scrollClipDisabled()
+    }
+
+    /// Подборки: хиты недели, сезонная, быстрые, постные, на всю семью.
+    private var collectionsSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            AntSectionHeader(title: "Подборки")
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 12) {
+                    ForEach(Array(RecipeCollection.all().enumerated()), id: \.element.id) { index, collection in
+                        NavigationLink {
+                            CollectionView(collection: collection, popularIds: model.weekPopular.map(\.recipeId))
+                        } label: {
+                            CollectionCard(collection: collection,
+                                           count: collection.recipes(from: recipes,
+                                                                     popularIds: model.weekPopular.map(\.recipeId)).count)
+                        }
+                        .buttonStyle(AntPressStyle())
+                        .appear(index: index)
+                    }
+                }
+                .padding(.vertical, 2)
+            }
+            .scrollClipDisabled()
+        }
+    }
+
+    private var filterChips: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: 8) {
+                ForEach(RecipeFilter.allCases.filter { $0 != .safe || !profile.isEmpty }) { f in
+                    AntCheckableTag(title: f.title, selected: filters.contains(f)) {
+                        Image(systemName: f.symbol)
+                    } action: {
+                        withAnimation(.snappy) {
+                            if filters.contains(f) { filters.remove(f) } else { filters.insert(f) }
+                        }
                     }
                 }
             }

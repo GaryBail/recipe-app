@@ -80,9 +80,37 @@ final class Ingredient {
 
     var unit: MeasureUnit { MeasureUnit(rawValue: unitRaw) ?? .pieces }
 
-    var amountText: String {
-        let value = amount.rounded() == amount ? String(Int(amount)) : String(amount)
-        return "\(value) \(unit.short)"
+    var amountText: String { unit.format(amount) }
+
+    /// Количество с учётом выбранного числа порций.
+    func amountText(servings: Int) -> String {
+        unit.format(scaledAmount(servings: servings))
+    }
+
+    func scaledAmount(servings: Int) -> Double {
+        guard let base = recipe?.servings, base > 0, servings > 0 else { return amount }
+        return amount * Double(servings) / Double(base)
+    }
+}
+
+extension MeasureUnit {
+    /// «250 г», «1,5 шт», «1,25 кг» — без лишних нулей. Штуки округляем до половинок.
+    func format(_ amount: Double) -> String {
+        switch self {
+        case .pieces:
+            return "\(Self.number(max(0.5, (amount * 2).rounded() / 2))) шт"
+        case .grams:
+            return amount >= 1000 ? "\(Self.number((amount / 10).rounded() / 100)) кг" : "\(Self.number(Self.small(amount))) г"
+        case .milliliters:
+            return amount >= 1000 ? "\(Self.number((amount / 10).rounded() / 100)) л" : "\(Self.number(Self.small(amount))) мл"
+        }
+    }
+
+    private static func small(_ x: Double) -> Double { x >= 10 ? x.rounded() : (x * 10).rounded() / 10 }
+
+    static func number(_ x: Double) -> String {
+        if x.rounded() == x { return String(Int(x)) }
+        return x.formatted(.number.precision(.fractionLength(0...2)).locale(Locale(identifier: "ru_RU")))
     }
 }
 
@@ -134,6 +162,11 @@ final class Build {
     var sourceRemoteId: String? = nil
     /// Включено слежение за ценой (подписка на сервере).
     var isWatched: Bool = false
+    /// Сколько порций готовим по этой сборке (nil — как в рецепте).
+    var servings: Int? = nil
+
+    /// Порции сборки; количества продуктов пересчитываются пропорционально.
+    var effectiveServings: Int { servings ?? recipe?.servings ?? 1 }
     var recipe: Recipe?
 
     @Relationship(deleteRule: .cascade, inverse: \BuildItem.build)
@@ -166,7 +199,7 @@ final class Build {
                 productId: product.id,
                 barcode: product.barcode,
                 title: product.displayName,
-                requiredAmount: ingredient.amount,
+                requiredAmount: ingredient.scaledAmount(servings: effectiveServings),
                 unit: ingredient.unit
             )
         }
@@ -199,4 +232,37 @@ enum CategoryCatalog {
         return map.map { (id: $0.key, title: $0.value) }
             .sorted { $0.title.localizedCompare($1.title) == .orderedAscending }
     }
+}
+
+
+/// Строка общего списка покупок. Собирается из сборок и рецептов; одинаковые продукты складываются.
+@Model
+final class ShoppingItem {
+    @Attribute(.unique) var id: UUID
+    /// Что купить: конкретный продукт («Пармезан · Galbani») или ингредиент («Твёрдый сыр»).
+    var title: String
+    var categoryId: String
+    var productId: String?
+    var amount: Double
+    var unitRaw: String
+    var isChecked: Bool = false
+    var createdAt: Date
+    /// Для каких рецептов («Борщ», «Плов»).
+    var sources: [String] = []
+
+    init(title: String, categoryId: String, productId: String?, amount: Double, unit: MeasureUnit, sources: [String]) {
+        self.id = UUID()
+        self.title = title
+        self.categoryId = categoryId
+        self.productId = productId
+        self.amount = amount
+        self.unitRaw = unit.rawValue
+        self.createdAt = .now
+        self.sources = sources
+    }
+
+    var unit: MeasureUnit { MeasureUnit(rawValue: unitRaw) ?? .pieces }
+    var amountText: String { unit.format(amount) }
+    /// Ключ для объединения одинаковых позиций.
+    var mergeKey: String { ShoppingList.mergeKey(productId: productId, categoryId: categoryId, unit: unit) }
 }

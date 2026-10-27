@@ -14,7 +14,8 @@ struct RecipeAppApp: App {
             Ingredient.self,
             Product.self,
             Build.self,
-            BuildItem.self
+            BuildItem.self,
+            ShoppingItem.self
         ])
     }
 }

@@ -17,6 +17,9 @@ struct CommunityRecipeDTO: Codable, Hashable, Sendable {
     let servings: Int
     let steps: [String]
     let ingredients: [CommunityIngredientDTO]
+    /// Есть у своих рецептов пользователей (новые клиенты присылают).
+    var rubric: String? = nil
+    var cookMinutes: Int? = nil
 }
 
 struct CommunityProductDTO: Codable, Hashable, Sendable {
@@ -71,6 +74,31 @@ struct CommunityBuildDTO: Codable, Identifiable, Hashable, Sendable {
     }
 }
 
+/// Свой рецепт пользователя в ленте сообщества.
+struct CommunityRecipeEntryDTO: Codable, Identifiable, Hashable, Sendable {
+    let recipe: CommunityRecipeDTO
+    let authorId: String
+    let authorName: String
+    let createdAt: String
+    let buildsCount: Int
+    let ratingAvg: Double?
+    let ratingCount: Int
+    let bestBuildId: String
+
+    var id: String { recipe.id }
+}
+
+/// Что чаще выбирают для ингредиентов рецепта.
+struct ChoicesDTO: Codable, Sendable {
+    struct Choice: Codable, Hashable, Sendable {
+        let product: CommunityProductDTO
+        let count: Int
+    }
+    let recipeId: String
+    let builds: Int
+    let ingredients: [String: [Choice]]
+}
+
 struct CommunityRatingDTO: Codable, Hashable, Sendable {
     let userId: String
     let authorName: String
@@ -103,6 +131,14 @@ struct CommunityClient: Sendable {
         if let recipeId { query.append(URLQueryItem(name: "recipe_id", value: recipeId)) }
         if mine { query.append(URLQueryItem(name: "mine", value: "true")) }
         return try await api.send("GET", "community/builds", query: query)
+    }
+
+    func recipes(sort: Sort = .top) async throws -> [CommunityRecipeEntryDTO] {
+        try await api.send("GET", "community/recipes", query: [URLQueryItem(name: "sort", value: sort.rawValue)])
+    }
+
+    func choices(recipeId: String) async throws -> ChoicesDTO {
+        try await api.send("GET", "community/recipes/\(recipeId)/choices")
     }
 
     func build(id: String) async throws -> CommunityBuildDTO {

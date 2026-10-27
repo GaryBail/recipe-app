@@ -60,6 +60,31 @@ struct CommunityBuildsSection: View {
     }
 }
 
+struct CommunityRecipeRow: View {
+    let entry: CommunityRecipeEntryDTO
+
+    var body: some View {
+        HStack(spacing: 12) {
+            RecipeImage(url: nil, rubric: entry.recipe.rubric ?? "", icon: "")
+                .frame(width: 56, height: 56)
+                .clipShape(RoundedRectangle(cornerRadius: Ant.radius, style: .continuous))
+            VStack(alignment: .leading, spacing: 4) {
+                Text(entry.recipe.title).font(.headline)
+                if !entry.recipe.summary.isEmpty {
+                    Text(entry.recipe.summary).font(.caption).foregroundStyle(.secondary).lineLimit(2)
+                }
+                HStack(spacing: 6) {
+                    StarsView(value: entry.ratingAvg ?? 0)
+                    Text("\(entry.buildsCount) сб. · \(entry.authorName)")
+                }
+                .font(.caption)
+                .foregroundStyle(.secondary)
+            }
+        }
+        .padding(.vertical, 2)
+    }
+}
+
 struct CommunityBuildRow: View {
     let build: CommunityBuildDTO
     var isRecommended = false
@@ -96,22 +121,62 @@ struct CommunityBuildRow: View {
 }
 
 /// Лента сборок: все рецепты или один, лучшие или новые.
+/// На вкладке «Сообщество» есть переключатель на рецепты пользователей.
 struct CommunityFeedView: View {
     var recipeId: String? = nil
 
+    enum Kind: String, CaseIterable, Identifiable {
+        case builds, recipes
+        var id: String { rawValue }
+        var title: String { self == .builds ? "Сборки" : "Рецепты" }
+    }
+
+    @State private var kind: Kind = .builds
     @State private var sort: CommunityClient.Sort = .top
     @State private var builds: [CommunityBuildDTO] = []
+    @State private var recipes: [CommunityRecipeEntryDTO] = []
     @State private var errorText: String?
     @State private var isLoading = false
 
     var body: some View {
         List {
             Section {
+                if recipeId == nil {
+                    Picker("Что показать", selection: $kind) {
+                        ForEach(Kind.allCases) { Text($0.title).tag($0) }
+                    }
+                    .pickerStyle(.segmented)
+                }
                 Picker("Сортировка", selection: $sort) {
                     ForEach(CommunityClient.Sort.allCases) { Text($0.title).tag($0) }
                 }
                 .pickerStyle(.segmented)
             }
+            if kind == .recipes {
+                Section {
+                    if CommunityClient.fromSettings() == nil {
+                        Text("Укажите адрес сервера в настройках.").foregroundStyle(.secondary)
+                    } else if let errorText {
+                        Text(errorText).foregroundStyle(.red)
+                    } else if isLoading && recipes.isEmpty {
+                        HStack { Spacer(); ProgressView(); Spacer() }
+                    } else if recipes.isEmpty {
+                        Text("Пока никто не поделился своим рецептом. Создайте рецепт (＋ на главной) и опубликуйте его.")
+                            .foregroundStyle(.secondary)
+                    }
+                    ForEach(recipes) { entry in
+                        NavigationLink {
+                            CommunityBuildLoader(buildId: entry.bestBuildId)
+                        } label: {
+                            CommunityRecipeRow(entry: entry)
+                        }
+                    }
+                } footer: {
+                    if !recipes.isEmpty {
+                        Text("Откройте рецепт, чтобы сохранить его к себе вместе с лучшим набором продуктов.")
+                    }
+                }
+            } else {
             Section {
                 if CommunityClient.fromSettings() == nil {
                     Text("Укажите адрес сервера в настройках.").foregroundStyle(.secondary)
@@ -130,10 +195,11 @@ struct CommunityFeedView: View {
                     }
                 }
             }
+            }
         }
         .navigationTitle("Сообщество")
         .refreshable { await load() }
-        .task(id: sort) { await load() }
+        .task(id: "\(sort.rawValue)|\(kind.rawValue)") { await load() }
     }
 
     private func load() async {
@@ -141,7 +207,11 @@ struct CommunityFeedView: View {
         isLoading = true
         defer { isLoading = false }
         do {
-            builds = try await client.builds(recipeId: recipeId, sort: sort)
+            if kind == .recipes {
+                recipes = try await client.recipes(sort: sort)
+            } else {
+                builds = try await client.builds(recipeId: recipeId, sort: sort)
+            }
             errorText = nil
         } catch {
             errorText = error.localizedDescription

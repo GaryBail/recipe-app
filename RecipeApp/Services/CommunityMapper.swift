@@ -23,7 +23,9 @@ enum CommunityMapper {
             ingredients: ingredients.map {
                 CommunityIngredientDTO(id: $0.id, title: $0.title, categoryId: $0.categoryId,
                                        amount: $0.amount, unit: $0.unitRaw)
-            })
+            },
+            rubric: recipe.rubric.isEmpty ? nil : recipe.rubric,
+            cookMinutes: recipe.cookMinutes > 0 ? recipe.cookMinutes : nil)
         return PublishBuildRequest(name: build.name, recipe: recipeDTO, items: items)
     }
 
@@ -76,6 +78,8 @@ enum CommunityMapper {
     private static func createRecipe(_ dto: CommunityRecipeDTO, in context: ModelContext) -> Recipe {
         let recipe = Recipe(id: dto.id, title: dto.title, summary: dto.summary,
                             servings: dto.servings, steps: dto.steps)
+        recipe.rubric = dto.rubric ?? ""
+        recipe.cookMinutes = dto.cookMinutes ?? 0
         context.insert(recipe)
         for (index, i) in dto.ingredients.enumerated() {
             let ingredient = Ingredient(id: i.id, title: i.title, categoryId: i.categoryId, amount: i.amount,

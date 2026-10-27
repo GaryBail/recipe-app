@@ -12,6 +12,8 @@ struct BuildEditorView: View {
 
     let recipe: Recipe
     let mode: Mode
+    /// Порции новой сборки (с экрана рецепта).
+    var servings: Int? = nil
 
     @Environment(\.modelContext) private var context
     @Environment(\.dismiss) private var dismiss
@@ -21,10 +23,12 @@ struct BuildEditorView: View {
     /// ingredientId → productId
     @State private var selection: [String: String]
     @State private var addingProductFor: Ingredient?
+    @State private var choices: ChoicesDTO?
 
-    init(recipe: Recipe, mode: Mode = .new) {
+    init(recipe: Recipe, mode: Mode = .new, servings: Int? = nil) {
         self.recipe = recipe
         self.mode = mode
+        self.servings = servings
         switch mode {
         case .new:
             _name = State(initialValue: "")
@@ -61,6 +65,18 @@ struct BuildEditorView: View {
                     TextField(defaultName, text: $name)
                 }
 
+                if let choices, choices.builds > 0 {
+                    Section {
+                        Button {
+                            withAnimation(.snappy) { applyPopular() }
+                        } label: {
+                            Label("Выбрать как большинство", systemImage: "person.3.sequence.fill")
+                        }
+                    } footer: {
+                        Text("По \(choices.builds) \(buildsWord(choices.builds)) сообщества: для каждого ингредиента — самый частый выбор.")
+                    }
+                }
+
                 Section {
                     ForEach(ingredients) { ingredient in
                         VStack(alignment: .leading, spacing: 6) {
@@ -78,6 +94,20 @@ struct BuildEditorView: View {
                                 }
                             }
                             .accessibilityIdentifier("picker-\(ingredient.id)")
+                            if let top = choices?.ingredients[ingredient.id]?.first {
+                                Button {
+                                    withAnimation(.snappy) { select(top.product, for: ingredient) }
+                                } label: {
+                                    HStack(spacing: 4) {
+                                        Image(systemName: "star.circle.fill")
+                                        Text("Чаще выбирают: \(top.product.displayName) · \(top.count)")
+                                            .lineLimit(1)
+                                    }
+                                    .font(.caption)
+                                    .foregroundStyle(selection[ingredient.id] == top.product.id ? Ant.success : Ant.primary)
+                                }
+                                .buttonStyle(.borderless)
+                            }
                             Button("Добавить свой продукт…") { addingProductFor = ingredient }
                                 .font(.caption)
                                 .buttonStyle(.borderless)
@@ -103,11 +133,40 @@ struct BuildEditorView: View {
                     Button("Сохранить", action: save).disabled(!isComplete)
                 }
             }
+            .task { await loadChoices() }
             .sheet(item: $addingProductFor) { ingredient in
                 NewProductView(categoryId: ingredient.categoryId, categoryTitle: ingredient.title) { product in
                     selection[ingredient.id] = product.id
                 }
             }
+        }
+    }
+
+    private func loadChoices() async {
+        guard let client = CommunityClient.fromSettings() else { return }
+        choices = try? await client.choices(recipeId: recipe.id)
+    }
+
+    private func buildsWord(_ n: Int) -> String {
+        let mod10 = n % 10, mod100 = n % 100
+        if mod10 == 1 && mod100 != 11 { return "сборке" }
+        return "сборкам"
+    }
+
+    /// Выбор продукта из сообщества: если его нет в каталоге телефона — добавляем.
+    private func select(_ dto: CommunityProductDTO, for ingredient: Ingredient) {
+        if !products.contains(where: { $0.id == dto.id }) {
+            let product = Product(id: dto.id, name: dto.name, brand: dto.brand,
+                                  categoryId: ingredient.categoryId, barcode: dto.barcode)
+            context.insert(product)
+            try? context.save()
+        }
+        selection[ingredient.id] = dto.id
+    }
+
+    private func applyPopular() {
+        for ingredient in ingredients {
+            if let top = choices?.ingredients[ingredient.id]?.first { select(top.product, for: ingredient) }
         }
     }
 
@@ -132,6 +191,8 @@ struct BuildEditorView: View {
             build.items = []
         } else {
             build = Build(name: finalName, recipe: recipe)
+            if case .variant(let source) = mode { build.servings = source.servings }
+            if let servings, servings != recipe.servings { build.servings = servings }
             context.insert(build)
         }
 

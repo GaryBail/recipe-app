@@ -1,6 +1,16 @@
 import SwiftData
 import SwiftUI
 
+/// Вкладка «Покупки» со счётчиком некупленного.
+private struct ShoppingTab: View {
+    @Query(filter: #Predicate<ShoppingItem> { !$0.isChecked }) private var open: [ShoppingItem]
+
+    var body: some View {
+        ShoppingListView()
+            .badge(open.count)
+    }
+}
+
 /// Главная навигация: нижняя панель вкладок.
 struct RootTabView: View {
     private var notifications: NotificationCenterModel { .shared }
@@ -12,6 +22,9 @@ struct RootTabView: View {
 
             FavoritesView()
                 .tabItem { Label("Избранное", systemImage: "heart") }
+
+            ShoppingTab()
+                .tabItem { Label("Покупки", systemImage: "cart") }
 
             NavigationStack {
                 CommunityFeedView()

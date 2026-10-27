@@ -19,6 +19,7 @@ struct CartComparisonView: View {
     @State private var isLoading = false
     @State private var errorText: String?
     @State private var prompt: LaunchPrompt?
+    @State private var preparing: String?
 
     var body: some View {
         List {
@@ -37,16 +38,21 @@ struct CartComparisonView: View {
                     Text("Нет магазинов с доставкой").foregroundStyle(.secondary)
                 } else {
                     ForEach(Array(quotes.enumerated()), id: \.element.id) { index, quote in
-                        Button { choose(quote) } label: {
-                            QuoteRow(quote: quote, isBest: index == 0 && quote.isComplete)
+                        Button { Task { await choose(quote) } } label: {
+                            QuoteRow(quote: quote, isBest: index == 0 && quote.isComplete,
+                                     transfersCart: CartTransfer.stores.contains(quote.store.id))
                         }
                         .buttonStyle(.plain)
+                        .disabled(preparing != nil)
+                        .overlay(alignment: .trailing) {
+                            if preparing == quote.id { ProgressView().padding(.trailing, 4) }
+                        }
                     }
                 }
             } header: {
                 Text("Магазины")
             } footer: {
-                Text("Цены на момент проверки. Перед оплатой сверьте их в магазине.")
+                Text("Цены на момент проверки. Перед оплатой сверьте их в магазине. Во ВкусВилл корзина передаётся целиком, для остальных магазинов копируем список покупок.")
             }
         }
         .navigationTitle("Где дешевле")
@@ -88,7 +94,21 @@ struct CartComparisonView: View {
         }
     }
 
-    private func choose(_ quote: CartQuote) {
+    private func choose(_ quote: CartQuote) async {
+        if CartTransfer.stores.contains(quote.store.id) {
+            preparing = quote.id
+            defer { preparing = nil }
+            do {
+                if let link = try await provider.cartLink(for: quote) {
+                    prompt = LaunchPrompt(title: "Корзина \(quote.store.name) готова",
+                                          message: "Откроем \(quote.store.name) с уже собранной корзиной (\(quote.lines.count) товаров). Останется проверить и оформить заказ.",
+                                          actionTitle: "Открыть корзину", url: link, shoppingList: nil)
+                    return
+                }
+            } catch {
+                errorText = "Не удалось собрать корзину: \(error.localizedDescription)"
+            }
+        }
         let deepLink = provider.cartDeepLink(for: quote)
         let list = deepLink == nil ? StoreLauncher.shoppingList(for: quote) : nil
         let listNote = list == nil ? "" : "\n\nСписок покупок будет скопирован — вставьте его в поиск магазина."
@@ -123,6 +143,7 @@ struct LaunchPrompt {
 private struct QuoteRow: View {
     let quote: CartQuote
     let isBest: Bool
+    var transfersCart = false
 
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
@@ -133,6 +154,9 @@ private struct QuoteRow: View {
                         .font(.caption.bold())
                         .padding(.horizontal, 6).padding(.vertical, 2)
                         .background(.green.opacity(0.2), in: Capsule())
+                }
+                if transfersCart {
+                    AntTag(text: "корзина целиком", palette: Ant.green, systemImage: "cart.fill")
                 }
                 Spacer()
                 Text(quote.total, format: .currency(code: "RUB").precision(.fractionLength(0)))
