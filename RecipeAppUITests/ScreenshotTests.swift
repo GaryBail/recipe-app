@@ -61,6 +61,7 @@ final class ScreenshotTests: XCTestCase {
         }
 
         // 3. Поиск и рецепт: фото-заглушка, КБЖУ, ингредиенты
+        revealSearch()
         let search = app.searchFields.firstMatch
         if search.waitForExistence(timeout: 3) {
             search.tap()
@@ -149,6 +150,7 @@ final class ScreenshotTests: XCTestCase {
 
         // 6b. Режим готовки с таймером
         if tapIfExists(app.tabBars.buttons["Рецепты"]) {
+            revealSearch()
             let search = app.searchFields.firstMatch
             if search.waitForExistence(timeout: 3) {
                 search.tap()
@@ -234,6 +236,15 @@ final class ScreenshotTests: XCTestCase {
         guard element.waitForExistence(timeout: timeout) else { return false }
         element.tap()
         return true
+    }
+
+    /// Главная могла остаться прокрученной — тогда строка поиска спрятана под заголовком.
+    private func revealSearch() {
+        for _ in 0..<6 {
+            let search = app.searchFields.firstMatch
+            if search.exists && search.isHittable { return }
+            app.swipeDown()
+        }
     }
 
     private func backToRoot() {
