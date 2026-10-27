@@ -25,15 +25,21 @@ class FakeAdapter:
         pass
 
 
-def make_client(*adapters):
-    return TestClient(create_app(PriceService(list(adapters))))
+import pytest
+
+
+@pytest.fixture
+def make_client(tmp_path):
+    def factory(*adapters):
+        return TestClient(create_app(PriceService(list(adapters)), db_path=str(tmp_path / "t.db")))
+    return factory
 
 
 CHEESE = Offer(store_id="a", sku="1", title="Сыр Пармезан 200г", price=Decimal("399.90"),
                package_amount=200, unit="g")
 
 
-def test_cities_and_stores():
+def test_cities_and_stores(make_client):
     with make_client(FakeAdapter("a", [CHEESE]), FakeAdapter("b", [], delivers=False)) as client:
         assert any(c["id"] == "msk" for c in client.get("/cities").json())
         stores = client.get("/stores", params={"city": "msk"}).json()
@@ -41,7 +47,7 @@ def test_cities_and_stores():
         assert client.get("/stores", params={"city": "nowhere"}).status_code == 404
 
 
-def test_offers_matches_and_caches():
+def test_offers_matches_and_caches(make_client):
     adapter = FakeAdapter("a", [CHEESE])
     with make_client(adapter) as client:
         body = {"store": "a", "city": "msk", "lines": [
@@ -57,7 +63,7 @@ def test_offers_matches_and_caches():
         assert adapter.search_calls == 2  # второй запрос пришёл из кэша
 
 
-def test_offers_validation():
+def test_offers_validation(make_client):
     with make_client(FakeAdapter("a", [])) as client:
         bad = {"store": "a", "city": "msk", "lines": [
             {"product_id": "x", "query": "Сыр", "required_amount": 0, "unit": "kg"}]}

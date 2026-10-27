@@ -1,5 +1,8 @@
 fastapi>=0.115
 uvicorn[standard]>=0.30
+PyJWT[crypto]>=2.8
+# HTTP/2 для отправки push через APNs
+httpx[http2]>=0.27
 # Неофициальные клиенты магазинов (MIT, Open-Inflation). Зафиксированы на проверенных коммитах,
 # чтобы обновление библиотеки не ломало сервер неожиданно.
 perekrestok-api @ git+https://github.com/Open-Inflation/perekrestok_api@8a02e3585b71f88038f4ec95f312f808696ae6e1

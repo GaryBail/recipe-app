@@ -1,8 +1,7 @@
 """Сообщество: публикация сборок, оценки, жалобы, блокировки, рекомендации.
 
-Хранилище — SQLite (стандартная библиотека). Пользователь пока определяется
-по анонимному идентификатору устройства (заголовок X-User-Id). Для запуска
-в App Store его нужно заменить на Sign in with Apple.
+Хранилище — SQLite (стандартная библиотека). Автор и имя берутся из аккаунта
+пользователя (см. auth.py), а не из тела запроса.
 """
 
 from __future__ import annotations
@@ -57,7 +56,6 @@ class ItemIn(BaseModel):
 
 
 class PublishIn(BaseModel):
-    author_name: str = Field(min_length=1, max_length=50)
     name: str = Field(min_length=1, max_length=100)
     recipe: RecipeIn
     items: list[ItemIn] = Field(min_length=1, max_length=50)
@@ -76,7 +74,6 @@ class PublishIn(BaseModel):
 class RatingIn(BaseModel):
     stars: int = Field(ge=1, le=5)
     comment: str | None = Field(default=None, max_length=500)
-    author_name: str = Field(default="Аноним", min_length=1, max_length=50)
 
 
 class ReportIn(BaseModel):
@@ -94,14 +91,20 @@ def bayesian_score(avg: float | None, count: int) -> float:
     return (PRIOR_MEAN * PRIOR_WEIGHT + total) / (PRIOR_WEIGHT + count)
 
 
+def open_db(path: str) -> sqlite3.Connection:
+    db = sqlite3.connect(path, check_same_thread=False)
+    db.row_factory = sqlite3.Row
+    db.execute("PRAGMA foreign_keys = ON")
+    return db
+
+
 def _now() -> str:
     return datetime.now(timezone.utc).isoformat(timespec="seconds")
 
 
 class CommunityStore:
-    def __init__(self, path: str = "community.db"):
-        self.db = sqlite3.connect(path, check_same_thread=False)
-        self.db.row_factory = sqlite3.Row
+    def __init__(self, db: sqlite3.Connection):
+        self.db = db
         self.db.executescript("""
             PRAGMA foreign_keys = ON;
             CREATE TABLE IF NOT EXISTS builds (
@@ -139,18 +142,29 @@ class CommunityStore:
         """)
         self.db.commit()
 
-    def close(self) -> None:
-        self.db.close()
+    def rename_user(self, user_id: str, name: str) -> None:
+        """Пользователь сменил имя — обновляем подпись под его сборками и отзывами."""
+        self.db.execute("UPDATE builds SET author_name = ? WHERE author_id = ?", (name, user_id))
+        self.db.execute("UPDATE ratings SET author_name = ? WHERE user_id = ?", (name, user_id))
+        self.db.commit()
+
+    def delete_user_content(self, user_id: str) -> None:
+        """Удаление аккаунта: сборки (с их оценками и жалобами), оценки, жалобы и блокировки пользователя."""
+        self.db.execute("DELETE FROM builds WHERE author_id = ?", (user_id,))
+        self.db.execute("DELETE FROM ratings WHERE user_id = ?", (user_id,))
+        self.db.execute("DELETE FROM reports WHERE user_id = ?", (user_id,))
+        self.db.execute("DELETE FROM blocks WHERE user_id = ? OR blocked_id = ?", (user_id, user_id))
+        self.db.commit()
 
     # --- сборки ---
 
-    def publish(self, user_id: str, data: PublishIn) -> dict[str, Any]:
+    def publish(self, user_id: str, author_name: str, data: PublishIn) -> dict[str, Any]:
         build_id = uuid.uuid4().hex
         payload = {"recipe": data.recipe.model_dump(), "items": [i.model_dump() for i in data.items]}
         self.db.execute(
             "INSERT INTO builds (id, author_id, author_name, recipe_id, name, payload, created_at)"
             " VALUES (?, ?, ?, ?, ?, ?, ?)",
-            (build_id, user_id, data.author_name, data.recipe.id, data.name,
+            (build_id, user_id, author_name, data.recipe.id, data.name,
              json.dumps(payload, ensure_ascii=False), _now()),
         )
         self.db.commit()
@@ -211,14 +225,14 @@ class CommunityStore:
 
     # --- оценки ---
 
-    def rate(self, build_id: str, user_id: str, data: RatingIn) -> None:
+    def rate(self, build_id: str, user_id: str, author_name: str, data: RatingIn) -> None:
         self.db.execute(
             "INSERT INTO ratings (build_id, user_id, author_name, stars, comment, created_at)"
             " VALUES (?, ?, ?, ?, ?, ?)"
             " ON CONFLICT(build_id, user_id) DO UPDATE SET"
             " stars = excluded.stars, comment = excluded.comment,"
             " author_name = excluded.author_name, created_at = excluded.created_at",
-            (build_id, user_id, data.author_name, data.stars, data.comment, _now()),
+            (build_id, user_id, author_name, data.stars, data.comment, _now()),
         )
         self.db.commit()
 
