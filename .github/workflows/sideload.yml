@@ -1,4 +1,4 @@
-name: iPhone build (Sideloadly)
+name: iPhone builds (Sideloadly, Appetize)
 
 # Собирает неподписанный .ipa для установки на iPhone с Windows через Sideloadly
 # и выкладывает его в релиз «sideload» (Releases → ВыборВкуса для iPhone).
@@ -74,3 +74,57 @@ jobs:
           5. На iPhone: Настройки → Основные → VPN и управление устройством → разрешите приложение. На iOS 16+ включите «Режим разработчика» (Настройки → Конфиденциальность и безопасность).
 
           С бесплатным Apple ID приложение работает 7 дней, потом установите заново. Вход через Apple и push-уведомления в такой сборке не работают."
+
+  simulator:
+    # Сборка для симулятора — для запуска в браузере через appetize.io (zip с .app).
+    runs-on: macos-15
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install XcodeGen
+        run: brew install xcodegen
+
+      - name: Generate Xcode project
+        run: xcodegen generate
+
+      - name: Build for Simulator
+        shell: bash
+        run: |
+          set +e
+          xcodebuild build \
+            -project RecipeApp.xcodeproj \
+            -scheme RecipeApp \
+            -configuration Release \
+            -sdk iphonesimulator \
+            -destination "generic/platform=iOS Simulator" \
+            -derivedDataPath build \
+            ONLY_ACTIVE_ARCH=NO \
+            CODE_SIGNING_ALLOWED=NO > build.log 2>&1
+          status=$?
+          tail -n 40 build.log
+          exit $status
+
+      - name: Package zip
+        run: |
+          APP=$(find build/Build/Products/Release-iphonesimulator -maxdepth 1 -name "*.app" | head -1)
+          cd "$(dirname "$APP")"
+          zip -qry "$GITHUB_WORKSPACE/VyborVkusa-simulator.zip" "$(basename "$APP")"
+          cd "$GITHUB_WORKSPACE"
+          lipo -info "$APP/$(basename "$APP" .app)" || true
+          echo "::notice::Simulator zip $(du -h VyborVkusa-simulator.zip | cut -f1)"
+
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release delete appetize --yes --cleanup-tag 2>/dev/null || true
+          gh release create appetize VyborVkusa-simulator.zip \
+            --prerelease \
+            --title "ВыборВкуса в браузере (Appetize)" \
+            --notes "Сборка для симулятора из коммита ${GITHUB_SHA::7}, $(date -u '+%d.%m.%Y %H:%M') UTC.
+
+          Как открыть в браузере:
+          1. Скачайте VyborVkusa-simulator.zip ниже (распаковывать не нужно).
+          2. Зайдите на appetize.io, зарегистрируйтесь и нажмите Upload.
+          3. Загрузите zip, платформа iOS. Откроется iPhone прямо в браузере."
