@@ -1,0 +1,40 @@
+# Запуск: docker compose up -d --build   (из папки deploy, рядом должен лежать .env)
+services:
+  api:
+    build: ../backend
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      COMMUNITY_DB: /data/community.db
+      # Сервер стоит за Caddy: реальный IP клиента берём из X-Forwarded-For.
+      # Безопасно, потому что порт api наружу не открыт — только через Caddy.
+      TRUST_PROXY: "1"
+    volumes:
+      - ./data:/data
+      - ./secrets:/secrets:ro
+    shm_size: "1gb"   # браузеру нужна разделяемая память
+    logging:
+      driver: json-file
+      options: { max-size: "10m", max-file: "5" }
+
+  caddy:
+    image: caddy:2.8.4
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      DOMAIN: ${DOMAIN:?Укажите DOMAIN в .env}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - api
+    logging:
+      driver: json-file
+      options: { max-size: "10m", max-file: "5" }
+
+volumes:
+  caddy_data:
+  caddy_config:

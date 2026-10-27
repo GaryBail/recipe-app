@@ -71,7 +71,7 @@ class PyaterochkaAdapter:
 
     info = INFO
 
-    def __init__(self, headless: bool = True):
+    def __init__(self, headless: bool | str = True):
         self._headless = headless
         self._api: Any = None
         self._stores: dict[str, dict[str, Any]] = {}  # city.id -> ответ find_store

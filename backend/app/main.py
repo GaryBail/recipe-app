@@ -84,8 +84,15 @@ def default_adapters() -> list[StoreAdapter]:
     from .stores.perekrestok import PerekrestokAdapter
     from .stores.pyaterochka import PyaterochkaAdapter
 
-    headless = os.getenv("HEADLESS", "1") != "0"
-    return [PerekrestokAdapter(headless=headless), PyaterochkaAdapter(headless=headless)]
+    return [PerekrestokAdapter(headless=headless_mode()), PyaterochkaAdapter(headless=headless_mode())]
+
+
+def headless_mode(raw: str | None = None) -> bool | str:
+    """HEADLESS: 1 — скрытый браузер, 0 — окно (для отладки), virtual — виртуальный экран Xvfb (на сервере)."""
+    raw = (raw if raw is not None else os.getenv("HEADLESS", "1")).strip().lower()
+    if raw == "virtual":
+        return "virtual"
+    return raw != "0"
 
 
 def push_from_env() -> PushSender:

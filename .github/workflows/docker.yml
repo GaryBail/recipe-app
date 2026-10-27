@@ -1,0 +1,55 @@
+name: Docker image
+
+on:
+  push:
+    branches: [main]
+    paths: ["backend/**", "deploy/**", ".github/workflows/docker.yml"]
+  workflow_dispatch:
+
+jobs:
+  build-and-smoke-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build image
+        run: docker build -t recipe-api backend
+
+      - name: Start container
+        run: |
+          docker run -d --name api -p 8000:8000 --shm-size=1g \
+            -e PRICE_WATCH=0 recipe-api
+          for i in $(seq 1 30); do
+            curl -fsS localhost:8000/health && break
+            sleep 2
+          done
+
+      - name: Smoke test API
+        run: |
+          set -e
+          curl -fsS localhost:8000/cities | grep -q msk
+          code=$(curl -s -o /dev/null -w '%{http_code}' -X POST localhost:8000/auth/register \
+            -H 'Content-Type: application/json' \
+            -d '{"email":"ci@example.com","password":"secret123","display_name":"CI"}')
+          test "$code" = 201
+          # без SMTP код подтверждения пишется в лог
+          docker logs api 2>&1 | grep -q "ваш код подтверждения"
+          docker exec api python -c "import sqlite3; print(sqlite3.connect('/data/community.db').execute('select count(*) from users').fetchone())"
+
+      # Пробный поиск на настоящих сайтах. Сервер GitHub находится не в России,
+      # поэтому магазины могут не ответить — это не ошибка сборки.
+      - name: Try real store search (informational)
+        continue-on-error: true
+        run: |
+          for store in pyaterochka perekrestok; do
+            echo "== $store"
+            curl -sS --max-time 240 "localhost:8000/search?store=$store&city=msk&q=%D0%BC%D0%BE%D0%BB%D0%BE%D0%BA%D0%BE" \
+              | head -c 1500 || true
+            echo
+          done
+          docker logs api 2>&1 | tail -n 40
+
+      - name: Logs on failure
+        if: failure()
+        run: docker logs api

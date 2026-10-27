@@ -17,3 +17,6 @@ __pycache__/
 backend/screenshot.png
 backend/*.db
 RecipeApp/RecipeApp.entitlements
+deploy/.env
+deploy/data/
+deploy/secrets/

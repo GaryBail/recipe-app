@@ -1,0 +1,9 @@
+# Caddy сам получает и продлевает HTTPS-сертификат Let's Encrypt для домена из .env.
+{$DOMAIN} {
+	encode gzip
+	request_body {
+		max_size 1MB
+	}
+	header -Server
+	reverse_proxy api:8000
+}
