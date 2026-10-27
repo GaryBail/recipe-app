@@ -47,7 +47,7 @@ jobs:
           status=$?
           tail -n 200 build.log
           # Ошибки компиляции и упавшие тесты — в аннотации, чтобы их было видно без логов.
-          grep -E "(error:|: error|XCTAssert|failed \(|Test Case .* failed)" build.log | sort -u | head -40 | while IFS= read -r line; do
+          grep -E "(\.swift:[0-9]+:([0-9]+:)? error|Test Case .* failed|XCTAssert|TEST FAILED|BUILD FAILED)" build.log | grep -v CoreData | sort -u | head -40 | while IFS= read -r line; do
             echo "::error::${line//%/%25}"
           done
           exit $status
