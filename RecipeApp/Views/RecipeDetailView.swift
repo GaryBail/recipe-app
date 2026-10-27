@@ -16,6 +16,7 @@ struct RecipeDetailView: View {
     @State private var photoItem: PhotosPickerItem?
     @State private var isUploading = false
     @State private var photoMessage: String?
+    @State private var sparks = 0
 
     private var session: AuthSession { .shared }
     private var client: RecipeSocialClient? { RecipeSocialClient.fromSettings() }
@@ -29,18 +30,23 @@ struct RecipeDetailView: View {
             }
 
             Section {
-                if !recipe.summary.isEmpty { Text(recipe.summary) }
-                HStack(spacing: 16) {
-                    Label("\(recipe.servings) порц.", systemImage: "person.2")
+                BlurText(text: recipe.title, font: .title2.weight(.bold), delayPerWord: 0.06)
+                    .foregroundStyle(Ant.text)
+                if !recipe.summary.isEmpty {
+                    Text(recipe.summary).foregroundStyle(Ant.textSecondary)
+                }
+                WrapLayout(spacing: 6, lineSpacing: 6) {
+                    if let r = Rubric.named(recipe.rubric) {
+                        AntTag(text: r.title, palette: Ant.palette(forRubric: r.id))
+                    }
+                    AntTag(text: "\(recipe.servings) порц.", palette: Ant.geekblue, systemImage: "person.2")
                     if recipe.cookMinutes > 0 {
-                        Label("\(recipe.cookMinutes) мин", systemImage: "clock")
+                        AntTag(text: "\(recipe.cookMinutes) мин", palette: Ant.cyan, systemImage: "clock")
                     }
                     if let likes = social?.likes, likes > 0 {
-                        Label("\(likes)", systemImage: "heart")
+                        AntTag(text: "\(likes)", palette: Ant.red, systemImage: "heart.fill")
                     }
                 }
-                .font(.subheadline)
-                .foregroundStyle(.secondary)
                 if recipe.isUserCreated {
                     Label("Ваш рецепт", systemImage: "person.crop.circle")
                         .foregroundStyle(.secondary)
@@ -93,8 +99,11 @@ struct RecipeDetailView: View {
                 Button {
                     isCreatingBuild = true
                 } label: {
-                    Label("Собрать продукты", systemImage: "plus.circle")
+                    Label("Собрать продукты", systemImage: "cart.badge.plus")
                 }
+                .buttonStyle(AntButtonStyle(kind: .primary))
+                .listRowBackground(Color.clear)
+                .listRowInsets(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0))
             } header: {
                 Text("Мои сборки")
             } footer: {
@@ -107,12 +116,8 @@ struct RecipeDetailView: View {
 
             if !recipe.steps.isEmpty {
                 Section("Приготовление") {
-                    ForEach(Array(recipe.steps.enumerated()), id: \.offset) { index, step in
-                        HStack(alignment: .top) {
-                            Text("\(index + 1).").bold()
-                            Text(step)
-                        }
-                    }
+                    AntSteps(steps: recipe.steps)
+                        .padding(.vertical, 6)
                 }
             }
 
@@ -122,6 +127,8 @@ struct RecipeDetailView: View {
                 }
             }
         }
+        .scrollContentBackground(.hidden)
+        .background(Ant.bgLayout)
         .navigationTitle(recipe.title)
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
@@ -135,10 +142,15 @@ struct RecipeDetailView: View {
             }
             ToolbarItem(placement: .topBarTrailing) {
                 Button {
-                    Favorites.toggle(recipe, context: context)
+                    withAnimation(.spring(response: 0.3, dampingFraction: 0.5)) {
+                        Favorites.toggle(recipe, context: context)
+                    }
+                    if recipe.isFavorite { sparks += 1 }
                 } label: {
                     Image(systemName: recipe.isFavorite ? "heart.fill" : "heart")
-                        .foregroundStyle(recipe.isFavorite ? Color.red : Color.accentColor)
+                        .foregroundStyle(recipe.isFavorite ? Ant.red.base : Ant.primary)
+                        .symbolEffect(.bounce, value: recipe.isFavorite)
+                        .clickSpark(trigger: sparks)
                 }
                 .accessibilityLabel(recipe.isFavorite ? "Убрать из избранного" : "В избранное")
             }

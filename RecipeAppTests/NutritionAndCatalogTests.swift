@@ -74,7 +74,7 @@ final class NutritionAndCatalogTests: XCTestCase {
         SeedLoader.sync(context, bundle: appBundle, defaults: defaults)
 
         let recipes = try context.fetch(FetchDescriptor<Recipe>())
-        XCTAssertEqual(recipes.count, 25)  // 24 из каталога + свой
+        XCTAssertEqual(recipes.count, 76)  // 75 из каталога + свой
         let carbonara = try XCTUnwrap(recipes.first { $0.id == "carbonara" })
         XCTAssertEqual(carbonara.title, "Паста карбонара")
         XCTAssertEqual(carbonara.rubric, "main")
@@ -88,7 +88,7 @@ final class NutritionAndCatalogTests: XCTestCase {
 
         // повторный запуск той же версии ничего не дублирует
         SeedLoader.sync(context, bundle: appBundle, defaults: defaults)
-        XCTAssertEqual(try context.fetchCount(FetchDescriptor<Recipe>()), 25)
+        XCTAssertEqual(try context.fetchCount(FetchDescriptor<Recipe>()), 76)
 
         // у всех рецептов каталога КБЖУ считается полностью
         for recipe in recipes where !recipe.isUserCreated {

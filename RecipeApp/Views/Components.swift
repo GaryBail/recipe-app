@@ -64,92 +64,170 @@ struct RecipeImage: View {
     }
 }
 
-/// Карточка рецепта для главной и избранного.
+/// Карточка рецепта в стиле Ant Design Card: обложка сверху, тело с заголовком и тегами.
 struct RecipeCard: View {
     let recipe: Recipe
     let cover: URL?
     let kcalPerServing: Double?
-    var imageHeight: CGFloat = 130
+    var imageHeight: CGFloat = 120
+
+    private var rubric: Rubric? { Rubric.named(recipe.rubric) }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: 0) {
             RecipeImage(url: cover, rubric: recipe.rubric, icon: recipe.icon)
                 .frame(height: imageHeight)
                 .frame(maxWidth: .infinity)
-                .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
+                .clipped()
                 .overlay(alignment: .topTrailing) {
                     if recipe.isFavorite {
                         Image(systemName: "heart.fill")
-                            .font(.footnote.weight(.bold))
-                            .foregroundStyle(.red)
-                            .padding(7)
-                            .background(.white.opacity(0.85), in: Circle())
+                            .font(.caption.weight(.bold))
+                            .foregroundStyle(Ant.red.base)
+                            .padding(6)
+                            .background(Ant.bgContainer.opacity(0.9), in: Circle())
+                            .padding(8)
+                            .transition(.scale.combined(with: .opacity))
+                    }
+                }
+                .overlay(alignment: .topLeading) {
+                    if let rubric {
+                        AntTag(text: rubric.title, palette: Ant.palette(forRubric: rubric.id), bordered: false)
                             .padding(8)
                     }
                 }
-            Text(recipe.title)
-                .font(.subheadline.weight(.semibold))
-                .foregroundStyle(.primary)
-                .lineLimit(2)
-                .multilineTextAlignment(.leading)
-            HStack(spacing: 8) {
-                if recipe.cookMinutes > 0 {
-                    Label("\(recipe.cookMinutes) мин", systemImage: "clock")
+
+            VStack(alignment: .leading, spacing: 6) {
+                Text(recipe.title)
+                    .font(.subheadline.weight(.semibold))
+                    .foregroundStyle(Ant.text)
+                    .lineLimit(2)
+                    .multilineTextAlignment(.leading)
+                HStack(spacing: 10) {
+                    if recipe.cookMinutes > 0 {
+                        Label("\(recipe.cookMinutes) мин", systemImage: "clock")
+                    }
+                    if let kcalPerServing {
+                        Label("\(Int(kcalPerServing.rounded())) ккал", systemImage: "flame")
+                    }
                 }
-                if let kcalPerServing {
-                    Label("\(Int(kcalPerServing.rounded())) ккал", systemImage: "flame")
-                }
+                .font(.caption)
+                .foregroundStyle(Ant.textTertiary)
+                .labelStyle(CompactLabelStyle())
             }
-            .font(.caption)
-            .foregroundStyle(.secondary)
-            .labelStyle(.titleAndIcon)
+            .padding(Ant.paddingSM)
+            .frame(maxWidth: .infinity, alignment: .leading)
         }
+        .background(Ant.bgContainer)
+        .clipShape(RoundedRectangle(cornerRadius: Ant.radiusLG, style: .continuous))
+        .overlay(RoundedRectangle(cornerRadius: Ant.radiusLG, style: .continuous).strokeBorder(Ant.borderSecondary))
+        .antShadow()
         .contentShape(Rectangle())
         .accessibilityElement(children: .combine)
     }
 }
 
-/// КБЖУ: плитки на порцию и строки для всего блюда и 100 г.
+struct CompactLabelStyle: LabelStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        HStack(spacing: 3) {
+            configuration.icon.imageScale(.small)
+            configuration.title
+        }
+    }
+}
+
+/// КБЖУ как Ant Statistic: числа «добегают» (CountUp), под ними — доли БЖУ (Progress).
 struct NutritionBlock: View {
     let summary: NutritionSummary
     let servings: Int
 
     var body: some View {
         let portion = summary.perServing(servings)
-        VStack(alignment: .leading, spacing: 10) {
+        VStack(alignment: .leading, spacing: 12) {
             HStack(spacing: 8) {
-                tile("ккал", portion.kcal, color: .orange)
-                tile("белки, г", portion.protein, color: .red)
-                tile("жиры, г", portion.fat, color: .yellow)
-                tile("углев., г", portion.carbs, color: .blue)
+                statistic("ккал", portion.kcal, palette: Ant.orange)
+                statistic("белки, г", portion.protein, palette: Ant.red)
+                statistic("жиры, г", portion.fat, palette: Ant.gold)
+                statistic("углев., г", portion.carbs, palette: Ant.blue)
             }
+            macroBar(portion)
             Text("На порцию (всего порций: \(servings))")
-                .font(.caption).foregroundStyle(.secondary)
+                .font(.caption).foregroundStyle(Ant.textTertiary)
             Text("Всё блюдо: \(summary.total.shortText)")
-                .font(.footnote)
+                .font(.footnote).foregroundStyle(Ant.textSecondary)
             if let per100 = summary.per100g {
                 Text("На 100 г: \(per100.shortText)")
-                    .font(.footnote)
+                    .font(.footnote).foregroundStyle(Ant.textSecondary)
             }
             if !summary.missing.isEmpty {
                 Text("Без учёта: \(summary.missing.joined(separator: ", "))")
-                    .font(.caption).foregroundStyle(.secondary)
+                    .font(.caption).foregroundStyle(Ant.textTertiary)
             }
         }
         .padding(.vertical, 4)
     }
 
-    private func tile(_ title: String, _ value: Double, color: Color) -> some View {
+    private func statistic(_ title: String, _ value: Double, palette: Ant.Palette) -> some View {
         VStack(spacing: 2) {
-            Text("\(Int(value.rounded()))")
-                .font(.title3.weight(.bold).monospacedDigit())
+            CountUpText(value: value, font: .title3.weight(.semibold))
+                .foregroundStyle(palette.text)
             Text(title)
                 .font(.caption2)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(Ant.textTertiary)
         }
         .frame(maxWidth: .infinity)
         .padding(.vertical, 8)
-        .background(color.opacity(0.12), in: RoundedRectangle(cornerRadius: 10, style: .continuous))
+        .background(palette.bg, in: RoundedRectangle(cornerRadius: Ant.radiusLG, style: .continuous))
+        .overlay(RoundedRectangle(cornerRadius: Ant.radiusLG, style: .continuous).strokeBorder(palette.border, lineWidth: 0.75))
+    }
+
+    /// Доли калорий из белков, жиров и углеводов (4/9/4 ккал на грамм).
+    @ViewBuilder
+    private func macroBar(_ n: Nutrition) -> some View {
+        let parts: [(Double, Color, String)] = [(n.protein * 4, Ant.red.base, "Б"), (n.fat * 9, Ant.gold.base, "Ж"),
+                                                (n.carbs * 4, Ant.blue.base, "У")]
+        let total = parts.reduce(0) { $0 + $1.0 }
+        if total > 0 {
+            VStack(alignment: .leading, spacing: 6) {
+                MacroBar(parts: parts.map { ($0.0 / total, $0.1) })
+                    .frame(height: 8)
+                HStack(spacing: 12) {
+                    ForEach(parts, id: \.2) { part in
+                        HStack(spacing: 4) {
+                            Circle().fill(part.1).frame(width: 7, height: 7)
+                            Text("\(part.2) \(Int((part.0 / total * 100).rounded()))%")
+                        }
+                    }
+                }
+                .font(.caption2.monospacedDigit())
+                .foregroundStyle(Ant.textSecondary)
+            }
+            .accessibilityElement(children: .combine)
+        }
+    }
+}
+
+/// Сегментированная полоса Progress, которая «наполняется» при появлении.
+private struct MacroBar: View {
+    let parts: [(Double, Color)]
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @State private var fill: CGFloat = 0
+
+    var body: some View {
+        GeometryReader { geo in
+            HStack(spacing: 2) {
+                ForEach(Array(parts.enumerated()), id: \.offset) { _, part in
+                    Capsule().fill(part.1)
+                        .frame(width: max(0, (geo.size.width - 4) * part.0 * fill))
+                }
+                Spacer(minLength: 0)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(Capsule().fill(Ant.fill))
+        }
+        .onAppear {
+            if reduceMotion { fill = 1 } else { withAnimation(.easeOut(duration: 0.9).delay(0.1)) { fill = 1 } }
+        }
     }
 }
 
@@ -157,6 +235,6 @@ struct NutritionBlock: View {
 struct SectionTitle: View {
     let title: String
     var body: some View {
-        Text(title).font(.title3.weight(.bold))
+        AntSectionHeader(title: title)
     }
 }

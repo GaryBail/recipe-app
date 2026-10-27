@@ -10,7 +10,7 @@ final class ScreenshotTests: XCTestCase {
         continueAfterFailure = true
         app = XCUIApplication()
         app.launchArguments += ["-AppleLanguages", "(ru)", "-AppleLocale", "ru_RU",
-                                "-priceServerURL", ""]
+                                "-priceServerURL", "", "-uiTesting"]
         app.launch()
     }
 

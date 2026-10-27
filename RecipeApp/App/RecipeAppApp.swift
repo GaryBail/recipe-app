@@ -25,6 +25,7 @@ struct RootView: View {
 
     var body: some View {
         RootTabView()
+            .tint(Ant.primary)
             .task {
                 SeedLoader.sync(context)
                 await AuthSession.shared.refresh()

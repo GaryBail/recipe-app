@@ -62,13 +62,14 @@ struct HomeView: View {
         return summary.grams > 0 ? summary.perServing(recipe.servings).kcal : nil
     }
 
-    private let columns = [GridItem(.flexible(), spacing: 14), GridItem(.flexible(), spacing: 14)]
+    private let columns = [GridItem(.flexible(), spacing: 12), GridItem(.flexible(), spacing: 12)]
 
     var body: some View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 24) {
                     if search.isEmpty {
+                        hero
                         popularSection
                         rubricChips
                     }
@@ -80,7 +81,7 @@ struct HomeView: View {
                 .padding(.horizontal)
                 .padding(.bottom, 24)
             }
-            .background(Color(.systemGroupedBackground))
+            .background(Ant.bgLayout)
             .navigationTitle("Рецепты")
             .searchable(text: $search, prompt: "Блюдо или продукт")
             .toolbar {
@@ -106,13 +107,49 @@ struct HomeView: View {
         return "Все рецепты"
     }
 
+    /// Баннер: «аврора» на фоне, заголовок проявляется по словам, счётчики добегают.
+    private var hero: some View {
+        let catalog = recipes.filter { !$0.isUserCreated }.count
+        return VStack(alignment: .leading, spacing: 10) {
+            BlurText(text: "Что приготовим сегодня?", font: .title2.weight(.bold))
+                .foregroundStyle(.white)
+            HStack(spacing: 14) {
+                heroStat(Double(catalog), "рецептов")
+                heroStat(Double(Rubric.all.count), "рубрик")
+                heroStat(Double(products.count), "продуктов")
+            }
+            Text("Выберите продукты — найдём, где корзина дешевле")
+                .font(.footnote)
+                .foregroundStyle(.white.opacity(0.85))
+        }
+        .padding(Ant.padding)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background {
+            ZStack {
+                LinearGradient(colors: [Ant.primary, Ant.geekblue.base], startPoint: .topLeading, endPoint: .bottomTrailing)
+                AuroraBackground().opacity(0.9)
+            }
+        }
+        .clipShape(RoundedRectangle(cornerRadius: Ant.radiusLG * 1.5, style: .continuous))
+        .antShadow(elevated: true)
+        .appear()
+    }
+
+    private func heroStat(_ value: Double, _ title: String) -> some View {
+        HStack(alignment: .firstTextBaseline, spacing: 4) {
+            CountUpText(value: value, font: .title3.weight(.bold), duration: 1.2)
+            Text(title).font(.caption)
+        }
+        .foregroundStyle(.white)
+        .padding(.horizontal, 10).padding(.vertical, 5)
+        .background(.white.opacity(0.16), in: RoundedRectangle(cornerRadius: Ant.radius, style: .continuous))
+    }
+
     private var popularSection: some View {
         VStack(alignment: .leading, spacing: 12) {
-            HStack(alignment: .firstTextBaseline) {
-                SectionTitle(title: "Популярное")
-                Spacer()
+            AntSectionHeader(title: "Популярное") {
                 if model.popular.isEmpty {
-                    Text("выбор редакции").font(.caption).foregroundStyle(.secondary)
+                    ShinyText(text: "выбор редакции")
                 }
             }
             ScrollView(.horizontal, showsIndicators: false) {
@@ -120,13 +157,17 @@ struct HomeView: View {
                     ForEach(popularRecipes) { recipe in
                         NavigationLink(value: recipe) {
                             RecipeCard(recipe: recipe, cover: model.coverURL(for: recipe.id),
-                                       kcalPerServing: kcal(recipe), imageHeight: 150)
+                                       kcalPerServing: kcal(recipe), imageHeight: 140)
                                 .frame(width: 210)
                         }
-                        .buttonStyle(.plain)
+                        .buttonStyle(AntPressStyle())
+                        .carouselTilt()
                     }
                 }
+                .scrollTargetLayout()
+                .padding(.vertical, 4)
             }
+            .scrollTargetBehavior(.viewAligned)
             .scrollClipDisabled()
         }
     }
@@ -141,39 +182,34 @@ struct HomeView: View {
                     }
                 }
             }
+            .padding(.vertical, 2)
         }
+        .scrollClipDisabled()
     }
 
     private func chip(title: String, symbol: String, icon: String? = nil, selected: Bool,
                       action: @escaping () -> Void) -> some View {
-        Button(action: action) {
-            HStack(spacing: 6) {
-                if let icon, let image = UIImage(named: "food-\(icon)") {
-                    Image(uiImage: image).resizable().scaledToFit().frame(width: 22, height: 22)
-                } else {
-                    Image(systemName: symbol)
-                }
-                Text(title)
+        AntCheckableTag(title: title, selected: selected) {
+            if let icon, let image = UIImage(named: "food-\(icon)") {
+                Image(uiImage: image).resizable().scaledToFit().frame(width: 20, height: 20)
+            } else {
+                Image(systemName: symbol)
             }
-                .font(.subheadline.weight(.medium))
-                .padding(.horizontal, 12)
-                .padding(.vertical, 8)
-                .background(selected ? Color.accentColor : Color(.secondarySystemGroupedBackground), in: Capsule())
-                .foregroundStyle(selected ? Color.white : Color.primary)
+        } action: {
+            withAnimation(.snappy) { action() }
         }
-        .buttonStyle(.plain)
-        .accessibilityAddTraits(selected ? .isSelected : [])
     }
 
     private func grid(title: String, items: [Recipe]) -> some View {
         VStack(alignment: .leading, spacing: 12) {
             SectionTitle(title: title)
-            LazyVGrid(columns: columns, spacing: 18) {
-                ForEach(items) { recipe in
+            LazyVGrid(columns: columns, spacing: 14) {
+                ForEach(Array(items.enumerated()), id: \.element.id) { index, recipe in
                     NavigationLink(value: recipe) {
                         RecipeCard(recipe: recipe, cover: model.coverURL(for: recipe.id), kcalPerServing: kcal(recipe))
                     }
-                    .buttonStyle(.plain)
+                    .buttonStyle(AntPressStyle())
+                    .appear(index: index % 6)
                 }
             }
         }
@@ -204,19 +240,20 @@ struct FavoritesView: View {
                     }
                 } else {
                     ScrollView {
-                        LazyVGrid(columns: columns, spacing: 18) {
-                            ForEach(favorites) { recipe in
+                        LazyVGrid(columns: columns, spacing: 14) {
+                            ForEach(Array(favorites.enumerated()), id: \.element.id) { index, recipe in
                                 NavigationLink(value: recipe) {
                                     let s = NutritionCalculator.recipeSummary(recipe, products: products)
                                     RecipeCard(recipe: recipe, cover: model.coverURL(for: recipe.id),
                                                kcalPerServing: s.grams > 0 ? s.perServing(recipe.servings).kcal : nil)
                                 }
-                                .buttonStyle(.plain)
+                                .buttonStyle(AntPressStyle())
+                                .appear(index: index % 6)
                             }
                         }
                         .padding()
                     }
-                    .background(Color(.systemGroupedBackground))
+                    .background(Ant.bgLayout)
                 }
             }
             .navigationTitle("Избранное")
