@@ -44,21 +44,19 @@ try:
                               "clientInfo": {"name": "vyborvkusa", "version": "0.1"}})
     note("init", json.dumps(init.get("result", init), ensure_ascii=False)[:1500])
     rpc("notifications/initialized", notify=True)
-    tools = rpc("tools/list", {}, rid=2)
-    for t in tools.get("result", {}).get("tools", []):
-        note(f"tool {t['name']}", json.dumps({"description": t.get("description"), "schema": t.get("inputSchema")},
-                                             ensure_ascii=False))
-    names = [t["name"] for t in tools.get("result", {}).get("tools", [])]
-    search = next((n for n in names if "search" in n), None)
-    if search:
-        schema = next(t for t in tools["result"]["tools"] if t["name"] == search)["inputSchema"]
-        key = next(iter(schema.get("properties", {"q": 0})))
-        res = rpc("tools/call", {"name": search, "arguments": {key: "сыр пармезан"}}, rid=3)
-        note("search result", json.dumps(res.get("result", res), ensure_ascii=False))
-    cart = next((n for n in names if "cart" in n), None)
-    if cart:
-        note("cart schema", json.dumps(next(t for t in tools["result"]["tools"] if t["name"] == cart)["inputSchema"],
-                                       ensure_ascii=False))
+    res = rpc("tools/call", {"name": "vkusvill_products_search",
+                             "arguments": {"q": "пармезан", "vvonly": 0, "limit": 3, "mode": "custom",
+                                           "fields": ["id", "name", "price", "unit", "weight", "url"]}}, rid=3)
+    note("search", json.dumps(res.get("result", res), ensure_ascii=False))
+    text = res["result"]["content"][0]["text"]
+    data = json.loads(text)
+    items = data.get("data", {}).get("items") or data.get("items") or []
+    first = items[0]["id"] if items else None
+    note("first id", first)
+    if first:
+        link = rpc("tools/call", {"name": "vkusvill_cart_link_create",
+                                  "arguments": {"products": [{"id": int(first), "q": 1}]}}, rid=4)
+        note("cart link", json.dumps(link.get("result", link), ensure_ascii=False))
 except Exception as e:  # noqa: BLE001
     note("error", repr(e))
     sys.exit(0)
