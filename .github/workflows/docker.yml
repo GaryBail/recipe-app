@@ -50,12 +50,25 @@ jobs:
         continue-on-error: true
         run: |
           for store in pyaterochka perekrestok; do
-            echo "== $store"
-            curl -sS --max-time 240 "localhost:8000/search?store=$store&city=msk&q=%D0%BC%D0%BE%D0%BB%D0%BE%D0%BA%D0%BE" \
-              | head -c 1500 || true
-            echo
+            start=$(date +%s)
+            body=$(curl -sS --max-time 240 -w '\nHTTP %{http_code}' \
+              "localhost:8000/search?store=$store&city=msk&q=%D0%BC%D0%BE%D0%BB%D0%BE%D0%BA%D0%BE" 2>&1 || true)
+            took=$(( $(date +%s) - start ))
+            summary=$(echo "$body" | python3 -c "
+          import sys, json
+          raw = sys.stdin.read()
+          text, _, status = raw.rpartition('\n')
+          try:
+              items = json.loads(text)
+              print(f'{status}: {len(items)} товаров; ' + '; '.join(f\"{i['title'][:40]} — {i['price']} ₽\" for i in items[:3]))
+          except Exception:
+              print(f'{status}: ' + raw[:300].replace(chr(10), ' '))
+          ")
+            echo "::notice title=$store (${took}s)::$summary"
           done
-          docker logs api 2>&1 | tail -n 40
+          docker logs api 2>&1 | grep -iE "error|exception|captcha|failed" | tail -n 15 \
+            | sed 's/%/%25/g' | awk 'BEGIN{ORS="%0A"} {print}' | sed 's/^/::notice title=api errors::/' || true
+          echo
 
       - name: Logs on failure
         if: failure()
