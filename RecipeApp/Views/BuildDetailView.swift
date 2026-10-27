@@ -143,14 +143,13 @@ struct BuildDetailView: View {
     }
 }
 
-/// Публикация сборки: имя автора и название.
+/// Публикация сборки. Автор — текущий аккаунт.
 struct PublishBuildView: View {
     let build: Build
     var onPublished: (CommunityBuildDTO) -> Void
 
     @Environment(\.modelContext) private var context
     @Environment(\.dismiss) private var dismiss
-    @AppStorage(UserIdentity.nameKey) private var displayName = ""
     @State private var name: String = ""
     @State private var isSending = false
     @State private var errorText: String?
@@ -158,8 +157,17 @@ struct PublishBuildView: View {
     var body: some View {
         NavigationStack {
             Form {
-                Section("Как вас подписать") {
-                    TextField("Имя или ник", text: $displayName)
+                if let user = AuthSession.shared.user {
+                    Section {
+                        LabeledContent("Автор", value: user.displayName)
+                    } footer: {
+                        Text("Имя можно изменить в настройках.")
+                    }
+                } else {
+                    Section {
+                        Text("Чтобы делиться сборками, войдите в аккаунт.").font(.footnote)
+                        LoginRequiredButton(title: "Войти или зарегистрироваться")
+                    }
                 }
                 Section("Название сборки") {
                     TextField(build.name, text: $name)
@@ -183,6 +191,7 @@ struct PublishBuildView: View {
                         ProgressView()
                     } else {
                         Button("Опубликовать") { Task { await publish() } }
+                            .disabled(!AuthSession.shared.isLoggedIn)
                     }
                 }
             }
@@ -196,7 +205,7 @@ struct PublishBuildView: View {
             return
         }
         if !name.trimmed.isEmpty { build.name = name.trimmed }
-        guard let request = CommunityMapper.publishRequest(for: build, authorName: UserIdentity.displayName) else {
+        guard let request = CommunityMapper.publishRequest(for: build) else {
             errorText = "В сборке нет выбранных продуктов."
             return
         }

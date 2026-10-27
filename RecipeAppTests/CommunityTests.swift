@@ -43,8 +43,7 @@ final class CommunityTests: XCTestCase {
 
     func testPublishRequestIncludesRecipeAndProducts() throws {
         let build = try makeBuild()
-        let request = try XCTUnwrap(CommunityMapper.publishRequest(for: build, authorName: "Гарри"))
-        XCTAssertEqual(request.authorName, "Гарри")
+        let request = try XCTUnwrap(CommunityMapper.publishRequest(for: build))
         XCTAssertEqual(request.name, "Летний")
         XCTAssertEqual(request.recipe.id, "user-r1")
         XCTAssertEqual(request.recipe.ingredients.map(\.id), ["user-r1-0", "user-r1-1"])
@@ -52,7 +51,6 @@ final class CommunityTests: XCTestCase {
 
         // На сервер уходит snake_case
         let json = String(decoding: try CommunityClient.encoder.encode(request), as: UTF8.self)
-        XCTAssertTrue(json.contains("\"author_name\""))
         XCTAssertTrue(json.contains("\"ingredient_id\""))
         XCTAssertTrue(json.contains("\"category_id\""))
     }

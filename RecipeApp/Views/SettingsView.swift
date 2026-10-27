@@ -3,7 +3,6 @@ import SwiftUI
 struct SettingsView: View {
     @AppStorage(PriceProviderFactory.serverURLKey) private var serverURL = ""
     @AppStorage("cityId") private var cityId = "msk"
-    @AppStorage(UserIdentity.nameKey) private var displayName = ""
     @Environment(\.dismiss) private var dismiss
 
     @State private var cities: [City] = []
@@ -12,13 +11,7 @@ struct SettingsView: View {
     var body: some View {
         NavigationStack {
             Form {
-                Section {
-                    TextField("Имя или ник", text: $displayName)
-                } header: {
-                    Text("Профиль")
-                } footer: {
-                    Text("Под этим именем публикуются ваши сборки и отзывы.")
-                }
+                AccountSection()
 
                 Section {
                     Picker("Город", selection: $cityId) {
@@ -67,6 +60,87 @@ struct SettingsView: View {
             checkResult = ok ? "✅ Сервер доступен" : "Сервер ответил с ошибкой"
         } catch {
             checkResult = "Нет соединения: \(error.localizedDescription)"
+        }
+    }
+}
+
+/// Аккаунт: вход, имя, выход, удаление.
+struct AccountSection: View {
+    private var session: AuthSession { .shared }
+    @State private var showAuth = false
+    @State private var name = ""
+    @State private var confirmDelete = false
+    @State private var message: String?
+    @State private var isWorking = false
+
+    var body: some View {
+        Section {
+            if let user = session.user {
+                HStack {
+                    TextField("Имя или ник", text: $name)
+                        .onSubmit { Task { await saveName() } }
+                    if name.trimmed != user.displayName && !name.trimmed.isEmpty {
+                        Button("Сохранить") { Task { await saveName() } }
+                    }
+                }
+                if let email = user.email {
+                    LabeledContent("Email", value: email)
+                }
+                if user.hasApple {
+                    Label("Вход через Apple", systemImage: "apple.logo").foregroundStyle(.secondary)
+                }
+                Button("Выйти") { Task { await session.logout() } }
+                Button("Удалить аккаунт", role: .destructive) { confirmDelete = true }
+            } else {
+                Button {
+                    showAuth = true
+                } label: {
+                    Label("Войти или зарегистрироваться", systemImage: "person.crop.circle")
+                }
+            }
+            if let message {
+                Text(message).font(.footnote).foregroundStyle(.secondary)
+            }
+        } header: {
+            Text("Аккаунт")
+        } footer: {
+            if session.isLoggedIn {
+                Text("Под этим именем публикуются ваши сборки и отзывы.")
+            } else {
+                Text("Нужен, чтобы делиться сборками, ставить оценки и получать уведомления.")
+            }
+        }
+        .disabled(isWorking)
+        .onAppear { name = session.user?.displayName ?? "" }
+        .onChange(of: session.user) { _, user in name = user?.displayName ?? "" }
+        .sheet(isPresented: $showAuth) { AuthView() }
+        .confirmationDialog("Удалить аккаунт?", isPresented: $confirmDelete, titleVisibility: .visible) {
+            Button("Удалить навсегда", role: .destructive) { Task { await delete() } }
+        } message: {
+            Text("Будут удалены аккаунт, опубликованные сборки, оценки и уведомления. Рецепты и сборки на этом телефоне останутся.")
+        }
+    }
+
+    private func saveName() async {
+        guard !name.trimmed.isEmpty else { return }
+        isWorking = true
+        defer { isWorking = false }
+        do {
+            try await session.update(displayName: name.trimmed)
+            message = "Имя сохранено"
+        } catch {
+            message = error.localizedDescription
+        }
+    }
+
+    private func delete() async {
+        isWorking = true
+        defer { isWorking = false }
+        do {
+            try await session.deleteAccount()
+            message = "Аккаунт удалён"
+        } catch {
+            message = error.localizedDescription
         }
     }
 }

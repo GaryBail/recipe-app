@@ -5,6 +5,7 @@ struct RecipeListView: View {
     @Query(sort: \Recipe.title) private var recipes: [Recipe]
     @State private var showSettings = false
     @State private var showNewRecipe = false
+    private var notifications: NotificationCenterModel { .shared }
 
     private var myRecipes: [Recipe] { recipes.filter(\.isUserCreated) }
     private var catalogRecipes: [Recipe] { recipes.filter { !$0.isUserCreated } }
@@ -31,6 +32,7 @@ struct RecipeListView: View {
                     }
                 }
                 ToolbarItemGroup(placement: .topBarTrailing) {
+                    NotificationsBell()
                     Button { showNewRecipe = true } label: {
                         Label("Новый рецепт", systemImage: "plus")
                     }
@@ -41,6 +43,21 @@ struct RecipeListView: View {
             }
             .sheet(isPresented: $showSettings) { SettingsView() }
             .sheet(isPresented: $showNewRecipe) { RecipeEditorView() }
+            // Нажали на push — открываем сборку, которую оценили.
+            .sheet(isPresented: Binding(get: { notifications.pendingBuildId != nil },
+                                        set: { if !$0 { notifications.pendingBuildId = nil } })) {
+                if let id = notifications.pendingBuildId {
+                    NavigationStack {
+                        CommunityBuildLoader(buildId: id)
+                            .toolbar {
+                                ToolbarItem(placement: .cancellationAction) {
+                                    Button("Закрыть") { notifications.pendingBuildId = nil }
+                                }
+                            }
+                            .navigationDestination(for: Build.self) { BuildDetailView(build: $0) }
+                    }
+                }
+            }
             .navigationDestination(for: Recipe.self) { RecipeDetailView(recipe: $0) }
             .navigationDestination(for: Build.self) { BuildDetailView(build: $0) }
             .overlay {

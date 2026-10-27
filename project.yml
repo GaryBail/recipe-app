@@ -33,6 +33,13 @@ targets:
           - storea
           - storeb
           - storec
+    # Вход через Apple и push. Для запуска на iPhone нужен платный Apple Developer аккаунт.
+    entitlements:
+      path: RecipeApp/RecipeApp.entitlements
+      properties:
+        com.apple.developer.applesignin:
+          - Default
+        aps-environment: development
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.garybail.recipeapp

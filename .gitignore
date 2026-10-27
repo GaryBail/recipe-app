@@ -16,3 +16,4 @@ __pycache__/
 *.pyc
 backend/screenshot.png
 backend/*.db
+RecipeApp/RecipeApp.entitlements

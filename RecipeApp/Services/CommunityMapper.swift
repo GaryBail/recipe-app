@@ -5,7 +5,7 @@ import SwiftData
 enum CommunityMapper {
     /// Сборка → запрос на публикацию. Вместе со сборкой публикуется рецепт,
     /// чтобы свои рецепты пользователей тоже можно было открыть у других.
-    static func publishRequest(for build: Build, authorName: String) -> PublishBuildRequest? {
+    static func publishRequest(for build: Build) -> PublishBuildRequest? {
         guard let recipe = build.recipe else { return nil }
         let ingredients = recipe.sortedIngredients
         let items: [CommunityItemDTO] = ingredients.compactMap { ingredient in
@@ -24,7 +24,7 @@ enum CommunityMapper {
                 CommunityIngredientDTO(id: $0.id, title: $0.title, categoryId: $0.categoryId,
                                        amount: $0.amount, unit: $0.unitRaw)
             })
-        return PublishBuildRequest(authorName: authorName, name: build.name, recipe: recipeDTO, items: items)
+        return PublishBuildRequest(name: build.name, recipe: recipeDTO, items: items)
     }
 
     /// Сохраняет чужую сборку себе. Если рецепта нет — создаёт его, недостающие продукты добавляет в каталог.

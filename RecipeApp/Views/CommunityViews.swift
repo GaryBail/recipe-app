@@ -167,7 +167,8 @@ struct CommunityBuildDetailView: View {
     @State private var savedBuild: Build?
 
     private var current: CommunityBuildDTO { build ?? initial }
-    private var isMine: Bool { current.authorId == UserIdentity.id }
+    private var isMine: Bool { current.authorId == AuthSession.shared.user?.id }
+    private var isLoggedIn: Bool { AuthSession.shared.isLoggedIn }
 
     var body: some View {
         List {
@@ -227,7 +228,11 @@ struct CommunityBuildDetailView: View {
                 }
             }
 
-            if !isMine {
+            if !isMine && !isLoggedIn {
+                Section("Ваша оценка") {
+                    LoginRequiredButton(title: "Войдите, чтобы оценить сборку")
+                }
+            } else if !isMine {
                 Section("Ваша оценка") {
                     StarPicker(stars: $stars)
                     TextField("Комментарий (необязательно)", text: $comment, axis: .vertical)
@@ -261,7 +266,7 @@ struct CommunityBuildDetailView: View {
                 Section {
                     Button("Удалить публикацию", role: .destructive) { Task { await deleteOwn() } }
                 }
-            } else {
+            } else if isLoggedIn {
                 Section {
                     Button("Пожаловаться", role: .destructive) { showReport = true }
                     Button("Скрыть все сборки автора", role: .destructive) { confirmBlock = true }
@@ -290,7 +295,7 @@ struct CommunityBuildDetailView: View {
             stars = fresh.myRating ?? 0
         }
         ratings = (try? await client.ratings(buildId: initial.id)) ?? []
-        if let mine = ratings.first(where: { $0.userId == UserIdentity.id }) {
+        if let mine = ratings.first(where: { $0.userId == AuthSession.shared.user?.id }) {
             comment = mine.comment ?? ""
         }
     }
@@ -352,6 +357,37 @@ struct CommunityBuildDetailView: View {
             dismiss()
         } catch {
             message = error.localizedDescription
+        }
+    }
+}
+
+/// Открывает сборку по id (из уведомления или push).
+struct CommunityBuildLoader: View {
+    let buildId: String
+    @State private var dto: CommunityBuildDTO?
+    @State private var errorText: String?
+
+    var body: some View {
+        Group {
+            if let dto {
+                CommunityBuildDetailView(initial: dto)
+            } else if let errorText {
+                ContentUnavailableView("Сборка недоступна", systemImage: "exclamationmark.triangle",
+                                       description: Text(errorText))
+            } else {
+                ProgressView()
+            }
+        }
+        .task(id: buildId) {
+            guard let client = CommunityClient.fromSettings() else {
+                errorText = "Укажите адрес сервера в настройках."
+                return
+            }
+            do {
+                dto = try await client.build(id: buildId)
+            } catch {
+                errorText = "Возможно, автор удалил её. \(error.localizedDescription)"
+            }
         }
     }
 }
