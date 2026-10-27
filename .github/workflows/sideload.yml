@@ -1,0 +1,76 @@
+name: iPhone build (Sideloadly)
+
+# Собирает неподписанный .ipa для установки на iPhone с Windows через Sideloadly
+# и выкладывает его в релиз «sideload» (Releases → ВыборВкуса для iPhone).
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["RecipeApp/**", "project.yml", ".github/workflows/sideload.yml"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sideload
+  cancel-in-progress: true
+
+jobs:
+  ipa:
+    runs-on: macos-15
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install XcodeGen
+        run: brew install xcodegen
+
+      - name: Generate Xcode project
+        run: xcodegen generate
+
+      - name: Build for iPhone (unsigned)
+        shell: bash
+        run: |
+          set +e
+          xcodebuild build \
+            -project RecipeApp.xcodeproj \
+            -scheme RecipeApp \
+            -configuration Release \
+            -destination "generic/platform=iOS" \
+            -derivedDataPath build \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" \
+            CODE_SIGN_ENTITLEMENTS="" > build.log 2>&1
+          status=$?
+          tail -n 60 build.log
+          grep -E "(\.swift:[0-9]+:([0-9]+:)? error|BUILD FAILED)" build.log | sort -u | head -20 | while IFS= read -r line; do
+            echo "::error::${line//%/%25}"
+          done
+          exit $status
+
+      - name: Package .ipa
+        run: |
+          APP=$(find build/Build/Products/Release-iphoneos -maxdepth 1 -name "*.app" | head -1)
+          mkdir -p Payload
+          cp -R "$APP" Payload/
+          zip -qry VyborVkusa.ipa Payload
+          ls -lh VyborVkusa.ipa
+          echo "::notice::IPA $(du -h VyborVkusa.ipa | cut -f1), commit ${GITHUB_SHA::7}"
+
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release delete sideload --yes --cleanup-tag 2>/dev/null || true
+          gh release create sideload VyborVkusa.ipa \
+            --prerelease \
+            --title "ВыборВкуса для iPhone (Sideloadly)" \
+            --notes "Сборка из коммита ${GITHUB_SHA::7}, $(date -u '+%d.%m.%Y %H:%M') UTC.
+
+          Как установить с Windows:
+          1. Скачайте VyborVkusa.ipa ниже.
+          2. Установите Sideloadly (sideloadly.io), а также iTunes и iCloud с сайта Apple (не из Microsoft Store).
+          3. Подключите iPhone кабелем, нажмите «Доверять этому компьютеру».
+          4. Перетащите VyborVkusa.ipa в Sideloadly, введите Apple ID, нажмите Start.
+          5. На iPhone: Настройки → Основные → VPN и управление устройством → разрешите приложение. На iOS 16+ включите «Режим разработчика» (Настройки → Конфиденциальность и безопасность).
+
+          С бесплатным Apple ID приложение работает 7 дней, потом установите заново. Вход через Apple и push-уведомления в такой сборке не работают."
