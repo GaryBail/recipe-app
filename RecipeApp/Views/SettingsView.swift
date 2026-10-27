@@ -105,18 +105,28 @@ struct AccountSection: View {
                 }
                 Button("Выйти") { Task { await session.logout() } }
                 Button("Удалить аккаунт", role: .destructive) { confirmDelete = true }
+                    .confirmationDialog("Удалить аккаунт?", isPresented: $confirmDelete, titleVisibility: .visible) {
+                        Button("Удалить навсегда", role: .destructive) { Task { await delete() } }
+                    } message: {
+                        Text("Будут удалены аккаунт, опубликованные сборки, оценки и уведомления. Рецепты и сборки на этом телефоне останутся.")
+                    }
             } else {
                 Button {
                     showAuth = true
                 } label: {
                     Label("Войти или зарегистрироваться", systemImage: "person.crop.circle")
                 }
+                .sheet(isPresented: $showAuth) { AuthView() }
             }
             if let message {
                 Text(message).font(.footnote).foregroundStyle(.secondary)
             }
         } header: {
+            // Модификаторы вешаем на один вид, а не на Section: иначе SwiftUI размножает их
+            // на каждую строку, заголовок и подпись, и окна начинают конфликтовать.
             Text("Аккаунт")
+                .onAppear { name = session.user?.displayName ?? "" }
+                .onChange(of: session.user) { _, user in name = user?.displayName ?? "" }
         } footer: {
             if session.isLoggedIn {
                 Text("Под этим именем публикуются ваши сборки и отзывы. Напоминания о ценах приходят не чаще раза в день.")
@@ -125,14 +135,6 @@ struct AccountSection: View {
             }
         }
         .disabled(isWorking)
-        .onAppear { name = session.user?.displayName ?? "" }
-        .onChange(of: session.user) { _, user in name = user?.displayName ?? "" }
-        .sheet(isPresented: $showAuth) { AuthView() }
-        .confirmationDialog("Удалить аккаунт?", isPresented: $confirmDelete, titleVisibility: .visible) {
-            Button("Удалить навсегда", role: .destructive) { Task { await delete() } }
-        } message: {
-            Text("Будут удалены аккаунт, опубликованные сборки, оценки и уведомления. Рецепты и сборки на этом телефоне останутся.")
-        }
     }
 
     private func saveName() async {

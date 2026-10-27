@@ -1,6 +1,7 @@
 name: RecipeApp
 options:
   bundleIdPrefix: com.garybail
+  developmentLanguage: ru
   deploymentTarget:
     iOS: "17.0"
   createIntermediateGroups: true
@@ -21,6 +22,10 @@ targets:
       path: RecipeApp/Info.plist
       properties:
         CFBundleDisplayName: Рецепты
+        # Русский язык приложения: системные кнопки («Назад»), формат цен («₽»), даты.
+        CFBundleDevelopmentRegion: ru
+        CFBundleLocalizations:
+          - ru
         UILaunchScreen: {}
         UISupportedInterfaceOrientations:
           - UIInterfaceOrientationPortrait

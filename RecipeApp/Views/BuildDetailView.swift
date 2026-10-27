@@ -320,6 +320,7 @@ struct PriceWatchSection: View {
             }
         } header: {
             Text("Цена")
+                .task(id: build.isWatched) { await load() }
         } footer: {
             if cityId != PriceWatchClient.supportedCity {
                 Text("Пока цены проверяются только для Москвы (Пятёрочка и Перекрёсток).")
@@ -327,7 +328,6 @@ struct PriceWatchSection: View {
                 Text("Проверяем Пятёрочку и Перекрёсток в Москве. Напомним не чаще раза в день — когда корзина подешевеет или давно не заглядывали.")
             }
         }
-        .task(id: build.isWatched) { await load() }
     }
 
     private func load() async {

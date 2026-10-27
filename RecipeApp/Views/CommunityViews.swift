@@ -44,8 +44,8 @@ struct CommunityBuildsSection: View {
             }
         } header: {
             Text("Сборки сообщества")
+                .task(id: serverURL) { await load() }
         }
-        .task(id: serverURL) { await load() }
     }
 
     private func load() async {
