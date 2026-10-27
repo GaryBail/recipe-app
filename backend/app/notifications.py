@@ -65,14 +65,20 @@ class NotificationStore:
                 created_at TEXT NOT NULL
             );
         """)
+        # Миграция: готовые заголовок и текст (для уведомлений о ценах).
+        columns = {r["name"] for r in self.db.execute("PRAGMA table_info(notifications)")}
+        for column in ("title", "body"):
+            if column not in columns:
+                self.db.execute(f"ALTER TABLE notifications ADD COLUMN {column} TEXT")
         self.db.commit()
 
     def add(self, user_id: str, kind: str, build_id: str, build_name: str,
-            actor_id: str, actor_name: str, stars: int | None, comment: str | None) -> dict[str, Any]:
+            actor_id: str, actor_name: str, stars: int | None, comment: str | None,
+            title: str | None = None, body: str | None = None) -> dict[str, Any]:
         cur = self.db.execute(
             "INSERT INTO notifications (user_id, kind, build_id, build_name, actor_id, actor_name,"
-            " stars, comment, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
-            (user_id, kind, build_id, build_name, actor_id, actor_name, stars, comment, _now()),
+            " stars, comment, created_at, title, body) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+            (user_id, kind, build_id, build_name, actor_id, actor_name, stars, comment, _now(), title, body),
         )
         self.db.commit()
         return self._public(self.db.execute("SELECT * FROM notifications WHERE id = ?", (cur.lastrowid,)).fetchone())
@@ -80,6 +86,7 @@ class NotificationStore:
     @staticmethod
     def _public(row: sqlite3.Row) -> dict[str, Any]:
         title, body = describe(row["kind"], row["actor_name"], row["build_name"], row["stars"], row["comment"])
+        title, body = row["title"] or title, row["body"] or body
         return {
             "id": row["id"], "kind": row["kind"], "build_id": row["build_id"], "build_name": row["build_name"],
             "actor_name": row["actor_name"], "stars": row["stars"], "comment": row["comment"],

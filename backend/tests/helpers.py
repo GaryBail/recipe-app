@@ -31,6 +31,29 @@ class FakeApple:
         return jwt.encode(claims, self.key, algorithm="RS256", headers={"kid": "test-kid"})
 
 
+class RecordingMailer:
+    def __init__(self):
+        self.sent = []
+
+    async def send(self, to, subject, text):
+        self.sent.append({"to": to, "subject": subject, "text": text})
+
+    def last_code(self, email):
+        import re
+        for mail in reversed(self.sent):
+            if mail["to"] == email:
+                return re.search(r"\b(\d{6})\b", mail["text"]).group(1)
+        raise AssertionError(f"нет письма для {email}")
+
+
+class FakeClock:
+    def __init__(self, start=1_000_000.0):
+        self.now = start
+
+    def __call__(self):
+        return self.now
+
+
 class RecordingPush:
     def __init__(self):
         self.sent = []
@@ -40,18 +63,28 @@ class RecordingPush:
         return []
 
 
-def make_client(tmp_path, adapters=(), apple=None, push=None):
+def make_client(tmp_path, adapters=(), apple=None, push=None, mailer=None, clock=None):
+    mailer = mailer or RecordingMailer()
     app = create_app(PriceService(list(adapters)), db_path=str(tmp_path / "test.db"),
-                     apple=(apple or FakeApple()).verifier, push=push or RecordingPush())
+                     apple=(apple or FakeApple()).verifier, push=push or RecordingPush(),
+                     mailer=mailer, limiter_clock=clock, price_watch=False)
+    app.state.mailer = mailer
     return TestClient(app)
 
 
-def register(client, name="Алиса", email=None, password="secret123"):
+def register(client, name="Алиса", email=None, password="secret123", verify=True):
     email = email or f"user{next(_counter)}@example.com"
     r = client.post("/auth/register", json={"email": email, "password": password, "display_name": name})
     assert r.status_code == 201, r.text
     data = r.json()
-    return {"Authorization": f"Bearer {data['token']}"}, data["user"]
+    headers = {"Authorization": f"Bearer {data['token']}"}
+    user = data["user"]
+    if verify:
+        code = client.app.state.mailer.last_code(email)
+        r = client.post("/auth/verify-email", json={"code": code}, headers=headers)
+        assert r.status_code == 200, r.text
+        user = r.json()
+    return headers, user
 
 
 def build_payload():

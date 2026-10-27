@@ -10,16 +10,21 @@ import logging
 import os
 from contextlib import asynccontextmanager
 from dataclasses import dataclass
+from datetime import datetime, timezone
 from typing import Any
 
-from fastapi import APIRouter, BackgroundTasks, Depends, FastAPI, Header, HTTPException
+from fastapi import APIRouter, BackgroundTasks, Depends, FastAPI, Header, HTTPException, Request
 from pydantic import BaseModel, Field
 
-from .auth import (AppleLoginIn, AppleTokenError, AppleTokenVerifier, AuthStore, EmailTaken, LoginIn,
-                   ProfileUpdateIn, RegisterIn)
+from .auth import (AppleLoginIn, AppleTokenError, AppleTokenVerifier, AuthStore, ChangePasswordIn, CodeIn,
+                   CodeTooSoon, EmailTaken, ForgotIn, LoginIn, ProfileUpdateIn, RegisterIn, ResetIn)
+from .mailer import Mailer, code_email, mailer_from_env
+from .ratelimit import RateLimiter, wait_text
 from .community import BlockIn, CommunityStore, PublishIn, RatingIn, ReportIn, open_db
 from .models import CartLineRequest
 from .notifications import APNsPush, DeviceIn, MarkReadIn, NoopPush, NotificationStore, PushSender, describe
+from .price_watch import (WATCH_CITIES, PriceWatcher, TooManyWatches, WatchIn, WatchStore, hours_from_env,
+                          scheduler_loop)
 from .service import CITIES, PriceService
 from .stores.base import StoreAdapter
 
@@ -46,6 +51,33 @@ class Stores:
     notifications: NotificationStore
     apple: AppleTokenVerifier
     push: PushSender
+    mailer: Mailer
+    limiter: RateLimiter
+    watches: Any = None
+
+
+# Лимиты: (сколько, за сколько секунд)
+LOGIN_PER_EMAIL = (5, 15 * 60)
+LOGIN_PER_IP = (20, 15 * 60)
+REGISTER_PER_IP = (10, 3600)
+CODES_PER_EMAIL = (5, 3600)
+CODES_PER_IP = (20, 3600)
+RESET_ATTEMPTS_PER_EMAIL = (10, 3600)
+
+
+def client_ip(request: Request) -> str:
+    # За обратным прокси (nginx и т.п.) реальный адрес приходит в X-Forwarded-For.
+    if os.getenv("TRUST_PROXY") == "1":
+        forwarded = request.headers.get("x-forwarded-for")
+        if forwarded:
+            return forwarded.split(",")[0].strip()
+    return request.client.host if request.client else "unknown"
+
+
+def limit(s: Stores, key: str, rule: tuple[int, int]) -> None:
+    wait = s.limiter.retry_after(key, *rule)
+    if wait:
+        raise HTTPException(429, wait_text(wait), headers={"Retry-After": str(wait)})
 
 
 def default_adapters() -> list[StoreAdapter]:
@@ -79,20 +111,102 @@ def auth_router(s: Stores, current_user, token_dep) -> APIRouter:
     def session(user: dict, token: str, created: bool = False) -> dict:
         return {"token": token, "user": user, "created": created}
 
+    async def send_code(user_id: str, email: str, name: str, purpose: str, background: BackgroundTasks) -> None:
+        code = s.auth.create_code(user_id, purpose)
+        subject, text = code_email(purpose, code, name)
+        background.add_task(s.mailer.send, email, subject, text)
+
     @r.post("/register", status_code=201)
-    async def register(body: RegisterIn):
+    async def register(body: RegisterIn, request: Request, background: BackgroundTasks):
+        ip_key = f"register:ip:{client_ip(request)}"
+        limit(s, ip_key, REGISTER_PER_IP)
+        s.limiter.hit(ip_key)
         try:
             user, token = s.auth.register(body)
         except EmailTaken:
             raise HTTPException(409, "Этот email уже зарегистрирован")
+        await send_code(user["id"], user["email"], user["display_name"], "verify", background)
         return session(user, token, created=True)
 
     @r.post("/login")
-    async def login(body: LoginIn):
+    async def login(body: LoginIn, request: Request):
+        email_key = f"login:email:{body.email.strip().lower()}"
+        ip_key = f"login:ip:{client_ip(request)}"
+        limit(s, email_key, LOGIN_PER_EMAIL)
+        limit(s, ip_key, LOGIN_PER_IP)
         result = await asyncio.to_thread(s.auth.login, body.email, body.password)
         if result is None:
+            s.limiter.hit(email_key)
+            s.limiter.hit(ip_key)
             raise HTTPException(401, "Неверный email или пароль")
+        s.limiter.clear(email_key)
         return session(*result)
+
+    @r.post("/verify-email/send", status_code=204)
+    async def resend_verification(request: Request, background: BackgroundTasks,
+                                  user: dict = Depends(current_user)):
+        if user["email_verified"]:
+            raise HTTPException(409, "Email уже подтверждён")
+        if not user["email"]:
+            raise HTTPException(422, "У аккаунта нет email")
+        limit(s, f"codes:ip:{client_ip(request)}", CODES_PER_IP)
+        s.limiter.hit(f"codes:ip:{client_ip(request)}")
+        try:
+            await send_code(user["id"], user["email"], user["display_name"], "verify", background)
+        except CodeTooSoon as e:
+            raise HTTPException(429, f"Новый код можно запросить через {e.retry_after} с",
+                                headers={"Retry-After": str(e.retry_after)})
+
+    @r.post("/verify-email")
+    async def verify_email(body: CodeIn, user: dict = Depends(current_user)):
+        if user["email_verified"]:
+            return user
+        if not s.auth.check_code(user["id"], "verify", body.code):
+            raise HTTPException(400, "Неверный или просроченный код")
+        return s.auth.mark_email_verified(user["id"])
+
+    @r.post("/password/forgot", status_code=204)
+    async def forgot_password(body: ForgotIn, request: Request, background: BackgroundTasks):
+        """Всегда отвечает одинаково, чтобы нельзя было узнать, зарегистрирован ли email."""
+        email = body.email.strip().lower()
+        ip_key = f"codes:ip:{client_ip(request)}"
+        limit(s, ip_key, CODES_PER_IP)
+        s.limiter.hit(ip_key)
+        email_key = f"codes:email:{email}"
+        if s.limiter.retry_after(email_key, *CODES_PER_EMAIL):
+            return
+        s.limiter.hit(email_key)
+        row = s.auth.user_row_by_email(email)
+        if row is None or row["password_hash"] is None:
+            return
+        try:
+            await send_code(row["id"], row["email"], row["display_name"], "reset", background)
+        except CodeTooSoon:
+            return
+
+    @r.post("/password/reset")
+    async def reset_password(body: ResetIn):
+        email = body.email.strip().lower()
+        key = f"reset:email:{email}"
+        limit(s, key, RESET_ATTEMPTS_PER_EMAIL)
+        s.limiter.hit(key)
+        row = s.auth.user_row_by_email(email)
+        if row is None or not s.auth.check_code(row["id"], "reset", body.code):
+            raise HTTPException(400, "Неверный или просроченный код")
+        token = s.auth.set_password(row["id"], body.new_password)
+        user = s.auth.mark_email_verified(row["id"])  # код с почты подтверждает владение email
+        s.limiter.clear(f"login:email:{email}")
+        return session(user, token)
+
+    @r.post("/password/change")
+    async def change_password(body: ChangePasswordIn, user: dict = Depends(current_user)):
+        key = f"change:user:{user['id']}"
+        limit(s, key, LOGIN_PER_EMAIL)
+        if not s.auth.verify_user_password(user["id"], body.old_password):
+            s.limiter.hit(key)
+            raise HTTPException(400, "Текущий пароль указан неверно")
+        token = s.auth.set_password(user["id"], body.new_password)
+        return session(s.auth.public(s.auth.raw_user(user["id"])), token)
 
     @r.post("/apple")
     async def apple(body: AppleLoginIn):
@@ -123,6 +237,8 @@ def auth_router(s: Stores, current_user, token_dep) -> APIRouter:
         """Удаление аккаунта и всего контента пользователя (требование App Store)."""
         s.community.delete_user_content(user["id"])
         s.notifications.delete_user(user["id"])
+        if s.watches is not None:
+            s.watches.delete_user(user["id"])
         s.auth.delete(user["id"])
 
     return r
@@ -132,6 +248,11 @@ def auth_router(s: Stores, current_user, token_dep) -> APIRouter:
 
 def community_router(s: Stores, current_user, optional_user) -> APIRouter:
     r = APIRouter(prefix="/community", tags=["community"])
+
+    def verified_user(user: dict = Depends(current_user)) -> dict:
+        if not user["email_verified"]:
+            raise HTTPException(403, "Подтвердите email, чтобы публиковать сборки и ставить оценки")
+        return user
 
     def me(user: dict | None) -> str:
         return user["id"] if user else ""
@@ -152,7 +273,7 @@ def community_router(s: Stores, current_user, optional_user) -> APIRouter:
         return s.community.list(me(user), recipe_id=recipe_id, sort=sort, mine=mine, limit=max(1, min(limit, 100)))
 
     @r.post("/builds", status_code=201)
-    async def publish(body: PublishIn, user: dict = Depends(current_user)):
+    async def publish(body: PublishIn, user: dict = Depends(verified_user)):
         return s.community.publish(user["id"], user["display_name"], body)
 
     @r.get("/builds/{build_id}")
@@ -171,7 +292,7 @@ def community_router(s: Stores, current_user, optional_user) -> APIRouter:
 
     @r.put("/builds/{build_id}/rating")
     async def rate(build_id: str, body: RatingIn, background: BackgroundTasks,
-                   user: dict = Depends(current_user)):
+                   user: dict = Depends(verified_user)):
         build = found(build_id, user["id"])
         if build["author_id"] == user["id"]:
             raise HTTPException(403, "Нельзя оценивать свою сборку")
@@ -214,6 +335,40 @@ async def send_push(s: Stores, user_id: str, kind: str, build_id: str, build_nam
         s.notifications.remove_device(token)
 
 
+# ---------- Слежение за ценами ----------
+
+def watches_router(s: Stores, current_user) -> APIRouter:
+    r = APIRouter(prefix="/watches", tags=["price watch"])
+
+    @r.get("")
+    async def list_watches(user: dict = Depends(current_user)):
+        return s.watches.list(user["id"])
+
+    @r.put("/{client_id}")
+    async def upsert_watch(client_id: str, body: WatchIn, user: dict = Depends(current_user)):
+        if body.city_id not in WATCH_CITIES:
+            raise HTTPException(422, "Слежение за ценами пока работает только для Москвы")
+        if len(client_id) > 64:
+            raise HTTPException(422, "Слишком длинный id")
+        try:
+            return s.watches.upsert(user["id"], client_id, body, datetime.now(timezone.utc))
+        except TooManyWatches:
+            raise HTTPException(409, "Можно следить не больше чем за 20 сборками")
+
+    @r.get("/{client_id}")
+    async def get_watch(client_id: str, user: dict = Depends(current_user)):
+        watch = s.watches.get(user["id"], client_id)
+        if watch is None:
+            raise HTTPException(404, "Подписка не найдена")
+        return watch
+
+    @r.delete("/{client_id}", status_code=204)
+    async def delete_watch(client_id: str, user: dict = Depends(current_user)):
+        s.watches.delete(user["id"], client_id)
+
+    return r
+
+
 # ---------- Уведомления ----------
 
 def notifications_router(s: Stores, current_user) -> APIRouter:
@@ -241,7 +396,8 @@ def notifications_router(s: Stores, current_user) -> APIRouter:
 # ---------- Приложение ----------
 
 def create_app(service: PriceService | None = None, db_path: str | None = None,
-               apple: AppleTokenVerifier | None = None, push: PushSender | None = None) -> FastAPI:
+               apple: AppleTokenVerifier | None = None, push: PushSender | None = None,
+               mailer: Mailer | None = None, limiter_clock=None, price_watch: bool | None = None) -> FastAPI:
     holder: dict[str, Any] = {}
 
     db = open_db(db_path or os.getenv("COMMUNITY_DB", "community.db"))
@@ -252,12 +408,24 @@ def create_app(service: PriceService | None = None, db_path: str | None = None,
         notifications=NotificationStore(db),
         apple=apple or AppleTokenVerifier(audience=os.getenv("APPLE_BUNDLE_ID", "com.garybail.recipeapp")),
         push=push or push_from_env(),
+        mailer=mailer or mailer_from_env(),
+        limiter=RateLimiter(db, clock=limiter_clock) if limiter_clock else RateLimiter(db),
     )
 
+    s.watches = WatchStore(db)
+    watch_enabled = price_watch if price_watch is not None else os.getenv("PRICE_WATCH", "1") != "0"
+
     @asynccontextmanager
-    async def lifespan(_: FastAPI):
+    async def lifespan(app_: FastAPI):
         holder["service"] = service or PriceService(default_adapters())
+        watcher = PriceWatcher(s.watches, holder["service"], s.notifications, s.auth, s.push)
+        app_.state.watcher = watcher
+        task = None
+        if watch_enabled:
+            task = asyncio.create_task(scheduler_loop(watcher, hours_from_env(os.getenv("PRICE_REFRESH_HOURS"))))
         yield
+        if task:
+            task.cancel()
         await holder["service"].close()
         db.close()
 
@@ -283,6 +451,7 @@ def create_app(service: PriceService | None = None, db_path: str | None = None,
     app.include_router(auth_router(s, current_user, token_dep))
     app.include_router(community_router(s, current_user, optional_user))
     app.include_router(notifications_router(s, current_user))
+    app.include_router(watches_router(s, current_user))
 
     def svc() -> PriceService:
         return holder["service"]
