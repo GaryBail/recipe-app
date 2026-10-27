@@ -47,7 +47,15 @@ jobs:
           status=$?
           tail -n 200 build.log
           # Ошибки компиляции и упавшие тесты — в аннотации, чтобы их было видно без логов.
-          grep -E "(\.swift:[0-9]+:([0-9]+:)? error|Test Case .* failed|XCTAssert|TEST FAILED|BUILD FAILED)" build.log | grep -v CoreData | sort -u | head -40 | while IFS= read -r line; do
+          grep -iE "(\.swift:[0-9]+:([0-9]+:)? error|test case .* failed|XCTAssert|TEST FAILED|BUILD FAILED|crash|fatal error|unexpected exit)" build.log | grep -v CoreData | sort -u | head -40 | while IFS= read -r line; do
             echo "::error::${line//%/%25}"
           done
           exit $status
+
+      - name: Upload log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ios-build-log
+          path: build.log
+          retention-days: 3
