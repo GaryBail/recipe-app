@@ -1,35 +1,41 @@
 {
- "version": 2,
+ "version": 3,
  "rubrics": [
   {
    "id": "breakfast",
    "title": "Завтраки",
-   "symbol": "sunrise"
+   "symbol": "sunrise",
+   "icon": "cooking"
   },
   {
    "id": "soup",
    "title": "Супы",
-   "symbol": "mug"
+   "symbol": "mug",
+   "icon": "pot-of-food"
   },
   {
    "id": "salad",
    "title": "Салаты",
-   "symbol": "leaf"
+   "symbol": "leaf",
+   "icon": "green-salad"
   },
   {
    "id": "main",
    "title": "Горячее",
-   "symbol": "frying.pan"
+   "symbol": "frying.pan",
+   "icon": "shallow-pan-of-food"
   },
   {
    "id": "side",
    "title": "Гарниры",
-   "symbol": "fork.knife"
+   "symbol": "fork.knife",
+   "icon": "potato"
   },
   {
    "id": "pastry",
    "title": "Выпечка и десерты",
-   "symbol": "birthday.cake"
+   "symbol": "birthday.cake",
+   "icon": "pie"
   }
  ],
  "products": [
@@ -1361,6 +1367,7 @@
    "summary": "Римская паста с яйцом, твёрдым сыром и хрустящей свининой.",
    "category": "main",
    "cookMinutes": 25,
+   "icon": "spaghetti",
    "servings": 2,
    "featured": true,
    "ingredients": [
@@ -1413,6 +1420,7 @@
    "summary": "Крупно нарезанные овощи, фета, оливки и оливковое масло.",
    "category": "salad",
    "cookMinutes": 15,
+   "icon": "olive",
    "servings": 2,
    "featured": true,
    "ingredients": [
@@ -1472,6 +1480,7 @@
    "summary": "Нежные творожные сырники с румяной корочкой.",
    "category": "breakfast",
    "cookMinutes": 30,
+   "icon": "cheese-wedge",
    "servings": 3,
    "featured": true,
    "ingredients": [
@@ -1524,6 +1533,7 @@
    "summary": "Наваристый борщ на говядине со свёклой и капустой.",
    "category": "soup",
    "cookMinutes": 150,
+   "icon": "pot-of-food",
    "servings": 6,
    "featured": true,
    "ingredients": [
@@ -1605,6 +1615,7 @@
    "summary": "Тот самый праздничный салат.",
    "category": "salad",
    "cookMinutes": 60,
+   "icon": "pea-pod",
    "servings": 6,
    "featured": false,
    "ingredients": [
@@ -1671,6 +1682,7 @@
    "summary": "Пышный омлет на молоке за 10 минут.",
    "category": "breakfast",
    "cookMinutes": 10,
+   "icon": "cooking",
    "servings": 1,
    "featured": false,
    "ingredients": [
@@ -1708,6 +1720,7 @@
    "summary": "Кремовая овсянка на молоке.",
    "category": "breakfast",
    "cookMinutes": 10,
+   "icon": "bowl-with-spoon",
    "servings": 2,
    "featured": false,
    "ingredients": [
@@ -1752,6 +1765,7 @@
    "summary": "Тонкие блины на молоке.",
    "category": "pastry",
    "cookMinutes": 40,
+   "icon": "pancakes",
    "servings": 4,
    "featured": true,
    "ingredients": [
@@ -1804,6 +1818,7 @@
    "summary": "Сытный ужин в одной сковороде.",
    "category": "main",
    "cookMinutes": 35,
+   "icon": "poultry-leg",
    "servings": 4,
    "featured": false,
    "ingredients": [
@@ -1856,6 +1871,7 @@
    "summary": "Лёгкий домашний суп.",
    "category": "soup",
    "cookMinutes": 60,
+   "icon": "steaming-bowl",
    "servings": 6,
    "featured": false,
    "ingredients": [
@@ -1915,6 +1931,7 @@
    "summary": "Макароны с обжаренным фаршем и луком.",
    "category": "main",
    "cookMinutes": 30,
+   "icon": "shallow-pan-of-food",
    "servings": 4,
    "featured": false,
    "ingredients": [
@@ -1960,6 +1977,7 @@
    "summary": "Рассыпчатый плов с мясом и морковью.",
    "category": "main",
    "cookMinutes": 90,
+   "icon": "cooked-rice",
    "servings": 6,
    "featured": true,
    "ingredients": [
@@ -2019,6 +2037,7 @@
    "summary": "Хрустящий салат с курицей и сыром.",
    "category": "salad",
    "cookMinutes": 30,
+   "icon": "leafy-green",
    "servings": 3,
    "featured": true,
    "ingredients": [
@@ -2085,6 +2104,7 @@
    "summary": "Овощной салат с квашеной капустой.",
    "category": "salad",
    "cookMinutes": 60,
+   "icon": "cucumber",
    "servings": 6,
    "featured": false,
    "ingredients": [
@@ -2143,6 +2163,7 @@
    "summary": "Простой яблочный пирог.",
    "category": "pastry",
    "cookMinutes": 60,
+   "icon": "pie",
    "servings": 8,
    "featured": true,
    "ingredients": [
@@ -2189,6 +2210,7 @@
    "summary": "Сочные котлеты из смешанного фарша.",
    "category": "main",
    "cookMinutes": 40,
+   "icon": "cut-of-meat",
    "servings": 4,
    "featured": false,
    "ingredients": [
@@ -2248,6 +2270,7 @@
    "summary": "Гладкое пюре на молоке и сливочном масле.",
    "category": "side",
    "cookMinutes": 30,
+   "icon": "potato",
    "servings": 4,
    "featured": false,
    "ingredients": [
@@ -2285,6 +2308,7 @@
    "summary": "Бархатный суп со сливками.",
    "category": "soup",
    "cookMinutes": 40,
+   "icon": "fondue",
    "servings": 4,
    "featured": false,
    "ingredients": [
@@ -2336,6 +2360,7 @@
    "summary": "Постное блюдо с шампиньонами и луком.",
    "category": "side",
    "cookMinutes": 35,
+   "icon": "brown-mushroom",
    "servings": 4,
    "featured": false,
    "ingredients": [
@@ -2380,6 +2405,7 @@
    "summary": "Холодный летний суп.",
    "category": "soup",
    "cookMinutes": 30,
+   "icon": "glass-of-milk",
    "servings": 4,
    "featured": false,
    "ingredients": [
@@ -2445,6 +2471,7 @@
    "summary": "Рыба с лимоном за 20 минут.",
    "category": "main",
    "cookMinutes": 25,
+   "icon": "fish",
    "servings": 2,
    "featured": true,
    "ingredients": [
@@ -2489,6 +2516,7 @@
    "summary": "Слоёный салат со свёклой.",
    "category": "salad",
    "cookMinutes": 90,
+   "icon": "fish",
    "servings": 6,
    "featured": false,
    "ingredients": [
@@ -2554,6 +2582,7 @@
    "summary": "Как в детском саду, только вкуснее.",
    "category": "breakfast",
    "cookMinutes": 50,
+   "icon": "custard",
    "servings": 4,
    "featured": false,
    "ingredients": [
@@ -2605,6 +2634,7 @@
    "summary": "Мясо в густой подливе с паприкой.",
    "category": "main",
    "cookMinutes": 100,
+   "icon": "curry-rice",
    "servings": 4,
    "featured": false,
    "ingredients": [

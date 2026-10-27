@@ -41,6 +41,7 @@ enum SeedLoader {
         let category: String?
         let cookMinutes: Int?
         let featured: Bool?
+        let icon: String?
     }
 
     struct IngredientDTO: Decodable {
@@ -119,6 +120,7 @@ enum SeedLoader {
             recipe.rubric = r.category ?? recipe.rubric
             recipe.cookMinutes = r.cookMinutes ?? recipe.cookMinutes
             recipe.featured = r.featured ?? false
+            recipe.icon = r.icon ?? recipe.icon
 
             // Ингредиенты обновляем по id: на них ссылаются сборки пользователя.
             let current = Dictionary(recipe.ingredients.map { ($0.id, $0) }, uniquingKeysWith: { a, _ in a })
@@ -147,6 +149,7 @@ struct Rubric: Decodable, Identifiable, Hashable {
     let id: String
     let title: String
     let symbol: String
+    let icon: String?
 
     static let all: [Rubric] = SeedLoader.load()?.rubrics ?? []
 

@@ -1,16 +1,38 @@
 import SwiftUI
 
-/// Картинка рецепта: фото с сервера или аккуратная заглушка с символом рубрики.
+/// Картинка рецепта: фото с сервера или заглушка — 3D-иллюстрация блюда на мягком фоне.
 struct RecipeImage: View {
     let url: URL?
     let rubric: String
+    var icon: String = ""
+
+    private var illustration: UIImage? {
+        let name = icon.isEmpty ? (Rubric.named(rubric)?.icon ?? "fork-and-knife-with-plate") : icon
+        return UIImage(named: "food-\(name)") ?? UIImage(named: "food-fork-and-knife-with-plate")
+    }
 
     private var placeholder: some View {
-        ZStack {
-            LinearGradient(colors: RecipeImage.colors(for: rubric), startPoint: .topLeading, endPoint: .bottomTrailing)
-            Image(systemName: Rubric.named(rubric)?.symbol ?? "fork.knife")
-                .font(.system(size: 34, weight: .semibold))
-                .foregroundStyle(.white.opacity(0.9))
+        GeometryReader { geo in
+            ZStack {
+                LinearGradient(colors: RecipeImage.colors(for: rubric), startPoint: .topLeading, endPoint: .bottomTrailing)
+                // мягкое пятно света за иллюстрацией
+                Circle()
+                    .fill(.white.opacity(0.55))
+                    .frame(width: min(geo.size.width, geo.size.height) * 0.8)
+                    .blur(radius: 18)
+                if let illustration {
+                    Image(uiImage: illustration)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: min(geo.size.height * 0.62, geo.size.width * 0.62))
+                        .shadow(color: .black.opacity(0.12), radius: 8, y: 6)
+                } else {
+                    Image(systemName: Rubric.named(rubric)?.symbol ?? "fork.knife")
+                        .font(.system(size: 34, weight: .semibold))
+                        .foregroundStyle(.white.opacity(0.9))
+                }
+            }
+            .frame(width: geo.size.width, height: geo.size.height)
         }
     }
 
@@ -27,15 +49,17 @@ struct RecipeImage: View {
         }
     }
 
+    /// Пастельные фоны по рубрикам — иллюстрации яркие, фон не должен с ними спорить.
     static func colors(for rubric: String) -> [Color] {
+        func c(_ r: Double, _ g: Double, _ b: Double) -> Color { Color(red: r / 255, green: g / 255, blue: b / 255) }
         switch rubric {
-        case "breakfast": return [Color(red: 0.98, green: 0.72, blue: 0.35), Color(red: 0.95, green: 0.50, blue: 0.30)]
-        case "soup": return [Color(red: 0.90, green: 0.40, blue: 0.35), Color(red: 0.70, green: 0.22, blue: 0.30)]
-        case "salad": return [Color(red: 0.55, green: 0.80, blue: 0.45), Color(red: 0.25, green: 0.60, blue: 0.40)]
-        case "main": return [Color(red: 0.85, green: 0.55, blue: 0.35), Color(red: 0.60, green: 0.35, blue: 0.25)]
-        case "side": return [Color(red: 0.85, green: 0.75, blue: 0.50), Color(red: 0.65, green: 0.55, blue: 0.35)]
-        case "pastry": return [Color(red: 0.95, green: 0.65, blue: 0.70), Color(red: 0.80, green: 0.45, blue: 0.60)]
-        default: return [Color(red: 0.70, green: 0.70, blue: 0.75), Color(red: 0.50, green: 0.50, blue: 0.58)]
+        case "breakfast": return [c(255, 241, 214), c(255, 222, 189)]
+        case "soup": return [c(255, 228, 220), c(252, 205, 196)]
+        case "salad": return [c(226, 245, 222), c(201, 234, 205)]
+        case "main": return [c(250, 232, 216), c(240, 210, 188)]
+        case "side": return [c(245, 238, 216), c(232, 222, 190)]
+        case "pastry": return [c(252, 230, 238), c(244, 207, 222)]
+        default: return [c(236, 236, 244), c(220, 222, 235)]
         }
     }
 }
@@ -49,7 +73,7 @@ struct RecipeCard: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            RecipeImage(url: cover, rubric: recipe.rubric)
+            RecipeImage(url: cover, rubric: recipe.rubric, icon: recipe.icon)
                 .frame(height: imageHeight)
                 .frame(maxWidth: .infinity)
                 .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
@@ -57,9 +81,9 @@ struct RecipeCard: View {
                     if recipe.isFavorite {
                         Image(systemName: "heart.fill")
                             .font(.footnote.weight(.bold))
-                            .foregroundStyle(.white)
+                            .foregroundStyle(.red)
                             .padding(7)
-                            .background(.black.opacity(0.25), in: Circle())
+                            .background(.white.opacity(0.85), in: Circle())
                             .padding(8)
                     }
                 }

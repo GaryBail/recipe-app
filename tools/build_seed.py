@@ -9,16 +9,27 @@
 import json
 from pathlib import Path
 
-SEED_VERSION = 2
+SEED_VERSION = 3
 
-# Рубрики рецептов: id → (название, SF Symbol)
+# Рубрики рецептов: id → (название, SF Symbol, иллюстрация)
+# Иллюстрации — Fluent Emoji 3D (Microsoft, MIT): RecipeApp/Resources/Food/food-<имя>.png
 RUBRICS = {
-    "breakfast": ("Завтраки", "sunrise"),
-    "soup": ("Супы", "mug"),
-    "salad": ("Салаты", "leaf"),
-    "main": ("Горячее", "frying.pan"),
-    "side": ("Гарниры", "fork.knife"),
-    "pastry": ("Выпечка и десерты", "birthday.cake"),
+    "breakfast": ("Завтраки", "sunrise", "cooking"),
+    "soup": ("Супы", "mug", "pot-of-food"),
+    "salad": ("Салаты", "leaf", "green-salad"),
+    "main": ("Горячее", "frying.pan", "shallow-pan-of-food"),
+    "side": ("Гарниры", "fork.knife", "potato"),
+    "pastry": ("Выпечка и десерты", "birthday.cake", "pie"),
+}
+
+ICONS = {
+    "carbonara": "spaghetti", "greek-salad": "olive", "syrniki": "cheese-wedge", "borscht": "pot-of-food",
+    "olivier": "pea-pod", "omelet": "cooking", "oatmeal": "bowl-with-spoon", "pancakes": "pancakes",
+    "buckwheat-chicken": "poultry-leg", "chicken-noodle-soup": "steaming-bowl", "navy-pasta": "shallow-pan-of-food",
+    "plov": "cooked-rice", "caesar": "leafy-green", "vinaigrette": "cucumber", "charlotte": "pie",
+    "cutlets": "cut-of-meat", "mashed-potatoes": "potato", "pumpkin-soup": "fondue",
+    "buckwheat-mushrooms": "brown-mushroom", "okroshka": "glass-of-milk", "baked-salmon": "fish",
+    "herring-under-coat": "fish", "cottage-casserole": "custard", "goulash": "curry-rice",
 }
 
 # Продукты по категориям: категория → [(id, название, марка, ккал, белки, жиры, углеводы, {доп})]
@@ -189,6 +200,7 @@ def recipe(rid, title, summary, rubric, minutes, servings, ingredients, steps, f
         iid = ids[n] if ids else f"{rid}-{n}"
         items.append({"id": iid, "title": title_, "categoryId": cat, "amount": amount, "unit": unit})
     return {"id": rid, "title": title, "summary": summary, "category": rubric, "cookMinutes": minutes,
+            "icon": ICONS.get(rid, RUBRICS[rubric][2]),
             "servings": servings, "featured": featured, "ingredients": items, "steps": steps}
 
 
@@ -381,9 +393,15 @@ def main():
                 assert all(x[7].get("piece") for x in P[i["categoryId"]]), f"{i['categoryId']}: нет веса штуки"
         assert r["category"] in RUBRICS
 
+    food_dir = Path(__file__).resolve().parents[1] / "RecipeApp" / "Resources" / "Food"
+    for r in R:
+        assert (food_dir / f"food-{r['icon']}.png").exists(), f"нет иллюстрации {r['icon']}"
+    for v in RUBRICS.values():
+        assert (food_dir / f"food-{v[2]}.png").exists(), f"нет иллюстрации {v[2]}"
+
     seed = {
         "version": SEED_VERSION,
-        "rubrics": [{"id": k, "title": v[0], "symbol": v[1]} for k, v in RUBRICS.items()],
+        "rubrics": [{"id": k, "title": v[0], "symbol": v[1], "icon": v[2]} for k, v in RUBRICS.items()],
         "products": products,
         "recipes": R,
     }

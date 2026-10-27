@@ -136,7 +136,7 @@ struct HomeView: View {
             HStack(spacing: 8) {
                 chip(title: "Все", symbol: "square.grid.2x2", selected: rubric == nil) { rubric = nil }
                 ForEach(Rubric.all) { r in
-                    chip(title: r.title, symbol: r.symbol, selected: rubric == r.id) {
+                    chip(title: r.title, symbol: r.symbol, icon: r.icon, selected: rubric == r.id) {
                         rubric = rubric == r.id ? nil : r.id
                     }
                 }
@@ -144,9 +144,17 @@ struct HomeView: View {
         }
     }
 
-    private func chip(title: String, symbol: String, selected: Bool, action: @escaping () -> Void) -> some View {
+    private func chip(title: String, symbol: String, icon: String? = nil, selected: Bool,
+                      action: @escaping () -> Void) -> some View {
         Button(action: action) {
-            Label(title, systemImage: symbol)
+            HStack(spacing: 6) {
+                if let icon, let image = UIImage(named: "food-\(icon)") {
+                    Image(uiImage: image).resizable().scaledToFit().frame(width: 22, height: 22)
+                } else {
+                    Image(systemName: symbol)
+                }
+                Text(title)
+            }
                 .font(.subheadline.weight(.medium))
                 .padding(.horizontal, 12)
                 .padding(.vertical, 8)

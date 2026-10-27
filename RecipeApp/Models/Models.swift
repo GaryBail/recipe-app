@@ -29,6 +29,8 @@ final class Recipe {
     /// Рубрика каталога: breakfast, soup, salad, main, side, pastry.
     var rubric: String = ""
     var cookMinutes: Int = 0
+    /// Иллюстрация (RecipeApp/Resources/Food/food-<icon>.png).
+    var icon: String = ""
     /// Показывать в «Популярном», пока нет данных о лайках с сервера.
     var featured: Bool = false
     /// В избранном (лайк). Хранится локально и синхронизируется с сервером после входа.

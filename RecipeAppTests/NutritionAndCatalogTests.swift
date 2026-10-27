@@ -131,3 +131,45 @@ final class NutritionAndCatalogTests: XCTestCase {
 }
 
 private final class RecipeAppTestsBundleMarker {}
+
+@MainActor
+final class ShareTextTests: XCTestCase {
+    func testRecipeShareTextContainsEverything() throws {
+        let container = try ModelContainer(for: Recipe.self, Ingredient.self, Product.self, Build.self, BuildItem.self,
+                                           configurations: ModelConfiguration(isStoredInMemoryOnly: true))
+        let context = container.mainContext
+        let recipe = Recipe(id: "r", title: "Борщ", summary: "Наваристый", servings: 6, steps: ["Сварить", "Подать"])
+        recipe.cookMinutes = 150
+        context.insert(recipe)
+        let ingredient = Ingredient(id: "r-0", title: "Свёкла", categoryId: "beet", amount: 300, unit: .grams, position: 0)
+        ingredient.recipe = recipe
+        context.insert(ingredient)
+        let beet = Product(id: "beet", name: "Свёкла", brand: nil, categoryId: "beet", barcode: nil)
+        beet.hasNutrition = true
+        beet.kcal = 42
+        context.insert(beet)
+        try context.save()
+
+        let text = ShareText.recipe(recipe, products: [beet])
+        XCTAssertTrue(text.hasPrefix("🍽 Борщ"))
+        XCTAssertTrue(text.contains("⏱ 150 мин"))
+        XCTAssertTrue(text.contains("👥 6 порций"))
+        XCTAssertTrue(text.contains("• Свёкла — 300 г"))
+        XCTAssertTrue(text.contains("1. Сварить\n2. Подать"))
+        XCTAssertTrue(text.contains("≈ 21 ккал на порцию"))  // 300 г × 42 / 100 / 6
+
+        let build = Build(name: "Моя борщ", recipe: recipe)
+        context.insert(build)
+        let item = BuildItem(ingredientId: "r-0", product: beet)
+        item.build = build
+        context.insert(item)
+        try context.save()
+        let list = ShareText.build(build)
+        XCTAssertTrue(list.contains("☐ Свёкла — 300 г"))
+    }
+
+    func testPortionsDeclension() {
+        XCTAssertEqual([1, 2, 5, 11, 21, 22, 25].map(ShareText.portions),
+                       ["порция", "порции", "порций", "порций", "порция", "порции", "порций"])
+    }
+}

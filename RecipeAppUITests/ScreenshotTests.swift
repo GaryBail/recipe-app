@@ -45,6 +45,12 @@ final class ScreenshotTests: XCTestCase {
         _ = app.navigationBars["Паста карбонара"].waitForExistence(timeout: 5)
         sleep(1)
         snap("recipe")
+        if tapIfExists(app.buttons["Поделиться рецептом"]) {
+            sleep(2)
+            snap("share-sheet")
+            if !tapIfExists(app.buttons["Закрыть"], timeout: 2) { tapIfExists(app.buttons["Close"], timeout: 1) }
+            sleep(1)
+        }
         tapIfExists(app.buttons["В избранное"])
         app.swipeUp()
         snap("recipe-ingredients")

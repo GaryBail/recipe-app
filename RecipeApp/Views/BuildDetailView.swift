@@ -64,6 +64,9 @@ struct BuildDetailView: View {
                 } label: {
                     Label("Где купить дешевле", systemImage: "cart")
                 }
+                ShareLink(item: ShareText.build(build), subject: Text(build.name)) {
+                    Label("Отправить список покупок", systemImage: "paperplane")
+                }
                 Button {
                     editorMode = .variant(of: build)
                 } label: {

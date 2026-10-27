@@ -126,6 +126,14 @@ struct RecipeDetailView: View {
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
+                ShareLink(item: ShareText.recipe(recipe, products: products),
+                          subject: Text(recipe.title),
+                          preview: SharePreview(recipe.title, image: ShareText.previewImage(for: recipe))) {
+                    Image(systemName: "square.and.arrow.up")
+                }
+                .accessibilityLabel("Поделиться рецептом")
+            }
+            ToolbarItem(placement: .topBarTrailing) {
                 Button {
                     Favorites.toggle(recipe, context: context)
                 } label: {
@@ -161,23 +169,23 @@ struct RecipeDetailView: View {
     private var photoHeader: some View {
         let photos = social?.photos ?? []
         if photos.isEmpty {
-            RecipeImage(url: nil, rubric: recipe.rubric)
-                .frame(height: 200)
+            RecipeImage(url: nil, rubric: recipe.rubric, icon: recipe.icon)
+                .frame(height: 220)
                 .clipped()
                 .overlay(alignment: .bottomLeading) {
                     if client != nil {
                         Text("Пока нет фото — добавьте первое")
                             .font(.caption.weight(.medium))
-                            .foregroundStyle(.white)
+                            .foregroundStyle(.primary)
                             .padding(.horizontal, 10).padding(.vertical, 6)
-                            .background(.black.opacity(0.3), in: Capsule())
+                            .background(.white.opacity(0.75), in: Capsule())
                             .padding(12)
                     }
                 }
         } else {
             TabView {
                 ForEach(photos.reversed()) { photo in
-                    RecipeImage(url: client?.url(photo.url), rubric: recipe.rubric)
+                    RecipeImage(url: client?.url(photo.url), rubric: recipe.rubric, icon: recipe.icon)
                         .frame(height: 260)
                         .clipped()
                         .overlay(alignment: .bottomLeading) {
