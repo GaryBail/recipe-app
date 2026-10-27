@@ -20,4 +20,14 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -r requirements-dev.txt
-      - run: pytest -q
+      - name: pytest
+        shell: bash
+        run: |
+          set +e
+          pytest -q --tb=line -rfE 2>&1 | tee pytest.out
+          status=${PIPESTATUS[0]}
+          # Ошибки — в аннотации, чтобы их было видно без логов.
+          grep -E "^(/|FAILED|ERROR|E )" pytest.out | head -30 | while IFS= read -r line; do
+            echo "::error::${line//%/%25}"
+          done
+          exit $status

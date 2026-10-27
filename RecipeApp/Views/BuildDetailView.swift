@@ -27,9 +27,11 @@ struct BuildDetailView: View {
             if let recipe = build.recipe {
                 Section("Продукты") {
                     Stepper(value: Binding(get: { build.effectiveServings },
-                                           set: { build.servings = $0 == recipe.servings ? nil : $0
-                                                  try? context.save()
-                                                  PriceWatchClient.resyncIfWatched(build) }),
+                                           set: { value in
+                                               build.servings = value == recipe.servings ? nil : value
+                                               try? context.save()
+                                               Task { @MainActor in PriceWatchClient.resyncIfWatched(build) }
+                                           }),
                             in: 1...30) {
                         Text("Порций: \(build.effectiveServings)").font(.body.weight(.medium))
                     }
