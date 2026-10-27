@@ -5,6 +5,9 @@ PyJWT[crypto]>=2.8
 httpx[http2]>=0.27
 # Библиотеки магазинов (декоратор autotest из human_requests) импортируют pytest при каждом запросе.
 pytest>=8
+# Общая зависимость библиотек магазинов. В мае 2026 из неё удалили ApiParent, на который
+# рассчитана библиотека Пятёрочки, — фиксируем версию от марта 2026 (0.1.9).
+human-requests @ git+https://github.com/Miskler/human-requests@2ab127f6621ddbc264bbf90192e20c3235c59932
 # selectolax 1.0 удалил движок Modest, который использует human_requests.
 selectolax<1.0
 # Неофициальные клиенты магазинов (MIT, Open-Inflation). Зафиксированы на проверенных коммитах,
