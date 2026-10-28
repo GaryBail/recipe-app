@@ -90,6 +90,14 @@ def auchan():
     for key, q in QUERIES.items():
         save(f"auchan_search_{key}", web.post("https://www.auchan.ru/v1/search", params={"merchantId": merchant},
                                               json={"query": q, "page": 1, "perPage": 10}))
+    for name, params, body in (
+            ("qs", {"merchantId": merchant, "page": 1, "perPage": 5}, {"query": "молоко"}),
+            ("limit", {"merchantId": merchant}, {"query": "молоко", "limit": 5}),
+            ("per_page", {"merchantId": merchant, "per_page": 5}, {"query": "молоко"}),
+            ("size", {"merchantId": merchant}, {"query": "молоко", "size": 5, "page": 1})):
+        r = web.post("https://www.auchan.ru/v1/search", params=params, json=body)
+        save(f"auchan_page_{name}", {"status": r.status_code, "count": len(r.json()["items"][0]["products"])
+                                     if r.status_code == 200 else r.text[:300]})
     save("auchan_search_milk_msk", web.post("https://www.auchan.ru/v1/search", params={"merchantId": 1},
                                             json={"query": "молоко", "page": 1, "perPage": 3}))
 
@@ -121,5 +129,5 @@ def kuper():
 
 
 if __name__ == "__main__":
-    for f in (lenta, magnit, auchan, kuper):
+    for f in (auchan, kuper):
         guard(f)
