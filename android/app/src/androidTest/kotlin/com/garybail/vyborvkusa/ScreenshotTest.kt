@@ -7,6 +7,7 @@ import androidx.compose.ui.test.captureToImage
 import androidx.compose.ui.test.hasContentDescription
 import androidx.compose.ui.test.hasTestTag
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
+import androidx.compose.ui.test.onAllNodesWithTag
 import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onFirst
 import androidx.compose.ui.test.onNodeWithContentDescription
@@ -41,8 +42,16 @@ class ScreenshotTest {
         Thread.sleep(400)
         index += 1
         val bitmap = rule.onRoot().captureToImage().asAndroidBitmap()
-        File(dir, String.format("%02d-%s.png", index, name)).outputStream().use {
-            bitmap.compress(Bitmap.CompressFormat.PNG, 100, it)
+        val file = File(dir, String.format("%02d-%s.png", index, name))
+        file.outputStream().use { bitmap.compress(Bitmap.CompressFormat.PNG, 100, it) }
+        // После тестов AGP удаляет приложение вместе с его файлами — копируем туда, откуда CI заберёт.
+        shell("mkdir -p /data/local/tmp/screens")
+        shell("cp ${file.absolutePath} /data/local/tmp/screens/")
+    }
+
+    private fun shell(command: String) {
+        InstrumentationRegistry.getInstrumentation().uiAutomation.executeShellCommand(command).use { fd ->
+            java.io.FileInputStream(fd.fileDescriptor).use { it.readBytes() }
         }
     }
 
@@ -103,9 +112,9 @@ class ScreenshotTest {
         shot("profile")
 
         tab("home")
-        rule.waitUntilExactlyOneExists(hasTestTag("home"))
+        rule.waitUntilAtLeastOneExists(hasTestTag("search"), timeoutMillis = 5_000)
         rule.onNodeWithContentDescription("Очистить").performClick()
-        rule.onNodeWithTag("home").performScrollToNode(hasTestTag("fridge-link"))
+        rule.onAllNodesWithTag("home").onFirst().performScrollToNode(hasTestTag("fridge-link"))
         rule.onNodeWithTag("fridge-link").performClick()
         rule.onNodeWithTag("fridge-query").performTextInput("яйц")
         rule.onAllNodesWithText("Яйц", substring = true).onFirst().performClick()

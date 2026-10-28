@@ -94,7 +94,7 @@ jobs:
           # Каждая строка — отдельный shell: статус теста сохраняем в файл, чтобы забрать скриншоты и после сбоя.
           script: |
             ./gradlew --no-daemon :app:connectedDebugAndroidTest > connected.log 2>&1; echo $? > status.txt
-            mkdir -p screenshots && adb pull /sdcard/Android/data/com.garybail.vyborvkusa/files/screenshots/. screenshots/ || true
+            mkdir -p screenshots && adb pull /data/local/tmp/screens/. screenshots/ || true
             grep -E "FAILED|Exception|AssertionError|expected|not found|failed" connected.log | head -30 | sed 's/^/::error::/' || true
             test "$(cat status.txt)" = "0"
       - name: Pull screenshots after failure
