@@ -1,0 +1,2488 @@
+{
+ "status": 200,
+ "body": {
+  "products": [
+   {
+    "id": "118887",
+    "sku": "70233",
+    "retailer_sku": "118887",
+    "available": true,
+    "legacy_offer_id": 37572933252,
+    "name": "Картофель мытый",
+    "price": 101.99,
+    "original_price": 101.99,
+    "discount": 0,
+    "human_volume": "1 кг",
+    "volume": 1,
+    "volume_type": "kg",
+    "items_per_pack": 1,
+    "discount_ends_at": "2026-10-29T00:00:00.000+00:00",
+    "price_type": "per_kilo",
+    "grams_per_unit": 1000,
+    "unit_price": 101.99,
+    "original_unit_price": 101.99,
+    "promo_badge_ids": [],
+    "score": 4.5,
+    "labels": [],
+    "image_urls": [
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzcwMjMzL29yaWdpbmFsLzEvMjAyMi0wOC0yM1QwMCUzQTM4JTNBMjguOTU1MDAwJTJCMDAlM0EwMC83MDIzM18xLmpwZw=="
+    ],
+    "requirements": [],
+    "slug": "kartofel-mytyy-d917100",
+    "max_select_quantity": 999,
+    "canonical_url": "https://sbermarket.ru/products/70233-kartofel-mytyy-d917100",
+    "vat_info": null,
+    "bmpl_info": {},
+    "max_per_order": 217,
+    "ads_meta": null,
+    "with_options": false,
+    "is_beneficial": false,
+    "store_id": "135212",
+    "price_per_base_human_volume": "",
+    "prices_bank": null,
+    "sale_conditions": [
+     {
+      "id": 152,
+      "value": "Невозвратные категории"
+     },
+     {
+      "id": 154,
+      "value": "Невозвратные категории для отмен"
+     },
+     {
+      "id": 158,
+      "value": "Невозвратная для инвентаризации ДКП"
+     }
+    ],
+    "stock_discount_product_count": "0",
+    "stock_discount_product_left": "0",
+    "retailer": null,
+    "store": null,
+    "bmpl_values": {},
+    "discount_percent": 0,
+    "score_details": {
+     "feedback_count": 121,
+     "feedback_source": "ВкусВилл",
+     "comment_count": 45
+    }
+   },
+   {
+    "id": "181019",
+    "sku": "75798",
+    "retailer_sku": "181019",
+    "available": true,
+    "legacy_offer_id": 37692140952,
+    "name": "Картофель красный",
+    "price": 88.99,
+    "original_price": 88.99,
+    "discount": 0,
+    "human_volume": "1 кг",
+    "volume": 1,
+    "volume_type": "kg",
+    "items_per_pack": 1,
+    "discount_ends_at": "2026-10-29T00:00:00.000+00:00",
+    "price_type": "per_kilo",
+    "grams_per_unit": 1000,
+    "unit_price": 88.99,
+    "original_unit_price": 88.99,
+    "promo_badge_ids": [],
+    "score": 4.2,
+    "labels": [],
+    "image_urls": [
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzc1Nzk4L29yaWdpbmFsLzEvMjAyMi0wOC0yM1QwMSUzQTUyJTNBMTkuOTg1MDAwJTJCMDAlM0EwMC83NTc5OF8xLmpwZw=="
+    ],
+    "requirements": [],
+    "slug": "kartofel-krasnyy-e0e7fdb",
+    "max_select_quantity": 999,
+    "canonical_url": "https://sbermarket.ru/products/75798-kartofel-krasnyy-e0e7fdb",
+    "vat_info": null,
+    "bmpl_info": {},
+    "max_per_order": 74,
+    "ads_meta": null,
+    "with_options": false,
+    "is_beneficial": false,
+    "store_id": "135212",
+    "price_per_base_human_volume": "",
+    "prices_bank": null,
+    "sale_conditions": [
+     {
+      "id": 152,
+      "value": "Невозвратные категории"
+     },
+     {
+      "id": 154,
+      "value": "Невозвратные категории для отмен"
+     },
+     {
+      "id": 158,
+      "value": "Невозвратная для инвентаризации ДКП"
+     }
+    ],
+    "stock_discount_product_count": "0",
+    "stock_discount_product_left": "0",
+    "retailer": null,
+    "store": null,
+    "bmpl_values": {},
+    "discount_percent": 0,
+    "score_details": {
+     "feedback_count": 92,
+     "feedback_source": "ВкусВилл",
+     "comment_count": 27
+    }
+   },
+   {
+    "id": "41425",
+    "sku": "70227",
+    "retailer_sku": "41425",
+    "available": true,
+    "legacy_offer_id": 37735146792,
+    "name": "Картофель белый",
+    "price": 88.99,
+    "original_price": 88.99,
+    "discount": 0,
+    "human_volume": "1 кг",
+    "volume": 1,
+    "volume_type": "kg",
+    "items_per_pack": 1,
+    "discount_ends_at": "2026-10-29T00:00:00.000+00:00",
+    "price_type": "per_kilo",
+    "grams_per_unit": 1000,
+    "unit_price": 88.99,
+    "original_unit_price": 88.99,
+    "promo_badge_ids": [],
+    "score": 3.8,
+    "labels": [],
+    "image_urls": [
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzcwMjI3L29yaWdpbmFsLzEvMjAyMi0wOC0yM1QwMCUzQTE3JTNBNDQuMzA2MDAwJTJCMDAlM0EwMC83MDIyN18xLmpwZw=="
+    ],
+    "requirements": [],
+    "slug": "kartofel-belyy-1d0baed",
+    "max_select_quantity": 999,
+    "canonical_url": "https://sbermarket.ru/products/70227-kartofel-belyy-1d0baed",
+    "vat_info": null,
+    "bmpl_info": {},
+    "max_per_order": 157,
+    "ads_meta": null,
+    "with_options": false,
+    "is_beneficial": false,
+    "store_id": "135212",
+    "price_per_base_human_volume": "",
+    "prices_bank": null,
+    "sale_conditions": [
+     {
+      "id": 152,
+      "value": "Невозвратные категории"
+     },
+     {
+      "id": 154,
+      "value": "Невозвратные категории для отмен"
+     },
+     {
+      "id": 158,
+      "value": "Невозвратная для инвентаризации ДКП"
+     }
+    ],
+    "stock_discount_product_count": "0",
+    "stock_discount_product_left": "0",
+    "retailer": null,
+    "store": null,
+    "bmpl_values": {},
+    "discount_percent": 0,
+    "score_details": {
+     "feedback_count": 4,
+     "feedback_source": "ВкусВилл",
+     "comment_count": 2
+    }
+   },
+   {
+    "id": "187384",
+    "sku": "99627",
+    "retailer_sku": "187384",
+    "available": true,
+    "legacy_offer_id": 37793194882,
+    "name": "Картофель красный мытый",
+    "price": 126.99,
+    "original_price": 126.99,
+    "discount": 0,
+    "human_volume": "1000 г",
+    "volume": 1000,
+    "volume_type": "g",
+    "items_per_pack": 1,
+    "discount_ends_at": "2026-10-29T00:00:00.000+00:00",
+    "price_type": "per_kilo",
+    "grams_per_unit": 1000,
+    "unit_price": 126.99,
+    "original_unit_price": 126.99,
+    "promo_badge_ids": [],
+    "score": 4.6,
+    "labels": [],
+    "image_urls": [
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzk5NjI3L29yaWdpbmFsLzEvMjAyMy0xMS0yNFQxNiUzQTI3JTNBMjEuMzkxMzIzJTJCMDAlM0EwMC85OTYyN18xLmpwZw=="
+    ],
+    "requirements": [],
+    "slug": "kartofel-krasnyy-mytyy-7d96c08",
+    "max_select_quantity": 999,
+    "canonical_url": "https://sbermarket.ru/products/99627-kartofel-krasnyy-mytyy-7d96c08",
+    "vat_info": null,
+    "bmpl_info": {},
+    "max_per_order": 45,
+    "ads_meta": null,
+    "with_options": false,
+    "is_beneficial": false,
+    "store_id": "135212",
+    "price_per_base_human_volume": "",
+    "prices_bank": null,
+    "sale_conditions": [
+     {
+      "id": 154,
+      "value": "Невозвратные категории для отмен"
+     },
+     {
+      "id": 152,
+      "value": "Невозвратные категории"
+     },
+     {
+      "id": 158,
+      "value": "Невозвратная для инвентаризации ДКП"
+     }
+    ],
+    "stock_discount_product_count": "0",
+    "stock_discount_product_left": "0",
+    "retailer": null,
+    "store": null,
+    "bmpl_values": {},
+    "discount_percent": 0,
+    "score_details": {
+     "feedback_count": 43,
+     "feedback_source": "ВкусВилл",
+     "comment_count": 16
+    }
+   },
+   {
+    "id": "422456",
+    "sku": "18962495",
+    "retailer_sku": "422456",
+    "available": true,
+    "legacy_offer_id": 37690167342,
+    "name": "Картофель Беби мытый ~2 кг",
+    "price": 339.98,
+    "original_price": 339.98,
+    "discount": 0,
+    "human_volume": "2 кг",
+    "volume": 2,
+    "volume_type": "kg",
+    "items_per_pack": 1,
+    "discount_ends_at": "1970-01-01T00:00:00.000+00:00",
+    "price_type": "per_package",
+    "grams_per_unit": 2000,
+    "unit_price": 169.99,
+    "original_unit_price": 169.99,
+    "promo_badge_ids": [],
+    "score": 3.6,
+    "labels": [],
+    "image_urls": [
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzE4OTYyNDk1L29yaWdpbmFsLzEvMjAyMi0wOC0yM1QxNCUzQTQ4JTNBMDMuOTc4MDAwJTJCMDAlM0EwMC8xODk2MjQ5NV8xLmpwZw=="
+    ],
+    "requirements": [],
+    "slug": "kartofel-bebi-mytyy-2-kg-299501c",
+    "max_select_quantity": 999,
+    "canonical_url": "https://sbermarket.ru/products/18962495-kartofel-bebi-mytyy-2-kg-299501c",
+    "vat_info": null,
+    "bmpl_info": {},
+    "max_per_order": 20,
+    "ads_meta": null,
+    "with_options": false,
+    "is_beneficial": false,
+    "store_id": "135212",
+    "price_per_base_human_volume": "",
+    "prices_bank": null,
+    "sale_conditions": [
+     {
+      "id": 154,
+      "value": "Невозвратные категории для отмен"
+     },
+     {
+      "id": 152,
+      "value": "Невозвратные категории"
+     },
+     {
+      "id": 158,
+      "value": "Невозвратная для инвентаризации ДКП"
+     }
+    ],
+    "stock_discount_product_count": "0",
+    "stock_discount_product_left": "0",
+    "retailer": null,
+    "store": null,
+    "bmpl_values": {},
+    "discount_percent": 0,
+    "score_details": {
+     "feedback_count": 18,
+     "feedback_source": "ВкусВилл",
+     "comment_count": 11
+    }
+   },
+   {
+    "id": "567206",
+    "sku": "1548007",
+    "retailer_sku": "567206",
+    "available": true,
+    "legacy_offer_id": 40932185522,
+    "name": "Картофель We Fry по-деревенски со специями предобжаренный замороженный Халяль 700 г",
+    "price": 358.99,
+    "original_price": 358.99,
+    "discount": 0,
+    "human_volume": "700 г",
+    "volume": 700,
+    "volume_type": "g",
+    "items_per_pack": 1,
+    "discount_ends_at": "2026-10-29T00:00:00.000+00:00",
+    "price_type": "per_item",
+    "grams_per_unit": 700,
+    "unit_price": 358.99,
+    "original_unit_price": 358.99,
+    "promo_badge_ids": [],
+    "score": null,
+    "labels": [],
+    "image_urls": [
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzE1NDgwMDcvb3JpZ2luYWwvMS8yMDI2LTA4LTI2JTIwMDclM0ExMSUzQTE4Ljc5OTA5NiUyQjAwJTNBMDAvMTU0ODAwN18xLmpwZw=="
+    ],
+    "requirements": [],
+    "slug": "kartofel-we-fry-po-derevenski-so-spetsiyami-predobzharennyy-zamorozhennyy-halyal-700-g",
+    "max_select_quantity": 999,
+    "canonical_url": "https://sbermarket.ru/products/1548007-kartofel-we-fry-po-derevenski-so-spetsiyami-predobzharennyy-zamorozhennyy-halyal-700-g",
+    "vat_info": null,
+    "bmpl_info": {},
+    "max_per_order": 28,
+    "ads_meta": null,
+    "with_options": false,
+    "is_beneficial": false,
+    "store_id": "135212",
+    "price_per_base_human_volume": "",
+    "prices_bank": null,
+    "sale_conditions": [
+     {
+      "id": 154,
+      "value": "Невозвратные категории для отмен"
+     },
+     {
+      "id": 152,
+      "value": "Невозвратные категории"
+     },
+     {
+      "id": 158,
+      "value": "Невозвратная для инвентаризации ДКП"
+     },
+     {
+      "id": 160,
+      "value": "Заморозка для шоппера"
+     }
+    ],
+    "stock_discount_product_count": "0",
+    "stock_discount_product_left": "0",
+    "retailer": null,
+    "store": null,
+    "bmpl_values": {},
+    "discount_percent": 0,
+    "score_details": null
+   },
+   {
+    "id": "126093",
+    "sku": "198199",
+    "retailer_sku": "126093",
+    "available": true,
+    "legacy_offer_id": 37568555202,
+    "name": "Картофель фри замороженный",
+    "price": 112,
+    "original_price": 112,
+    "discount": 0,
+    "human_volume": "500 г",
+    "volume": 500,
+    "volume_type": "g",
+    "items_per_pack": 1,
+    "discount_ends_at": "2026-10-29T00:00:00.000+00:00",
+    "price_type": "per_kilo",
+    "grams_per_unit": 500,
+    "unit_price": 223.99,
+    "original_unit_price": 223.99,
+    "promo_badge_ids": [],
+    "score": 4.1,
+    "labels": [],
+    "image_urls": [
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzE5ODE5OS9vcmlnaW5hbC8xLzIwMjItMDgtMjJUMTklM0EzMyUzQTAxLjM5MDAwMCUyQjAwJTNBMDAvMTk4MTk5XzEuanBn",
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzE5ODE5OS9vcmlnaW5hbC8zLzIwMjItMDgtMjNUMDclM0E0NyUzQTU4LjM2MTAwMCUyQjAwJTNBMDAvMTk4MTk5XzMuanBn"
+    ],
+    "requirements": [],
+    "slug": "kartofel-fri-zamorozhennyy-241e426",
+    "max_select_quantity": 999,
+    "canonical_url": "https://sbermarket.ru/products/198199-kartofel-fri-zamorozhennyy-241e426",
+    "vat_info": null,
+    "bmpl_info": {},
+    "max_per_order": 218,
+    "ads_meta": null,
+    "with_options": false,
+    "is_beneficial": false,
+    "store_id": "135212",
+    "price_per_base_human_volume": "",
+    "prices_bank": null,
+    "sale_conditions": [
+     {
+      "id": 154,
+      "value": "Невозвратные категории для отмен"
+     },
+     {
+      "id": 152,
+      "value": "Невозвратные категории"
+     },
+     {
+      "id": 158,
+      "value": "Невозвратная для инвентаризации ДКП"
+     },
+     {
+      "id": 160,
+      "value": "Заморозка для шоппера"
+     }
+    ],
+    "stock_discount_product_count": "0",
+    "stock_discount_product_left": "0",
+    "retailer": null,
+    "store": null,
+    "bmpl_values": {},
+    "discount_percent": 0,
+    "score_details": {
+     "feedback_count": 26,
+     "feedback_source": "ВкусВилл",
+     "comment_count": 16
+    }
+   },
+   {
+    "id": "604666",
+    "sku": "18394660",
+    "retailer_sku": "604666",
+    "available": true,
+    "legacy_offer_id": 39543227632,
+    "name": "Картошка-лепешка Лента Карбонара",
+    "price": 88.17,
+    "original_price": 88.17,
+    "discount": 0,
+    "human_volume": "250 г",
+    "volume": 250,
+    "volume_type": "g",
+    "items_per_pack": 1,
+    "discount_ends_at": "1970-01-01T00:00:00.000+00:00",
+    "price_type": "per_kilo",
+    "grams_per_unit": 250,
+    "unit_price": 352.69,
+    "original_unit_price": 352.69,
+    "promo_badge_ids": [],
+    "score": 4.8,
+    "labels": [],
+    "image_urls": [
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzE4Mzk0NjYwL29yaWdpbmFsLzEvMjAyMi0wOS0xNVQxNCUzQTUzJTNBNTAuNDc2MDAwJTJCMDAlM0EwMC8xODM5NDY2MF8xLmpwZw==",
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzE4Mzk0NjYwL29yaWdpbmFsLzMvMjAyMi0wOS0xNVQxNCUzQTUzJTNBNTEuMjIwMDAwJTJCMDAlM0EwMC8xODM5NDY2MF8zLmpwZw==",
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzE4Mzk0NjYwL29yaWdpbmFsLzYvMjAyNi0xMC0xMyUyMDE0JTNBMDQlM0E0NC4zMTI5MDklMkIwMCUzQTAwLzE4Mzk0NjYwXzYuanBn"
+    ],
+    "requirements": [],
+    "slug": "kartoshka-lepeshka-lenta-karbonara",
+    "max_select_quantity": 999,
+    "canonical_url": "https://sbermarket.ru/products/18394660-kartoshka-lepeshka-lenta-karbonara",
+    "vat_info": null,
+    "bmpl_info": {},
+    "max_per_order": 72,
+    "ads_meta": null,
+    "with_options": false,
+    "is_beneficial": false,
+    "store_id": "135212",
+    "price_per_base_human_volume": "",
+    "prices_bank": null,
+    "sale_conditions": [
+     {
+      "id": 154,
+      "value": "Невозвратные категории для отмен"
+     },
+     {
+      "id": 152,
+      "value": "Невозвратные категории"
+     },
+     {
+      "id": 158,
+      "value": "Невозвратная для инвентаризации ДКП"
+     },
+     {
+      "id": 161,
+      "value": "Охлажденка для шоппера"
+     }
+    ],
+    "stock_discount_product_count": "0",
+    "stock_discount_product_left": "0",
+    "retailer": null,
+    "store": null,
+    "bmpl_values": {},
+    "discount_percent": 0,
+    "score_details": {
+     "feedback_count": 14,
+     "feedback_source": "ВкусВилл",
+     "comment_count": 9
+    }
+   }
+  ],
+  "facets": [
+   {
+    "key": "discounted",
+    "name": "Товары со скидкой",
+    "type": "toggle",
+    "options": [
+     {
+      "name": null,
+      "value": 1,
+      "count": 590,
+      "permalink": null,
+      "active": false,
+      "bound": 0
+     }
+    ]
+   },
+   {
+    "key": "price",
+    "name": "Цена",
+    "type": "range",
+    "options": [
+     {
+      "name": "От",
+      "value": 12,
+      "count": 0,
+      "permalink": "_price_min-12",
+      "active": false,
+      "bound": 12
+     },
+     {
+      "name": "До",
+      "value": 2568,
+      "count": 0,
+      "permalink": "_price_max-2568",
+      "active": false,
+      "bound": 2568
+     }
+    ]
+   },
+   {
+    "key": "brand",
+    "name": "Бренд",
+    "type": "multi_select",
+    "options": [
+     {
+      "name": "Sen Soy",
+      "value": 10127,
+      "count": 3,
+      "permalink": "sen-soy",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Super",
+      "value": 10847,
+      "count": 2,
+      "permalink": "super",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Papita",
+      "value": 111063,
+      "count": 3,
+      "permalink": "papita",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Vegeta",
+      "value": 11719,
+      "count": 2,
+      "permalink": "vegeta",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Vici",
+      "value": 11819,
+      "count": 11,
+      "permalink": "vici",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Viola",
+      "value": 11890,
+      "count": 4,
+      "permalink": "viola",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Уплетоны",
+      "value": 119729,
+      "count": 4,
+      "permalink": "upletony",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Кнорр",
+      "value": 120785,
+      "count": 8,
+      "permalink": "knorr-c385c09",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Yelli",
+      "value": 12237,
+      "count": 5,
+      "permalink": "yelli",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Атяшево",
+      "value": 12990,
+      "count": 3,
+      "permalink": "atyashevo",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Бабушка Аня",
+      "value": 13027,
+      "count": 7,
+      "permalink": "babushka-anya",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Бабушкино Лукошко",
+      "value": 13037,
+      "count": 4,
+      "permalink": "babushkino-lukoshko",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Bibigo",
+      "value": 1309,
+      "count": 2,
+      "permalink": "bibigo",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Без бренда",
+      "value": 13173,
+      "count": 40,
+      "permalink": "bez-brenda",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Big Bon",
+      "value": 1322,
+      "count": 3,
+      "permalink": "big-bon",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Буздякский",
+      "value": 13580,
+      "count": 2,
+      "permalink": "buzdyakskiy",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Велком",
+      "value": 13731,
+      "count": 2,
+      "permalink": "velkom",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Bionova",
+      "value": 1393,
+      "count": 2,
+      "permalink": "bionova",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Дымов",
+      "value": 14966,
+      "count": 5,
+      "permalink": "dymov",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Жаренки",
+      "value": 15096,
+      "count": 2,
+      "permalink": "zharenki",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Золотой Стандарт",
+      "value": 15491,
+      "count": 9,
+      "permalink": "zolotoy-standart",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Империя Вкуса",
+      "value": 15620,
+      "count": 3,
+      "permalink": "imperiya-vkusa",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Индана",
+      "value": 15635,
+      "count": 3,
+      "permalink": "indana",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Иней",
+      "value": 15648,
+      "count": 8,
+      "permalink": "iney",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Bonvida",
+      "value": 1589,
+      "count": 4,
+      "permalink": "bonvida",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Лента",
+      "value": 16738,
+      "count": 55,
+      "permalink": "lenta",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Леовит",
+      "value": 16743,
+      "count": 2,
+      "permalink": "leovit",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Махеевъ",
+      "value": 17166,
+      "count": 2,
+      "permalink": "maheev",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Мираторг",
+      "value": 17393,
+      "count": 12,
+      "permalink": "miratorg",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Bruto snacks",
+      "value": 1753,
+      "count": 6,
+      "permalink": "bruto-snacks",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Морозко",
+      "value": 17611,
+      "count": 8,
+      "permalink": "morozko",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Морозко Green",
+      "value": 17612,
+      "count": 5,
+      "permalink": "morozko-green",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Bucheron",
+      "value": 1764,
+      "count": 2,
+      "permalink": "bucheron",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Муми",
+      "value": 17715,
+      "count": 3,
+      "permalink": "mumi",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Останкино",
+      "value": 18395,
+      "count": 3,
+      "permalink": "ostankino",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "От Ильиной",
+      "value": 18414,
+      "count": 2,
+      "permalink": "ot-ilinoy",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Папа Может",
+      "value": 18489,
+      "count": 21,
+      "permalink": "papa-mozhet",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Рот Фронт",
+      "value": 19352,
+      "count": 3,
+      "permalink": "rot-front",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Санта Бремор",
+      "value": 19681,
+      "count": 9,
+      "permalink": "santa-bremor",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Сосновоборская",
+      "value": 20412,
+      "count": 4,
+      "permalink": "sosnovoborskaya",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Стародворье",
+      "value": 20524,
+      "count": 3,
+      "permalink": "starodvorie",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Суперсуп",
+      "value": 20650,
+      "count": 2,
+      "permalink": "supersup",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Сытоедов",
+      "value": 20736,
+      "count": 3,
+      "permalink": "sytoedov",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Трапеза",
+      "value": 21051,
+      "count": 2,
+      "permalink": "trapeza",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "У Палыча",
+      "value": 21148,
+      "count": 4,
+      "permalink": "u-palycha",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "ФрутоНяня",
+      "value": 21538,
+      "count": 2,
+      "permalink": "frutonyanya",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Цезарь",
+      "value": 21792,
+      "count": 5,
+      "permalink": "tsezar",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Черкизово",
+      "value": 21868,
+      "count": 6,
+      "permalink": "cherkizovo",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Chikalab",
+      "value": 2351,
+      "count": 2,
+      "permalink": "chikalab-c1dba43",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Chikon",
+      "value": 2352,
+      "count": 3,
+      "permalink": "chikon",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Русская Картошка",
+      "value": 25659,
+      "count": 3,
+      "permalink": "russkaya-kartoshka-8b496c6",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "С пылу с жару",
+      "value": 26076,
+      "count": 3,
+      "permalink": "s-pylu-s-zharu-e71ac19",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Creative Kitchen",
+      "value": 2788,
+      "count": 2,
+      "permalink": "creative-kitchen",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Русское море",
+      "value": 29098,
+      "count": 13,
+      "permalink": "russkoie-morie",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Русский Продукт",
+      "value": 29336,
+      "count": 5,
+      "permalink": "russkiy-produkt",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Sибирская коллекция",
+      "value": 30340,
+      "count": 6,
+      "permalink": "sibirskaya-kollektsiya-ef1e4e9f-266f-40dc-a7a5-df49c46a1afe",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Свежее Завтра",
+      "value": 32610,
+      "count": 4,
+      "permalink": "svezhee-zavtra-adbfe80",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Московский Картофель",
+      "value": 32668,
+      "count": 4,
+      "permalink": "moskovskiy-kartofel-0d7d657",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Doshirak",
+      "value": 3375,
+      "count": 17,
+      "permalink": "doshirak-58b837da-984f-48e3-a71f-c80ff3c7c79b",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Dr. Diesel",
+      "value": 3398,
+      "count": 7,
+      "permalink": "dr-diesel-14f30ee4-47e7-49b2-9548-95bfe2fb5547",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Чистая линия",
+      "value": 34881,
+      "count": 3,
+      "permalink": "chistaya-liniya",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Eco Botanica",
+      "value": 3548,
+      "count": 2,
+      "permalink": "eco-botanica",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Essen",
+      "value": 3839,
+      "count": 2,
+      "permalink": "essen-3bf99a12-cb6f-458c-83b1-1cfb9eb3919e",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Laplandia",
+      "value": 39559,
+      "count": 3,
+      "permalink": "laplandia",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Snaq Fabriq",
+      "value": 40400,
+      "count": 7,
+      "permalink": "snaq-fabriq",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Gerber",
+      "value": 4684,
+      "count": 2,
+      "permalink": "gerber",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Q-idea",
+      "value": 49086,
+      "count": 4,
+      "permalink": "q-idea",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Aland",
+      "value": 49923,
+      "count": 3,
+      "permalink": "aland",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Gullon",
+      "value": 5108,
+      "count": 3,
+      "permalink": "gullon",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "365 дней",
+      "value": 52,
+      "count": 12,
+      "permalink": "365-dney",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Hochland",
+      "value": 5404,
+      "count": 6,
+      "permalink": "hochland",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Delikaiser",
+      "value": 58090,
+      "count": 3,
+      "permalink": "delikaiser",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "4 Сезона",
+      "value": 61,
+      "count": 2,
+      "permalink": "4-sezona",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Dr.Diesel",
+      "value": 61223,
+      "count": 3,
+      "permalink": "dr-diesel",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Argeta",
+      "value": 613,
+      "count": 3,
+      "permalink": "argeta",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Knorr",
+      "value": 6231,
+      "count": 4,
+      "permalink": "knorr",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Kotanyi",
+      "value": 6298,
+      "count": 3,
+      "permalink": "kotanyi",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Село Зеленое",
+      "value": 64475,
+      "count": 3,
+      "permalink": "selo-zelenoe-967ecb8",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Лента Fresh",
+      "value": 64545,
+      "count": 15,
+      "permalink": "lenta-fresh",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "La Trattoria",
+      "value": 6491,
+      "count": 3,
+      "permalink": "la-trattoria",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Premium Club",
+      "value": 65354,
+      "count": 6,
+      "permalink": "premium-club",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Lambertz",
+      "value": 6556,
+      "count": 3,
+      "permalink": "lambertz",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Lay's",
+      "value": 6646,
+      "count": 42,
+      "permalink": "lay-s",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Лента Life",
+      "value": 66524,
+      "count": 6,
+      "permalink": "lenta-life",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Pervafood",
+      "value": 66945,
+      "count": 3,
+      "permalink": "pervafood",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Dr.Bakers",
+      "value": 69026,
+      "count": 5,
+      "permalink": "dr-bakers",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Lorenz",
+      "value": 6950,
+      "count": 3,
+      "permalink": "lorenz",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Smakky",
+      "value": 70599,
+      "count": 15,
+      "permalink": "smakky",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Maggi",
+      "value": 7126,
+      "count": 5,
+      "permalink": "maggi",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Вау Мяу!",
+      "value": 72618,
+      "count": 3,
+      "permalink": "vau-myau",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Naturals",
+      "value": 8092,
+      "count": 4,
+      "permalink": "naturals",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Nongshim",
+      "value": 8259,
+      "count": 7,
+      "permalink": "nongshim",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Nutrilon",
+      "value": 8351,
+      "count": 2,
+      "permalink": "nutrilon",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Orient",
+      "value": 8540,
+      "count": 2,
+      "permalink": "orient",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Pan-Asian",
+      "value": 8659,
+      "count": 2,
+      "permalink": "pan-asian-90164b8",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Polar",
+      "value": 9047,
+      "count": 2,
+      "permalink": "polar",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Pringles",
+      "value": 9197,
+      "count": 5,
+      "permalink": "pringles",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Samyang",
+      "value": 9882,
+      "count": 2,
+      "permalink": "samyang",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "San Carlo",
+      "value": 9886,
+      "count": 4,
+      "permalink": "san-carlo",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "SanBonsai",
+      "value": 9904,
+      "count": 2,
+      "permalink": "sanbonsai",
+      "active": false,
+      "bound": 0
+     }
+    ]
+   },
+   {
+    "key": "site_category_filter_10000106",
+    "name": "Тип продукта",
+    "type": "multi_select",
+    "options": [
+     {
+      "name": "Детская смесь",
+      "value": 5580,
+      "count": 2,
+      "permalink": "detskaya-smes",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Йогурт",
+      "value": 5359,
+      "count": 9,
+      "permalink": "yogurt",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Мороженое",
+      "value": 6581,
+      "count": 23,
+      "permalink": "morozhenoe-188ad0e",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Овощные консервы",
+      "value": 4403,
+      "count": 1,
+      "permalink": "ovoschnye-konservy-4403",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Овощные полуфабрикаты",
+      "value": 4314,
+      "count": 20,
+      "permalink": "ovoschnye-polufabrikaty-4314",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Оливки",
+      "value": 4405,
+      "count": 1,
+      "permalink": "olivki-4405",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Растительный коктейль",
+      "value": 4425,
+      "count": 1,
+      "permalink": "rastitel-nyy-kokteyl-4425",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Салат",
+      "value": 3920,
+      "count": 16,
+      "permalink": "salat-3920",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Свежие овощи",
+      "value": 3560,
+      "count": 25,
+      "permalink": "svezhie-ovoschi-3560",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Семечки",
+      "value": 4223,
+      "count": 1,
+      "permalink": "semechki-4223",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Сырок глазированный",
+      "value": 5476,
+      "count": 2,
+      "permalink": "syrok-glazirovannyy",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Творожная масса",
+      "value": 5315,
+      "count": 1,
+      "permalink": "tvorozhnaya-massa",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Чипсы овощные",
+      "value": 4144,
+      "count": 2,
+      "permalink": "chipsy-ovoschnye-4144",
+      "active": false,
+      "bound": 0
+     }
+    ]
+   },
+   {
+    "key": "site_category_filter_10000105",
+    "name": "Вид овощей",
+    "type": "multi_select",
+    "options": [
+     {
+      "name": "Баклажан",
+      "value": 3577,
+      "count": 2,
+      "permalink": "baklazhan-3577",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Кабачки",
+      "value": 3590,
+      "count": 1,
+      "permalink": "kabachki-3590",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Капуста брокколи",
+      "value": 3595,
+      "count": 4,
+      "permalink": "kapusta-brokkoli-3595",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Капуста цветная",
+      "value": 3598,
+      "count": 1,
+      "permalink": "kapusta-tsvetnaya-3598",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Картофель",
+      "value": 3599,
+      "count": 29,
+      "permalink": "kartofel-3599",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Кукуруза",
+      "value": 3611,
+      "count": 2,
+      "permalink": "kukuruza-3611",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Лук",
+      "value": 3618,
+      "count": 3,
+      "permalink": "luk-3618",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Морковь",
+      "value": 3621,
+      "count": 4,
+      "permalink": "morkov-3621",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Перец",
+      "value": 3630,
+      "count": 2,
+      "permalink": "perets-3630",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Помидоры",
+      "value": 3634,
+      "count": 1,
+      "permalink": "pomidory-3634",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Стручковая фасоль",
+      "value": 3653,
+      "count": 3,
+      "permalink": "struchkovaya-fasol-3653",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Фасоль",
+      "value": 3659,
+      "count": 1,
+      "permalink": "fasol-3659",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Цукини",
+      "value": 3662,
+      "count": 1,
+      "permalink": "tsukini-3662",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Шпинат",
+      "value": 3666,
+      "count": 1,
+      "permalink": "shpinat-3666",
+      "active": false,
+      "bound": 0
+     }
+    ]
+   },
+   {
+    "key": "site_category_filter_10000068",
+    "name": "Способ обработки",
+    "type": "multi_select",
+    "options": [
+     {
+      "name": "Без обработки",
+      "value": 4325,
+      "count": 6,
+      "permalink": "bez-obrabotki-4325",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "В панировке",
+      "value": 3690,
+      "count": 9,
+      "permalink": "v-panirovke-3690",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Варено-запеченные",
+      "value": 2770,
+      "count": 1,
+      "permalink": "vareno-zapechennye-2770",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Варено-копченые",
+      "value": 2771,
+      "count": 9,
+      "permalink": "vareno-kopchenye-2771",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Вареные",
+      "value": 2436,
+      "count": 39,
+      "permalink": "varenye-2436",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Жареные",
+      "value": 2774,
+      "count": 1,
+      "permalink": "zharenye-2774",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Зернистая",
+      "value": 8685,
+      "count": 2,
+      "permalink": "zernistaya",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Копчено-вареные",
+      "value": 2435,
+      "count": 2,
+      "permalink": "kopcheno-varenye-2435",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Копчено-запеченные",
+      "value": 2778,
+      "count": 1,
+      "permalink": "kopcheno-zapechennye-2778",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Копченые",
+      "value": 2437,
+      "count": 1,
+      "permalink": "kopchenye-2437",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Маринованные",
+      "value": 3692,
+      "count": 1,
+      "permalink": "marinovannye-3692",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Мытые",
+      "value": 3693,
+      "count": 3,
+      "permalink": "mytye-3693",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Обжаренные",
+      "value": 4328,
+      "count": 2,
+      "permalink": "obzharennye-4328",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Очищенные",
+      "value": 3695,
+      "count": 2,
+      "permalink": "ochischennye-3695",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Пастеризованная",
+      "value": 8688,
+      "count": 1,
+      "permalink": "pasterizovannaya",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Полукопченые",
+      "value": 2438,
+      "count": 1,
+      "permalink": "polukopchenye-2438",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Резаные",
+      "value": 3697,
+      "count": 1,
+      "permalink": "rezanye-3697",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Рубленные",
+      "value": 8387,
+      "count": 1,
+      "permalink": "rublennye",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Стерилизованная",
+      "value": 8692,
+      "count": 1,
+      "permalink": "sterilizovannaya",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Сырокопченые",
+      "value": 2434,
+      "count": 1,
+      "permalink": "syrokopchenye-2434",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Ультрапастеризованный",
+      "value": 413709,
+      "count": 1,
+      "permalink": "ul-trapasterizovannyy",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Фаршированные",
+      "value": 3699,
+      "count": 2,
+      "permalink": "farshirovannye-3699",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Формованные",
+      "value": 3700,
+      "count": 1,
+      "permalink": "formovannye-3700",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Шлифованный",
+      "value": 11198,
+      "count": 1,
+      "permalink": "shlifovannyy",
+      "active": false,
+      "bound": 0
+     }
+    ]
+   },
+   {
+    "key": "site_category_filter_10000107",
+    "name": "Вид полуфабрикатов",
+    "type": "multi_select",
+    "options": [
+     {
+      "name": "Галеты",
+      "value": 3670,
+      "count": 1,
+      "permalink": "galety-3670",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Котлеты",
+      "value": 3678,
+      "count": 3,
+      "permalink": "kotlety-3678",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Набор для приготовления",
+      "value": 3679,
+      "count": 1,
+      "permalink": "nabor-dlya-prigotovleniya-3679",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Овощи",
+      "value": 3683,
+      "count": 11,
+      "permalink": "ovoschnye-polufabrikaty-odnokomponentnye-3683",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Овощное ассорти",
+      "value": 3682,
+      "count": 4,
+      "permalink": "ovoschnoe-assorti-3682",
+      "active": false,
+      "bound": 0
+     }
+    ]
+   },
+   {
+    "key": "site_category_filter_10000108",
+    "name": "Особенности",
+    "type": "multi_select",
+    "options": [
+     {
+      "name": "Азиатские",
+      "value": 30903,
+      "count": 1,
+      "permalink": "aziatskie",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Ассорти",
+      "value": 30973,
+      "count": 7,
+      "permalink": "assorti-b42b67e",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "В глазури",
+      "value": 31120,
+      "count": 2,
+      "permalink": "v-glazuri",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Готовая смесь",
+      "value": 589726,
+      "count": 1,
+      "permalink": "gotovaya-smes",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Для супа",
+      "value": 31624,
+      "count": 1,
+      "permalink": "dlya-supa-d4b2b14",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Мини-упаковка",
+      "value": 32155,
+      "count": 7,
+      "permalink": "mini-upakovka",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Молодые",
+      "value": 3569,
+      "count": 1,
+      "permalink": "molodye-3569",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Набор",
+      "value": 7384,
+      "count": 1,
+      "permalink": "nabor-77eebfa",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Ручная лепка",
+      "value": 33176,
+      "count": 1,
+      "permalink": "ruchnaya-lepka",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "С игрушкой",
+      "value": 15959,
+      "count": 2,
+      "permalink": "s-igrushkoy",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Смесь",
+      "value": 33824,
+      "count": 30,
+      "permalink": "smes",
+      "active": false,
+      "bound": 0
+     }
+    ]
+   },
+   {
+    "key": "site_category_filter_10000041",
+    "name": "Вес, гр",
+    "type": "multi_select",
+    "options": [
+     {
+      "name": "До 50",
+      "value": 1812,
+      "count": 85,
+      "permalink": "do-100-1812",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "51 - 100",
+      "value": 3050,
+      "count": 124,
+      "permalink": "51-100-3050",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "101 - 200",
+      "value": 1813,
+      "count": 214,
+      "permalink": "101-200-1813",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "201 - 300",
+      "value": 1814,
+      "count": 117,
+      "permalink": "201-300-1814",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "301 - 400",
+      "value": 1815,
+      "count": 65,
+      "permalink": "301-400-1815",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "401 - 500",
+      "value": 1816,
+      "count": 44,
+      "permalink": "401-500-1816",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "501 - 700",
+      "value": 2138,
+      "count": 14,
+      "permalink": "501-700-2138",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "701 - 1000",
+      "value": 2139,
+      "count": 22,
+      "permalink": "701-1000-2139",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "1001 - 1500",
+      "value": 2140,
+      "count": 8,
+      "permalink": "1001-1500-2140",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "1501 - 2000",
+      "value": 2141,
+      "count": 2,
+      "permalink": "1501-2000-2141",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "2001 - 3000",
+      "value": 2142,
+      "count": 1,
+      "permalink": "2001-3000-2142",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "3001 - 5000",
+      "value": 2143,
+      "count": 1,
+      "permalink": "3001-5000-2143",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Более 5000",
+      "value": 1817,
+      "count": 1,
+      "permalink": "bolee-500-1817",
+      "active": false,
+      "bound": 0
+     }
+    ]
+   },
+   {
+    "key": "site_category_filter_10000031",
+    "name": "Вид упаковки",
+    "type": "multi_select",
+    "options": [
+     {
+      "name": "Без упаковки",
+      "value": 926,
+      "count": 22,
+      "permalink": "bez-upakovki-926",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Бумажный пакет",
+      "value": 909,
+      "count": 18,
+      "permalink": "bumazhnyy-paket-909",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Вакуумная",
+      "value": 959,
+      "count": 57,
+      "permalink": "vakuumnaya-959",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Газонаполненная",
+      "value": 954,
+      "count": 8,
+      "permalink": "gazonapolnennaya-954",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Дой-пак",
+      "value": 932,
+      "count": 9,
+      "permalink": "doy-pak-932",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Картонная",
+      "value": 980,
+      "count": 64,
+      "permalink": "kartonnaya-980",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Контейнер",
+      "value": 1013,
+      "count": 65,
+      "permalink": "konteyner-1013",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Коррекс",
+      "value": 1018,
+      "count": 3,
+      "permalink": "korreks-1018",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Лоток",
+      "value": 1002,
+      "count": 19,
+      "permalink": "lotok-1002",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Металлическая банка",
+      "value": 895,
+      "count": 11,
+      "permalink": "metallicheskaya-banka-895",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Обёртка",
+      "value": 1033,
+      "count": 7,
+      "permalink": "obyortka-1033",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Пакет",
+      "value": 1034,
+      "count": 230,
+      "permalink": "paket-1034",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Пауч",
+      "value": 1051,
+      "count": 5,
+      "permalink": "pauch-1051",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Персональная упаковка",
+      "value": 1046,
+      "count": 11,
+      "permalink": "personal-naya-upakovka-1046",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Пластиковая банка",
+      "value": 902,
+      "count": 14,
+      "permalink": "plastikovaya-banka-902",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Пластиковая плёнка",
+      "value": 1040,
+      "count": 3,
+      "permalink": "plastikovaya-plyonka-1040",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Пластиковый стакан",
+      "value": 1065,
+      "count": 17,
+      "permalink": "plastikovyy-stakan-1065",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Подложка",
+      "value": 1079,
+      "count": 3,
+      "permalink": "podlozhka-1079",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Полиамидная оболочка",
+      "value": 1088,
+      "count": 3,
+      "permalink": "poliamidnaya-obolochka-1088",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Порционная",
+      "value": 1082,
+      "count": 11,
+      "permalink": "portsionnaya-1082",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Саше-пакет",
+      "value": 1057,
+      "count": 10,
+      "permalink": "sashe-paket-1057",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Стеклянная банка",
+      "value": 901,
+      "count": 18,
+      "permalink": "steklyannaya-banka-901",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Туба",
+      "value": 1110,
+      "count": 12,
+      "permalink": "tuba-1110",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Флоу-пак",
+      "value": 1121,
+      "count": 44,
+      "permalink": "flou-pak-1121",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Фольгированный пакет",
+      "value": 884,
+      "count": 36,
+      "permalink": "fol-girovannyy-paket-884",
+      "active": false,
+      "bound": 0
+     }
+    ]
+   },
+   {
+    "key": "site_category_filter_10000020",
+    "name": "Экомаркировка",
+    "type": "multi_select",
+    "options": [
+     {
+      "name": "V-Label",
+      "value": 48756,
+      "count": 1,
+      "permalink": "v-label",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Все",
+      "value": 7791,
+      "count": 1,
+      "permalink": "vse",
+      "active": false,
+      "bound": 0
+     }
+    ]
+   }
+  ],
+  "meta": {
+   "current_page": "1",
+   "next_page": "2",
+   "previous_page": null,
+   "total_pages": "25",
+   "per_page": "24",
+   "total_count": "600"
+  },
+  "sort": [
+   {
+    "key": "popularity",
+    "name": "По популярности",
+    "order": "desc",
+    "active": true
+   },
+   {
+    "key": "price_asc",
+    "name": "Сначала дешевые",
+    "order": "asc",
+    "active": false
+   },
+   {
+    "key": "price_desc",
+    "name": "Сначала дорогие",
+    "order": "desc",
+    "active": false
+   },
+   {
+    "key": "unit_price_asc",
+    "name": "Выгоднее по весу",
+    "order": "asc",
+    "active": false
+   }
+  ],
+  "promo_badges": [],
+  "root_categories": {
+   "key": "root_category",
+   "name": "Категория",
+   "type": "select",
+   "options": [
+    {
+     "key": "",
+     "permalink": "gotovaya-eda-2e24e10",
+     "value": 75617,
+     "count": 151,
+     "active": false,
+     "name": "Готовая еда"
+    },
+    {
+     "key": "",
+     "permalink": "zamorozka-00c2cee",
+     "value": 75598,
+     "count": 141,
+     "active": false,
+     "name": "Заморозка"
+    },
+    {
+     "key": "",
+     "permalink": "chipsi-sneki-sukhofrukti",
+     "value": 70974,
+     "count": 123,
+     "active": false,
+     "name": "Чипсы, снеки, сухофрукты"
+    },
+    {
+     "key": "",
+     "permalink": "kolbasi-sosiski-delikatesi-ce5276b",
+     "value": 43504,
+     "count": 110,
+     "active": false,
+     "name": "Колбасы, сосиски, деликатесы"
+    },
+    {
+     "key": "",
+     "permalink": "makaroni-krupi-muka-ea6cda0",
+     "value": 43480,
+     "count": 93,
+     "active": false,
+     "name": "Макароны, крупы, мука"
+    },
+    {
+     "key": "",
+     "permalink": "sladosti-167ae66",
+     "value": 72088,
+     "count": 92,
+     "active": false,
+     "name": "Сладости"
+    },
+    {
+     "key": "",
+     "permalink": "bez-natsenki-na-brend-478e221-copy-2",
+     "value": 11256837,
+     "count": 92,
+     "active": false,
+     "name": "Без наценки на бренд"
+    },
+    {
+     "key": "",
+     "permalink": "riba-ikra-dari-morya-bd4c0bc",
+     "value": 59096,
+     "count": 51,
+     "active": false,
+     "name": "Рыба, икра, дары моря"
+    },
+    {
+     "key": "",
+     "permalink": "moloko-sir-yajtsa-rastitelnie-produkti-5e3add5",
+     "value": 166211,
+     "count": 50,
+     "active": false,
+     "name": "Молоко, сыр, яйца, растительные продукты"
+    },
+    {
+     "key": "",
+     "permalink": "myaso-ptitsa-0f1e3fb",
+     "value": 43519,
+     "count": 38,
+     "active": false,
+     "name": "Мясо, птица"
+    },
+    {
+     "key": "",
+     "permalink": "maslo-sousi-spetsii",
+     "value": 42546,
+     "count": 36,
+     "active": false,
+     "name": "Масло, соусы, специи"
+    },
+    {
+     "key": "",
+     "permalink": "khleb-khlebtsi-vipechka",
+     "value": 43508,
+     "count": 33,
+     "active": false,
+     "name": "Хлеб, хлебцы, выпечка"
+    },
+    {
+     "key": "",
+     "permalink": "ovoshchi-frukti-orekhi-3f70c12",
+     "value": 41328,
+     "count": 32,
+     "active": false,
+     "name": "Овощи, фрукты, орехи"
+    },
+    {
+     "key": "",
+     "permalink": "zdorovoe-pitanie",
+     "value": 59335,
+     "count": 31,
+     "active": false,
+     "name": "Здоровый выбор"
+    },
+    {
+     "key": "",
+     "permalink": "detskie-tovari-94694f8",
+     "value": 11358809,
+     "count": 19,
+     "active": false,
+     "name": "Детские товары"
+    }
+   ]
+  },
+  "private_filters": {
+   "in_stock": true,
+   "with_similar": false
+  },
+  "applied_features": [],
+  "search_query_uuid": "631c61d5-79bd-413f-8371-0fee12340259",
+  "search_session_uuid": "2ec291a0-386e-4d3d-918a-d7db588f474e",
+  "query_categories": [
+   {
+    "category_id": "650200000",
+    "score": 0.9820238
+   },
+   {
+    "category_id": "22656",
+    "score": 0.7371682
+   },
+   {
+    "category_id": "650702000",
+    "score": 0.7310686
+   },
+   {
+    "category_id": "171",
+    "score": 0.51562995
+   },
+   {
+    "category_id": "7499",
+    "score": 0.45327184
+   },
+   {
+    "category_id": "141",
+    "score": 0.44553956
+   },
+   {
+    "category_id": "23053",
+    "score": 0.42251465
+   }
+  ]
+ }
+}

@@ -1,0 +1,2362 @@
+{
+ "status": 200,
+ "body": {
+  "items": [
+   {
+    "id": null,
+    "name": null,
+    "products": [
+     {
+      "id": 43134206,
+      "productId": 587645,
+      "code": "kp-syr-parmezan-yang-40-bzmzh",
+      "name": "Сыр  полутвердый Пармезан Янг АШАН Красная птица Parmesan Young 40%, ~ 0,3 кг",
+      "gimaId": "350839",
+      "categoryCodes": [
+       "syry",
+       "polutverdye"
+      ],
+      "categoryNames": [
+       "Сыр",
+       "Полутвердые"
+      ],
+      "basketStep": 0.3,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 5.81,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 120,
+       "currency": "RUB",
+       "per": "weight_100g"
+      },
+      "image": {
+       "id": 35588610
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/35588610",
+      "media": [
+       35588610
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/35588610",
+       "https://www.auchan.ru/files/original/35588619",
+       "https://www.auchan.ru/files/original/35588625",
+       "https://www.auchan.ru/files/original/35588631"
+      ],
+      "brandName": "АШАН Красная птица",
+      "rate": {
+       "rating": 4.1,
+       "reviews_qnt": 25
+      },
+      "modifications": [],
+      "badges": [
+       {
+        "id": 23,
+        "code": "private_label",
+        "type": "promo",
+        "rang": 90,
+        "description": "Наша марка - создано АШАН",
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": null
+       }
+      ],
+      "in_combo": false,
+      "package_display": " "
+     },
+     {
+      "id": 58397886,
+      "productId": 671349,
+      "code": "syr-parmezan-40-natura-180-g",
+      "name": "Сыр твердый Пармезан Parmesan Natura брусок 40% БЗМЖ, 180 г",
+      "gimaId": "468471",
+      "categoryCodes": [
+       "syry",
+       "tverdye_i_polutverdye"
+      ],
+      "categoryNames": [
+       "Сыр",
+       "Твердые"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 17,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 229.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 36918045
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/36918045",
+      "media": [
+       36918045
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/36918045"
+      ],
+      "brandName": "Natura",
+      "rate": {
+       "rating": 4.5,
+       "reviews_qnt": 21
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": "180 г"
+     },
+     {
+      "id": 63766704,
+      "productId": 728979,
+      "code": "parmezan-kolot-80g-bzmzh-kiprin",
+      "name": "Сыр твердый пармезан «Киприно» Алтареджио колотый 45% БЗМЖ, 80 г",
+      "gimaId": "534504",
+      "categoryCodes": [
+       "syry",
+       "tverdye_i_polutverdye"
+      ],
+      "categoryNames": [
+       "Сыр",
+       "Твердые"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 11,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 169.96,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 37864014
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/37864014",
+      "media": [
+       37864014
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/37864014",
+       "https://www.auchan.ru/files/original/37864059",
+       "https://www.auchan.ru/files/original/37864071"
+      ],
+      "brandName": "Киприно",
+      "rate": {
+       "rating": 5,
+       "reviews_qnt": 3
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": "80 г"
+     },
+     {
+      "id": 44041341,
+      "productId": 605031,
+      "code": "syr-parmezan-syrobog-40-180g",
+      "name": "Сыр твердый Пармезан «Сыробогатов» Premium брусок 40% БЗМЖ, 180 г",
+      "gimaId": "377157",
+      "categoryCodes": [
+       "syry",
+       "tverdye_i_polutverdye"
+      ],
+      "categoryNames": [
+       "Сыр",
+       "Твердые"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 10,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 219.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "oldPrice": {
+       "value": 309.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "discount": {
+       "id": 44041341,
+       "value": 90,
+       "value_type": 2,
+       "change": 90,
+       "size": 29,
+       "date_start": "2026-10-08",
+       "date_end": "2026-11-04",
+       "is_pl_discount": false
+      },
+      "image": {
+       "id": 35551530
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/35551530",
+      "media": [
+       35551530
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/35551530"
+      ],
+      "brandName": "Сыробогатов",
+      "rate": {
+       "rating": 4.4,
+       "reviews_qnt": 19
+      },
+      "modifications": [],
+      "badges": [
+       {
+        "id": 8,
+        "code": "discount",
+        "type": "promo",
+        "rang": 20,
+        "description": null,
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": {
+         "id": 44041341,
+         "is_pl_discount": false,
+         "change": 90,
+         "size": 29,
+         "value": 90,
+         "value_type": 2,
+         "date_start": "2026-10-08",
+         "date_end": "2026-11-04"
+        }
+       }
+      ],
+      "in_combo": false,
+      "package_display": null
+     },
+     {
+      "id": 5218440,
+      "productId": 72087,
+      "code": "syr_fas_parmezan_tm_la_paulina",
+      "name": "Сыр твердый La paulina Пармезан 45% БЗМЖ Аргентина, ~ 0,3 кг",
+      "gimaId": "333755",
+      "categoryCodes": [
+       "syry",
+       "tverdye_i_polutverdye"
+      ],
+      "categoryNames": [
+       "Сыр",
+       "Твердые"
+      ],
+      "basketStep": 0.3,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 5.2,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 230,
+       "currency": "RUB",
+       "per": "weight_100g"
+      },
+      "image": {
+       "id": 5364034
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/5364034",
+      "media": [
+       5364034
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/5364034"
+      ],
+      "brandName": "La Paulina",
+      "rate": {
+       "rating": 4.8,
+       "reviews_qnt": 39
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": " "
+     },
+     {
+      "id": 46125054,
+      "productId": 562941,
+      "code": "syr-parmez-9m-botticello-180g",
+      "name": "Сыр твердый Пармезан Botticello 40% БЗМЖ, 180 г",
+      "gimaId": "317370",
+      "categoryCodes": [
+       "syry",
+       "tverdye_i_polutverdye"
+      ],
+      "categoryNames": [
+       "Сыр",
+       "Твердые"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 8,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 469.96,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 34951653
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/34951653",
+      "media": [
+       34951653
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/34951653"
+      ],
+      "brandName": "Botticello",
+      "rate": {
+       "rating": 4.2,
+       "reviews_qnt": 6
+      },
+      "modifications": [],
+      "badges": [
+       {
+        "id": 11,
+        "code": "edlp",
+        "type": "promo",
+        "rang": 50,
+        "description": null,
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": null
+       }
+      ],
+      "in_combo": false,
+      "package_display": "180 г"
+     },
+     {
+      "id": 19898524,
+      "productId": 300085,
+      "code": "syr-parmezan-natura-pro-15og",
+      "name": "Сыр твердый Пармезан Natura Selection 45% БЗМЖ, 150 г",
+      "gimaId": "110506",
+      "categoryCodes": [
+       "syry",
+       "tverdye_i_polutverdye"
+      ],
+      "categoryNames": [
+       "Сыр",
+       "Твердые"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 13,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 249.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 34313037
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/34313037",
+      "media": [
+       34313037
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/34313037",
+       "https://www.auchan.ru/files/original/34313049"
+      ],
+      "brandName": "Natura",
+      "rate": {
+       "rating": 3.8,
+       "reviews_qnt": 12
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": "150 г"
+     },
+     {
+      "id": 13983333,
+      "productId": 197104,
+      "code": "kp-parmezan-tertyy-150-g",
+      "name": "Сыр твердый тертый АШАН Красная птица Пармезан БЗМЖ, 150 г",
+      "gimaId": "915394",
+      "categoryCodes": [
+       "syry",
+       "tverdye_i_polutverdye"
+      ],
+      "categoryNames": [
+       "Сыр",
+       "Твердые"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 17,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 199.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 30360520
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/30360520",
+      "media": [
+       30360520
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/30360520",
+       "https://www.auchan.ru/files/original/28241538"
+      ],
+      "brandName": "АШАН Красная птица",
+      "rate": {
+       "rating": 4.6,
+       "reviews_qnt": 47
+      },
+      "modifications": [],
+      "badges": [
+       {
+        "id": 23,
+        "code": "private_label",
+        "type": "promo",
+        "rang": 90,
+        "description": "Наша марка - создано АШАН",
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": null
+       }
+      ],
+      "in_combo": false,
+      "package_display": "150 г"
+     },
+     {
+      "id": 8525383,
+      "productId": 114868,
+      "code": "syr_palermo_40_6mesfasov",
+      "name": "Сыр твердый Palermo 6 месяцев 40% БЗМЖ, вес",
+      "gimaId": "784821",
+      "categoryCodes": [
+       "syry",
+       "tverdye_i_polutverdye"
+      ],
+      "categoryNames": [
+       "Сыр",
+       "Твердые"
+      ],
+      "basketStep": 0.2,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 2.44,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 260,
+       "currency": "RUB",
+       "per": "weight_100g"
+      },
+      "image": {
+       "id": 13891523
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/13891523",
+      "media": [
+       13891523
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/13891523"
+      ],
+      "brandName": "Palermo",
+      "rate": {
+       "rating": 4.6,
+       "reviews_qnt": 25
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": " "
+     },
+     {
+      "id": 13096255,
+      "productId": 181127,
+      "code": "syr-parmezan-dolce-fasov-200g",
+      "name": "Сыр твердый Dolce Granto Пармезан 40% БЗМЖ, 200 г",
+      "gimaId": "902576",
+      "categoryCodes": [
+       "syry",
+       "tverdye_i_polutverdye"
+      ],
+      "categoryNames": [
+       "Сыр",
+       "Твердые"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 5,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 329.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "oldPrice": {
+       "value": 419.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "discount": {
+       "id": 13096255,
+       "value": 90,
+       "value_type": 2,
+       "change": 90,
+       "size": 21,
+       "date_start": "2026-10-01",
+       "date_end": "2026-10-28",
+       "is_pl_discount": true
+      },
+      "image": {
+       "id": 27674367
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/27674367",
+      "media": [
+       27674367
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/27674367",
+       "https://www.auchan.ru/files/original/27674371",
+       "https://www.auchan.ru/files/original/27674374",
+       "https://www.auchan.ru/files/original/27674377"
+      ],
+      "brandName": "Dolce Granto",
+      "rate": {
+       "rating": 4.1,
+       "reviews_qnt": 27
+      },
+      "modifications": [],
+      "badges": [
+       {
+        "id": 8,
+        "code": "discount",
+        "type": "promo",
+        "rang": 20,
+        "description": null,
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": {
+         "id": 13096255,
+         "is_pl_discount": true,
+         "change": 90,
+         "size": 21,
+         "value": 90,
+         "value_type": 2,
+         "date_start": "2026-10-01",
+         "date_end": "2026-10-28"
+        }
+       }
+      ],
+      "in_combo": false,
+      "package_display": "200 г"
+     },
+     {
+      "id": 20965973,
+      "productId": 320397,
+      "code": "kp-syr-parmezan-lepestki-100g",
+      "name": "Сыр твердый АШАН Красная птица Пармезан в лепестках в пакете 40% БЗМЖ, 100 г",
+      "gimaId": "126202",
+      "categoryCodes": [
+       "syry",
+       "tverdye_i_polutverdye"
+      ],
+      "categoryNames": [
+       "Сыр",
+       "Твердые"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 6,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 169.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 33611487
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/33611487",
+      "media": [
+       33611487
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/33611487",
+       "https://www.auchan.ru/files/original/33611490"
+      ],
+      "brandName": "АШАН Красная птица",
+      "rate": {
+       "rating": 4.6,
+       "reviews_qnt": 17
+      },
+      "modifications": [],
+      "badges": [
+       {
+        "id": 23,
+        "code": "private_label",
+        "type": "promo",
+        "rang": 90,
+        "description": "Наша марка - создано АШАН",
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": null
+       }
+      ],
+      "in_combo": false,
+      "package_display": "100 г"
+     },
+     {
+      "id": 20821737,
+      "productId": 301950,
+      "code": "syr-parmesan-40-180gr-kabosh",
+      "name": "Сыр твердый Пармезан «КАБОШ» 40% БЗМЖ, 180 г",
+      "gimaId": "112889",
+      "categoryCodes": [
+       "syry",
+       "tverdye_i_polutverdye"
+      ],
+      "categoryNames": [
+       "Сыр",
+       "Твердые"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 10,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 295.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "oldPrice": {
+       "value": 369.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "discount": {
+       "id": 20821737,
+       "value": 74,
+       "value_type": 2,
+       "change": 74,
+       "size": 20,
+       "date_start": "2026-10-08",
+       "date_end": "2026-11-04",
+       "is_pl_discount": false
+      },
+      "image": {
+       "id": 29589681
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/29589681",
+      "media": [
+       29589681
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/29589681",
+       "https://www.auchan.ru/files/original/29589705",
+       "https://www.auchan.ru/files/original/29589721"
+      ],
+      "brandName": "КАБОШ",
+      "rate": {
+       "rating": 5,
+       "reviews_qnt": 1
+      },
+      "modifications": [],
+      "badges": [
+       {
+        "id": 8,
+        "code": "discount",
+        "type": "promo",
+        "rang": 20,
+        "description": null,
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": {
+         "id": 20821737,
+         "is_pl_discount": false,
+         "change": 74,
+         "size": 20,
+         "value": 74,
+         "value_type": 2,
+         "date_start": "2026-10-08",
+         "date_end": "2026-11-04"
+        }
+       }
+      ],
+      "in_combo": false,
+      "package_display": "180 мл"
+     },
+     {
+      "id": 13602773,
+      "productId": 192688,
+      "code": "kp-parmezan-kusok-200g",
+      "name": "Сыр твердый АШАН Красная птица Пармезан 6 месяцев кусок 34%, 200 г",
+      "gimaId": "915461",
+      "categoryCodes": [
+       "syry",
+       "tverdye_i_polutverdye"
+      ],
+      "categoryNames": [
+       "Сыр",
+       "Твердые"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 23,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 269.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 33685917
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/33685917",
+      "media": [
+       33685917
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/33685917"
+      ],
+      "brandName": "АШАН Красная птица",
+      "rate": {
+       "rating": 4.1,
+       "reviews_qnt": 24
+      },
+      "modifications": [],
+      "badges": [
+       {
+        "id": 23,
+        "code": "private_label",
+        "type": "promo",
+        "rang": 90,
+        "description": "Наша марка - создано АШАН",
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": null
+       }
+      ],
+      "in_combo": false,
+      "package_display": "200 г"
+     },
+     {
+      "id": 14739615,
+      "productId": 212153,
+      "code": "syr-parmezan-deluxe-200g-bzmzh",
+      "name": "Сыр твердый Dolce Deluxe Пармезан 34% БЗМЖ, 200 г",
+      "gimaId": "942933",
+      "categoryCodes": [
+       "syry",
+       "tverdye_i_polutverdye"
+      ],
+      "categoryNames": [
+       "Сыр",
+       "Твердые"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 5,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 399.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 27674632
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/27674632",
+      "media": [
+       27674632
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/27674632",
+       "https://www.auchan.ru/files/original/27674634"
+      ],
+      "brandName": "Dolce Deluxe",
+      "rate": {
+       "rating": 4.5,
+       "reviews_qnt": 15
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": "200 г"
+     },
+     {
+      "id": 58146702,
+      "productId": 669927,
+      "code": "syr-mario-parmig-48-6mes-180g",
+      "name": "Cыр твердый Пармезан Parmesan Mario Parmigiani 6 месяцев созревания кусок 48% БЗМЖ, 180 г",
+      "gimaId": "466713",
+      "categoryCodes": [
+       "syry",
+       "tverdye_i_polutverdye"
+      ],
+      "categoryNames": [
+       "Сыр",
+       "Твердые"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 6,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 329.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 36849297
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/36849297",
+      "media": [
+       36849297
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/36849297"
+      ],
+      "brandName": "Mario Parmigiani",
+      "rate": {
+       "rating": 2,
+       "reviews_qnt": 1
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": null
+     },
+     {
+      "id": 21067805,
+      "productId": 325241,
+      "code": "syr-parmezan-6m-schonfeld-180g",
+      "name": "Сыр твердый Пармезан Schonfeld премиум 6 месяцев кусок 40% БЗМЖ, 180 г",
+      "gimaId": "126919",
+      "categoryCodes": [
+       "syry",
+       "tverdye_i_polutverdye"
+      ],
+      "categoryNames": [
+       "Сыр",
+       "Твердые"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 6,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 419.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 33395513
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/33395513",
+      "media": [
+       33395513
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/33395513",
+       "https://www.auchan.ru/files/original/29842253",
+       "https://www.auchan.ru/files/original/29840185",
+       "https://www.auchan.ru/files/original/29840201"
+      ],
+      "brandName": "Schonfeld",
+      "rate": {
+       "rating": 4.6,
+       "reviews_qnt": 5
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": "180 г"
+     },
+     {
+      "id": 38224614,
+      "productId": 554562,
+      "code": "syr-parmez-lux-milkav-40-180g",
+      "name": "Сыр твердый Пармезан Milkavita Lux 3 месяца 40% БЗМЖ Беларусь, 180 г",
+      "gimaId": "310317",
+      "categoryCodes": [
+       "syry",
+       "tverdye_i_polutverdye"
+      ],
+      "categoryNames": [
+       "Сыр",
+       "Твердые"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 6,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 359.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 34916982
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/34916982",
+      "media": [
+       34916982
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/34916982",
+       "https://www.auchan.ru/files/original/34916997"
+      ],
+      "brandName": "Milkavita",
+      "rate": {
+       "rating": 5,
+       "reviews_qnt": 5
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": "180 г"
+     },
+     {
+      "id": 18031772,
+      "productId": 232813,
+      "code": "belster-parmezan-6m-nar-135g",
+      "name": "Сыр твердый «Белебеевский» Belster Parmesan нарезка 40% БЗМЖ, 135 г",
+      "gimaId": "353",
+      "categoryCodes": [
+       "syry",
+       "tverdye_i_polutverdye"
+      ],
+      "categoryNames": [
+       "Сыр",
+       "Твердые"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 6,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 214.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 35718840
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/35718840",
+      "media": [
+       35718840
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/35718840",
+       "https://www.auchan.ru/files/original/35718849",
+       "https://www.auchan.ru/files/original/35718855",
+       "https://www.auchan.ru/files/original/35718861",
+       "https://www.auchan.ru/files/original/35718867"
+      ],
+      "brandName": "Белебеевский",
+      "rate": {
+       "rating": 4.6,
+       "reviews_qnt": 11
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": "135 г"
+     },
+     {
+      "id": 59549166,
+      "productId": 569397,
+      "code": "cyr-parmezan-40-3m-180g-danke",
+      "name": "Сыр твердый Пармезан Danke 40% Беларусь, 180 г",
+      "gimaId": "321139",
+      "categoryCodes": [
+       "syry",
+       "tverdye_i_polutverdye"
+      ],
+      "categoryNames": [
+       "Сыр",
+       "Твердые"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 14,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 229.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 35025303
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/35025303",
+      "media": [
+       35025303
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/35025303"
+      ],
+      "brandName": "Danke",
+      "rate": {
+       "rating": 3.5,
+       "reviews_qnt": 12
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": "180 г"
+     },
+     {
+      "id": 38798526,
+      "productId": 302350,
+      "code": "syr-parmezan-diamond-40-180g",
+      "name": "Сыр твердый Laime Diamond Пармезан 40%, 180 г",
+      "gimaId": "114069",
+      "categoryCodes": [
+       "syry",
+       "tverdye_i_polutverdye"
+      ],
+      "categoryNames": [
+       "Сыр",
+       "Твердые"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 11,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 459.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "oldPrice": {
+       "value": 539.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "discount": {
+       "id": 38798526,
+       "value": 80,
+       "value_type": 2,
+       "change": 80,
+       "size": 15,
+       "date_start": "2026-10-08",
+       "date_end": "2026-11-04",
+       "is_pl_discount": false
+      },
+      "image": {
+       "id": 28824042
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/28824042",
+      "media": [
+       28824042
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/28824042"
+      ],
+      "brandName": "Laime",
+      "rate": {
+       "rating": 4.7,
+       "reviews_qnt": 12
+      },
+      "modifications": [],
+      "badges": [
+       {
+        "id": 8,
+        "code": "discount",
+        "type": "promo",
+        "rang": 20,
+        "description": null,
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": {
+         "id": 38798526,
+         "is_pl_discount": false,
+         "change": 80,
+         "size": 15,
+         "value": 80,
+         "value_type": 2,
+         "date_start": "2026-10-08",
+         "date_end": "2026-11-04"
+        }
+       }
+      ],
+      "in_combo": false,
+      "package_display": "180 г"
+     },
+     {
+      "id": 45083676,
+      "productId": 613365,
+      "code": "syr-plav-dip-parm45-180g-bzmzh",
+      "name": "Сыр плавленый Viola Dip Hunter Parmesan для кулинарии 45% БЗМЖ, 180 г",
+      "gimaId": "397719",
+      "categoryCodes": [
+       "syry",
+       "plavlenye"
+      ],
+      "categoryNames": [
+       "Сыр",
+       "Плавленые"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 6,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 114.96,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 35663037
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/35663037",
+      "media": [
+       35663037
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/35663037",
+       "https://www.auchan.ru/files/original/35663043",
+       "https://www.auchan.ru/files/original/35663049"
+      ],
+      "brandName": "Viola",
+      "rate": {
+       "rating": 4.4,
+       "reviews_qnt": 5
+      },
+      "modifications": [],
+      "badges": [
+       {
+        "id": 11,
+        "code": "edlp",
+        "type": "promo",
+        "rang": 50,
+        "description": null,
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": null
+       }
+      ],
+      "in_combo": false,
+      "package_display": "180 г"
+     },
+     {
+      "id": 19000521,
+      "productId": 285556,
+      "code": "syr-vel-luki-parmesan-40-1kg",
+      "name": "Сыр полутвердый «Великие Луки» Parmesan 40% БЗМЖ, вес",
+      "gimaId": "86899",
+      "categoryCodes": [
+       "syry",
+       "polutverdye"
+      ],
+      "categoryNames": [
+       "Сыр",
+       "Полутвердые"
+      ],
+      "basketStep": 0.2,
+      "active": true,
+      "isAdult": false,
+      "isB2b": false,
+      "is_new": false,
+      "stock": {
+       "qty": 10.68,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 120,
+       "currency": "RUB",
+       "per": "weight_100g"
+      },
+      "image": {
+       "id": 28623298
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/28623298",
+      "media": [
+       28623298
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/28623298"
+      ],
+      "brandName": "Великие Луки",
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": " "
+     },
+     {
+      "id": 34314165,
+      "productId": 500532,
+      "code": "parmezan-shveycarskiy-47-180g",
+      "name": "Сыр твердый Lustenberger Люстенбергер Швейцарский Пармезан 15 месяцев 47% БЗМЖ Швейцария, 180 г",
+      "gimaId": "225727",
+      "categoryCodes": [
+       "syry",
+       "tverdye_i_polutverdye"
+      ],
+      "categoryNames": [
+       "Сыр",
+       "Твердые"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 4,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 689.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 33682407
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/33682407",
+      "media": [
+       33682407
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/33682407"
+      ],
+      "brandName": "Lustenberger",
+      "rate": {
+       "rating": 1.7,
+       "reviews_qnt": 3
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": "180 г"
+     },
+     {
+      "id": 65882979,
+      "productId": 758844,
+      "code": "syr-parmezan-nar-40-175g-bzmzh",
+      "name": "Сыр твердый Пармезан Dolce Granto нарезка 40% БЗМЖ, 175 г",
+      "gimaId": "562200",
+      "categoryCodes": [
+       "syry",
+       "tverdye_i_polutverdye"
+      ],
+      "categoryNames": [
+       "Сыр",
+       "Твердые"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 1,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 309.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 38259084
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/38259084",
+      "media": [
+       38259084
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/38259084",
+       "https://www.auchan.ru/files/original/38259087",
+       "https://www.auchan.ru/files/original/38259090"
+      ],
+      "brandName": "Dolce Granto",
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": "175 г"
+     },
+     {
+      "id": 43981662,
+      "productId": 405316,
+      "code": "kart-mosk-parmezan-120g",
+      "name": "Чипсы картофельные «Московский Картофель» рифленые со вкусом сыра Пармезан, 120 г",
+      "gimaId": "170887",
+      "categoryCodes": [
+       "orehi-suhofrukty-sneki",
+       "chipsy-sneki-popkorn",
+       "chipsy"
+      ],
+      "categoryNames": [
+       "Чипсы, снеки, сухофрукты",
+       "Чипсы, снеки, попкорн",
+       "Чипсы"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 3,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 139.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 31500424
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/31500424",
+      "media": [
+       31500424
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/31500424",
+       "https://www.auchan.ru/files/original/31500452"
+      ],
+      "brandName": "Московский Картофель",
+      "rate": {
+       "rating": 4.9,
+       "reviews_qnt": 28
+      },
+      "modifications": [],
+      "badges": [
+       {
+        "id": 11,
+        "code": "edlp",
+        "type": "promo",
+        "rang": 50,
+        "description": null,
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": null
+       }
+      ],
+      "in_combo": false,
+      "package_display": "120 г"
+     },
+     {
+      "id": 361889,
+      "productId": 17164,
+      "code": "sous-pesto-ya-lyublyu-gotovit-pryanyy-bazilik-250-ml",
+      "name": "Заправка для салата «Я люблю готовить» Пряный базилик и пармезан, 250 мл",
+      "gimaId": "593770",
+      "categoryCodes": [
+       "bakaleya",
+       "sol-specii-i-pripravy",
+       "zapravka_na_masle"
+      ],
+      "categoryNames": [
+       "Бакалея",
+       "Соусы и приправы",
+       "Заправка на масле"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 9,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 124.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 29458137
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/29458137",
+      "media": [
+       29458137
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/29458137",
+       "https://www.auchan.ru/files/original/29458145",
+       "https://www.auchan.ru/files/original/29458153"
+      ],
+      "brandName": "Я люблю готовить",
+      "rate": {
+       "rating": 4.8,
+       "reviews_qnt": 13
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": "250 мл"
+     },
+     {
+      "id": 62924673,
+      "productId": 719517,
+      "code": "chipsy-parm-syrn-heinz-59g",
+      "name": "Чипсы картофельные рифленые «Московский Картофель» сыр пармезан, 59 г + сырный соус 24,5 г",
+      "gimaId": "523441",
+      "categoryCodes": [
+       "orehi-suhofrukty-sneki",
+       "chipsy-sneki-popkorn",
+       "chipsy"
+      ],
+      "categoryNames": [
+       "Чипсы, снеки, сухофрукты",
+       "Чипсы, снеки, попкорн",
+       "Чипсы"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 2,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 164.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 37628571
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/37628571",
+      "media": [
+       37628571
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/37628571",
+       "https://www.auchan.ru/files/original/37628586"
+      ],
+      "brandName": "Московский Картофель",
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": null
+     },
+     {
+      "id": 38386611,
+      "productId": 557643,
+      "code": "salyami-s-syrom-parmezan-70gr",
+      "name": "Колбаса сыровяленая Solemici Salame con Parmigiano Салями с сыром Пармезан полусухая нарезка, 70 г",
+      "gimaId": "312448",
+      "categoryCodes": [
+       "kolbasnye-izdeliya",
+       "kolbasy-vetchina-1",
+       "syrovyalenaya_kolbasa"
+      ],
+      "categoryNames": [
+       "Колбасные изделия",
+       "Колбасы, ветчина",
+       "Сыровяленая колбаса"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 2,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 198.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "oldPrice": {
+       "value": 309.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "discount": {
+       "id": 38386611,
+       "value": 111,
+       "value_type": 2,
+       "change": 111,
+       "size": 36,
+       "date_start": "2026-10-14",
+       "date_end": "2026-10-28",
+       "is_pl_discount": false
+      },
+      "image": {
+       "id": 34919262
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/34919262",
+      "media": [
+       34919262
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/34919262",
+       "https://www.auchan.ru/files/original/34919271"
+      ],
+      "brandName": "Solemici",
+      "modifications": [],
+      "badges": [
+       {
+        "id": 8,
+        "code": "discount",
+        "type": "promo",
+        "rang": 20,
+        "description": null,
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": {
+         "id": 38386611,
+         "is_pl_discount": false,
+         "change": 111,
+         "size": 36,
+         "value": 111,
+         "value_type": 2,
+         "date_start": "2026-10-14",
+         "date_end": "2026-10-28"
+        }
+       }
+      ],
+      "in_combo": false,
+      "package_display": "70 г"
+     },
+     {
+      "id": 20613957,
+      "productId": 315081,
+      "code": "kolb-s-syrom-parmezan-s-v110g",
+      "name": "Колбаса мини сыровяленая Solemici Strolghino Con Parmigiano Riserva с сыром пармезан без глютена полусухая, 110 г",
+      "gimaId": "122992",
+      "categoryCodes": [
+       "kolbasnye-izdeliya",
+       "kolbasy-vetchina-1",
+       "syrovyalenaya_kolbasa"
+      ],
+      "categoryNames": [
+       "Колбасные изделия",
+       "Колбасы, ветчина",
+       "Сыровяленая колбаса"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 4,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 249.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "oldPrice": {
+       "value": 339.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "discount": {
+       "id": 20613957,
+       "value": 90,
+       "value_type": 2,
+       "change": 90,
+       "size": 26,
+       "date_start": "2026-10-14",
+       "date_end": "2026-10-28",
+       "is_pl_discount": false
+      },
+      "image": {
+       "id": 29489081
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/29489081",
+      "media": [
+       29489081
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/29489081",
+       "https://www.auchan.ru/files/original/29489097"
+      ],
+      "brandName": "Solemici",
+      "modifications": [],
+      "badges": [
+       {
+        "id": 8,
+        "code": "discount",
+        "type": "promo",
+        "rang": 20,
+        "description": null,
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": {
+         "id": 20613957,
+         "is_pl_discount": false,
+         "change": 90,
+         "size": 26,
+         "value": 90,
+         "value_type": 2,
+         "date_start": "2026-10-14",
+         "date_end": "2026-10-28"
+        }
+       }
+      ],
+      "in_combo": false,
+      "package_display": "110 г"
+     },
+     {
+      "id": 39577863,
+      "productId": 546936,
+      "code": "kolb-s-k-izyskan-parmezan-50g",
+      "name": "Мясные снеки Колбаски сырокопченые «ДЫМОВ» Изысканный пармезан, 50 г",
+      "gimaId": "301556",
+      "categoryCodes": [
+       "kolbasnye-izdeliya",
+       "kolbasy-vetchina-1",
+       "kolbaski_4"
+      ],
+      "categoryNames": [
+       "Колбасные изделия",
+       "Колбасы, ветчина",
+       "Колбаски"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 4,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 144.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 35171627
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/35171627",
+      "media": [
+       35171627
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/35171627"
+      ],
+      "brandName": "ДЫМОВ",
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": "50 г"
+     }
+    ]
+   }
+  ],
+  "filters": [
+   {
+    "name": "Категория",
+    "code": "categoryCode",
+    "type": "multi_check",
+    "isFixed": true,
+    "sort": 0,
+    "isUrlContain": false,
+    "informer": null,
+    "disabled": false,
+    "items": [
+     {
+      "name": "Твердые",
+      "code": "tverdye_i_polutverdye",
+      "disabled": false,
+      "forActive": false,
+      "counter": 21,
+      "id": 7851
+     },
+     {
+      "name": "Колбасы, ветчина",
+      "code": "kolbasy-vetchina-1",
+      "disabled": false,
+      "forActive": false,
+      "counter": 3,
+      "id": 562
+     },
+     {
+      "name": "Полутвердые",
+      "code": "polutverdye",
+      "disabled": false,
+      "forActive": false,
+      "counter": 2,
+      "id": 22842
+     },
+     {
+      "name": "Чипсы, снеки, попкорн",
+      "code": "chipsy-sneki-popkorn",
+      "disabled": false,
+      "forActive": false,
+      "counter": 2,
+      "id": 512
+     },
+     {
+      "name": "Плавленые",
+      "code": "plavlenye",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1,
+      "id": 7853
+     },
+     {
+      "name": "Соусы и приправы",
+      "code": "sol-specii-i-pripravy",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1,
+      "id": 510
+     }
+    ]
+   },
+   {
+    "name": "Цена",
+    "code": "price",
+    "type": "range",
+    "isFixed": true,
+    "sort": 1,
+    "isUrlContain": true,
+    "informer": null,
+    "disabled": false,
+    "min": 114,
+    "max": 690,
+    "positionInUrl": 1
+   },
+   {
+    "name": "Товары со скидкой",
+    "code": "promo_only",
+    "type": "check",
+    "isFixed": true,
+    "sort": 2,
+    "isUrlContain": true,
+    "informer": null,
+    "disabled": false,
+    "positionInUrl": 2
+   },
+   {
+    "name": "Товары с высоким рейтингом",
+    "code": "high_rating",
+    "type": "check",
+    "isFixed": true,
+    "sort": 3,
+    "isUrlContain": false,
+    "informer": "Товары с рейтингом от 4 звезд",
+    "disabled": false
+   },
+   {
+    "name": "Бренд",
+    "code": "brand",
+    "type": "multi_check",
+    "isFixed": true,
+    "sort": 4,
+    "isUrlContain": true,
+    "informer": null,
+    "disabled": false,
+    "items": [
+     {
+      "name": "АШАН Красная птица",
+      "code": "ashan_krasnaya_ptica",
+      "disabled": false,
+      "forActive": false,
+      "counter": 4
+     },
+     {
+      "name": "Dolce Granto",
+      "code": "dolce-granto",
+      "disabled": false,
+      "forActive": false,
+      "counter": 2
+     },
+     {
+      "name": "Natura",
+      "code": "natura",
+      "disabled": false,
+      "forActive": false,
+      "counter": 2
+     },
+     {
+      "name": "Solemici",
+      "code": "solemici",
+      "disabled": false,
+      "forActive": false,
+      "counter": 2
+     },
+     {
+      "name": "Московский Картофель",
+      "code": "moskovskiy-kartofel",
+      "disabled": false,
+      "forActive": false,
+      "counter": 2
+     },
+     {
+      "name": "Botticello",
+      "code": "botticello",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "Danke",
+      "code": "danke",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "Dolce Deluxe",
+      "code": "dolce-deluxe",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "La Paulina",
+      "code": "la-paulina",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "Laime",
+      "code": "laime",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "Lustenberger",
+      "code": "lustenberger",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "Mario Parmigiani",
+      "code": "mario-parmigiani",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "Milkavita",
+      "code": "milkavita-2",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "Palermo",
+      "code": "palermo",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "Schonfeld",
+      "code": "schonfeld",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "Viola",
+      "code": "viola",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "Белебеевский",
+      "code": "belebeevskiy",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "Великие Луки",
+      "code": "velikie-luki",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "ДЫМОВ",
+      "code": "dymov",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "КАБОШ",
+      "code": "kabosh",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "Киприно",
+      "code": "kiprino",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "Сыробогатов",
+      "code": "syrobogatov",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "Я люблю готовить",
+      "code": "ya-lyublyu-gotovit",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     }
+    ],
+    "positionInUrl": 4
+   },
+   {
+    "name": "Страна",
+    "code": "country",
+    "type": "multi_check",
+    "isFixed": true,
+    "sort": 5,
+    "isUrlContain": true,
+    "informer": null,
+    "disabled": false,
+    "items": [
+     {
+      "name": " Россия",
+      "code": "rossiya",
+      "disabled": false,
+      "forActive": false,
+      "counter": 26
+     },
+     {
+      "name": "Беларусь",
+      "code": "belarus",
+      "disabled": false,
+      "forActive": false,
+      "counter": 2
+     },
+     {
+      "name": "Аргентина",
+      "code": "argentina",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "Швейцария",
+      "code": "shveycariya",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     }
+    ],
+    "positionInUrl": 5
+   },
+   {
+    "name": "Тип товара",
+    "code": "tip_tovara_correct",
+    "type": "multi_check",
+    "isFixed": false,
+    "sort": 11,
+    "isUrlContain": true,
+    "informer": null,
+    "disabled": false,
+    "items": [
+     {
+      "name": "Молочные продукты",
+      "code": "molochnye-produkty",
+      "disabled": false,
+      "forActive": false,
+      "counter": 24
+     },
+     {
+      "name": "Колбасные изделия",
+      "code": "kolbasnye-izdeliya",
+      "disabled": false,
+      "forActive": false,
+      "counter": 3
+     },
+     {
+      "name": "Снеки",
+      "code": "sneki",
+      "disabled": false,
+      "forActive": false,
+      "counter": 2
+     },
+     {
+      "name": "Чипсы",
+      "code": "chipsy-2",
+      "disabled": false,
+      "forActive": false,
+      "counter": 2
+     },
+     {
+      "name": "Заправка",
+      "code": "zapravka",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "Намазки",
+      "code": "namazki",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     }
+    ],
+    "url": "tip-tovara-correct",
+    "positionInUrl": 15
+   },
+   {
+    "name": "Вид упаковки",
+    "code": "vid_upakovki",
+    "type": "multi_check",
+    "isFixed": false,
+    "sort": 21,
+    "isUrlContain": true,
+    "informer": null,
+    "disabled": false,
+    "items": [
+     {
+      "name": "Вакуумная упаковка",
+      "code": "vakuumnaya_upakovka",
+      "disabled": false,
+      "forActive": false,
+      "counter": 9
+     },
+     {
+      "name": "Флоу-пак",
+      "code": "flou_pak",
+      "disabled": false,
+      "forActive": false,
+      "counter": 7
+     },
+     {
+      "name": "Пакет, пленка",
+      "code": "paket-plenka",
+      "disabled": false,
+      "forActive": false,
+      "counter": 4
+     },
+     {
+      "name": "Подложка",
+      "code": "podlozhka",
+      "disabled": false,
+      "forActive": false,
+      "counter": 3
+     },
+     {
+      "name": "Другой",
+      "code": "drugoy-3",
+      "disabled": false,
+      "forActive": false,
+      "counter": 2
+     },
+     {
+      "name": "Модифицированная газовая среда",
+      "code": "modificirovannaya",
+      "disabled": false,
+      "forActive": false,
+      "counter": 2
+     },
+     {
+      "name": "Блистер",
+      "code": "blister",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "Дой-пак",
+      "code": "doy_pak",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "Картонная коробка",
+      "code": "kartonnaya_korobka",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "Пауч",
+      "code": "pauch",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "Пластиковая бутылка",
+      "code": "plastikovaya_butylka",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     }
+    ],
+    "url": "vid-upakovki",
+    "positionInUrl": 7
+   },
+   {
+    "name": "Вид продукта",
+    "code": "vid_produkta",
+    "type": "multi_check",
+    "isFixed": false,
+    "sort": 22,
+    "isUrlContain": true,
+    "informer": null,
+    "disabled": false,
+    "items": [
+     {
+      "name": "Сыр",
+      "code": "syr-1",
+      "disabled": false,
+      "forActive": false,
+      "counter": 24
+     },
+     {
+      "name": "Картофельные",
+      "code": "kartofelnye",
+      "disabled": false,
+      "forActive": false,
+      "counter": 2
+     },
+     {
+      "name": "Колбаса",
+      "code": "kolbasa",
+      "disabled": false,
+      "forActive": false,
+      "counter": 2
+     },
+     {
+      "name": "Колбаски",
+      "code": "kolbaski_1",
+      "disabled": false,
+      "forActive": false,
+      "counter": 2
+     },
+     {
+      "name": "Сыр тертый",
+      "code": "syr-tertyy",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "Сырная намазка",
+      "code": "syrnaya-namazka",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     }
+    ],
+    "url": "vid-produkta",
+    "positionInUrl": 16
+   }
+  ],
+  "selectedFilters": {},
+  "sort": "default",
+  "meta": {
+   "digi_is_zero_query": false
+  },
+  "products_counter": 30
+ }
+}

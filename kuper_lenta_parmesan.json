@@ -1,0 +1,1606 @@
+{
+ "status": 200,
+ "body": {
+  "products": [
+   {
+    "id": "293143",
+    "sku": "18934114",
+    "retailer_sku": "293143",
+    "available": true,
+    "legacy_offer_id": 37568602162,
+    "name": "Сыр твердый Dolce Granto Пармезан тертый 40% БЗМЖ 150 г",
+    "price": 309.99,
+    "original_price": 309.99,
+    "discount": 0,
+    "human_volume": "150 г",
+    "volume": 150,
+    "volume_type": "g",
+    "items_per_pack": 1,
+    "discount_ends_at": "2026-10-29T00:00:00.000+00:00",
+    "price_type": "per_item",
+    "grams_per_unit": 150,
+    "unit_price": 309.99,
+    "original_unit_price": 309.99,
+    "promo_badge_ids": [],
+    "score": 3.7,
+    "labels": [],
+    "image_urls": [
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzE4OTM0MTE0L29yaWdpbmFsLzEvMjAyNi0wOC0yMCUyMDE3JTNBMDclM0EwNS41MjY1ODclMkIwMCUzQTAwLzE4OTM0MTE0XzEuanBn",
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzE4OTM0MTE0L29yaWdpbmFsLzIvMjAyMy0xMS0yOFQxNyUzQTQ1JTNBNDMuNzY4NTg2JTJCMDAlM0EwMC8xODkzNDExNF8yLmpwZw==",
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzE4OTM0MTE0L29yaWdpbmFsLzMvMjAyMy0xMS0yOFQxNyUzQTQ1JTNBNDMuOTk5Mjc4JTJCMDAlM0EwMC8xODkzNDExNF8zLmpwZw==",
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzE4OTM0MTE0L29yaWdpbmFsLzQvMjAyMy0xMS0yOFQxNyUzQTUxJTNBMTYuNDkzODYwJTJCMDAlM0EwMC8xODkzNDExNF80LmpwZw=="
+    ],
+    "requirements": [],
+    "slug": "syr-tverdyy-dolce-granto-parmezan-tertyy-40-bzmzh-150-g-8d3ffc9",
+    "max_select_quantity": 999,
+    "canonical_url": "https://sbermarket.ru/products/18934114-syr-tverdyy-dolce-granto-parmezan-tertyy-40-bzmzh-150-g-8d3ffc9",
+    "vat_info": null,
+    "bmpl_info": {},
+    "max_per_order": 130,
+    "ads_meta": null,
+    "with_options": false,
+    "is_beneficial": false,
+    "store_id": "135212",
+    "price_per_base_human_volume": "",
+    "prices_bank": null,
+    "sale_conditions": [
+     {
+      "id": 154,
+      "value": "Невозвратные категории для отмен"
+     },
+     {
+      "id": 152,
+      "value": "Невозвратные категории"
+     },
+     {
+      "id": 158,
+      "value": "Невозвратная для инвентаризации ДКП"
+     },
+     {
+      "id": 161,
+      "value": "Охлажденка для шоппера"
+     }
+    ],
+    "stock_discount_product_count": "0",
+    "stock_discount_product_left": "0",
+    "retailer": null,
+    "store": null,
+    "bmpl_values": {},
+    "discount_percent": 0,
+    "score_details": {
+     "feedback_count": 3,
+     "feedback_source": "ВкусВилл",
+     "comment_count": 3
+    }
+   },
+   {
+    "id": "701202",
+    "sku": "108519",
+    "retailer_sku": "701202",
+    "available": true,
+    "legacy_offer_id": 40900108032,
+    "name": "Сыр твердый Danke пармезан 40% БЗМЖ 180 г",
+    "price": 355.99,
+    "original_price": 355.99,
+    "discount": 0,
+    "human_volume": "180 г",
+    "volume": 180,
+    "volume_type": "g",
+    "items_per_pack": 1,
+    "discount_ends_at": "2026-10-29T00:00:00.000+00:00",
+    "price_type": "per_item",
+    "grams_per_unit": 180,
+    "unit_price": 355.99,
+    "original_unit_price": 355.99,
+    "promo_badge_ids": [],
+    "score": 4,
+    "labels": [],
+    "image_urls": [
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzEwODUxOS9vcmlnaW5hbC8xLzIwMjYtMDYtMTIlMjAwOCUzQTA4JTNBMDcuMTIwNDIyJTJCMDAlM0EwMC8xMDg1MTlfMS5qcGc="
+    ],
+    "requirements": [],
+    "slug": "syr-tverdyy-danke-parmezan-40-bzmzh-180-g-4ebef13",
+    "max_select_quantity": 999,
+    "canonical_url": "https://sbermarket.ru/products/108519-syr-tverdyy-danke-parmezan-40-bzmzh-180-g-4ebef13",
+    "vat_info": null,
+    "bmpl_info": {},
+    "max_per_order": 13,
+    "ads_meta": null,
+    "with_options": false,
+    "is_beneficial": false,
+    "store_id": "135212",
+    "price_per_base_human_volume": "",
+    "prices_bank": null,
+    "sale_conditions": [
+     {
+      "id": 154,
+      "value": "Невозвратные категории для отмен"
+     },
+     {
+      "id": 152,
+      "value": "Невозвратные категории"
+     },
+     {
+      "id": 158,
+      "value": "Невозвратная для инвентаризации ДКП"
+     },
+     {
+      "id": 161,
+      "value": "Охлажденка для шоппера"
+     }
+    ],
+    "stock_discount_product_count": "0",
+    "stock_discount_product_left": "0",
+    "retailer": null,
+    "store": null,
+    "bmpl_values": {},
+    "discount_percent": 0,
+    "score_details": {
+     "feedback_count": 1,
+     "feedback_source": "ВкусВилл",
+     "comment_count": 1
+    }
+   },
+   {
+    "id": "721175",
+    "sku": "38174111",
+    "retailer_sku": "721175",
+    "available": true,
+    "legacy_offer_id": 37746993382,
+    "name": "Сыр твердый Premium Club Пармезан 45% БЗМЖ 200 г",
+    "price": 412.99,
+    "original_price": 412.99,
+    "discount": 0,
+    "human_volume": "200 г",
+    "volume": 200,
+    "volume_type": "g",
+    "items_per_pack": 1,
+    "discount_ends_at": "2026-10-29T00:00:00.000+00:00",
+    "price_type": "per_item",
+    "grams_per_unit": 200,
+    "unit_price": 412.99,
+    "original_unit_price": 412.99,
+    "promo_badge_ids": [],
+    "score": 4.7,
+    "labels": [],
+    "image_urls": [
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzM4MTc0MTExL29yaWdpbmFsLzEvMjAyNC0wOS0xNyUyMDExJTNBMzklM0EwMS4yNjcwNTMlMkIwMCUzQTAwLzM4MTc0MTExXzEuanBn"
+    ],
+    "requirements": [],
+    "slug": "syr-tverdyy-premium-club-parmezan-45-bzmzh-200-g",
+    "max_select_quantity": 999,
+    "canonical_url": "https://sbermarket.ru/products/38174111-syr-tverdyy-premium-club-parmezan-45-bzmzh-200-g",
+    "vat_info": null,
+    "bmpl_info": {},
+    "max_per_order": 33,
+    "ads_meta": null,
+    "with_options": false,
+    "is_beneficial": false,
+    "store_id": "135212",
+    "price_per_base_human_volume": "",
+    "prices_bank": null,
+    "sale_conditions": [
+     {
+      "id": 154,
+      "value": "Невозвратные категории для отмен"
+     },
+     {
+      "id": 152,
+      "value": "Невозвратные категории"
+     },
+     {
+      "id": 158,
+      "value": "Невозвратная для инвентаризации ДКП"
+     },
+     {
+      "id": 161,
+      "value": "Охлажденка для шоппера"
+     }
+    ],
+    "stock_discount_product_count": "0",
+    "stock_discount_product_left": "0",
+    "retailer": null,
+    "store": null,
+    "bmpl_values": {},
+    "discount_percent": 0,
+    "score_details": {
+     "feedback_count": 42,
+     "feedback_source": "ВкусВилл",
+     "comment_count": 18
+    }
+   },
+   {
+    "id": "916593",
+    "sku": "49417040",
+    "retailer_sku": "916593",
+    "available": true,
+    "legacy_offer_id": 41117639962,
+    "name": "Сыр твёрдый Natura Пармезан 40% БЗМЖ 180 г",
+    "price": 381.99,
+    "original_price": 381.99,
+    "discount": 0,
+    "human_volume": "180 г",
+    "volume": 180,
+    "volume_type": "g",
+    "items_per_pack": 1,
+    "discount_ends_at": "2026-10-29T00:00:00.000+00:00",
+    "price_type": "per_item",
+    "grams_per_unit": 180,
+    "unit_price": 381.99,
+    "original_unit_price": 381.99,
+    "promo_badge_ids": [],
+    "score": null,
+    "labels": [],
+    "image_urls": [
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzQ5NDE3MDQwL29yaWdpbmFsLzEvMjAyNi0wMi0wNiUyMDExJTNBMzUlM0EzNS43MDg1ODAlMkIwMCUzQTAwLzQ5NDE3MDQwXzEuanBn"
+    ],
+    "requirements": [],
+    "slug": "syr-tvyordyy-natura-parmezan-40-bzmzh-180-g",
+    "max_select_quantity": 999,
+    "canonical_url": "https://sbermarket.ru/products/49417040-syr-tvyordyy-natura-parmezan-40-bzmzh-180-g",
+    "vat_info": null,
+    "bmpl_info": {},
+    "max_per_order": 9,
+    "ads_meta": null,
+    "with_options": false,
+    "is_beneficial": false,
+    "store_id": "135212",
+    "price_per_base_human_volume": "",
+    "prices_bank": null,
+    "sale_conditions": [
+     {
+      "id": 154,
+      "value": "Невозвратные категории для отмен"
+     },
+     {
+      "id": 152,
+      "value": "Невозвратные категории"
+     },
+     {
+      "id": 158,
+      "value": "Невозвратная для инвентаризации ДКП"
+     },
+     {
+      "id": 161,
+      "value": "Охлажденка для шоппера"
+     }
+    ],
+    "stock_discount_product_count": "0",
+    "stock_discount_product_left": "0",
+    "retailer": null,
+    "store": null,
+    "bmpl_values": {},
+    "discount_percent": 0,
+    "score_details": null
+   },
+   {
+    "id": "507147",
+    "sku": "200475",
+    "retailer_sku": "507147",
+    "available": true,
+    "legacy_offer_id": 37568637322,
+    "name": "Сыр твердый La Paulina Пармезан 45% ~250 г",
+    "price": 887.25,
+    "original_price": 887.25,
+    "discount": 0,
+    "human_volume": "250 г",
+    "volume": 250,
+    "volume_type": "g",
+    "items_per_pack": 1,
+    "discount_ends_at": "2026-10-29T00:00:00.000+00:00",
+    "price_type": "per_package",
+    "grams_per_unit": 250,
+    "unit_price": 3548.99,
+    "original_unit_price": 3548.99,
+    "promo_badge_ids": [],
+    "score": 5,
+    "labels": [],
+    "image_urls": [
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzIwMDQ3NS9vcmlnaW5hbC8xLzIwMjItMDgtMjNUMTAlM0E0MiUzQTQzLjkyODAwMCUyQjAwJTNBMDAvMjAwNDc1XzEuanBn"
+    ],
+    "requirements": [],
+    "slug": "syr-tverdyy-la-paulina-parmezan-45-250-g",
+    "max_select_quantity": 999,
+    "canonical_url": "https://sbermarket.ru/products/200475-syr-tverdyy-la-paulina-parmezan-45-250-g",
+    "vat_info": null,
+    "bmpl_info": {},
+    "max_per_order": 536,
+    "ads_meta": null,
+    "with_options": false,
+    "is_beneficial": false,
+    "store_id": "135212",
+    "price_per_base_human_volume": "",
+    "prices_bank": null,
+    "sale_conditions": [
+     {
+      "id": 154,
+      "value": "Невозвратные категории для отмен"
+     },
+     {
+      "id": 152,
+      "value": "Невозвратные категории"
+     },
+     {
+      "id": 158,
+      "value": "Невозвратная для инвентаризации ДКП"
+     },
+     {
+      "id": 161,
+      "value": "Охлажденка для шоппера"
+     }
+    ],
+    "stock_discount_product_count": "0",
+    "stock_discount_product_left": "0",
+    "retailer": null,
+    "store": null,
+    "bmpl_values": {},
+    "discount_percent": 0,
+    "score_details": {
+     "feedback_count": 5,
+     "feedback_source": "ВкусВилл",
+     "comment_count": 2
+    }
+   },
+   {
+    "id": "478938",
+    "sku": "15293594",
+    "retailer_sku": "478938",
+    "available": true,
+    "legacy_offer_id": 37568617742,
+    "name": "Сыр твердый Dolce Granto Пармезан 40% БЗМЖ 200 г",
+    "price": 529.99,
+    "original_price": 529.99,
+    "discount": 0,
+    "human_volume": "200 г",
+    "volume": 200,
+    "volume_type": "g",
+    "items_per_pack": 1,
+    "discount_ends_at": "2026-10-29T00:00:00.000+00:00",
+    "price_type": "per_item",
+    "grams_per_unit": 200,
+    "unit_price": 529.99,
+    "original_unit_price": 529.99,
+    "promo_badge_ids": [],
+    "score": 3.8,
+    "labels": [],
+    "image_urls": [
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzE1MjkzNTk0L29yaWdpbmFsLzEvMjAyNi0wOC0xMiUyMDE1JTNBMTQlM0E1NC4xMTI0NjclMkIwMCUzQTAwLzE1MjkzNTk0XzEuanBn"
+    ],
+    "requirements": [],
+    "slug": "syr-tverdyy-dolce-granto-parmezan-40-bzmzh-200-g",
+    "max_select_quantity": 999,
+    "canonical_url": "https://sbermarket.ru/products/15293594-syr-tverdyy-dolce-granto-parmezan-40-bzmzh-200-g",
+    "vat_info": null,
+    "bmpl_info": {},
+    "max_per_order": 50,
+    "ads_meta": null,
+    "with_options": false,
+    "is_beneficial": false,
+    "store_id": "135212",
+    "price_per_base_human_volume": "",
+    "prices_bank": null,
+    "sale_conditions": [
+     {
+      "id": 154,
+      "value": "Невозвратные категории для отмен"
+     },
+     {
+      "id": 152,
+      "value": "Невозвратные категории"
+     },
+     {
+      "id": 158,
+      "value": "Невозвратная для инвентаризации ДКП"
+     },
+     {
+      "id": 161,
+      "value": "Охлажденка для шоппера"
+     }
+    ],
+    "stock_discount_product_count": "0",
+    "stock_discount_product_left": "0",
+    "retailer": null,
+    "store": null,
+    "bmpl_values": {},
+    "discount_percent": 0,
+    "score_details": {
+     "feedback_count": 5,
+     "feedback_source": "ВкусВилл",
+     "comment_count": 3
+    }
+   },
+   {
+    "id": "516032",
+    "sku": "202560",
+    "retailer_sku": "516032",
+    "available": true,
+    "legacy_offer_id": 37568626992,
+    "name": "Сыр твердый Dolce Deluxe Пармезан 34% 200 г",
+    "price": 599.99,
+    "original_price": 599.99,
+    "discount": 0,
+    "human_volume": "200 г",
+    "volume": 200,
+    "volume_type": "g",
+    "items_per_pack": 1,
+    "discount_ends_at": "2026-10-29T00:00:00.000+00:00",
+    "price_type": "per_item",
+    "grams_per_unit": 200,
+    "unit_price": 599.99,
+    "original_unit_price": 599.99,
+    "promo_badge_ids": [],
+    "score": 4.3,
+    "labels": [],
+    "image_urls": [
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzIwMjU2MC9vcmlnaW5hbC8xLzIwMjYtMDUtMjYlMjAwOSUzQTM5JTNBNDkuMjU1ODE2JTJCMDAlM0EwMC8yMDI1NjBfMS5qcGc=",
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzIwMjU2MC9vcmlnaW5hbC8yLzIwMjMtMTEtMzBUMTglM0E1NiUzQTQ5LjE0OTY5MSUyQjAwJTNBMDAvMjAyNTYwXzIuanBn",
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzIwMjU2MC9vcmlnaW5hbC8zLzIwMjMtMTEtMzBUMTglM0E1NiUzQTQ5LjM5MzE3NiUyQjAwJTNBMDAvMjAyNTYwXzMuanBn",
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzIwMjU2MC9vcmlnaW5hbC83LzIwMjYtMDUtMjYlMjAwOSUzQTM5JTNBNDkuMjg3NDA5JTJCMDAlM0EwMC8yMDI1NjBfNy5qcGc=",
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzIwMjU2MC9vcmlnaW5hbC85LzIwMjYtMDUtMjYlMjAwOSUzQTUxJTNBMzIuMDk4ODIyJTJCMDAlM0EwMC8yMDI1NjBfOS5qcGc="
+    ],
+    "requirements": [],
+    "slug": "syr-tverdyy-dolce-deluxe-parmezan-34-200-g",
+    "max_select_quantity": 999,
+    "canonical_url": "https://sbermarket.ru/products/202560-syr-tverdyy-dolce-deluxe-parmezan-34-200-g",
+    "vat_info": null,
+    "bmpl_info": {},
+    "max_per_order": 19,
+    "ads_meta": null,
+    "with_options": false,
+    "is_beneficial": false,
+    "store_id": "135212",
+    "price_per_base_human_volume": "",
+    "prices_bank": null,
+    "sale_conditions": [
+     {
+      "id": 154,
+      "value": "Невозвратные категории для отмен"
+     },
+     {
+      "id": 152,
+      "value": "Невозвратные категории"
+     },
+     {
+      "id": 158,
+      "value": "Невозвратная для инвентаризации ДКП"
+     },
+     {
+      "id": 161,
+      "value": "Охлажденка для шоппера"
+     }
+    ],
+    "stock_discount_product_count": "0",
+    "stock_discount_product_left": "0",
+    "retailer": null,
+    "store": null,
+    "bmpl_values": {},
+    "discount_percent": 0,
+    "score_details": {
+     "feedback_count": 4,
+     "feedback_source": "ВкусВилл",
+     "comment_count": 1
+    }
+   },
+   {
+    "id": "698663",
+    "sku": "22696422",
+    "retailer_sku": "698663",
+    "available": true,
+    "legacy_offer_id": 37568795572,
+    "name": "Сыр твердый Кабош Parmesan кубики 40% 100 г",
+    "price": 277.99,
+    "original_price": 277.99,
+    "discount": 0,
+    "human_volume": "100 г",
+    "volume": 100,
+    "volume_type": "g",
+    "items_per_pack": 1,
+    "discount_ends_at": "2026-10-29T00:00:00.000+00:00",
+    "price_type": "per_item",
+    "grams_per_unit": 100,
+    "unit_price": 277.99,
+    "original_unit_price": 277.99,
+    "promo_badge_ids": [],
+    "score": 4.4,
+    "labels": [],
+    "image_urls": [
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzIyNjk2NDIyL29yaWdpbmFsLzEvMjAyNS0wNy0wMSUyMDA5JTNBNDklM0E0OC4xNDcxMDklMkIwMCUzQTAwLzIyNjk2NDIyXzEuanBn"
+    ],
+    "requirements": [],
+    "slug": "syr-tverdyy-kabosh-parmesan-kubiki-40-100-g",
+    "max_select_quantity": 999,
+    "canonical_url": "https://sbermarket.ru/products/22696422-syr-tverdyy-kabosh-parmesan-kubiki-40-100-g",
+    "vat_info": null,
+    "bmpl_info": {},
+    "max_per_order": 41,
+    "ads_meta": null,
+    "with_options": false,
+    "is_beneficial": false,
+    "store_id": "135212",
+    "price_per_base_human_volume": "",
+    "prices_bank": null,
+    "sale_conditions": [
+     {
+      "id": 154,
+      "value": "Невозвратные категории для отмен"
+     },
+     {
+      "id": 152,
+      "value": "Невозвратные категории"
+     },
+     {
+      "id": 158,
+      "value": "Невозвратная для инвентаризации ДКП"
+     },
+     {
+      "id": 161,
+      "value": "Охлажденка для шоппера"
+     }
+    ],
+    "stock_discount_product_count": "0",
+    "stock_discount_product_left": "0",
+    "retailer": null,
+    "store": null,
+    "bmpl_values": {},
+    "discount_percent": 0,
+    "score_details": {
+     "feedback_count": 16,
+     "feedback_source": "ВкусВилл",
+     "comment_count": 10
+    }
+   }
+  ],
+  "facets": [
+   {
+    "key": "discounted",
+    "name": "Товары со скидкой",
+    "type": "toggle",
+    "options": [
+     {
+      "name": null,
+      "value": 1,
+      "count": 42,
+      "permalink": null,
+      "active": false,
+      "bound": 0
+     }
+    ]
+   },
+   {
+    "key": "price",
+    "name": "Цена",
+    "type": "range",
+    "options": [
+     {
+      "name": "От",
+      "value": 51,
+      "count": 0,
+      "permalink": "_price_min-51",
+      "active": false,
+      "bound": 51
+     },
+     {
+      "name": "До",
+      "value": 625,
+      "count": 0,
+      "permalink": "_price_max-625",
+      "active": false,
+      "bound": 625
+     }
+    ]
+   },
+   {
+    "key": "brand",
+    "name": "Бренд",
+    "type": "multi_select",
+    "options": [
+     {
+      "name": "Schonfeld",
+      "value": 10030,
+      "count": 1,
+      "permalink": "schonfeld",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Super",
+      "value": 10847,
+      "count": 1,
+      "permalink": "super",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Uni Dan",
+      "value": 11580,
+      "count": 1,
+      "permalink": "uni-dan",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Viola",
+      "value": 11890,
+      "count": 4,
+      "permalink": "viola",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Belster",
+      "value": 1213,
+      "count": 1,
+      "permalink": "belster",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Хеллманн'с",
+      "value": 122560,
+      "count": 1,
+      "permalink": "hellmann-s-6d4d8c2",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Без бренда",
+      "value": 13173,
+      "count": 5,
+      "permalink": "bez-brenda",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Белебеевский",
+      "value": 13201,
+      "count": 1,
+      "permalink": "belebeevskiy",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Дымов",
+      "value": 14966,
+      "count": 1,
+      "permalink": "dymov",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Лента",
+      "value": 16738,
+      "count": 3,
+      "permalink": "lenta",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Особый вечер",
+      "value": 18392,
+      "count": 1,
+      "permalink": "osobyy-vecher",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Calve",
+      "value": 1889,
+      "count": 1,
+      "permalink": "calve",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Cheese Gallery",
+      "value": 2307,
+      "count": 1,
+      "permalink": "cheese-gallery",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Chef Rillettes",
+      "value": 2321,
+      "count": 1,
+      "permalink": "chef-rillettes",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Dr.Korner",
+      "value": 27443,
+      "count": 2,
+      "permalink": "dr-korner",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Danke",
+      "value": 2935,
+      "count": 1,
+      "permalink": "danke",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Dolce Granto",
+      "value": 3263,
+      "count": 4,
+      "permalink": "dolce-granto",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Сырная Династия",
+      "value": 35319,
+      "count": 1,
+      "permalink": "syrnaya-dinastiya-f44b92a",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Excelsior",
+      "value": 3928,
+      "count": 1,
+      "permalink": "excelsior",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Filippo Berio",
+      "value": 4114,
+      "count": 1,
+      "permalink": "filippo-berio",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Tartufi Jimmy",
+      "value": 48116,
+      "count": 1,
+      "permalink": "tartufi-jimmy",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Solemici",
+      "value": 52208,
+      "count": 1,
+      "permalink": "solemici",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "PapaNapoli",
+      "value": 61803,
+      "count": 1,
+      "permalink": "papanapoli",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "La Paulina",
+      "value": 6471,
+      "count": 1,
+      "permalink": "la-paulina",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Premium Club",
+      "value": 65354,
+      "count": 1,
+      "permalink": "premium-club",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Laime",
+      "value": 6541,
+      "count": 4,
+      "permalink": "laime",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Pervafood",
+      "value": 66945,
+      "count": 1,
+      "permalink": "pervafood",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Italian snack",
+      "value": 70537,
+      "count": 2,
+      "permalink": "italian-snack",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Smakky",
+      "value": 70599,
+      "count": 1,
+      "permalink": "smakky",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Marco Panatti",
+      "value": 70695,
+      "count": 1,
+      "permalink": "marco-panatti",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Kabosh",
+      "value": 74951,
+      "count": 2,
+      "permalink": "kabosh-21b2192",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Burenka Club",
+      "value": 76032,
+      "count": 1,
+      "permalink": "burenka-club",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Aurora",
+      "value": 785,
+      "count": 1,
+      "permalink": "aurora",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Natura",
+      "value": 8081,
+      "count": 1,
+      "permalink": "natura",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Naturals",
+      "value": 8092,
+      "count": 1,
+      "permalink": "naturals",
+      "active": false,
+      "bound": 0
+     }
+    ]
+   },
+   {
+    "key": "site_category_filter_10000138",
+    "name": "Тип сыра",
+    "type": "multi_select",
+    "options": [
+     {
+      "name": "Мягкий",
+      "value": 417391,
+      "count": 1,
+      "permalink": "myagkiy-b01346d",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Мягкий с плесенью",
+      "value": 417392,
+      "count": 1,
+      "permalink": "myagkiy-s-plesen-yu",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Плавленый",
+      "value": 417394,
+      "count": 3,
+      "permalink": "plavlenyy",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Полутвердый",
+      "value": 417395,
+      "count": 1,
+      "permalink": "polutverdyy",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Сырная тарелка",
+      "value": 417398,
+      "count": 1,
+      "permalink": "syrnaya-tarelka-29e9ffb",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Твёрдый",
+      "value": 417399,
+      "count": 25,
+      "permalink": "tvyordyy",
+      "active": false,
+      "bound": 0
+     }
+    ]
+   },
+   {
+    "key": "site_category_filter_10000063",
+    "name": "Фасовка",
+    "type": "multi_select",
+    "options": [
+     {
+      "name": "В банке",
+      "value": 2349,
+      "count": 1,
+      "permalink": "v-banke-2349",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Колбаски",
+      "value": 2352,
+      "count": 1,
+      "permalink": "kolbaski-2352",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Кубики",
+      "value": 2355,
+      "count": 2,
+      "permalink": "kubiki-2355",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Кусок",
+      "value": 2356,
+      "count": 19,
+      "permalink": "kusok-2356",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Нарезка",
+      "value": 2358,
+      "count": 4,
+      "permalink": "narezka-2358",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Тертый",
+      "value": 2362,
+      "count": 3,
+      "permalink": "tertyy-2362",
+      "active": false,
+      "bound": 0
+     }
+    ]
+   },
+   {
+    "key": "site_category_filter_10000139",
+    "name": "Сорт сыра",
+    "type": "multi_select",
+    "options": [
+     {
+      "name": "Без сорта",
+      "value": 419552,
+      "count": 4,
+      "permalink": "bez-sorta-8496a66",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Высший",
+      "value": 419761,
+      "count": 1,
+      "permalink": "vysshiy-f4337f1",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Гауда",
+      "value": 419768,
+      "count": 1,
+      "permalink": "gauda-210a326",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Дор Блю",
+      "value": 419961,
+      "count": 1,
+      "permalink": "dor-blyu-7cd9033",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Пармезан",
+      "value": 420643,
+      "count": 25,
+      "permalink": "parmezan-245c7e9",
+      "active": false,
+      "bound": 0
+     }
+    ]
+   },
+   {
+    "key": "site_category_filter_10000137",
+    "name": "Особенности",
+    "type": "multi_select",
+    "options": [
+     {
+      "name": "БЗМЖ",
+      "value": 4446,
+      "count": 21,
+      "permalink": "bez-zameniteley-molochnogo-zhira-4446",
+      "active": false,
+      "bound": 0
+     }
+    ]
+   },
+   {
+    "key": "site_category_filter_10000132",
+    "name": "Жирность, %",
+    "type": "multi_select",
+    "options": [
+     {
+      "name": "30 - 34,99",
+      "value": 4490,
+      "count": 1,
+      "permalink": "30-34-99-4490",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "35 - 39,99",
+      "value": 4491,
+      "count": 1,
+      "permalink": "35-39-99-4491",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "40 - 44,99",
+      "value": 4492,
+      "count": 15,
+      "permalink": "40-44-99-4492",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "45 - 49,99",
+      "value": 4493,
+      "count": 8,
+      "permalink": "45-49-99-4493",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "50 - 54,99",
+      "value": 4494,
+      "count": 1,
+      "permalink": "50-54-99-4494",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "55 - 59,99",
+      "value": 4495,
+      "count": 1,
+      "permalink": "55-59-99-4495",
+      "active": false,
+      "bound": 0
+     }
+    ]
+   },
+   {
+    "key": "site_category_filter_10000041",
+    "name": "Вес, гр",
+    "type": "multi_select",
+    "options": [
+     {
+      "name": "До 50",
+      "value": 1812,
+      "count": 4,
+      "permalink": "do-100-1812",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "51 - 100",
+      "value": 3050,
+      "count": 15,
+      "permalink": "51-100-3050",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "101 - 200",
+      "value": 1813,
+      "count": 26,
+      "permalink": "101-200-1813",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "201 - 300",
+      "value": 1814,
+      "count": 5,
+      "permalink": "201-300-1814",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "301 - 400",
+      "value": 1815,
+      "count": 2,
+      "permalink": "301-400-1815",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "401 - 500",
+      "value": 1816,
+      "count": 1,
+      "permalink": "401-500-1816",
+      "active": false,
+      "bound": 0
+     }
+    ]
+   },
+   {
+    "key": "site_category_filter_10000134",
+    "name": "Тип сырья",
+    "type": "multi_select",
+    "options": [
+     {
+      "name": "Коровье молоко",
+      "value": 4461,
+      "count": 29,
+      "permalink": "korovie-moloko-4461",
+      "active": false,
+      "bound": 0
+     }
+    ]
+   },
+   {
+    "key": "site_category_filter_10000021",
+    "name": "Страна",
+    "type": "multi_select",
+    "options": [
+     {
+      "name": "Аргентина",
+      "value": 382,
+      "count": 1,
+      "permalink": "argentina-382",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Беларусь",
+      "value": 1256,
+      "count": 2,
+      "permalink": "belarus-1256",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Испания",
+      "value": 394,
+      "count": 1,
+      "permalink": "ispaniya-394",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Италия",
+      "value": 395,
+      "count": 1,
+      "permalink": "italiya-395",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Ливан",
+      "value": 1344,
+      "count": 1,
+      "permalink": "livan-1344",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Литва",
+      "value": 400,
+      "count": 1,
+      "permalink": "litva-400",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Россия",
+      "value": 406,
+      "count": 47,
+      "permalink": "rossiya-406",
+      "active": false,
+      "bound": 0
+     }
+    ]
+   },
+   {
+    "key": "site_category_filter_10000036",
+    "name": "Калорийность на 100 гр, ккал",
+    "type": "multi_select",
+    "options": [
+     {
+      "name": "До 99",
+      "value": 1723,
+      "count": 5,
+      "permalink": "do-99-1723",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "100 - 200",
+      "value": 1724,
+      "count": 4,
+      "permalink": "100-200-1724",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "201 - 300",
+      "value": 1725,
+      "count": 8,
+      "permalink": "201-300-1725",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "301 - 400",
+      "value": 2131,
+      "count": 27,
+      "permalink": "301-400-2131",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "401 - 500",
+      "value": 2132,
+      "count": 7,
+      "permalink": "401-500-2132",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "501 - 600",
+      "value": 2133,
+      "count": 1,
+      "permalink": "501-600-2133",
+      "active": false,
+      "bound": 0
+     }
+    ]
+   },
+   {
+    "key": "site_category_filter_10000031",
+    "name": "Вид упаковки",
+    "type": "multi_select",
+    "options": [
+     {
+      "name": "Zip-lock",
+      "value": 870,
+      "count": 1,
+      "permalink": "zip-lock-870",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Вакуумная",
+      "value": 959,
+      "count": 6,
+      "permalink": "vakuumnaya-959",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Газонаполненная",
+      "value": 954,
+      "count": 1,
+      "permalink": "gazonapolnennaya-954",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Дозатор",
+      "value": 936,
+      "count": 1,
+      "permalink": "dozator-936",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Дой-пак",
+      "value": 932,
+      "count": 2,
+      "permalink": "doy-pak-932",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Картонная",
+      "value": 980,
+      "count": 5,
+      "permalink": "kartonnaya-980",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Контейнер",
+      "value": 1013,
+      "count": 4,
+      "permalink": "konteyner-1013",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Металлическая банка",
+      "value": 895,
+      "count": 1,
+      "permalink": "metallicheskaya-banka-895",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Обёртка",
+      "value": 1033,
+      "count": 2,
+      "permalink": "obyortka-1033",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Пакет",
+      "value": 1034,
+      "count": 15,
+      "permalink": "paket-1034",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Персональная упаковка",
+      "value": 1046,
+      "count": 2,
+      "permalink": "personal-naya-upakovka-1046",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Пищевая плёнка",
+      "value": 1045,
+      "count": 1,
+      "permalink": "pischevaya-plyonka-1045",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Пластиковая плёнка",
+      "value": 1040,
+      "count": 1,
+      "permalink": "plastikovaya-plyonka-1040",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Порционная",
+      "value": 1082,
+      "count": 2,
+      "permalink": "portsionnaya-1082",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Стеклянная банка",
+      "value": 901,
+      "count": 3,
+      "permalink": "steklyannaya-banka-901",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Термоформаж",
+      "value": 1108,
+      "count": 1,
+      "permalink": "termoformazh-1108",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Флоу-пак",
+      "value": 1121,
+      "count": 7,
+      "permalink": "flou-pak-1121",
+      "active": false,
+      "bound": 0
+     }
+    ]
+   }
+  ],
+  "meta": {
+   "current_page": "1",
+   "next_page": "2",
+   "previous_page": null,
+   "total_pages": "3",
+   "per_page": "24",
+   "total_count": "53"
+  },
+  "sort": [
+   {
+    "key": "popularity",
+    "name": "По популярности",
+    "order": "desc",
+    "active": true
+   },
+   {
+    "key": "price_asc",
+    "name": "Сначала дешевые",
+    "order": "asc",
+    "active": false
+   },
+   {
+    "key": "price_desc",
+    "name": "Сначала дорогие",
+    "order": "desc",
+    "active": false
+   },
+   {
+    "key": "unit_price_asc",
+    "name": "Выгоднее по весу",
+    "order": "asc",
+    "active": false
+   }
+  ],
+  "promo_badges": [],
+  "root_categories": {
+   "key": "root_category",
+   "name": "Категория",
+   "type": "select",
+   "options": [
+    {
+     "key": "",
+     "permalink": "moloko-sir-yajtsa-rastitelnie-produkti-5e3add5",
+     "value": 166211,
+     "count": 29,
+     "active": false,
+     "name": "Молоко, сыр, яйца, растительные продукты"
+    },
+    {
+     "key": "",
+     "permalink": "gotovaya-eda-2e24e10",
+     "value": 75617,
+     "count": 9,
+     "active": false,
+     "name": "Готовая еда"
+    },
+    {
+     "key": "",
+     "permalink": "bez-natsenki-na-brend-478e221-copy-2",
+     "value": 11256837,
+     "count": 8,
+     "active": false,
+     "name": "Без наценки на бренд"
+    },
+    {
+     "key": "",
+     "permalink": "makaroni-krupi-muka-ea6cda0",
+     "value": 43480,
+     "count": 6,
+     "active": false,
+     "name": "Макароны, крупы, мука"
+    },
+    {
+     "key": "",
+     "permalink": "chipsi-sneki-sukhofrukti",
+     "value": 70974,
+     "count": 5,
+     "active": false,
+     "name": "Чипсы, снеки, сухофрукты"
+    },
+    {
+     "key": "",
+     "permalink": "maslo-sousi-spetsii",
+     "value": 42546,
+     "count": 4,
+     "active": false,
+     "name": "Масло, соусы, специи"
+    },
+    {
+     "key": "",
+     "permalink": "khleb-khlebtsi-vipechka",
+     "value": 43508,
+     "count": 3,
+     "active": false,
+     "name": "Хлеб, хлебцы, выпечка"
+    },
+    {
+     "key": "",
+     "permalink": "zdorovoe-pitanie",
+     "value": 59335,
+     "count": 3,
+     "active": false,
+     "name": "Здоровый выбор"
+    },
+    {
+     "key": "",
+     "permalink": "kolbasi-sosiski-delikatesi-ce5276b",
+     "value": 43504,
+     "count": 2,
+     "active": false,
+     "name": "Колбасы, сосиски, деликатесы"
+    },
+    {
+     "key": "",
+     "permalink": "riba-ikra-dari-morya-bd4c0bc",
+     "value": 59096,
+     "count": 2,
+     "active": false,
+     "name": "Рыба, икра, дары моря"
+    },
+    {
+     "key": "",
+     "permalink": "konservi-solenya-copy",
+     "value": 70559,
+     "count": 2,
+     "active": false,
+     "name": "Консервы, соленья, варенье"
+    },
+    {
+     "key": "",
+     "permalink": "zamorozka-00c2cee",
+     "value": 75598,
+     "count": 2,
+     "active": false,
+     "name": "Заморозка"
+    },
+    {
+     "key": "",
+     "permalink": "sobstvennoe-proizvodstvo_osnovnaya",
+     "value": 64867,
+     "count": 1,
+     "active": false,
+     "name": "Собственное производство"
+    },
+    {
+     "key": "",
+     "permalink": "ovoshchi-frukti-orekhi-3f70c12",
+     "value": 41328,
+     "count": 1,
+     "active": false,
+     "name": "Овощи, фрукты, орехи"
+    }
+   ]
+  },
+  "private_filters": {
+   "in_stock": true,
+   "with_similar": false
+  },
+  "applied_features": [],
+  "search_query_uuid": "d046cc56-8531-4119-976b-c913d663b41c",
+  "search_session_uuid": "7b38d22d-0208-4036-aff9-9429f56f1eac",
+  "query_categories": [
+   {
+    "category_id": "162260",
+    "score": 0.99963003
+   }
+  ]
+ }
+}

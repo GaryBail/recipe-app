@@ -1,0 +1,2689 @@
+{
+ "status": 200,
+ "body": {
+  "products": [
+   {
+    "id": "1000445487",
+    "sku": "20053485",
+    "retailer_sku": "1000445487",
+    "available": true,
+    "legacy_offer_id": 30404218622,
+    "name": "Молоко 2,5% пастеризованное 930 мл Северное Молоко Вологодское БЗМЖ",
+    "price": 84.99,
+    "original_price": 99.99,
+    "discount": 15,
+    "human_volume": "930 мл",
+    "volume": 930,
+    "volume_type": "ml",
+    "items_per_pack": 1,
+    "discount_ends_at": "2026-12-01T23:59:59.000+00:00",
+    "price_type": "per_item",
+    "grams_per_unit": 930,
+    "unit_price": 84.99,
+    "original_unit_price": 99.99,
+    "promo_badge_ids": [],
+    "score": 5,
+    "labels": [],
+    "image_urls": [
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzIwMDUzNDg1L29yaWdpbmFsLzEvMjAyMi0wOC0xMlQwMyUzQTE1JTNBNDUuOTQxMDAwJTJCMDAlM0EwMC8yMDA1MzQ4NV8xLmpwZw=="
+    ],
+    "requirements": [],
+    "slug": "moloko-2-5-pasterizovannoe-930-ml-severnoe-moloko-vologodskoe-bzmzh-424f895",
+    "max_select_quantity": 999,
+    "canonical_url": "https://sbermarket.ru/products/20053485-moloko-2-5-pasterizovannoe-930-ml-severnoe-moloko-vologodskoe-bzmzh-424f895",
+    "vat_info": null,
+    "bmpl_info": {},
+    "max_per_order": 11,
+    "ads_meta": null,
+    "with_options": false,
+    "is_beneficial": false,
+    "store_id": "3879",
+    "price_per_base_human_volume": "",
+    "prices_bank": null,
+    "sale_conditions": [
+     {
+      "id": 154,
+      "value": "Невозвратные категории для отмен"
+     },
+     {
+      "id": 152,
+      "value": "Невозвратные категории"
+     },
+     {
+      "id": 158,
+      "value": "Невозвратная для инвентаризации ДКП"
+     },
+     {
+      "id": 161,
+      "value": "Охлажденка для шоппера"
+     }
+    ],
+    "stock_discount_product_count": "0",
+    "stock_discount_product_left": "0",
+    "retailer": null,
+    "store": null,
+    "bmpl_values": {},
+    "discount_percent": 0,
+    "score_details": {
+     "feedback_count": 2,
+     "feedback_source": "ВкусВилл",
+     "comment_count": 0
+    }
+   },
+   {
+    "id": "1000504234",
+    "sku": "38978537",
+    "retailer_sku": "1000504234",
+    "available": true,
+    "legacy_offer_id": 40971264083,
+    "name": "Молоко 3,4-6% отборное 930 мл Ясь Белоус БЗМЖ",
+    "price": 89.99,
+    "original_price": 89.99,
+    "discount": 0,
+    "human_volume": "930 мл",
+    "volume": 930,
+    "volume_type": "ml",
+    "items_per_pack": 1,
+    "discount_ends_at": "1970-01-01T00:00:00.000+00:00",
+    "price_type": "per_item",
+    "grams_per_unit": 930,
+    "unit_price": 89.99,
+    "original_unit_price": 89.99,
+    "promo_badge_ids": [],
+    "score": 5,
+    "labels": [],
+    "image_urls": [
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzM4OTc4NTM3L29yaWdpbmFsLzEvMjAyNi0wNC0yNyUyMDE4JTNBMTElM0EzNC4yNzkyMTAlMkIwMCUzQTAwLzM4OTc4NTM3XzEuanBn"
+    ],
+    "requirements": [],
+    "slug": "moloko-3-4-6-otbornoe-930-ml-yas-belous-bzmzh-7c3eb21",
+    "max_select_quantity": 999,
+    "canonical_url": "https://sbermarket.ru/products/38978537-moloko-3-4-6-otbornoe-930-ml-yas-belous-bzmzh-7c3eb21",
+    "vat_info": null,
+    "bmpl_info": {},
+    "max_per_order": 25,
+    "ads_meta": null,
+    "with_options": false,
+    "is_beneficial": false,
+    "store_id": "3879",
+    "price_per_base_human_volume": "",
+    "prices_bank": null,
+    "sale_conditions": [
+     {
+      "id": 154,
+      "value": "Невозвратные категории для отмен"
+     },
+     {
+      "id": 152,
+      "value": "Невозвратные категории"
+     },
+     {
+      "id": 158,
+      "value": "Невозвратная для инвентаризации ДКП"
+     },
+     {
+      "id": 161,
+      "value": "Охлажденка для шоппера"
+     }
+    ],
+    "stock_discount_product_count": "0",
+    "stock_discount_product_left": "0",
+    "retailer": null,
+    "store": null,
+    "bmpl_values": {},
+    "discount_percent": 0,
+    "score_details": {
+     "feedback_count": 2,
+     "feedback_source": "ВкусВилл",
+     "comment_count": 2
+    }
+   },
+   {
+    "id": "1899913369",
+    "sku": "131513",
+    "retailer_sku": "1899913369",
+    "available": true,
+    "legacy_offer_id": 28108488046,
+    "name": "Молоко пастеризованное питьевое «Пискаревский МЗ» Пискаревское цельное в пакете 2,5% ГОСТ БЗМЖ охлажденное 900 мл",
+    "price": 79.99,
+    "original_price": 79.99,
+    "discount": 0,
+    "human_volume": "900 мл",
+    "volume": 900,
+    "volume_type": "ml",
+    "items_per_pack": 1,
+    "discount_ends_at": "1970-01-01T00:00:00.000+00:00",
+    "price_type": "per_item",
+    "grams_per_unit": 900,
+    "unit_price": 79.99,
+    "original_unit_price": 79.99,
+    "promo_badge_ids": [],
+    "score": 4.7,
+    "labels": [],
+    "image_urls": [
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzEzMTUxMy9vcmlnaW5hbC8xLzIwMjYtMDQtMjclMjAxNyUzQTE3JTNBMTMuMTEzMDMyJTJCMDAlM0EwMC8xMzE1MTNfMS5qcGc="
+    ],
+    "requirements": [],
+    "slug": "moloko-pasterizovannoe-pitievoe-piskarevskiy-mz-piskarevskoe-tsel-noe-v-pakete-2-5-gost-bzmzh-ohlazhdennoe-900-ml",
+    "max_select_quantity": 999,
+    "canonical_url": "https://sbermarket.ru/products/131513-moloko-pasterizovannoe-pitievoe-piskarevskiy-mz-piskarevskoe-tsel-noe-v-pakete-2-5-gost-bzmzh-ohlazhdennoe-900-ml",
+    "vat_info": null,
+    "bmpl_info": {},
+    "max_per_order": 46,
+    "ads_meta": null,
+    "with_options": false,
+    "is_beneficial": false,
+    "store_id": "3879",
+    "price_per_base_human_volume": "",
+    "prices_bank": null,
+    "sale_conditions": [
+     {
+      "id": 154,
+      "value": "Невозвратные категории для отмен"
+     },
+     {
+      "id": 152,
+      "value": "Невозвратные категории"
+     },
+     {
+      "id": 158,
+      "value": "Невозвратная для инвентаризации ДКП"
+     },
+     {
+      "id": 161,
+      "value": "Охлажденка для шоппера"
+     }
+    ],
+    "stock_discount_product_count": "0",
+    "stock_discount_product_left": "0",
+    "retailer": null,
+    "store": null,
+    "bmpl_values": {},
+    "discount_percent": 0,
+    "score_details": {
+     "feedback_count": 25,
+     "feedback_source": "ВкусВилл",
+     "comment_count": 8
+    }
+   },
+   {
+    "id": "1899800733",
+    "sku": "15294886",
+    "retailer_sku": "1899800733",
+    "available": true,
+    "legacy_offer_id": 28108491076,
+    "name": "Молоко пастеризованное «Простоквашино» 2,5% БЗМЖ охлажденное 930 мл",
+    "price": 94.99,
+    "original_price": 94.99,
+    "discount": 0,
+    "human_volume": "930 мл",
+    "volume": 930,
+    "volume_type": "ml",
+    "items_per_pack": 1,
+    "discount_ends_at": "1970-01-01T00:00:00.000+00:00",
+    "price_type": "per_item",
+    "grams_per_unit": 930,
+    "unit_price": 94.99,
+    "original_unit_price": 94.99,
+    "promo_badge_ids": [],
+    "score": 4.7,
+    "labels": [],
+    "image_urls": [
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzE1Mjk0ODg2L29yaWdpbmFsLzEvMjAyNi0wOS0xMyUyMDExJTNBNDklM0EwMy4yMzExMjYlMkIwMCUzQTAwLzE1Mjk0ODg2XzEuanBn"
+    ],
+    "requirements": [],
+    "slug": "moloko-pasterizovannoe-prostokvashino-2-5-bzmzh-ohlazhdennoe-930-ml-6d35e67",
+    "max_select_quantity": 999,
+    "canonical_url": "https://sbermarket.ru/products/15294886-moloko-pasterizovannoe-prostokvashino-2-5-bzmzh-ohlazhdennoe-930-ml-6d35e67",
+    "vat_info": null,
+    "bmpl_info": {},
+    "max_per_order": 2,
+    "ads_meta": null,
+    "with_options": false,
+    "is_beneficial": false,
+    "store_id": "3879",
+    "price_per_base_human_volume": "",
+    "prices_bank": null,
+    "sale_conditions": [
+     {
+      "id": 154,
+      "value": "Невозвратные категории для отмен"
+     },
+     {
+      "id": 152,
+      "value": "Невозвратные категории"
+     },
+     {
+      "id": 158,
+      "value": "Невозвратная для инвентаризации ДКП"
+     },
+     {
+      "id": 161,
+      "value": "Охлажденка для шоппера"
+     }
+    ],
+    "stock_discount_product_count": "0",
+    "stock_discount_product_left": "0",
+    "retailer": null,
+    "store": null,
+    "bmpl_values": {},
+    "discount_percent": 0,
+    "score_details": {
+     "feedback_count": 123,
+     "feedback_source": "ВкусВилл",
+     "comment_count": 39
+    }
+   },
+   {
+    "id": "1000143306",
+    "sku": "31153",
+    "retailer_sku": "1000143306",
+    "available": true,
+    "legacy_offer_id": 30184586252,
+    "name": "Молоко пастеризованное питьевое «Домик в деревне» нормализованное 2,5% БЗМЖ охлажденное 1,4 л",
+    "price": 149.99,
+    "original_price": 149.99,
+    "discount": 0,
+    "human_volume": "1.4 л",
+    "volume": 1.4,
+    "volume_type": "l",
+    "items_per_pack": 1,
+    "discount_ends_at": "1970-01-01T00:00:00.000+00:00",
+    "price_type": "per_item",
+    "grams_per_unit": 1442,
+    "unit_price": 149.99,
+    "original_unit_price": 149.99,
+    "promo_badge_ids": [],
+    "score": 4.7,
+    "labels": [],
+    "image_urls": [
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzMxMTUzL29yaWdpbmFsLzEvMjAyNi0xMC0wNiUyMDEwJTNBMDAlM0E0OC41NDE3OTIlMkIwMCUzQTAwLzMxMTUzXzEuanBn"
+    ],
+    "requirements": [],
+    "slug": "moloko-pasterizovannoe-pitievoe-domik-v-derevne-normalizovannoe-2-5-bzmzh-ohlazhdennoe-1-4-l-b49feea",
+    "max_select_quantity": 999,
+    "canonical_url": "https://sbermarket.ru/products/31153-moloko-pasterizovannoe-pitievoe-domik-v-derevne-normalizovannoe-2-5-bzmzh-ohlazhdennoe-1-4-l-b49feea",
+    "vat_info": null,
+    "bmpl_info": {},
+    "max_per_order": 10,
+    "ads_meta": null,
+    "with_options": false,
+    "is_beneficial": false,
+    "store_id": "3879",
+    "price_per_base_human_volume": "",
+    "prices_bank": null,
+    "sale_conditions": [
+     {
+      "id": 152,
+      "value": "Невозвратные категории"
+     },
+     {
+      "id": 154,
+      "value": "Невозвратные категории для отмен"
+     },
+     {
+      "id": 158,
+      "value": "Невозвратная для инвентаризации ДКП"
+     },
+     {
+      "id": 161,
+      "value": "Охлажденка для шоппера"
+     }
+    ],
+    "stock_discount_product_count": "0",
+    "stock_discount_product_left": "0",
+    "retailer": null,
+    "store": null,
+    "bmpl_values": {},
+    "discount_percent": 0,
+    "score_details": {
+     "feedback_count": 35,
+     "feedback_source": "ВкусВилл",
+     "comment_count": 9
+    }
+   },
+   {
+    "id": "1000191939",
+    "sku": "131515",
+    "retailer_sku": "1000191939",
+    "available": true,
+    "legacy_offer_id": 28108488251,
+    "name": "Молоко пастеризованное питьевое «Пискаревский МЗ» 2,5% БЗМЖ охлажденное 1 л",
+    "price": 89.99,
+    "original_price": 89.99,
+    "discount": 0,
+    "human_volume": "1 л",
+    "volume": 1,
+    "volume_type": "l",
+    "items_per_pack": 1,
+    "discount_ends_at": "1970-01-01T00:00:00.000+00:00",
+    "price_type": "per_item",
+    "grams_per_unit": 1000,
+    "unit_price": 89.99,
+    "original_unit_price": 89.99,
+    "promo_badge_ids": [],
+    "score": 4.9,
+    "labels": [],
+    "image_urls": [
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzEzMTUxNS9vcmlnaW5hbC8xLzIwMjYtMDQtMjclMjAxOCUzQTEyJTNBMjMuNzU0NDk2JTJCMDAlM0EwMC8xMzE1MTVfMS5qcGc="
+    ],
+    "requirements": [],
+    "slug": "moloko-pasterizovannoe-pitievoe-piskarevskiy-mz-2-5-bzmzh-ohlazhdennoe-1-l",
+    "max_select_quantity": 999,
+    "canonical_url": "https://sbermarket.ru/products/131515-moloko-pasterizovannoe-pitievoe-piskarevskiy-mz-2-5-bzmzh-ohlazhdennoe-1-l",
+    "vat_info": null,
+    "bmpl_info": {},
+    "max_per_order": 28,
+    "ads_meta": null,
+    "with_options": false,
+    "is_beneficial": false,
+    "store_id": "3879",
+    "price_per_base_human_volume": "",
+    "prices_bank": null,
+    "sale_conditions": [
+     {
+      "id": 154,
+      "value": "Невозвратные категории для отмен"
+     },
+     {
+      "id": 152,
+      "value": "Невозвратные категории"
+     },
+     {
+      "id": 158,
+      "value": "Невозвратная для инвентаризации ДКП"
+     },
+     {
+      "id": 161,
+      "value": "Охлажденка для шоппера"
+     }
+    ],
+    "stock_discount_product_count": "0",
+    "stock_discount_product_left": "0",
+    "retailer": null,
+    "store": null,
+    "bmpl_values": {},
+    "discount_percent": 0,
+    "score_details": {
+     "feedback_count": 11,
+     "feedback_source": "ВкусВилл",
+     "comment_count": 2
+    }
+   },
+   {
+    "id": "8000058293",
+    "sku": "48424148",
+    "retailer_sku": "8000058293",
+    "available": true,
+    "legacy_offer_id": 39712945443,
+    "name": "Молоко 2,5% ультрапастеризованное 970 мл Из Вологды БЗМЖ",
+    "price": 94.99,
+    "original_price": 109.99,
+    "discount": 15,
+    "human_volume": "970 мл",
+    "volume": 970,
+    "volume_type": "ml",
+    "items_per_pack": 1,
+    "discount_ends_at": "2027-01-12T23:59:59.000+00:00",
+    "price_type": "per_item",
+    "grams_per_unit": 970,
+    "unit_price": 94.99,
+    "original_unit_price": 109.99,
+    "promo_badge_ids": [],
+    "score": 5,
+    "labels": [],
+    "image_urls": [
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzQ4NDI0MTQ4L29yaWdpbmFsLzEvMjAyNS0xMC0zMCUyMDE4JTNBMDQlM0ExMC45NDEwMzIlMkIwMCUzQTAwLzQ4NDI0MTQ4XzEuanBn"
+    ],
+    "requirements": [],
+    "slug": "moloko-2-5-ul-trapasterizovannoe-970-ml-iz-vologdy-bzmzh",
+    "max_select_quantity": 999,
+    "canonical_url": "https://sbermarket.ru/products/48424148-moloko-2-5-ul-trapasterizovannoe-970-ml-iz-vologdy-bzmzh",
+    "vat_info": null,
+    "bmpl_info": {},
+    "max_per_order": 16,
+    "ads_meta": null,
+    "with_options": false,
+    "is_beneficial": false,
+    "store_id": "3879",
+    "price_per_base_human_volume": "",
+    "prices_bank": null,
+    "sale_conditions": [
+     {
+      "id": 154,
+      "value": "Невозвратные категории для отмен"
+     },
+     {
+      "id": 152,
+      "value": "Невозвратные категории"
+     },
+     {
+      "id": 158,
+      "value": "Невозвратная для инвентаризации ДКП"
+     }
+    ],
+    "stock_discount_product_count": "0",
+    "stock_discount_product_left": "0",
+    "retailer": null,
+    "store": null,
+    "bmpl_values": {},
+    "discount_percent": 0,
+    "score_details": {
+     "feedback_count": 5,
+     "feedback_source": "ВкусВилл",
+     "comment_count": 1
+    }
+   },
+   {
+    "id": "1000139951",
+    "sku": "21994125",
+    "retailer_sku": "1000139951",
+    "available": true,
+    "legacy_offer_id": 39419040503,
+    "name": "Молоко 3,2% стерилизованное 1 л Мозырские молочные продукты БЗМЖ",
+    "price": 84.99,
+    "original_price": 84.99,
+    "discount": 0,
+    "human_volume": "1 л",
+    "volume": 1,
+    "volume_type": "l",
+    "items_per_pack": 1,
+    "discount_ends_at": "1970-01-01T00:00:00.000+00:00",
+    "price_type": "per_item",
+    "grams_per_unit": 1000,
+    "unit_price": 84.99,
+    "original_unit_price": 84.99,
+    "promo_badge_ids": [],
+    "score": 4.9,
+    "labels": [],
+    "image_urls": [
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzIxOTk0MTI1L29yaWdpbmFsLzEvMjAyMy0wNy0xMlQxMyUzQTQ5JTNBMDAuNDAzNzE5JTJCMDAlM0EwMC8yMTk5NDEyNV8xLmpwZw=="
+    ],
+    "requirements": [],
+    "slug": "moloko-3-2-sterilizovannoe-1-l-mozyrskie-molochnye-produkty-bzmzh-cc00536",
+    "max_select_quantity": 999,
+    "canonical_url": "https://sbermarket.ru/products/21994125-moloko-3-2-sterilizovannoe-1-l-mozyrskie-molochnye-produkty-bzmzh-cc00536",
+    "vat_info": null,
+    "bmpl_info": {},
+    "max_per_order": 18,
+    "ads_meta": null,
+    "with_options": false,
+    "is_beneficial": false,
+    "store_id": "3879",
+    "price_per_base_human_volume": "",
+    "prices_bank": null,
+    "sale_conditions": [
+     {
+      "id": 154,
+      "value": "Невозвратные категории для отмен"
+     },
+     {
+      "id": 152,
+      "value": "Невозвратные категории"
+     },
+     {
+      "id": 158,
+      "value": "Невозвратная для инвентаризации ДКП"
+     }
+    ],
+    "stock_discount_product_count": "0",
+    "stock_discount_product_left": "0",
+    "retailer": null,
+    "store": null,
+    "bmpl_values": {},
+    "discount_percent": 0,
+    "score_details": {
+     "feedback_count": 43,
+     "feedback_source": "ВкусВилл",
+     "comment_count": 13
+    }
+   }
+  ],
+  "facets": [
+   {
+    "key": "discounted",
+    "name": "Товары со скидкой",
+    "type": "toggle",
+    "options": [
+     {
+      "name": null,
+      "value": 1,
+      "count": 257,
+      "permalink": null,
+      "active": false,
+      "bound": 0
+     }
+    ]
+   },
+   {
+    "key": "price",
+    "name": "Цена",
+    "type": "range",
+    "options": [
+     {
+      "name": "От",
+      "value": 10,
+      "count": 0,
+      "permalink": "_price_min-10",
+      "active": false,
+      "bound": 10
+     },
+     {
+      "name": "До",
+      "value": 1680,
+      "count": 0,
+      "permalink": "_price_max-1680",
+      "active": false,
+      "bound": 1680
+     }
+    ]
+   },
+   {
+    "key": "brand",
+    "name": "Бренд",
+    "type": "multi_select",
+    "options": [
+     {
+      "name": "Snickers",
+      "value": 10467,
+      "count": 6,
+      "permalink": "snickers",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Teos",
+      "value": 11117,
+      "count": 3,
+      "permalink": "teos",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Twix",
+      "value": 11525,
+      "count": 5,
+      "permalink": "twix",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Viola",
+      "value": 11890,
+      "count": 8,
+      "permalink": "viola",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Агуша",
+      "value": 12512,
+      "count": 11,
+      "permalink": "agusha",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Акконд",
+      "value": 12620,
+      "count": 6,
+      "permalink": "akkond",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Аладушкин",
+      "value": 12636,
+      "count": 3,
+      "permalink": "aladushkin",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Алексеевское",
+      "value": 12663,
+      "count": 4,
+      "permalink": "alekseevskoe",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Бабаевский",
+      "value": 13021,
+      "count": 4,
+      "permalink": "babaevskiy",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Без бренда",
+      "value": 13173,
+      "count": 21,
+      "permalink": "bez-brenda",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Белебеевский",
+      "value": 13201,
+      "count": 3,
+      "permalink": "belebeevskiy",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Бон Пари",
+      "value": 13476,
+      "count": 6,
+      "permalink": "bon-pari--2",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Брест-Литовск",
+      "value": 13533,
+      "count": 14,
+      "permalink": "brest-litovsk",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Великолукский мясокомбинат",
+      "value": 13724,
+      "count": 6,
+      "permalink": "velikolukskiy-myasokombinat",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Вкуснотеево",
+      "value": 13935,
+      "count": 13,
+      "permalink": "vkusnoteevo",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Воронцовские",
+      "value": 14084,
+      "count": 4,
+      "permalink": "vorontsovskie",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Вязанка",
+      "value": 14181,
+      "count": 4,
+      "permalink": "vyazanka",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Даниссимо",
+      "value": 14479,
+      "count": 11,
+      "permalink": "danissimo",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Индилайт",
+      "value": 15640,
+      "count": 4,
+      "permalink": "indilayt",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Как раньше",
+      "value": 15752,
+      "count": 5,
+      "permalink": "kak-ranshe",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Каравай",
+      "value": 15849,
+      "count": 6,
+      "permalink": "karavay",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Клинский",
+      "value": 16014,
+      "count": 5,
+      "permalink": "klinskiy",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Коровка из Кореновки",
+      "value": 16194,
+      "count": 11,
+      "permalink": "korovka-iz-korenovki",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Bounty",
+      "value": 1658,
+      "count": 3,
+      "permalink": "bounty",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Любятово",
+      "value": 16957,
+      "count": 10,
+      "permalink": "lyubyatovo",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Махеевъ",
+      "value": 17166,
+      "count": 7,
+      "permalink": "maheev",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Меридиан",
+      "value": 17272,
+      "count": 5,
+      "permalink": "meridian",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Мираторг",
+      "value": 17393,
+      "count": 7,
+      "permalink": "miratorg",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Останкино",
+      "value": 18395,
+      "count": 5,
+      "permalink": "ostankino",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Папа Может",
+      "value": 18489,
+      "count": 13,
+      "permalink": "papa-mozhet",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Пискаревский МЗ",
+      "value": 18676,
+      "count": 12,
+      "permalink": "piskarevskiy-mz",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Простоквашино",
+      "value": 18984,
+      "count": 18,
+      "permalink": "prostokvashino",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Растишка",
+      "value": 19156,
+      "count": 11,
+      "permalink": "rastishka",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Резной палисад",
+      "value": 19179,
+      "count": 6,
+      "permalink": "reznoy-palisad",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Роллтон",
+      "value": 19284,
+      "count": 6,
+      "permalink": "rollton",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Рот Фронт",
+      "value": 19352,
+      "count": 8,
+      "permalink": "rot-front",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Савушкин",
+      "value": 19601,
+      "count": 5,
+      "permalink": "savushkin",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Санта Бремор",
+      "value": 19681,
+      "count": 5,
+      "permalink": "santa-bremor",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Свитлогорье",
+      "value": 19776,
+      "count": 6,
+      "permalink": "svitlogorie",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Славянка",
+      "value": 20159,
+      "count": 4,
+      "permalink": "slavyanka",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Стародворье",
+      "value": 20524,
+      "count": 9,
+      "permalink": "starodvorie",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Тема",
+      "value": 20883,
+      "count": 8,
+      "permalink": "tema",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Фабрика имени Крупской",
+      "value": 21309,
+      "count": 6,
+      "permalink": "fabrika-imeni-krupskoy",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Фругурт",
+      "value": 21497,
+      "count": 5,
+      "permalink": "frugurt",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "ФрутоНяня",
+      "value": 21538,
+      "count": 9,
+      "permalink": "frutonyanya",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Хладокомбинат №1",
+      "value": 21615,
+      "count": 4,
+      "permalink": "hladokombinat-1",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Хозяйство Васильевой А.В.",
+      "value": 21685,
+      "count": 5,
+      "permalink": "hozyaystvo-vasilievoy-a-v",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Хрутка",
+      "value": 21737,
+      "count": 9,
+      "permalink": "hrutka",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Черкизово",
+      "value": 21868,
+      "count": 4,
+      "permalink": "cherkizovo",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Чудо",
+      "value": 21988,
+      "count": 19,
+      "permalink": "chudo",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Юбилейное",
+      "value": 22327,
+      "count": 4,
+      "permalink": "yubileynoe",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Ясь Белоус",
+      "value": 22476,
+      "count": 4,
+      "permalink": "yas-belous",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Яшкино",
+      "value": 22482,
+      "count": 17,
+      "permalink": "yashkino",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Хлебный Дом",
+      "value": 23090,
+      "count": 6,
+      "permalink": "khliebnyi-dom",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Choco Pie",
+      "value": 2383,
+      "count": 4,
+      "permalink": "choco-pie",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Chupa Chups",
+      "value": 2410,
+      "count": 4,
+      "permalink": "chupa-chups--2",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Россия - щедрая душа!",
+      "value": 25161,
+      "count": 11,
+      "permalink": "rossiya-schedraya-dusha-321c6d16-1353-4a35-a64a-28188200a3a1",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Домик в Деревне",
+      "value": 25454,
+      "count": 11,
+      "permalink": "domik-v-derevne-08aa723",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "48 копеек",
+      "value": 26096,
+      "count": 7,
+      "permalink": "48-kopeek",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Северное Молоко",
+      "value": 26315,
+      "count": 7,
+      "permalink": "severnoe-moloko-e811a8e",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Свежее Завтра",
+      "value": 32610,
+      "count": 4,
+      "permalink": "svezhee-zavtra-adbfe80",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Большая Кружка",
+      "value": 34586,
+      "count": 9,
+      "permalink": "bol-shaya-kruzhka",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Alpen Gold",
+      "value": 346,
+      "count": 13,
+      "permalink": "alpen-gold",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Чистая линия",
+      "value": 34881,
+      "count": 5,
+      "permalink": "chistaya-liniya",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Моя цена",
+      "value": 37764,
+      "count": 33,
+      "permalink": "moya-tsena",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Восточный гость",
+      "value": 37782,
+      "count": 4,
+      "permalink": "vostochnyy-gost",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Магнит",
+      "value": 37815,
+      "count": 19,
+      "permalink": "magnit-e3b9d7b1-2b95-4979-a243-05ca2f15b002",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Epica",
+      "value": 3803,
+      "count": 5,
+      "permalink": "epica",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Essen",
+      "value": 3839,
+      "count": 4,
+      "permalink": "essen-3bf99a12-cb6f-458c-83b1-1cfb9eb3919e",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Exponenta",
+      "value": 3943,
+      "count": 5,
+      "permalink": "exponenta",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Premiere of Taste",
+      "value": 41556,
+      "count": 8,
+      "permalink": "premiere-of-taste",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Fruttis",
+      "value": 4510,
+      "count": 3,
+      "permalink": "fruttis",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Grondard",
+      "value": 5075,
+      "count": 3,
+      "permalink": "grondard",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Heinz",
+      "value": 5302,
+      "count": 6,
+      "permalink": "heinz",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Hochland",
+      "value": 5404,
+      "count": 9,
+      "permalink": "hochland",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "KDV",
+      "value": 6079,
+      "count": 3,
+      "permalink": "kdv-e29343b3-9bed-4e5e-bc22-e310d9852e79",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Kinder",
+      "value": 6161,
+      "count": 8,
+      "permalink": "kinder",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "А.Ростагрокомплекс",
+      "value": 62557,
+      "count": 4,
+      "permalink": "a-rostagrokompleks",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Konfesta",
+      "value": 6258,
+      "count": 4,
+      "permalink": "konfesta",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Село Зеленое",
+      "value": 64475,
+      "count": 5,
+      "permalink": "selo-zelenoe-967ecb8",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Lay's",
+      "value": 6646,
+      "count": 6,
+      "permalink": "lay-s",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Lucky Days",
+      "value": 7003,
+      "count": 13,
+      "permalink": "lucky-days",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "M&M's",
+      "value": 7084,
+      "count": 4,
+      "permalink": "m-m-s",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "MacCoffee",
+      "value": 7097,
+      "count": 6,
+      "permalink": "maccoffee",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Maggi",
+      "value": 7126,
+      "count": 7,
+      "permalink": "maggi",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Актибио",
+      "value": 72299,
+      "count": 12,
+      "permalink": "aktibio",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Landkaas",
+      "value": 73021,
+      "count": 4,
+      "permalink": "landkaas",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Milka",
+      "value": 7657,
+      "count": 11,
+      "permalink": "milka",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Milky Way",
+      "value": 7666,
+      "count": 4,
+      "permalink": "milky-way",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Mirel",
+      "value": 7720,
+      "count": 3,
+      "permalink": "mirel",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Nemoloko",
+      "value": 8140,
+      "count": 4,
+      "permalink": "nemoloko",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "NEO",
+      "value": 8142,
+      "count": 3,
+      "permalink": "neo--2",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Нескафе",
+      "value": 8159,
+      "count": 4,
+      "permalink": "nescafe",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Nestogen",
+      "value": 8166,
+      "count": 3,
+      "permalink": "nestogen",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Nutrilak",
+      "value": 8350,
+      "count": 3,
+      "permalink": "nutrilak",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "7 Days",
+      "value": 84,
+      "count": 5,
+      "permalink": "7-days",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Oreo",
+      "value": 8518,
+      "count": 5,
+      "permalink": "oreo",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Orion",
+      "value": 8551,
+      "count": 5,
+      "permalink": "orion",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "BabyFox",
+      "value": 898,
+      "count": 4,
+      "permalink": "babyfox",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Pretto",
+      "value": 9159,
+      "count": 5,
+      "permalink": "pretto",
+      "active": false,
+      "bound": 0
+     }
+    ]
+   },
+   {
+    "key": "site_category_filter_10000106",
+    "name": "Тип продукта",
+    "type": "multi_select",
+    "options": [
+     {
+      "name": "Десерт",
+      "value": 6579,
+      "count": 6,
+      "permalink": "desert",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Детская смесь",
+      "value": 5580,
+      "count": 11,
+      "permalink": "detskaya-smes",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Йогурт",
+      "value": 5359,
+      "count": 60,
+      "permalink": "yogurt",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Йогуртный продукт",
+      "value": 5360,
+      "count": 6,
+      "permalink": "yogurtnyy-produkt",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Каша детская",
+      "value": 5581,
+      "count": 11,
+      "permalink": "kasha-detskaya",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Кефир",
+      "value": 5193,
+      "count": 4,
+      "permalink": "kefir",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Кисломолочный напиток",
+      "value": 5196,
+      "count": 16,
+      "permalink": "kislomolochnyy-napitok",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Майонез",
+      "value": 5554,
+      "count": 6,
+      "permalink": "mayonez",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Молоко",
+      "value": 4421,
+      "count": 30,
+      "permalink": "moloko-4421",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Молочный коктейль",
+      "value": 4424,
+      "count": 19,
+      "permalink": "molochnyy-kokteyl-4424",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Мороженое",
+      "value": 6581,
+      "count": 56,
+      "permalink": "morozhenoe-188ad0e",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Оливки",
+      "value": 4405,
+      "count": 7,
+      "permalink": "olivki-4405",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Орехи",
+      "value": 4041,
+      "count": 4,
+      "permalink": "orehi-4041",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Растительный коктейль",
+      "value": 4425,
+      "count": 3,
+      "permalink": "rastitel-nyy-kokteyl-4425",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Растительный напиток",
+      "value": 4423,
+      "count": 7,
+      "permalink": "rastitel-nyy-napitok-4423",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Ряженка",
+      "value": 5203,
+      "count": 4,
+      "permalink": "ryazhenka",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Сгущённое молоко",
+      "value": 5481,
+      "count": 9,
+      "permalink": "sguschyonnoe-moloko-bc978df",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Сливки",
+      "value": 4589,
+      "count": 11,
+      "permalink": "slivki-4589",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Сливочное масло",
+      "value": 5176,
+      "count": 15,
+      "permalink": "slivochnoe-maslo",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Сметана",
+      "value": 4590,
+      "count": 17,
+      "permalink": "smetana-4590",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Сывороточный напиток",
+      "value": 4426,
+      "count": 5,
+      "permalink": "syvorotochnyy-napitok-4426",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Сырок глазированный",
+      "value": 5476,
+      "count": 26,
+      "permalink": "syrok-glazirovannyy",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Творог",
+      "value": 5314,
+      "count": 30,
+      "permalink": "tvorog",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Творожок",
+      "value": 5317,
+      "count": 17,
+      "permalink": "tvorozhok",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Торт",
+      "value": 6582,
+      "count": 8,
+      "permalink": "tort",
+      "active": false,
+      "bound": 0
+     }
+    ]
+   },
+   {
+    "key": "site_category_filter_10000132",
+    "name": "Жирность, %",
+    "type": "multi_select",
+    "options": [
+     {
+      "name": "До 0,8",
+      "value": 509813,
+      "count": 3,
+      "permalink": "do-0-8",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "0,9 - 1,5",
+      "value": 509814,
+      "count": 34,
+      "permalink": "0-9-1-5",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "1,6 - 2,5",
+      "value": 509815,
+      "count": 59,
+      "permalink": "1-6-2-5",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "2,6 - 3,5",
+      "value": 509816,
+      "count": 42,
+      "permalink": "2-6-3-5",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "3,6 - 4,9",
+      "value": 509817,
+      "count": 29,
+      "permalink": "3-6-4-9",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "5 - 6,99",
+      "value": 4434,
+      "count": 35,
+      "permalink": "5-6-99-4434",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "7 - 9,99",
+      "value": 4485,
+      "count": 28,
+      "permalink": "7-9-99-4485",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "10 - 14,99",
+      "value": 4486,
+      "count": 27,
+      "permalink": "10-14-99-4486",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "15 - 19,99",
+      "value": 4487,
+      "count": 29,
+      "permalink": "15-19-99-4487",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "20 - 24,99",
+      "value": 4488,
+      "count": 22,
+      "permalink": "20-24-99-4488",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "25 - 29,99",
+      "value": 4489,
+      "count": 11,
+      "permalink": "25-29-99-4489",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "30 - 34,99",
+      "value": 4490,
+      "count": 2,
+      "permalink": "30-34-99-4490",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "35 - 39,99",
+      "value": 4491,
+      "count": 5,
+      "permalink": "35-39-99-4491",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "40 - 44,99",
+      "value": 4492,
+      "count": 8,
+      "permalink": "40-44-99-4492",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "45 - 49,99",
+      "value": 4493,
+      "count": 40,
+      "permalink": "45-49-99-4493",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "50 - 54,99",
+      "value": 4494,
+      "count": 15,
+      "permalink": "50-54-99-4494",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "55 - 59,99",
+      "value": 4495,
+      "count": 8,
+      "permalink": "55-59-99-4495",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "60 - 69,99",
+      "value": 4496,
+      "count": 19,
+      "permalink": "60-69-99-4496",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "70 - 79,99",
+      "value": 4497,
+      "count": 8,
+      "permalink": "70-79-99-4497",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "80 - 89,99",
+      "value": 4498,
+      "count": 11,
+      "permalink": "80-89-99-4498",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "более 90",
+      "value": 4499,
+      "count": 1,
+      "permalink": "bolee-90-4499",
+      "active": false,
+      "bound": 0
+     }
+    ]
+   },
+   {
+    "key": "site_category_filter_10000068",
+    "name": "Способ обработки",
+    "type": "multi_select",
+    "options": [
+     {
+      "name": "Без обработки",
+      "value": 4325,
+      "count": 3,
+      "permalink": "bez-obrabotki-4325",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "В панировке",
+      "value": 3690,
+      "count": 4,
+      "permalink": "v-panirovke-3690",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Варено-копченые",
+      "value": 2771,
+      "count": 4,
+      "permalink": "vareno-kopchenye-2771",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Вареные",
+      "value": 2436,
+      "count": 30,
+      "permalink": "varenye-2436",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Зернистая",
+      "value": 8685,
+      "count": 4,
+      "permalink": "zernistaya",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Консервированные",
+      "value": 413691,
+      "count": 8,
+      "permalink": "konservirovannye",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Копчено-вареные",
+      "value": 2435,
+      "count": 3,
+      "permalink": "kopcheno-varenye-2435",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Копченые",
+      "value": 2437,
+      "count": 1,
+      "permalink": "kopchenye-2437",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Молотая",
+      "value": 413693,
+      "count": 2,
+      "permalink": "molotaya",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Очищенные",
+      "value": 3695,
+      "count": 1,
+      "permalink": "ochischennye-3695",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Пастеризованное",
+      "value": 4427,
+      "count": 20,
+      "permalink": "pasterizovannoe-4427",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Пастеризованный",
+      "value": 5310,
+      "count": 27,
+      "permalink": "pasterizovannyy",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Резервуарный",
+      "value": 5311,
+      "count": 9,
+      "permalink": "rezervuarnyy",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Стерилизованное",
+      "value": 4428,
+      "count": 7,
+      "permalink": "sterilizovannoe-4428",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Стерилизованные",
+      "value": 8617,
+      "count": 2,
+      "permalink": "sterilizovannye",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Стерилизованный",
+      "value": 413705,
+      "count": 9,
+      "permalink": "sterilizovannyy-2d88cf0",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Сушёные",
+      "value": 2783,
+      "count": 2,
+      "permalink": "sushyonye-2783",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Сыровяленые",
+      "value": 2784,
+      "count": 1,
+      "permalink": "syrovyalenye-2784",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Сырокопченые",
+      "value": 2434,
+      "count": 2,
+      "permalink": "syrokopchenye-2434",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Термостатный",
+      "value": 5312,
+      "count": 2,
+      "permalink": "termostatnyy",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Топленое",
+      "value": 4429,
+      "count": 2,
+      "permalink": "toplenoe-4429",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Ультрапастеризованное",
+      "value": 4430,
+      "count": 20,
+      "permalink": "ul-trapasterizovannoe-4430",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Ультрапастеризованные",
+      "value": 413708,
+      "count": 9,
+      "permalink": "ul-trapasterizovannye",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Ультрапастеризованный",
+      "value": 413709,
+      "count": 8,
+      "permalink": "ul-trapasterizovannyy",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Фаршированные",
+      "value": 3699,
+      "count": 1,
+      "permalink": "farshirovannye-3699",
+      "active": false,
+      "bound": 0
+     }
+    ]
+   },
+   {
+    "key": "site_category_filter_10000052",
+    "name": "Объём, л",
+    "type": "multi_select",
+    "options": [
+     {
+      "name": "До 0,33",
+      "value": 2089,
+      "count": 57,
+      "permalink": "do-0-33-2089",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "0,331 - 0,5",
+      "value": 2090,
+      "count": 27,
+      "permalink": "0-331-0-5-2090",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "0,51 - 1",
+      "value": 2091,
+      "count": 44,
+      "permalink": "0-51-1-2091",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "1,1 - 1,5",
+      "value": 2092,
+      "count": 4,
+      "permalink": "bolee-1-2092",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "1,6 - 2",
+      "value": 2124,
+      "count": 1,
+      "permalink": "1-6-2-2124",
+      "active": false,
+      "bound": 0
+     }
+    ]
+   },
+   {
+    "key": "site_category_filter_10000134",
+    "name": "Тип сырья",
+    "type": "multi_select",
+    "options": [
+     {
+      "name": "Банановое",
+      "value": 4448,
+      "count": 1,
+      "permalink": "bananovoe-4448",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Козье молоко",
+      "value": 4458,
+      "count": 1,
+      "permalink": "kozie-moloko-4458",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Кокосовое",
+      "value": 4459,
+      "count": 1,
+      "permalink": "kokosovoe-4459",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Коровье молоко",
+      "value": 4461,
+      "count": 424,
+      "permalink": "korovie-moloko-4461",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Миндальное",
+      "value": 4465,
+      "count": 1,
+      "permalink": "mindal-noe-4465",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Овсяное",
+      "value": 4467,
+      "count": 5,
+      "permalink": "ovsyanoe-4467",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Соевое",
+      "value": 4476,
+      "count": 3,
+      "permalink": "soevoe-4476",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Фисташковое",
+      "value": 4478,
+      "count": 1,
+      "permalink": "fistashkovoe-4478",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Фундучное",
+      "value": 4479,
+      "count": 1,
+      "permalink": "funduchnoe-4479",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Ячменно-нутовое",
+      "value": 4481,
+      "count": 2,
+      "permalink": "yachmenno-nutovoe-4481",
+      "active": false,
+      "bound": 0
+     }
+    ]
+   },
+   {
+    "key": "site_category_filter_10000133",
+    "name": "Без лактозы",
+    "type": "multi_select",
+    "options": [
+     {
+      "name": "Да",
+      "value": 4436,
+      "count": 18,
+      "permalink": "da-4436",
+      "active": false,
+      "bound": 0
+     }
+    ]
+   },
+   {
+    "key": "site_category_filter_10000137",
+    "name": "Особенности",
+    "type": "multi_select",
+    "options": [
+     {
+      "name": "БЗМЖ",
+      "value": 4446,
+      "count": 380,
+      "permalink": "bez-zameniteley-molochnogo-zhira-4446",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Веганский продукт",
+      "value": 4500,
+      "count": 6,
+      "permalink": "veganskiy-produkt-4500",
+      "active": false,
+      "bound": 0
+     }
+    ]
+   },
+   {
+    "key": "site_category_filter_10000135",
+    "name": "Вид молока",
+    "type": "multi_select",
+    "options": [
+     {
+      "name": "Нормализованное",
+      "value": 4443,
+      "count": 60,
+      "permalink": "normalizovannoe-4443",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Обезжиренное",
+      "value": 4484,
+      "count": 5,
+      "permalink": "obezzhirennoe-4484",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Цельное",
+      "value": 4442,
+      "count": 20,
+      "permalink": "tsel-noe-4442",
+      "active": false,
+      "bound": 0
+     }
+    ]
+   },
+   {
+    "key": "site_category_filter_10000136",
+    "name": "Для детей",
+    "type": "multi_select",
+    "options": [
+     {
+      "name": "Да",
+      "value": 4444,
+      "count": 32,
+      "permalink": "da-4444",
+      "active": false,
+      "bound": 0
+     }
+    ]
+   },
+   {
+    "key": "site_category_filter_10000036",
+    "name": "Калорийность на 100 гр, ккал",
+    "type": "multi_select",
+    "options": [
+     {
+      "name": "До 99",
+      "value": 1723,
+      "count": 195,
+      "permalink": "do-99-1723",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "100 - 200",
+      "value": 1724,
+      "count": 160,
+      "permalink": "100-200-1724",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "201 - 300",
+      "value": 1725,
+      "count": 180,
+      "permalink": "201-300-1725",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "301 - 400",
+      "value": 2131,
+      "count": 226,
+      "permalink": "301-400-2131",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "401 - 500",
+      "value": 2132,
+      "count": 200,
+      "permalink": "401-500-2132",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "501 - 600",
+      "value": 2133,
+      "count": 134,
+      "permalink": "501-600-2133",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "601 - 700",
+      "value": 2134,
+      "count": 19,
+      "permalink": "601-700-2134",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "701 - 800",
+      "value": 2135,
+      "count": 11,
+      "permalink": "701-800-2135",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "801 - 900",
+      "value": 2136,
+      "count": 2,
+      "permalink": "801-900-2136",
+      "active": false,
+      "bound": 0
+     }
+    ]
+   },
+   {
+    "key": "site_category_filter_10000031",
+    "name": "Вид упаковки",
+    "type": "multi_select",
+    "options": [
+     {
+      "name": "Без упаковки",
+      "value": 926,
+      "count": 13,
+      "permalink": "bez-upakovki-926",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Бумажная",
+      "value": 917,
+      "count": 6,
+      "permalink": "bumazhnaya-upakovka-917",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Вакуумная",
+      "value": 959,
+      "count": 40,
+      "permalink": "vakuumnaya-959",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Газонаполненная",
+      "value": 954,
+      "count": 8,
+      "permalink": "gazonapolnennaya-954",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Дой-пак",
+      "value": 932,
+      "count": 23,
+      "permalink": "doy-pak-932",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Картонная",
+      "value": 980,
+      "count": 135,
+      "permalink": "kartonnaya-980",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Контейнер",
+      "value": 1013,
+      "count": 54,
+      "permalink": "konteyner-1013",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Лоток",
+      "value": 1002,
+      "count": 11,
+      "permalink": "lotok-1002",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Металлическая банка",
+      "value": 895,
+      "count": 23,
+      "permalink": "metallicheskaya-banka-895",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Обёртка",
+      "value": 1033,
+      "count": 84,
+      "permalink": "obyortka-1033",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Пакет",
+      "value": 1034,
+      "count": 289,
+      "permalink": "paket-1034",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Персональная упаковка",
+      "value": 1046,
+      "count": 19,
+      "permalink": "personal-naya-upakovka-1046",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Пластиковая банка",
+      "value": 902,
+      "count": 18,
+      "permalink": "plastikovaya-banka-902",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Пластиковая бутылка",
+      "value": 1043,
+      "count": 62,
+      "permalink": "plastikovaya-butylka-1043",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Пластиковая плёнка",
+      "value": 1040,
+      "count": 11,
+      "permalink": "plastikovaya-plyonka-1040",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Пластиковый саше",
+      "value": 1066,
+      "count": 5,
+      "permalink": "plastikovyy-sashe-1066",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Пластиковый стакан",
+      "value": 1065,
+      "count": 99,
+      "permalink": "plastikovyy-stakan-1065",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Подложка",
+      "value": 1079,
+      "count": 7,
+      "permalink": "podlozhka-1079",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Порционная",
+      "value": 1082,
+      "count": 15,
+      "permalink": "portsionnaya-1082",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Саше",
+      "value": 37650,
+      "count": 8,
+      "permalink": "sashe-dc72d1a",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Стеклянная банка",
+      "value": 901,
+      "count": 15,
+      "permalink": "steklyannaya-banka-901",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Тетрапак",
+      "value": 1107,
+      "count": 18,
+      "permalink": "tetrapak-1107",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Флоу-пак",
+      "value": 1121,
+      "count": 96,
+      "permalink": "flou-pak-1121",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Фольга",
+      "value": 890,
+      "count": 26,
+      "permalink": "fol-ga-890",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Фольгированный пакет",
+      "value": 884,
+      "count": 10,
+      "permalink": "fol-girovannyy-paket-884",
+      "active": false,
+      "bound": 0
+     }
+    ]
+   },
+   {
+    "key": "site_category_filter_10000020",
+    "name": "Экомаркировка",
+    "type": "multi_select",
+    "options": [
+     {
+      "name": "FSC MIX",
+      "value": 322,
+      "count": 2,
+      "permalink": "fsc-mix-322",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Все",
+      "value": 7791,
+      "count": 2,
+      "permalink": "vse",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Упаковка FSC MIX",
+      "value": 48760,
+      "count": 1,
+      "permalink": "upakovka-fsc-mix",
+      "active": false,
+      "bound": 0
+     }
+    ]
+   }
+  ],
+  "meta": {
+   "current_page": "1",
+   "next_page": "2",
+   "previous_page": null,
+   "total_pages": "25",
+   "per_page": "24",
+   "total_count": "600"
+  },
+  "sort": [
+   {
+    "key": "popularity",
+    "name": "По популярности",
+    "order": "desc",
+    "active": true
+   },
+   {
+    "key": "price_asc",
+    "name": "Сначала дешевые",
+    "order": "asc",
+    "active": false
+   },
+   {
+    "key": "price_desc",
+    "name": "Сначала дорогие",
+    "order": "desc",
+    "active": false
+   },
+   {
+    "key": "unit_price_asc",
+    "name": "Выгоднее по весу",
+    "order": "asc",
+    "active": false
+   }
+  ],
+  "promo_badges": [],
+  "root_categories": {
+   "key": "root_category",
+   "name": "Категория",
+   "type": "select",
+   "options": [
+    {
+     "key": "",
+     "permalink": "moloko-sir-yajtsa-rastitelnie-produkti-5e3add5",
+     "value": 166211,
+     "count": 469,
+     "active": false,
+     "name": "Молоко, сыр, яйца, растительные продукты"
+    },
+    {
+     "key": "",
+     "permalink": "sladosti-167ae66",
+     "value": 72088,
+     "count": 376,
+     "active": false,
+     "name": "Сладости"
+    },
+    {
+     "key": "",
+     "permalink": "kolbasi-sosiski-delikatesi-ce5276b",
+     "value": 43504,
+     "count": 104,
+     "active": false,
+     "name": "Колбасы, сосиски, деликатесы"
+    },
+    {
+     "key": "",
+     "permalink": "zamorozka-00c2cee",
+     "value": 75598,
+     "count": 102,
+     "active": false,
+     "name": "Заморозка"
+    },
+    {
+     "key": "",
+     "permalink": "bez-natsenki-na-brend-478e221-copy-2",
+     "value": 11256837,
+     "count": 101,
+     "active": false,
+     "name": "Без наценки на бренд"
+    },
+    {
+     "key": "",
+     "permalink": "detskie-tovari_supermarket",
+     "value": 67864,
+     "count": 95,
+     "active": false,
+     "name": "Детские товары"
+    },
+    {
+     "key": "",
+     "permalink": "khleb-khlebtsi-vipechka",
+     "value": 43508,
+     "count": 53,
+     "active": false,
+     "name": "Хлеб, хлебцы, выпечка"
+    },
+    {
+     "key": "",
+     "permalink": "chipsi-sneki-sukhofrukti",
+     "value": 70974,
+     "count": 51,
+     "active": false,
+     "name": "Чипсы, снеки, сухофрукты"
+    },
+    {
+     "key": "",
+     "permalink": "melochi-vozle-kassi-copy-copy",
+     "value": 141977,
+     "count": 37,
+     "active": false,
+     "name": "Мелочи возле кассы"
+    },
+    {
+     "key": "",
+     "permalink": "zdorovoe-pitanie",
+     "value": 59335,
+     "count": 34,
+     "active": false,
+     "name": "Здоровый выбор"
+    },
+    {
+     "key": "",
+     "permalink": "maslo-sousi-spetsii",
+     "value": 42546,
+     "count": 33,
+     "active": false,
+     "name": "Масло, соусы, специи"
+    },
+    {
+     "key": "",
+     "permalink": "makaroni-krupi-muka-ea6cda0",
+     "value": 43480,
+     "count": 33,
+     "active": false,
+     "name": "Макароны, крупы, мука"
+    },
+    {
+     "key": "",
+     "permalink": "myaso-ptitsa-0f1e3fb",
+     "value": 43519,
+     "count": 32,
+     "active": false,
+     "name": "Мясо, птица"
+    },
+    {
+     "key": "",
+     "permalink": "riba-ikra-dari-morya-bd4c0bc",
+     "value": 59096,
+     "count": 29,
+     "active": false,
+     "name": "Рыба, икра, дары моря"
+    },
+    {
+     "key": "",
+     "permalink": "gotovaya-eda-2e24e10",
+     "value": 75617,
+     "count": 27,
+     "active": false,
+     "name": "Готовая еда"
+    }
+   ]
+  },
+  "private_filters": {
+   "in_stock": true,
+   "with_similar": false
+  },
+  "applied_features": [],
+  "search_query_uuid": "1fc2bead-e6be-4186-a047-863399622f3e",
+  "search_session_uuid": "681028a2-96bb-47c5-a9d8-13b9668aeb49",
+  "query_categories": [
+   {
+    "category_id": "136976",
+    "score": 0.909917
+   }
+  ]
+ }
+}

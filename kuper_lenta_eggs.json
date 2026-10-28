@@ -1,0 +1,2225 @@
+{
+ "status": 200,
+ "body": {
+  "products": [
+   {
+    "id": "144782",
+    "sku": "74185",
+    "retailer_sku": "144782",
+    "available": true,
+    "legacy_offer_id": 37568565892,
+    "name": "Яйцо куриное 365 дней С1 10 шт",
+    "price": 129.99,
+    "original_price": 129.99,
+    "discount": 0,
+    "human_volume": "600 г",
+    "volume": 600,
+    "volume_type": "g",
+    "items_per_pack": 1,
+    "discount_ends_at": "2026-10-28T00:00:00.000+00:00",
+    "price_type": "per_item",
+    "grams_per_unit": 600,
+    "unit_price": 129.99,
+    "original_unit_price": 129.99,
+    "promo_badge_ids": [],
+    "score": 4.9,
+    "labels": [],
+    "image_urls": [
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzc0MTg1L29yaWdpbmFsLzEvMjAyNS0wNy0zMCUyMDA3JTNBNDElM0E0Ny45Nzk3NTclMkIwMCUzQTAwLzc0MTg1XzEuanBn"
+    ],
+    "requirements": [],
+    "slug": "yaytso-kurinoe-365-dney-s1-10-sht-9866952",
+    "max_select_quantity": 999,
+    "canonical_url": "https://sbermarket.ru/products/74185-yaytso-kurinoe-365-dney-s1-10-sht-9866952",
+    "vat_info": null,
+    "bmpl_info": {},
+    "max_per_order": 10,
+    "ads_meta": null,
+    "with_options": false,
+    "is_beneficial": false,
+    "store_id": "135212",
+    "price_per_base_human_volume": "",
+    "prices_bank": null,
+    "sale_conditions": [
+     {
+      "id": 152,
+      "value": "Невозвратные категории"
+     },
+     {
+      "id": 154,
+      "value": "Невозвратные категории для отмен"
+     },
+     {
+      "id": 158,
+      "value": "Невозвратная для инвентаризации ДКП"
+     }
+    ],
+    "stock_discount_product_count": "0",
+    "stock_discount_product_left": "0",
+    "retailer": null,
+    "store": null,
+    "bmpl_values": {},
+    "discount_percent": 0,
+    "score_details": {
+     "feedback_count": 63,
+     "feedback_source": "ВкусВилл",
+     "comment_count": 20
+    }
+   },
+   {
+    "id": "150743",
+    "sku": "119791",
+    "retailer_sku": "150743",
+    "available": true,
+    "legacy_offer_id": 37568571422,
+    "name": "Яйцо куриное Синявинское К завтраку с ярким желтком С1 белое 10 шт",
+    "price": 118.99,
+    "original_price": 118.99,
+    "discount": 0,
+    "human_volume": "600 г",
+    "volume": 600,
+    "volume_type": "g",
+    "items_per_pack": 1,
+    "discount_ends_at": "1970-01-01T00:00:00.000+00:00",
+    "price_type": "per_item",
+    "grams_per_unit": 600,
+    "unit_price": 118.99,
+    "original_unit_price": 118.99,
+    "promo_badge_ids": [],
+    "score": 4.9,
+    "labels": [],
+    "image_urls": [
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzExOTc5MS9vcmlnaW5hbC8xLzIwMjYtMDktMTMlMjAwOCUzQTA0JTNBMzguMzIzNDExJTJCMDAlM0EwMC8xMTk3OTFfMS5qcGc="
+    ],
+    "requirements": [],
+    "slug": "yaytso-kurinoe-sinyavinskoe-k-zavtraku-s-yarkim-zheltkom-s1-beloe-10-sht-9806292",
+    "max_select_quantity": 999,
+    "canonical_url": "https://sbermarket.ru/products/119791-yaytso-kurinoe-sinyavinskoe-k-zavtraku-s-yarkim-zheltkom-s1-beloe-10-sht-9806292",
+    "vat_info": null,
+    "bmpl_info": {},
+    "max_per_order": 81,
+    "ads_meta": null,
+    "with_options": false,
+    "is_beneficial": false,
+    "store_id": "135212",
+    "price_per_base_human_volume": "",
+    "prices_bank": null,
+    "sale_conditions": [
+     {
+      "id": 154,
+      "value": "Невозвратные категории для отмен"
+     },
+     {
+      "id": 152,
+      "value": "Невозвратные категории"
+     },
+     {
+      "id": 158,
+      "value": "Невозвратная для инвентаризации ДКП"
+     }
+    ],
+    "stock_discount_product_count": "0",
+    "stock_discount_product_left": "0",
+    "retailer": null,
+    "store": null,
+    "bmpl_values": {},
+    "discount_percent": 0,
+    "score_details": {
+     "feedback_count": 8,
+     "feedback_source": "ВкусВилл",
+     "comment_count": 0
+    }
+   },
+   {
+    "id": "674564",
+    "sku": "23693145",
+    "retailer_sku": "674564",
+    "available": true,
+    "legacy_offer_id": 37568762822,
+    "name": "Яйцо куриное 365 дней CО 10 шт",
+    "price": 149.99,
+    "original_price": 149.99,
+    "discount": 0,
+    "human_volume": "700 г",
+    "volume": 700,
+    "volume_type": "g",
+    "items_per_pack": 1,
+    "discount_ends_at": "2026-10-28T00:00:00.000+00:00",
+    "price_type": "per_item",
+    "grams_per_unit": 700,
+    "unit_price": 149.99,
+    "original_unit_price": 149.99,
+    "promo_badge_ids": [],
+    "score": 4.4,
+    "labels": [],
+    "image_urls": [
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzIzNjkzMTQ1L29yaWdpbmFsLzEvMjAyNS0wOC0wMSUyMDExJTNBNDQlM0E1Ny43NDcyNTYlMkIwMCUzQTAwLzIzNjkzMTQ1XzEuanBn"
+    ],
+    "requirements": [],
+    "slug": "yaytso-kurinoe-365-dney-co-10-sht-aef3254",
+    "max_select_quantity": 999,
+    "canonical_url": "https://sbermarket.ru/products/23693145-yaytso-kurinoe-365-dney-co-10-sht-aef3254",
+    "vat_info": null,
+    "bmpl_info": {},
+    "max_per_order": 10,
+    "ads_meta": null,
+    "with_options": false,
+    "is_beneficial": false,
+    "store_id": "135212",
+    "price_per_base_human_volume": "",
+    "prices_bank": null,
+    "sale_conditions": [
+     {
+      "id": 154,
+      "value": "Невозвратные категории для отмен"
+     },
+     {
+      "id": 152,
+      "value": "Невозвратные категории"
+     },
+     {
+      "id": 158,
+      "value": "Невозвратная для инвентаризации ДКП"
+     }
+    ],
+    "stock_discount_product_count": "0",
+    "stock_discount_product_left": "0",
+    "retailer": null,
+    "store": null,
+    "bmpl_values": {},
+    "discount_percent": 0,
+    "score_details": {
+     "feedback_count": 22,
+     "feedback_source": "ВкусВилл",
+     "comment_count": 7
+    }
+   },
+   {
+    "id": "150722",
+    "sku": "15247592",
+    "retailer_sku": "150722",
+    "available": true,
+    "legacy_offer_id": 37568536002,
+    "name": "Яйцо куриное Синявское К завтраку с ярким желтком С0 белое 10 шт",
+    "price": 128.99,
+    "original_price": 128.99,
+    "discount": 0,
+    "human_volume": "700 г",
+    "volume": 700,
+    "volume_type": "g",
+    "items_per_pack": 1,
+    "discount_ends_at": "1970-01-01T00:00:00.000+00:00",
+    "price_type": "per_item",
+    "grams_per_unit": 700,
+    "unit_price": 128.99,
+    "original_unit_price": 128.99,
+    "promo_badge_ids": [],
+    "score": 4.2,
+    "labels": [],
+    "image_urls": [
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzE1MjQ3NTkyL29yaWdpbmFsLzEvMjAyNi0wNC0wNyUyMDE1JTNBMjYlM0EwMi4yNjQzODclMkIwMCUzQTAwLzE1MjQ3NTkyXzEuanBn",
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzE1MjQ3NTkyL29yaWdpbmFsLzIvMjAyNC0wNy0xMVQwOCUzQTMyJTNBMjcuMDA4NjgwJTJCMDAlM0EwMC8xNTI0NzU5Ml8yLmpwZw==",
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzE1MjQ3NTkyL29yaWdpbmFsLzMvMjAyNi0wNC0wNyUyMDE1JTNBMjglM0ExMS44NDIyODklMkIwMCUzQTAwLzE1MjQ3NTkyXzMuanBn"
+    ],
+    "requirements": [],
+    "slug": "yaytso-kurinoe-sinyavskoe-k-zavtraku-s-yarkim-zheltkom-s0-beloe-10-sht",
+    "max_select_quantity": 999,
+    "canonical_url": "https://sbermarket.ru/products/15247592-yaytso-kurinoe-sinyavskoe-k-zavtraku-s-yarkim-zheltkom-s0-beloe-10-sht",
+    "vat_info": null,
+    "bmpl_info": {},
+    "max_per_order": 10,
+    "ads_meta": null,
+    "with_options": false,
+    "is_beneficial": false,
+    "store_id": "135212",
+    "price_per_base_human_volume": "",
+    "prices_bank": null,
+    "sale_conditions": [
+     {
+      "id": 154,
+      "value": "Невозвратные категории для отмен"
+     },
+     {
+      "id": 152,
+      "value": "Невозвратные категории"
+     },
+     {
+      "id": 158,
+      "value": "Невозвратная для инвентаризации ДКП"
+     }
+    ],
+    "stock_discount_product_count": "0",
+    "stock_discount_product_left": "0",
+    "retailer": null,
+    "store": null,
+    "bmpl_values": {},
+    "discount_percent": 0,
+    "score_details": {
+     "feedback_count": 10,
+     "feedback_source": "ВкусВилл",
+     "comment_count": 1
+    }
+   },
+   {
+    "id": "25080",
+    "sku": "74300",
+    "retailer_sku": "25080",
+    "available": true,
+    "legacy_offer_id": 37568529812,
+    "name": "Яйцо куриное Экстра С0 коричневое 10 шт",
+    "price": 149.99,
+    "original_price": 149.99,
+    "discount": 0,
+    "human_volume": "700 г",
+    "volume": 700,
+    "volume_type": "g",
+    "items_per_pack": 1,
+    "discount_ends_at": "1970-01-01T00:00:00.000+00:00",
+    "price_type": "per_item",
+    "grams_per_unit": 700,
+    "unit_price": 149.99,
+    "original_unit_price": 149.99,
+    "promo_badge_ids": [],
+    "score": 4.8,
+    "labels": [],
+    "image_urls": [
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzc0MzAwL29yaWdpbmFsLzEvMjAyMi0wOC0yMlQxOCUzQTEzJTNBMDYuMDIzMDAwJTJCMDAlM0EwMC83NDMwMF8xLmpwZw=="
+    ],
+    "requirements": [],
+    "slug": "yaytso-kurinoe-ekstra-s0-korichnevoe-10-sht",
+    "max_select_quantity": 999,
+    "canonical_url": "https://sbermarket.ru/products/74300-yaytso-kurinoe-ekstra-s0-korichnevoe-10-sht",
+    "vat_info": null,
+    "bmpl_info": {},
+    "max_per_order": 10,
+    "ads_meta": null,
+    "with_options": false,
+    "is_beneficial": false,
+    "store_id": "135212",
+    "price_per_base_human_volume": "",
+    "prices_bank": null,
+    "sale_conditions": [
+     {
+      "id": 152,
+      "value": "Невозвратные категории"
+     },
+     {
+      "id": 154,
+      "value": "Невозвратные категории для отмен"
+     },
+     {
+      "id": 158,
+      "value": "Невозвратная для инвентаризации ДКП"
+     }
+    ],
+    "stock_discount_product_count": "0",
+    "stock_discount_product_left": "0",
+    "retailer": null,
+    "store": null,
+    "bmpl_values": {},
+    "discount_percent": 0,
+    "score_details": {
+     "feedback_count": 37,
+     "feedback_source": "ВкусВилл",
+     "comment_count": 11
+    }
+   },
+   {
+    "id": "122840",
+    "sku": "74301",
+    "retailer_sku": "122840",
+    "available": true,
+    "legacy_offer_id": 37568572482,
+    "name": "Яйцо куриное Экстра СО 15 шт",
+    "price": 234.99,
+    "original_price": 234.99,
+    "discount": 0,
+    "human_volume": "1050 г",
+    "volume": 1050,
+    "volume_type": "g",
+    "items_per_pack": 1,
+    "discount_ends_at": "1970-01-01T00:00:00.000+00:00",
+    "price_type": "per_item",
+    "grams_per_unit": 1050,
+    "unit_price": 234.99,
+    "original_unit_price": 234.99,
+    "promo_badge_ids": [],
+    "score": 5,
+    "labels": [],
+    "image_urls": [
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzc0MzAxL29yaWdpbmFsLzEvMjAyMi0wOC0yM1QwNSUzQTU4JTNBMzQuMzQzMDAwJTJCMDAlM0EwMC83NDMwMV8xLmpwZw=="
+    ],
+    "requirements": [],
+    "slug": "yaytso-kurinoe-ekstra-so-15-sht-36397f2",
+    "max_select_quantity": 999,
+    "canonical_url": "https://sbermarket.ru/products/74301-yaytso-kurinoe-ekstra-so-15-sht-36397f2",
+    "vat_info": null,
+    "bmpl_info": {},
+    "max_per_order": 237,
+    "ads_meta": null,
+    "with_options": false,
+    "is_beneficial": false,
+    "store_id": "135212",
+    "price_per_base_human_volume": "",
+    "prices_bank": null,
+    "sale_conditions": [
+     {
+      "id": 152,
+      "value": "Невозвратные категории"
+     },
+     {
+      "id": 154,
+      "value": "Невозвратные категории для отмен"
+     },
+     {
+      "id": 158,
+      "value": "Невозвратная для инвентаризации ДКП"
+     }
+    ],
+    "stock_discount_product_count": "0",
+    "stock_discount_product_left": "0",
+    "retailer": null,
+    "store": null,
+    "bmpl_values": {},
+    "discount_percent": 0,
+    "score_details": {
+     "feedback_count": 20,
+     "feedback_source": "ВкусВилл",
+     "comment_count": 5
+    }
+   },
+   {
+    "id": "527686",
+    "sku": "267997",
+    "retailer_sku": "527686",
+    "available": true,
+    "legacy_offer_id": 37568666952,
+    "name": "Яйцо куриное Синявинское с ярким желтком С1 белое лоток 20 шт",
+    "price": 231.99,
+    "original_price": 231.99,
+    "discount": 0,
+    "human_volume": "1200 г",
+    "volume": 1200,
+    "volume_type": "g",
+    "items_per_pack": 1,
+    "discount_ends_at": "1970-01-01T00:00:00.000+00:00",
+    "price_type": "per_item",
+    "grams_per_unit": 1200,
+    "unit_price": 231.99,
+    "original_unit_price": 231.99,
+    "promo_badge_ids": [],
+    "score": 4.4,
+    "labels": [],
+    "image_urls": [
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzI2Nzk5Ny9vcmlnaW5hbC8xLzIwMjYtMDQtMDclMjAxNSUzQTI4JTNBMTguNjE5Nzc4JTJCMDAlM0EwMC8yNjc5OTdfMS5qcGc=",
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzI2Nzk5Ny9vcmlnaW5hbC8yLzIwMjQtMDctMTFUMDglM0EzMCUzQTMyLjIzNjczMCUyQjAwJTNBMDAvMjY3OTk3XzIuanBn",
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzI2Nzk5Ny9vcmlnaW5hbC8zLzIwMjYtMDQtMDclMjAxNSUzQTI4JTNBMTguNjcxMTI2JTJCMDAlM0EwMC8yNjc5OTdfMy5qcGc="
+    ],
+    "requirements": [],
+    "slug": "yaytso-kurinoe-sinyavinskoe-s-yarkim-zheltkom-s1-beloe-lotok-20-sht",
+    "max_select_quantity": 999,
+    "canonical_url": "https://sbermarket.ru/products/267997-yaytso-kurinoe-sinyavinskoe-s-yarkim-zheltkom-s1-beloe-lotok-20-sht",
+    "vat_info": null,
+    "bmpl_info": {},
+    "max_per_order": 35,
+    "ads_meta": null,
+    "with_options": false,
+    "is_beneficial": false,
+    "store_id": "135212",
+    "price_per_base_human_volume": "",
+    "prices_bank": null,
+    "sale_conditions": [
+     {
+      "id": 154,
+      "value": "Невозвратные категории для отмен"
+     },
+     {
+      "id": 152,
+      "value": "Невозвратные категории"
+     },
+     {
+      "id": 158,
+      "value": "Невозвратная для инвентаризации ДКП"
+     }
+    ],
+    "stock_discount_product_count": "0",
+    "stock_discount_product_left": "0",
+    "retailer": null,
+    "store": null,
+    "bmpl_values": {},
+    "discount_percent": 0,
+    "score_details": {
+     "feedback_count": 7,
+     "feedback_source": "ВкусВилл",
+     "comment_count": 1
+    }
+   },
+   {
+    "id": "443404",
+    "sku": "35754715",
+    "retailer_sku": "443404",
+    "available": true,
+    "legacy_offer_id": 37568618412,
+    "name": "Яйцо куриное 365 дней С2 10 шт",
+    "price": 119.99,
+    "original_price": 119.99,
+    "discount": 0,
+    "human_volume": "500 г",
+    "volume": 500,
+    "volume_type": "g",
+    "items_per_pack": 1,
+    "discount_ends_at": "2026-10-28T00:00:00.000+00:00",
+    "price_type": "per_item",
+    "grams_per_unit": 500,
+    "unit_price": 119.99,
+    "original_unit_price": 119.99,
+    "promo_badge_ids": [],
+    "score": 4.9,
+    "labels": [],
+    "image_urls": [
+     "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzM1NzU0NzE1L29yaWdpbmFsLzEvMjAyNS0wNy0xOCUyMDEyJTNBNTglM0ExNS4yOTYyNDAlMkIwMCUzQTAwLzM1NzU0NzE1XzEuanBn"
+    ],
+    "requirements": [],
+    "slug": "yaytso-kurinoe-365-dney-s2-10-sht-6867784",
+    "max_select_quantity": 999,
+    "canonical_url": "https://sbermarket.ru/products/35754715-yaytso-kurinoe-365-dney-s2-10-sht-6867784",
+    "vat_info": null,
+    "bmpl_info": {},
+    "max_per_order": 10,
+    "ads_meta": null,
+    "with_options": false,
+    "is_beneficial": false,
+    "store_id": "135212",
+    "price_per_base_human_volume": "",
+    "prices_bank": null,
+    "sale_conditions": [
+     {
+      "id": 154,
+      "value": "Невозвратные категории для отмен"
+     },
+     {
+      "id": 152,
+      "value": "Невозвратные категории"
+     },
+     {
+      "id": 158,
+      "value": "Невозвратная для инвентаризации ДКП"
+     }
+    ],
+    "stock_discount_product_count": "0",
+    "stock_discount_product_left": "0",
+    "retailer": null,
+    "store": null,
+    "bmpl_values": {},
+    "discount_percent": 0,
+    "score_details": {
+     "feedback_count": 13,
+     "feedback_source": "ВкусВилл",
+     "comment_count": 3
+    }
+   }
+  ],
+  "facets": [
+   {
+    "key": "discounted",
+    "name": "Товары со скидкой",
+    "type": "toggle",
+    "options": [
+     {
+      "name": null,
+      "value": 1,
+      "count": 1516,
+      "permalink": null,
+      "active": false,
+      "bound": 0
+     }
+    ]
+   },
+   {
+    "key": "price",
+    "name": "Цена",
+    "type": "range",
+    "options": [
+     {
+      "name": "От",
+      "value": 6,
+      "count": 0,
+      "permalink": "_price_min-6",
+      "active": false,
+      "bound": 6
+     },
+     {
+      "name": "До",
+      "value": 3779,
+      "count": 0,
+      "permalink": "_price_max-3779",
+      "active": false,
+      "bound": 3779
+     }
+    ]
+   },
+   {
+    "key": "brand",
+    "name": "Бренд",
+    "type": "multi_select",
+    "options": [
+     {
+      "name": "Schogetten",
+      "value": 10028,
+      "count": 4,
+      "permalink": "schogetten",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Barilla",
+      "value": 1011,
+      "count": 5,
+      "permalink": "barilla",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Snickers",
+      "value": 10467,
+      "count": 8,
+      "permalink": "snickers",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Tuc",
+      "value": 11494,
+      "count": 4,
+      "permalink": "tuc",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Twix",
+      "value": 11525,
+      "count": 4,
+      "permalink": "twix",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Vici",
+      "value": 11819,
+      "count": 11,
+      "permalink": "vici",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Viola",
+      "value": 11890,
+      "count": 28,
+      "permalink": "viola",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Yelli",
+      "value": 12237,
+      "count": 7,
+      "permalink": "yelli",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Акконд",
+      "value": 12620,
+      "count": 10,
+      "permalink": "akkond",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Аладушкин",
+      "value": 12636,
+      "count": 5,
+      "permalink": "aladushkin",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "АтАг",
+      "value": 12970,
+      "count": 4,
+      "permalink": "atag",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Балтийский Берег",
+      "value": 13087,
+      "count": 5,
+      "permalink": "baltiyskiy-bereg",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Bibigo",
+      "value": 1309,
+      "count": 4,
+      "permalink": "bibigo",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Без бренда",
+      "value": 13173,
+      "count": 75,
+      "permalink": "bez-brenda",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Big Bon",
+      "value": 1322,
+      "count": 4,
+      "permalink": "big-bon",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Бон Пари",
+      "value": 13476,
+      "count": 5,
+      "permalink": "bon-pari--2",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Великолукский мясокомбинат",
+      "value": 13724,
+      "count": 4,
+      "permalink": "velikolukskiy-myasokombinat",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Велком",
+      "value": 13731,
+      "count": 12,
+      "permalink": "velkom",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Даниссимо",
+      "value": 14479,
+      "count": 4,
+      "permalink": "danissimo",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Дымка",
+      "value": 14965,
+      "count": 4,
+      "permalink": "dymka",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Дымов",
+      "value": 14966,
+      "count": 18,
+      "permalink": "dymov",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "BombBar",
+      "value": 1535,
+      "count": 6,
+      "permalink": "bombbar",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Индилайт",
+      "value": 15640,
+      "count": 5,
+      "permalink": "indilayt",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Bonjour",
+      "value": 1574,
+      "count": 4,
+      "permalink": "bonjour",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Каравай",
+      "value": 15849,
+      "count": 5,
+      "permalink": "karavay",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Bonvida",
+      "value": 1589,
+      "count": 39,
+      "permalink": "bonvida",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Клинский",
+      "value": 16014,
+      "count": 6,
+      "permalink": "klinskiy",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Коломенское",
+      "value": 16072,
+      "count": 4,
+      "permalink": "kolomenskoe",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Bounty",
+      "value": 1658,
+      "count": 5,
+      "permalink": "bounty",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Лента",
+      "value": 16738,
+      "count": 142,
+      "permalink": "lenta",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Махеевъ",
+      "value": 17166,
+      "count": 16,
+      "permalink": "maheev",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Меридиан",
+      "value": 17272,
+      "count": 7,
+      "permalink": "meridian",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Мираторг",
+      "value": 17393,
+      "count": 18,
+      "permalink": "miratorg",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Мирослада",
+      "value": 17401,
+      "count": 4,
+      "permalink": "miroslada",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Морозко",
+      "value": 17611,
+      "count": 14,
+      "permalink": "morozko",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Мясной Дом Бородина",
+      "value": 17794,
+      "count": 5,
+      "permalink": "myasnoy-dom-borodina",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Окраина",
+      "value": 18271,
+      "count": 21,
+      "permalink": "okraina",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Calve",
+      "value": 1889,
+      "count": 7,
+      "permalink": "calve",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Ремит",
+      "value": 19188,
+      "count": 15,
+      "permalink": "remit",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Роллтон",
+      "value": 19284,
+      "count": 4,
+      "permalink": "rollton",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Рот Фронт",
+      "value": 19352,
+      "count": 7,
+      "permalink": "rot-front",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Санта Бремор",
+      "value": 19681,
+      "count": 11,
+      "permalink": "santa-bremor",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Синявинское",
+      "value": 20097,
+      "count": 4,
+      "permalink": "sinyavinskoe",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Славянка",
+      "value": 20159,
+      "count": 11,
+      "permalink": "slavyanka",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Слобода",
+      "value": 20259,
+      "count": 18,
+      "permalink": "sloboda",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Стародворье",
+      "value": 20524,
+      "count": 4,
+      "permalink": "starodvorie",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Сыробогатов",
+      "value": 20716,
+      "count": 8,
+      "permalink": "syrobogatov",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "У Палыча",
+      "value": 21148,
+      "count": 6,
+      "permalink": "u-palycha",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Ударница",
+      "value": 21170,
+      "count": 9,
+      "permalink": "udarnitsa",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Фабрика имени Крупской",
+      "value": 21309,
+      "count": 5,
+      "permalink": "fabrika-imeni-krupskoy",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Цезарь",
+      "value": 21792,
+      "count": 20,
+      "permalink": "tsezar",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Черкизово",
+      "value": 21868,
+      "count": 19,
+      "permalink": "cherkizovo",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Черкизово премиум",
+      "value": 21869,
+      "count": 5,
+      "permalink": "cherkizovo-premium",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Юбилейное",
+      "value": 22327,
+      "count": 9,
+      "permalink": "yubileynoe",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Ясная Поляна",
+      "value": 22469,
+      "count": 5,
+      "permalink": "yasnaya-polyana",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Яшкино",
+      "value": 22482,
+      "count": 31,
+      "permalink": "yashkino",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Chikalab",
+      "value": 2351,
+      "count": 4,
+      "permalink": "chikalab-c1dba43",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "ProteinRex",
+      "value": 23984,
+      "count": 5,
+      "permalink": "proteinrex",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "С пылу с жару",
+      "value": 26076,
+      "count": 8,
+      "permalink": "s-pylu-s-zharu-e71ac19",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Ближние Горки",
+      "value": 27094,
+      "count": 13,
+      "permalink": "blizhnie-gorki-6938a6e",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Русское море",
+      "value": 29098,
+      "count": 14,
+      "permalink": "russkoie-morie",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Печем Дома",
+      "value": 29995,
+      "count": 7,
+      "permalink": "pechem-doma-797ff43",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Пекарня Sofi",
+      "value": 30129,
+      "count": 5,
+      "permalink": "pekarnya-sofi-9f1dcbe4-7648-4f6d-a458-4be4215a0289",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Sибирская коллекция",
+      "value": 30340,
+      "count": 23,
+      "permalink": "sibirskaya-kollektsiya-ef1e4e9f-266f-40dc-a7a5-df49c46a1afe",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Выбор Семьи",
+      "value": 33662,
+      "count": 30,
+      "permalink": "vybor-sem-i",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Doshirak",
+      "value": 3375,
+      "count": 5,
+      "permalink": "doshirak-58b837da-984f-48e3-a71f-c80ff3c7c79b",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Dr. Oetker",
+      "value": 3416,
+      "count": 11,
+      "permalink": "dr-oetker",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Чистая линия",
+      "value": 34881,
+      "count": 7,
+      "permalink": "chistaya-liniya",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Epica",
+      "value": 3803,
+      "count": 4,
+      "permalink": "epica",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Laplandia",
+      "value": 39559,
+      "count": 4,
+      "permalink": "laplandia",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Fruttis",
+      "value": 4510,
+      "count": 4,
+      "permalink": "fruttis",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Kids Box",
+      "value": 51580,
+      "count": 4,
+      "permalink": "kids-box",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "365 дней",
+      "value": 52,
+      "count": 67,
+      "permalink": "365-dney",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Heinz",
+      "value": 5302,
+      "count": 10,
+      "permalink": "heinz",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "KDV",
+      "value": 6079,
+      "count": 5,
+      "permalink": "kdv-e29343b3-9bed-4e5e-bc22-e310d9852e79",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Mr.Ricco",
+      "value": 61516,
+      "count": 10,
+      "permalink": "mr-ricco",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Kinder",
+      "value": 6161,
+      "count": 10,
+      "permalink": "kinder",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Delisse",
+      "value": 61960,
+      "count": 81,
+      "permalink": "delisse",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Knorr",
+      "value": 6231,
+      "count": 4,
+      "permalink": "knorr",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Kotanyi",
+      "value": 6298,
+      "count": 26,
+      "permalink": "kotanyi",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Село Зеленое",
+      "value": 64475,
+      "count": 19,
+      "permalink": "selo-zelenoe-967ecb8",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Лента Fresh",
+      "value": 64545,
+      "count": 112,
+      "permalink": "lenta-fresh",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Premium Club",
+      "value": 65354,
+      "count": 19,
+      "permalink": "premium-club",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Lambertz",
+      "value": 6556,
+      "count": 7,
+      "permalink": "lambertz",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Лента Life",
+      "value": 66524,
+      "count": 24,
+      "permalink": "lenta-life",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Konti",
+      "value": 66634,
+      "count": 5,
+      "permalink": "konti",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Dr.Bakers",
+      "value": 69026,
+      "count": 20,
+      "permalink": "dr-bakers",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Porto piatti",
+      "value": 69068,
+      "count": 9,
+      "permalink": "porto-piatti",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Lotte",
+      "value": 6958,
+      "count": 7,
+      "permalink": "lotte",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Magic Grain",
+      "value": 7132,
+      "count": 4,
+      "permalink": "magic-grain",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Вау Мяу!",
+      "value": 72618,
+      "count": 16,
+      "permalink": "vau-myau",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Mars",
+      "value": 7342,
+      "count": 4,
+      "permalink": "mars",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "A-One",
+      "value": 73997,
+      "count": 6,
+      "permalink": "a-one",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Astoria",
+      "value": 746,
+      "count": 7,
+      "permalink": "astoria--2",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Milka",
+      "value": 7657,
+      "count": 4,
+      "permalink": "milka",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Milky Way",
+      "value": 7666,
+      "count": 5,
+      "permalink": "milky-way",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "7 Days",
+      "value": 84,
+      "count": 4,
+      "permalink": "7-days",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Orient",
+      "value": 8540,
+      "count": 8,
+      "permalink": "orient",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Pan-Asian",
+      "value": 8659,
+      "count": 15,
+      "permalink": "pan-asian-90164b8",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Ritter Sport",
+      "value": 9605,
+      "count": 21,
+      "permalink": "ritter-sport",
+      "active": false,
+      "bound": 0
+     }
+    ]
+   },
+   {
+    "key": "site_category_filter_10000106",
+    "name": "Тип продукта",
+    "type": "multi_select",
+    "options": [
+     {
+      "name": "Бисквитный батончик",
+      "value": 6578,
+      "count": 5,
+      "permalink": "biskvitnyy-batonchik",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Десерт",
+      "value": 6579,
+      "count": 12,
+      "permalink": "desert",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Желе",
+      "value": 5470,
+      "count": 8,
+      "permalink": "zhele",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Йогурт",
+      "value": 5359,
+      "count": 24,
+      "permalink": "yogurt",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Йогуртный продукт",
+      "value": 5360,
+      "count": 5,
+      "permalink": "yogurtnyy-produkt",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Майонез",
+      "value": 5554,
+      "count": 55,
+      "permalink": "mayonez",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Майонезный соус",
+      "value": 5555,
+      "count": 6,
+      "permalink": "mayoneznyy-sous",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Молоко",
+      "value": 4421,
+      "count": 11,
+      "permalink": "moloko-4421",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Молочный коктейль",
+      "value": 4424,
+      "count": 9,
+      "permalink": "molochnyy-kokteyl-4424",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Мороженое",
+      "value": 6581,
+      "count": 68,
+      "permalink": "morozhenoe-188ad0e",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Овощные полуфабрикаты",
+      "value": 4314,
+      "count": 3,
+      "permalink": "ovoschnye-polufabrikaty-4314",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Растительный напиток",
+      "value": 4423,
+      "count": 12,
+      "permalink": "rastitel-nyy-napitok-4423",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Салат",
+      "value": 3920,
+      "count": 26,
+      "permalink": "salat-3920",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Свежие овощи",
+      "value": 3560,
+      "count": 26,
+      "permalink": "svezhie-ovoschi-3560",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Сгущённое молоко",
+      "value": 5481,
+      "count": 9,
+      "permalink": "sguschyonnoe-moloko-bc978df",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Сгущенный молокосодержащий продукт",
+      "value": 5483,
+      "count": 5,
+      "permalink": "sguschennyy-molokosoderzhaschiy-produkt",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Сливки",
+      "value": 4589,
+      "count": 19,
+      "permalink": "slivki-4589",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Сливочное масло",
+      "value": 5176,
+      "count": 10,
+      "permalink": "slivochnoe-maslo",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Сметана",
+      "value": 4590,
+      "count": 5,
+      "permalink": "smetana-4590",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Сырок глазированный",
+      "value": 5476,
+      "count": 8,
+      "permalink": "syrok-glazirovannyy",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Творог",
+      "value": 5314,
+      "count": 19,
+      "permalink": "tvorog",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Творожная масса",
+      "value": 5315,
+      "count": 6,
+      "permalink": "tvorozhnaya-massa",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Творожок",
+      "value": 5317,
+      "count": 9,
+      "permalink": "tvorozhok",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Торт",
+      "value": 6582,
+      "count": 25,
+      "permalink": "tort",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Яйца",
+      "value": 5531,
+      "count": 34,
+      "permalink": "yaytsa",
+      "active": false,
+      "bound": 0
+     }
+    ]
+   },
+   {
+    "key": "site_category_filter_10000206",
+    "name": "Категория яиц",
+    "type": "multi_select",
+    "options": [
+     {
+      "name": "Без категории",
+      "value": 421516,
+      "count": 4,
+      "permalink": "bez-kategorii",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Вторая С2",
+      "value": 5535,
+      "count": 1,
+      "permalink": "vtoraya-s2-5535",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Высшая СВ",
+      "value": 5532,
+      "count": 2,
+      "permalink": "vysshaya-sv-5532",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Отборное СО",
+      "value": 5533,
+      "count": 11,
+      "permalink": "otbornoe-so-5533",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Первая С1",
+      "value": 5534,
+      "count": 14,
+      "permalink": "pervaya-s1-5534",
+      "active": false,
+      "bound": 0
+     }
+    ]
+   },
+   {
+    "key": "site_category_filter_10000208",
+    "name": "Количество яиц в упаковке",
+    "type": "multi_select",
+    "options": [
+     {
+      "name": "6",
+      "value": 5546,
+      "count": 12,
+      "permalink": "6-5546",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "10",
+      "value": 5547,
+      "count": 19,
+      "permalink": "10-5547",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "15",
+      "value": 5548,
+      "count": 1,
+      "permalink": "15-5548",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "20",
+      "value": 5549,
+      "count": 8,
+      "permalink": "20-5549",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "30",
+      "value": 5550,
+      "count": 6,
+      "permalink": "30-5550",
+      "active": false,
+      "bound": 0
+     }
+    ]
+   },
+   {
+    "key": "site_category_filter_10000207",
+    "name": "Вид яиц",
+    "type": "multi_select",
+    "options": [
+     {
+      "name": "Куриные",
+      "value": 5538,
+      "count": 33,
+      "permalink": "kurinye-5538",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Перепелиные",
+      "value": 5539,
+      "count": 3,
+      "permalink": "perepelinye-5539",
+      "active": false,
+      "bound": 0
+     }
+    ]
+   },
+   {
+    "key": "site_category_filter_10000209",
+    "name": "Цвет яйца",
+    "type": "multi_select",
+    "options": [
+     {
+      "name": "Белые",
+      "value": 5552,
+      "count": 19,
+      "permalink": "belye-5552",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Коричневые",
+      "value": 5553,
+      "count": 15,
+      "permalink": "korichnevye-5553",
+      "active": false,
+      "bound": 0
+     }
+    ]
+   },
+   {
+    "key": "site_category_filter_10000036",
+    "name": "Калорийность на 100 гр, ккал",
+    "type": "multi_select",
+    "options": [
+     {
+      "name": "До 99",
+      "value": 1723,
+      "count": 129,
+      "permalink": "do-99-1723",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "100 - 200",
+      "value": 1724,
+      "count": 316,
+      "permalink": "100-200-1724",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "201 - 300",
+      "value": 1725,
+      "count": 454,
+      "permalink": "201-300-1725",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "301 - 400",
+      "value": 2131,
+      "count": 468,
+      "permalink": "301-400-2131",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "401 - 500",
+      "value": 2132,
+      "count": 313,
+      "permalink": "401-500-2132",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "501 - 600",
+      "value": 2133,
+      "count": 164,
+      "permalink": "501-600-2133",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "601 - 700",
+      "value": 2134,
+      "count": 45,
+      "permalink": "601-700-2134",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "701 - 800",
+      "value": 2135,
+      "count": 7,
+      "permalink": "701-800-2135",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "801 - 900",
+      "value": 2136,
+      "count": 4,
+      "permalink": "801-900-2136",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "901 - 1000",
+      "value": 2137,
+      "count": 1,
+      "permalink": "901-1000-2137",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Более 1000",
+      "value": 1726,
+      "count": 2,
+      "permalink": "bolee-301-1726",
+      "active": false,
+      "bound": 0
+     }
+    ]
+   },
+   {
+    "key": "site_category_filter_10000031",
+    "name": "Вид упаковки",
+    "type": "multi_select",
+    "options": [
+     {
+      "name": "Без упаковки",
+      "value": 926,
+      "count": 60,
+      "permalink": "bez-upakovki-926",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Бумажный пакет",
+      "value": 909,
+      "count": 24,
+      "permalink": "bumazhnyy-paket-909",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Вакуумная",
+      "value": 959,
+      "count": 100,
+      "permalink": "vakuumnaya-959",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Газонаполненная",
+      "value": 954,
+      "count": 11,
+      "permalink": "gazonapolnennaya-954",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Дозатор",
+      "value": 936,
+      "count": 20,
+      "permalink": "dozator-936",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Дой-пак",
+      "value": 932,
+      "count": 95,
+      "permalink": "doy-pak-932",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Картонная",
+      "value": 980,
+      "count": 218,
+      "permalink": "kartonnaya-980",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Контейнер",
+      "value": 1013,
+      "count": 161,
+      "permalink": "konteyner-1013",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Лоток",
+      "value": 1002,
+      "count": 45,
+      "permalink": "lotok-1002",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Металлическая банка",
+      "value": 895,
+      "count": 22,
+      "permalink": "metallicheskaya-banka-895",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Обёртка",
+      "value": 1033,
+      "count": 88,
+      "permalink": "obyortka-1033",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Пакет",
+      "value": 1034,
+      "count": 511,
+      "permalink": "paket-1034",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Персональная упаковка",
+      "value": 1046,
+      "count": 29,
+      "permalink": "personal-naya-upakovka-1046",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Пластиковая банка",
+      "value": 902,
+      "count": 43,
+      "permalink": "plastikovaya-banka-902",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Пластиковая бутылка",
+      "value": 1043,
+      "count": 23,
+      "permalink": "plastikovaya-butylka-1043",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Пластиковая коробка",
+      "value": 1026,
+      "count": 12,
+      "permalink": "plastikovaya-korobka-1026",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Пластиковое ведро",
+      "value": 1071,
+      "count": 12,
+      "permalink": "plastikovoe-vedro-1071",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Пластиковый стакан",
+      "value": 1065,
+      "count": 66,
+      "permalink": "plastikovyy-stakan-1065",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Подложка",
+      "value": 1079,
+      "count": 25,
+      "permalink": "podlozhka-1079",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Порционная",
+      "value": 1082,
+      "count": 17,
+      "permalink": "portsionnaya-1082",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Саше",
+      "value": 37650,
+      "count": 26,
+      "permalink": "sashe-dc72d1a",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Саше-пакет",
+      "value": 1057,
+      "count": 17,
+      "permalink": "sashe-paket-1057",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Стеклянная банка",
+      "value": 901,
+      "count": 28,
+      "permalink": "steklyannaya-banka-901",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Флоу-пак",
+      "value": 1121,
+      "count": 148,
+      "permalink": "flou-pak-1121",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Фольга",
+      "value": 890,
+      "count": 11,
+      "permalink": "fol-ga-890",
+      "active": false,
+      "bound": 0
+     }
+    ]
+   },
+   {
+    "key": "site_category_filter_10000020",
+    "name": "Экомаркировка",
+    "type": "multi_select",
+    "options": [
+     {
+      "name": "EU Organic",
+      "value": 318,
+      "count": 1,
+      "permalink": "eu-organic-318",
+      "active": false,
+      "bound": 0
+     },
+     {
+      "name": "Все",
+      "value": 7791,
+      "count": 3,
+      "permalink": "vse",
+      "active": false,
+      "bound": 0
+     }
+    ]
+   }
+  ],
+  "meta": {
+   "current_page": "1",
+   "next_page": "2",
+   "previous_page": null,
+   "total_pages": "25",
+   "per_page": "24",
+   "total_count": "600"
+  },
+  "sort": [
+   {
+    "key": "popularity",
+    "name": "По популярности",
+    "order": "desc",
+    "active": true
+   },
+   {
+    "key": "price_asc",
+    "name": "Сначала дешевые",
+    "order": "asc",
+    "active": false
+   },
+   {
+    "key": "price_desc",
+    "name": "Сначала дорогие",
+    "order": "desc",
+    "active": false
+   },
+   {
+    "key": "unit_price_asc",
+    "name": "Выгоднее по весу",
+    "order": "asc",
+    "active": false
+   }
+  ],
+  "promo_badges": [],
+  "root_categories": {
+   "key": "root_category",
+   "name": "Категория",
+   "type": "select",
+   "options": [
+    {
+     "key": "",
+     "permalink": "sladosti-167ae66",
+     "value": 72088,
+     "count": 671,
+     "active": false,
+     "name": "Сладости"
+    },
+    {
+     "key": "",
+     "permalink": "bez-natsenki-na-brend-478e221-copy-2",
+     "value": 11256837,
+     "count": 524,
+     "active": false,
+     "name": "Без наценки на бренд"
+    },
+    {
+     "key": "",
+     "permalink": "moloko-sir-yajtsa-rastitelnie-produkti-5e3add5",
+     "value": 166211,
+     "count": 426,
+     "active": false,
+     "name": "Молоко, сыр, яйца, растительные продукты"
+    },
+    {
+     "key": "",
+     "permalink": "zamorozka-00c2cee",
+     "value": 75598,
+     "count": 237,
+     "active": false,
+     "name": "Заморозка"
+    },
+    {
+     "key": "",
+     "permalink": "kolbasi-sosiski-delikatesi-ce5276b",
+     "value": 43504,
+     "count": 231,
+     "active": false,
+     "name": "Колбасы, сосиски, деликатесы"
+    },
+    {
+     "key": "",
+     "permalink": "gotovaya-eda-2e24e10",
+     "value": 75617,
+     "count": 212,
+     "active": false,
+     "name": "Готовая еда"
+    },
+    {
+     "key": "",
+     "permalink": "maslo-sousi-spetsii",
+     "value": 42546,
+     "count": 173,
+     "active": false,
+     "name": "Масло, соусы, специи"
+    },
+    {
+     "key": "",
+     "permalink": "khleb-khlebtsi-vipechka",
+     "value": 43508,
+     "count": 146,
+     "active": false,
+     "name": "Хлеб, хлебцы, выпечка"
+    },
+    {
+     "key": "",
+     "permalink": "makaroni-krupi-muka-ea6cda0",
+     "value": 43480,
+     "count": 128,
+     "active": false,
+     "name": "Макароны, крупы, мука"
+    },
+    {
+     "key": "",
+     "permalink": "riba-ikra-dari-morya-bd4c0bc",
+     "value": 59096,
+     "count": 95,
+     "active": false,
+     "name": "Рыба, икра, дары моря"
+    },
+    {
+     "key": "",
+     "permalink": "myaso-ptitsa-0f1e3fb",
+     "value": 43519,
+     "count": 91,
+     "active": false,
+     "name": "Мясо, птица"
+    },
+    {
+     "key": "",
+     "permalink": "zdorovoe-pitanie",
+     "value": 59335,
+     "count": 65,
+     "active": false,
+     "name": "Здоровый выбор"
+    },
+    {
+     "key": "",
+     "permalink": "chipsi-sneki-sukhofrukti",
+     "value": 70974,
+     "count": 49,
+     "active": false,
+     "name": "Чипсы, снеки, сухофрукты"
+    },
+    {
+     "key": "",
+     "permalink": "detskie-tovari-94694f8",
+     "value": 11358809,
+     "count": 44,
+     "active": false,
+     "name": "Детские товары"
+    },
+    {
+     "key": "",
+     "permalink": "melochi-vozle-kassi-copy-copy",
+     "value": 141977,
+     "count": 41,
+     "active": false,
+     "name": "Мелочи возле кассы"
+    },
+    {
+     "key": "",
+     "permalink": "sobstvennoe-proizvodstvo_osnovnaya",
+     "value": 64867,
+     "count": 29,
+     "active": false,
+     "name": "Собственное производство"
+    }
+   ]
+  },
+  "private_filters": {
+   "in_stock": true,
+   "with_similar": false
+  },
+  "applied_features": [],
+  "search_query_uuid": "8d0fd682-9df7-42dc-8ac1-d6046795f9a2",
+  "search_session_uuid": "7cb543a9-f197-4749-bc06-805a973d85aa",
+  "query_categories": [
+   {
+    "category_id": "162264",
+    "score": 1.00001
+   }
+  ]
+ }
+}

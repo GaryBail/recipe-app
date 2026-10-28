@@ -1,0 +1,1376 @@
+{
+ "data": {
+  "shelves": [
+   {
+    "uuid": "6d8c7d29-107b-4113-9f60-72397966dd1c",
+    "max_items": 10,
+    "additions": {
+     "taxon_id": null
+    },
+    "headline": null,
+    "ui_type": "shop",
+    "title": "Магазины",
+    "subtitle": "",
+    "total_stores": null,
+    "data": [
+     "6b9121f0-b4b1-48b8-81ca-e65261574313",
+     "55ffd09f-4b14-4044-82c6-d7db28c8de8b",
+     "ed8441c2-8eca-4ae8-9662-5a6df13240ee",
+     "a58432bb-43a1-42c7-8cca-107764e058fa",
+     "69642d68-6589-4589-9fdc-9997eac4746d",
+     "4f533c52-c9f5-45a0-a6d7-e3ce5234bf92",
+     "2a2e4dfb-a824-4750-8609-d59fc196ce72",
+     "cdefc52b-bcd9-4338-b087-b0c12b4d33cc",
+     "97a60dd3-a796-4acb-a06d-38055629f256",
+     "122a5c36-e59c-44da-82d4-fe8c39d2c621"
+    ],
+    "code": "shopsFilter",
+    "has_more": true
+   },
+   {
+    "uuid": "da72c8d4-ad5e-429d-bf72-bfb41fea4fe7",
+    "max_items": 8,
+    "additions": {
+     "taxon_id": null
+    },
+    "headline": null,
+    "ui_type": "restaurant",
+    "title": "Рестораны",
+    "subtitle": "",
+    "total_stores": null,
+    "data": [
+     "806c0fc8-8568-4100-aae0-198b56f54991",
+     "b0a7efd8-105b-4b1e-8693-09ffd0ce31d8",
+     "f57aa83e-f23e-443c-ac5f-e46ca097725e",
+     "23a11a77-3d62-4ced-a285-7284e3ee1069",
+     "5f9267cb-8b96-45bc-9d32-6d4ffd9c629c",
+     "f6572384-68a3-489a-9dc0-d1e067c00412",
+     "ff781c1a-1a2a-4974-826e-7656b17e72f4",
+     "e7c47eab-0edc-4d66-b3fd-a96545fa0d83"
+    ],
+    "code": "readyFood",
+    "has_more": true
+   },
+   {
+    "uuid": "6f891d7d-59fd-464f-a480-f898c6a5af1f",
+    "max_items": 8,
+    "additions": {
+     "taxon_id": null
+    },
+    "headline": null,
+    "ui_type": "restaurant",
+    "title": "Рестораны",
+    "subtitle": "С бесплатной доставкой",
+    "total_stores": null,
+    "data": [],
+    "code": "readyFood",
+    "has_more": false
+   },
+   {
+    "uuid": "515c8117-48f1-40a9-91f2-9f4874580957",
+    "max_items": 8,
+    "additions": {
+     "taxon_id": null
+    },
+    "headline": null,
+    "ui_type": "ads",
+    "title": "Полка: Реклама",
+    "subtitle": "",
+    "total_stores": null,
+    "data": [],
+    "code": "ads",
+    "has_more": false
+   },
+   {
+    "uuid": "dc706827-42b1-458d-b901-ed0d9a0097a0",
+    "max_items": 8,
+    "additions": {
+     "taxon_id": null
+    },
+    "headline": null,
+    "ui_type": "promotions",
+    "title": "Суперподборки для вас",
+    "subtitle": "",
+    "total_stores": null,
+    "data": [],
+    "code": "warm_meetings",
+    "has_more": false
+   },
+   {
+    "uuid": "21427dc8-60b5-4983-94ca-93817fd3475f",
+    "max_items": 10,
+    "additions": {
+     "taxon_id": null
+    },
+    "headline": null,
+    "ui_type": "personal_product",
+    "title": "Цветы ко дню учителя",
+    "subtitle": "",
+    "total_stores": null,
+    "data": [],
+    "code": "back_2_school_flwr",
+    "has_more": false
+   },
+   {
+    "uuid": "d4dda063-1345-44a3-b290-97aa1c756692",
+    "max_items": 10,
+    "additions": {
+     "taxon_id": null
+    },
+    "headline": null,
+    "ui_type": "personal_product",
+    "title": "Кешбэк 20% только с Прайм",
+    "subtitle": "",
+    "total_stores": null,
+    "data": [],
+    "code": "1359324_control",
+    "has_more": false
+   },
+   {
+    "uuid": "4ed65280-caa8-4410-8449-c70c52ee3141",
+    "max_items": 8,
+    "additions": {
+     "taxon_id": null
+    },
+    "headline": null,
+    "ui_type": "ads_retailer",
+    "title": "Полка: Реклама Ритейлеры",
+    "subtitle": "",
+    "total_stores": null,
+    "data": [],
+    "code": "ads_retailer",
+    "has_more": false
+   },
+   {
+    "uuid": "a79b8d78-27f3-408f-882c-c7126271ed20",
+    "max_items": 12,
+    "additions": {
+     "taxon_id": null
+    },
+    "headline": null,
+    "ui_type": "personal_product",
+    "title": "Хиты из ресторанов",
+    "subtitle": "",
+    "total_stores": null,
+    "data": [],
+    "code": "rte_hits_shelf",
+    "has_more": false
+   },
+   {
+    "uuid": "af0041d0-4b59-4abd-95ff-e39218fe4c62",
+    "max_items": 10,
+    "additions": {
+     "taxon_id": null
+    },
+    "headline": null,
+    "ui_type": "personal_product",
+    "title": "Полка фруктов (временно хэллоуин)",
+    "subtitle": "",
+    "total_stores": null,
+    "data": [],
+    "code": "shelf_pumpkin_26",
+    "has_more": false
+   },
+   {
+    "uuid": "f3e99361-61eb-412e-bd91-3dcf05eb9b91",
+    "max_items": 0,
+    "additions": {
+     "taxon_id": null
+    },
+    "headline": null,
+    "ui_type": "personal_product",
+    "title": "Скидки от 40%",
+    "subtitle": "",
+    "total_stores": null,
+    "data": [],
+    "code": "discount_week_app",
+    "has_more": false
+   }
+  ],
+  "shelves_data": {
+   "shop": {
+    "6b9121f0-b4b1-48b8-81ca-e65261574313": {
+     "id": "135212",
+     "uuid": "6b9121f0-b4b1-48b8-81ca-e65261574313",
+     "city_id": "42",
+     "express_delivery": false,
+     "max_sberloyalty_spend_percent": "-99%",
+     "on_demand": false,
+     "disabled_by_surge": false,
+     "minimum_order_amount": 800,
+     "minimum_order_amount_pickup": 800,
+     "delivery_forecast_text": "",
+     "promo_shield": {
+      "id": "0",
+      "gradient_start_color": "#C5F768",
+      "gradient_end_color": "#C5F768",
+      "text_color": "#000000",
+      "promo_text": "Скидки до 50%"
+     },
+     "promo_badges": [
+      {
+       "gradient_color_start": "#ffffff",
+       "gradient_color_end": "#ffffff",
+       "text_color": "#000000",
+       "text": "−99%",
+       "text_short": "−99%",
+       "type": "sberspasibo",
+       "icon_url": "https://static.kuper.ru/statics/downloads/rte/promo_badges/sberspasibo2x.png"
+      },
+      {
+       "gradient_color_start": "#C5F768",
+       "gradient_color_end": "#C5F768",
+       "text_color": "#000000",
+       "text": "Скидки до 50%",
+       "text_short": "Скидки до 50%",
+       "type": "custom",
+       "icon_url": "https://static.kuper.ru/statics/downloads/rte/promo_badges/custom2x.png"
+      }
+     ],
+     "closest_shipping_options": [
+      {
+       "option_id": "COURIER:31a109a8-1d93-45d3-ab8d-118b8b2e2b9a",
+       "price": 0.0,
+       "summary": "сегодня 11:00–14:00",
+       "starts_at": "2026-10-29T11:00:00.000+03:00",
+       "ends_at": "2026-10-29T14:00:00.000+03:00",
+       "express_delivery": false
+      }
+     ],
+     "retailer": {
+      "id": "23939",
+      "name": "Лента",
+      "slug": "lentagp",
+      "appearance": {
+       "background_color": "#003C96",
+       "image_color": "#003c96",
+       "black_theme": false,
+       "logo_image": "https://static.kuper.ru/retail-onboarding/retailer_appearances/23931/logo_images/Lenta_giper_new.png?1733299816",
+       "mini_logo_image": "https://static.kuper.ru/retail-onboarding/retailer_appearances/23931/mini_logo_images/Lenta_%281%29.png?1727775093"
+      }
+     },
+     "delivery_conditions": {
+      "surge": false,
+      "min_delivery_price": 0.0,
+      "max_delivery_price": 99.0
+     }
+    },
+    "55ffd09f-4b14-4044-82c6-d7db28c8de8b": {
+     "id": "82",
+     "uuid": "55ffd09f-4b14-4044-82c6-d7db28c8de8b",
+     "city_id": "42",
+     "express_delivery": false,
+     "max_sberloyalty_spend_percent": "-99%",
+     "on_demand": false,
+     "disabled_by_surge": false,
+     "minimum_order_amount": 800,
+     "minimum_order_amount_pickup": 800,
+     "delivery_forecast_text": "",
+     "promo_shield": {
+      "id": "1",
+      "gradient_start_color": "#C5F768",
+      "gradient_end_color": "#C5F768",
+      "text_color": "#000000",
+      "promo_text": "Скидки до 50%"
+     },
+     "promo_badges": [
+      {
+       "gradient_color_start": "#ffffff",
+       "gradient_color_end": "#ffffff",
+       "text_color": "#000000",
+       "text": "−99%",
+       "text_short": "−99%",
+       "type": "sberspasibo",
+       "icon_url": "https://static.kuper.ru/statics/downloads/rte/promo_badges/sberspasibo2x.png"
+      },
+      {
+       "gradient_color_start": "#C5F768",
+       "gradient_color_end": "#C5F768",
+       "text_color": "#000000",
+       "text": "Скидки до 50%",
+       "text_short": "Скидки до 50%",
+       "type": "custom",
+       "icon_url": "https://static.kuper.ru/statics/downloads/rte/promo_badges/custom2x.png"
+      }
+     ],
+     "closest_shipping_options": [
+      {
+       "option_id": "COURIER:ec84d8c0-8c03-4b02-ba0b-5de897e6e3c2",
+       "price": 0.0,
+       "summary": "сегодня 12:30–15:30",
+       "starts_at": "2026-10-29T12:30:00.000+03:00",
+       "ends_at": "2026-10-29T15:30:00.000+03:00",
+       "express_delivery": false
+      }
+     ],
+     "retailer": {
+      "id": "1",
+      "name": "METRO",
+      "slug": "metro",
+      "appearance": {
+       "background_color": "#0f447c",
+       "image_color": "#0f447c",
+       "black_theme": false,
+       "logo_image": "https://static.kuper.ru/retail-onboarding/retailer_appearances/1/logo_images/metro.png?1732784606",
+       "mini_logo_image": "https://static.kuper.ru/retail-onboarding/retailer_appearances/1/mini_logo_images/Metro.png?1614931245"
+      }
+     },
+     "delivery_conditions": {
+      "surge": false,
+      "min_delivery_price": 29.0,
+      "max_delivery_price": 69.0
+     }
+    },
+    "ed8441c2-8eca-4ae8-9662-5a6df13240ee": {
+     "id": "276",
+     "uuid": "ed8441c2-8eca-4ae8-9662-5a6df13240ee",
+     "city_id": "42",
+     "express_delivery": false,
+     "max_sberloyalty_spend_percent": "-99%",
+     "on_demand": false,
+     "disabled_by_surge": false,
+     "minimum_order_amount": 800,
+     "minimum_order_amount_pickup": 800,
+     "delivery_forecast_text": "",
+     "promo_shield": {
+      "id": "2",
+      "gradient_start_color": "#C5F768",
+      "gradient_end_color": "#C5F768",
+      "text_color": "#000000",
+      "promo_text": "Скидки до 50%"
+     },
+     "promo_badges": [
+      {
+       "gradient_color_start": "#ffffff",
+       "gradient_color_end": "#ffffff",
+       "text_color": "#000000",
+       "text": "−99%",
+       "text_short": "−99%",
+       "type": "sberspasibo",
+       "icon_url": "https://static.kuper.ru/statics/downloads/rte/promo_badges/sberspasibo2x.png"
+      },
+      {
+       "gradient_color_start": "#C5F768",
+       "gradient_color_end": "#C5F768",
+       "text_color": "#000000",
+       "text": "Скидки до 50%",
+       "text_short": "Скидки до 50%",
+       "type": "custom",
+       "icon_url": "https://static.kuper.ru/statics/downloads/rte/promo_badges/custom2x.png"
+      }
+     ],
+     "closest_shipping_options": [
+      {
+       "option_id": "COURIER:fa5540b0-403b-46b0-9c8a-d4825c659ceb",
+       "price": 0.0,
+       "summary": "сегодня 10:00–13:00",
+       "starts_at": "2026-10-29T10:00:00.000+03:00",
+       "ends_at": "2026-10-29T13:00:00.000+03:00",
+       "express_delivery": false
+      }
+     ],
+     "retailer": {
+      "id": "15",
+      "name": "АШАН",
+      "slug": "auchan",
+      "appearance": {
+       "background_color": "#e0001a",
+       "image_color": "#ffffff",
+       "black_theme": false,
+       "logo_image": "https://static.kuper.ru/retail-onboarding/retailer_appearances/2/logo_images/fify.png?1732781646",
+       "mini_logo_image": "https://static.kuper.ru/retail-onboarding/retailer_appearances/2/mini_logo_images/Auchan.png?1715768489"
+      }
+     },
+     "delivery_conditions": {
+      "surge": false,
+      "min_delivery_price": 0.0,
+      "max_delivery_price": 109.0
+     },
+     "ads_meta": {
+      "imp_id": "dbh6agglf4vh4ptdf3fg",
+      "imp_urls": [
+       "https://api.kuper.ru/v2/vendo/track/kiqUES3EegQcBEuYOBlg1wsFLZWarvB3My--HPP_cMyGtVbJhvnOViauEqa6mhU3TbMIToHE6gQdvoqTAfDKs7g-AFkqHSwVTRoWHh07jSqzKTpyaPIN15YhxkRVY08AYOZizM9ZWuNSrnnoTSLM4wAl6ZOBL7BMQ5HJ5Nqu5e4GX0PWNlbVx8obEDB_hkDL01HcgDLOUtPSfUI9fjbvFztthubufs5CIZYj-0g6zVGrVZqIWUr3yMosB2q6W28_QEfY037F2NQjhqvNuocA0EuCv-f9LGQqTAQUauficETqvV52cdGvNZ3HNwxGZQ98MB1Cqq4ZOjHx-TkooOn-8zp-waftf4bnoL1vjWxW_nWFDprDi0OBgajpb15Pd55SXZLHFJxqWslpxM40RrajvJSwk3HPH3ltAMceUK70sxU7WMfFlA"
+      ],
+      "click_url": "",
+      "track_click_urls": [
+       "https://api.kuper.ru/v2/vendo/track/GI1XEslog1E2Dn6wd441Dmzh_BUYPEFBW0PtMEGwwufhIpdixD91Rt_8PIqDvxtwDFU_oKPe3NAbL3MlSXxPls5jvwBDR0tNhtRBNUnEUL-JkgzDN-LFIgVBMkhqeV6C8zpycr5FdOihuTjmd7sp1JH674Peival6ToGGNJV0FX5pY9nNk28sTu2h-fN2r6-8UqEz_yZN0QdJHgLiDcXY93mDmVa9qsgKLx-HIQfpoy2RS-B60hujc-3DMIodTbKy67_xUiM7p8Pftr6U92HyT96Mo-Bo59izd1NWufMlV1tz939FPP_CX9oMWBNn4Go4uE1JpIpT5mK0wwWFYUDP7SU1MR4D3nz73ZnaghIJNl2bd1Rrvpb8TUzfyd8etUCReeXXmOP2UtLdZa8Nrd_klrszPp3Jsf6e7xirqwKT-rg3wY"
+      ]
+     }
+    },
+    "a58432bb-43a1-42c7-8cca-107764e058fa": {
+     "id": "3879",
+     "uuid": "a58432bb-43a1-42c7-8cca-107764e058fa",
+     "city_id": "42",
+     "express_delivery": true,
+     "max_sberloyalty_spend_percent": "-99%",
+     "on_demand": false,
+     "disabled_by_surge": false,
+     "minimum_order_amount": 700,
+     "minimum_order_amount_pickup": 700,
+     "delivery_forecast_text": "",
+     "promo_shield": {
+      "id": "3",
+      "gradient_start_color": "#C5F768",
+      "gradient_end_color": "#C5F768",
+      "text_color": "#000000",
+      "promo_text": "Кешбэк 20% сбсп c MMOCT🧀"
+     },
+     "promo_badges": [
+      {
+       "gradient_color_start": "#ffffff",
+       "gradient_color_end": "#ffffff",
+       "text_color": "#000000",
+       "text": "−99%",
+       "text_short": "−99%",
+       "type": "sberspasibo",
+       "icon_url": "https://static.kuper.ru/statics/downloads/rte/promo_badges/sberspasibo2x.png"
+      },
+      {
+       "gradient_color_start": "#C5F768",
+       "gradient_color_end": "#C5F768",
+       "text_color": "#000000",
+       "text": "Кешбэк 20% сбсп c MMOCT🧀",
+       "text_short": "Кешбэк 20% сбсп c MMOCT🧀",
+       "type": "custom",
+       "icon_url": "https://static.kuper.ru/statics/downloads/rte/promo_badges/custom2x.png"
+      }
+     ],
+     "closest_shipping_options": [
+      {
+       "option_id": "COURIER:2418cd42-48c8-458a-a61b-8ca74552f470",
+       "price": 0.0,
+       "summary": "сегодня 10:00–11:00",
+       "starts_at": "2026-10-29T10:00:00.000+03:00",
+       "ends_at": "2026-10-29T11:00:00.000+03:00",
+       "express_delivery": false
+      }
+     ],
+     "retailer": {
+      "id": "122",
+      "name": "Магнит",
+      "slug": "magnit_express",
+      "appearance": {
+       "background_color": "#e30613",
+       "image_color": "#e30613",
+       "black_theme": false,
+       "logo_image": "https://static.kuper.ru/retail-onboarding/retailer_appearances/108/logo_images/Magnit.png?1737719233",
+       "mini_logo_image": "https://static.kuper.ru/retail-onboarding/retailer_appearances/108/mini_logo_images/Magnit%E2%94%AC%D0%B0%D1%82%D0%90%D0%A4_%E2%95%A8%E2%95%91%E2%95%A8%E2%95%9B%E2%95%A8%E2%94%90%E2%95%A8%E2%95%95%E2%95%A4%D0%9F.png?1737719233"
+      }
+     },
+     "delivery_conditions": {
+      "surge": false,
+      "min_delivery_price": 0.0,
+      "max_delivery_price": 149.0
+     },
+     "ads_meta": {
+      "imp_id": "dbh6agglf4vh4ptdf3e0",
+      "imp_urls": [
+       "https://api.kuper.ru/v2/vendo/track/rysrTGNy-pZEYuCzKUXdbD2VSg7a84RvMCnqH1V6cygLIVpdo7IlKKNg7H_UasQhDQKoNYC1LOiKRCguW8vks3G_QK0M0C-_emvLBsc2M4OKT96AJAUodUbWBxko7yKyFHDHq1Br1d0VoQySOxs5Esnzx7v9YNfS29d9C20hoy-Ozn_sZdz384pPYEpJZQrMkJxUNG7ZETbmc2-DDtXE0XQQe4w4Yh34WkGfbU0ln-D9WpOatXMgfq9YnqCnNcHjX1pC639jlDLwdMYW_PU-TOVLDid5WFIkusTVaQqumvw8bz_J11LPlzq-0FylDic3RRPps_aqixKEsHFfEEy4E96ouTan1nUKU5VqldmE9PXGB0YPfHJsrNQmQWJy4EAjbcFDIK98MgZdjQooACqlw_lIp3ElJTL0tt-owoe-QUeodNtjRA"
+      ],
+      "click_url": "",
+      "track_click_urls": [
+       "https://api.kuper.ru/v2/vendo/track/FCBXqgO_IiLSiYhVGwL2sp9JUL1OTyn5yBG48zXwHMEBgzF8Dw7PuM2OvY7k7TdsZy78sfEunUJV-A9A-s0-uLWIPgNf8Y8sE2Rk0KKBSWld5_GhWDMyGywJ3aM2Sq-8Jkdp-ui5Jp4-AtrVgSq2bjvqoza9ItCyRm7AA211BcJVXv4Z113gYLy545GeiBOm1CefRFGEw2uK0-K_DSrToa9xpt6VzD_rDAJ0nY6HhQY6ZBLKyCPD9lv64DWPhMPaMqGd2m5mMfoGmrSI8K_spCm--vNkeU6NKFJQ3JNA4marx6wrRsl_EzWfmajUlEtBhadm-axrQz-Fu-k_FNGkpY7ViAirkS52-uOBuyAm-i8O5zNkwW2VehrDxEMxpO2zAgT9IEaRhbyii93NMb5ue9jwt9YAa8R0FlNAEsxNMYV0Wfo"
+      ]
+     }
+    },
+    "69642d68-6589-4589-9fdc-9997eac4746d": {
+     "id": "4527",
+     "uuid": "69642d68-6589-4589-9fdc-9997eac4746d",
+     "city_id": "42",
+     "express_delivery": false,
+     "max_sberloyalty_spend_percent": "-99%",
+     "on_demand": false,
+     "disabled_by_surge": false,
+     "minimum_order_amount": 500,
+     "minimum_order_amount_pickup": 500,
+     "delivery_forecast_text": "",
+     "promo_shield": {
+      "id": "4",
+      "gradient_start_color": "#C5F768",
+      "gradient_end_color": "#C5F768",
+      "text_color": "#000000",
+      "promo_text": "Скидки до 50%"
+     },
+     "promo_badges": [
+      {
+       "gradient_color_start": "#ffffff",
+       "gradient_color_end": "#ffffff",
+       "text_color": "#000000",
+       "text": "−99%",
+       "text_short": "−99%",
+       "type": "sberspasibo",
+       "icon_url": "https://static.kuper.ru/statics/downloads/rte/promo_badges/sberspasibo2x.png"
+      },
+      {
+       "gradient_color_start": "#C5F768",
+       "gradient_color_end": "#C5F768",
+       "text_color": "#000000",
+       "text": "Скидки до 50%",
+       "text_short": "Скидки до 50%",
+       "type": "custom",
+       "icon_url": "https://static.kuper.ru/statics/downloads/rte/promo_badges/custom2x.png"
+      }
+     ],
+     "closest_shipping_options": [
+      {
+       "option_id": "COURIER:96e215df-0c6c-437b-8800-a2e7101496b6",
+       "price": 0.0,
+       "summary": "сегодня 10:00–13:00",
+       "starts_at": "2026-10-29T10:00:00.000+03:00",
+       "ends_at": "2026-10-29T13:00:00.000+03:00",
+       "express_delivery": false
+      }
+     ],
+     "retailer": {
+      "id": "24",
+      "name": "О'КЕЙ",
+      "slug": "okey",
+      "appearance": {
+       "background_color": "#ff0000",
+       "image_color": "#ff0000",
+       "black_theme": false,
+       "logo_image": "https://static.kuper.ru/retail-onboarding/retailer_appearances/17/logo_images/okey.png?1620981298",
+       "mini_logo_image": "https://static.kuper.ru/retail-onboarding/retailer_appearances/17/mini_logo_images/Okey.png?1615355916"
+      }
+     },
+     "delivery_conditions": {
+      "surge": false,
+      "min_delivery_price": 29.0,
+      "max_delivery_price": 69.0
+     }
+    },
+    "4f533c52-c9f5-45a0-a6d7-e3ce5234bf92": {
+     "id": "24945",
+     "uuid": "4f533c52-c9f5-45a0-a6d7-e3ce5234bf92",
+     "city_id": "42",
+     "express_delivery": true,
+     "max_sberloyalty_spend_percent": "-99%",
+     "on_demand": false,
+     "disabled_by_surge": false,
+     "minimum_order_amount": 700,
+     "minimum_order_amount_pickup": 700,
+     "delivery_forecast_text": "",
+     "promo_shield": {
+      "id": "5",
+      "gradient_start_color": "#C5F768",
+      "gradient_end_color": "#C5F768",
+      "text_color": "#000000",
+      "promo_text": "Скидки до 60%"
+     },
+     "promo_badges": [
+      {
+       "gradient_color_start": "#ffffff",
+       "gradient_color_end": "#ffffff",
+       "text_color": "#000000",
+       "text": "−99%",
+       "text_short": "−99%",
+       "type": "sberspasibo",
+       "icon_url": "https://static.kuper.ru/statics/downloads/rte/promo_badges/sberspasibo2x.png"
+      },
+      {
+       "gradient_color_start": "#C5F768",
+       "gradient_color_end": "#C5F768",
+       "text_color": "#000000",
+       "text": "Скидки до 60%",
+       "text_short": "Скидки до 60%",
+       "type": "custom",
+       "icon_url": "https://static.kuper.ru/statics/downloads/rte/promo_badges/custom2x.png"
+      }
+     ],
+     "closest_shipping_options": [
+      {
+       "option_id": "COURIER:5d0c4a8c-4688-4919-ac7a-df84ca7ef15d",
+       "price": 0.0,
+       "summary": "сегодня 11:00–12:00",
+       "starts_at": "2026-10-29T11:00:00.000+03:00",
+       "ends_at": "2026-10-29T12:00:00.000+03:00",
+       "express_delivery": false
+      }
+     ],
+     "retailer": {
+      "id": "123",
+      "name": "М.Косметик",
+      "slug": "magnitkosmetikbd",
+      "appearance": {
+       "background_color": "#F446B8",
+       "image_color": "#ffffff",
+       "black_theme": false,
+       "logo_image": "https://static.kuper.ru/retail-onboarding/retailer_appearances/109/logo_images/file_24ad5a99_20260112.png?1768210288",
+       "mini_logo_image": "https://static.kuper.ru/retail-onboarding/retailer_appearances/109/mini_logo_images/file_1ecf8f78_20260112.png?1768209541"
+      }
+     },
+     "delivery_conditions": {
+      "surge": false,
+      "min_delivery_price": 0.0,
+      "max_delivery_price": 149.0
+     }
+    },
+    "2a2e4dfb-a824-4750-8609-d59fc196ce72": {
+     "id": "132745",
+     "uuid": "2a2e4dfb-a824-4750-8609-d59fc196ce72",
+     "city_id": "42",
+     "express_delivery": true,
+     "max_sberloyalty_spend_percent": "-99%",
+     "on_demand": true,
+     "disabled_by_surge": false,
+     "minimum_order_amount": 0,
+     "minimum_order_amount_pickup": 0,
+     "delivery_forecast_text": "45–155 мин",
+     "promo_badges": [
+      {
+       "gradient_color_start": "#ffffff",
+       "gradient_color_end": "#ffffff",
+       "text_color": "#000000",
+       "text": "−99%",
+       "text_short": "−99%",
+       "type": "sberspasibo",
+       "icon_url": "https://static.kuper.ru/statics/downloads/rte/promo_badges/sberspasibo2x.png"
+      }
+     ],
+     "closest_shipping_options": [
+      {
+       "option_id": "ON_DEMAND:ffffffff-ffff-ffff-ffdc-184215d415e5",
+       "price": 0.0,
+       "summary": "сегодня 00:57–02:47",
+       "starts_at": "2026-10-29T00:57:34.076+03:00",
+       "ends_at": "2026-10-29T02:47:34.076+03:00",
+       "express_delivery": false
+      }
+     ],
+     "retailer": {
+      "id": "23259",
+      "name": "Азбука вкуса",
+      "slug": "azbuka-vkusa",
+      "appearance": {
+       "background_color": "#015032",
+       "image_color": "#86b549",
+       "black_theme": false,
+       "logo_image": "https://static.kuper.ru/retail-onboarding/retailer_appearances/23255/logo_images/azbuka_vkysa.png?1719843713",
+       "mini_logo_image": "https://static.kuper.ru/retail-onboarding/retailer_appearances/23255/mini_logo_images/azbuka_vkysa.png?1719843713"
+      }
+     },
+     "delivery_conditions": {
+      "surge": false,
+      "min_delivery_price": 0.0,
+      "max_delivery_price": 349.0
+     }
+    },
+    "cdefc52b-bcd9-4338-b087-b0c12b4d33cc": {
+     "id": "60847",
+     "uuid": "cdefc52b-bcd9-4338-b087-b0c12b4d33cc",
+     "city_id": "42",
+     "express_delivery": true,
+     "max_sberloyalty_spend_percent": "-99%",
+     "on_demand": false,
+     "disabled_by_surge": false,
+     "minimum_order_amount": 0,
+     "minimum_order_amount_pickup": 0,
+     "delivery_forecast_text": "588–648 мин",
+     "promo_badges": [
+      {
+       "gradient_color_start": "#ffffff",
+       "gradient_color_end": "#ffffff",
+       "text_color": "#000000",
+       "text": "−99%",
+       "text_short": "−99%",
+       "type": "sberspasibo",
+       "icon_url": "https://static.kuper.ru/statics/downloads/rte/promo_badges/sberspasibo2x.png"
+      }
+     ],
+     "closest_shipping_options": [
+      {
+       "option_id": "EXPRESS_DELIVERY:a703aaf2-d2c4-4dfc-9f33-245bf269e432",
+       "price": 0.0,
+       "summary": "сегодня 10:00–11:00",
+       "starts_at": "2026-10-29T10:00:00.000+03:00",
+       "ends_at": "2026-10-29T11:00:00.000+03:00",
+       "express_delivery": true
+      }
+     ],
+     "retailer": {
+      "id": "9",
+      "name": "ВкусВилл",
+      "slug": "vkusvill",
+      "appearance": {
+       "background_color": "#2dbe64",
+       "image_color": "#ffffff",
+       "black_theme": false,
+       "logo_image": "https://static.kuper.ru/retail-onboarding/retailer_appearances/5/logo_images/Vkusvill_express3x.png?1671795711",
+       "mini_logo_image": "https://static.kuper.ru/retail-onboarding/retailer_appearances/5/mini_logo_images/Vkusvill.png?1699427282"
+      }
+     },
+     "delivery_conditions": {
+      "surge": false,
+      "min_delivery_price": 0.0,
+      "max_delivery_price": 89.0
+     }
+    },
+    "97a60dd3-a796-4acb-a06d-38055629f256": {
+     "id": "187181",
+     "uuid": "97a60dd3-a796-4acb-a06d-38055629f256",
+     "city_id": "42",
+     "express_delivery": true,
+     "max_sberloyalty_spend_percent": "-99%",
+     "on_demand": false,
+     "disabled_by_surge": false,
+     "minimum_order_amount": 500,
+     "minimum_order_amount_pickup": 500,
+     "delivery_forecast_text": "648–708 мин",
+     "promo_badges": [
+      {
+       "gradient_color_start": "#ffffff",
+       "gradient_color_end": "#ffffff",
+       "text_color": "#000000",
+       "text": "−99%",
+       "text_short": "−99%",
+       "type": "sberspasibo",
+       "icon_url": "https://static.kuper.ru/statics/downloads/rte/promo_badges/sberspasibo2x.png"
+      }
+     ],
+     "closest_shipping_options": [
+      {
+       "option_id": "EXPRESS_DELIVERY:3e1c81c0-03a4-4cc8-a8c1-e3a1a71ff813",
+       "price": 0.0,
+       "summary": "сегодня 11:00–12:00",
+       "starts_at": "2026-10-29T11:00:00.000+03:00",
+       "ends_at": "2026-10-29T12:00:00.000+03:00",
+       "express_delivery": true
+      }
+     ],
+     "retailer": {
+      "id": "20826",
+      "name": "Petshopru",
+      "slug": "petshopspb",
+      "appearance": {
+       "background_color": "#FF5100",
+       "image_color": "#FF5100",
+       "black_theme": false,
+       "logo_image": "https://static.kuper.ru/retail-onboarding/retailer_appearances/20822/logo_images/petshop_express_%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%BE%D0%B5_%D1%84%D0%BE%D1%82%D0%BE.png?1757420503",
+       "mini_logo_image": "https://static.kuper.ru/retail-onboarding/retailer_appearances/20822/mini_logo_images/petshopru_KVADRAT.png?1757422682"
+      }
+     },
+     "delivery_conditions": {
+      "surge": false,
+      "min_delivery_price": 0.0,
+      "max_delivery_price": 29.0
+     }
+    },
+    "122a5c36-e59c-44da-82d4-fe8c39d2c621": {
+     "id": "186550",
+     "uuid": "122a5c36-e59c-44da-82d4-fe8c39d2c621",
+     "city_id": "42",
+     "express_delivery": true,
+     "max_sberloyalty_spend_percent": "-99%",
+     "on_demand": false,
+     "disabled_by_surge": false,
+     "minimum_order_amount": 1000,
+     "minimum_order_amount_pickup": 1000,
+     "delivery_forecast_text": "2028–2268 мин",
+     "promo_badges": [
+      {
+       "gradient_color_start": "#ffffff",
+       "gradient_color_end": "#ffffff",
+       "text_color": "#000000",
+       "text": "−99%",
+       "text_short": "−99%",
+       "type": "sberspasibo",
+       "icon_url": "https://static.kuper.ru/statics/downloads/rte/promo_badges/sberspasibo2x.png"
+      }
+     ],
+     "closest_shipping_options": [
+      {
+       "option_id": "EXPRESS_DELIVERY:9ac3a08e-e4d5-4944-b0b8-6858a8611477",
+       "price": 0.0,
+       "summary": "завтра 10:00–14:00",
+       "starts_at": "2026-10-30T10:00:00.000+03:00",
+       "ends_at": "2026-10-30T14:00:00.000+03:00",
+       "express_delivery": true
+      }
+     ],
+     "retailer": {
+      "id": "36007",
+      "name": "Tefal",
+      "slug": "tefal-ooo-giper",
+      "appearance": {
+       "background_color": "#FFFFFF",
+       "image_color": "#ffffff",
+       "black_theme": true,
+       "logo_image": "https://static.kuper.ru/retail-onboarding/retailer_appearances/35353/logo_images/i.png?1738336974",
+       "mini_logo_image": "https://static.kuper.ru/retail-onboarding/retailer_appearances/35353/mini_logo_images/i.png?1738336974"
+      }
+     },
+     "delivery_conditions": {
+      "surge": false,
+      "min_delivery_price": 0.0,
+      "max_delivery_price": 0.0
+     }
+    }
+   },
+   "restaurant": {
+    "806c0fc8-8568-4100-aae0-198b56f54991": {
+     "id": "193476",
+     "uuid": "806c0fc8-8568-4100-aae0-198b56f54991",
+     "disabled_by_surge": false,
+     "on_demand": true,
+     "minimum_order_amount": 800,
+     "minimum_order_amount_pickup": 800,
+     "delivery_forecast_text": "54–64 мин",
+     "max_sberloyalty_spend_percent": "-99%",
+     "retailer": {
+      "id": "35915",
+      "name": "Domino Pizza",
+      "slug": "domino-pizza",
+      "appearance": {
+       "background_color": "#FFFFFF",
+       "image_color": "#DDDDDD",
+       "black_theme": true,
+       "cover_image": "https://static.kuper.ru/retail-onboarding/retailer_appearances/35261/main_rte_images/1600x1200-1.jpg?1748600271"
+      }
+     },
+     "schedule": {
+      "closing_at": "2026-10-29T23:29:00.000+03:00",
+      "minutes_till_closing_soon": 15
+     },
+     "rating": {
+      "double_gis_rating": null,
+      "inner_rating": null
+     },
+     "delivery_conditions": {
+      "surge": false,
+      "min_delivery_price": 119.0,
+      "max_delivery_price": 119.0
+     },
+     "closest_shipping_options": [
+      {
+       "option_id": "ON_DEMAND:ffffffff-ffff-ffff-ffdc-7c749815d171",
+       "price": 0.0,
+       "summary": "сегодня 01:06–01:16",
+       "starts_at": "2026-10-29T01:06:34.134+03:00",
+       "ends_at": "2026-10-29T01:16:34.134+03:00",
+       "express_delivery": false
+      }
+     ],
+     "promo_badges": [
+      {
+       "gradient_color_start": "#ffffff",
+       "gradient_color_end": "#ffffff",
+       "text_color": "#000000",
+       "text": "−99%",
+       "type": "sberspasibo",
+       "icon_url": "https://static.kuper.ru/statics/downloads/rte/promo_badges/sberspasibo2x.png"
+      },
+      {
+       "gradient_color_start": "#E6FCFC",
+       "gradient_color_end": "#E6FCFC",
+       "text_color": "#24282B",
+       "text": "-20%, промо DOMINO20",
+       "type": "custom",
+       "icon_url": "https://static.kuper.ru/statics/downloads/rte/promo_badges/custom2x.png"
+      }
+     ],
+     "promo_shield": {
+      "id": "3456",
+      "gradient_start_color": "#E6FCFC",
+      "gradient_end_color": "#E6FCFC",
+      "text_color": "#24282B",
+      "promo_text": "-20%, промо DOMINO20",
+      "description": "Скидка 20% на заказ от 2 000₽ по промо DOMINO20"
+     }
+    },
+    "b0a7efd8-105b-4b1e-8693-09ffd0ce31d8": {
+     "id": "131003",
+     "uuid": "b0a7efd8-105b-4b1e-8693-09ffd0ce31d8",
+     "disabled_by_surge": false,
+     "on_demand": true,
+     "minimum_order_amount": 800,
+     "minimum_order_amount_pickup": 800,
+     "delivery_forecast_text": "54–64 мин",
+     "max_sberloyalty_spend_percent": "-99%",
+     "retailer": {
+      "id": "22708",
+      "name": "2 Берега",
+      "slug": "2-berega",
+      "appearance": {
+       "background_color": "#FFFFFF",
+       "image_color": "#DDDDDD",
+       "black_theme": true,
+       "cover_image": "https://static.kuper.ru/retail-onboarding/retailer_appearances/22704/main_rte_images/DSC_9619new.jpg?1713872176"
+      }
+     },
+     "schedule": {
+      "closing_at": "2026-10-29T23:54:00.000+03:00",
+      "minutes_till_closing_soon": 15
+     },
+     "rating": {
+      "double_gis_rating": null,
+      "inner_rating": null
+     },
+     "delivery_conditions": {
+      "surge": false,
+      "min_delivery_price": 119.0,
+      "max_delivery_price": 119.0
+     },
+     "closest_shipping_options": [
+      {
+       "option_id": "ON_DEMAND:ffffffff-ffff-ffff-ffdc-2b647c6cc1eb",
+       "price": 0.0,
+       "summary": "сегодня 01:06–01:16",
+       "starts_at": "2026-10-29T01:06:34.127+03:00",
+       "ends_at": "2026-10-29T01:16:34.127+03:00",
+       "express_delivery": false
+      }
+     ],
+     "promo_badges": [
+      {
+       "gradient_color_start": "#ffffff",
+       "gradient_color_end": "#ffffff",
+       "text_color": "#000000",
+       "text": "−99%",
+       "type": "sberspasibo",
+       "icon_url": "https://static.kuper.ru/statics/downloads/rte/promo_badges/sberspasibo2x.png"
+      },
+      {
+       "gradient_color_start": "#E6FCFC",
+       "gradient_color_end": "#E6FCFC",
+       "text_color": "#24282B",
+       "text": "-20%, промо 2b20",
+       "type": "custom",
+       "icon_url": "https://static.kuper.ru/statics/downloads/rte/promo_badges/custom2x.png"
+      }
+     ],
+     "promo_shield": {
+      "id": "720",
+      "gradient_start_color": "#E6FCFC",
+      "gradient_end_color": "#E6FCFC",
+      "text_color": "#24282B",
+      "promo_text": "-20%, промо 2b20",
+      "description": "Скидка 20% на заказ от 2 200₽ по промокоду 2b20"
+     }
+    },
+    "f57aa83e-f23e-443c-ac5f-e46ca097725e": {
+     "id": "131223",
+     "uuid": "f57aa83e-f23e-443c-ac5f-e46ca097725e",
+     "disabled_by_surge": false,
+     "on_demand": true,
+     "minimum_order_amount": 650,
+     "minimum_order_amount_pickup": 650,
+     "delivery_forecast_text": "54–64 мин",
+     "max_sberloyalty_spend_percent": "-99%",
+     "retailer": {
+      "id": "22739",
+      "name": "FoodTaxi",
+      "slug": "food-taxi-2-berega",
+      "appearance": {
+       "background_color": "#FFFFFF",
+       "image_color": "#DDDDDD",
+       "black_theme": true,
+       "cover_image": "https://static.kuper.ru/retail-onboarding/retailer_appearances/22735/main_rte_images/DSC_8409-Edit.jpg?1714060167"
+      }
+     },
+     "schedule": {
+      "closing_at": "2026-10-29T23:54:00.000+03:00",
+      "minutes_till_closing_soon": 15
+     },
+     "rating": {
+      "double_gis_rating": null,
+      "inner_rating": null
+     },
+     "delivery_conditions": {
+      "surge": false,
+      "min_delivery_price": 129.0,
+      "max_delivery_price": 129.0
+     },
+     "closest_shipping_options": [
+      {
+       "option_id": "ON_DEMAND:ffffffff-ffff-ffff-ffdc-9db10925c84b",
+       "price": 0.0,
+       "summary": "сегодня 01:06–01:16",
+       "starts_at": "2026-10-29T01:06:34.128+03:00",
+       "ends_at": "2026-10-29T01:16:34.128+03:00",
+       "express_delivery": false
+      }
+     ],
+     "promo_badges": [
+      {
+       "gradient_color_start": "#ffffff",
+       "gradient_color_end": "#ffffff",
+       "text_color": "#000000",
+       "text": "−99%",
+       "type": "sberspasibo",
+       "icon_url": "https://static.kuper.ru/statics/downloads/rte/promo_badges/sberspasibo2x.png"
+      },
+      {
+       "gradient_color_start": "#E6FCFC",
+       "gradient_color_end": "#E6FCFC",
+       "text_color": "#24282B",
+       "text": "-20%, промо ftax20",
+       "type": "custom",
+       "icon_url": "https://static.kuper.ru/statics/downloads/rte/promo_badges/custom2x.png"
+      }
+     ],
+     "promo_shield": {
+      "id": "718",
+      "gradient_start_color": "#E6FCFC",
+      "gradient_end_color": "#E6FCFC",
+      "text_color": "#24282B",
+      "promo_text": "-20%, промо ftax20",
+      "description": "Скидка 20% на заказ от 2 000₽ по промокоду ftax20"
+     }
+    },
+    "23a11a77-3d62-4ced-a285-7284e3ee1069": {
+     "id": "245929",
+     "uuid": "23a11a77-3d62-4ced-a285-7284e3ee1069",
+     "disabled_by_surge": false,
+     "on_demand": true,
+     "minimum_order_amount": 800,
+     "minimum_order_amount_pickup": 800,
+     "delivery_forecast_text": "54–64 мин",
+     "max_sberloyalty_spend_percent": "-99%",
+     "retailer": {
+      "id": "39107",
+      "name": "Сакура",
+      "slug": "sakura-15",
+      "appearance": {
+       "background_color": "#FFFFFF",
+       "image_color": "#DDDDDD",
+       "black_theme": true,
+       "cover_image": "https://static.kuper.ru/retail-onboarding/retailer_appearances/38452/main_rte_images/file_28668a78_20260629.jpg?1782735134"
+      }
+     },
+     "schedule": {
+      "closing_at": "2026-10-29T23:29:00.000+03:00",
+      "minutes_till_closing_soon": 15
+     },
+     "rating": {
+      "double_gis_rating": null,
+      "inner_rating": null
+     },
+     "delivery_conditions": {
+      "surge": false,
+      "min_delivery_price": 119.0,
+      "max_delivery_price": 119.0
+     },
+     "closest_shipping_options": [
+      {
+       "option_id": "ON_DEMAND:ffffffff-ffff-ffff-ffdc-30b78ae5b417",
+       "price": 0.0,
+       "summary": "сегодня 01:06–01:16",
+       "starts_at": "2026-10-29T01:06:34.134+03:00",
+       "ends_at": "2026-10-29T01:16:34.134+03:00",
+       "express_delivery": false
+      }
+     ],
+     "promo_badges": [
+      {
+       "gradient_color_start": "#ffffff",
+       "gradient_color_end": "#ffffff",
+       "text_color": "#000000",
+       "text": "−99%",
+       "type": "sberspasibo",
+       "icon_url": "https://static.kuper.ru/statics/downloads/rte/promo_badges/sberspasibo2x.png"
+      },
+      {
+       "gradient_color_start": "#E6FCFC",
+       "gradient_color_end": "#E6FCFC",
+       "text_color": "#24282B",
+       "text": "-20%, промо sak20",
+       "type": "custom",
+       "icon_url": "https://static.kuper.ru/statics/downloads/rte/promo_badges/custom2x.png"
+      }
+     ],
+     "promo_shield": {
+      "id": "3495",
+      "gradient_start_color": "#E6FCFC",
+      "gradient_end_color": "#E6FCFC",
+      "text_color": "#24282B",
+      "promo_text": "-20%, промо sak20",
+      "description": "Скидка 20% на заказ от 2000₽ по промо sak20"
+     }
+    },
+    "5f9267cb-8b96-45bc-9d32-6d4ffd9c629c": {
+     "id": "131170",
+     "uuid": "5f9267cb-8b96-45bc-9d32-6d4ffd9c629c",
+     "disabled_by_surge": false,
+     "on_demand": true,
+     "minimum_order_amount": 800,
+     "minimum_order_amount_pickup": 800,
+     "delivery_forecast_text": "54–64 мин",
+     "max_sberloyalty_spend_percent": "-99%",
+     "retailer": {
+      "id": "22712",
+      "name": "Васаби",
+      "slug": "vasabi-2-berega",
+      "appearance": {
+       "background_color": "#FFFFFF",
+       "image_color": "#DDDDDD",
+       "black_theme": true,
+       "cover_image": "https://static.kuper.ru/retail-onboarding/retailer_appearances/22708/main_rte_images/DSC_0405.jpg?1715180107"
+      }
+     },
+     "schedule": {
+      "closing_at": "2026-10-29T23:54:00.000+03:00",
+      "minutes_till_closing_soon": 15
+     },
+     "rating": {
+      "double_gis_rating": null,
+      "inner_rating": null
+     },
+     "delivery_conditions": {
+      "surge": false,
+      "min_delivery_price": 119.0,
+      "max_delivery_price": 119.0
+     },
+     "closest_shipping_options": [
+      {
+       "option_id": "ON_DEMAND:ffffffff-ffff-ffff-ffdc-b333b8eb9ad9",
+       "price": 0.0,
+       "summary": "сегодня 01:06–01:16",
+       "starts_at": "2026-10-29T01:06:34.134+03:00",
+       "ends_at": "2026-10-29T01:16:34.134+03:00",
+       "express_delivery": false
+      }
+     ],
+     "promo_badges": [
+      {
+       "gradient_color_start": "#ffffff",
+       "gradient_color_end": "#ffffff",
+       "text_color": "#000000",
+       "text": "−99%",
+       "type": "sberspasibo",
+       "icon_url": "https://static.kuper.ru/statics/downloads/rte/promo_badges/sberspasibo2x.png"
+      },
+      {
+       "gradient_color_start": "#E6FCFC",
+       "gradient_color_end": "#E6FCFC",
+       "text_color": "#24282B",
+       "text": "-20%, промо vas20",
+       "type": "custom",
+       "icon_url": "https://static.kuper.ru/statics/downloads/rte/promo_badges/custom2x.png"
+      }
+     ],
+     "promo_shield": {
+      "id": "723",
+      "gradient_start_color": "#E6FCFC",
+      "gradient_end_color": "#E6FCFC",
+      "text_color": "#24282B",
+      "promo_text": "-20%, промо vas20",
+      "description": "Скидка 20% на заказ от 2 600₽ по промокоду vas20"
+     }
+    },
+    "f6572384-68a3-489a-9dc0-d1e067c00412": {
+     "id": "131113",
+     "uuid": "f6572384-68a3-489a-9dc0-d1e067c00412",
+     "disabled_by_surge": false,
+     "on_demand": true,
+     "minimum_order_amount": 800,
+     "minimum_order_amount_pickup": 800,
+     "delivery_forecast_text": "54–64 мин",
+     "max_sberloyalty_spend_percent": "-99%",
+     "retailer": {
+      "id": "22719",
+      "name": "Румянцев",
+      "slug": "rumyantsev-2-berega",
+      "appearance": {
+       "background_color": "#FFFFFF",
+       "image_color": "#DDDDDD",
+       "black_theme": true,
+       "cover_image": "https://static.kuper.ru/retail-onboarding/retailer_appearances/22715/main_rte_images/DSC_1949-%D1%80%D0%B5%D0%B4%D0%B0%D0%BA%D1%82.jpg?1724417041"
+      }
+     },
+     "schedule": {
+      "closing_at": "2026-10-29T23:54:00.000+03:00",
+      "minutes_till_closing_soon": 15
+     },
+     "rating": {
+      "double_gis_rating": null,
+      "inner_rating": null
+     },
+     "delivery_conditions": {
+      "surge": false,
+      "min_delivery_price": 99.0,
+      "max_delivery_price": 99.0
+     },
+     "closest_shipping_options": [
+      {
+       "option_id": "ON_DEMAND:ffffffff-ffff-ffff-ffdc-445b87fe8f64",
+       "price": 0.0,
+       "summary": "сегодня 01:06–01:16",
+       "starts_at": "2026-10-29T01:06:34.127+03:00",
+       "ends_at": "2026-10-29T01:16:34.127+03:00",
+       "express_delivery": false
+      }
+     ],
+     "promo_badges": [
+      {
+       "gradient_color_start": "#ffffff",
+       "gradient_color_end": "#ffffff",
+       "text_color": "#000000",
+       "text": "−99%",
+       "type": "sberspasibo",
+       "icon_url": "https://static.kuper.ru/statics/downloads/rte/promo_badges/sberspasibo2x.png"
+      },
+      {
+       "gradient_color_start": "#E6FCFC",
+       "gradient_color_end": "#E6FCFC",
+       "text_color": "#24282B",
+       "text": "-20%, промо rum20",
+       "type": "custom",
+       "icon_url": "https://static.kuper.ru/statics/downloads/rte/promo_badges/custom2x.png"
+      }
+     ],
+     "promo_shield": {
+      "id": "727",
+      "gradient_start_color": "#E6FCFC",
+      "gradient_end_color": "#E6FCFC",
+      "text_color": "#24282B",
+      "promo_text": "-20%, промо rum20",
+      "description": "Скидка 20% на заказ от 1 900₽ по промокоду rum20"
+     }
+    },
+    "ff781c1a-1a2a-4974-826e-7656b17e72f4": {
+     "id": "129377",
+     "uuid": "ff781c1a-1a2a-4974-826e-7656b17e72f4",
+     "disabled_by_surge": false,
+     "on_demand": true,
+     "minimum_order_amount": 800,
+     "minimum_order_amount_pickup": 800,
+     "delivery_forecast_text": "54–64 мин",
+     "max_sberloyalty_spend_percent": "-99%",
+     "retailer": {
+      "id": "22336",
+      "name": "Ollis",
+      "slug": "ollis",
+      "appearance": {
+       "background_color": "#FFFFFF",
+       "image_color": "#DDDDDD",
+       "black_theme": true,
+       "cover_image": "https://static.kuper.ru/retail-onboarding/retailer_appearances/22332/main_rte_images/DSC_6825-Edit.jpg?1712736808"
+      }
+     },
+     "schedule": {
+      "closing_at": "2026-10-29T23:54:00.000+03:00",
+      "minutes_till_closing_soon": 15
+     },
+     "rating": {
+      "double_gis_rating": null,
+      "inner_rating": null
+     },
+     "delivery_conditions": {
+      "surge": false,
+      "min_delivery_price": 119.0,
+      "max_delivery_price": 119.0
+     },
+     "closest_shipping_options": [
+      {
+       "option_id": "ON_DEMAND:ffffffff-ffff-ffff-ffdc-c2b40c62f5bd",
+       "price": 0.0,
+       "summary": "сегодня 01:06–01:16",
+       "starts_at": "2026-10-29T01:06:34.127+03:00",
+       "ends_at": "2026-10-29T01:16:34.127+03:00",
+       "express_delivery": false
+      }
+     ],
+     "promo_badges": [
+      {
+       "gradient_color_start": "#ffffff",
+       "gradient_color_end": "#ffffff",
+       "text_color": "#000000",
+       "text": "−99%",
+       "type": "sberspasibo",
+       "icon_url": "https://static.kuper.ru/statics/downloads/rte/promo_badges/sberspasibo2x.png"
+      },
+      {
+       "gradient_color_start": "#E6FCFC",
+       "gradient_color_end": "#E6FCFC",
+       "text_color": "#24282B",
+       "text": "-20%, промо ollis20",
+       "type": "custom",
+       "icon_url": "https://static.kuper.ru/statics/downloads/rte/promo_badges/custom2x.png"
+      }
+     ],
+     "promo_shield": {
+      "id": "721",
+      "gradient_start_color": "#E6FCFC",
+      "gradient_end_color": "#E6FCFC",
+      "text_color": "#24282B",
+      "promo_text": "-20%, промо ollis20",
+      "description": "Скидка 20% на заказ от 2 400₽ по промокоду ollis20"
+     }
+    },
+    "e7c47eab-0edc-4d66-b3fd-a96545fa0d83": {
+     "id": "131087",
+     "uuid": "e7c47eab-0edc-4d66-b3fd-a96545fa0d83",
+     "disabled_by_surge": false,
+     "on_demand": true,
+     "minimum_order_amount": 650,
+     "minimum_order_amount_pickup": 650,
+     "delivery_forecast_text": "54–64 мин",
+     "max_sberloyalty_spend_percent": "-99%",
+     "retailer": {
+      "id": "22713",
+      "name": "Готово китчен",
+      "slug": "gotovo-kitchen-2-berega",
+      "appearance": {
+       "background_color": "#FFFFFF",
+       "image_color": "#DDDDDD",
+       "black_theme": true,
+       "cover_image": "https://static.kuper.ru/retail-onboarding/retailer_appearances/22709/main_rte_images/DSC_9323-Edit.jpg?1715598344"
+      }
+     },
+     "schedule": {
+      "closing_at": "2026-10-29T23:54:00.000+03:00",
+      "minutes_till_closing_soon": 15
+     },
+     "rating": {
+      "double_gis_rating": null,
+      "inner_rating": null
+     },
+     "delivery_conditions": {
+      "surge": false,
+      "min_delivery_price": 119.0,
+      "max_delivery_price": 119.0
+     },
+     "closest_shipping_options": [
+      {
+       "option_id": "ON_DEMAND:ffffffff-ffff-ffff-ffdc-8f6414609eb7",
+       "price": 0.0,
+       "summary": "сегодня 01:06–01:16",
+       "starts_at": "2026-10-29T01:06:34.128+03:00",
+       "ends_at": "2026-10-29T01:16:34.128+03:00",
+       "express_delivery": false
+      }
+     ],
+     "promo_badges": [
+      {
+       "gradient_color_start": "#ffffff",
+       "gradient_color_end": "#ffffff",
+       "text_color": "#000000",
+       "text": "−99%",
+       "type": "sberspasibo",
+       "icon_url": "https://static.kuper.ru/statics/downloads/rte/promo_badges/sberspasibo2x.png"
+      },
+      {
+       "gradient_color_start": "#E6FCFC",
+       "gradient_color_end": "#E6FCFC",
+       "text_color": "#24282B",
+       "text": "-20%, промо ready20",
+       "type": "custom",
+       "icon_url": "https://static.kuper.ru/statics/downloads/rte/promo_badges/custom2x.png"
+      }
+     ],
+     "promo_shield": {
+      "id": "3494",
+      "gradient_start_color": "#E6FCFC",
+      "gradient_end_color": "#E6FCFC",
+      "text_color": "#24282B",
+      "promo_text": "-20%, промо ready20",
+      "description": "Скидка 20% на заказ от 1700₽ по промо ready20"
+     }
+    }
+   }
+  },
+  "ttl": null,
+  "meta": null,
+  "store_labels": []
+ }
+}

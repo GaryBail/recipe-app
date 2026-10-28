@@ -1,0 +1,4897 @@
+{
+ "status": 200,
+ "body": {
+  "items": [
+   {
+    "id": null,
+    "name": null,
+    "products": [
+     {
+      "id": 1728275,
+      "productId": 44963,
+      "code": "yayco-kurinoe-auchan-krasnaya-ptica-derevenskoe-s1-10-sht",
+      "name": "Яйцо куриное АШАН Красная птица Деревенское С1 столовое белое лоток, 10 шт",
+      "gimaId": "677062",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "yayco",
+       "yayco_kurinoe"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Яйцо, меланж",
+       "Яйцо куриное"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 63,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 109.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 37330425
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/37330425",
+      "media": [
+       37330425
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/37330425",
+       "https://www.auchan.ru/files/original/37280292",
+       "https://www.auchan.ru/files/original/37508727",
+       "https://www.auchan.ru/files/original/37508736",
+       "https://www.auchan.ru/files/original/37508754"
+      ],
+      "brandName": "АШАН Красная птица",
+      "rate": {
+       "rating": 4.7,
+       "reviews_qnt": 75
+      },
+      "modifications": [],
+      "badges": [
+       {
+        "id": 23,
+        "code": "private_label",
+        "type": "promo",
+        "rang": 90,
+        "description": "Наша марка - создано АШАН",
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": null
+       }
+      ],
+      "in_combo": false,
+      "package_display": "10 кг"
+     },
+     {
+      "id": 1728282,
+      "productId": 44967,
+      "code": "yayco-kurinoe-auchan-krasnaya-ptica-derevenskoe-so-30-sht",
+      "name": "Яйцо куриное АШАН Красная птица Деревенское С0 столовое белое лоток, 30 шт",
+      "gimaId": "677073",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "yayco",
+       "yayco_kurinoe"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Яйцо, меланж",
+       "Яйцо куриное"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 27,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 359.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 37914015
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/37914015",
+      "media": [
+       37914015
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/37914015",
+       "https://www.auchan.ru/files/original/37914030",
+       "https://www.auchan.ru/files/original/37508772",
+       "https://www.auchan.ru/files/original/37508781",
+       "https://www.auchan.ru/files/original/37508793"
+      ],
+      "brandName": "АШАН Красная птица",
+      "rate": {
+       "rating": 4.5,
+       "reviews_qnt": 76
+      },
+      "modifications": [],
+      "badges": [
+       {
+        "id": 23,
+        "code": "private_label",
+        "type": "promo",
+        "rang": 90,
+        "description": "Наша марка - создано АШАН",
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": null
+       }
+      ],
+      "in_combo": false,
+      "package_display": null
+     },
+     {
+      "id": 5593613,
+      "productId": 76332,
+      "code": "yayco_sinyavinskoe_s1_30_sht",
+      "name": "Яйцо куриное «Синявское» с ярким желтком С1 белое лоток, 30 шт",
+      "gimaId": "254320",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "yayco",
+       "yayco_kurinoe"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Яйцо, меланж",
+       "Яйцо куриное"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 51,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 369.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 37330272
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/37330272",
+      "media": [
+       37330272
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/37330272",
+       "https://www.auchan.ru/files/original/32262240",
+       "https://www.auchan.ru/files/original/37502919",
+       "https://www.auchan.ru/files/original/37502925",
+       "https://www.auchan.ru/files/original/37502931"
+      ],
+      "brandName": "Синявинское",
+      "rate": {
+       "rating": 4.2,
+       "reviews_qnt": 41
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": null
+     },
+     {
+      "id": 5593642,
+      "productId": 76640,
+      "code": "yayco_sosinyavinskoe_k_zavtraku",
+      "name": "Яйцо куриное «Синявинское» К завтраку с ярким желтком С0 белое, 10 шт",
+      "gimaId": "500049",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "yayco",
+       "yayco_kurinoe"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Яйцо, меланж",
+       "Яйцо куриное"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 33,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 124.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 37330389
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/37330389",
+      "media": [
+       37330389
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/37330389",
+       "https://www.auchan.ru/files/original/32265676",
+       "https://www.auchan.ru/files/original/37504617",
+       "https://www.auchan.ru/files/original/37504632",
+       "https://www.auchan.ru/files/original/37504650"
+      ],
+      "brandName": "Синявинское",
+      "rate": {
+       "rating": 4.4,
+       "reviews_qnt": 35
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": null
+     },
+     {
+      "id": 5593680,
+      "productId": 76916,
+      "code": "yayco_so_dereven_sinyavin10sht",
+      "name": "Яйцо куриное «Синявское» Деревенское с ярким желтком С0 белое, 10 шт",
+      "gimaId": "686729",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "yayco",
+       "yayco_kurinoe"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Яйцо, меланж",
+       "Яйцо куриное"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 34,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 134.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 37330443
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/37330443",
+      "media": [
+       37330443
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/37330443"
+      ],
+      "brandName": "Синявинское",
+      "rate": {
+       "rating": 4.6,
+       "reviews_qnt": 25
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": null
+     },
+     {
+      "id": 5593700,
+      "productId": 77092,
+      "code": "yayco_sinyavinskoe_s0_30sht",
+      "name": "Яйцо куриное «Синявское» с ярким желтком С0 белое лоток, 30 шт",
+      "gimaId": "759950",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "yayco",
+       "yayco_kurinoe"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Яйцо, меланж",
+       "Яйцо куриное"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 26,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 409.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 37330470
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/37330470",
+      "media": [
+       37330470
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/37330470",
+       "https://www.auchan.ru/files/original/32268508"
+      ],
+      "brandName": "Синявинское",
+      "rate": {
+       "rating": 4.6,
+       "reviews_qnt": 8
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": null
+     },
+     {
+      "id": 8266584,
+      "productId": 109736,
+      "code": "kd-yayco-kurinoe-s1-10-sht-1",
+      "name": "Яйцо куриное «Каждый день» С1 цвет в ассортименте, 10 шт",
+      "gimaId": "471851",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "yayco",
+       "yayco_kurinoe"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Яйцо, меланж",
+       "Яйцо куриное"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 521,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 89.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 37372770
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/37372770",
+      "media": [
+       37372770
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/37372770",
+       "https://www.auchan.ru/files/original/37372782"
+      ],
+      "brandName": "Каждый день",
+      "rate": {
+       "rating": 4.8,
+       "reviews_qnt": 263
+      },
+      "modifications": [],
+      "badges": [
+       {
+        "id": 24,
+        "code": "first_price",
+        "type": "promo",
+        "rang": 42,
+        "description": null,
+        "image_link": "https://www.auchan.ru/files/original/38405325",
+        "adaptive_image_link": "https://www.auchan.ru/files/original/38405328",
+        "mobile_image_link": "https://www.auchan.ru/files/original/38405322",
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": null
+       }
+      ],
+      "in_combo": false,
+      "package_display": null
+     },
+     {
+      "id": 8292654,
+      "productId": 109737,
+      "code": "kd-yayco-kurinoe-s1-30-sht-1",
+      "name": "Яйцо куриное «Каждый день» С1 цвет в ассортименте лоток, 30 шт",
+      "gimaId": "471854",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "yayco",
+       "yayco_kurinoe"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Яйцо, меланж",
+       "Яйцо куриное"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 206,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 264.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 37330368
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/37330368",
+      "media": [
+       37330368
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/37330368"
+      ],
+      "brandName": "Каждый день",
+      "rate": {
+       "rating": 4.7,
+       "reviews_qnt": 114
+      },
+      "modifications": [],
+      "badges": [
+       {
+        "id": 24,
+        "code": "first_price",
+        "type": "promo",
+        "rang": 42,
+        "description": null,
+        "image_link": "https://www.auchan.ru/files/original/38405325",
+        "adaptive_image_link": "https://www.auchan.ru/files/original/38405328",
+        "mobile_image_link": "https://www.auchan.ru/files/original/38405322",
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": null
+       }
+      ],
+      "in_combo": false,
+      "package_display": null
+     },
+     {
+      "id": 8266504,
+      "productId": 109980,
+      "code": "kd-yayco-kurinoe-so-10-sht-1",
+      "name": "Яйцо куриное «Каждый день» С0 цвет в ассортименте лоток, 10 шт",
+      "gimaId": "640916",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "yayco",
+       "yayco_kurinoe"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Яйцо, меланж",
+       "Яйцо куриное"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 242,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 99.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 37330419
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/37330419",
+      "media": [
+       37330419
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/37330419"
+      ],
+      "brandName": "Каждый день",
+      "rate": {
+       "rating": 4.9,
+       "reviews_qnt": 334
+      },
+      "modifications": [],
+      "badges": [
+       {
+        "id": 24,
+        "code": "first_price",
+        "type": "promo",
+        "rang": 42,
+        "description": null,
+        "image_link": "https://www.auchan.ru/files/original/38405325",
+        "adaptive_image_link": "https://www.auchan.ru/files/original/38405328",
+        "mobile_image_link": "https://www.auchan.ru/files/original/38405322",
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": null
+       }
+      ],
+      "in_combo": false,
+      "package_display": null
+     },
+     {
+      "id": 8526223,
+      "productId": 121200,
+      "code": "yayco_iz_der_batovos1_10sh",
+      "name": "Яйцо куриное «Из деревни Батово» С1 белое, 10 шт",
+      "gimaId": "806460",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "yayco",
+       "yayco_kurinoe"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Яйцо, меланж",
+       "Яйцо куриное"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 20,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 114.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 37330500
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/37330500",
+      "media": [
+       37330500
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/37330500"
+      ],
+      "brandName": "Из деревни Батово",
+      "rate": {
+       "rating": 5,
+       "reviews_qnt": 1
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": null
+     },
+     {
+      "id": 8526225,
+      "productId": 121202,
+      "code": "yayco_esh_horoshee_s1_10sh",
+      "name": "Яйцо куриное «Ешь Хорошее» С1 белое, 10 шт",
+      "gimaId": "806466",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "yayco",
+       "yayco_kurinoe"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Яйцо, меланж",
+       "Яйцо куриное"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 61,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 116.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 37330152
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/37330152",
+      "media": [
+       37330152
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/37330152",
+       "https://www.auchan.ru/files/original/35663145",
+       "https://www.auchan.ru/files/original/35663154",
+       "https://www.auchan.ru/files/original/35663157"
+      ],
+      "brandName": "Ешь хорошее",
+      "rate": {
+       "rating": 5,
+       "reviews_qnt": 15
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": null
+     },
+     {
+      "id": 8524337,
+      "productId": 128957,
+      "code": "yayco_s1sinyavinskoe_k_zatraku",
+      "name": "Яйцо куриное «Синявинское» К завтраку с ярким желтком С1 белое, 10 шт",
+      "gimaId": "500050",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "yayco",
+       "yayco_kurinoe"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Яйцо, меланж",
+       "Яйцо куриное"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 28,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 114.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 37330392
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/37330392",
+      "media": [
+       37330392
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/37330392"
+      ],
+      "brandName": "Синявинское",
+      "rate": {
+       "rating": 4.3,
+       "reviews_qnt": 41
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": null
+     },
+     {
+      "id": 8524862,
+      "productId": 132680,
+      "code": "s1_derevenskoe_sinyavinskoe10sht",
+      "name": "Яйцо куриное «Деревенские» с ярким желтком С1 белое, 10 шт",
+      "gimaId": "681873",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "yayco",
+       "yayco_kurinoe"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Яйцо, меланж",
+       "Яйцо куриное"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 49,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 109.95,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "oldPrice": {
+       "value": 124.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "discount": {
+       "id": 8524862,
+       "value": 15.04,
+       "value_type": 2,
+       "change": 15,
+       "size": 12,
+       "date_start": "2026-10-26",
+       "date_end": "2026-10-29",
+       "is_pl_discount": false
+      },
+      "image": {
+       "id": 37330437
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/37330437",
+      "media": [
+       37330437
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/37330437"
+      ],
+      "brandName": "Ашатли",
+      "rate": {
+       "rating": 4,
+       "reviews_qnt": 4
+      },
+      "modifications": [],
+      "badges": [
+       {
+        "id": 8,
+        "code": "discount",
+        "type": "promo",
+        "rang": 20,
+        "description": null,
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": {
+         "id": 8524862,
+         "is_pl_discount": false,
+         "change": 15,
+         "size": 12,
+         "value": 15.04,
+         "value_type": 2,
+         "date_start": "2026-10-26",
+         "date_end": "2026-10-29"
+        }
+       }
+      ],
+      "in_combo": false,
+      "package_display": null
+     },
+     {
+      "id": 8524863,
+      "productId": 132735,
+      "code": "yayco_sinyavinskoe_s1_beloe_20sht",
+      "name": "Яйцо куриное «Синявинское» с ярким желтком С1 белое лоток, 20 шт",
+      "gimaId": "686719",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "yayco",
+       "yayco_kurinoe"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Яйцо, меланж",
+       "Яйцо куриное"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 30,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 224.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 37330440
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/37330440",
+      "media": [
+       37330440
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/37330440",
+       "https://www.auchan.ru/files/original/32268040"
+      ],
+      "brandName": "Синявинское",
+      "rate": {
+       "rating": 5,
+       "reviews_qnt": 2
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": null
+     },
+     {
+      "id": 12210431,
+      "productId": 167966,
+      "code": "kp-yayco-derevenskoe-s1-30-sht",
+      "name": "Яйцо куриное АШАН Красная птица деревенское С1 белое лоток, 30 шт",
+      "gimaId": "852617",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "yayco",
+       "yayco_kurinoe"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Яйцо, меланж",
+       "Яйцо куриное"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 18,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 279.95,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "oldPrice": {
+       "value": 329.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "discount": {
+       "id": 12210431,
+       "value": 50.04,
+       "value_type": 2,
+       "change": 50,
+       "size": 15,
+       "date_start": "2026-10-26",
+       "date_end": "2026-10-29",
+       "is_pl_discount": false
+      },
+      "image": {
+       "id": 37914141
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/37914141",
+      "media": [
+       37914141
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/37914141",
+       "https://www.auchan.ru/files/original/37914150",
+       "https://www.auchan.ru/files/original/37510824",
+       "https://www.auchan.ru/files/original/37510827"
+      ],
+      "brandName": "АШАН Красная птица",
+      "cashback": {
+       "point": null,
+       "percent": 5,
+       "limit_type": "шт",
+       "limit": 0,
+       "is_delayed": false
+      },
+      "rate": {
+       "rating": 4.5,
+       "reviews_qnt": 48
+      },
+      "modifications": [],
+      "badges": [
+       {
+        "id": 8,
+        "code": "discount",
+        "type": "promo",
+        "rang": 20,
+        "description": null,
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": {
+         "id": 12210431,
+         "is_pl_discount": false,
+         "change": 50,
+         "size": 15,
+         "value": 50.04,
+         "value_type": 2,
+         "date_start": "2026-10-26",
+         "date_end": "2026-10-29"
+        }
+       },
+       {
+        "id": 2,
+        "code": "cashback",
+        "type": "promo",
+        "rang": 40,
+        "description": null,
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": {
+         "point": null,
+         "points_type": "AUCH_PT",
+         "percent": 5,
+         "limit_type": "шт",
+         "limit": 0,
+         "is_delayed": false
+        }
+       },
+       {
+        "id": 23,
+        "code": "private_label",
+        "type": "promo",
+        "rang": 90,
+        "description": "Наша марка - создано АШАН",
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": null
+       }
+      ],
+      "in_combo": false,
+      "package_display": null
+     },
+     {
+      "id": 13702202,
+      "productId": 193540,
+      "code": "yayco-oredezh-gost-s0-20sht",
+      "name": "Яйцо куриное «Оредеж» С0 белое лоток ГОСТ, 20 шт",
+      "gimaId": "925276",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "yayco",
+       "yayco_kurinoe"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Яйцо, меланж",
+       "Яйцо куриное"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 29,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 239.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 37330242
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/37330242",
+      "media": [
+       37330242
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/37330242"
+      ],
+      "brandName": "Оредеж",
+      "rate": {
+       "rating": 4.3,
+       "reviews_qnt": 3
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": null
+     },
+     {
+      "id": 13702203,
+      "productId": 193555,
+      "code": "yayco-oredezh-sv20sht",
+      "name": "Яйцо куриное «Оредеж» Глазунья великан СВ белое лоток, 20 шт",
+      "gimaId": "925555",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "yayco",
+       "yayco_kurinoe"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Яйцо, меланж",
+       "Яйцо куриное"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 11,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 309.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 37330248
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/37330248",
+      "media": [
+       37330248
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/37330248"
+      ],
+      "brandName": "Оредеж",
+      "rate": {
+       "rating": 5,
+       "reviews_qnt": 6
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": null
+     },
+     {
+      "id": 17985521,
+      "productId": 268144,
+      "code": "yayco-s2-sinyavin-zhemchuzh-10sht",
+      "name": "Яйцо куриное «Синявинское» Жемчужинка от молодой курочки С2 белое, 10 шт",
+      "gimaId": "54005",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "yayco",
+       "yayco_kurinoe"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Яйцо, меланж",
+       "Яйцо куриное"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 30,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 124.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 37330407
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/37330407",
+      "media": [
+       37330407
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/37330407",
+       "https://www.auchan.ru/files/original/28295424",
+       "https://www.auchan.ru/files/original/28189734"
+      ],
+      "brandName": "Синявинское",
+      "rate": {
+       "rating": 4.5,
+       "reviews_qnt": 15
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": null
+     },
+     {
+      "id": 19115532,
+      "productId": 287638,
+      "code": "yayco-kurinoe-kokosha-s1-10-sht",
+      "name": "Яйцо куриное «Кокоша» С1 белое, 10 шт",
+      "gimaId": "89960",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "yayco",
+       "yayco_kurinoe"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Яйцо, меланж",
+       "Яйцо куриное"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 15,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 134.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 37330194
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/37330194",
+      "media": [
+       37330194
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/37330194",
+       "https://www.auchan.ru/files/original/28702934"
+      ],
+      "brandName": "Кокоша",
+      "rate": {
+       "rating": 5,
+       "reviews_qnt": 1
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": null
+     },
+     {
+      "id": 19445259,
+      "productId": 287855,
+      "code": "yayca-kurinye-so-beloe-20-sht",
+      "name": "Яйцо куриное «Синявинское» с ярким желтком СО белое столовое лоток, 20 шт",
+      "gimaId": "91466",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "yayco",
+       "yayco_kurinoe"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Яйцо, меланж",
+       "Яйцо куриное"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 29,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 244.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 37330200
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/37330200",
+      "media": [
+       37330200
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/37330200"
+      ],
+      "brandName": "Синявинское",
+      "rate": {
+       "rating": 4.3,
+       "reviews_qnt": 8
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": null
+     },
+     {
+      "id": 19445260,
+      "productId": 287856,
+      "code": "yayca-kurinye-so-ekstra-10sht",
+      "name": "Яйцо куриное «Синявинское» Экстра с селеном и витамином Е СО белое столовое, 10 шт",
+      "gimaId": "91468",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "yayco",
+       "yayco_kurinoe"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Яйцо, меланж",
+       "Яйцо куриное"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 16,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 139.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 37330206
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/37330206",
+      "media": [
+       37330206
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/37330206"
+      ],
+      "brandName": "Синявинское",
+      "rate": {
+       "rating": 5,
+       "reviews_qnt": 3
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": null
+     },
+     {
+      "id": 19445261,
+      "productId": 287857,
+      "code": "yayca-kurinye-so-lukoshko-10sht",
+      "name": "Яйцо куриное «Синявинское» Лукошко с селеном СО белое столовое, 10 шт",
+      "gimaId": "91470",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "yayco",
+       "yayco_kurinoe"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Яйцо, меланж",
+       "Яйцо куриное"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 47,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 149.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 37330218
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/37330218",
+      "media": [
+       37330218
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/37330218"
+      ],
+      "brandName": "Синявинское",
+      "rate": {
+       "rating": 5,
+       "reviews_qnt": 1
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": null
+     },
+     {
+      "id": 19445262,
+      "productId": 287858,
+      "code": "yayca-kurinye-s1-effekt-10sht",
+      "name": "Яйцо куриное «Синявинское» Эффект с селеном С1 белое столовое, 10 шт",
+      "gimaId": "91471",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "yayco",
+       "yayco_kurinoe"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Яйцо, меланж",
+       "Яйцо куриное"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 11,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 124.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 37330224
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/37330224",
+      "media": [
+       37330224
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/37330224"
+      ],
+      "brandName": "Синявинское",
+      "rate": {
+       "rating": 5,
+       "reviews_qnt": 2
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": null
+     },
+     {
+      "id": 19445263,
+      "productId": 287859,
+      "code": "yayca-kurinye-s1-gnezdyshko-10sht",
+      "name": "Яйцо куриное «Синявинское» Гнездышко с селеном и витамином Е С1 белое столовое, 10 шт",
+      "gimaId": "91472",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "yayco",
+       "yayco_kurinoe"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Яйцо, меланж",
+       "Яйцо куриное"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 36,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 124.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 37330230
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/37330230",
+      "media": [
+       37330230
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/37330230"
+      ],
+      "brandName": "Синявинское",
+      "rate": {
+       "rating": 5,
+       "reviews_qnt": 3
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": null
+     },
+     {
+      "id": 39577248,
+      "productId": 443516,
+      "code": "kp-yayco-derevenskoe-s0-20-sht",
+      "name": "Яйцо куриное АШАН Красная птица С0 белое лоток, 20 шт",
+      "gimaId": "188363",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "yayco",
+       "yayco_kurinoe"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Яйцо, меланж",
+       "Яйцо куриное"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 19,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 239.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 37330203
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/37330203",
+      "media": [
+       37330203
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/37330203",
+       "https://www.auchan.ru/files/original/35532936",
+       "https://www.auchan.ru/files/original/35532963",
+       "https://www.auchan.ru/files/original/37503051",
+       "https://www.auchan.ru/files/original/37503054",
+       "https://www.auchan.ru/files/original/37503057",
+       "https://www.auchan.ru/files/original/35532999"
+      ],
+      "brandName": "АШАН Красная птица",
+      "rate": {
+       "rating": 4.3,
+       "reviews_qnt": 80
+      },
+      "modifications": [],
+      "badges": [
+       {
+        "id": 23,
+        "code": "private_label",
+        "type": "promo",
+        "rang": 90,
+        "description": "Наша марка - создано АШАН",
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": null
+       }
+      ],
+      "in_combo": false,
+      "package_display": null
+     },
+     {
+      "id": 328630,
+      "productId": 8889,
+      "code": "yayco-varaksino-kurinoe-derevenskoe-beloe-s1-10-sht",
+      "name": "Яйцо куриное «Вараксино» Деревенское С1 цвет в ассортименте, 10 шт",
+      "gimaId": "384219",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "yayco",
+       "yayco_kurinoe"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Яйцо, меланж",
+       "Яйцо куриное"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 11,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 119.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 38250597
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/38250597",
+      "media": [
+       38250597
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/38250597",
+       "https://www.auchan.ru/files/original/38250603",
+       "https://www.auchan.ru/files/original/38250609",
+       "https://www.auchan.ru/files/original/27199064",
+       "https://www.auchan.ru/files/original/37503708",
+       "https://www.auchan.ru/files/original/37503723",
+       "https://www.auchan.ru/files/original/37503735"
+      ],
+      "brandName": "Вараксино",
+      "rate": {
+       "rating": 4.7,
+       "reviews_qnt": 60
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": null
+     },
+     {
+      "id": 328635,
+      "productId": 8893,
+      "code": "yayco-varaksino-kurinoe-derevenskoe-beloe-s1-30-sht",
+      "name": "Яйцо куриное «Вараксино» Деревенское С1 цвет в ассортименте лоток, 30 шт",
+      "gimaId": "384228",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "yayco",
+       "yayco_kurinoe"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Яйцо, меланж",
+       "Яйцо куриное"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 10,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 359.95,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "oldPrice": {
+       "value": 409.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "discount": {
+       "id": 328635,
+       "value": 50.04,
+       "value_type": 2,
+       "change": 50,
+       "size": 12,
+       "date_start": "2026-10-26",
+       "date_end": "2026-10-29",
+       "is_pl_discount": false
+      },
+      "image": {
+       "id": 38250615
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/38250615",
+      "media": [
+       38250615
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/38250615",
+       "https://www.auchan.ru/files/original/38250627",
+       "https://www.auchan.ru/files/original/38250633",
+       "https://www.auchan.ru/files/original/37503762",
+       "https://www.auchan.ru/files/original/37503780"
+      ],
+      "brandName": "Вараксино",
+      "rate": {
+       "rating": 4.8,
+       "reviews_qnt": 17
+      },
+      "modifications": [],
+      "badges": [
+       {
+        "id": 8,
+        "code": "discount",
+        "type": "promo",
+        "rang": 20,
+        "description": null,
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": {
+         "id": 328635,
+         "is_pl_discount": false,
+         "change": 50,
+         "size": 12,
+         "value": 50.04,
+         "value_type": 2,
+         "date_start": "2026-10-26",
+         "date_end": "2026-10-29"
+        }
+       }
+      ],
+      "in_combo": false,
+      "package_display": null
+     },
+     {
+      "id": 7901242,
+      "productId": 97830,
+      "code": "kpperepelinye_yayca_20sht",
+      "name": "Яйца перепелиные АШАН Красная птица лоток, 20 шт",
+      "gimaId": "796224",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "yayco",
+       "yayco_perepelinoe"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Яйцо, меланж",
+       "Яйцо перепелиное"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 44,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 154.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "oldPrice": {
+       "value": 174.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "discount": {
+       "id": 7901242,
+       "value": 20,
+       "value_type": 2,
+       "change": 20,
+       "size": 11,
+       "date_start": "2026-10-28",
+       "date_end": "2026-11-11",
+       "is_pl_discount": false
+      },
+      "image": {
+       "id": 26508241
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/26508241",
+      "media": [
+       26508241
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/26508241",
+       "https://www.auchan.ru/files/original/26508239",
+       "https://www.auchan.ru/files/original/26508244",
+       "https://www.auchan.ru/files/original/37510392",
+       "https://www.auchan.ru/files/original/37510401",
+       "https://www.auchan.ru/files/original/37510413"
+      ],
+      "brandName": "АШАН Красная птица",
+      "rate": {
+       "rating": 4.6,
+       "reviews_qnt": 47
+      },
+      "modifications": [],
+      "badges": [
+       {
+        "id": 8,
+        "code": "discount",
+        "type": "promo",
+        "rang": 20,
+        "description": null,
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": {
+         "id": 7901242,
+         "is_pl_discount": false,
+         "change": 20,
+         "size": 11,
+         "value": 20,
+         "value_type": 2,
+         "date_start": "2026-10-28",
+         "date_end": "2026-11-11"
+        }
+       },
+       {
+        "id": 23,
+        "code": "private_label",
+        "type": "promo",
+        "rang": 90,
+        "description": "Наша марка - создано АШАН",
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": null
+       }
+      ],
+      "in_combo": false,
+      "package_display": null
+     },
+     {
+      "id": 60981099,
+      "productId": 693420,
+      "code": "yayco-s1-pavlov-kurochka-10sht",
+      "name": "Яйцо куриное «Павловская Курочка» первая категория С1 белое, 10 шт",
+      "gimaId": "493508",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "yayco",
+       "yayco_kurinoe"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Яйцо, меланж",
+       "Яйцо куриное"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 9,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 119.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 37302726
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/37302726",
+      "media": [
+       37302726
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/37302726",
+       "https://www.auchan.ru/files/original/37302732",
+       "https://www.auchan.ru/files/original/37302744",
+       "https://www.auchan.ru/files/original/37302756",
+       "https://www.auchan.ru/files/original/37302768"
+      ],
+      "brandName": "Павловская Курочка",
+      "rate": {
+       "rating": 5,
+       "reviews_qnt": 1
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": null
+     },
+     {
+      "id": 13702151,
+      "productId": 193363,
+      "code": "yayca-ekstra-sv-10-sht",
+      "name": "Яйцо куриное «Роскар» Экстра СВ коричневое коричневое, 10 шт",
+      "gimaId": "919421",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "yayco",
+       "yayco_kurinoe"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Яйцо, меланж",
+       "Яйцо куриное"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 15,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 169.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 26316815
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/26316815",
+      "media": [
+       26316815
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/26316815",
+       "https://www.auchan.ru/files/original/37510635",
+       "https://www.auchan.ru/files/original/37510641",
+       "https://www.auchan.ru/files/original/37510986"
+      ],
+      "brandName": "Роскар",
+      "rate": {
+       "rating": 5,
+       "reviews_qnt": 41
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": null
+     },
+     {
+      "id": 63152856,
+      "productId": 496644,
+      "code": "yayco-perepel-kfh-mihaylov-12sht",
+      "name": "Яйцо перепелиное Healthy Nation фермерское домашнее охлажденное, 12 шт",
+      "gimaId": "222280",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "yayco",
+       "yayco_perepelinoe"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Яйцо, меланж",
+       "Яйцо перепелиное"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 29,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 134.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 33618273
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/33618273",
+      "media": [
+       33618273
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/33618273",
+       "https://www.auchan.ru/files/original/33618276",
+       "https://www.auchan.ru/files/original/33618279",
+       "https://www.auchan.ru/files/original/37502424",
+       "https://www.auchan.ru/files/original/37502436",
+       "https://www.auchan.ru/files/original/37502448"
+      ],
+      "brandName": "Healthy Nation",
+      "rate": {
+       "rating": 4.6,
+       "reviews_qnt": 21
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": null
+     },
+     {
+      "id": 43990503,
+      "productId": 596975,
+      "code": "kp-yayco-perepelinoe-56sht",
+      "name": "Яйцо перепелиное АШАН Красная птица, 56 шт",
+      "gimaId": "358308",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "yayco",
+       "yayco_perepelinoe"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Яйцо, меланж",
+       "Яйцо перепелиное"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 7,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 489.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 35699568
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/35699568",
+      "media": [
+       35699568
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/35699568",
+       "https://www.auchan.ru/files/original/35699652",
+       "https://www.auchan.ru/files/original/35699742",
+       "https://www.auchan.ru/files/original/37503852",
+       "https://www.auchan.ru/files/original/37503867",
+       "https://www.auchan.ru/files/original/37503885"
+      ],
+      "brandName": "АШАН Красная птица",
+      "cashback": {
+       "point": null,
+       "percent": 5,
+       "limit_type": "шт",
+       "limit": 0,
+       "is_delayed": false
+      },
+      "rate": {
+       "rating": 3,
+       "reviews_qnt": 18
+      },
+      "modifications": [],
+      "badges": [
+       {
+        "id": 2,
+        "code": "cashback",
+        "type": "promo",
+        "rang": 40,
+        "description": null,
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": {
+         "point": null,
+         "points_type": "AUCH_PT",
+         "percent": 5,
+         "limit_type": "шт",
+         "limit": 0,
+         "is_delayed": false
+        }
+       },
+       {
+        "id": 23,
+        "code": "private_label",
+        "type": "promo",
+        "rang": 90,
+        "description": "Наша марка - создано АШАН",
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": null
+       }
+      ],
+      "in_combo": false,
+      "package_display": null
+     },
+     {
+      "id": 65400963,
+      "productId": 754575,
+      "code": "kp-shokoladnoe-yayco-20g",
+      "name": "Яйцо шоколадное АШАН Красная птица Ашаня с игрушкой, 20 г",
+      "gimaId": "544548",
+      "categoryCodes": [
+       "konditerskie_izdeliya",
+       "shokolad_shokoladnye",
+       "shokolad_6"
+      ],
+      "categoryNames": [
+       "Сладости",
+       "Шоколад, шоколадные батончики",
+       "Шоколад"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": true,
+      "stock": {
+       "qty": 347,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 99.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 38287968
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/38287968",
+      "media": [
+       38287968
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/38287968",
+       "https://www.auchan.ru/files/original/38115528",
+       "https://www.auchan.ru/files/original/38115537",
+       "https://www.auchan.ru/files/original/38115546",
+       "https://www.auchan.ru/files/original/38115558",
+       "https://www.auchan.ru/files/original/38115570",
+       "https://www.auchan.ru/files/original/38115579",
+       "https://www.auchan.ru/files/original/38115594",
+       "https://www.auchan.ru/files/original/38115603"
+      ],
+      "brandName": "АШАН Красная птица",
+      "rate": {
+       "rating": 4.9,
+       "reviews_qnt": 41
+      },
+      "modifications": [],
+      "badges": [
+       {
+        "id": 20,
+        "code": "new",
+        "type": "promo",
+        "rang": 80,
+        "description": null,
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": null
+       },
+       {
+        "id": 23,
+        "code": "private_label",
+        "type": "promo",
+        "rang": 90,
+        "description": "Наша марка - создано АШАН",
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": null
+       }
+      ],
+      "in_combo": false,
+      "package_display": null
+     },
+     {
+      "id": 292236,
+      "productId": 6257,
+      "code": "shokoladnoe-yayco-kinder-dzhoy-seriya-dlya-devochek-20g",
+      "name": "Яйцо шоколадное Kinder Joy с игрушкой для девочек Китай, 20 г",
+      "gimaId": "56238",
+      "categoryCodes": [
+       "konditerskie_izdeliya",
+       "shokolad_shokoladnye",
+       "shokolad_6"
+      ],
+      "categoryNames": [
+       "Сладости",
+       "Шоколад, шоколадные батончики",
+       "Шоколад"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 165,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 149.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "oldPrice": {
+       "value": 199.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "discount": {
+       "id": 292236,
+       "value": 50,
+       "value_type": 2,
+       "change": 50,
+       "size": 25,
+       "date_start": "2026-10-15",
+       "date_end": "2026-10-28",
+       "is_pl_discount": true
+      },
+      "image": {
+       "id": 38198493
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/38198493",
+      "media": [
+       38198493
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/38198493",
+       "https://www.auchan.ru/files/original/38198571",
+       "https://www.auchan.ru/files/original/38198589",
+       "https://www.auchan.ru/files/original/38198661",
+       "https://www.auchan.ru/files/original/38198736",
+       "https://www.auchan.ru/files/original/38198802",
+       "https://www.auchan.ru/files/original/38198883",
+       "https://www.auchan.ru/files/original/38198895",
+       "https://www.auchan.ru/files/original/38198907"
+      ],
+      "brandName": "Kinder",
+      "rate": {
+       "rating": 5,
+       "reviews_qnt": 119
+      },
+      "modifications": [],
+      "badges": [
+       {
+        "id": 8,
+        "code": "discount",
+        "type": "promo",
+        "rang": 20,
+        "description": null,
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": {
+         "id": 292236,
+         "is_pl_discount": true,
+         "change": 50,
+         "size": 25,
+         "value": 50,
+         "value_type": 2,
+         "date_start": "2026-10-15",
+         "date_end": "2026-10-28"
+        }
+       }
+      ],
+      "in_combo": false,
+      "package_display": null
+     },
+     {
+      "id": 347361,
+      "productId": 6259,
+      "code": "shokoladnoe-yayco-kinder-syurpriz-licenzionnaya-seriya-20g",
+      "name": "Шоколадное яйцо Kinder Сюрприз из молочного шоколада и игрушкой внутри коллекция Natoons, 20 г",
+      "gimaId": "504949",
+      "categoryCodes": [
+       "konditerskie_izdeliya",
+       "shokolad_shokoladnye",
+       "shokolad_6"
+      ],
+      "categoryNames": [
+       "Сладости",
+       "Шоколад, шоколадные батончики",
+       "Шоколад"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 130,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 119.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 38044908
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/38044908",
+      "media": [
+       38044908
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/38044908",
+       "https://www.auchan.ru/files/original/38045013",
+       "https://www.auchan.ru/files/original/38045100",
+       "https://www.auchan.ru/files/original/38045154",
+       "https://www.auchan.ru/files/original/38045247",
+       "https://www.auchan.ru/files/original/38045328",
+       "https://www.auchan.ru/files/original/38045376",
+       "https://www.auchan.ru/files/original/38045409",
+       "https://www.auchan.ru/files/original/38045427",
+       "https://www.auchan.ru/files/original/38044920"
+      ],
+      "brandName": "Kinder",
+      "rate": {
+       "rating": 5,
+       "reviews_qnt": 65
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": null
+     },
+     {
+      "id": 290905,
+      "productId": 6258,
+      "code": "shokoladnoe-yayco-kinder-syurpriz-bazovaya-seriya-20g",
+      "name": "Шоколадное яйцо Kinder Сюрприз с игрушкой внутри коллекция Эмоции, 20 г",
+      "gimaId": "31480",
+      "categoryCodes": [
+       "konditerskie_izdeliya",
+       "shokolad_shokoladnye",
+       "shokolad_6"
+      ],
+      "categoryNames": [
+       "Сладости",
+       "Шоколад, шоколадные батончики",
+       "Шоколад"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 214,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 119.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 38289306
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/38289306",
+      "media": [
+       38289306
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/38289306",
+       "https://www.auchan.ru/files/original/38289357",
+       "https://www.auchan.ru/files/original/38289369",
+       "https://www.auchan.ru/files/original/38289384",
+       "https://www.auchan.ru/files/original/38289390",
+       "https://www.auchan.ru/files/original/38289408",
+       "https://www.auchan.ru/files/original/38289420",
+       "https://www.auchan.ru/files/original/38289435",
+       "https://www.auchan.ru/files/original/38289444",
+       "https://www.auchan.ru/files/original/38289321",
+       "https://www.auchan.ru/files/original/38289333",
+       "https://www.auchan.ru/files/original/38289345"
+      ],
+      "brandName": "Kinder",
+      "rate": {
+       "rating": 4.8,
+       "reviews_qnt": 32
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": null
+     },
+     {
+      "id": 377304,
+      "productId": 9994,
+      "code": "yayco-shokoladnoe-kinder-syurpriz-maxi-100-g",
+      "name": "Шоколадное яйцо Kinder Cюрприз Maxi c молочным внутренним слоем и большой игрушкой внутри Бельгия, 100 г",
+      "gimaId": "728934",
+      "categoryCodes": [
+       "konditerskie_izdeliya",
+       "shokolad_shokoladnye",
+       "shokolad_6"
+      ],
+      "categoryNames": [
+       "Сладости",
+       "Шоколад, шоколадные батончики",
+       "Шоколад"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 604,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 549.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "oldPrice": {
+       "value": 799.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "discount": {
+       "id": 377304,
+       "value": 250,
+       "value_type": 2,
+       "change": 250,
+       "size": 31,
+       "date_start": "2026-10-15",
+       "date_end": "2026-10-28",
+       "is_pl_discount": true
+      },
+      "image": {
+       "id": 37130544
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/37130544",
+      "media": [
+       37130544
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/37130544",
+       "https://www.auchan.ru/files/original/37130550",
+       "https://www.auchan.ru/files/original/37130553",
+       "https://www.auchan.ru/files/original/37130556",
+       "https://www.auchan.ru/files/original/37130559",
+       "https://www.auchan.ru/files/original/37130562",
+       "https://www.auchan.ru/files/original/37130565",
+       "https://www.auchan.ru/files/original/37130568",
+       "https://www.auchan.ru/files/original/37130571",
+       "https://www.auchan.ru/files/original/37130547"
+      ],
+      "brandName": "Kinder",
+      "rate": {
+       "rating": 4.7,
+       "reviews_qnt": 19
+      },
+      "modifications": [],
+      "badges": [
+       {
+        "id": 8,
+        "code": "discount",
+        "type": "promo",
+        "rang": 20,
+        "description": null,
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": {
+         "id": 377304,
+         "is_pl_discount": true,
+         "change": 250,
+         "size": 31,
+         "value": 250,
+         "value_type": 2,
+         "date_start": "2026-10-15",
+         "date_end": "2026-10-28"
+        }
+       }
+      ],
+      "in_combo": false,
+      "package_display": "100 г"
+     },
+     {
+      "id": 22187317,
+      "productId": 335109,
+      "code": "kp-melanzh-yaichnyy-paster-500g",
+      "name": "Меланж яичный жидкий АШАН Красная птица пастеризованный охлажденный ГОСТ, 500 г",
+      "gimaId": "132404",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "yayco",
+       "melanzh_zheltok_belok"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Яйцо, меланж",
+       "Меланж, желток, белок"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 12,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 169.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "oldPrice": {
+       "value": 199.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "discount": {
+       "id": 22187317,
+       "value": 30,
+       "value_type": 2,
+       "change": 30,
+       "size": 15,
+       "date_start": "2026-10-08",
+       "date_end": "2026-11-04",
+       "is_pl_discount": true
+      },
+      "image": {
+       "id": 34642905
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/34642905",
+      "media": [
+       34642905
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/34642905",
+       "https://www.auchan.ru/files/original/30118005",
+       "https://www.auchan.ru/files/original/30118029"
+      ],
+      "brandName": "АШАН Красная птица",
+      "rate": {
+       "rating": 4.8,
+       "reviews_qnt": 16
+      },
+      "modifications": [],
+      "badges": [
+       {
+        "id": 8,
+        "code": "discount",
+        "type": "promo",
+        "rang": 20,
+        "description": null,
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": {
+         "id": 22187317,
+         "is_pl_discount": true,
+         "change": 30,
+         "size": 15,
+         "value": 30,
+         "value_type": 2,
+         "date_start": "2026-10-08",
+         "date_end": "2026-11-04"
+        }
+       },
+       {
+        "id": 23,
+        "code": "private_label",
+        "type": "promo",
+        "rang": 90,
+        "description": "Наша марка - создано АШАН",
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": null
+       }
+      ],
+      "in_combo": false,
+      "package_display": "1 кг"
+     },
+     {
+      "id": 65710218,
+      "productId": 346345,
+      "code": "fettuchine-s-dob-yayca-shpin-250g",
+      "name": "Феттучине Solo Fresco с добавлением яйца и шпинатом, 250 г",
+      "gimaId": "136158",
+      "categoryCodes": [
+       "hlebnaya-vypechka",
+       "testo_1"
+      ],
+      "categoryNames": [
+       "Хлеб и выпечка",
+       "Тесто"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 6,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 189.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 30219669
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/30219669",
+      "media": [
+       30219669
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/30219669",
+       "https://www.auchan.ru/files/original/30219685",
+       "https://www.auchan.ru/files/original/30219701"
+      ],
+      "brandName": "Solo Fresco",
+      "rate": {
+       "rating": 5,
+       "reviews_qnt": 2
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": "250 г"
+     },
+     {
+      "id": 65709105,
+      "productId": 346353,
+      "code": "kazarechche-s-dob-yayca-250-gr",
+      "name": "Казаречче Solo Fresco с добавлением яйца, 250 г",
+      "gimaId": "136163",
+      "categoryCodes": [
+       "hlebnaya-vypechka",
+       "testo_1"
+      ],
+      "categoryNames": [
+       "Хлеб и выпечка",
+       "Тесто"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 11,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 189.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 30219717
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/30219717",
+      "media": [
+       30219717
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/30219717"
+      ],
+      "brandName": "Solo Fresco",
+      "rate": {
+       "rating": 1,
+       "reviews_qnt": 2
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": "250 г"
+     },
+     {
+      "id": 65710362,
+      "productId": 346373,
+      "code": "spagetti-s-dob-chern-kar-250-gr",
+      "name": "Спагетти Solo Fresco с добавлением яйца и чернилами каракатицы, 250 г",
+      "gimaId": "136172",
+      "categoryCodes": [
+       "hlebnaya-vypechka",
+       "testo_1"
+      ],
+      "categoryNames": [
+       "Хлеб и выпечка",
+       "Тесто"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 1,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 209.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 30219773
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/30219773",
+      "media": [
+       30219773
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/30219773",
+       "https://www.auchan.ru/files/original/30219797",
+       "https://www.auchan.ru/files/original/30219809",
+       "https://www.auchan.ru/files/original/30219829"
+      ],
+      "brandName": "Solo Fresco",
+      "rate": {
+       "rating": 5,
+       "reviews_qnt": 2
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": "250 г"
+     },
+     {
+      "id": 298262,
+      "productId": 8763,
+      "code": "mayonez-na-perepelinyh-yaycah-mr-ricco-organic-67-400-ml",
+      "name": "Майонез на перепелиных яйцах Mr.Ricco 67% охлажденный, 400 мл",
+      "gimaId": "173417",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "mayonez_sousy",
+       "mayonez_1"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Майонез, соусы",
+       "Майонез"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 71,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 94.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "oldPrice": {
+       "value": 169.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "discount": {
+       "id": 298262,
+       "value": 75,
+       "value_type": 2,
+       "change": 75,
+       "size": 44,
+       "date_start": "2026-10-14",
+       "date_end": "2026-10-28",
+       "is_pl_discount": false
+      },
+      "image": {
+       "id": 36633396
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/36633396",
+      "media": [
+       36633396
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/36633396",
+       "https://www.auchan.ru/files/original/36633399",
+       "https://www.auchan.ru/files/original/36633402",
+       "https://www.auchan.ru/files/original/37502514",
+       "https://www.auchan.ru/files/original/37502529",
+       "https://www.auchan.ru/files/original/37502541"
+      ],
+      "brandName": "Mr. Ricco",
+      "rate": {
+       "rating": 4.9,
+       "reviews_qnt": 103
+      },
+      "modifications": [],
+      "badges": [
+       {
+        "id": 8,
+        "code": "discount",
+        "type": "promo",
+        "rang": 20,
+        "description": null,
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": {
+         "id": 298262,
+         "is_pl_discount": false,
+         "change": 75,
+         "size": 44,
+         "value": 75,
+         "value_type": 2,
+         "date_start": "2026-10-14",
+         "date_end": "2026-10-28"
+        }
+       }
+      ],
+      "in_combo": false,
+      "package_display": "400 мл"
+     },
+     {
+      "id": 356851,
+      "productId": 8757,
+      "code": "mayonez-na-perepelinyh-yaycah-mr-ricco-organic-67-800-ml",
+      "name": "Майонез на перепелиных яйцах Mr.Ricco 67% охлажденный, 800 мл",
+      "gimaId": "560889",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "mayonez_sousy",
+       "mayonez_1"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Майонез, соусы",
+       "Майонез"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 45,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 179.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "oldPrice": {
+       "value": 229.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "discount": {
+       "id": 356851,
+       "value": 50,
+       "value_type": 2,
+       "change": 50,
+       "size": 22,
+       "date_start": "2026-10-28",
+       "date_end": "2026-11-11",
+       "is_pl_discount": true
+      },
+      "image": {
+       "id": 36641649
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/36641649",
+      "media": [
+       36641649
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/36641649",
+       "https://www.auchan.ru/files/original/36641658",
+       "https://www.auchan.ru/files/original/36641664",
+       "https://www.auchan.ru/files/original/37508499",
+       "https://www.auchan.ru/files/original/37508505",
+       "https://www.auchan.ru/files/original/37508514"
+      ],
+      "brandName": "Mr. Ricco",
+      "rate": {
+       "rating": 4.9,
+       "reviews_qnt": 46
+      },
+      "modifications": [],
+      "badges": [
+       {
+        "id": 8,
+        "code": "discount",
+        "type": "promo",
+        "rang": 20,
+        "description": null,
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": {
+         "id": 356851,
+         "is_pl_discount": true,
+         "change": 50,
+         "size": 22,
+         "value": 50,
+         "value_type": 2,
+         "date_start": "2026-10-28",
+         "date_end": "2026-11-11"
+        }
+       }
+      ],
+      "in_combo": false,
+      "package_display": "800 мл"
+     },
+     {
+      "id": 14033762,
+      "productId": 197844,
+      "code": "m-z-perep-50-5-770g-maheev",
+      "name": "Майонез «МАХЕЕВЪ» с перепелиным яйцом 50,5% ГОСТ охлажденный, 770 мл",
+      "gimaId": "932468",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "mayonez_sousy",
+       "mayonez_1"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Майонез, соусы",
+       "Майонез"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 35,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 169.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "oldPrice": {
+       "value": 204.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "discount": {
+       "id": 14033762,
+       "value": 35,
+       "value_type": 2,
+       "change": 35,
+       "size": 17,
+       "date_start": "2026-10-15",
+       "date_end": "2026-10-28",
+       "is_pl_discount": false
+      },
+      "image": {
+       "id": 34988994
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/34988994",
+      "media": [
+       34988994
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/34988994",
+       "https://www.auchan.ru/files/original/34989003",
+       "https://www.auchan.ru/files/original/34989018",
+       "https://www.auchan.ru/files/original/37511034",
+       "https://www.auchan.ru/files/original/37511037",
+       "https://www.auchan.ru/files/original/37511043"
+      ],
+      "brandName": "МАХЕЕВЪ",
+      "rate": {
+       "rating": 4.8,
+       "reviews_qnt": 72
+      },
+      "modifications": [],
+      "badges": [
+       {
+        "id": 8,
+        "code": "discount",
+        "type": "promo",
+        "rang": 20,
+        "description": null,
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": {
+         "id": 14033762,
+         "is_pl_discount": false,
+         "change": 35,
+         "size": 17,
+         "value": 35,
+         "value_type": 2,
+         "date_start": "2026-10-15",
+         "date_end": "2026-10-28"
+        }
+       }
+      ],
+      "in_combo": false,
+      "package_display": "770 г"
+     },
+     {
+      "id": 393032,
+      "productId": 16558,
+      "code": "mayonez-mr-ricco-na-perepelinom-yayce-67-220-ml",
+      "name": "Майонез Mr.Ricco На перепелином яйце 67% охлажденный, 220 мл",
+      "gimaId": "883316",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "mayonez_sousy",
+       "mayonez_1"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Майонез, соусы",
+       "Майонез"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 18,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 66.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 36641934
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/36641934",
+      "media": [
+       36641934
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/36641934",
+       "https://www.auchan.ru/files/original/36641940",
+       "https://www.auchan.ru/files/original/36641949",
+       "https://www.auchan.ru/files/original/28663784",
+       "https://www.auchan.ru/files/original/28663789"
+      ],
+      "brandName": "Mr. Ricco",
+      "rate": {
+       "rating": 5,
+       "reviews_qnt": 71
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": "220 мл"
+     },
+     {
+      "id": 17688428,
+      "productId": 262087,
+      "code": "kd-postnyy-sous-25-200ml",
+      "name": "Соус кулинарный майонезный «Каждый День» постный без яиц 25% охлажденный, 200 мл",
+      "gimaId": "43662",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "mayonez_sousy",
+       "sousy_6"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Майонез, соусы",
+       "Соусы"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 37,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 28.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 37200576
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/37200576",
+      "media": [
+       37200576
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/37200576",
+       "https://www.auchan.ru/files/original/28090642"
+      ],
+      "brandName": "Каждый день",
+      "rate": {
+       "rating": 4.9,
+       "reviews_qnt": 74
+      },
+      "modifications": [],
+      "badges": [
+       {
+        "id": 24,
+        "code": "first_price",
+        "type": "promo",
+        "rang": 42,
+        "description": null,
+        "image_link": "https://www.auchan.ru/files/original/38405325",
+        "adaptive_image_link": "https://www.auchan.ru/files/original/38405328",
+        "mobile_image_link": "https://www.auchan.ru/files/original/38405322",
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": null
+       }
+      ],
+      "in_combo": false,
+      "package_display": "183 г"
+     },
+     {
+      "id": 33039417,
+      "productId": 488961,
+      "code": "omlet-naturalnyy-p-ashan-ves",
+      "name": "Омлет АШАН натуральный, вес",
+      "gimaId": "36940",
+      "categoryCodes": [
+       "kulinariya",
+       "zavtraki",
+       "omlet"
+      ],
+      "categoryNames": [
+       "Готовая еда",
+       "Завтраки",
+       "Яйца, омлет"
+      ],
+      "basketStep": 0.2,
+      "active": true,
+      "isAdult": false,
+      "isB2b": false,
+      "is_new": false,
+      "stock": {
+       "qty": 9999,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 39.99,
+       "currency": "RUB",
+       "per": "weight_100g"
+      },
+      "image": {
+       "id": 37471605
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/37471605",
+      "media": [
+       37471605
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/37471605",
+       "https://www.auchan.ru/files/original/38003493"
+      ],
+      "brandName": "АШАН",
+      "rate": {
+       "rating": 4.9,
+       "reviews_qnt": 119
+      },
+      "modifications": [],
+      "badges": [
+       {
+        "id": 23,
+        "code": "private_label",
+        "type": "promo",
+        "rang": 90,
+        "description": "Наша марка - создано АШАН",
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": null
+       }
+      ],
+      "in_combo": false,
+      "package_display": " "
+     },
+     {
+      "id": 329300,
+      "productId": 16544,
+      "code": "mayonez-maheev-s-perepelinym-yaycom-50-5-800-g",
+      "name": "Майонез «Махеевъ» С перепелиным яйцом 50,5% охлажденный, 800 г",
+      "gimaId": "387748",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "mayonez_sousy",
+       "mayonez_1"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Майонез, соусы",
+       "Майонез"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 13,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 184.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 34479372
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/34479372",
+      "media": [
+       34479372
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/34479372",
+       "https://www.auchan.ru/files/original/34479378"
+      ],
+      "brandName": "МАХЕЕВЪ",
+      "rate": {
+       "rating": 4.9,
+       "reviews_qnt": 42
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": "800 г"
+     },
+     {
+      "id": 347900,
+      "productId": 19508,
+      "code": "priprava-kotanyi-dlya-yaichnyh-blyud-s-tomatami-i-travami-20-g",
+      "name": "Приправа Kotanyi для яичных блюд с томатами и травами, 20 г",
+      "gimaId": "505401",
+      "categoryCodes": [
+       "bakaleya",
+       "sol-specii-i-pripravy",
+       "pripravy"
+      ],
+      "categoryNames": [
+       "Бакалея",
+       "Соусы и приправы",
+       "Приправа"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 36,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 109.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 32180664
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/32180664",
+      "media": [
+       32180664
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/32180664"
+      ],
+      "brandName": "Kotanyi",
+      "rate": {
+       "rating": 5,
+       "reviews_qnt": 15
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": null
+     },
+     {
+      "id": 11282237,
+      "productId": 151180,
+      "code": "kp-m-z-na-perep-yayce-67-400ml",
+      "name": "Майонез АШАН Красная птица на перепелином яйце 67% охлажденный, 400 мл",
+      "gimaId": "842746",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "mayonez_sousy",
+       "mayonez_1"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Майонез, соусы",
+       "Майонез"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 223,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 89.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 24621387
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/24621387",
+      "media": [
+       24621387
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/24621387"
+      ],
+      "brandName": "АШАН Красная птица",
+      "rate": {
+       "rating": 4.9,
+       "reviews_qnt": 75
+      },
+      "modifications": [],
+      "badges": [
+       {
+        "id": 23,
+        "code": "private_label",
+        "type": "promo",
+        "rang": 90,
+        "description": "Наша марка - создано АШАН",
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": null
+       }
+      ],
+      "in_combo": false,
+      "package_display": "366 г"
+     },
+     {
+      "id": 363090,
+      "productId": 15405,
+      "code": "mayonez-maheev-s-perepelinym-yaycom-67-380-g",
+      "name": "Майонез «Махеевъ» с перепелиным яйцом 67% охлажденный, 380 г",
+      "gimaId": "599002",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "mayonez_sousy",
+       "mayonez_1"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Майонез, соусы",
+       "Майонез"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 165,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 99.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 34989570
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/34989570",
+      "media": [
+       34989570
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/34989570",
+       "https://www.auchan.ru/files/original/34989576",
+       "https://www.auchan.ru/files/original/34989582",
+       "https://www.auchan.ru/files/original/34480563"
+      ],
+      "brandName": "МАХЕЕВЪ",
+      "rate": {
+       "rating": 5,
+       "reviews_qnt": 25
+      },
+      "modifications": [],
+      "badges": [
+       {
+        "id": 52,
+        "code": "progress_discount_1",
+        "type": "promo",
+        "rang": 10,
+        "description": null,
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 16,
+        "value_text": null,
+        "quantity": 2,
+        "meta": {
+         "value": 16,
+         "quantity": 2
+        }
+       }
+      ],
+      "in_combo": false,
+      "package_display": "380 г"
+     },
+     {
+      "id": 18930118,
+      "productId": 281300,
+      "code": "kp-m-3-postnyy-55-200ml",
+      "name": "Майонез АШАН Красная птица постный без яиц 55% охлажденный, 200 мл",
+      "gimaId": "78961",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "mayonez_sousy",
+       "mayonez_1"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Майонез, соусы",
+       "Майонез"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 56,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 39.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 37200537
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/37200537",
+      "media": [
+       37200537
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/37200537",
+       "https://www.auchan.ru/files/original/28431968"
+      ],
+      "brandName": "АШАН Красная птица",
+      "rate": {
+       "rating": 4.9,
+       "reviews_qnt": 79
+      },
+      "modifications": [],
+      "badges": [
+       {
+        "id": 23,
+        "code": "private_label",
+        "type": "promo",
+        "rang": 90,
+        "description": "Наша марка - создано АШАН",
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": null
+       }
+      ],
+      "in_combo": false,
+      "package_display": "183 г"
+     },
+     {
+      "id": 62056461,
+      "productId": 708339,
+      "code": "kp-m-z-na-perep-yayce-67-750ml",
+      "name": "Майонез на перепелином яйце АШАН Красная птица 67% ГОСТ охлажденный, 750 мл",
+      "gimaId": "451882",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "mayonez_sousy",
+       "mayonez_1"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Майонез, соусы",
+       "Майонез"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 57,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 159.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 37451175
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/37451175",
+      "media": [
+       37451175
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/37451175",
+       "https://www.auchan.ru/files/original/37451178",
+       "https://www.auchan.ru/files/original/37451181"
+      ],
+      "brandName": "АШАН Красная птица",
+      "rate": {
+       "rating": 4.9,
+       "reviews_qnt": 59
+      },
+      "modifications": [],
+      "badges": [
+       {
+        "id": 23,
+        "code": "private_label",
+        "type": "promo",
+        "rang": 90,
+        "description": "Наша марка - создано АШАН",
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": null
+       }
+      ],
+      "in_combo": false,
+      "package_display": "680 г"
+     },
+     {
+      "id": 367573,
+      "productId": 4852,
+      "code": "mayonez-sloboda-na-perepelinyh-yaycah-67-400-ml",
+      "name": "Майонез «Слобода» на перепелиных яйцах 67% охлажденный, 400 мл",
+      "gimaId": "631647",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "mayonez_sousy",
+       "mayonez_1"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Майонез, соусы",
+       "Майонез"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 61,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 99.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 29042633
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/29042633",
+      "media": [
+       29042633
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/29042633",
+       "https://www.auchan.ru/files/original/29042645",
+       "https://www.auchan.ru/files/original/37509498",
+       "https://www.auchan.ru/files/original/37509510",
+       "https://www.auchan.ru/files/original/37509528"
+      ],
+      "brandName": "Слобода",
+      "rate": {
+       "rating": 5,
+       "reviews_qnt": 164
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": "400 мл"
+     },
+     {
+      "id": 3749272,
+      "productId": 52386,
+      "code": "smes-dlya-vypechki-pechem-doma-bliny-250-g",
+      "name": "Смесь для выпечки «Печем Дома» блины, 250 г",
+      "gimaId": "756625",
+      "categoryCodes": [
+       "bakaleya",
+       "muka-smesi-ingredienty-dlya-vypechki",
+       "smesi-dlya-vypechki"
+      ],
+      "categoryNames": [
+       "Бакалея",
+       "Мука, все для выпечки",
+       "Смеси для выпечки и десертов"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 29,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 69.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 28613920
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/28613920",
+      "media": [
+       28613920
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/28613920",
+       "https://www.auchan.ru/files/original/28613924",
+       "https://www.auchan.ru/files/original/28613928",
+       "https://www.auchan.ru/files/original/28613932"
+      ],
+      "brandName": "Печем Дома",
+      "rate": {
+       "rating": 4.7,
+       "reviews_qnt": 7
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": "250 г"
+     },
+     {
+      "id": 21067761,
+      "productId": 319805,
+      "code": "lapsh-funchza-b-p-so-vk-gov-bul",
+      "name": "Лапша быстрого приготовления Siyuan Пшеничная и Фунчоза со вкусом густого говяжьего бульона с маринованным яйцом Китай, 190 г",
+      "gimaId": "125890",
+      "categoryCodes": [
+       "bakaleya",
+       "produkty-bystrogo-prigotovleniya",
+       "lapsha-1"
+      ],
+      "categoryNames": [
+       "Бакалея",
+       "Продукты быстрого приготовления",
+       "Лапша"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 14,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 289.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 29919509
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/29919509",
+      "media": [
+       29919509
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/29919509",
+       "https://www.auchan.ru/files/original/29919525",
+       "https://www.auchan.ru/files/original/29919545",
+       "https://www.auchan.ru/files/original/29919565"
+      ],
+      "brandName": "Siyuan",
+      "rate": {
+       "rating": 4.3,
+       "reviews_qnt": 3
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": "1 кг"
+     },
+     {
+      "id": 21067757,
+      "productId": 319797,
+      "code": "lapsh-funch-b-p-kislo-ostr",
+      "name": "Лапша быстрого приготовления Siyuan Пшеничная и Фунчоза кисла-острая с маринованным яйцом Китай, 190 г",
+      "gimaId": "125887",
+      "categoryCodes": [
+       "bakaleya",
+       "produkty-bystrogo-prigotovleniya",
+       "lapsha-1"
+      ],
+      "categoryNames": [
+       "Бакалея",
+       "Продукты быстрого приготовления",
+       "Лапша"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 12,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 289.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 29919433
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/29919433",
+      "media": [
+       29919433
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/29919433",
+       "https://www.auchan.ru/files/original/29919453",
+       "https://www.auchan.ru/files/original/29919469",
+       "https://www.auchan.ru/files/original/29919489"
+      ],
+      "brandName": "Siyuan",
+      "rate": {
+       "rating": 3.5,
+       "reviews_qnt": 2
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": "1 кг"
+     },
+     {
+      "id": 32298925,
+      "productId": 473145,
+      "code": "kp-smes-dlya-vypechki-bliny-0-5",
+      "name": "Смесь для выпечки блинов АШАН Красная птица, 500 г",
+      "gimaId": "208428",
+      "categoryCodes": [
+       "bakaleya",
+       "muka-smesi-ingredienty-dlya-vypechki",
+       "smesi-dlya-vypechki"
+      ],
+      "categoryNames": [
+       "Бакалея",
+       "Мука, все для выпечки",
+       "Смеси для выпечки и десертов"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 4,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 89.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 33614784
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/33614784",
+      "media": [
+       33614784
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/33614784",
+       "https://www.auchan.ru/files/original/33614790",
+       "https://www.auchan.ru/files/original/37015098",
+       "https://www.auchan.ru/files/original/37015107"
+      ],
+      "brandName": "АШАН Красная птица",
+      "cashback": {
+       "point": null,
+       "percent": 5,
+       "limit_type": "шт",
+       "limit": 0,
+       "is_delayed": false
+      },
+      "rate": {
+       "rating": 4.1,
+       "reviews_qnt": 10
+      },
+      "modifications": [],
+      "badges": [
+       {
+        "id": 2,
+        "code": "cashback",
+        "type": "promo",
+        "rang": 40,
+        "description": null,
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": {
+         "point": null,
+         "points_type": "AUCH_PT",
+         "percent": 5,
+         "limit_type": "шт",
+         "limit": 0,
+         "is_delayed": false
+        }
+       },
+       {
+        "id": 23,
+        "code": "private_label",
+        "type": "promo",
+        "rang": 90,
+        "description": "Наша марка - создано АШАН",
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": null
+       }
+      ],
+      "in_combo": false,
+      "package_display": "500 г"
+     },
+     {
+      "id": 10519935,
+      "productId": 140527,
+      "code": "sup-af-griby-shpin-yayco-12g",
+      "name": "Суп Asian Fusion грибной со шпинатом и яйцом, 12 г",
+      "gimaId": "827282",
+      "categoryCodes": [
+       "bakaleya",
+       "produkty-bystrogo-prigotovleniya",
+       "supy"
+      ],
+      "categoryNames": [
+       "Бакалея",
+       "Продукты быстрого приготовления",
+       "Супы"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 98,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 69.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "oldPrice": {
+       "value": 86.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "discount": {
+       "id": 10519935,
+       "value": 17,
+       "value_type": 2,
+       "change": 17,
+       "size": 20,
+       "date_start": "2026-10-01",
+       "date_end": "2026-10-28",
+       "is_pl_discount": false
+      },
+      "image": {
+       "id": 26557231
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/26557231",
+      "media": [
+       26557231
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/26557231"
+      ],
+      "brandName": "Asian Fusion",
+      "rate": {
+       "rating": 5,
+       "reviews_qnt": 11
+      },
+      "modifications": [],
+      "badges": [
+       {
+        "id": 8,
+        "code": "discount",
+        "type": "promo",
+        "rang": 20,
+        "description": null,
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": {
+         "id": 10519935,
+         "is_pl_discount": false,
+         "change": 17,
+         "size": 20,
+         "value": 17,
+         "value_type": 2,
+         "date_start": "2026-10-01",
+         "date_end": "2026-10-28"
+        }
+       }
+      ],
+      "in_combo": false,
+      "package_display": null
+     },
+     {
+      "id": 60076839,
+      "productId": 245128,
+      "code": "kp-lapsha-dom-s-perepl-250-g",
+      "name": "Макаронные изделия АШАН Золотая птица лапша на перепелиных яйцах, 250 г",
+      "gimaId": "20610",
+      "categoryCodes": [
+       "bakaleya",
+       "makaronnye_izdeliya",
+       "lapsha_3"
+      ],
+      "categoryNames": [
+       "Бакалея",
+       "Макаронные изделия",
+       "Лапша"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 17,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 99.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "oldPrice": {
+       "value": 129.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "discount": {
+       "id": 60076839,
+       "value": 30,
+       "value_type": 2,
+       "change": 30,
+       "size": 23,
+       "date_start": "2026-10-23",
+       "date_end": "2026-11-19",
+       "is_pl_discount": true
+      },
+      "image": {
+       "id": 34946040
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/34946040",
+      "media": [
+       34946040
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/34946040",
+       "https://www.auchan.ru/files/original/34946042"
+      ],
+      "brandName": "АШАН Золотая птица",
+      "rate": {
+       "rating": 4.9,
+       "reviews_qnt": 17
+      },
+      "modifications": [],
+      "badges": [
+       {
+        "id": 8,
+        "code": "discount",
+        "type": "promo",
+        "rang": 20,
+        "description": null,
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": {
+         "id": 60076839,
+         "is_pl_discount": true,
+         "change": 30,
+         "size": 23,
+         "value": 30,
+         "value_type": 2,
+         "date_start": "2026-10-23",
+         "date_end": "2026-11-19"
+        }
+       },
+       {
+        "id": 23,
+        "code": "private_label",
+        "type": "promo",
+        "rang": 90,
+        "description": "Наша марка - создано АШАН",
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": null
+       }
+      ],
+      "in_combo": false,
+      "package_display": "250 г"
+     },
+     {
+      "id": 34965564,
+      "productId": 510060,
+      "code": "mayonez-ryaba-perep-50-5-530g",
+      "name": "Майонез «Ряба» с перепелиными яйцами 50,5% охлажденный, 530 г",
+      "gimaId": "233613",
+      "categoryCodes": [
+       "moloko-syr-yayca",
+       "mayonez_sousy",
+       "mayonez_1"
+      ],
+      "categoryNames": [
+       "Молочные продукты, яйца",
+       "Майонез, соусы",
+       "Майонез"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 21,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 139.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "oldPrice": {
+       "value": 164.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "discount": {
+       "id": 34965564,
+       "value": 25,
+       "value_type": 2,
+       "change": 25,
+       "size": 15,
+       "date_start": "2026-10-01",
+       "date_end": "2026-10-28",
+       "is_pl_discount": true
+      },
+      "image": {
+       "id": 33941583
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/33941583",
+      "media": [
+       33941583
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/33941583",
+       "https://www.auchan.ru/files/original/33941592"
+      ],
+      "brandName": "Ряба",
+      "rate": {
+       "rating": 4.9,
+       "reviews_qnt": 22
+      },
+      "modifications": [],
+      "badges": [
+       {
+        "id": 8,
+        "code": "discount",
+        "type": "promo",
+        "rang": 20,
+        "description": null,
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": {
+         "id": 34965564,
+         "is_pl_discount": true,
+         "change": 25,
+         "size": 15,
+         "value": 25,
+         "value_type": 2,
+         "date_start": "2026-10-01",
+         "date_end": "2026-10-28"
+        }
+       }
+      ],
+      "in_combo": false,
+      "package_display": "530 г"
+     },
+     {
+      "id": 2001791,
+      "productId": 45670,
+      "code": "lakomstvo-dlya-popugaev-triol-s-medom-i-yaycom-dlya-melkih-i-srednih-vidov-80-g",
+      "name": "Лакомство для попугаев Triol с медом и яйцом для мелких и средних видов, 80 г",
+      "gimaId": "26645",
+      "categoryCodes": [
+       "zootovary",
+       "dlya-drugih-zhivotnyh",
+       "dlya-ptic"
+      ],
+      "categoryNames": [
+       "Зоотовары",
+       "Для других животных",
+       "Для птиц"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 33,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 129.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 26399682
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/26399682",
+      "media": [
+       26399682
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/26399682",
+       "https://www.auchan.ru/files/original/26399684"
+      ],
+      "brandName": "Triol",
+      "rate": {
+       "rating": 5,
+       "reviews_qnt": 8
+      },
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": "80 г"
+     },
+     {
+      "id": 57306984,
+      "productId": 660129,
+      "code": "cosm-sponzh-d-makiyazha-yayco",
+      "name": "Спонж для макияжа Cosmia Яйцо розовое, 1 шт",
+      "gimaId": "268897",
+      "categoryCodes": [
+       "parfyumeriya_i_makiyazh",
+       "dekorativnaya-kosmetika",
+       "aksessuary-dlya-makiyazha"
+      ],
+      "categoryNames": [
+       "Парфюмерия и макияж",
+       "Декоративная косметика",
+       "Аксессуары для макияжа"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 19,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 122.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 36595857
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/36595857",
+      "media": [
+       36595857
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/36595857",
+       "https://www.auchan.ru/files/original/36595860",
+       "https://www.auchan.ru/files/original/36595866",
+       "https://www.auchan.ru/files/original/36595872"
+      ],
+      "brandName": "Cosmia",
+      "rate": {
+       "rating": 5,
+       "reviews_qnt": 3
+      },
+      "modifications": [],
+      "badges": [
+       {
+        "id": 23,
+        "code": "private_label",
+        "type": "promo",
+        "rang": 90,
+        "description": "Наша марка - создано АШАН",
+        "image_link": null,
+        "adaptive_image_link": null,
+        "mobile_image_link": null,
+        "value": 0,
+        "value_text": null,
+        "quantity": null,
+        "meta": null
+       }
+      ],
+      "in_combo": false,
+      "package_display": null
+     },
+     {
+      "id": 65710212,
+      "productId": 542754,
+      "code": "pappardelle-250-gr",
+      "name": "Паста Solo Fresco Паппарделле с яйцом, 250 г",
+      "gimaId": "293360",
+      "categoryCodes": [
+       "bakaleya",
+       "makaronnye_izdeliya",
+       "drugie_formy_makaron"
+      ],
+      "categoryNames": [
+       "Бакалея",
+       "Макаронные изделия",
+       "Другие формы макарон"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 5,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 189.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 34662579
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/34662579",
+      "media": [
+       34662579
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/34662579",
+       "https://www.auchan.ru/files/original/34662600",
+       "https://www.auchan.ru/files/original/34662615"
+      ],
+      "brandName": "Solo Fresco",
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": "250 г"
+     },
+     {
+      "id": 8523902,
+      "productId": 125266,
+      "code": "muka_blinnaya_predportovaya_1_kg",
+      "name": "Мука блинная «Предпортовая» высший сорт, 1 кг",
+      "gimaId": "281187",
+      "categoryCodes": [
+       "bakaleya",
+       "muka-smesi-ingredienty-dlya-vypechki",
+       "smesi-dlya-vypechki"
+      ],
+      "categoryNames": [
+       "Бакалея",
+       "Мука, все для выпечки",
+       "Смеси для выпечки и десертов"
+      ],
+      "basketStep": 1,
+      "active": true,
+      "isAdult": false,
+      "isB2b": true,
+      "is_new": false,
+      "stock": {
+       "qty": 8,
+       "storeId": 45,
+       "not_available": false
+      },
+      "price": {
+       "value": 119.99,
+       "currency": "RUB",
+       "per": "item"
+      },
+      "image": {
+       "id": 26679343
+      },
+      "imageUrl": "https://www.auchan.ru/files/original/26679343",
+      "media": [
+       26679343
+      ],
+      "mediaUrls": [
+       "https://www.auchan.ru/files/original/26679343",
+       "https://www.auchan.ru/files/original/26679339",
+       "https://www.auchan.ru/files/original/26679341",
+       "https://www.auchan.ru/files/original/26679334",
+       "https://www.auchan.ru/files/original/26679336",
+       "https://www.auchan.ru/files/original/26679338"
+      ],
+      "brandName": "Предпортовая",
+      "modifications": [],
+      "badges": [],
+      "in_combo": false,
+      "package_display": "1 кг"
+     }
+    ]
+   }
+  ],
+  "filters": [
+   {
+    "name": "Категория",
+    "code": "categoryCode",
+    "type": "multi_check",
+    "isFixed": true,
+    "sort": 0,
+    "isUrlContain": false,
+    "informer": null,
+    "disabled": false,
+    "items": [
+     {
+      "name": "Яйцо, меланж",
+      "code": "yayco",
+      "disabled": false,
+      "forActive": false,
+      "counter": 33,
+      "id": 477
+     },
+     {
+      "name": "Майонез, соусы",
+      "code": "mayonez_sousy",
+      "disabled": false,
+      "forActive": false,
+      "counter": 12,
+      "id": 4251
+     },
+     {
+      "name": "Шоколад, шоколадные батончики",
+      "code": "shokolad_shokoladnye",
+      "disabled": false,
+      "forActive": false,
+      "counter": 5,
+      "id": 4026
+     },
+     {
+      "name": "Мука, все для выпечки",
+      "code": "muka-smesi-ingredienty-dlya-vypechki",
+      "disabled": false,
+      "forActive": false,
+      "counter": 3,
+      "id": 509
+     },
+     {
+      "name": "Продукты быстрого приготовления",
+      "code": "produkty-bystrogo-prigotovleniya",
+      "disabled": false,
+      "forActive": false,
+      "counter": 3,
+      "id": 506
+     },
+     {
+      "name": "Тесто",
+      "code": "testo_1",
+      "disabled": false,
+      "forActive": false,
+      "counter": 3,
+      "id": 3808
+     },
+     {
+      "name": "Макаронные изделия",
+      "code": "makaronnye_izdeliya",
+      "disabled": false,
+      "forActive": false,
+      "counter": 2,
+      "id": 3473
+     },
+     {
+      "name": "Декоративная косметика",
+      "code": "dekorativnaya-kosmetika",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1,
+      "id": 820
+     },
+     {
+      "name": "Для других животных",
+      "code": "dlya-drugih-zhivotnyh",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1,
+      "id": 538
+     },
+     {
+      "name": "Завтраки",
+      "code": "zavtraki",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1,
+      "id": 502
+     },
+     {
+      "name": "Соусы и приправы",
+      "code": "sol-specii-i-pripravy",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1,
+      "id": 510
+     }
+    ]
+   },
+   {
+    "name": "Цена",
+    "code": "price",
+    "type": "range",
+    "isFixed": true,
+    "sort": 1,
+    "isUrlContain": true,
+    "informer": null,
+    "disabled": false,
+    "min": 28,
+    "max": 550,
+    "positionInUrl": 1
+   },
+   {
+    "name": "Товары со скидкой",
+    "code": "promo_only",
+    "type": "check",
+    "isFixed": true,
+    "sort": 2,
+    "isUrlContain": true,
+    "informer": null,
+    "disabled": false,
+    "positionInUrl": 2
+   },
+   {
+    "name": "Товары с высоким рейтингом",
+    "code": "high_rating",
+    "type": "check",
+    "isFixed": true,
+    "sort": 3,
+    "isUrlContain": false,
+    "informer": "Товары с рейтингом от 4 звезд",
+    "disabled": false
+   },
+   {
+    "name": "Бренд",
+    "code": "brand",
+    "type": "multi_check",
+    "isFixed": true,
+    "sort": 4,
+    "isUrlContain": true,
+    "informer": null,
+    "disabled": false,
+    "items": [
+     {
+      "name": "АШАН Красная птица",
+      "code": "ashan_krasnaya_ptica",
+      "disabled": false,
+      "forActive": false,
+      "counter": 12
+     },
+     {
+      "name": "Синявинское",
+      "code": "sinyavinskoe",
+      "disabled": false,
+      "forActive": false,
+      "counter": 12
+     },
+     {
+      "name": "Kinder",
+      "code": "kinder",
+      "disabled": false,
+      "forActive": false,
+      "counter": 4
+     },
+     {
+      "name": "Solo Fresco",
+      "code": "solo-fresco",
+      "disabled": false,
+      "forActive": false,
+      "counter": 4
+     },
+     {
+      "name": "Каждый день",
+      "code": "kazhdyy-den",
+      "disabled": false,
+      "forActive": false,
+      "counter": 4
+     },
+     {
+      "name": "Mr. Ricco",
+      "code": "mr-ricco",
+      "disabled": false,
+      "forActive": false,
+      "counter": 3
+     },
+     {
+      "name": "МАХЕЕВЪ",
+      "code": "maheev",
+      "disabled": false,
+      "forActive": false,
+      "counter": 3
+     },
+     {
+      "name": "Siyuan",
+      "code": "siyuan",
+      "disabled": false,
+      "forActive": false,
+      "counter": 2
+     },
+     {
+      "name": "Вараксино",
+      "code": "varaksino",
+      "disabled": false,
+      "forActive": false,
+      "counter": 2
+     },
+     {
+      "name": "Оредеж",
+      "code": "oredezh",
+      "disabled": false,
+      "forActive": false,
+      "counter": 2
+     },
+     {
+      "name": "Asian Fusion",
+      "code": "asian_fusion",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "Cosmia",
+      "code": "cosmia",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "Healthy Nation",
+      "code": "healthy-nation",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "Kotanyi",
+      "code": "kotanyi",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "Triol",
+      "code": "triol",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "АШАН",
+      "code": "ashan",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "АШАН Золотая птица",
+      "code": "ashan_zolotaya_ptica",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "Ашатли",
+      "code": "ashatli",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "Ешь хорошее",
+      "code": "esh-horoshee",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "Из деревни Батово",
+      "code": "iz_derevni_batovo",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "Кокоша",
+      "code": "kokosha",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "Павловская Курочка",
+      "code": "pavlovskaya-kurochka",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "Печем Дома",
+      "code": "pechem-doma",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "Предпортовая",
+      "code": "predportovaya",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "Роскар",
+      "code": "roskar",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "Ряба",
+      "code": "ryaba",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "Слобода",
+      "code": "sloboda",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     }
+    ],
+    "positionInUrl": 4
+   },
+   {
+    "name": "Страна",
+    "code": "country",
+    "type": "multi_check",
+    "isFixed": true,
+    "sort": 5,
+    "isUrlContain": true,
+    "informer": null,
+    "disabled": false,
+    "items": [
+     {
+      "name": " Россия",
+      "code": "rossiya",
+      "disabled": false,
+      "forActive": false,
+      "counter": 59
+     },
+     {
+      "name": " Китай",
+      "code": "kitay",
+      "disabled": false,
+      "forActive": false,
+      "counter": 4
+     },
+     {
+      "name": "Австрия",
+      "code": "avstriya",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "Бельгия",
+      "code": "belgiya",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     }
+    ],
+    "positionInUrl": 5
+   },
+   {
+    "name": "Тип товара",
+    "code": "tip_tovara_correct",
+    "type": "multi_check",
+    "isFixed": false,
+    "sort": 24,
+    "isUrlContain": true,
+    "informer": null,
+    "disabled": false,
+    "items": [
+     {
+      "name": "Яйца",
+      "code": "yayca-3",
+      "disabled": false,
+      "forActive": false,
+      "counter": 32
+     },
+     {
+      "name": "Молочные продукты",
+      "code": "molochnye-produkty",
+      "disabled": false,
+      "forActive": false,
+      "counter": 11
+     },
+     {
+      "name": "Соусы",
+      "code": "sousy",
+      "disabled": false,
+      "forActive": false,
+      "counter": 11
+     },
+     {
+      "name": "Шоколад",
+      "code": "shokolad-9",
+      "disabled": false,
+      "forActive": false,
+      "counter": 3
+     },
+     {
+      "name": "Готовая смесь",
+      "code": "gotovaya-smes",
+      "disabled": false,
+      "forActive": false,
+      "counter": 2
+     },
+     {
+      "name": "Лапша",
+      "code": "lapsha-1",
+      "disabled": false,
+      "forActive": false,
+      "counter": 2
+     },
+     {
+      "name": "Макаронные изделия",
+      "code": "makaronnye_izdeliya",
+      "disabled": false,
+      "forActive": false,
+      "counter": 2
+     },
+     {
+      "name": "Шоколадное яйцо",
+      "code": "shokoladnoe-yayco",
+      "disabled": false,
+      "forActive": false,
+      "counter": 2
+     },
+     {
+      "name": "Мука блинная",
+      "code": "muka-blinnaya",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "Приправы",
+      "code": "pripravy",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "Соус",
+      "code": "sous-3",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "Спонжи косметические",
+      "code": "sponzhi-2",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "Супы",
+      "code": "supy",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "Фермерские продукты",
+      "code": "fermerskie-produkty",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     },
+     {
+      "name": "Яичный продукт",
+      "code": "yaichnyy-produkt",
+      "disabled": false,
+      "forActive": false,
+      "counter": 1
+     }
+    ],
+    "url": "tip-tovara-correct",
+    "positionInUrl": 14
+   }
+  ],
+  "selectedFilters": {},
+  "sort": "default",
+  "meta": {
+   "digi_is_zero_query": false
+  },
+  "products_counter": 65
+ }
+}

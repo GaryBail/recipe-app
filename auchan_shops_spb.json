@@ -1,0 +1,1341 @@
+[
+ {
+  "merchant_id": 24,
+  "name": "Боровая",
+  "name_auchan": "024 Боровая",
+  "default": false,
+  "region_id": 2,
+  "address_string": "г Санкт-Петербург, Фрунзенский р-н, ул Боровая, д 47",
+  "geo_lat": "59.914132",
+  "geo_lon": "30.341926",
+  "delivery": {
+   "distance": 10000,
+   "cost_min": 1,
+   "cost_free": 3500,
+   "weight_max": 500,
+   "price": 239,
+   "delivery_tariff": [
+    {
+     "id": 170,
+     "delivery_price": 239,
+     "basket_cost": 1
+    },
+    {
+     "id": 173,
+     "delivery_price": 199,
+     "basket_cost": 1500
+    },
+    {
+     "id": 2979,
+     "delivery_price": 0,
+     "basket_cost": 3500
+    }
+   ],
+   "time_work": "10:00 - 22:00",
+   "standart_weight": 30,
+   "overprice": 7,
+   "delivery_to_door": true
+  },
+  "express_delivery": {
+   "distance": 5000,
+   "cost_min": 1000,
+   "cost_free": 2500,
+   "weight_max": 20,
+   "price": 239,
+   "delivery_tariff": [
+    {
+     "id": 1580,
+     "delivery_price": 239,
+     "basket_cost": 1000
+    },
+    {
+     "id": 1583,
+     "delivery_price": 0,
+     "basket_cost": 2500
+    }
+   ],
+   "time_work": "10:00 - 22:00",
+   "standart_weight": 20,
+   "overprice": 0,
+   "delivery_to_door": true,
+   "delivery_time": 90,
+   "delivery_time_start": "08:30"
+  },
+  "pickup": {
+   "cost_min": 700,
+   "weight_max": 10000,
+   "cost_min_adult": 700
+  },
+  "delivery_methods": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "delivery_to_door": true,
+  "is_visible": true,
+  "time_work": {
+   "workdays": {
+    "open": "08:00",
+    "close": "23:00",
+    "is_around_the_clock": false
+   },
+   "weekends": {
+    "open": "08:00",
+    "close": "23:00",
+    "is_around_the_clock": false
+   }
+  },
+  "format": "Гипермаркет",
+  "phone": "+7 800-700-58-00",
+  "email": "",
+  "parking_lots": 540,
+  "photos": [],
+  "photo_urls": [],
+  "schemas": [],
+  "schema_urls": [],
+  "pickup_description": "Для получения заказа подойдите на Пункт обслуживания клиентов.",
+  "pickup_schema": null,
+  "pickup_schema_url": null,
+  "car_pickup": {
+   "cost_min": 700,
+   "weight_max": 100,
+   "cost_min_adult": 700
+  },
+  "car_pickup_description": "Заезд с улицы Боровая к АШАН. Зона АШАН Авто расположена после проезда шлагбаума.\nЗаезд с набережной Обводного Канала. Необходимо проехать вдоль АШАН и повернуть направо к зоне АШАН Авто.",
+  "car_pickup_schema": 27282448,
+  "car_pickup_schema_url": "https://www.auchan.ru/files/original/27282448",
+  "pickup_position": 1,
+  "payment_methods": [
+   1
+  ],
+  "interval": null,
+  "mall_name": null,
+  "description": "\"Ашан на Боровой\"\n\nДля покупателей с менее 20 товаров открыты кассы самообслуживания. Оплата только картой.",
+  "temp_work_description": null,
+  "temp_work_text_color": null,
+  "temp_work_background_color": null,
+  "private_transport": null,
+  "public_transport": "Метро:станция Обводный канал (5 минут пешком)\nАвтобусные маршруты: остановка «станция метро Обводный канал» или «Курская улица» № 65, 3, 54, 91, 74, 26, 141\nТрамвайные маршруты: остановка «станция метро Обводный канал» или «Курская улица» 25, 49, 16\nАвтобусы № 65, 74",
+  "working_status": false,
+  "working_status_description": "Откроется в 08:00",
+  "services": [
+   {
+    "id": 9,
+    "name": "Установка бытовой техники",
+    "icon": null,
+    "mobile_icon": null,
+    "description": null
+   },
+   {
+    "id": 15,
+    "name": "Санитайзер на входе",
+    "icon": null,
+    "mobile_icon": null,
+    "description": null
+   },
+   {
+    "id": 18,
+    "name": "Детская площадка",
+    "icon": null,
+    "mobile_icon": null,
+    "description": null
+   }
+  ],
+  "temp_time_work": [],
+  "replacement": [
+   {
+    "replacement_method_id": 1,
+    "replacement_method": "Позвонить мне. Подобрать замену, если не смогу ответить",
+    "default_value": true
+   },
+   {
+    "replacement_method_id": 2,
+    "replacement_method": "Позвонить мне. Убрать из заказа, если не смогу ответить",
+    "default_value": false
+   },
+   {
+    "replacement_method_id": 3,
+    "replacement_method": "Не звонить мне. Подобрать замену",
+    "default_value": false
+   },
+   {
+    "replacement_method_id": 4,
+    "replacement_method": "Не звонить мне. Убрать из заказа",
+    "default_value": false
+   }
+  ]
+ },
+ {
+  "merchant_id": 704,
+  "name": "Гулливер",
+  "name_auchan": "704 Гулливер",
+  "default": false,
+  "region_id": 2,
+  "address_string": "г Санкт-Петербург, Приморский р-н, Торфяная дорога, д 7",
+  "geo_lat": "59.990197",
+  "geo_lon": "30.256273",
+  "delivery": {
+   "distance": 10000,
+   "cost_min": 1,
+   "cost_free": 3500,
+   "weight_max": 500,
+   "price": 239,
+   "delivery_tariff": [
+    {
+     "id": 176,
+     "delivery_price": 239,
+     "basket_cost": 1
+    },
+    {
+     "id": 179,
+     "delivery_price": 199,
+     "basket_cost": 1500
+    },
+    {
+     "id": 3003,
+     "delivery_price": 0,
+     "basket_cost": 3500
+    }
+   ],
+   "time_work": "10:00 - 22:00",
+   "standart_weight": 30,
+   "overprice": 7,
+   "delivery_to_door": true
+  },
+  "express_delivery": {
+   "distance": 5000,
+   "cost_min": 1000,
+   "cost_free": 2500,
+   "weight_max": 20,
+   "price": 239,
+   "delivery_tariff": [
+    {
+     "id": 1586,
+     "delivery_price": 239,
+     "basket_cost": 1000
+    },
+    {
+     "id": 1589,
+     "delivery_price": 0,
+     "basket_cost": 2500
+    }
+   ],
+   "time_work": "10:00 - 22:00",
+   "standart_weight": 20,
+   "overprice": 0,
+   "delivery_to_door": true,
+   "delivery_time": 90,
+   "delivery_time_start": "08:30"
+  },
+  "pickup": {
+   "cost_min": 700,
+   "weight_max": 10000,
+   "cost_min_adult": 700
+  },
+  "delivery_methods": [
+   1,
+   2,
+   4
+  ],
+  "delivery_to_door": true,
+  "is_visible": true,
+  "time_work": {
+   "workdays": {
+    "open": "07:00",
+    "close": "23:00",
+    "is_around_the_clock": false
+   },
+   "weekends": {
+    "open": "07:00",
+    "close": "23:00",
+    "is_around_the_clock": false
+   }
+  },
+  "format": "Гипермаркет",
+  "phone": "+7 800-700-58-00",
+  "email": "",
+  "parking_lots": 702,
+  "photos": [],
+  "photo_urls": [],
+  "schemas": [],
+  "schema_urls": [],
+  "pickup_description": "Для получения заказа подойти на Пункт Обслуживания Клиентов АШАН. ТРК Гулливер, первый этаж.",
+  "pickup_schema": null,
+  "pickup_schema_url": null,
+  "car_pickup": null,
+  "car_pickup_description": null,
+  "car_pickup_schema": null,
+  "car_pickup_schema_url": null,
+  "pickup_position": 1,
+  "payment_methods": [
+   1
+  ],
+  "interval": null,
+  "mall_name": null,
+  "description": "\"Сити - Гулливер\"\n\nДля покупателей с менее 20 товаров открыты кассы самообслуживания. Оплата только картой.",
+  "temp_work_description": null,
+  "temp_work_text_color": null,
+  "temp_work_background_color": null,
+  "private_transport": null,
+  "public_transport": "м.Старая Деревня",
+  "working_status": false,
+  "working_status_description": "Откроется в 07:00",
+  "services": [
+   {
+    "id": 9,
+    "name": "Установка бытовой техники",
+    "icon": null,
+    "mobile_icon": null,
+    "description": null
+   },
+   {
+    "id": 12,
+    "name": "Мойка",
+    "icon": null,
+    "mobile_icon": null,
+    "description": null
+   },
+   {
+    "id": 15,
+    "name": "Санитайзер на входе",
+    "icon": null,
+    "mobile_icon": null,
+    "description": null
+   },
+   {
+    "id": 18,
+    "name": "Детская площадка",
+    "icon": null,
+    "mobile_icon": null,
+    "description": null
+   },
+   {
+    "id": 24,
+    "name": "Комната матери и ребёнка",
+    "icon": null,
+    "mobile_icon": null,
+    "description": null
+   },
+   {
+    "id": 30,
+    "name": "Туалет для клиентов",
+    "icon": null,
+    "mobile_icon": null,
+    "description": null
+   }
+  ],
+  "temp_time_work": [],
+  "replacement": [
+   {
+    "replacement_method_id": 1,
+    "replacement_method": "Позвонить мне. Подобрать замену, если не смогу ответить",
+    "default_value": true
+   },
+   {
+    "replacement_method_id": 2,
+    "replacement_method": "Позвонить мне. Убрать из заказа, если не смогу ответить",
+    "default_value": false
+   },
+   {
+    "replacement_method_id": 3,
+    "replacement_method": "Не звонить мне. Подобрать замену",
+    "default_value": false
+   },
+   {
+    "replacement_method_id": 4,
+    "replacement_method": "Не звонить мне. Убрать из заказа",
+    "default_value": false
+   }
+  ]
+ },
+ {
+  "merchant_id": 101,
+  "name": "Дыбенко",
+  "name_auchan": "101 Дыбенко",
+  "default": false,
+  "region_id": 2,
+  "address_string": "Ленинградская обл, Всеволожский р-н, г Кудрово, Мурманское шоссе 12-й км, стр 1",
+  "geo_lat": "59.895335",
+  "geo_lon": "30.513423",
+  "delivery": {
+   "distance": 10000,
+   "cost_min": 1,
+   "cost_free": 3500,
+   "weight_max": 500,
+   "price": 239,
+   "delivery_tariff": [
+    {
+     "id": 158,
+     "delivery_price": 239,
+     "basket_cost": 1
+    },
+    {
+     "id": 161,
+     "delivery_price": 199,
+     "basket_cost": 1500
+    },
+    {
+     "id": 2997,
+     "delivery_price": 0,
+     "basket_cost": 3500
+    }
+   ],
+   "time_work": "10:00 - 22:00",
+   "standart_weight": 30,
+   "overprice": 7,
+   "delivery_to_door": true
+  },
+  "express_delivery": null,
+  "pickup": {
+   "cost_min": 700,
+   "weight_max": 10000,
+   "cost_min_adult": 700
+  },
+  "delivery_methods": [
+   1,
+   2,
+   3
+  ],
+  "delivery_to_door": true,
+  "is_visible": true,
+  "time_work": {
+   "workdays": {
+    "open": "08:00",
+    "close": "23:00",
+    "is_around_the_clock": false
+   },
+   "weekends": {
+    "open": "08:00",
+    "close": "23:00",
+    "is_around_the_clock": false
+   }
+  },
+  "format": "Гипермаркет",
+  "phone": "+7 800-700-58-00",
+  "email": null,
+  "parking_lots": 3000,
+  "photos": [],
+  "photo_urls": [],
+  "schemas": [],
+  "schema_urls": [],
+  "pickup_description": "Место выдачи заказов расположено справа от Пункта обслуживания клиентов, ориентир - касса № 26.",
+  "pickup_schema": 28095129,
+  "pickup_schema_url": "https://www.auchan.ru/files/original/28095129",
+  "car_pickup": {
+   "cost_min": 700,
+   "weight_max": 100,
+   "cost_min_adult": 700
+  },
+  "car_pickup_description": "Съезд с КАД 52 км на подземную парковку. Двигайтесь прямо до стрелки и поверните направо. Вам нужна красная зона, место АШАН Авто находится между колоннами К5.\n\nС ул. Центральная съезд направо на подземную парковку. Двигайтесь прямо до стрелки и поверните направо. Вам нужна красная зона, место АШАН Авто находится между колоннами К5.",
+  "car_pickup_schema": 27612439,
+  "car_pickup_schema_url": "https://www.auchan.ru/files/original/27612439",
+  "pickup_position": 1,
+  "payment_methods": [
+   1
+  ],
+  "interval": null,
+  "mall_name": null,
+  "description": "\"Дыбенко - АШАН\"",
+  "temp_work_description": null,
+  "temp_work_text_color": null,
+  "temp_work_background_color": null,
+  "private_transport": null,
+  "public_transport": "Общественный транспорт:\nК-3 МЕГА, К-4 МЕГА \nМаршрутные такси:\nК – 254, К – 269, К – 339, К – 56, К – 153, К-618,  864, 491",
+  "working_status": false,
+  "working_status_description": "Откроется в 08:00",
+  "services": [
+   {
+    "id": 9,
+    "name": "Установка бытовой техники",
+    "icon": null,
+    "mobile_icon": null,
+    "description": null
+   },
+   {
+    "id": 12,
+    "name": "Мойка",
+    "icon": null,
+    "mobile_icon": null,
+    "description": null
+   },
+   {
+    "id": 15,
+    "name": "Санитайзер на входе",
+    "icon": null,
+    "mobile_icon": null,
+    "description": null
+   },
+   {
+    "id": 18,
+    "name": "Детская площадка",
+    "icon": null,
+    "mobile_icon": null,
+    "description": null
+   },
+   {
+    "id": 24,
+    "name": "Комната матери и ребёнка",
+    "icon": null,
+    "mobile_icon": null,
+    "description": null
+   }
+  ],
+  "temp_time_work": [],
+  "replacement": [
+   {
+    "replacement_method_id": 1,
+    "replacement_method": "Позвонить мне. Подобрать замену, если не смогу ответить",
+    "default_value": true
+   },
+   {
+    "replacement_method_id": 2,
+    "replacement_method": "Позвонить мне. Убрать из заказа, если не смогу ответить",
+    "default_value": false
+   },
+   {
+    "replacement_method_id": 3,
+    "replacement_method": "Не звонить мне. Подобрать замену",
+    "default_value": false
+   },
+   {
+    "replacement_method_id": 4,
+    "replacement_method": "Не звонить мне. Убрать из заказа",
+    "default_value": false
+   }
+  ]
+ },
+ {
+  "merchant_id": 31,
+  "name": "Лето",
+  "name_auchan": "031 Лето",
+  "default": false,
+  "region_id": 2,
+  "address_string": "г Санкт-Петербург, Московский р-н, Пулковское шоссе, д 25 к 1",
+  "geo_lat": "59.820816",
+  "geo_lon": "30.318797",
+  "delivery": {
+   "distance": 7000,
+   "cost_min": 1,
+   "cost_free": 3500,
+   "weight_max": 500,
+   "price": 239,
+   "delivery_tariff": [
+    {
+     "id": 188,
+     "delivery_price": 239,
+     "basket_cost": 1
+    },
+    {
+     "id": 191,
+     "delivery_price": 199,
+     "basket_cost": 1500
+    },
+    {
+     "id": 2982,
+     "delivery_price": 0,
+     "basket_cost": 3500
+    }
+   ],
+   "time_work": "10:00 - 22:00",
+   "standart_weight": 30,
+   "overprice": 7,
+   "delivery_to_door": true
+  },
+  "express_delivery": null,
+  "pickup": {
+   "cost_min": 700,
+   "weight_max": 10000,
+   "cost_min_adult": 700
+  },
+  "delivery_methods": [
+   1,
+   2,
+   3
+  ],
+  "delivery_to_door": true,
+  "is_visible": true,
+  "time_work": {
+   "workdays": {
+    "open": "08:30",
+    "close": "22:00",
+    "is_around_the_clock": false
+   },
+   "weekends": {
+    "open": "08:30",
+    "close": "22:00",
+    "is_around_the_clock": false
+   }
+  },
+  "format": "Гипермаркет",
+  "phone": "+7 800-700-58-00",
+  "email": "",
+  "parking_lots": 3200,
+  "photos": [],
+  "photo_urls": [],
+  "schemas": [],
+  "schema_urls": [],
+  "pickup_description": "Для получения заказа обратитесь на Пункт Обслуживания Клиентов",
+  "pickup_schema": null,
+  "pickup_schema_url": null,
+  "car_pickup": {
+   "cost_min": 700,
+   "weight_max": 100,
+   "cost_min_adult": 700
+  },
+  "car_pickup_description": "С Пулковского шоссе съезжайте на парковку ТРК \"Лето\" и двигайтесь в сторону 5-ого Предпортового проезда. Съезжайте на заднюю парковку и ожидайте в зоне вблизи входа клиентов в ТРК \"Лето\"",
+  "car_pickup_schema": 29508225,
+  "car_pickup_schema_url": "https://www.auchan.ru/files/original/29508225",
+  "pickup_position": 1,
+  "payment_methods": [
+   1
+  ],
+  "interval": null,
+  "mall_name": null,
+  "description": "\"Ашан - Лето\"",
+  "temp_work_description": null,
+  "temp_work_text_color": null,
+  "temp_work_background_color": null,
+  "private_transport": null,
+  "public_transport": "Бесплатный автобус:\nДо магазина:\nст. м. Московская - ТРК \" Лето\" Ежедневно с 11.30 до 22.30 Каждые 15 мин\n\nОт магазина:\nТРК \" Лето\"  - м.Московская Ежедневно с 11.30 до 22.30 Каждые 15 мин",
+  "working_status": false,
+  "working_status_description": "Откроется в 08:30",
+  "services": [
+   {
+    "id": 6,
+    "name": "Парковка",
+    "icon": null,
+    "mobile_icon": null,
+    "description": null
+   },
+   {
+    "id": 15,
+    "name": "Санитайзер на входе",
+    "icon": null,
+    "mobile_icon": null,
+    "description": null
+   },
+   {
+    "id": 18,
+    "name": "Детская площадка",
+    "icon": null,
+    "mobile_icon": null,
+    "description": null
+   },
+   {
+    "id": 24,
+    "name": "Комната матери и ребёнка",
+    "icon": null,
+    "mobile_icon": null,
+    "description": null
+   },
+   {
+    "id": 27,
+    "name": "Wi-fi для клиентов",
+    "icon": null,
+    "mobile_icon": null,
+    "description": null
+   },
+   {
+    "id": 30,
+    "name": "Туалет для клиентов",
+    "icon": null,
+    "mobile_icon": null,
+    "description": null
+   }
+  ],
+  "temp_time_work": [],
+  "replacement": [
+   {
+    "replacement_method_id": 1,
+    "replacement_method": "Позвонить мне. Подобрать замену, если не смогу ответить",
+    "default_value": true
+   },
+   {
+    "replacement_method_id": 2,
+    "replacement_method": "Позвонить мне. Убрать из заказа, если не смогу ответить",
+    "default_value": false
+   },
+   {
+    "replacement_method_id": 3,
+    "replacement_method": "Не звонить мне. Подобрать замену",
+    "default_value": false
+   },
+   {
+    "replacement_method_id": 4,
+    "replacement_method": "Не звонить мне. Убрать из заказа",
+    "default_value": false
+   }
+  ]
+ },
+ {
+  "merchant_id": 102,
+  "name": "Парнас",
+  "name_auchan": "102 Парнас",
+  "default": true,
+  "region_id": 2,
+  "address_string": "Ленинградская область, Всеволожский район, Бугровское сельское поселение, КАД, 117-й километр, внешнее кольцо, 1",
+  "geo_lat": "60.091347",
+  "geo_lon": "30.380484",
+  "delivery": {
+   "distance": 10000,
+   "cost_min": 1,
+   "cost_free": 3500,
+   "weight_max": 500,
+   "price": 239,
+   "delivery_tariff": [
+    {
+     "id": 200,
+     "delivery_price": 239,
+     "basket_cost": 1
+    },
+    {
+     "id": 203,
+     "delivery_price": 199,
+     "basket_cost": 1500
+    },
+    {
+     "id": 3000,
+     "delivery_price": 0,
+     "basket_cost": 3500
+    }
+   ],
+   "time_work": "10:00 - 22:00",
+   "standart_weight": 30,
+   "overprice": 7,
+   "delivery_to_door": true
+  },
+  "express_delivery": null,
+  "pickup": {
+   "cost_min": 700,
+   "weight_max": 10000,
+   "cost_min_adult": 700
+  },
+  "delivery_methods": [
+   1,
+   2,
+   3
+  ],
+  "delivery_to_door": true,
+  "is_visible": true,
+  "time_work": {
+   "workdays": {
+    "open": "08:00",
+    "close": "23:00",
+    "is_around_the_clock": false
+   },
+   "weekends": {
+    "open": "08:00",
+    "close": "23:00",
+    "is_around_the_clock": false
+   }
+  },
+  "format": "Гипермаркет",
+  "phone": "+7 800-700-58-00",
+  "email": null,
+  "parking_lots": 6000,
+  "photos": [],
+  "photo_urls": [],
+  "schemas": [],
+  "schema_urls": [],
+  "pickup_description": "Место выдачи заказов расположено рядом с Пунктом обслуживания клиентов и с кассами самообслуживания.",
+  "pickup_schema": 27955859,
+  "pickup_schema_url": "https://www.auchan.ru/files/original/27955859",
+  "car_pickup": {
+   "cost_min": 700,
+   "weight_max": 100,
+   "cost_min_adult": 700
+  },
+  "car_pickup_description": "Съезд с Гражданского проспекта по кольцу в сторону СТЦ Мега. Двигайтесь прямо по внутренней парковке до зеленой зоны. Место АШАН Авто находится между колоннами Н5.",
+  "car_pickup_schema": 27583072,
+  "car_pickup_schema_url": "https://www.auchan.ru/files/original/27583072",
+  "pickup_position": 1,
+  "payment_methods": [
+   1
+  ],
+  "interval": null,
+  "mall_name": null,
+  "description": "\"Парнас - Дыбенко\"\n\nДля покупателей с менее 20 товаров открыты кассы самообслуживания. Оплата только картой.",
+  "temp_work_description": null,
+  "temp_work_text_color": null,
+  "temp_work_background_color": null,
+  "private_transport": null,
+  "public_transport": "Автобусы:\n№ К-1 от м. пр. Просвещения - ТК МЕГА,\n№ К-2  от м. Гражданский пр. - ТК МЕГА,\n№ 104 от м. пр. Просвещения - ТК Мега,\n№ 148 от м. Парнас - ТК Мега.",
+  "working_status": false,
+  "working_status_description": "Откроется в 08:00",
+  "services": [
+   {
+    "id": 9,
+    "name": "Установка бытовой техники",
+    "icon": null,
+    "mobile_icon": null,
+    "description": null
+   },
+   {
+    "id": 12,
+    "name": "Мойка",
+    "icon": null,
+    "mobile_icon": null,
+    "description": null
+   },
+   {
+    "id": 15,
+    "name": "Санитайзер на входе",
+    "icon": null,
+    "mobile_icon": null,
+    "description": null
+   },
+   {
+    "id": 18,
+    "name": "Детская площадка",
+    "icon": null,
+    "mobile_icon": null,
+    "description": null
+   },
+   {
+    "id": 24,
+    "name": "Комната матери и ребёнка",
+    "icon": null,
+    "mobile_icon": null,
+    "description": null
+   }
+  ],
+  "temp_time_work": [],
+  "replacement": [
+   {
+    "replacement_method_id": 1,
+    "replacement_method": "Позвонить мне. Подобрать замену, если не смогу ответить",
+    "default_value": true
+   },
+   {
+    "replacement_method_id": 2,
+    "replacement_method": "Позвонить мне. Убрать из заказа, если не смогу ответить",
+    "default_value": false
+   },
+   {
+    "replacement_method_id": 3,
+    "replacement_method": "Не звонить мне. Подобрать замену",
+    "default_value": false
+   },
+   {
+    "replacement_method_id": 4,
+    "replacement_method": "Не звонить мне. Убрать из заказа",
+    "default_value": false
+   }
+  ]
+ },
+ {
+  "merchant_id": 55,
+  "name": "СПб Космонавт",
+  "name_auchan": "055 СПб Космонавт",
+  "default": false,
+  "region_id": 2,
+  "address_string": "г Санкт-Петербург, Московский р-н, пр-кт Космонавтов, д 14",
+  "geo_lat": "59.868567",
+  "geo_lon": "30.348724",
+  "delivery": {
+   "distance": 15000,
+   "cost_min": 1,
+   "cost_free": 3500,
+   "weight_max": 500,
+   "price": 239,
+   "delivery_tariff": [
+    {
+     "id": 164,
+     "delivery_price": 239,
+     "basket_cost": 1
+    },
+    {
+     "id": 167,
+     "delivery_price": 199,
+     "basket_cost": 1500
+    },
+    {
+     "id": 2991,
+     "delivery_price": 0,
+     "basket_cost": 3500
+    }
+   ],
+   "time_work": "10:00 - 22:00",
+   "standart_weight": 30,
+   "overprice": 7,
+   "delivery_to_door": true
+  },
+  "express_delivery": {
+   "distance": 5000,
+   "cost_min": 1000,
+   "cost_free": 2500,
+   "weight_max": 20,
+   "price": 239,
+   "delivery_tariff": [
+    {
+     "id": 1574,
+     "delivery_price": 239,
+     "basket_cost": 1000
+    },
+    {
+     "id": 1577,
+     "delivery_price": 0,
+     "basket_cost": 2500
+    }
+   ],
+   "time_work": "10:00 - 22:00",
+   "standart_weight": 20,
+   "overprice": 0,
+   "delivery_to_door": true,
+   "delivery_time": 90,
+   "delivery_time_start": "08:30"
+  },
+  "pickup": {
+   "cost_min": 700,
+   "weight_max": 10000,
+   "cost_min_adult": 700
+  },
+  "delivery_methods": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "delivery_to_door": true,
+  "is_visible": true,
+  "time_work": {
+   "workdays": {
+    "open": "08:00",
+    "close": "23:00",
+    "is_around_the_clock": false
+   },
+   "weekends": {
+    "open": "08:00",
+    "close": "23:00",
+    "is_around_the_clock": false
+   }
+  },
+  "format": "Гипермаркет",
+  "phone": "+7 800-700-58-00",
+  "email": "",
+  "parking_lots": 3500,
+  "photos": [],
+  "photo_urls": [],
+  "schemas": [],
+  "schema_urls": [],
+  "pickup_description": "Место выдачи заказов расположено рядом с Пунктом обслуживания клиентов между кассами №2 и №3.",
+  "pickup_schema": 27955879,
+  "pickup_schema_url": "https://www.auchan.ru/files/original/27955879",
+  "car_pickup": {
+   "cost_min": 700,
+   "weight_max": 100,
+   "cost_min_adult": 700
+  },
+  "car_pickup_description": "С проспекта Космонавтов или с Кузнецкой улицы заезжайте на парковку ТРЦ \"Радуга\". Подъезжайте ко входу №2. Место выдачи заказов обозначено флагами АШАН Авто.",
+  "car_pickup_schema": 29586681,
+  "car_pickup_schema_url": "https://www.auchan.ru/files/original/29586681",
+  "pickup_position": 1,
+  "payment_methods": [
+   1
+  ],
+  "interval": null,
+  "mall_name": null,
+  "description": "\"Ашан - Радуга\"",
+  "temp_work_description": null,
+  "temp_work_text_color": null,
+  "temp_work_background_color": null,
+  "private_transport": null,
+  "public_transport": "Бесплатный автобус:\nДо магазина:\nм. Московская-ТРК Питер Радуга с 8:15 до 22:30 Каждые 9 мин.\n\nОт магазина:\nТРК Питер Радуга - м. Московская с 8:32 до 22:48",
+  "working_status": false,
+  "working_status_description": "Откроется в 08:00",
+  "services": [
+   {
+    "id": 6,
+    "name": "Парковка",
+    "icon": null,
+    "mobile_icon": null,
+    "description": null
+   },
+   {
+    "id": 9,
+    "name": "Установка бытовой техники",
+    "icon": null,
+    "mobile_icon": null,
+    "description": null
+   },
+   {
+    "id": 12,
+    "name": "Мойка",
+    "icon": null,
+    "mobile_icon": null,
+    "description": null
+   },
+   {
+    "id": 15,
+    "name": "Санитайзер на входе",
+    "icon": null,
+    "mobile_icon": null,
+    "description": null
+   },
+   {
+    "id": 18,
+    "name": "Детская площадка",
+    "icon": null,
+    "mobile_icon": null,
+    "description": null
+   },
+   {
+    "id": 24,
+    "name": "Комната матери и ребёнка",
+    "icon": null,
+    "mobile_icon": null,
+    "description": null
+   },
+   {
+    "id": 30,
+    "name": "Туалет для клиентов",
+    "icon": null,
+    "mobile_icon": null,
+    "description": null
+   }
+  ],
+  "temp_time_work": [],
+  "replacement": [
+   {
+    "replacement_method_id": 1,
+    "replacement_method": "Позвонить мне. Подобрать замену, если не смогу ответить",
+    "default_value": true
+   },
+   {
+    "replacement_method_id": 2,
+    "replacement_method": "Позвонить мне. Убрать из заказа, если не смогу ответить",
+    "default_value": false
+   },
+   {
+    "replacement_method_id": 3,
+    "replacement_method": "Не звонить мне. Подобрать замену",
+    "default_value": false
+   },
+   {
+    "replacement_method_id": 4,
+    "replacement_method": "Не звонить мне. Убрать из заказа",
+    "default_value": false
+   }
+  ]
+ },
+ {
+  "merchant_id": 44,
+  "name": "Северный",
+  "name_auchan": "044 Северный",
+  "default": false,
+  "region_id": 2,
+  "address_string": "г Санкт-Петербург, Калининский р-н, пр-кт Культуры, д 41",
+  "geo_lat": "60.054032",
+  "geo_lon": "30.387361",
+  "delivery": {
+   "distance": 10000,
+   "cost_min": 1,
+   "cost_free": 3500,
+   "weight_max": 500,
+   "price": 239,
+   "delivery_tariff": [
+    {
+     "id": 182,
+     "delivery_price": 239,
+     "basket_cost": 1
+    },
+    {
+     "id": 185,
+     "delivery_price": 199,
+     "basket_cost": 1500
+    },
+    {
+     "id": 2985,
+     "delivery_price": 0,
+     "basket_cost": 3500
+    }
+   ],
+   "time_work": "10:00 - 22:00",
+   "standart_weight": 30,
+   "overprice": 7,
+   "delivery_to_door": true
+  },
+  "express_delivery": null,
+  "pickup": {
+   "cost_min": 700,
+   "weight_max": 10000,
+   "cost_min_adult": 700
+  },
+  "delivery_methods": [
+   1,
+   2,
+   3
+  ],
+  "delivery_to_door": true,
+  "is_visible": true,
+  "time_work": {
+   "workdays": {
+    "open": "08:00",
+    "close": "23:00",
+    "is_around_the_clock": false
+   },
+   "weekends": {
+    "open": "08:00",
+    "close": "23:00",
+    "is_around_the_clock": false
+   }
+  },
+  "format": "Гипермаркет",
+  "phone": "+7 800-700-58-00",
+  "email": "",
+  "parking_lots": 2000,
+  "photos": [],
+  "photo_urls": [],
+  "schemas": [],
+  "schema_urls": [],
+  "pickup_description": "Место выдачи заказов расположено на Пункте обслуживания клиентов при входе в магазин рядом с банкоматами.",
+  "pickup_schema": 27955876,
+  "pickup_schema_url": "https://www.auchan.ru/files/original/27955876",
+  "car_pickup": {
+   "cost_min": 700,
+   "weight_max": 100,
+   "cost_min_adult": 700
+  },
+  "car_pickup_description": "Съезжайте с проспекта Культуры перед комплексом \"Парк Хаус\", затем поверните направо\". Место выдачи - конец парковки",
+  "car_pickup_schema": 29508253,
+  "car_pickup_schema_url": "https://www.auchan.ru/files/original/29508253",
+  "pickup_position": 1,
+  "payment_methods": [
+   1
+  ],
+  "interval": null,
+  "mall_name": null,
+  "description": "\"Ашан - Парк Хаус\"",
+  "temp_work_description": null,
+  "temp_work_text_color": null,
+  "temp_work_background_color": null,
+  "private_transport": null,
+  "public_transport": "Бесплатные маршрутные такси от ТРК «Парк Хаус» до ЖК «GreenЛандия» и в обратном направлении.\n\n№ К-885 – ст. метро Девяткино – ТРК «Парк Хаус» – ст. метро Парнас.",
+  "working_status": false,
+  "working_status_description": "Откроется в 08:00",
+  "services": [
+   {
+    "id": 9,
+    "name": "Установка бытовой техники",
+    "icon": null,
+    "mobile_icon": null,
+    "description": null
+   },
+   {
+    "id": 12,
+    "name": "Мойка",
+    "icon": null,
+    "mobile_icon": null,
+    "description": null
+   },
+   {
+    "id": 15,
+    "name": "Санитайзер на входе",
+    "icon": null,
+    "mobile_icon": null,
+    "description": null
+   },
+   {
+    "id": 18,
+    "name": "Детская площадка",
+    "icon": null,
+    "mobile_icon": null,
+    "description": null
+   },
+   {
+    "id": 24,
+    "name": "Комната матери и ребёнка",
+    "icon": null,
+    "mobile_icon": null,
+    "description": null
+   },
+   {
+    "id": 30,
+    "name": "Туалет для клиентов",
+    "icon": null,
+    "mobile_icon": null,
+    "description": null
+   }
+  ],
+  "temp_time_work": [],
+  "replacement": [
+   {
+    "replacement_method_id": 1,
+    "replacement_method": "Позвонить мне. Подобрать замену, если не смогу ответить",
+    "default_value": true
+   },
+   {
+    "replacement_method_id": 2,
+    "replacement_method": "Позвонить мне. Убрать из заказа, если не смогу ответить",
+    "default_value": false
+   },
+   {
+    "replacement_method_id": 3,
+    "replacement_method": "Не звонить мне. Подобрать замену",
+    "default_value": false
+   },
+   {
+    "replacement_method_id": 4,
+    "replacement_method": "Не звонить мне. Убрать из заказа",
+    "default_value": false
+   }
+  ]
+ },
+ {
+  "merchant_id": 705,
+  "name": "Эврика",
+  "name_auchan": "705 Эврика",
+  "default": false,
+  "region_id": 2,
+  "address_string": "г Санкт-Петербург, Невский р-н, ул Седова, д 11А",
+  "geo_lat": "59.900196",
+  "geo_lon": "30.400934",
+  "delivery": {
+   "distance": 7000,
+   "cost_min": 1,
+   "cost_free": 3500,
+   "weight_max": 500,
+   "price": 239,
+   "delivery_tariff": [
+    {
+     "id": 194,
+     "delivery_price": 239,
+     "basket_cost": 1
+    },
+    {
+     "id": 197,
+     "delivery_price": 199,
+     "basket_cost": 1500
+    },
+    {
+     "id": 2837,
+     "delivery_price": 0,
+     "basket_cost": 3500
+    }
+   ],
+   "time_work": "10:00 - 22:00",
+   "standart_weight": 30,
+   "overprice": 7,
+   "delivery_to_door": true
+  },
+  "express_delivery": null,
+  "pickup": {
+   "cost_min": 700,
+   "weight_max": 10000,
+   "cost_min_adult": 700
+  },
+  "delivery_methods": [
+   1,
+   2,
+   3
+  ],
+  "delivery_to_door": true,
+  "is_visible": true,
+  "time_work": {
+   "workdays": {
+    "open": "07:30",
+    "close": "22:00",
+    "is_around_the_clock": false
+   },
+   "weekends": {
+    "open": "07:30",
+    "close": "22:00",
+    "is_around_the_clock": false
+   }
+  },
+  "format": "Гипермаркет",
+  "phone": "+7 800-700-58-00",
+  "email": "",
+  "parking_lots": 400,
+  "photos": [],
+  "photo_urls": [],
+  "schemas": [],
+  "schema_urls": [],
+  "pickup_description": "Для получения заказа обратитесь на Пункт Обслуживания Клиентов",
+  "pickup_schema": null,
+  "pickup_schema_url": null,
+  "car_pickup": {
+   "cost_min": 700,
+   "weight_max": 100,
+   "cost_min_adult": 700
+  },
+  "car_pickup_description": "Заезд на парковку ТОЦ Эврика с ул. Седова. Место АШАН Авто находится слева, оно обозначено флагами.",
+  "car_pickup_schema": 27608341,
+  "car_pickup_schema_url": "https://www.auchan.ru/files/original/27608341",
+  "pickup_position": 1,
+  "payment_methods": [
+   1
+  ],
+  "interval": null,
+  "mall_name": null,
+  "description": "\"Сити - Эврика\"\n\nДля покупателей с менее 20 товаров открыты кассы самообслуживания. Оплата только картой.",
+  "temp_work_description": null,
+  "temp_work_text_color": null,
+  "temp_work_background_color": null,
+  "private_transport": null,
+  "public_transport": "Бесплатный автобус:\nДо магазина:\nСт.м.Елизаровская с 10:00 до 23:20 ТРЦ Эврика\nИнтервал до 20:00 10 минут,после 20:00 игнтервал 20 минут\nст.м. Елизаровская - ТРЦ Эврика\n\nОт магазина:\nСт.м.Елизаровская с 10:00 до 23:20 ТРЦ Эврика\nТРЦ Эврика -ст.м. Елизаровская",
+  "working_status": false,
+  "working_status_description": "Откроется в 07:30",
+  "services": [
+   {
+    "id": 9,
+    "name": "Установка бытовой техники",
+    "icon": null,
+    "mobile_icon": null,
+    "description": null
+   },
+   {
+    "id": 12,
+    "name": "Мойка",
+    "icon": null,
+    "mobile_icon": null,
+    "description": null
+   },
+   {
+    "id": 15,
+    "name": "Санитайзер на входе",
+    "icon": null,
+    "mobile_icon": null,
+    "description": null
+   },
+   {
+    "id": 18,
+    "name": "Детская площадка",
+    "icon": null,
+    "mobile_icon": null,
+    "description": null
+   },
+   {
+    "id": 24,
+    "name": "Комната матери и ребёнка",
+    "icon": null,
+    "mobile_icon": null,
+    "description": null
+   }
+  ],
+  "temp_time_work": [],
+  "replacement": [
+   {
+    "replacement_method_id": 1,
+    "replacement_method": "Позвонить мне. Подобрать замену, если не смогу ответить",
+    "default_value": true
+   },
+   {
+    "replacement_method_id": 2,
+    "replacement_method": "Позвонить мне. Убрать из заказа, если не смогу ответить",
+    "default_value": false
+   },
+   {
+    "replacement_method_id": 3,
+    "replacement_method": "Не звонить мне. Подобрать замену",
+    "default_value": false
+   },
+   {
+    "replacement_method_id": 4,
+    "replacement_method": "Не звонить мне. Убрать из заказа",
+    "default_value": false
+   }
+  ]
+ }
+]
