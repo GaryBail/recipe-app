@@ -4,7 +4,7 @@ struct SettingsView: View {
     /// Открыто листом (с кнопкой «Готово») или как вкладка «Профиль».
     var showsDone = true
     @AppStorage(PriceProviderFactory.serverURLKey) private var serverURL = ""
-    @AppStorage("cityId") private var cityId = "msk"
+    @AppStorage("cityId") private var cityId = AppConfig.defaultCityId
     @Environment(\.dismiss) private var dismiss
 
     @State private var cities: [City] = []

@@ -5,11 +5,11 @@ final class RemotePriceProviderTests: XCTestCase {
     func testDecodeOffersFromServer() throws {
         let json = """
         {"offers": {
-          "parmesan": {"offer": {"store_id": "perekrestok", "sku": "123", "title": "Сыр Пармезан 200г",
+          "parmesan": {"offer": {"store_id": "lenta", "sku": "123", "title": "Сыр Пармезан 200г",
                                  "price": "399.90", "package_amount": 200, "unit": "g", "in_stock": true,
                                  "is_weighted": false, "regular_price": null, "image_url": null},
                        "cost": "399.90", "relevance": 1.0, "alternatives": []},
-          "greek-tomatoes": {"offer": {"store_id": "perekrestok", "sku": "9", "title": "Томаты черри",
+          "greek-tomatoes": {"offer": {"store_id": "lenta", "sku": "9", "title": "Томаты черри",
                                  "price": "450.00", "package_amount": 1000, "unit": "g", "in_stock": true,
                                  "is_weighted": true, "regular_price": "500.00", "image_url": null},
                        "cost": "135.00", "relevance": 1.0, "alternatives": []}

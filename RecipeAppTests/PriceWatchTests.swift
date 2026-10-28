@@ -6,18 +6,18 @@ import SwiftData
 final class PriceWatchTests: XCTestCase {
     func testDecodeWatch() throws {
         let json = """
-        {"client_id": "abc", "name": "Моя карбонара", "recipe_title": "Паста карбонара", "city_id": "msk",
+        {"client_id": "abc", "name": "Моя карбонара", "recipe_title": "Паста карбонара", "city_id": "spb",
          "updated_at": "2026-10-27T10:00:00+00:00", "checked_at": "2026-10-27T15:00:00+00:00",
-         "best": {"store_id": "pyaterochka", "total": "412.50"}, "usual_total": "480.00",
-         "stores": [{"store_id": "pyaterochka", "total": "412.50", "complete": true, "missing": 0},
-                    {"store_id": "perekrestok", "total": "455.00", "complete": true, "missing": 0}]}
+         "best": {"store_id": "lenta", "total": "412.50"}, "usual_total": "480.00",
+         "stores": [{"store_id": "lenta", "total": "412.50", "complete": true, "missing": 0},
+                    {"store_id": "magnit", "total": "455.00", "complete": true, "missing": 0}]}
         """
         let watch = try APIClient.decoder.decode(WatchDTO.self, from: Data(json.utf8))
         XCTAssertEqual(watch.bestTotal, Decimal(string: "412.50"))
         XCTAssertEqual(watch.usual, 480)
         XCTAssertEqual(watch.stores.count, 2)
         XCTAssertNotNil(watch.checkedDate)
-        XCTAssertEqual(StoreNames.name(watch.best!.storeId), "Пятёрочка")
+        XCTAssertEqual(StoreNames.name(watch.best!.storeId), "Лента")
     }
 
     func testWatchRequestFromBuild() throws {
@@ -42,7 +42,7 @@ final class PriceWatchTests: XCTestCase {
         try context.save()
 
         let request = try XCTUnwrap(PriceWatchClient.request(for: build))
-        XCTAssertEqual(request.cityId, "msk")
+        XCTAssertEqual(request.cityId, "spb")
         XCTAssertEqual(request.recipeTitle, "Паста карбонара")
         XCTAssertEqual(request.lines, [WatchLineDTO(productId: "spaghetti-barilla", query: "Спагетти №5 Barilla",
                                                     requiredAmount: 200, unit: "g")])

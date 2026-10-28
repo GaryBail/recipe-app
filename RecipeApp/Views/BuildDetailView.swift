@@ -310,12 +310,12 @@ func ratingSummary(avg: Double?, count: Int, empty: String = "нет оцено�
     return "\(String(format: "%.1f", avg ?? 0)) · \(count) оценок"
 }
 
-/// «Следить за ценой»: сервер несколько раз в день пересчитывает корзину в магазинах Москвы.
+/// «Следить за ценой»: сервер несколько раз в день пересчитывает корзину в магазинах Петербурга.
 struct PriceWatchSection: View {
     let build: Build
 
     @Environment(\.modelContext) private var context
-    @AppStorage("cityId") private var cityId = "msk"
+    @AppStorage("cityId") private var cityId = AppConfig.defaultCityId
     @State private var watch: WatchDTO?
     @State private var errorText: String?
     @State private var isWorking = false
@@ -341,7 +341,7 @@ struct PriceWatchSection: View {
                             LabeledContent("Обычно", value: usual.formatted(.currency(code: "RUB").precision(.fractionLength(0))))
                         }
                     } else {
-                        Text("Цены появятся после ближайшей проверки (7:00, 12:00 и 18:00 по Москве).")
+                        Text("Цены появятся после ближайшей проверки (в 7:00, 12:00 и 18:00).")
                             .font(.footnote).foregroundStyle(.secondary)
                     }
                     if let date = watch.checkedDate {
@@ -358,9 +358,9 @@ struct PriceWatchSection: View {
                 .task(id: build.isWatched) { await load() }
         } footer: {
             if cityId != PriceWatchClient.supportedCity {
-                Text("Пока цены проверяются только для Москвы (Пятёрочка и Перекрёсток).")
+                Text("Пока цены проверяются только для Санкт-Петербурга.")
             } else {
-                Text("Проверяем Пятёрочку и Перекрёсток в Москве. Напомним не чаще раза в день — когда корзина подешевеет или давно не заглядывали.")
+                Text("Проверяем Ленту, Магнит, Ашан, ВкусВилл и Купер в Петербурге. Напомним не чаще раза в день — когда корзина подешевеет или давно не заглядывали.")
             }
         }
     }

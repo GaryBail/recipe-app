@@ -6,7 +6,7 @@ struct CartComparisonView: View {
     /// Для превью/тестов; по умолчанию источник выбирается по настройкам.
     var providerOverride: (any PriceProvider)? = nil
 
-    @AppStorage("cityId") private var cityId = "msk"
+    @AppStorage("cityId") private var cityId = AppConfig.defaultCityId
     @AppStorage(PriceProviderFactory.serverURLKey) private var serverURL = ""
 
     private var provider: any PriceProvider {

@@ -8,6 +8,9 @@ import Foundation
 enum AppConfig {
     static let overrideKey = PriceProviderFactory.serverURLKey
 
+    /// Город по умолчанию — Санкт-Петербург: там сильнее всего представлена Лента, наша приоритетная сеть.
+    static let defaultCityId = "spb"
+
     /// Адрес сервера, встроенный в сборку (может быть пустым, пока сервер не арендован).
     static var builtInServerURL: URL? { url(from: info("VVServerURL")) }
 

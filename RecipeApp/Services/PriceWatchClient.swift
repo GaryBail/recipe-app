@@ -43,15 +43,18 @@ struct WatchRequest: Encodable, Equatable {
 enum StoreNames {
     static func name(_ id: String) -> String {
         switch id {
-        case "pyaterochka": return "Пятёрочка"
-        case "perekrestok": return "Перекрёсток"
+        case "lenta": return "Лента"
+        case "magnit": return "Магнит"
+        case "auchan": return "Ашан"
+        case "vkusvill": return "ВкусВилл"
+        case "kuper": return "Купер"
         default: return id
         }
     }
 }
 
 struct PriceWatchClient {
-    static let supportedCity = "msk"
+    static let supportedCity = AppConfig.defaultCityId
 
     let api: APIClient
 

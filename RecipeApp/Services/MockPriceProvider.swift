@@ -4,8 +4,8 @@ import Foundation
 /// Нужен, чтобы отлаживать логику и интерфейс, пока нет реального источника данных.
 struct MockPriceProvider: PriceProvider {
     private static let allCities = [
-        City(id: "msk", name: "Москва"),
         City(id: "spb", name: "Санкт-Петербург"),
+        City(id: "msk", name: "Москва"),
         City(id: "kzn", name: "Казань")
     ]
 
@@ -21,7 +21,7 @@ struct MockPriceProvider: PriceProvider {
             Store(id: "b", name: "Магазин Б", deliveryFee: 299, freeDeliveryFrom: nil, minOrder: 1000,
                   appScheme: "storeb", appStoreURL: nil, webURL: URL(string: "https://example.com/b"))
         ]
-        if city.id == "msk" {
+        if city.id == "spb" {
             stores.append(Store(id: "c", name: "Магазин В", deliveryFee: 0, freeDeliveryFrom: nil, minOrder: 1500,
                                 appScheme: "storec", appStoreURL: nil, webURL: URL(string: "https://example.com/c")))
         }

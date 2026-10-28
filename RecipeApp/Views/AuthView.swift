@@ -7,7 +7,7 @@ struct AuthView: View {
 
     @Environment(\.dismiss) private var dismiss
     @Environment(\.colorScheme) private var colorScheme
-    @AppStorage("cityId") private var cityId = "msk"
+    @AppStorage("cityId") private var cityId = AppConfig.defaultCityId
 
     enum Mode: String, CaseIterable, Identifiable {
         case login = "Вход", register = "Регистрация"
