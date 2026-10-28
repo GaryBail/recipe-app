@@ -22,6 +22,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -60,10 +61,10 @@ class Nav(private val controller: NavHostController) {
     fun fridge() = controller.navigate("fridge")
     fun cooking(recipeId: String) = controller.navigate("cooking/$recipeId")
     fun auth() = controller.navigate("auth")
+    /** Вкладка всегда открывает свой первый экран (а не последний из истории). */
     fun tab(route: String) = controller.navigate(route) {
-        popUpTo(controller.graph.findStartDestination().id) { saveState = true }
+        popUpTo(controller.graph.findStartDestination().id)
         launchSingleTop = true
-        restoreState = true
     }
 }
 
@@ -81,6 +82,9 @@ private fun MainContent(model: AppModel, loaded: AppModel.Loaded) {
         val nav = androidx.compose.runtime.remember(controller) { Nav(controller) }
         val entry by controller.currentBackStackEntryAsState()
         val current = entry?.destination?.route
+        // Подсвечиваем вкладку, из которой открыт текущий экран.
+        var selectedTab by androidx.compose.runtime.saveable.rememberSaveable { androidx.compose.runtime.mutableStateOf("home") }
+        if (current != null && tabs.any { it.route == current } && current != selectedTab) selectedTab = current
         val openShopping = model.data.shopping.count { !it.isChecked }
 
         Scaffold(
@@ -90,8 +94,8 @@ private fun MainContent(model: AppModel, loaded: AppModel.Loaded) {
                     NavigationBar(containerColor = Ant.colors.bgContainer) {
                         for (tab in tabs) {
                             NavigationBarItem(
-                                selected = current == tab.route,
-                                onClick = { nav.tab(tab.route) },
+                                selected = selectedTab == tab.route,
+                                onClick = { selectedTab = tab.route; nav.tab(tab.route) },
                                 icon = {
                                     if (tab.route == "shopping" && openShopping > 0) {
                                         BadgedBox(badge = { Badge { Text("$openShopping") } }) { Icon(tab.icon, null) }
