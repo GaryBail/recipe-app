@@ -193,7 +193,7 @@ fun FridgeScreen(loaded: AppModel.Loaded, nav: Nav) {
                    verticalArrangement = Arrangement.spacedBy(10.dp)) {
             item {
                 OutlinedTextField(query, { query = it }, placeholder = { Text("Например: курица, рис, морковь") },
-                                  singleLine = true, modifier = Modifier.fillMaxWidth())
+                                  singleLine = true, modifier = Modifier.fillMaxWidth().testTag("fridge-query"))
             }
             if (selected.isNotEmpty()) {
                 item {
