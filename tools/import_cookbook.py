@@ -821,3 +821,49 @@ def extend(P: dict, R: list, RUBRICS: dict, recipe_fn) -> list[dict]:
         R.append(r)
         added += 1
     return added
+
+
+# Названия категорий для списков (вместо названия первого попавшегося ингредиента).
+CATEGORY_TITLES = {
+    "bread": "Хлеб", "lentils": "Чечевица", "canned-beans": "Фасоль консервированная", "salmon": "Лосось и форель",
+    "pork-cured": "Бекон, гуанчале, панчетта", "pasta-short": "Макароны", "pickles": "Огурцы солёные и маринованные",
+    "smoked-meat": "Копчёности", "semi-hard-cheese": "Сыр полутвёрдый", "hard-cheese": "Сыр твёрдый",
+    "minced-meat": "Фарш", "herbs": "Свежая зелень", "olives": "Оливки и маслины", "white-fish": "Белая рыба",
+    "chicken-thighs": "Курица: бёдра, голени, крылья", "noodles": "Лапша и вермишель",
+    "alcohol": "Вино и алкоголь для готовки", "animal-fat": "Жир (смалец, курдючный)", "asian-sauces": "Азиатские соусы",
+    "avocado": "Авокадо", "banana": "Бананы", "bean-paste": "Паста из бобов", "bean-sprouts": "Ростки маша",
+    "berries": "Ягоды", "biscuits": "Печенье", "bones": "Кости для бульона", "bread-white": "Багет и чиабатта",
+    "breadcrumbs": "Сухари и панко", "broth": "Бульон", "brown-sugar": "Коричневый сахар и пудра", "bulgur": "Булгур",
+    "cauliflower": "Цветная капуста", "celery": "Сельдерей", "chicken-whole": "Курица целая", "chickpeas": "Нут",
+    "chili": "Перец чили", "chili-paste": "Острые пасты", "chili-powder": "Перец чили молотый и хлопья",
+    "citrus": "Апельсины и цитрусы", "citrus-juice": "Сок лимона и лайма", "cocoa-chips": "Шоколадная крошка",
+    "coconut-milk": "Кокосовое молоко", "coffee-tea": "Кофе и чай", "condensed-milk": "Сгущённое молоко",
+    "coriander-seed": "Кориандр", "corn-flour": "Кукурузная мука", "crackers": "Чипсы и крекеры", "cumin": "Зира и тмин",
+    "daikon": "Дайкон и редька", "dough-sheets": "Готовое тесто", "dried-fruit": "Сухофрукты",
+    "dried-herbs": "Сушёные травы", "dried-mushrooms": "Сушёные грибы", "dry-beans": "Фасоль и маш сухие",
+    "fennel": "Фенхель", "fish-sauce": "Рыбный соус", "fresh-cheese": "Сыр мягкий (адыгейский, панир)",
+    "frying-oil": "Масло для фритюра", "gelatin": "Желатин", "ghee": "Топлёное масло (гхи)", "ginger": "Имбирь",
+    "green-beans": "Стручковая фасоль", "hominy": "Кукуруза хомини", "horseradish": "Хрен", "ice-cream": "Мороженое",
+    "jamon": "Хамон и прошутто", "juice": "Соки", "ketchup": "Кетчуп и готовые соусы", "kimchi": "Кимчи",
+    "lamb": "Баранина", "leek": "Лук-порей", "lemongrass": "Лемонграсс", "lime": "Лайм", "melon": "Арбуз",
+    "milk-powder": "Сухое молоко", "miso": "Мисо и соевые пасты", "mozzarella": "Моцарелла", "mustard": "Горчица",
+    "napa-cabbage": "Пекинская капуста", "noodles-rice": "Рисовая и стеклянная лапша", "noodles-wheat": "Лапша пшеничная",
+    "nut-paste": "Ореховые пасты", "nuts": "Орехи", "okra": "Бамия", "pasta-long": "Паста длинная и листы",
+    "pate": "Паштет", "pear": "Груши", "pickled-veg": "Маринованные овощи и каперсы", "plums": "Алыча и гранат",
+    "pork-belly": "Свиная грудинка", "rabbit": "Кролик", "rice-cakes": "Рисовые палочки ттоки",
+    "rice-paper": "Рисовая бумага", "saffron": "Шафран", "seafood": "Морепродукты", "seaweed": "Водоросли и кацуобуси",
+    "seeds-spices": "Семена и пряности", "sesame": "Кунжут", "sesame-oil": "Кунжутное масло", "shiitake": "Шиитаке и вешенки",
+    "shrimp": "Креветки", "soft-cheese": "Рикотта и маскарпоне", "soy-sauce": "Соевый соус", "spice-mix": "Смеси специй",
+    "spinach": "Шпинат", "starch": "Крахмал и тапиока", "syrup": "Сиропы", "tamarind": "Тамаринд", "tofu": "Тофу",
+    "tortillas": "Тортильи", "tropical-fruit": "Манго, ананас, папайя", "turmeric": "Куркума", "vanilla": "Ваниль",
+    "veal": "Телятина", "warm-spices": "Корица, кардамон, гвоздика", "yogurt": "Йогурт и мацони",
+}
+
+
+def category_titles(P: dict, own_recipes: list) -> dict[str, str]:
+    """Название каждой категории: явное, иначе — из своих рецептов каталога, иначе — по первому продукту."""
+    first: dict[str, str] = {}
+    for r in own_recipes:
+        for i in r["ingredients"]:
+            first.setdefault(i["categoryId"], i["title"])
+    return {cat: CATEGORY_TITLES.get(cat) or first.get(cat) or P[cat][0][1] for cat in P}

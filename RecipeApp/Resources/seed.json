@@ -1,5 +1,5 @@
 {
- "version": 5,
+ "version": 6,
  "rubrics": [
   {
    "id": "breakfast",
@@ -109,6 +109,736 @@
    "id": "other",
    "title": "Другие",
    "icon": "fork-and-knife-with-plate"
+  }
+ ],
+ "categories": [
+  {
+   "id": "alcohol",
+   "title": "Вино и алкоголь для готовки"
+  },
+  {
+   "id": "animal-fat",
+   "title": "Жир (смалец, курдючный)"
+  },
+  {
+   "id": "apples",
+   "title": "Яблоки"
+  },
+  {
+   "id": "asian-sauces",
+   "title": "Азиатские соусы"
+  },
+  {
+   "id": "avocado",
+   "title": "Авокадо"
+  },
+  {
+   "id": "baking-powder",
+   "title": "Разрыхлитель"
+  },
+  {
+   "id": "banana",
+   "title": "Бананы"
+  },
+  {
+   "id": "bean-paste",
+   "title": "Паста из бобов"
+  },
+  {
+   "id": "bean-sprouts",
+   "title": "Ростки маша"
+  },
+  {
+   "id": "beef",
+   "title": "Говядина"
+  },
+  {
+   "id": "beetroot",
+   "title": "Свёкла"
+  },
+  {
+   "id": "bell-pepper",
+   "title": "Сладкий перец"
+  },
+  {
+   "id": "berries",
+   "title": "Ягоды"
+  },
+  {
+   "id": "biscuits",
+   "title": "Печенье"
+  },
+  {
+   "id": "black-pepper",
+   "title": "Чёрный перец"
+  },
+  {
+   "id": "bones",
+   "title": "Кости для бульона"
+  },
+  {
+   "id": "bread",
+   "title": "Хлеб"
+  },
+  {
+   "id": "bread-white",
+   "title": "Багет и чиабатта"
+  },
+  {
+   "id": "breadcrumbs",
+   "title": "Сухари и панко"
+  },
+  {
+   "id": "broth",
+   "title": "Бульон"
+  },
+  {
+   "id": "brown-sugar",
+   "title": "Коричневый сахар и пудра"
+  },
+  {
+   "id": "buckwheat",
+   "title": "Гречка"
+  },
+  {
+   "id": "bulgur",
+   "title": "Булгур"
+  },
+  {
+   "id": "butter",
+   "title": "Сливочное масло"
+  },
+  {
+   "id": "cabbage",
+   "title": "Капуста"
+  },
+  {
+   "id": "canned-beans",
+   "title": "Фасоль консервированная"
+  },
+  {
+   "id": "canned-fish",
+   "title": "Рыбные консервы"
+  },
+  {
+   "id": "canned-tomatoes",
+   "title": "Томаты в собственном соку"
+  },
+  {
+   "id": "carrot",
+   "title": "Морковь"
+  },
+  {
+   "id": "cauliflower",
+   "title": "Цветная капуста"
+  },
+  {
+   "id": "celery",
+   "title": "Сельдерей"
+  },
+  {
+   "id": "chicken-fillet",
+   "title": "Куриное филе"
+  },
+  {
+   "id": "chicken-liver",
+   "title": "Куриная печень"
+  },
+  {
+   "id": "chicken-thighs",
+   "title": "Курица: бёдра, голени, крылья"
+  },
+  {
+   "id": "chicken-whole",
+   "title": "Курица целая"
+  },
+  {
+   "id": "chickpeas",
+   "title": "Нут"
+  },
+  {
+   "id": "chili",
+   "title": "Перец чили"
+  },
+  {
+   "id": "chili-paste",
+   "title": "Острые пасты"
+  },
+  {
+   "id": "chili-powder",
+   "title": "Перец чили молотый и хлопья"
+  },
+  {
+   "id": "chocolate",
+   "title": "Шоколад горький"
+  },
+  {
+   "id": "citrus",
+   "title": "Апельсины и цитрусы"
+  },
+  {
+   "id": "citrus-juice",
+   "title": "Сок лимона и лайма"
+  },
+  {
+   "id": "cocoa",
+   "title": "Какао"
+  },
+  {
+   "id": "cocoa-chips",
+   "title": "Шоколадная крошка"
+  },
+  {
+   "id": "coconut-milk",
+   "title": "Кокосовое молоко"
+  },
+  {
+   "id": "coffee-tea",
+   "title": "Кофе и чай"
+  },
+  {
+   "id": "condensed-milk",
+   "title": "Сгущённое молоко"
+  },
+  {
+   "id": "coriander-seed",
+   "title": "Кориандр"
+  },
+  {
+   "id": "corn",
+   "title": "Кукуруза"
+  },
+  {
+   "id": "corn-flour",
+   "title": "Кукурузная мука"
+  },
+  {
+   "id": "crab-sticks",
+   "title": "Крабовые палочки"
+  },
+  {
+   "id": "crackers",
+   "title": "Чипсы и крекеры"
+  },
+  {
+   "id": "cream",
+   "title": "Сливки"
+  },
+  {
+   "id": "cucumbers",
+   "title": "Огурцы"
+  },
+  {
+   "id": "cumin",
+   "title": "Зира и тмин"
+  },
+  {
+   "id": "daikon",
+   "title": "Дайкон и редька"
+  },
+  {
+   "id": "dough-sheets",
+   "title": "Готовое тесто"
+  },
+  {
+   "id": "dried-fruit",
+   "title": "Сухофрукты"
+  },
+  {
+   "id": "dried-herbs",
+   "title": "Сушёные травы"
+  },
+  {
+   "id": "dried-mushrooms",
+   "title": "Сушёные грибы"
+  },
+  {
+   "id": "dry-beans",
+   "title": "Фасоль и маш сухие"
+  },
+  {
+   "id": "eggplant",
+   "title": "Баклажаны"
+  },
+  {
+   "id": "eggs",
+   "title": "Яйца"
+  },
+  {
+   "id": "fennel",
+   "title": "Фенхель"
+  },
+  {
+   "id": "feta",
+   "title": "Фета"
+  },
+  {
+   "id": "fish-sauce",
+   "title": "Рыбный соус"
+  },
+  {
+   "id": "flour",
+   "title": "Мука"
+  },
+  {
+   "id": "frankfurters",
+   "title": "Сосиски"
+  },
+  {
+   "id": "fresh-cheese",
+   "title": "Сыр мягкий (адыгейский, панир)"
+  },
+  {
+   "id": "frying-oil",
+   "title": "Масло для фритюра"
+  },
+  {
+   "id": "garlic",
+   "title": "Чеснок"
+  },
+  {
+   "id": "gelatin",
+   "title": "Желатин"
+  },
+  {
+   "id": "ghee",
+   "title": "Топлёное масло (гхи)"
+  },
+  {
+   "id": "ginger",
+   "title": "Имбирь"
+  },
+  {
+   "id": "green-beans",
+   "title": "Стручковая фасоль"
+  },
+  {
+   "id": "ham",
+   "title": "Ветчина"
+  },
+  {
+   "id": "hard-cheese",
+   "title": "Сыр твёрдый"
+  },
+  {
+   "id": "herbs",
+   "title": "Свежая зелень"
+  },
+  {
+   "id": "herring",
+   "title": "Сельдь"
+  },
+  {
+   "id": "hominy",
+   "title": "Кукуруза хомини"
+  },
+  {
+   "id": "honey",
+   "title": "Мёд"
+  },
+  {
+   "id": "horseradish",
+   "title": "Хрен"
+  },
+  {
+   "id": "ice-cream",
+   "title": "Мороженое"
+  },
+  {
+   "id": "jamon",
+   "title": "Хамон и прошутто"
+  },
+  {
+   "id": "juice",
+   "title": "Соки"
+  },
+  {
+   "id": "kefir",
+   "title": "Кефир"
+  },
+  {
+   "id": "ketchup",
+   "title": "Кетчуп и готовые соусы"
+  },
+  {
+   "id": "kimchi",
+   "title": "Кимчи"
+  },
+  {
+   "id": "lamb",
+   "title": "Баранина"
+  },
+  {
+   "id": "lavash",
+   "title": "Лаваш"
+  },
+  {
+   "id": "leek",
+   "title": "Лук-порей"
+  },
+  {
+   "id": "lemon",
+   "title": "Лимон"
+  },
+  {
+   "id": "lemongrass",
+   "title": "Лемонграсс"
+  },
+  {
+   "id": "lentils",
+   "title": "Чечевица"
+  },
+  {
+   "id": "lettuce",
+   "title": "Листья салата"
+  },
+  {
+   "id": "lime",
+   "title": "Лайм"
+  },
+  {
+   "id": "mayonnaise",
+   "title": "Майонез"
+  },
+  {
+   "id": "melon",
+   "title": "Арбуз"
+  },
+  {
+   "id": "milk",
+   "title": "Молоко"
+  },
+  {
+   "id": "milk-powder",
+   "title": "Сухое молоко"
+  },
+  {
+   "id": "millet",
+   "title": "Пшено"
+  },
+  {
+   "id": "minced-meat",
+   "title": "Фарш"
+  },
+  {
+   "id": "miso",
+   "title": "Мисо и соевые пасты"
+  },
+  {
+   "id": "mozzarella",
+   "title": "Моцарелла"
+  },
+  {
+   "id": "mushrooms",
+   "title": "Шампиньоны"
+  },
+  {
+   "id": "mustard",
+   "title": "Горчица"
+  },
+  {
+   "id": "napa-cabbage",
+   "title": "Пекинская капуста"
+  },
+  {
+   "id": "noodles",
+   "title": "Лапша и вермишель"
+  },
+  {
+   "id": "noodles-rice",
+   "title": "Рисовая и стеклянная лапша"
+  },
+  {
+   "id": "noodles-wheat",
+   "title": "Лапша пшеничная"
+  },
+  {
+   "id": "nut-paste",
+   "title": "Ореховые пасты"
+  },
+  {
+   "id": "nuts",
+   "title": "Орехи"
+  },
+  {
+   "id": "oats",
+   "title": "Овсяные хлопья"
+  },
+  {
+   "id": "okra",
+   "title": "Бамия"
+  },
+  {
+   "id": "olive-oil",
+   "title": "Оливковое масло"
+  },
+  {
+   "id": "olives",
+   "title": "Оливки и маслины"
+  },
+  {
+   "id": "onion",
+   "title": "Лук"
+  },
+  {
+   "id": "paprika",
+   "title": "Паприка"
+  },
+  {
+   "id": "pasta-long",
+   "title": "Паста длинная и листы"
+  },
+  {
+   "id": "pasta-short",
+   "title": "Макароны"
+  },
+  {
+   "id": "pate",
+   "title": "Паштет"
+  },
+  {
+   "id": "pear",
+   "title": "Груши"
+  },
+  {
+   "id": "pearl-barley",
+   "title": "Перловка"
+  },
+  {
+   "id": "peas",
+   "title": "Зелёный горошек"
+  },
+  {
+   "id": "pickled-veg",
+   "title": "Маринованные овощи и каперсы"
+  },
+  {
+   "id": "pickles",
+   "title": "Огурцы солёные и маринованные"
+  },
+  {
+   "id": "plums",
+   "title": "Алыча и гранат"
+  },
+  {
+   "id": "pork",
+   "title": "Свинина"
+  },
+  {
+   "id": "pork-belly",
+   "title": "Свиная грудинка"
+  },
+  {
+   "id": "pork-cured",
+   "title": "Бекон, гуанчале, панчетта"
+  },
+  {
+   "id": "potato",
+   "title": "Картофель"
+  },
+  {
+   "id": "processed-cheese",
+   "title": "Плавленый сыр"
+  },
+  {
+   "id": "pumpkin",
+   "title": "Тыква"
+  },
+  {
+   "id": "rabbit",
+   "title": "Кролик"
+  },
+  {
+   "id": "radish",
+   "title": "Редис"
+  },
+  {
+   "id": "raisins",
+   "title": "Изюм"
+  },
+  {
+   "id": "rice",
+   "title": "Рис"
+  },
+  {
+   "id": "rice-cakes",
+   "title": "Рисовые палочки ттоки"
+  },
+  {
+   "id": "rice-paper",
+   "title": "Рисовая бумага"
+  },
+  {
+   "id": "saffron",
+   "title": "Шафран"
+  },
+  {
+   "id": "salmon",
+   "title": "Лосось и форель"
+  },
+  {
+   "id": "sauerkraut",
+   "title": "Квашеная капуста"
+  },
+  {
+   "id": "sausage",
+   "title": "Варёная колбаса"
+  },
+  {
+   "id": "seafood",
+   "title": "Морепродукты"
+  },
+  {
+   "id": "seaweed",
+   "title": "Водоросли и кацуобуси"
+  },
+  {
+   "id": "seeds-spices",
+   "title": "Семена и пряности"
+  },
+  {
+   "id": "semi-hard-cheese",
+   "title": "Сыр полутвёрдый"
+  },
+  {
+   "id": "semolina",
+   "title": "Манка"
+  },
+  {
+   "id": "sesame",
+   "title": "Кунжут"
+  },
+  {
+   "id": "sesame-oil",
+   "title": "Кунжутное масло"
+  },
+  {
+   "id": "shiitake",
+   "title": "Шиитаке и вешенки"
+  },
+  {
+   "id": "shrimp",
+   "title": "Креветки"
+  },
+  {
+   "id": "smoked-meat",
+   "title": "Копчёности"
+  },
+  {
+   "id": "smoked-sausage",
+   "title": "Копчёная колбаса"
+  },
+  {
+   "id": "soft-cheese",
+   "title": "Рикотта и маскарпоне"
+  },
+  {
+   "id": "sour-cream",
+   "title": "Сметана"
+  },
+  {
+   "id": "soy-sauce",
+   "title": "Соевый соус"
+  },
+  {
+   "id": "spaghetti",
+   "title": "Спагетти"
+  },
+  {
+   "id": "spice-mix",
+   "title": "Смеси специй"
+  },
+  {
+   "id": "spinach",
+   "title": "Шпинат"
+  },
+  {
+   "id": "split-peas",
+   "title": "Горох колотый"
+  },
+  {
+   "id": "starch",
+   "title": "Крахмал и тапиока"
+  },
+  {
+   "id": "sugar",
+   "title": "Сахар"
+  },
+  {
+   "id": "suluguni",
+   "title": "Сулугуни"
+  },
+  {
+   "id": "sunflower-oil",
+   "title": "Подсолнечное масло"
+  },
+  {
+   "id": "syrup",
+   "title": "Сиропы"
+  },
+  {
+   "id": "tamarind",
+   "title": "Тамаринд"
+  },
+  {
+   "id": "tofu",
+   "title": "Тофу"
+  },
+  {
+   "id": "tomato-paste",
+   "title": "Томатная паста"
+  },
+  {
+   "id": "tomatoes",
+   "title": "Томаты"
+  },
+  {
+   "id": "tortillas",
+   "title": "Тортильи"
+  },
+  {
+   "id": "tropical-fruit",
+   "title": "Манго, ананас, папайя"
+  },
+  {
+   "id": "turmeric",
+   "title": "Куркума"
+  },
+  {
+   "id": "tvorog",
+   "title": "Творог"
+  },
+  {
+   "id": "vanilla",
+   "title": "Ваниль"
+  },
+  {
+   "id": "veal",
+   "title": "Телятина"
+  },
+  {
+   "id": "vinegar",
+   "title": "Уксус"
+  },
+  {
+   "id": "warm-spices",
+   "title": "Корица, кардамон, гвоздика"
+  },
+  {
+   "id": "white-fish",
+   "title": "Белая рыба"
+  },
+  {
+   "id": "yeast",
+   "title": "Дрожжи"
+  },
+  {
+   "id": "yogurt",
+   "title": "Йогурт и мацони"
+  },
+  {
+   "id": "zucchini",
+   "title": "Кабачки"
   }
  ],
  "products": [

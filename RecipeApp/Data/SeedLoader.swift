@@ -10,8 +10,14 @@ enum SeedLoader {
         let version: Int?
         let rubrics: [Rubric]?
         let cuisines: [Cuisine]?
+        let categories: [CategoryTitleDTO]?
         let products: [ProductDTO]
         let recipes: [RecipeDTO]
+    }
+
+    struct CategoryTitleDTO: Decodable {
+        let id: String
+        let title: String
     }
 
     struct NutritionDTO: Decodable {

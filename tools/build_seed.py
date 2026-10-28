@@ -9,7 +9,7 @@
 import json
 from pathlib import Path
 
-SEED_VERSION = 5
+SEED_VERSION = 6
 
 # Рубрики рецептов: id → (название, SF Symbol, иллюстрация)
 # Иллюстрации — Fluent Emoji 3D (Microsoft, MIT): RecipeApp/Resources/Food/food-<имя>.png
@@ -860,7 +860,9 @@ def main():
 
     for r in R:
         r["cuisine"] = OWN_CUISINES.get(r["id"], "russian")
+    own = list(R)
     added = cookbook.extend(P, R, RUBRICS, recipe)
+    titles = cookbook.category_titles(P, own)
     print(f"из кулинарной книги добавлено: {added}")
 
     products = []
@@ -890,6 +892,7 @@ def main():
         "version": SEED_VERSION,
         "rubrics": [{"id": k, "title": v[0], "symbol": v[1], "icon": v[2]} for k, v in RUBRICS.items()],
         "cuisines": [{"id": k, "title": v, "icon": cookbook.CUISINE_ICONS[k]} for k, v in cookbook.CUISINE_TITLES.items()],
+        "categories": [{"id": c, "title": t} for c, t in sorted(titles.items())],
         "products": products,
         "recipes": R,
     }
