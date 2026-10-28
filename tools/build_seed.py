@@ -856,6 +856,7 @@ OWN_CUISINES = {
 
 
 def main():
+    import categories as categories_meta
     import import_cookbook as cookbook
 
     for r in R:
@@ -863,6 +864,7 @@ def main():
     own = list(R)
     added = cookbook.extend(P, R, RUBRICS, recipe)
     titles = cookbook.category_titles(P, own)
+    meta = categories_meta.metadata(set(P))
     print(f"из кулинарной книги добавлено: {added}")
 
     products = []
@@ -892,7 +894,8 @@ def main():
         "version": SEED_VERSION,
         "rubrics": [{"id": k, "title": v[0], "symbol": v[1], "icon": v[2]} for k, v in RUBRICS.items()],
         "cuisines": [{"id": k, "title": v, "icon": cookbook.CUISINE_ICONS[k]} for k, v in cookbook.CUISINE_TITLES.items()],
-        "categories": [{"id": c, "title": t} for c, t in sorted(titles.items())],
+        "departments": categories_meta.DEPARTMENTS,
+        "categories": [{"id": c, "title": titles[c], **meta[c]} for c in sorted(titles)],
         "products": products,
         "recipes": R,
     }

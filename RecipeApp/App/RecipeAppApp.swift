@@ -9,14 +9,8 @@ struct RecipeAppApp: App {
         WindowGroup {
             RootView()
         }
-        .modelContainer(for: [
-            Recipe.self,
-            Ingredient.self,
-            Product.self,
-            Build.self,
-            BuildItem.self,
-            ShoppingItem.self
-        ])
+        // Версионированная схема (DataSchema.swift): будущие изменения моделей не потеряют данные.
+        .modelContainer(AppModelContainer.shared)
     }
 }
 

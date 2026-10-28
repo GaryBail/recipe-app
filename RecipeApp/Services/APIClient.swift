@@ -68,10 +68,9 @@ struct APIClient: Sendable {
         return e
     }()
 
-    /// nil, если адрес сервера не указан.
+    /// nil, если адрес сервера не задан. Адрес выбирает AppConfig (встроенный или из профиля).
     static func fromSettings() -> APIClient? {
-        let raw = UserDefaults.standard.string(forKey: PriceProviderFactory.serverURLKey)?.trimmed ?? ""
-        guard let url = URL(string: raw), url.scheme?.hasPrefix("http") == true, url.host != nil else { return nil }
+        guard let url = AppConfig.serverURL else { return nil }
         return APIClient(baseURL: url, token: Keychain.get(tokenKey))
     }
 

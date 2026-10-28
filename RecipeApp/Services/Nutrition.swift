@@ -23,6 +23,34 @@ struct Nutrition: Equatable, Sendable {
     }
 }
 
+/// Типичный продукт каждой категории — строится один раз на весь список рецептов,
+/// чтобы КБЖУ карточек не перебирало все продукты для каждого ингредиента.
+struct NutritionIndex {
+    let typical: [String: Product]
+
+    init(_ products: [Product]) {
+        var best: [String: Product] = [:]
+        for product in products where product.hasNutrition {
+            if let current = best[product.categoryId],
+               current.name.localizedCompare(product.name) != .orderedDescending { continue }
+            best[product.categoryId] = product
+        }
+        typical = best
+    }
+
+    func summary(for recipe: Recipe) -> NutritionSummary {
+        NutritionCalculator.summary(recipe.sortedIngredients.map {
+            NutritionLine(title: $0.title, amount: $0.amount, unit: $0.unit, product: typical[$0.categoryId])
+        })
+    }
+
+    /// Калорийность порции; nil — посчитать не удалось.
+    func kcalPerServing(_ recipe: Recipe) -> Double? {
+        let s = summary(for: recipe)
+        return s.grams > 0 ? s.perServing(recipe.servings).kcal : nil
+    }
+}
+
 /// Строка для расчёта: сколько чего и какой продукт.
 struct NutritionLine {
     let title: String
@@ -76,17 +104,11 @@ enum NutritionCalculator {
 
     /// Типичный продукт для ингредиента рецепта (до того, как пользователь выбрал свой).
     static func typicalProduct(for ingredient: Ingredient, in products: [Product]) -> Product? {
-        products
-            .filter { $0.categoryId == ingredient.categoryId && $0.hasNutrition }
-            .sorted { $0.name.localizedCompare($1.name) == .orderedAscending }
-            .first
+        NutritionIndex(products).typical[ingredient.categoryId]
     }
 
     static func recipeSummary(_ recipe: Recipe, products: [Product]) -> NutritionSummary {
-        summary(recipe.sortedIngredients.map {
-            NutritionLine(title: $0.title, amount: $0.amount, unit: $0.unit,
-                          product: typicalProduct(for: $0, in: products))
-        })
+        NutritionIndex(products).summary(for: recipe)
     }
 
     static func buildSummary(_ build: Build) -> NutritionSummary {

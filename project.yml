@@ -22,6 +22,10 @@ targets:
       path: RecipeApp/Info.plist
       properties:
         CFBundleDisplayName: ВыборВкуса
+        # Адрес сервера и можно ли менять его в профиле — см. AppConfig.swift.
+        # Для App Store: VV_SERVER_URL = https://<домен>, VV_ALLOW_SERVER_OVERRIDE = NO.
+        VVServerURL: $(VV_SERVER_URL)
+        VVAllowServerOverride: $(VV_ALLOW_SERVER_OVERRIDE)
         # Русский язык приложения: системные кнопки («Назад»), формат цен («₽»), даты.
         CFBundleDevelopmentRegion: ru
         CFBundleLocalizations:
@@ -49,6 +53,8 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.garybail.recipeapp
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        VV_SERVER_URL: ""
+        VV_ALLOW_SERVER_OVERRIDE: "YES"
 
   RecipeAppTests:
     type: bundle.unit-test

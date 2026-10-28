@@ -5,10 +5,8 @@ import SwiftData
 
 enum FridgeMatcher {
     /// То, что почти всегда есть дома: не требуем отмечать.
-    static let staples: Set<String> = ["black-pepper", "paprika", "sunflower-oil", "olive-oil", "sugar", "vinegar",
-                                       "baking-powder", "frying-oil", "cumin", "coriander-seed", "turmeric",
-                                       "spice-mix", "chili-powder", "warm-spices", "dried-herbs", "seeds-spices",
-                                       "vanilla"]
+    /// То, что почти всегда есть дома (признак "staple" в каталоге): соль, специи, масло, сахар.
+    static var staples: Set<String> { Catalog.categories(tagged: "staple") }
 
     struct Result: Identifiable {
         let recipe: Recipe
@@ -241,64 +239,23 @@ enum ShoppingList {
         try? context.save()
     }
 
-    /// Отделы магазина — так удобнее идти по залу.
+    /// Отделы магазина — так удобнее идти по залу (из каталога).
     static func department(for categoryId: String) -> (order: Int, title: String) {
-        switch categoryId {
-        case "tomatoes", "cucumbers", "onion", "garlic", "carrot", "beetroot", "potato", "cabbage", "pumpkin",
-             "mushrooms", "radish", "lettuce", "herbs", "lemon", "apples", "bell-pepper", "eggplant", "zucchini",
-             "spinach", "leek", "fennel", "celery", "daikon", "avocado", "lime", "citrus", "ginger", "chili",
-             "green-beans", "cauliflower", "napa-cabbage", "bean-sprouts", "shiitake", "tropical-fruit", "banana",
-             "pear", "berries", "melon", "plums", "okra", "horseradish", "lemongrass":
-            return (0, "Овощи и фрукты")
-        case "milk", "kefir", "cream", "sour-cream", "tvorog", "butter", "hard-cheese", "semi-hard-cheese", "feta",
-             "suluguni", "processed-cheese", "eggs", "yogurt", "soft-cheese", "fresh-cheese", "mozzarella",
-             "condensed-milk", "ice-cream", "ghee", "tofu", "kimchi":
-            return (1, "Молочное и яйца")
-        case "beef", "pork", "minced-meat", "chicken-fillet", "chicken-thighs", "chicken-liver", "pork-cured",
-             "sausage", "smoked-sausage", "frankfurters", "ham", "smoked-meat", "lamb", "veal", "rabbit",
-             "chicken-whole", "pork-belly", "jamon", "pate", "bones", "animal-fat":
-            return (2, "Мясо и колбасы")
-        case "salmon", "herring", "white-fish", "crab-sticks", "shrimp", "seafood":
-            return (3, "Рыба")
-        case "bread", "lavash", "bread-white", "tortillas", "dough-sheets":
-            return (4, "Хлеб")
-        case "flour", "semolina", "oats", "buckwheat", "rice", "millet", "pearl-barley", "lentils", "split-peas",
-             "spaghetti", "pasta-short", "noodles", "sugar", "yeast", "baking-powder", "cocoa", "raisins", "honey",
-             "chocolate", "rice-paper", "noodles-rice", "noodles-wheat", "pasta-long", "bulgur", "chickpeas",
-             "dry-beans", "corn-flour", "starch", "breadcrumbs", "biscuits", "rice-cakes", "gelatin", "nuts",
-             "nut-paste", "sesame", "brown-sugar", "cocoa-chips", "dried-fruit", "milk-powder", "syrup",
-             "bean-paste", "coffee-tea", "crackers", "dried-mushrooms", "seaweed":
-            return (5, "Бакалея")
-        case "pickles", "sauerkraut", "peas", "corn", "canned-beans", "canned-fish", "canned-tomatoes",
-             "tomato-paste", "olives", "mayonnaise", "vinegar", "sunflower-oil", "olive-oil", "coconut-milk",
-             "fish-sauce", "soy-sauce", "asian-sauces", "miso", "chili-paste", "ketchup", "mustard", "sesame-oil",
-             "frying-oil", "pickled-veg", "hominy", "broth", "tamarind", "juice", "alcohol", "citrus-juice":
-            return (6, "Консервы, масла, соусы")
-        case "black-pepper", "paprika", "cumin", "coriander-seed", "turmeric", "spice-mix", "chili-powder",
-             "warm-spices", "dried-herbs", "saffron", "vanilla", "seeds-spices":
-            return (7, "Специи")
-        default:
-            return (8, "Другое")
-        }
+        Catalog.department(for: categoryId)
     }
 
     static func shareText(_ items: [ShoppingItem]) -> String {
         let open = items.filter { !$0.isChecked }
         var lines = ["🛒 Список покупок", ""]
-        let groups = Dictionary(grouping: open) { department(for: $0.categoryId).title }
-        for title in groups.keys.sorted(by: { department(forTitle: $0) < department(forTitle: $1) }) {
-            lines.append(title + ":")
-            for item in groups[title]!.sorted(by: { $0.title < $1.title }) {
+        let groups = Dictionary(grouping: open) { department(for: $0.categoryId).order }
+        for order in groups.keys.sorted() {
+            lines.append(department(for: groups[order]![0].categoryId).title + ":")
+            for item in groups[order]!.sorted(by: { $0.title < $1.title }) {
                 lines.append("☐ \(item.title) — \(item.amountText)")
             }
             lines.append("")
         }
         lines.append("Собрано в приложении «ВыборВкуса»")
         return lines.joined(separator: "\n")
-    }
-
-    private static func department(forTitle title: String) -> Int {
-        ["Овощи и фрукты", "Молочное и яйца", "Мясо и колбасы", "Рыба", "Хлеб", "Бакалея",
-         "Консервы, масла, соусы", "Специи", "Другое"].firstIndex(of: title) ?? 99
     }
 }

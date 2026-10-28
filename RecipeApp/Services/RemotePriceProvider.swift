@@ -182,10 +182,11 @@ enum PriceProviderFactory {
     static let serverURLKey = "priceServerURL"
 
     static func make(serverURL: String) -> any PriceProvider {
-        let trimmed = serverURL.trimmingCharacters(in: .whitespacesAndNewlines)
-        if let url = URL(string: trimmed), url.scheme?.hasPrefix("http") == true, url.host != nil {
-            return RemotePriceProvider(baseURL: url)
-        }
-        return MockPriceProvider()
+        AppConfig.url(from: serverURL).map { RemotePriceProvider(baseURL: $0) } ?? MockPriceProvider()
+    }
+
+    /// Источник цен по текущим настройкам приложения (см. AppConfig).
+    static func current() -> any PriceProvider {
+        AppConfig.serverURL.map { RemotePriceProvider(baseURL: $0) } ?? MockPriceProvider()
     }
 }

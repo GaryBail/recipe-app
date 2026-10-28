@@ -10,7 +10,7 @@ struct CartComparisonView: View {
     @AppStorage(PriceProviderFactory.serverURLKey) private var serverURL = ""
 
     private var provider: any PriceProvider {
-        providerOverride ?? PriceProviderFactory.make(serverURL: serverURL)
+        providerOverride ?? PriceProviderFactory.current()
     }
     @Environment(\.openURL) private var openURL
 

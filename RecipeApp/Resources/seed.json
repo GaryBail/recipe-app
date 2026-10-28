@@ -111,734 +111,1571 @@
    "icon": "fork-and-knife-with-plate"
   }
  ],
+ "departments": [
+  "Овощи и фрукты",
+  "Молочное и яйца",
+  "Мясо и колбасы",
+  "Рыба",
+  "Хлеб",
+  "Бакалея",
+  "Консервы, масла, соусы",
+  "Специи",
+  "Другое"
+ ],
  "categories": [
   {
    "id": "alcohol",
-   "title": "Вино и алкоголь для готовки"
+   "title": "Вино и алкоголь для готовки",
+   "department": 6,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "animal-fat",
-   "title": "Жир (смалец, курдючный)"
+   "title": "Жир (смалец, курдючный)",
+   "department": 2,
+   "allergens": [
+    "pork"
+   ],
+   "tags": [
+    "meat"
+   ]
   },
   {
    "id": "apples",
-   "title": "Яблоки"
+   "title": "Яблоки",
+   "department": 0,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "asian-sauces",
-   "title": "Азиатские соусы"
+   "title": "Азиатские соусы",
+   "department": 6,
+   "allergens": [
+    "gluten"
+   ],
+   "tags": []
   },
   {
    "id": "avocado",
-   "title": "Авокадо"
+   "title": "Авокадо",
+   "department": 0,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "baking-powder",
-   "title": "Разрыхлитель"
+   "title": "Разрыхлитель",
+   "department": 5,
+   "allergens": [],
+   "tags": [
+    "staple"
+   ]
   },
   {
    "id": "banana",
-   "title": "Бананы"
+   "title": "Бананы",
+   "department": 0,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "bean-paste",
-   "title": "Паста из бобов"
+   "title": "Паста из бобов",
+   "department": 5,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "bean-sprouts",
-   "title": "Ростки маша"
+   "title": "Ростки маша",
+   "department": 0,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "beef",
-   "title": "Говядина"
+   "title": "Говядина",
+   "department": 2,
+   "allergens": [],
+   "tags": [
+    "meat"
+   ]
   },
   {
    "id": "beetroot",
-   "title": "Свёкла"
+   "title": "Свёкла",
+   "department": 0,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "bell-pepper",
-   "title": "Сладкий перец"
+   "title": "Сладкий перец",
+   "department": 0,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "berries",
-   "title": "Ягоды"
+   "title": "Ягоды",
+   "department": 0,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "biscuits",
-   "title": "Печенье"
+   "title": "Печенье",
+   "department": 5,
+   "allergens": [
+    "gluten"
+   ],
+   "tags": []
   },
   {
    "id": "black-pepper",
-   "title": "Чёрный перец"
+   "title": "Чёрный перец",
+   "department": 7,
+   "allergens": [],
+   "tags": [
+    "staple"
+   ]
   },
   {
    "id": "bones",
-   "title": "Кости для бульона"
+   "title": "Кости для бульона",
+   "department": 2,
+   "allergens": [],
+   "tags": [
+    "meat"
+   ]
   },
   {
    "id": "bread",
-   "title": "Хлеб"
+   "title": "Хлеб",
+   "department": 4,
+   "allergens": [
+    "gluten"
+   ],
+   "tags": []
   },
   {
    "id": "bread-white",
-   "title": "Багет и чиабатта"
+   "title": "Багет и чиабатта",
+   "department": 4,
+   "allergens": [
+    "gluten"
+   ],
+   "tags": []
   },
   {
    "id": "breadcrumbs",
-   "title": "Сухари и панко"
+   "title": "Сухари и панко",
+   "department": 5,
+   "allergens": [
+    "gluten"
+   ],
+   "tags": []
   },
   {
    "id": "broth",
-   "title": "Бульон"
+   "title": "Бульон",
+   "department": 6,
+   "allergens": [],
+   "tags": [
+    "meat"
+   ]
   },
   {
    "id": "brown-sugar",
-   "title": "Коричневый сахар и пудра"
+   "title": "Коричневый сахар и пудра",
+   "department": 5,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "buckwheat",
-   "title": "Гречка"
+   "title": "Гречка",
+   "department": 5,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "bulgur",
-   "title": "Булгур"
+   "title": "Булгур",
+   "department": 5,
+   "allergens": [
+    "gluten"
+   ],
+   "tags": []
   },
   {
    "id": "butter",
-   "title": "Сливочное масло"
+   "title": "Сливочное масло",
+   "department": 1,
+   "allergens": [
+    "milk"
+   ],
+   "tags": [
+    "animal"
+   ]
   },
   {
    "id": "cabbage",
-   "title": "Капуста"
+   "title": "Капуста",
+   "department": 0,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "canned-beans",
-   "title": "Фасоль консервированная"
+   "title": "Фасоль консервированная",
+   "department": 6,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "canned-fish",
-   "title": "Рыбные консервы"
+   "title": "Рыбные консервы",
+   "department": 6,
+   "allergens": [
+    "fish"
+   ],
+   "tags": [
+    "fish"
+   ]
   },
   {
    "id": "canned-tomatoes",
-   "title": "Томаты в собственном соку"
+   "title": "Томаты в собственном соку",
+   "department": 6,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "carrot",
-   "title": "Морковь"
+   "title": "Морковь",
+   "department": 0,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "cauliflower",
-   "title": "Цветная капуста"
+   "title": "Цветная капуста",
+   "department": 0,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "celery",
-   "title": "Сельдерей"
+   "title": "Сельдерей",
+   "department": 0,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "chicken-fillet",
-   "title": "Куриное филе"
+   "title": "Куриное филе",
+   "department": 2,
+   "allergens": [],
+   "tags": [
+    "meat"
+   ]
   },
   {
    "id": "chicken-liver",
-   "title": "Куриная печень"
+   "title": "Куриная печень",
+   "department": 2,
+   "allergens": [],
+   "tags": [
+    "meat"
+   ]
   },
   {
    "id": "chicken-thighs",
-   "title": "Курица: бёдра, голени, крылья"
+   "title": "Курица: бёдра, голени, крылья",
+   "department": 2,
+   "allergens": [],
+   "tags": [
+    "meat"
+   ]
   },
   {
    "id": "chicken-whole",
-   "title": "Курица целая"
+   "title": "Курица целая",
+   "department": 2,
+   "allergens": [],
+   "tags": [
+    "meat"
+   ]
   },
   {
    "id": "chickpeas",
-   "title": "Нут"
+   "title": "Нут",
+   "department": 5,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "chili",
-   "title": "Перец чили"
+   "title": "Перец чили",
+   "department": 0,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "chili-paste",
-   "title": "Острые пасты"
+   "title": "Острые пасты",
+   "department": 6,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "chili-powder",
-   "title": "Перец чили молотый и хлопья"
+   "title": "Перец чили молотый и хлопья",
+   "department": 7,
+   "allergens": [],
+   "tags": [
+    "staple"
+   ]
   },
   {
    "id": "chocolate",
-   "title": "Шоколад горький"
+   "title": "Шоколад горький",
+   "department": 5,
+   "allergens": [
+    "milk"
+   ],
+   "tags": []
   },
   {
    "id": "citrus",
-   "title": "Апельсины и цитрусы"
+   "title": "Апельсины и цитрусы",
+   "department": 0,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "citrus-juice",
-   "title": "Сок лимона и лайма"
+   "title": "Сок лимона и лайма",
+   "department": 6,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "cocoa",
-   "title": "Какао"
+   "title": "Какао",
+   "department": 5,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "cocoa-chips",
-   "title": "Шоколадная крошка"
+   "title": "Шоколадная крошка",
+   "department": 5,
+   "allergens": [
+    "milk"
+   ],
+   "tags": []
   },
   {
    "id": "coconut-milk",
-   "title": "Кокосовое молоко"
+   "title": "Кокосовое молоко",
+   "department": 6,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "coffee-tea",
-   "title": "Кофе и чай"
+   "title": "Кофе и чай",
+   "department": 5,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "condensed-milk",
-   "title": "Сгущённое молоко"
+   "title": "Сгущённое молоко",
+   "department": 1,
+   "allergens": [
+    "milk"
+   ],
+   "tags": [
+    "animal"
+   ]
   },
   {
    "id": "coriander-seed",
-   "title": "Кориандр"
+   "title": "Кориандр",
+   "department": 7,
+   "allergens": [],
+   "tags": [
+    "staple"
+   ]
   },
   {
    "id": "corn",
-   "title": "Кукуруза"
+   "title": "Кукуруза",
+   "department": 6,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "corn-flour",
-   "title": "Кукурузная мука"
+   "title": "Кукурузная мука",
+   "department": 5,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "crab-sticks",
-   "title": "Крабовые палочки"
+   "title": "Крабовые палочки",
+   "department": 3,
+   "allergens": [
+    "gluten",
+    "seafood"
+   ],
+   "tags": [
+    "fish"
+   ]
   },
   {
    "id": "crackers",
-   "title": "Чипсы и крекеры"
+   "title": "Чипсы и крекеры",
+   "department": 5,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "cream",
-   "title": "Сливки"
+   "title": "Сливки",
+   "department": 1,
+   "allergens": [
+    "milk"
+   ],
+   "tags": [
+    "animal"
+   ]
   },
   {
    "id": "cucumbers",
-   "title": "Огурцы"
+   "title": "Огурцы",
+   "department": 0,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "cumin",
-   "title": "Зира и тмин"
+   "title": "Зира и тмин",
+   "department": 7,
+   "allergens": [],
+   "tags": [
+    "staple"
+   ]
   },
   {
    "id": "daikon",
-   "title": "Дайкон и редька"
+   "title": "Дайкон и редька",
+   "department": 0,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "dough-sheets",
-   "title": "Готовое тесто"
+   "title": "Готовое тесто",
+   "department": 4,
+   "allergens": [
+    "gluten"
+   ],
+   "tags": []
   },
   {
    "id": "dried-fruit",
-   "title": "Сухофрукты"
+   "title": "Сухофрукты",
+   "department": 5,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "dried-herbs",
-   "title": "Сушёные травы"
+   "title": "Сушёные травы",
+   "department": 7,
+   "allergens": [],
+   "tags": [
+    "staple"
+   ]
   },
   {
    "id": "dried-mushrooms",
-   "title": "Сушёные грибы"
+   "title": "Сушёные грибы",
+   "department": 5,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "dry-beans",
-   "title": "Фасоль и маш сухие"
+   "title": "Фасоль и маш сухие",
+   "department": 5,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "eggplant",
-   "title": "Баклажаны"
+   "title": "Баклажаны",
+   "department": 0,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "eggs",
-   "title": "Яйца"
+   "title": "Яйца",
+   "department": 1,
+   "allergens": [
+    "eggs"
+   ],
+   "tags": [
+    "animal"
+   ]
   },
   {
    "id": "fennel",
-   "title": "Фенхель"
+   "title": "Фенхель",
+   "department": 0,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "feta",
-   "title": "Фета"
+   "title": "Фета",
+   "department": 1,
+   "allergens": [
+    "milk"
+   ],
+   "tags": [
+    "animal"
+   ]
   },
   {
    "id": "fish-sauce",
-   "title": "Рыбный соус"
+   "title": "Рыбный соус",
+   "department": 6,
+   "allergens": [
+    "fish"
+   ],
+   "tags": [
+    "fish"
+   ]
   },
   {
    "id": "flour",
-   "title": "Мука"
+   "title": "Мука",
+   "department": 5,
+   "allergens": [
+    "gluten"
+   ],
+   "tags": []
   },
   {
    "id": "frankfurters",
-   "title": "Сосиски"
+   "title": "Сосиски",
+   "department": 2,
+   "allergens": [
+    "gluten",
+    "milk",
+    "pork"
+   ],
+   "tags": [
+    "meat"
+   ]
   },
   {
    "id": "fresh-cheese",
-   "title": "Сыр мягкий (адыгейский, панир)"
+   "title": "Сыр мягкий (адыгейский, панир)",
+   "department": 1,
+   "allergens": [
+    "milk"
+   ],
+   "tags": [
+    "animal"
+   ]
   },
   {
    "id": "frying-oil",
-   "title": "Масло для фритюра"
+   "title": "Масло для фритюра",
+   "department": 6,
+   "allergens": [],
+   "tags": [
+    "staple"
+   ]
   },
   {
    "id": "garlic",
-   "title": "Чеснок"
+   "title": "Чеснок",
+   "department": 0,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "gelatin",
-   "title": "Желатин"
+   "title": "Желатин",
+   "department": 5,
+   "allergens": [],
+   "tags": [
+    "animal"
+   ]
   },
   {
    "id": "ghee",
-   "title": "Топлёное масло (гхи)"
+   "title": "Топлёное масло (гхи)",
+   "department": 1,
+   "allergens": [
+    "milk"
+   ],
+   "tags": [
+    "animal"
+   ]
   },
   {
    "id": "ginger",
-   "title": "Имбирь"
+   "title": "Имбирь",
+   "department": 0,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "green-beans",
-   "title": "Стручковая фасоль"
+   "title": "Стручковая фасоль",
+   "department": 0,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "ham",
-   "title": "Ветчина"
+   "title": "Ветчина",
+   "department": 2,
+   "allergens": [
+    "pork"
+   ],
+   "tags": [
+    "meat"
+   ]
   },
   {
    "id": "hard-cheese",
-   "title": "Сыр твёрдый"
+   "title": "Сыр твёрдый",
+   "department": 1,
+   "allergens": [
+    "milk"
+   ],
+   "tags": [
+    "animal"
+   ]
   },
   {
    "id": "herbs",
-   "title": "Свежая зелень"
+   "title": "Свежая зелень",
+   "department": 0,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "herring",
-   "title": "Сельдь"
+   "title": "Сельдь",
+   "department": 3,
+   "allergens": [
+    "fish"
+   ],
+   "tags": [
+    "fish"
+   ]
   },
   {
    "id": "hominy",
-   "title": "Кукуруза хомини"
+   "title": "Кукуруза хомини",
+   "department": 6,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "honey",
-   "title": "Мёд"
+   "title": "Мёд",
+   "department": 5,
+   "allergens": [],
+   "tags": [
+    "animal"
+   ]
   },
   {
    "id": "horseradish",
-   "title": "Хрен"
+   "title": "Хрен",
+   "department": 0,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "ice-cream",
-   "title": "Мороженое"
+   "title": "Мороженое",
+   "department": 1,
+   "allergens": [
+    "milk"
+   ],
+   "tags": [
+    "animal"
+   ]
   },
   {
    "id": "jamon",
-   "title": "Хамон и прошутто"
+   "title": "Хамон и прошутто",
+   "department": 2,
+   "allergens": [
+    "pork"
+   ],
+   "tags": [
+    "meat"
+   ]
   },
   {
    "id": "juice",
-   "title": "Соки"
+   "title": "Соки",
+   "department": 6,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "kefir",
-   "title": "Кефир"
+   "title": "Кефир",
+   "department": 1,
+   "allergens": [
+    "milk"
+   ],
+   "tags": [
+    "animal"
+   ]
   },
   {
    "id": "ketchup",
-   "title": "Кетчуп и готовые соусы"
+   "title": "Кетчуп и готовые соусы",
+   "department": 6,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "kimchi",
-   "title": "Кимчи"
+   "title": "Кимчи",
+   "department": 1,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "lamb",
-   "title": "Баранина"
+   "title": "Баранина",
+   "department": 2,
+   "allergens": [],
+   "tags": [
+    "meat"
+   ]
   },
   {
    "id": "lavash",
-   "title": "Лаваш"
+   "title": "Лаваш",
+   "department": 4,
+   "allergens": [
+    "gluten"
+   ],
+   "tags": []
   },
   {
    "id": "leek",
-   "title": "Лук-порей"
+   "title": "Лук-порей",
+   "department": 0,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "lemon",
-   "title": "Лимон"
+   "title": "Лимон",
+   "department": 0,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "lemongrass",
-   "title": "Лемонграсс"
+   "title": "Лемонграсс",
+   "department": 0,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "lentils",
-   "title": "Чечевица"
+   "title": "Чечевица",
+   "department": 5,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "lettuce",
-   "title": "Листья салата"
+   "title": "Листья салата",
+   "department": 0,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "lime",
-   "title": "Лайм"
+   "title": "Лайм",
+   "department": 0,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "mayonnaise",
-   "title": "Майонез"
+   "title": "Майонез",
+   "department": 6,
+   "allergens": [
+    "eggs"
+   ],
+   "tags": [
+    "animal"
+   ]
   },
   {
    "id": "melon",
-   "title": "Арбуз"
+   "title": "Арбуз",
+   "department": 0,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "milk",
-   "title": "Молоко"
+   "title": "Молоко",
+   "department": 1,
+   "allergens": [
+    "milk"
+   ],
+   "tags": [
+    "animal"
+   ]
   },
   {
    "id": "milk-powder",
-   "title": "Сухое молоко"
+   "title": "Сухое молоко",
+   "department": 5,
+   "allergens": [
+    "milk"
+   ],
+   "tags": [
+    "animal"
+   ]
   },
   {
    "id": "millet",
-   "title": "Пшено"
+   "title": "Пшено",
+   "department": 5,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "minced-meat",
-   "title": "Фарш"
+   "title": "Фарш",
+   "department": 2,
+   "allergens": [
+    "pork"
+   ],
+   "tags": [
+    "meat"
+   ]
   },
   {
    "id": "miso",
-   "title": "Мисо и соевые пасты"
+   "title": "Мисо и соевые пасты",
+   "department": 6,
+   "allergens": [
+    "gluten"
+   ],
+   "tags": []
   },
   {
    "id": "mozzarella",
-   "title": "Моцарелла"
+   "title": "Моцарелла",
+   "department": 1,
+   "allergens": [
+    "milk"
+   ],
+   "tags": [
+    "animal"
+   ]
   },
   {
    "id": "mushrooms",
-   "title": "Шампиньоны"
+   "title": "Шампиньоны",
+   "department": 0,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "mustard",
-   "title": "Горчица"
+   "title": "Горчица",
+   "department": 6,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "napa-cabbage",
-   "title": "Пекинская капуста"
+   "title": "Пекинская капуста",
+   "department": 0,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "noodles",
-   "title": "Лапша и вермишель"
+   "title": "Лапша и вермишель",
+   "department": 5,
+   "allergens": [
+    "eggs",
+    "gluten"
+   ],
+   "tags": []
   },
   {
    "id": "noodles-rice",
-   "title": "Рисовая и стеклянная лапша"
+   "title": "Рисовая и стеклянная лапша",
+   "department": 5,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "noodles-wheat",
-   "title": "Лапша пшеничная"
+   "title": "Лапша пшеничная",
+   "department": 5,
+   "allergens": [
+    "eggs",
+    "gluten"
+   ],
+   "tags": []
   },
   {
    "id": "nut-paste",
-   "title": "Ореховые пасты"
+   "title": "Ореховые пасты",
+   "department": 5,
+   "allergens": [
+    "nuts"
+   ],
+   "tags": []
   },
   {
    "id": "nuts",
-   "title": "Орехи"
+   "title": "Орехи",
+   "department": 5,
+   "allergens": [
+    "nuts"
+   ],
+   "tags": []
   },
   {
    "id": "oats",
-   "title": "Овсяные хлопья"
+   "title": "Овсяные хлопья",
+   "department": 5,
+   "allergens": [
+    "gluten"
+   ],
+   "tags": []
   },
   {
    "id": "okra",
-   "title": "Бамия"
+   "title": "Бамия",
+   "department": 0,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "olive-oil",
-   "title": "Оливковое масло"
+   "title": "Оливковое масло",
+   "department": 6,
+   "allergens": [],
+   "tags": [
+    "staple"
+   ]
   },
   {
    "id": "olives",
-   "title": "Оливки и маслины"
+   "title": "Оливки и маслины",
+   "department": 6,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "onion",
-   "title": "Лук"
+   "title": "Лук",
+   "department": 0,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "paprika",
-   "title": "Паприка"
+   "title": "Паприка",
+   "department": 7,
+   "allergens": [],
+   "tags": [
+    "staple"
+   ]
   },
   {
    "id": "pasta-long",
-   "title": "Паста длинная и листы"
+   "title": "Паста длинная и листы",
+   "department": 5,
+   "allergens": [
+    "eggs",
+    "gluten"
+   ],
+   "tags": []
   },
   {
    "id": "pasta-short",
-   "title": "Макароны"
+   "title": "Макароны",
+   "department": 5,
+   "allergens": [
+    "gluten"
+   ],
+   "tags": []
   },
   {
    "id": "pate",
-   "title": "Паштет"
+   "title": "Паштет",
+   "department": 2,
+   "allergens": [
+    "pork"
+   ],
+   "tags": [
+    "meat"
+   ]
   },
   {
    "id": "pear",
-   "title": "Груши"
+   "title": "Груши",
+   "department": 0,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "pearl-barley",
-   "title": "Перловка"
+   "title": "Перловка",
+   "department": 5,
+   "allergens": [
+    "gluten"
+   ],
+   "tags": []
   },
   {
    "id": "peas",
-   "title": "Зелёный горошек"
+   "title": "Зелёный горошек",
+   "department": 6,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "pickled-veg",
-   "title": "Маринованные овощи и каперсы"
+   "title": "Маринованные овощи и каперсы",
+   "department": 6,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "pickles",
-   "title": "Огурцы солёные и маринованные"
+   "title": "Огурцы солёные и маринованные",
+   "department": 6,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "plums",
-   "title": "Алыча и гранат"
+   "title": "Алыча и гранат",
+   "department": 0,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "pork",
-   "title": "Свинина"
+   "title": "Свинина",
+   "department": 2,
+   "allergens": [
+    "pork"
+   ],
+   "tags": [
+    "meat"
+   ]
   },
   {
    "id": "pork-belly",
-   "title": "Свиная грудинка"
+   "title": "Свиная грудинка",
+   "department": 2,
+   "allergens": [
+    "pork"
+   ],
+   "tags": [
+    "meat"
+   ]
   },
   {
    "id": "pork-cured",
-   "title": "Бекон, гуанчале, панчетта"
+   "title": "Бекон, гуанчале, панчетта",
+   "department": 2,
+   "allergens": [
+    "pork"
+   ],
+   "tags": [
+    "meat"
+   ]
   },
   {
    "id": "potato",
-   "title": "Картофель"
+   "title": "Картофель",
+   "department": 0,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "processed-cheese",
-   "title": "Плавленый сыр"
+   "title": "Плавленый сыр",
+   "department": 1,
+   "allergens": [
+    "milk"
+   ],
+   "tags": [
+    "animal"
+   ]
   },
   {
    "id": "pumpkin",
-   "title": "Тыква"
+   "title": "Тыква",
+   "department": 0,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "rabbit",
-   "title": "Кролик"
+   "title": "Кролик",
+   "department": 2,
+   "allergens": [],
+   "tags": [
+    "meat"
+   ]
   },
   {
    "id": "radish",
-   "title": "Редис"
+   "title": "Редис",
+   "department": 0,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "raisins",
-   "title": "Изюм"
+   "title": "Изюм",
+   "department": 5,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "rice",
-   "title": "Рис"
+   "title": "Рис",
+   "department": 5,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "rice-cakes",
-   "title": "Рисовые палочки ттоки"
+   "title": "Рисовые палочки ттоки",
+   "department": 5,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "rice-paper",
-   "title": "Рисовая бумага"
+   "title": "Рисовая бумага",
+   "department": 5,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "saffron",
-   "title": "Шафран"
+   "title": "Шафран",
+   "department": 7,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "salmon",
-   "title": "Лосось и форель"
+   "title": "Лосось и форель",
+   "department": 3,
+   "allergens": [
+    "fish"
+   ],
+   "tags": [
+    "fish"
+   ]
   },
   {
    "id": "sauerkraut",
-   "title": "Квашеная капуста"
+   "title": "Квашеная капуста",
+   "department": 6,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "sausage",
-   "title": "Варёная колбаса"
+   "title": "Варёная колбаса",
+   "department": 2,
+   "allergens": [
+    "gluten",
+    "milk",
+    "pork"
+   ],
+   "tags": [
+    "meat"
+   ]
   },
   {
    "id": "seafood",
-   "title": "Морепродукты"
+   "title": "Морепродукты",
+   "department": 3,
+   "allergens": [
+    "seafood"
+   ],
+   "tags": [
+    "fish"
+   ]
   },
   {
    "id": "seaweed",
-   "title": "Водоросли и кацуобуси"
+   "title": "Водоросли и кацуобуси",
+   "department": 5,
+   "allergens": [
+    "fish"
+   ],
+   "tags": []
   },
   {
    "id": "seeds-spices",
-   "title": "Семена и пряности"
+   "title": "Семена и пряности",
+   "department": 7,
+   "allergens": [],
+   "tags": [
+    "staple"
+   ]
   },
   {
    "id": "semi-hard-cheese",
-   "title": "Сыр полутвёрдый"
+   "title": "Сыр полутвёрдый",
+   "department": 1,
+   "allergens": [
+    "milk"
+   ],
+   "tags": [
+    "animal"
+   ]
   },
   {
    "id": "semolina",
-   "title": "Манка"
+   "title": "Манка",
+   "department": 5,
+   "allergens": [
+    "gluten"
+   ],
+   "tags": []
   },
   {
    "id": "sesame",
-   "title": "Кунжут"
+   "title": "Кунжут",
+   "department": 5,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "sesame-oil",
-   "title": "Кунжутное масло"
+   "title": "Кунжутное масло",
+   "department": 6,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "shiitake",
-   "title": "Шиитаке и вешенки"
+   "title": "Шиитаке и вешенки",
+   "department": 0,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "shrimp",
-   "title": "Креветки"
+   "title": "Креветки",
+   "department": 3,
+   "allergens": [
+    "seafood"
+   ],
+   "tags": [
+    "fish"
+   ]
   },
   {
    "id": "smoked-meat",
-   "title": "Копчёности"
+   "title": "Копчёности",
+   "department": 2,
+   "allergens": [
+    "pork"
+   ],
+   "tags": [
+    "meat"
+   ]
   },
   {
    "id": "smoked-sausage",
-   "title": "Копчёная колбаса"
+   "title": "Копчёная колбаса",
+   "department": 2,
+   "allergens": [
+    "pork"
+   ],
+   "tags": [
+    "meat"
+   ]
   },
   {
    "id": "soft-cheese",
-   "title": "Рикотта и маскарпоне"
+   "title": "Рикотта и маскарпоне",
+   "department": 1,
+   "allergens": [
+    "milk"
+   ],
+   "tags": [
+    "animal"
+   ]
   },
   {
    "id": "sour-cream",
-   "title": "Сметана"
+   "title": "Сметана",
+   "department": 1,
+   "allergens": [
+    "milk"
+   ],
+   "tags": [
+    "animal"
+   ]
   },
   {
    "id": "soy-sauce",
-   "title": "Соевый соус"
+   "title": "Соевый соус",
+   "department": 6,
+   "allergens": [
+    "gluten"
+   ],
+   "tags": []
   },
   {
    "id": "spaghetti",
-   "title": "Спагетти"
+   "title": "Спагетти",
+   "department": 5,
+   "allergens": [
+    "gluten"
+   ],
+   "tags": []
   },
   {
    "id": "spice-mix",
-   "title": "Смеси специй"
+   "title": "Смеси специй",
+   "department": 7,
+   "allergens": [],
+   "tags": [
+    "staple"
+   ]
   },
   {
    "id": "spinach",
-   "title": "Шпинат"
+   "title": "Шпинат",
+   "department": 0,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "split-peas",
-   "title": "Горох колотый"
+   "title": "Горох колотый",
+   "department": 5,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "starch",
-   "title": "Крахмал и тапиока"
+   "title": "Крахмал и тапиока",
+   "department": 5,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "sugar",
-   "title": "Сахар"
+   "title": "Сахар",
+   "department": 5,
+   "allergens": [],
+   "tags": [
+    "staple"
+   ]
   },
   {
    "id": "suluguni",
-   "title": "Сулугуни"
+   "title": "Сулугуни",
+   "department": 1,
+   "allergens": [
+    "milk"
+   ],
+   "tags": [
+    "animal"
+   ]
   },
   {
    "id": "sunflower-oil",
-   "title": "Подсолнечное масло"
+   "title": "Подсолнечное масло",
+   "department": 6,
+   "allergens": [],
+   "tags": [
+    "staple"
+   ]
   },
   {
    "id": "syrup",
-   "title": "Сиропы"
+   "title": "Сиропы",
+   "department": 5,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "tamarind",
-   "title": "Тамаринд"
+   "title": "Тамаринд",
+   "department": 6,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "tofu",
-   "title": "Тофу"
+   "title": "Тофу",
+   "department": 1,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "tomato-paste",
-   "title": "Томатная паста"
+   "title": "Томатная паста",
+   "department": 6,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "tomatoes",
-   "title": "Томаты"
+   "title": "Томаты",
+   "department": 0,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "tortillas",
-   "title": "Тортильи"
+   "title": "Тортильи",
+   "department": 4,
+   "allergens": [
+    "gluten"
+   ],
+   "tags": []
   },
   {
    "id": "tropical-fruit",
-   "title": "Манго, ананас, папайя"
+   "title": "Манго, ананас, папайя",
+   "department": 0,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "turmeric",
-   "title": "Куркума"
+   "title": "Куркума",
+   "department": 7,
+   "allergens": [],
+   "tags": [
+    "staple"
+   ]
   },
   {
    "id": "tvorog",
-   "title": "Творог"
+   "title": "Творог",
+   "department": 1,
+   "allergens": [
+    "milk"
+   ],
+   "tags": [
+    "animal"
+   ]
   },
   {
    "id": "vanilla",
-   "title": "Ваниль"
+   "title": "Ваниль",
+   "department": 7,
+   "allergens": [],
+   "tags": [
+    "staple"
+   ]
   },
   {
    "id": "veal",
-   "title": "Телятина"
+   "title": "Телятина",
+   "department": 2,
+   "allergens": [],
+   "tags": [
+    "meat"
+   ]
   },
   {
    "id": "vinegar",
-   "title": "Уксус"
+   "title": "Уксус",
+   "department": 6,
+   "allergens": [],
+   "tags": [
+    "staple"
+   ]
   },
   {
    "id": "warm-spices",
-   "title": "Корица, кардамон, гвоздика"
+   "title": "Корица, кардамон, гвоздика",
+   "department": 7,
+   "allergens": [],
+   "tags": [
+    "staple"
+   ]
   },
   {
    "id": "white-fish",
-   "title": "Белая рыба"
+   "title": "Белая рыба",
+   "department": 3,
+   "allergens": [
+    "fish"
+   ],
+   "tags": [
+    "fish"
+   ]
   },
   {
    "id": "yeast",
-   "title": "Дрожжи"
+   "title": "Дрожжи",
+   "department": 5,
+   "allergens": [],
+   "tags": []
   },
   {
    "id": "yogurt",
-   "title": "Йогурт и мацони"
+   "title": "Йогурт и мацони",
+   "department": 1,
+   "allergens": [
+    "milk"
+   ],
+   "tags": [
+    "animal"
+   ]
   },
   {
    "id": "zucchini",
-   "title": "Кабачки"
+   "title": "Кабачки",
+   "department": 0,
+   "allergens": [],
+   "tags": []
   }
  ],
  "products": [

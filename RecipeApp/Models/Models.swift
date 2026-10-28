@@ -228,8 +228,7 @@ extension String {
 /// Названия категорий берём из ингредиентов рецептов ("hard-cheese" → "Твёрдый сыр").
 enum CategoryCatalog {
     /// Названия категорий каталога из seed.json («Сыр твёрдый», «Свежая зелень»).
-    static let seedTitles: [String: String] = Dictionary(
-        (SeedLoader.load()?.categories ?? []).map { ($0.id, $0.title) }, uniquingKeysWith: { a, _ in a })
+    static var seedTitles: [String: String] { Catalog.categories.mapValues(\.title) }
 
     static func titles(ingredients: [Ingredient], products: [Product]) -> [(id: String, title: String)] {
         var map: [String: String] = [:]

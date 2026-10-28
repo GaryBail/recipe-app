@@ -71,10 +71,10 @@ struct HomeView: View {
         }
     }
 
-    private func kcal(_ recipe: Recipe) -> Double? {
-        let summary = NutritionCalculator.recipeSummary(recipe, products: products)
-        return summary.grams > 0 ? summary.perServing(recipe.servings).kcal : nil
-    }
+    /// КБЖУ карточек: индекс «категория → типичный продукт» строится один раз, а не для каждой карточки.
+    @State private var nutrition = NutritionIndex([])
+
+    private func kcal(_ recipe: Recipe) -> Double? { nutrition.kcalPerServing(recipe) }
 
     private let columns = [GridItem(.flexible(), spacing: 12), GridItem(.flexible(), spacing: 12)]
 
@@ -113,6 +113,7 @@ struct HomeView: View {
             .navigationDestination(for: Recipe.self) { RecipeDetailView(recipe: $0) }
             .navigationDestination(for: Build.self) { BuildDetailView(build: $0) }
             .task(id: serverURL) { await model.load(recipeIds: recipes.map(\.id)) }
+            .task(id: products.count) { nutrition = NutritionIndex(products) }
             .refreshable { await model.load(recipeIds: recipes.map(\.id)) }
             .overlay { if recipes.isEmpty { ProgressView() } }
         }
@@ -339,6 +340,7 @@ struct FavoritesView: View {
     }
     @Query private var products: [Product]
     @State private var model = HomeModel()
+    @State private var nutrition = NutritionIndex([])
 
     private let columns = [GridItem(.flexible(), spacing: 14), GridItem(.flexible(), spacing: 14)]
 
@@ -356,9 +358,8 @@ struct FavoritesView: View {
                         LazyVGrid(columns: columns, spacing: 14) {
                             ForEach(Array(favorites.enumerated()), id: \.element.id) { index, recipe in
                                 NavigationLink(value: recipe) {
-                                    let s = NutritionCalculator.recipeSummary(recipe, products: products)
                                     RecipeCard(recipe: recipe, cover: model.coverURL(for: recipe.id),
-                                               kcalPerServing: s.grams > 0 ? s.perServing(recipe.servings).kcal : nil)
+                                               kcalPerServing: nutrition.kcalPerServing(recipe))
                                 }
                                 .buttonStyle(AntPressStyle())
                                 .appear(index: index % 6)
@@ -373,6 +374,7 @@ struct FavoritesView: View {
             .navigationDestination(for: Recipe.self) { RecipeDetailView(recipe: $0) }
             .navigationDestination(for: Build.self) { BuildDetailView(build: $0) }
             .task(id: favorites.count) { await model.load(recipeIds: favorites.map(\.id)) }
+            .task(id: products.count) { nutrition = NutritionIndex(products) }
         }
     }
 }

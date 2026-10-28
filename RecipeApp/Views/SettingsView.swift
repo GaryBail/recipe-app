@@ -25,6 +25,7 @@ struct SettingsView: View {
                     Text("Список магазинов с доставкой зависит от города.")
                 }
 
+                if AppConfig.allowsServerOverride {
                 Section {
                     TextField("http://192.168.1.10:8000", text: $serverURL)
                         .keyboardType(.URL)
@@ -38,7 +39,8 @@ struct SettingsView: View {
                 } header: {
                     Text("Сервер")
                 } footer: {
-                    Text("Нужен для цен в магазинах и сообщества. Оставьте пустым — будут тестовые цены, сообщество недоступно.")
+                    Text("Только в тестовых сборках. Нужен для цен в магазинах и сообщества. Оставьте пустым — будет встроенный адрес, а если его нет — тестовые цены без сообщества.")
+                }
                 }
             }
             .navigationTitle(showsDone ? "Настройки" : "Профиль")
@@ -49,14 +51,14 @@ struct SettingsView: View {
                 }
             }
             .task(id: serverURL) {
-                cities = (try? await PriceProviderFactory.make(serverURL: serverURL).cities()) ?? []
+                cities = (try? await PriceProviderFactory.current().cities()) ?? []
             }
         }
     }
 
     private func check() async {
         checkResult = "Проверяю…"
-        guard let base = URL(string: serverURL.trimmingCharacters(in: .whitespaces)) else {
+        guard let base = AppConfig.url(from: serverURL) ?? AppConfig.builtInServerURL else {
             checkResult = "Некорректный адрес"
             return
         }

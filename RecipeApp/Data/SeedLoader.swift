@@ -10,14 +10,10 @@ enum SeedLoader {
         let version: Int?
         let rubrics: [Rubric]?
         let cuisines: [Cuisine]?
-        let categories: [CategoryTitleDTO]?
+        let categories: [CategoryInfo]?
+        let departments: [String]?
         let products: [ProductDTO]
         let recipes: [RecipeDTO]
-    }
-
-    struct CategoryTitleDTO: Decodable {
-        let id: String
-        let title: String
     }
 
     struct NutritionDTO: Decodable {
@@ -160,7 +156,7 @@ struct Rubric: Decodable, Identifiable, Hashable {
     let symbol: String
     let icon: String?
 
-    static let all: [Rubric] = SeedLoader.load()?.rubrics ?? []
+    static var all: [Rubric] { Catalog.rubrics }
 
     static func named(_ id: String) -> Rubric? { all.first { $0.id == id } }
 }
@@ -171,7 +167,7 @@ struct Cuisine: Decodable, Identifiable, Hashable {
     let title: String
     let icon: String
 
-    static let all: [Cuisine] = SeedLoader.load()?.cuisines ?? []
+    static var all: [Cuisine] { Catalog.cuisines }
 
     static func named(_ id: String) -> Cuisine? { all.first { $0.id == id } }
 }

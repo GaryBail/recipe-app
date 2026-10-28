@@ -66,6 +66,7 @@ struct CollectionView: View {
 
     var body: some View {
         let items = collection.recipes(from: recipes, popularIds: popularIds)
+        let nutrition = NutritionIndex(products)
         ScrollView {
             VStack(alignment: .leading, spacing: 12) {
                 Text(collection.subtitle)
@@ -74,9 +75,7 @@ struct CollectionView: View {
                 LazyVGrid(columns: columns, spacing: 14) {
                     ForEach(Array(items.enumerated()), id: \.element.id) { index, recipe in
                         NavigationLink(value: recipe) {
-                            let s = NutritionCalculator.recipeSummary(recipe, products: products)
-                            RecipeCard(recipe: recipe, cover: nil,
-                                       kcalPerServing: s.grams > 0 ? s.perServing(recipe.servings).kcal : nil)
+                            RecipeCard(recipe: recipe, cover: nil, kcalPerServing: nutrition.kcalPerServing(recipe))
                         }
                         .buttonStyle(AntPressStyle())
                         .appear(index: index % 6)
