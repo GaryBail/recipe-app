@@ -22,3 +22,20 @@ jobs:
       - uses: actions/checkout@v4
       - run: pip install httpx curl_cffi
       - run: python3 tools/probe_stores.py ${{ matrix.store }}
+  dump:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install httpx curl_cffi
+      - run: python3 tools/probe_dump.py /tmp/probe
+      - name: Publish to probe-data branch
+        run: |
+          cd /tmp/probe
+          git init -q -b probe-data
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add -A && git commit -qm "Store API samples ${GITHUB_SHA::7}"
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" probe-data
