@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ["tools/probe_vkusvill.py", ".github/workflows/probe.yml"]
+    paths: ["tools/probe_*.py", ".github/workflows/probe.yml"]
 jobs:
   vkusvill:
     runs-on: ubuntu-latest
@@ -11,3 +11,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: python3 tools/probe_vkusvill.py
+  stores:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        store: [lenta, magnit, auchan, kuper]
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install httpx curl_cffi
+      - run: python3 tools/probe_stores.py ${{ matrix.store }}
