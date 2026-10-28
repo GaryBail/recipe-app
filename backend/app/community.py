@@ -234,12 +234,14 @@ class CommunityStore:
         Автор рецепта — тот, кто опубликовал первую сборку; текст рецепта берём из его
         последней публикации. Рейтинг — по всем сборкам рецепта."""
         builds = [b for b in self.list(user_id, sort="new", limit=10_000) if b["recipe"]["id"].startswith("user-")]
+        # время с точностью до секунды: при совпадении порядок публикации — по номеру строки
+        seq = {row[0]: row[1] for row in self.db.execute("SELECT id, rowid FROM builds")}
         grouped: dict[str, list[dict[str, Any]]] = {}
         for b in builds:
             grouped.setdefault(b["recipe"]["id"], []).append(b)
         result = []
         for recipe_id, items in grouped.items():
-            items.sort(key=lambda b: b["created_at"])
+            items.sort(key=lambda b: (b["created_at"], seq.get(b["id"], 0)))
             first = items[0]
             own = [b for b in items if b["author_id"] == first["author_id"]]
             latest = own[-1]
