@@ -83,22 +83,15 @@ def auchan():
     web = httpx.Client(timeout=30, follow_redirects=True, headers={
         "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 Mobile/15E148",
         "Accept": "application/json", "Referer": "https://www.auchan.ru/", "Origin": "https://www.auchan.ru"})
-    shops = web.get("https://www.auchan.ru/v1/shops", params={"merchantId": 1}).json()
-    save("auchan_shops", shops)
-    save("auchan_regions", web.get("https://www.auchan.ru/v1/regions"))
-    save("auchan_products_category", web.get("https://www.auchan.ru/v1/catalog/products", params={
-        "merchantId": 1, "page": 1, "perPage": 5, "filter[category]": "moloko"}))
-    bodies = [
-        ("json_query", dict(json={"query": "молоко", "merchantId": 1, "page": 1, "perPage": 5})),
-        ("json_q", dict(json={"q": "молоко", "merchantId": 1, "page": 1, "perPage": 5})),
-        ("json_filter", dict(json={"filter": {"query": "молоко", "merchant_id": 1}, "page": 1, "perPage": 5})),
-        ("form", dict(data={"query": "молоко", "merchantId": "1"})),
-    ]
-    for name, kw in bodies:
-        save(f"auchan_search_{name}", web.post("https://www.auchan.ru/v1/search", params={"merchantId": 1}, **kw))
-    for path in ("/v1/search/suggest", "/v1/search/products", "/v1/catalog/search", "/v1/autohints"):
-        save("auchan_get" + path.replace("/", "_"),
-             web.get("https://www.auchan.ru" + path, params={"query": "молоко", "merchantId": 1}))
+    shops = web.get("https://www.auchan.ru/v1/shops", params={"merchantId": 1}).json()["shops"]
+    spb = [x for x in shops if x["region_id"] == 2]
+    save("auchan_shops_spb", spb)
+    merchant = next(x["merchant_id"] for x in spb if "Санкт-Петербург" in x["address_string"])
+    for key, q in QUERIES.items():
+        save(f"auchan_search_{key}", web.post("https://www.auchan.ru/v1/search", params={"merchantId": merchant},
+                                              json={"query": q, "page": 1, "perPage": 10}))
+    save("auchan_search_milk_msk", web.post("https://www.auchan.ru/v1/search", params={"merchantId": 1},
+                                            json={"query": "молоко", "page": 1, "perPage": 3}))
 
 
 def kuper():
