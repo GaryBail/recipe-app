@@ -59,6 +59,7 @@ class Nav(private val controller: NavHostController) {
     fun collection(id: String) = controller.navigate("collection/$id")
     fun fridge() = controller.navigate("fridge")
     fun cooking(recipeId: String) = controller.navigate("cooking/$recipeId")
+    fun auth() = controller.navigate("auth")
     fun tab(route: String) = controller.navigate(route) {
         popUpTo(controller.graph.findStartDestination().id) { saveState = true }
         launchSingleTop = true
@@ -110,7 +111,8 @@ private fun MainContent(model: AppModel, loaded: AppModel.Loaded) {
                 composable("home") { HomeScreen(model, loaded, nav) }
                 composable("favorites") { FavoritesScreen(model, loaded, nav) }
                 composable("shopping") { ShoppingScreen(model, loaded) }
-                composable("profile") { ProfileScreen(model) }
+                composable("profile") { ProfileScreen(model, nav) }
+                composable("auth") { AuthScreen(model, nav) }
                 composable("recipe/{id}") { RecipeScreen(model, loaded, nav, it.arguments?.getString("id").orEmpty()) }
                 composable(
                     "build-edit?recipe={recipe}&build={build}",

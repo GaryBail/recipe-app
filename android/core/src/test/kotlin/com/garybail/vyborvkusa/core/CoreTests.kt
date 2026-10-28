@@ -282,4 +282,26 @@ class CoreTests {
         assertTrue(old.isFavorite("borscht"))
         assertEquals("spb", old.settings.cityId)
     }
+
+    @Test
+    fun serverErrorsAndWatchRequest() {
+        assertEquals("Неверный email или пароль", ApiClient.errorMessage("""{"detail": "Неверный email или пароль"}"""))
+        assertEquals("Пароль слишком короткий",
+                     ApiClient.errorMessage("""{"detail": [{"msg": "Value error, Пароль слишком короткий"}]}"""))
+        assertNull(ApiClient.errorMessage("<html>"))
+
+        val carbonara = catalog.recipe("carbonara")!!
+        val selection = carbonara.ingredients.associate { it.id to catalog.productsByCategory.getValue(it.categoryId).first().id }
+        val request = WatchApi.request(Build("b", "Моя", "carbonara", selection, 0, servings = 4), catalog)!!
+        assertEquals("spb", request.cityId)
+        assertEquals(carbonara.ingredients.size, request.lines.size)
+        assertEquals(400.0, request.lines.first().requiredAmount)
+        val api = ApiClient("http://x", null)
+        val text = api.json.encodeToString(WatchRequest.serializer(), request)
+        assertTrue("\"recipe_title\"" in text && "\"required_amount\"" in text, text)
+        val watch = api.json.decodeFromString(Watch.serializer(), """{"client_id": "b", "name": "Моя",
+            "recipe_title": "Паста", "city_id": "spb", "best": {"store_id": "lenta", "total": "412.50"},
+            "stores": [{"store_id": "lenta", "total": "412.50", "complete": true, "missing": 0}]}""")
+        assertEquals("Лента", WatchApi.storeName(watch.best!!.storeId))
+    }
 }

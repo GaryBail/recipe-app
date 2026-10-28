@@ -59,6 +59,8 @@ data class Build(
     val createdAt: Long,
     /** Сколько порций готовим по сборке (null — как в рецепте). */
     val servings: Int? = null,
+    /** Включено слежение за ценой (подписка на сервере, id подписки = id сборки). */
+    val isWatched: Boolean = false,
 ) {
     fun effectiveServings(recipe: Recipe) = servings ?: recipe.servings
 

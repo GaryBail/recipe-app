@@ -108,13 +108,15 @@ private val knownCities = listOf("spb" to "Санкт-Петербург", "msk"
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-fun ProfileScreen(model: AppModel) {
+fun ProfileScreen(model: AppModel, nav: Nav) {
     val settings = model.data.settings
     val ant = Ant.colors
     var server by rememberSaveable { mutableStateOf(settings.serverUrl) }
     ScreenScaffold("Профиль") { padding ->
         LazyColumn(Modifier.padding(padding).fillMaxSize().testTag("profile"), contentPadding = PaddingValues(16.dp),
                    verticalArrangement = Arrangement.spacedBy(12.dp)) {
+            item { SectionTitle("Аккаунт") }
+            item { AccountSection(model, nav) }
             item { SectionTitle("Город") }
             item {
                 FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {

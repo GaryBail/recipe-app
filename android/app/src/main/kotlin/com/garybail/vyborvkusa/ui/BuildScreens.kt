@@ -197,6 +197,7 @@ fun BuildScreen(model: AppModel, loaded: AppModel.Loaded, nav: Nav, id: String) 
                         Text("Сравнить цены в магазинах")
                     }
                 }
+                item { PriceWatchCard(model, nav, id, build.isWatched) }
                 item {
                     SectionTitle("Продукты") { ServingsStepper(servings, { model.setBuildServings(id, it) }) }
                 }
