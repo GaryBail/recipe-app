@@ -112,7 +112,8 @@ class ScreenshotTest {
         shot("profile")
 
         tab("home")
-        rule.waitUntilAtLeastOneExists(hasTestTag("search"), timeoutMillis = 5_000)
+        rule.waitUntilAtLeastOneExists(hasTestTag("home"), timeoutMillis = 5_000)
+        rule.onAllNodesWithTag("home").onFirst().performScrollToNode(hasTestTag("search"))
         rule.onNodeWithContentDescription("Очистить").performClick()
         rule.onAllNodesWithTag("home").onFirst().performScrollToNode(hasTestTag("fridge-link"))
         rule.onNodeWithTag("fridge-link").performClick()

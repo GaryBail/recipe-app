@@ -135,8 +135,9 @@ fun ProfileScreen(model: AppModel, nav: Nav) {
                             val on = a.raw in settings.allergens
                             Row(Modifier.fillMaxWidth().clickable {
                                 model.updateSettings { it.copy(allergens = if (on) it.allergens - a.raw else it.allergens + a.raw) }
-                            }, verticalAlignment = Alignment.CenterVertically) {
+                            }.padding(vertical = 2.dp), verticalAlignment = Alignment.CenterVertically) {
                                 Checkbox(on, null)
+                                Spacer(Modifier.width(8.dp))
                                 Text(a.title, color = ant.text)
                             }
                         }

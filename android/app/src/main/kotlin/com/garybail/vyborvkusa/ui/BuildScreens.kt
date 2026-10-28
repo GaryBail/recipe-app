@@ -70,7 +70,6 @@ fun BuildEditorScreen(model: AppModel, loaded: AppModel.Loaded, nav: Nav, recipe
         mutableStateMapOf<String, String>().apply {
             for (ing in recipe.ingredients) {
                 val chosen = existing?.selection?.get(ing.id)
-                    ?: loaded.nutrition.typical[ing.categoryId]?.id
                     ?: catalog.productsByCategory[ing.categoryId]?.firstOrNull()?.id
                 if (chosen != null) put(ing.id, chosen)
             }

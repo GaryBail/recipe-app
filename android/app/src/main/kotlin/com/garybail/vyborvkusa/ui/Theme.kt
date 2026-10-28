@@ -106,11 +106,13 @@ fun VyborVkusaTheme(content: @Composable () -> Unit) {
     val scheme = if (dark) darkColorScheme(
         primary = ant.primary, background = ant.bgLayout, surface = ant.bgContainer,
         onBackground = ant.text, onSurface = ant.text, surfaceVariant = Color(0xFF1F1F1F),
+        secondaryContainer = ant.blue.bg, onSecondaryContainer = ant.blue.text,
         error = ant.error, outline = ant.border,
     ) else lightColorScheme(
         primary = ant.primary, background = ant.bgLayout, surface = ant.bgContainer,
         onBackground = ant.text, onSurface = ant.text, surfaceVariant = Color(0xFFF5F5F5),
         surfaceContainer = Color.White, error = ant.error, outline = ant.border,
+        secondaryContainer = ant.blue.bg, onSecondaryContainer = ant.blue.text,
     )
     val base = Typography()
     val typography = base.copy(

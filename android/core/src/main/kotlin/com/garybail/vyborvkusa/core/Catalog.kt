@@ -19,8 +19,8 @@ class Catalog(
     val categories: Map<String, CategoryInfo> = categories.associateBy { it.id }
     val recipesById: Map<String, Recipe> = recipes.associateBy { it.id }
     val productsById: Map<String, Product> = products.associateBy { it.id }
-    val productsByCategory: Map<String, List<Product>> =
-        products.groupBy { it.categoryId }.mapValues { (_, list) -> list.sortedBy { it.displayName } }
+    /** Продукты категории в порядке каталога: первым идёт основной вариант (как в iOS). */
+    val productsByCategory: Map<String, List<Product>> = products.groupBy { it.categoryId }
 
     private val tagIndex: Map<String, Set<String>> = index { it.tags }
     private val allergenIndex: Map<String, Set<String>> = index { it.allergens }
