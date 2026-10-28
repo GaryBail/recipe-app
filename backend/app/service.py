@@ -13,8 +13,8 @@ from .stores.base import StoreAdapter
 log = logging.getLogger(__name__)
 
 CITIES: list[City] = [
+    City("spb", "Санкт-Петербург", 59.9343, 30.3351),  # основной город
     City("msk", "Москва", 55.7558, 37.6173),
-    City("spb", "Санкт-Петербург", 59.9343, 30.3351),
     City("kzn", "Казань", 55.7963, 49.1088),
     City("ekb", "Екатеринбург", 56.8389, 60.6057),
     City("nsk", "Новосибирск", 55.0084, 82.9357),

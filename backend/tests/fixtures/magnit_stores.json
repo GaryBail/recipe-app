@@ -1,0 +1,127 @@
+{
+ "items": {
+  "items": [
+   {
+    "coordinates": {
+     "latitude": 59.940127,
+     "longitude": 30.344946
+    },
+    "externalId": {
+     "owner": "OWNER_MAGNIT",
+     "storeCode": "699422"
+    },
+    "isActive": true,
+    "isFavorite": false,
+    "status": "STATUS_ACTIVE",
+    "storeType": "STORE_TYPE_MM",
+    "storeTypeV2": "MM"
+   },
+   {
+    "coordinates": {
+     "latitude": 59.928041,
+     "longitude": 30.319396
+    },
+    "externalId": {
+     "owner": "OWNER_MAGNIT",
+     "storeCode": "784182"
+    },
+    "isActive": true,
+    "isFavorite": false,
+    "status": "STATUS_ACTIVE",
+    "storeType": "STORE_TYPE_MM",
+    "storeTypeV2": "MM"
+   },
+   {
+    "coordinates": {
+     "latitude": 59.925168,
+     "longitude": 30.322083
+    },
+    "externalId": {
+     "owner": "OWNER_MAGNIT",
+     "storeCode": "784198"
+    },
+    "isActive": true,
+    "isFavorite": false,
+    "status": "STATUS_ACTIVE",
+    "storeType": "STORE_TYPE_MM",
+    "storeTypeV2": "MM"
+   },
+   {
+    "coordinates": {
+     "latitude": 59.922471,
+     "longitude": 30.348267
+    },
+    "externalId": {
+     "owner": "OWNER_MAGNIT",
+     "storeCode": "733771"
+    },
+    "isActive": true,
+    "isFavorite": false,
+    "status": "STATUS_ACTIVE",
+    "storeType": "STORE_TYPE_MM",
+    "storeTypeV2": "MM"
+   },
+   {
+    "coordinates": {
+     "latitude": 59.933667,
+     "longitude": 30.362225
+    },
+    "externalId": {
+     "owner": "OWNER_MAGNIT",
+     "storeCode": "782574"
+    },
+    "isActive": true,
+    "isFavorite": false,
+    "status": "STATUS_ACTIVE",
+    "storeType": "STORE_TYPE_MM",
+    "storeTypeV2": "MM"
+   },
+   {
+    "coordinates": {
+     "latitude": 59.924434,
+     "longitude": 30.35405
+    },
+    "externalId": {
+     "owner": "OWNER_MAGNIT",
+     "storeCode": "399499"
+    },
+    "isActive": true,
+    "isFavorite": false,
+    "status": "STATUS_ACTIVE",
+    "storeType": "STORE_TYPE_MM",
+    "storeTypeV2": "MM"
+   },
+   {
+    "coordinates": {
+     "latitude": 59.925423,
+     "longitude": 30.357994
+    },
+    "externalId": {
+     "owner": "OWNER_MAGNIT",
+     "storeCode": "598639"
+    },
+    "isActive": true,
+    "isFavorite": false,
+    "status": "STATUS_ACTIVE",
+    "storeType": "STORE_TYPE_DG",
+    "storeTypeV2": "DG"
+   },
+   {
+    "coordinates": {
+     "latitude": 59.929437,
+     "longitude": 30.368623
+    },
+    "externalId": {
+     "owner": "OWNER_MAGNIT",
+     "storeCode": "243612"
+    },
+    "isActive": true,
+    "isFavorite": false,
+    "status": "STATUS_ACTIVE",
+    "storeType": "STORE_TYPE_DG",
+    "storeTypeV2": "DG"
+   }
+  ],
+  "typeName": "basic"
+ }
+}

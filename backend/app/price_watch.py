@@ -3,7 +3,8 @@
 Как работает:
 1. Пользователь включает «Следить за ценой» у сборки — приложение присылает её состав (подписка).
 2. Несколько раз в день (по умолчанию 07:00, 12:00, 18:00 МСК) сервер собирает все уникальные
-   товары из подписок и один раз ищет каждый в каждом магазине (Москва: Пятёрочка, Перекрёсток).
+   товары из подписок и один раз ищет каждый в каждом магазине
+   (Санкт-Петербург: Лента, Магнит, Ашан, ВкусВилл, Купер).
    Между запросами — пауза, чтобы не нагружать сайты.
 3. Для каждой подписки считается стоимость корзины в каждом магазине; итог сохраняется в историю.
 4. Уведомления — не чаще одного в день на пользователя и только днём:
@@ -35,9 +36,9 @@ from .service import CITIES, PriceService
 
 log = logging.getLogger(__name__)
 
-MSK = timezone(timedelta(hours=3))  # в Москве нет перехода на летнее время
+MSK = timezone(timedelta(hours=3))  # московское время (и в Петербурге); перехода на летнее нет
 
-WATCH_CITIES = {"msk"}
+WATCH_CITIES = {"spb"}  # приоритет — Петербург, где сильнее всего представлена Лента
 MAX_WATCHES_PER_USER = 20
 REFRESH_HOURS = (7, 12, 18)          # когда обновлять цены (МСК)
 NOTIFY_WINDOW = (10, 21)             # когда можно присылать уведомления (МСК)
@@ -56,7 +57,7 @@ class WatchLineIn(BaseModel):
 class WatchIn(BaseModel):
     name: str = Field(min_length=1, max_length=100)
     recipe_title: str = Field(min_length=1, max_length=100)
-    city_id: str = "msk"
+    city_id: str = "spb"
     lines: list[WatchLineIn] = Field(min_length=1, max_length=50)
 
 
@@ -272,7 +273,8 @@ class Candidate:
         return (self.usual_kop - self.current_kop) / self.usual_kop
 
 
-STORE_NAMES = {"pyaterochka": "Пятёрочке", "perekrestok": "Перекрёстке"}  # «в …»
+STORE_NAMES = {"lenta": "Ленте", "magnit": "Магните", "auchan": "Ашане", "vkusvill": "ВкусВилле",
+               "kuper": "Купере"}  # «в …»
 
 
 def price_message(c: Candidate) -> tuple[str, str, str]:

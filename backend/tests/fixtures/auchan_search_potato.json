@@ -1,0 +1,319 @@
+{
+ "items": [
+  {
+   "id": null,
+   "name": null,
+   "products": [
+    {
+     "id": 291713,
+     "productId": 5579,
+     "code": "kartofel-fasovanyy-5-kg",
+     "name": "Картофель белый сетка, 5 кг",
+     "gimaId": "45196",
+     "basketStep": 1,
+     "active": true,
+     "isAdult": false,
+     "isB2b": true,
+     "is_new": false,
+     "stock": {
+      "qty": 19,
+      "storeId": 45,
+      "not_available": false
+     },
+     "price": {
+      "value": 229.99,
+      "currency": "RUB",
+      "per": "item"
+     },
+     "image": {
+      "id": 17766467
+     },
+     "imageUrl": "https://www.auchan.ru/files/original/17766467",
+     "brandName": "-",
+     "rate": {
+      "rating": 4,
+      "reviews_qnt": 308
+     },
+     "in_combo": false,
+     "package_display": "5 кг"
+    },
+    {
+     "id": 4992471,
+     "productId": 55811,
+     "code": "kartofel_sladkiybatat_ves",
+     "name": "Картофель сладкий батат, вес",
+     "gimaId": "32077",
+     "basketStep": 1,
+     "active": true,
+     "isAdult": false,
+     "isB2b": true,
+     "is_new": false,
+     "stock": {
+      "qty": 2.94,
+      "storeId": 45,
+      "not_available": false
+     },
+     "price": {
+      "value": 229.99,
+      "currency": "RUB",
+      "per": "weight_kg"
+     },
+     "oldPrice": {
+      "value": 279.99,
+      "currency": "RUB",
+      "per": "weight_kg"
+     },
+     "discount": {
+      "id": 4992471,
+      "value": 50,
+      "value_type": 2,
+      "change": 50,
+      "size": 18,
+      "date_start": "2026-10-23",
+      "date_end": "2026-10-29",
+      "is_pl_discount": false
+     },
+     "image": {
+      "id": 17765391
+     },
+     "imageUrl": "https://www.auchan.ru/files/original/17765391",
+     "brandName": "-",
+     "rate": {
+      "rating": 4.6,
+      "reviews_qnt": 57
+     },
+     "in_combo": false,
+     "package_display": " "
+    },
+    {
+     "id": 16370873,
+     "productId": 179894,
+     "code": "kartofel-3kg-setka",
+     "name": "Картофель Барышня Крестьянка, 3 кг",
+     "gimaId": "310108",
+     "basketStep": 1,
+     "active": true,
+     "isAdult": false,
+     "isB2b": true,
+     "is_new": false,
+     "stock": {
+      "qty": 16,
+      "storeId": 45,
+      "not_available": false
+     },
+     "price": {
+      "value": 249.99,
+      "currency": "RUB",
+      "per": "item"
+     },
+     "image": {
+      "id": 24875100
+     },
+     "imageUrl": "https://www.auchan.ru/files/original/24875100",
+     "brandName": "-",
+     "rate": {
+      "rating": 4.3,
+      "reviews_qnt": 36
+     },
+     "in_combo": false,
+     "package_display": "3 кг"
+    },
+    {
+     "id": 4993540,
+     "productId": 56304,
+     "code": "kartofel_krasnyy_ves",
+     "name": "Картофель красный, вес",
+     "gimaId": "235438",
+     "basketStep": 1,
+     "active": true,
+     "isAdult": false,
+     "isB2b": true,
+     "is_new": false,
+     "stock": {
+      "qty": 44.64,
+      "storeId": 45,
+      "not_available": false
+     },
+     "price": {
+      "value": 59.99,
+      "currency": "RUB",
+      "per": "weight_kg"
+     },
+     "image": {
+      "id": 17766193
+     },
+     "imageUrl": "https://www.auchan.ru/files/original/17766193",
+     "brandName": "-",
+     "rate": {
+      "rating": 4.5,
+      "reviews_qnt": 776
+     },
+     "in_combo": false,
+     "package_display": " "
+    },
+    {
+     "id": 3228490,
+     "productId": 52227,
+     "code": "kartofel-fri-4-sezona-450-g",
+     "name": "Картофель фри «4 Сезона» замороженный, 450 г",
+     "gimaId": "488925",
+     "basketStep": 1,
+     "active": true,
+     "isAdult": false,
+     "isB2b": true,
+     "is_new": false,
+     "stock": {
+      "qty": 8,
+      "storeId": 45,
+      "not_available": false
+     },
+     "price": {
+      "value": 204.99,
+      "currency": "RUB",
+      "per": "item"
+     },
+     "image": {
+      "id": 21392349
+     },
+     "imageUrl": "https://www.auchan.ru/files/original/21392349",
+     "brandName": "4 Сезона",
+     "rate": {
+      "rating": 4.9,
+      "reviews_qnt": 15
+     },
+     "in_combo": false,
+     "package_display": "450 г"
+    },
+    {
+     "id": 15993205,
+     "productId": 236206,
+     "code": "kp-kartofel-fri-750g",
+     "name": "Картофель фри АШАН Красная птица замороженный, 750 г",
+     "gimaId": "5958",
+     "basketStep": 1,
+     "active": true,
+     "isAdult": false,
+     "isB2b": true,
+     "is_new": false,
+     "stock": {
+      "qty": 19,
+      "storeId": 45,
+      "not_available": false
+     },
+     "price": {
+      "value": 259.99,
+      "currency": "RUB",
+      "per": "item"
+     },
+     "oldPrice": {
+      "value": 299.99,
+      "currency": "RUB",
+      "per": "item"
+     },
+     "discount": {
+      "id": 15993205,
+      "value": 40,
+      "value_type": 2,
+      "change": 40,
+      "size": 13,
+      "date_start": "2026-10-28",
+      "date_end": "2026-11-11",
+      "is_pl_discount": false
+     },
+     "image": {
+      "id": 37206732
+     },
+     "imageUrl": "https://www.auchan.ru/files/original/37206732",
+     "brandName": "АШАН Красная птица",
+     "rate": {
+      "rating": 4,
+      "reviews_qnt": 50
+     },
+     "in_combo": false,
+     "package_display": "750 г"
+    },
+    {
+     "id": 8266581,
+     "productId": 109611,
+     "code": "kdkartofel_fri_1kg",
+     "name": "Картофель для жарки «Каждый день» бланшированный замороженный, 1 кг",
+     "gimaId": "322345",
+     "basketStep": 1,
+     "active": true,
+     "isAdult": false,
+     "isB2b": true,
+     "is_new": false,
+     "stock": {
+      "qty": 22,
+      "storeId": 45,
+      "not_available": false
+     },
+     "price": {
+      "value": 219.98,
+      "currency": "RUB",
+      "per": "item"
+     },
+     "image": {
+      "id": 34758846
+     },
+     "imageUrl": "https://www.auchan.ru/files/original/34758846",
+     "brandName": "Каждый день",
+     "rate": {
+      "rating": 4.4,
+      "reviews_qnt": 69
+     },
+     "in_combo": false,
+     "package_display": "1 кг"
+    },
+    {
+     "id": 591940,
+     "productId": 22749,
+     "code": "borshch-4-sezona-moskovskiy-400-g",
+     "name": "Смесь овощная суповая Борщ «4 Сезона» Московский замороженная, 400 г",
+     "gimaId": "71893",
+     "basketStep": 1,
+     "active": true,
+     "isAdult": false,
+     "isB2b": true,
+     "is_new": false,
+     "stock": {
+      "qty": 19,
+      "storeId": 45,
+      "not_available": false
+     },
+     "price": {
+      "value": 109.99,
+      "currency": "RUB",
+      "per": "item"
+     },
+     "oldPrice": {
+      "value": 141.99,
+      "currency": "RUB",
+      "per": "item"
+     },
+     "discount": {
+      "id": 591940,
+      "value": 32,
+      "value_type": 2,
+      "change": 32,
+      "size": 23,
+      "date_start": "2026-10-01",
+      "date_end": "2026-10-28",
+      "is_pl_discount": true
+     },
+     "image": {
+      "id": 21393334
+     },
+     "imageUrl": "https://www.auchan.ru/files/original/21393334",
+     "brandName": "4 Сезона",
+     "rate": {
+      "rating": 4.8,
+      "reviews_qnt": 54
+     },
+     "in_combo": false,
+     "package_display": "400 г"
+    }
+   ]
+  }
+ ]
+}

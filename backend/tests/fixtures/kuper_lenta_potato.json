@@ -1,0 +1,396 @@
+{
+ "products": [
+  {
+   "id": "118887",
+   "sku": "70233",
+   "retailer_sku": "118887",
+   "available": true,
+   "legacy_offer_id": 37572933252,
+   "name": "Картофель мытый",
+   "price": 101.99,
+   "original_price": 101.99,
+   "discount": 0,
+   "human_volume": "1 кг",
+   "volume": 1,
+   "volume_type": "kg",
+   "items_per_pack": 1,
+   "discount_ends_at": "2026-10-29T00:00:00.000+00:00",
+   "price_type": "per_kilo",
+   "grams_per_unit": 1000,
+   "unit_price": 101.99,
+   "original_unit_price": 101.99,
+   "promo_badge_ids": [],
+   "score": 4.5,
+   "labels": [],
+   "image_urls": [
+    "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzcwMjMzL29yaWdpbmFsLzEvMjAyMi0wOC0yM1QwMCUzQTM4JTNBMjguOTU1MDAwJTJCMDAlM0EwMC83MDIzM18xLmpwZw=="
+   ],
+   "requirements": [],
+   "slug": "kartofel-mytyy-d917100",
+   "max_select_quantity": 999,
+   "canonical_url": "https://sbermarket.ru/products/70233-kartofel-mytyy-d917100",
+   "vat_info": null,
+   "bmpl_info": {},
+   "max_per_order": 217,
+   "ads_meta": null,
+   "with_options": false,
+   "is_beneficial": false,
+   "store_id": "135212",
+   "price_per_base_human_volume": "",
+   "prices_bank": null,
+   "sale_conditions": [
+    {
+     "id": 152,
+     "value": "Невозвратные категории"
+    },
+    {
+     "id": 154,
+     "value": "Невозвратные категории для отмен"
+    },
+    {
+     "id": 158,
+     "value": "Невозвратная для инвентаризации ДКП"
+    }
+   ],
+   "stock_discount_product_count": "0",
+   "stock_discount_product_left": "0",
+   "retailer": null,
+   "store": null,
+   "bmpl_values": {},
+   "discount_percent": 0,
+   "score_details": {
+    "feedback_count": 121,
+    "feedback_source": "ВкусВилл",
+    "comment_count": 45
+   }
+  },
+  {
+   "id": "181019",
+   "sku": "75798",
+   "retailer_sku": "181019",
+   "available": true,
+   "legacy_offer_id": 37692140952,
+   "name": "Картофель красный",
+   "price": 88.99,
+   "original_price": 88.99,
+   "discount": 0,
+   "human_volume": "1 кг",
+   "volume": 1,
+   "volume_type": "kg",
+   "items_per_pack": 1,
+   "discount_ends_at": "2026-10-29T00:00:00.000+00:00",
+   "price_type": "per_kilo",
+   "grams_per_unit": 1000,
+   "unit_price": 88.99,
+   "original_unit_price": 88.99,
+   "promo_badge_ids": [],
+   "score": 4.2,
+   "labels": [],
+   "image_urls": [
+    "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzc1Nzk4L29yaWdpbmFsLzEvMjAyMi0wOC0yM1QwMSUzQTUyJTNBMTkuOTg1MDAwJTJCMDAlM0EwMC83NTc5OF8xLmpwZw=="
+   ],
+   "requirements": [],
+   "slug": "kartofel-krasnyy-e0e7fdb",
+   "max_select_quantity": 999,
+   "canonical_url": "https://sbermarket.ru/products/75798-kartofel-krasnyy-e0e7fdb",
+   "vat_info": null,
+   "bmpl_info": {},
+   "max_per_order": 74,
+   "ads_meta": null,
+   "with_options": false,
+   "is_beneficial": false,
+   "store_id": "135212",
+   "price_per_base_human_volume": "",
+   "prices_bank": null,
+   "sale_conditions": [
+    {
+     "id": 152,
+     "value": "Невозвратные категории"
+    },
+    {
+     "id": 154,
+     "value": "Невозвратные категории для отмен"
+    },
+    {
+     "id": 158,
+     "value": "Невозвратная для инвентаризации ДКП"
+    }
+   ],
+   "stock_discount_product_count": "0",
+   "stock_discount_product_left": "0",
+   "retailer": null,
+   "store": null,
+   "bmpl_values": {},
+   "discount_percent": 0,
+   "score_details": {
+    "feedback_count": 92,
+    "feedback_source": "ВкусВилл",
+    "comment_count": 27
+   }
+  },
+  {
+   "id": "41425",
+   "sku": "70227",
+   "retailer_sku": "41425",
+   "available": true,
+   "legacy_offer_id": 37735146792,
+   "name": "Картофель белый",
+   "price": 88.99,
+   "original_price": 88.99,
+   "discount": 0,
+   "human_volume": "1 кг",
+   "volume": 1,
+   "volume_type": "kg",
+   "items_per_pack": 1,
+   "discount_ends_at": "2026-10-29T00:00:00.000+00:00",
+   "price_type": "per_kilo",
+   "grams_per_unit": 1000,
+   "unit_price": 88.99,
+   "original_unit_price": 88.99,
+   "promo_badge_ids": [],
+   "score": 3.8,
+   "labels": [],
+   "image_urls": [
+    "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzcwMjI3L29yaWdpbmFsLzEvMjAyMi0wOC0yM1QwMCUzQTE3JTNBNDQuMzA2MDAwJTJCMDAlM0EwMC83MDIyN18xLmpwZw=="
+   ],
+   "requirements": [],
+   "slug": "kartofel-belyy-1d0baed",
+   "max_select_quantity": 999,
+   "canonical_url": "https://sbermarket.ru/products/70227-kartofel-belyy-1d0baed",
+   "vat_info": null,
+   "bmpl_info": {},
+   "max_per_order": 157,
+   "ads_meta": null,
+   "with_options": false,
+   "is_beneficial": false,
+   "store_id": "135212",
+   "price_per_base_human_volume": "",
+   "prices_bank": null,
+   "sale_conditions": [
+    {
+     "id": 152,
+     "value": "Невозвратные категории"
+    },
+    {
+     "id": 154,
+     "value": "Невозвратные категории для отмен"
+    },
+    {
+     "id": 158,
+     "value": "Невозвратная для инвентаризации ДКП"
+    }
+   ],
+   "stock_discount_product_count": "0",
+   "stock_discount_product_left": "0",
+   "retailer": null,
+   "store": null,
+   "bmpl_values": {},
+   "discount_percent": 0,
+   "score_details": {
+    "feedback_count": 4,
+    "feedback_source": "ВкусВилл",
+    "comment_count": 2
+   }
+  },
+  {
+   "id": "187384",
+   "sku": "99627",
+   "retailer_sku": "187384",
+   "available": true,
+   "legacy_offer_id": 37793194882,
+   "name": "Картофель красный мытый",
+   "price": 126.99,
+   "original_price": 126.99,
+   "discount": 0,
+   "human_volume": "1000 г",
+   "volume": 1000,
+   "volume_type": "g",
+   "items_per_pack": 1,
+   "discount_ends_at": "2026-10-29T00:00:00.000+00:00",
+   "price_type": "per_kilo",
+   "grams_per_unit": 1000,
+   "unit_price": 126.99,
+   "original_unit_price": 126.99,
+   "promo_badge_ids": [],
+   "score": 4.6,
+   "labels": [],
+   "image_urls": [
+    "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzk5NjI3L29yaWdpbmFsLzEvMjAyMy0xMS0yNFQxNiUzQTI3JTNBMjEuMzkxMzIzJTJCMDAlM0EwMC85OTYyN18xLmpwZw=="
+   ],
+   "requirements": [],
+   "slug": "kartofel-krasnyy-mytyy-7d96c08",
+   "max_select_quantity": 999,
+   "canonical_url": "https://sbermarket.ru/products/99627-kartofel-krasnyy-mytyy-7d96c08",
+   "vat_info": null,
+   "bmpl_info": {},
+   "max_per_order": 45,
+   "ads_meta": null,
+   "with_options": false,
+   "is_beneficial": false,
+   "store_id": "135212",
+   "price_per_base_human_volume": "",
+   "prices_bank": null,
+   "sale_conditions": [
+    {
+     "id": 154,
+     "value": "Невозвратные категории для отмен"
+    },
+    {
+     "id": 152,
+     "value": "Невозвратные категории"
+    },
+    {
+     "id": 158,
+     "value": "Невозвратная для инвентаризации ДКП"
+    }
+   ],
+   "stock_discount_product_count": "0",
+   "stock_discount_product_left": "0",
+   "retailer": null,
+   "store": null,
+   "bmpl_values": {},
+   "discount_percent": 0,
+   "score_details": {
+    "feedback_count": 43,
+    "feedback_source": "ВкусВилл",
+    "comment_count": 16
+   }
+  },
+  {
+   "id": "422456",
+   "sku": "18962495",
+   "retailer_sku": "422456",
+   "available": true,
+   "legacy_offer_id": 37690167342,
+   "name": "Картофель Беби мытый ~2 кг",
+   "price": 339.98,
+   "original_price": 339.98,
+   "discount": 0,
+   "human_volume": "2 кг",
+   "volume": 2,
+   "volume_type": "kg",
+   "items_per_pack": 1,
+   "discount_ends_at": "1970-01-01T00:00:00.000+00:00",
+   "price_type": "per_package",
+   "grams_per_unit": 2000,
+   "unit_price": 169.99,
+   "original_unit_price": 169.99,
+   "promo_badge_ids": [],
+   "score": 3.6,
+   "labels": [],
+   "image_urls": [
+    "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzE4OTYyNDk1L29yaWdpbmFsLzEvMjAyMi0wOC0yM1QxNCUzQTQ4JTNBMDMuOTc4MDAwJTJCMDAlM0EwMC8xODk2MjQ5NV8xLmpwZw=="
+   ],
+   "requirements": [],
+   "slug": "kartofel-bebi-mytyy-2-kg-299501c",
+   "max_select_quantity": 999,
+   "canonical_url": "https://sbermarket.ru/products/18962495-kartofel-bebi-mytyy-2-kg-299501c",
+   "vat_info": null,
+   "bmpl_info": {},
+   "max_per_order": 20,
+   "ads_meta": null,
+   "with_options": false,
+   "is_beneficial": false,
+   "store_id": "135212",
+   "price_per_base_human_volume": "",
+   "prices_bank": null,
+   "sale_conditions": [
+    {
+     "id": 154,
+     "value": "Невозвратные категории для отмен"
+    },
+    {
+     "id": 152,
+     "value": "Невозвратные категории"
+    },
+    {
+     "id": 158,
+     "value": "Невозвратная для инвентаризации ДКП"
+    }
+   ],
+   "stock_discount_product_count": "0",
+   "stock_discount_product_left": "0",
+   "retailer": null,
+   "store": null,
+   "bmpl_values": {},
+   "discount_percent": 0,
+   "score_details": {
+    "feedback_count": 18,
+    "feedback_source": "ВкусВилл",
+    "comment_count": 11
+   }
+  },
+  {
+   "id": "567206",
+   "sku": "1548007",
+   "retailer_sku": "567206",
+   "available": true,
+   "legacy_offer_id": 40932185522,
+   "name": "Картофель We Fry по-деревенски со специями предобжаренный замороженный Халяль 700 г",
+   "price": 358.99,
+   "original_price": 358.99,
+   "discount": 0,
+   "human_volume": "700 г",
+   "volume": 700,
+   "volume_type": "g",
+   "items_per_pack": 1,
+   "discount_ends_at": "2026-10-29T00:00:00.000+00:00",
+   "price_type": "per_item",
+   "grams_per_unit": 700,
+   "unit_price": 358.99,
+   "original_unit_price": 358.99,
+   "promo_badge_ids": [],
+   "score": null,
+   "labels": [],
+   "image_urls": [
+    "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzE1NDgwMDcvb3JpZ2luYWwvMS8yMDI2LTA4LTI2JTIwMDclM0ExMSUzQTE4Ljc5OTA5NiUyQjAwJTNBMDAvMTU0ODAwN18xLmpwZw=="
+   ],
+   "requirements": [],
+   "slug": "kartofel-we-fry-po-derevenski-so-spetsiyami-predobzharennyy-zamorozhennyy-halyal-700-g",
+   "max_select_quantity": 999,
+   "canonical_url": "https://sbermarket.ru/products/1548007-kartofel-we-fry-po-derevenski-so-spetsiyami-predobzharennyy-zamorozhennyy-halyal-700-g",
+   "vat_info": null,
+   "bmpl_info": {},
+   "max_per_order": 28,
+   "ads_meta": null,
+   "with_options": false,
+   "is_beneficial": false,
+   "store_id": "135212",
+   "price_per_base_human_volume": "",
+   "prices_bank": null,
+   "sale_conditions": [
+    {
+     "id": 154,
+     "value": "Невозвратные категории для отмен"
+    },
+    {
+     "id": 152,
+     "value": "Невозвратные категории"
+    },
+    {
+     "id": 158,
+     "value": "Невозвратная для инвентаризации ДКП"
+    },
+    {
+     "id": 160,
+     "value": "Заморозка для шоппера"
+    }
+   ],
+   "stock_discount_product_count": "0",
+   "stock_discount_product_left": "0",
+   "retailer": null,
+   "store": null,
+   "bmpl_values": {},
+   "discount_percent": 0,
+   "score_details": null
+  }
+ ],
+ "meta": {
+  "current_page": "1",
+  "next_page": "2",
+  "previous_page": null,
+  "total_pages": "25",
+  "per_page": "24",
+  "total_count": "600"
+ }
+}

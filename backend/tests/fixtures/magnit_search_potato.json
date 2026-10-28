@@ -1,0 +1,440 @@
+{
+ "category": null,
+ "correctedTerm": null,
+ "items": [
+  {
+   "catalogType": "2",
+   "gallery": [
+    {
+     "type": "IMAGE",
+     "url": "https://images-foodtech.magnit.ru/Irv_q0gq-oeOFGt061uTQlNKse9FjAosG4V1vD0_9Fs/rs:fit:416:416/plain/s3://img-dostavka/catalog/pim/goods/9072651210/image/d62a2e839d84ab0f609f50ab7c91fc6a.jpeg@webp"
+    }
+   ],
+   "id": "9072651210",
+   "isAdditionalActionRequired": false,
+   "isBiometryRequired": false,
+   "isForAdults": false,
+   "isInFavorites": null,
+   "isLowStock": null,
+   "name": "Картофель",
+   "needPassport": false,
+   "orderProperties": {
+    "minOrderQuantity": 1,
+    "orderStepQuantity": 1
+   },
+   "orders": null,
+   "pickupOnly": false,
+   "price": 12400,
+   "productId": "9072651210",
+   "promotion": {
+    "discountPercent": null,
+    "endDate": null,
+    "isPromotion": false,
+    "oldPrice": null
+   },
+   "quantity": 146166,
+   "ratings": {
+    "commentsCount": 5995,
+    "external": null,
+    "rating": 4.7,
+    "scoresCount": 96188
+   },
+   "seoCode": "kartofel_1kg",
+   "service": "express",
+   "skuGroupId": null,
+   "skuIds": null,
+   "storeCode": "699422",
+   "targetCart": "express",
+   "weighted": {
+    "isWeighted": true,
+    "minStep": 1,
+    "shelfLabel": "2кг",
+    "shelfWeight": 2000,
+    "step": 2000,
+    "unitLabel": "1кг",
+    "unitPrice": 6200
+   }
+  },
+  {
+   "catalogType": "2",
+   "gallery": [
+    {
+     "type": "IMAGE",
+     "url": "https://images-foodtech.magnit.ru/ao_ZW5dj9ffQYy8ae31GPfIv71oEKndt_4ap7uH5iE0/rs:fit:416:416/plain/s3://img-dostavka/catalog/pim/goods/1445100062/image/d7ac31042bc6effb5824904d3450dbca.jpeg@webp"
+    }
+   ],
+   "id": "1445100062",
+   "isAdditionalActionRequired": false,
+   "isBiometryRequired": false,
+   "isForAdults": false,
+   "isInFavorites": null,
+   "isLowStock": null,
+   "name": "Картофель фасованный",
+   "needPassport": false,
+   "orderProperties": {
+    "minOrderQuantity": 1,
+    "orderStepQuantity": 1
+   },
+   "orders": null,
+   "pickupOnly": false,
+   "price": 12397,
+   "productId": "1445100062",
+   "promotion": {
+    "discountPercent": null,
+    "endDate": null,
+    "isPromotion": false,
+    "oldPrice": null
+   },
+   "quantity": 5400,
+   "ratings": {
+    "commentsCount": 3824,
+    "external": null,
+    "rating": 4.6,
+    "scoresCount": 66087
+   },
+   "seoCode": "kartofel_fasovannyy",
+   "service": "express",
+   "skuGroupId": null,
+   "skuIds": null,
+   "storeCode": "699422",
+   "targetCart": "express",
+   "weighted": {
+    "isWeighted": true,
+    "minStep": 1,
+    "shelfLabel": "2.48кг",
+    "shelfWeight": 2480,
+    "step": 2480,
+    "unitLabel": "1кг",
+    "unitPrice": 4999
+   }
+  },
+  {
+   "catalogType": "2",
+   "gallery": [
+    {
+     "type": "IMAGE",
+     "url": "https://images-foodtech.magnit.ru/jwhx9i1ypSQ-rcs5Ahwu0gIcgZAzUHNe9Sdlrp2gHMM/rs:fit:416:416/plain/s3://img-dostavka/catalog/pim/goods/1000453590/image/0233df8e960a13487709f1addf326533.jpeg@webp"
+    }
+   ],
+   "id": "1000453590",
+   "isAdditionalActionRequired": false,
+   "isBiometryRequired": false,
+   "isForAdults": false,
+   "isInFavorites": null,
+   "isLowStock": null,
+   "name": "Картофель белорусский",
+   "needPassport": false,
+   "orderProperties": {
+    "minOrderQuantity": 1,
+    "orderStepQuantity": 1
+   },
+   "orders": null,
+   "pickupOnly": false,
+   "price": 28500,
+   "productId": "1000453590",
+   "promotion": {
+    "discountPercent": null,
+    "endDate": null,
+    "isPromotion": false,
+    "oldPrice": null
+   },
+   "quantity": 34947,
+   "ratings": {
+    "commentsCount": 642,
+    "external": null,
+    "rating": 4.7,
+    "scoresCount": 8237
+   },
+   "seoCode": "kartofel_belorusskiy_3kg_tsena_za_kg",
+   "service": "express",
+   "skuGroupId": null,
+   "skuIds": null,
+   "storeCode": "699422",
+   "targetCart": "express",
+   "weighted": {
+    "isWeighted": true,
+    "minStep": 1,
+    "shelfLabel": "3кг",
+    "shelfWeight": 3000,
+    "step": 3000,
+    "unitLabel": "1кг",
+    "unitPrice": 9500
+   }
+  },
+  {
+   "catalogType": "2",
+   "gallery": [
+    {
+     "type": "IMAGE",
+     "url": "https://images-foodtech.magnit.ru/DQvnlbRqY2CrmDk8JDVYbFr_xmKZRnD2T3dAMK4uTpk/rs:fit:416:416/plain/s3://img-dostavka/catalog/uf/a05/a05c103636260a25a5047378784d9da3/e7718981394f1764868e0d91ffcc3967.jpeg@webp"
+    }
+   ],
+   "id": "1000164855",
+   "isAdditionalActionRequired": false,
+   "isBiometryRequired": false,
+   "isForAdults": false,
+   "isInFavorites": null,
+   "isLowStock": null,
+   "name": "Картофель отварной в вакууме 500г",
+   "needPassport": false,
+   "orderProperties": {
+    "minOrderQuantity": 1,
+    "orderStepQuantity": 1
+   },
+   "orders": null,
+   "pickupOnly": false,
+   "price": 12100,
+   "productId": "1000164855",
+   "promotion": {
+    "discountPercent": null,
+    "endDate": null,
+    "isPromotion": false,
+    "oldPrice": null
+   },
+   "quantity": 17,
+   "ratings": {
+    "commentsCount": 94,
+    "external": null,
+    "rating": 4.6,
+    "scoresCount": 784
+   },
+   "seoCode": "kartofel_otvarnoy_v_vakuume_500g",
+   "service": "express",
+   "skuGroupId": null,
+   "skuIds": null,
+   "storeCode": "699422",
+   "targetCart": "express",
+   "weighted": {
+    "isWeighted": false,
+    "minStep": null,
+    "shelfLabel": null,
+    "shelfWeight": null,
+    "step": null,
+    "unitLabel": null,
+    "unitPrice": null
+   }
+  },
+  {
+   "catalogType": "2",
+   "gallery": [
+    {
+     "type": "IMAGE",
+     "url": "https://images-foodtech.magnit.ru/pzkeeilzA_I3AwmryOTdAOfiQMK9JKICz-33PGpuAgo/rs:fit:416:416/plain/s3://img-dostavka/catalog/uf/5a3/5a389b79f796485f72b59a4bd2eb8427/1e95a1c3a9f727a283f03efd5f783928.jpeg@webp"
+    }
+   ],
+   "id": "1000188660",
+   "isAdditionalActionRequired": false,
+   "isBiometryRequired": false,
+   "isForAdults": false,
+   "isInFavorites": null,
+   "isLowStock": null,
+   "name": "Овощи по-деревенски Agama с картофелем быстрозамороженные 400г",
+   "needPassport": false,
+   "orderProperties": {
+    "minOrderQuantity": 1,
+    "orderStepQuantity": 1
+   },
+   "orders": null,
+   "pickupOnly": false,
+   "price": 12400,
+   "productId": "1000188660",
+   "promotion": {
+    "discountPercent": 37,
+    "endDate": "1970-01-01T00:00:00Z",
+    "isPromotion": true,
+    "oldPrice": 19900
+   },
+   "quantity": 14,
+   "ratings": {
+    "commentsCount": 366,
+    "external": null,
+    "rating": 4.8,
+    "scoresCount": 4832
+   },
+   "seoCode": "hortex_ovoshchi_po_derevenski_0_4kgfl_p_polski_ogrod_12",
+   "service": "express",
+   "skuGroupId": null,
+   "skuIds": null,
+   "storeCode": "699422",
+   "targetCart": "express",
+   "weighted": {
+    "isWeighted": false,
+    "minStep": null,
+    "shelfLabel": null,
+    "shelfWeight": null,
+    "step": null,
+    "unitLabel": null,
+    "unitPrice": null
+   }
+  },
+  {
+   "catalogType": "2",
+   "gallery": [
+    {
+     "type": "IMAGE",
+     "url": "https://images-foodtech.magnit.ru/ComNeLDWdxckFhjxlGCVOnGfXZ6Vk3tcHJ98tHFkWRY/rs:fit:416:416/plain/s3://img-dostavka/catalog/uf/db6/db6ff2bb440217fe4145d1731fa46c01/8e34f65007129ab0d3b9a6726978f50a.jpeg@webp"
+    }
+   ],
+   "id": "1000501488",
+   "isAdditionalActionRequired": false,
+   "isBiometryRequired": false,
+   "isForAdults": false,
+   "isInFavorites": null,
+   "isLowStock": null,
+   "name": "Картофель фри классический Халяль We Fry 700г",
+   "needPassport": false,
+   "orderProperties": {
+    "minOrderQuantity": 1,
+    "orderStepQuantity": 1
+   },
+   "orders": null,
+   "pickupOnly": false,
+   "price": 28400,
+   "productId": "1000501488",
+   "promotion": {
+    "discountPercent": null,
+    "endDate": null,
+    "isPromotion": false,
+    "oldPrice": null
+   },
+   "quantity": 13,
+   "ratings": {
+    "commentsCount": 278,
+    "external": null,
+    "rating": 4.8,
+    "scoresCount": 2665
+   },
+   "seoCode": "1500276460",
+   "service": "express",
+   "skuGroupId": null,
+   "skuIds": null,
+   "storeCode": "699422",
+   "targetCart": "express",
+   "weighted": {
+    "isWeighted": false,
+    "minStep": null,
+    "shelfLabel": null,
+    "shelfWeight": null,
+    "step": null,
+    "unitLabel": null,
+    "unitPrice": null
+   }
+  },
+  {
+   "catalogType": "2",
+   "gallery": [
+    {
+     "type": "IMAGE",
+     "url": "https://images-foodtech.magnit.ru/Uypm68KZ9BFC0nDHuTDBX7To58iNnGFDkupL7OQrsXQ/rs:fit:416:416/plain/s3://img-dostavka/catalog/pim/goods/1000306101/image/029eafe9b8c19308a8233e5bca6bdf16.jpeg@webp"
+    }
+   ],
+   "id": "1000306101",
+   "isAdditionalActionRequired": false,
+   "isBiometryRequired": false,
+   "isForAdults": false,
+   "isInFavorites": null,
+   "isLowStock": null,
+   "name": "Картофель Шарики пастеризованный 500г",
+   "needPassport": false,
+   "orderProperties": {
+    "minOrderQuantity": 1,
+    "orderStepQuantity": 1
+   },
+   "orders": null,
+   "pickupOnly": false,
+   "price": 10999,
+   "productId": "1000306101",
+   "promotion": {
+    "discountPercent": null,
+    "endDate": null,
+    "isPromotion": false,
+    "oldPrice": null
+   },
+   "quantity": 7,
+   "ratings": {
+    "commentsCount": 182,
+    "external": null,
+    "rating": 4.8,
+    "scoresCount": 1686
+   },
+   "seoCode": "kartofel_tselnyy_500g_vakuumnaya_upakovka_agrofirma_krimm_ooo_15",
+   "service": "express",
+   "skuGroupId": null,
+   "skuIds": null,
+   "storeCode": "699422",
+   "targetCart": "express",
+   "weighted": {
+    "isWeighted": false,
+    "minStep": null,
+    "shelfLabel": null,
+    "shelfWeight": null,
+    "step": null,
+    "unitLabel": null,
+    "unitPrice": null
+   }
+  },
+  {
+   "catalogType": "2",
+   "gallery": [
+    {
+     "type": "IMAGE",
+     "url": "https://images-foodtech.magnit.ru/pOAVrZSN2Wd_rPye6MxSxlBKWD91-B2V2YAky02Xujg/rs:fit:416:416/plain/s3://img-dostavka/catalog/uf/829/829764d665eaa3bda63f84c7364bdb5c/d729ed0088ce32e03434e3116b66f0ea.jpeg@webp"
+    }
+   ],
+   "id": "1000342155",
+   "isAdditionalActionRequired": false,
+   "isBiometryRequired": false,
+   "isForAdults": false,
+   "isInFavorites": null,
+   "isLowStock": null,
+   "name": "Картофель Кримм Чили с беконом пастеризованный с соусом 500г",
+   "needPassport": false,
+   "orderProperties": {
+    "minOrderQuantity": 1,
+    "orderStepQuantity": 1
+   },
+   "orders": null,
+   "pickupOnly": false,
+   "price": 12499,
+   "productId": "1000342155",
+   "promotion": {
+    "discountPercent": null,
+    "endDate": null,
+    "isPromotion": false,
+    "oldPrice": null
+   },
+   "quantity": 4,
+   "ratings": {
+    "commentsCount": 8,
+    "external": null,
+    "rating": 4.5,
+    "scoresCount": 61
+   },
+   "seoCode": "kartofel_s_sousom_chili_s_bekonom_500g_vakuumnaya_upakovka_agrofirma_krimm_ooo_11",
+   "service": "express",
+   "skuGroupId": null,
+   "skuIds": null,
+   "storeCode": "699422",
+   "targetCart": "express",
+   "weighted": {
+    "isWeighted": false,
+    "minStep": null,
+    "shelfLabel": null,
+    "shelfWeight": null,
+    "step": null,
+    "unitLabel": null,
+    "unitPrice": null
+   }
+  }
+ ],
+ "pagination": {
+  "hasMore": false,
+  "limit": 10,
+  "nextOffset": null,
+  "offset": 0,
+  "totalCount": 10
+ },
+ "resultId": "214f9467-fd1b-443a-9836-07c0c71a082e",
+ "term": "картофель",
+ "videoDelay": 1
+}

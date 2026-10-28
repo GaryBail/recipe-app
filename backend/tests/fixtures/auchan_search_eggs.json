@@ -1,0 +1,274 @@
+{
+ "items": [
+  {
+   "id": null,
+   "name": null,
+   "products": [
+    {
+     "id": 1728275,
+     "productId": 44963,
+     "code": "yayco-kurinoe-auchan-krasnaya-ptica-derevenskoe-s1-10-sht",
+     "name": "Яйцо куриное АШАН Красная птица Деревенское С1 столовое белое лоток, 10 шт",
+     "gimaId": "677062",
+     "basketStep": 1,
+     "active": true,
+     "isAdult": false,
+     "isB2b": true,
+     "is_new": false,
+     "stock": {
+      "qty": 63,
+      "storeId": 45,
+      "not_available": false
+     },
+     "price": {
+      "value": 109.99,
+      "currency": "RUB",
+      "per": "item"
+     },
+     "image": {
+      "id": 37330425
+     },
+     "imageUrl": "https://www.auchan.ru/files/original/37330425",
+     "brandName": "АШАН Красная птица",
+     "rate": {
+      "rating": 4.7,
+      "reviews_qnt": 75
+     },
+     "in_combo": false,
+     "package_display": "10 кг"
+    },
+    {
+     "id": 1728282,
+     "productId": 44967,
+     "code": "yayco-kurinoe-auchan-krasnaya-ptica-derevenskoe-so-30-sht",
+     "name": "Яйцо куриное АШАН Красная птица Деревенское С0 столовое белое лоток, 30 шт",
+     "gimaId": "677073",
+     "basketStep": 1,
+     "active": true,
+     "isAdult": false,
+     "isB2b": true,
+     "is_new": false,
+     "stock": {
+      "qty": 27,
+      "storeId": 45,
+      "not_available": false
+     },
+     "price": {
+      "value": 359.99,
+      "currency": "RUB",
+      "per": "item"
+     },
+     "image": {
+      "id": 37914015
+     },
+     "imageUrl": "https://www.auchan.ru/files/original/37914015",
+     "brandName": "АШАН Красная птица",
+     "rate": {
+      "rating": 4.5,
+      "reviews_qnt": 76
+     },
+     "in_combo": false,
+     "package_display": null
+    },
+    {
+     "id": 5593613,
+     "productId": 76332,
+     "code": "yayco_sinyavinskoe_s1_30_sht",
+     "name": "Яйцо куриное «Синявское» с ярким желтком С1 белое лоток, 30 шт",
+     "gimaId": "254320",
+     "basketStep": 1,
+     "active": true,
+     "isAdult": false,
+     "isB2b": true,
+     "is_new": false,
+     "stock": {
+      "qty": 51,
+      "storeId": 45,
+      "not_available": false
+     },
+     "price": {
+      "value": 369.99,
+      "currency": "RUB",
+      "per": "item"
+     },
+     "image": {
+      "id": 37330272
+     },
+     "imageUrl": "https://www.auchan.ru/files/original/37330272",
+     "brandName": "Синявинское",
+     "rate": {
+      "rating": 4.2,
+      "reviews_qnt": 41
+     },
+     "in_combo": false,
+     "package_display": null
+    },
+    {
+     "id": 5593642,
+     "productId": 76640,
+     "code": "yayco_sosinyavinskoe_k_zavtraku",
+     "name": "Яйцо куриное «Синявинское» К завтраку с ярким желтком С0 белое, 10 шт",
+     "gimaId": "500049",
+     "basketStep": 1,
+     "active": true,
+     "isAdult": false,
+     "isB2b": true,
+     "is_new": false,
+     "stock": {
+      "qty": 33,
+      "storeId": 45,
+      "not_available": false
+     },
+     "price": {
+      "value": 124.99,
+      "currency": "RUB",
+      "per": "item"
+     },
+     "image": {
+      "id": 37330389
+     },
+     "imageUrl": "https://www.auchan.ru/files/original/37330389",
+     "brandName": "Синявинское",
+     "rate": {
+      "rating": 4.4,
+      "reviews_qnt": 35
+     },
+     "in_combo": false,
+     "package_display": null
+    },
+    {
+     "id": 5593680,
+     "productId": 76916,
+     "code": "yayco_so_dereven_sinyavin10sht",
+     "name": "Яйцо куриное «Синявское» Деревенское с ярким желтком С0 белое, 10 шт",
+     "gimaId": "686729",
+     "basketStep": 1,
+     "active": true,
+     "isAdult": false,
+     "isB2b": true,
+     "is_new": false,
+     "stock": {
+      "qty": 34,
+      "storeId": 45,
+      "not_available": false
+     },
+     "price": {
+      "value": 134.99,
+      "currency": "RUB",
+      "per": "item"
+     },
+     "image": {
+      "id": 37330443
+     },
+     "imageUrl": "https://www.auchan.ru/files/original/37330443",
+     "brandName": "Синявинское",
+     "rate": {
+      "rating": 4.6,
+      "reviews_qnt": 25
+     },
+     "in_combo": false,
+     "package_display": null
+    },
+    {
+     "id": 5593700,
+     "productId": 77092,
+     "code": "yayco_sinyavinskoe_s0_30sht",
+     "name": "Яйцо куриное «Синявское» с ярким желтком С0 белое лоток, 30 шт",
+     "gimaId": "759950",
+     "basketStep": 1,
+     "active": true,
+     "isAdult": false,
+     "isB2b": true,
+     "is_new": false,
+     "stock": {
+      "qty": 26,
+      "storeId": 45,
+      "not_available": false
+     },
+     "price": {
+      "value": 409.99,
+      "currency": "RUB",
+      "per": "item"
+     },
+     "image": {
+      "id": 37330470
+     },
+     "imageUrl": "https://www.auchan.ru/files/original/37330470",
+     "brandName": "Синявинское",
+     "rate": {
+      "rating": 4.6,
+      "reviews_qnt": 8
+     },
+     "in_combo": false,
+     "package_display": null
+    },
+    {
+     "id": 8266584,
+     "productId": 109736,
+     "code": "kd-yayco-kurinoe-s1-10-sht-1",
+     "name": "Яйцо куриное «Каждый день» С1 цвет в ассортименте, 10 шт",
+     "gimaId": "471851",
+     "basketStep": 1,
+     "active": true,
+     "isAdult": false,
+     "isB2b": true,
+     "is_new": false,
+     "stock": {
+      "qty": 521,
+      "storeId": 45,
+      "not_available": false
+     },
+     "price": {
+      "value": 89.99,
+      "currency": "RUB",
+      "per": "item"
+     },
+     "image": {
+      "id": 37372770
+     },
+     "imageUrl": "https://www.auchan.ru/files/original/37372770",
+     "brandName": "Каждый день",
+     "rate": {
+      "rating": 4.8,
+      "reviews_qnt": 263
+     },
+     "in_combo": false,
+     "package_display": null
+    },
+    {
+     "id": 8292654,
+     "productId": 109737,
+     "code": "kd-yayco-kurinoe-s1-30-sht-1",
+     "name": "Яйцо куриное «Каждый день» С1 цвет в ассортименте лоток, 30 шт",
+     "gimaId": "471854",
+     "basketStep": 1,
+     "active": true,
+     "isAdult": false,
+     "isB2b": true,
+     "is_new": false,
+     "stock": {
+      "qty": 206,
+      "storeId": 45,
+      "not_available": false
+     },
+     "price": {
+      "value": 264.99,
+      "currency": "RUB",
+      "per": "item"
+     },
+     "image": {
+      "id": 37330368
+     },
+     "imageUrl": "https://www.auchan.ru/files/original/37330368",
+     "brandName": "Каждый день",
+     "rate": {
+      "rating": 4.7,
+      "reviews_qnt": 114
+     },
+     "in_combo": false,
+     "package_display": null
+    }
+   ]
+  }
+ ]
+}

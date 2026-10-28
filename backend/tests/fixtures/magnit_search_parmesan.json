@@ -1,0 +1,334 @@
+{
+ "category": null,
+ "correctedTerm": null,
+ "items": [
+  {
+   "catalogType": "2",
+   "gallery": [
+    {
+     "type": "IMAGE",
+     "url": "https://images-foodtech.magnit.ru/9y0i0Mxpp5U_ioK03bxY7YkhahTFFpMJG2j0sPitUHk/rs:fit:416:416/plain/s3://img-dostavka/catalog/uf/e81/e8188919c441b10359bf074dc3c22c82/dcfda657bd691e452ffc6a7484fbb7d1.jpeg@webp"
+    }
+   ],
+   "id": "1000125628",
+   "isAdditionalActionRequired": false,
+   "isBiometryRequired": false,
+   "isForAdults": false,
+   "isInFavorites": null,
+   "isLowStock": null,
+   "name": "Сыр Поставы Городок Пармезан гранд 45% 200г",
+   "needPassport": false,
+   "orderProperties": {
+    "minOrderQuantity": 1,
+    "orderStepQuantity": 1
+   },
+   "orders": null,
+   "pickupOnly": false,
+   "price": 22800,
+   "productId": "1000125628",
+   "promotion": {
+    "discountPercent": null,
+    "endDate": null,
+    "isPromotion": false,
+    "oldPrice": null
+   },
+   "quantity": 2,
+   "ratings": {
+    "commentsCount": 1384,
+    "external": null,
+    "rating": 4.7,
+    "scoresCount": 12413
+   },
+   "seoCode": "syr_parmezan_postavy_gorodok_grand_45_200g",
+   "service": "express",
+   "skuGroupId": null,
+   "skuIds": null,
+   "storeCode": "699422",
+   "targetCart": "express",
+   "weighted": {
+    "isWeighted": false,
+    "minStep": null,
+    "shelfLabel": null,
+    "shelfWeight": null,
+    "step": null,
+    "unitLabel": null,
+    "unitPrice": null
+   }
+  },
+  {
+   "catalogType": "2",
+   "gallery": [
+    {
+     "type": "VIDEO",
+     "url": "https://storage.yandexcloud.net/img-dostavka/pim/share_files/2026/09/08/c3449d1c-af10-4cba-a165-50cecc8e84db_1000384143.mp4"
+    }
+   ],
+   "id": "1000384143",
+   "isAdditionalActionRequired": false,
+   "isBiometryRequired": false,
+   "isForAdults": false,
+   "isInFavorites": null,
+   "isLowStock": null,
+   "name": "Сыр Пармезан Premiere of Taste весовой",
+   "needPassport": false,
+   "orderProperties": {
+    "minOrderQuantity": 1,
+    "orderStepQuantity": 1
+   },
+   "orders": null,
+   "pickupOnly": false,
+   "price": 37075,
+   "productId": "1000384143",
+   "promotion": {
+    "discountPercent": null,
+    "endDate": null,
+    "isPromotion": false,
+    "oldPrice": null
+   },
+   "quantity": 500,
+   "ratings": {
+    "commentsCount": 1361,
+    "external": null,
+    "rating": 5,
+    "scoresCount": 11297
+   },
+   "seoCode": "premiere_of_taste_syr_4249_parmezan_kuskovoy_tverdyy_v_termousadochnaya_upakovka_aktsionernoe_obshch",
+   "service": "express",
+   "skuGroupId": null,
+   "skuIds": null,
+   "storeCode": "699422",
+   "targetCart": "express",
+   "weighted": {
+    "isWeighted": true,
+    "minStep": 1,
+    "shelfLabel": "250г",
+    "shelfWeight": 250,
+    "step": 250,
+    "unitLabel": "1кг",
+    "unitPrice": 148300
+   }
+  },
+  {
+   "catalogType": "2",
+   "gallery": [
+    {
+     "type": "IMAGE",
+     "url": "https://images-foodtech.magnit.ru/dUeV0Ex-naMoij-QZ3MhDiO15aPPdGgTQJQQ2z2JRuo/rs:fit:416:416/plain/s3://img-dostavka/catalog/uf/139/13911033c07f162c6afb7d08a4e72795/3a02c0c20837e40c9baa9413ec739569.jpeg@webp"
+    }
+   ],
+   "id": "8000034445",
+   "isAdditionalActionRequired": false,
+   "isBiometryRequired": false,
+   "isForAdults": false,
+   "isInFavorites": null,
+   "isLowStock": null,
+   "name": "Молодой пармезан 40% весовой Истринская сыроварня Олега Сироты",
+   "needPassport": false,
+   "orderProperties": {
+    "minOrderQuantity": 1,
+    "orderStepQuantity": 1
+   },
+   "orders": null,
+   "pickupOnly": false,
+   "price": 21690,
+   "productId": "8000034445",
+   "promotion": {
+    "discountPercent": null,
+    "endDate": null,
+    "isPromotion": false,
+    "oldPrice": null
+   },
+   "quantity": 1262,
+   "ratings": {
+    "commentsCount": 84,
+    "external": null,
+    "rating": 4.8,
+    "scoresCount": 409
+   },
+   "seoCode": "istr_syrovar_olega_siroty_syr_molodoy_parmezan_40_v_up",
+   "service": "express",
+   "skuGroupId": null,
+   "skuIds": null,
+   "storeCode": "699422",
+   "targetCart": "express",
+   "weighted": {
+    "isWeighted": true,
+    "minStep": 1,
+    "shelfLabel": "150г",
+    "shelfWeight": 150,
+    "step": 150,
+    "unitLabel": "1кг",
+    "unitPrice": 144600
+   }
+  },
+  {
+   "catalogType": "2",
+   "gallery": [
+    {
+     "type": "IMAGE",
+     "url": "https://images-foodtech.magnit.ru/yhuBbrhLLwrT2BD6IY6rvoMqwHO_ySTmgHE7zryl1jE/rs:fit:416:416/plain/s3://img-dostavka/catalog/uf/3b7/3b796824449595a47d6891d67a6343a4/abcbeae6ae483e69f07e9bf6bbfa31f8.jpeg@webp"
+    }
+   ],
+   "id": "1000578272",
+   "isAdditionalActionRequired": false,
+   "isBiometryRequired": false,
+   "isForAdults": false,
+   "isInFavorites": null,
+   "isLowStock": null,
+   "name": "Сыр Dolce Granto Пармезан 40% весовой",
+   "needPassport": false,
+   "orderProperties": {
+    "minOrderQuantity": 1,
+    "orderStepQuantity": 1
+   },
+   "orders": null,
+   "pickupOnly": false,
+   "price": 25498,
+   "productId": "1000578272",
+   "promotion": {
+    "discountPercent": 15,
+    "endDate": "2027-01-12T23:59:59Z",
+    "isPromotion": true,
+    "oldPrice": 29998
+   },
+   "quantity": 1763,
+   "ratings": {
+    "commentsCount": 20,
+    "external": null,
+    "rating": 4.9,
+    "scoresCount": 237
+   },
+   "seoCode": "dolce_granto_syr_parmezan_40_mgs_nevskie_syry",
+   "service": "express",
+   "skuGroupId": null,
+   "skuIds": null,
+   "storeCode": "699422",
+   "targetCart": "express",
+   "weighted": {
+    "isWeighted": true,
+    "minStep": 1,
+    "shelfLabel": "150г",
+    "shelfWeight": 150,
+    "step": 150,
+    "unitLabel": "1кг",
+    "unitPrice": 169990
+   }
+  },
+  {
+   "catalogType": "2",
+   "gallery": [
+    {
+     "type": "IMAGE",
+     "url": "https://images-foodtech.magnit.ru/1_PINjea-x7vBe2kZW1-vciTiL4PnSwTjg6_-BBTEV4/rs:fit:416:416/plain/s3://img-dostavka/catalog/uf/ef3/ef32aff21786a9a349ca8ad0f969e179/617d305c2a0ab790573df178f6f0d3d2.jpeg@webp"
+    }
+   ],
+   "id": "8000057659",
+   "isAdditionalActionRequired": false,
+   "isBiometryRequired": false,
+   "isForAdults": false,
+   "isInFavorites": null,
+   "isLowStock": null,
+   "name": "Сыр Пармезан Belster твердый 40% весовой",
+   "needPassport": false,
+   "orderProperties": {
+    "minOrderQuantity": 1,
+    "orderStepQuantity": 1
+   },
+   "orders": null,
+   "pickupOnly": false,
+   "price": 29600,
+   "productId": "8000057659",
+   "promotion": {
+    "discountPercent": 17,
+    "endDate": "1970-01-01T00:00:00Z",
+    "isPromotion": true,
+    "oldPrice": 35700
+   },
+   "quantity": 219,
+   "ratings": {
+    "commentsCount": 517,
+    "external": null,
+    "rating": 4.8,
+    "scoresCount": 2006
+   },
+   "seoCode": "belster_syr_parmezan_tverdyy_40",
+   "service": "express",
+   "skuGroupId": null,
+   "skuIds": null,
+   "storeCode": "699422",
+   "targetCart": "express",
+   "weighted": {
+    "isWeighted": true,
+    "minStep": 1,
+    "shelfLabel": "200г",
+    "shelfWeight": 200,
+    "step": 200,
+    "unitLabel": "1кг",
+    "unitPrice": 148000
+   }
+  },
+  {
+   "catalogType": "2",
+   "gallery": [
+    {
+     "type": "IMAGE",
+     "url": "https://images-foodtech.magnit.ru/uzhTtlbOTMGxd5L59A-9SG62SQSfipCC35Qxcvj4zMU/rs:fit:416:416/plain/s3://img-dostavka/catalog/uf/69c/69c8e53335269cd07424318385ca1fd8/3c11027c008bde1a03fff0fb4cb8079a.jpeg@webp"
+    }
+   ],
+   "id": "1000371470",
+   "isAdditionalActionRequired": false,
+   "isBiometryRequired": false,
+   "isForAdults": false,
+   "isInFavorites": null,
+   "isLowStock": null,
+   "name": "Сыр Laime Пармезан выдержанный 40% весовой",
+   "needPassport": false,
+   "orderProperties": {
+    "minOrderQuantity": 1,
+    "orderStepQuantity": 1
+   },
+   "orders": null,
+   "pickupOnly": false,
+   "price": 49997,
+   "productId": "1000371470",
+   "promotion": {
+    "discountPercent": 20,
+    "endDate": "2027-01-12T23:59:59Z",
+    "isPromotion": true,
+    "oldPrice": 62497
+   },
+   "quantity": 2920,
+   "ratings": {
+    "commentsCount": 82,
+    "external": null,
+    "rating": 4.8,
+    "scoresCount": 1057
+   },
+   "seoCode": "laime_syr_parmezan_40_1kg_v_vakuumnaya_upakovka_ooo_pir_pak_1",
+   "service": "express",
+   "skuGroupId": null,
+   "skuIds": null,
+   "storeCode": "699422",
+   "targetCart": "express",
+   "weighted": {
+    "isWeighted": true,
+    "minStep": 1,
+    "shelfLabel": "250г",
+    "shelfWeight": 250,
+    "step": 250,
+    "unitLabel": "1кг",
+    "unitPrice": 199990
+   }
+  }
+ ],
+ "pagination": {
+  "hasMore": false,
+  "limit": 10,
+  "nextOffset": null,
+  "offset": 0,
+  "totalCount": 6
+ },
+ "resultId": "e2cc0732-5d1f-4456-bee2-64b84badc6ab",
+ "term": "пармезан",
+ "videoDelay": 1
+}

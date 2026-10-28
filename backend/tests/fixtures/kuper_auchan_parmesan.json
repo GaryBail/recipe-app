@@ -1,0 +1,412 @@
+{
+ "products": [
+  {
+   "id": "468471",
+   "sku": "49417040",
+   "retailer_sku": "468471",
+   "available": true,
+   "legacy_offer_id": 40661241870,
+   "name": "Сыр твёрдый Natura Пармезан 40% БЗМЖ 180 г",
+   "price": 229.99,
+   "original_price": 229.99,
+   "discount": 0,
+   "human_volume": "180 г",
+   "volume": 180,
+   "volume_type": "g",
+   "items_per_pack": 1,
+   "discount_ends_at": "1970-01-01T00:00:00.000+00:00",
+   "price_type": "per_item",
+   "grams_per_unit": 180,
+   "unit_price": 229.99,
+   "original_unit_price": 229.99,
+   "promo_badge_ids": [],
+   "score": 5,
+   "labels": [],
+   "image_urls": [
+    "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzQ5NDE3MDQwL29yaWdpbmFsLzEvMjAyNi0wMi0wNiUyMDExJTNBMzUlM0EzNS43MDg1ODAlMkIwMCUzQTAwLzQ5NDE3MDQwXzEuanBn"
+   ],
+   "requirements": [],
+   "slug": "syr-tvyordyy-natura-parmezan-40-bzmzh-180-g",
+   "max_select_quantity": 999,
+   "canonical_url": "https://sbermarket.ru/products/49417040-syr-tvyordyy-natura-parmezan-40-bzmzh-180-g",
+   "vat_info": null,
+   "bmpl_info": {},
+   "max_per_order": 17,
+   "ads_meta": null,
+   "with_options": false,
+   "is_beneficial": false,
+   "store_id": "276",
+   "price_per_base_human_volume": "",
+   "prices_bank": null,
+   "sale_conditions": [
+    {
+     "id": 154,
+     "value": "Невозвратные категории для отмен"
+    },
+    {
+     "id": 152,
+     "value": "Невозвратные категории"
+    },
+    {
+     "id": 158,
+     "value": "Невозвратная для инвентаризации ДКП"
+    },
+    {
+     "id": 161,
+     "value": "Охлажденка для шоппера"
+    }
+   ],
+   "stock_discount_product_count": "0",
+   "stock_discount_product_left": "0",
+   "retailer": null,
+   "store": null,
+   "bmpl_values": {},
+   "discount_percent": 0,
+   "score_details": {
+    "feedback_count": 1,
+    "feedback_source": "ВкусВилл",
+    "comment_count": 1
+   }
+  },
+  {
+   "id": "562200",
+   "sku": "48110649",
+   "retailer_sku": "562200",
+   "available": true,
+   "legacy_offer_id": 41349075520,
+   "name": "Сыр твёрдый Dolce Granto Пармезан 40% БЗМЖ 175 г",
+   "price": 309.99,
+   "original_price": 309.99,
+   "discount": 0,
+   "human_volume": "175 г",
+   "volume": 175,
+   "volume_type": "g",
+   "items_per_pack": 1,
+   "discount_ends_at": "1970-01-01T00:00:00.000+00:00",
+   "price_type": "per_item",
+   "grams_per_unit": 175,
+   "unit_price": 309.99,
+   "original_unit_price": 309.99,
+   "promo_badge_ids": [],
+   "score": null,
+   "labels": [],
+   "image_urls": [
+    "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzQ4MTEwNjQ5L29yaWdpbmFsLzEvMjAyNi0wOC0yMCUyMDE3JTNBMDYlM0EyOS42NDEwNTklMkIwMCUzQTAwLzQ4MTEwNjQ5XzEuanBn"
+   ],
+   "requirements": [],
+   "slug": "syr-tvyordyy-dolce-granto-parmezan-40-bzmzh-175-g-651e851",
+   "max_select_quantity": 999,
+   "canonical_url": "https://sbermarket.ru/products/48110649-syr-tvyordyy-dolce-granto-parmezan-40-bzmzh-175-g-651e851",
+   "vat_info": null,
+   "bmpl_info": {},
+   "max_per_order": 1,
+   "ads_meta": null,
+   "with_options": false,
+   "is_beneficial": false,
+   "store_id": "276",
+   "price_per_base_human_volume": "",
+   "prices_bank": null,
+   "sale_conditions": [
+    {
+     "id": 154,
+     "value": "Невозвратные категории для отмен"
+    },
+    {
+     "id": 152,
+     "value": "Невозвратные категории"
+    },
+    {
+     "id": 158,
+     "value": "Невозвратная для инвентаризации ДКП"
+    },
+    {
+     "id": 161,
+     "value": "Охлажденка для шоппера"
+    }
+   ],
+   "stock_discount_product_count": "0",
+   "stock_discount_product_left": "0",
+   "retailer": null,
+   "store": null,
+   "bmpl_values": {},
+   "discount_percent": 0,
+   "score_details": null
+  },
+  {
+   "id": "534504",
+   "sku": "49809518",
+   "retailer_sku": "534504",
+   "available": true,
+   "legacy_offer_id": 41201729170,
+   "name": "Сыр твердый Киприно Алтареджио Пармезан 12 месяцев колотый 45% 80 г",
+   "price": 169.96,
+   "original_price": 169.96,
+   "discount": 0,
+   "human_volume": "80 г",
+   "volume": 80,
+   "volume_type": "g",
+   "items_per_pack": 1,
+   "discount_ends_at": "1970-01-01T00:00:00.000+00:00",
+   "price_type": "per_item",
+   "grams_per_unit": 80,
+   "unit_price": 169.96,
+   "original_unit_price": 169.96,
+   "promo_badge_ids": [],
+   "score": null,
+   "labels": [],
+   "image_urls": [
+    "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzQ5ODA5NTE4L29yaWdpbmFsLzEvMjAyNi0wOC0yMCUyMDE3JTNBMDclM0ExOS43ODkwMTUlMkIwMCUzQTAwLzQ5ODA5NTE4XzEuanBn"
+   ],
+   "requirements": [],
+   "slug": "syr-tverdyy-kiprino-altaredzhio-parmezan-12-mesyatsev-kolotyy-45-80-g",
+   "max_select_quantity": 999,
+   "canonical_url": "https://sbermarket.ru/products/49809518-syr-tverdyy-kiprino-altaredzhio-parmezan-12-mesyatsev-kolotyy-45-80-g",
+   "vat_info": null,
+   "bmpl_info": {},
+   "max_per_order": 11,
+   "ads_meta": null,
+   "with_options": false,
+   "is_beneficial": false,
+   "store_id": "276",
+   "price_per_base_human_volume": "",
+   "prices_bank": null,
+   "sale_conditions": [
+    {
+     "id": 154,
+     "value": "Невозвратные категории для отмен"
+    },
+    {
+     "id": 152,
+     "value": "Невозвратные категории"
+    },
+    {
+     "id": 158,
+     "value": "Невозвратная для инвентаризации ДКП"
+    },
+    {
+     "id": 161,
+     "value": "Охлажденка для шоппера"
+    }
+   ],
+   "stock_discount_product_count": "0",
+   "stock_discount_product_left": "0",
+   "retailer": null,
+   "store": null,
+   "bmpl_values": {},
+   "discount_percent": 0,
+   "score_details": null
+  },
+  {
+   "id": "377157",
+   "sku": "47429722",
+   "retailer_sku": "377157",
+   "available": true,
+   "legacy_offer_id": 39388040750,
+   "name": "Сыр твёрдый Сыробогатов Пармезан 40% БЗМЖ 180 г",
+   "price": 219.99,
+   "original_price": 309.99,
+   "discount": 90,
+   "human_volume": "180 г",
+   "volume": 180,
+   "volume_type": "g",
+   "items_per_pack": 1,
+   "discount_ends_at": "2026-11-04T00:00:00.000+00:00",
+   "price_type": "per_item",
+   "grams_per_unit": 180,
+   "unit_price": 219.99,
+   "original_unit_price": 309.99,
+   "promo_badge_ids": [],
+   "score": 4.2,
+   "labels": [],
+   "image_urls": [
+    "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzQ3NDI5NzIyL29yaWdpbmFsLzEvMjAyNS0wNy0xMSUyMDE1JTNBMDglM0EyMy4yNDY4OTklMkIwMCUzQTAwLzQ3NDI5NzIyXzEuanBn"
+   ],
+   "requirements": [],
+   "slug": "syr-tvyordyy-syrobogatov-parmezan-40-bzmzh-180-g-e263dc3",
+   "max_select_quantity": 999,
+   "canonical_url": "https://sbermarket.ru/products/47429722-syr-tvyordyy-syrobogatov-parmezan-40-bzmzh-180-g-e263dc3",
+   "vat_info": null,
+   "bmpl_info": {},
+   "max_per_order": 10,
+   "ads_meta": null,
+   "with_options": false,
+   "is_beneficial": false,
+   "store_id": "276",
+   "price_per_base_human_volume": "",
+   "prices_bank": null,
+   "sale_conditions": [
+    {
+     "id": 154,
+     "value": "Невозвратные категории для отмен"
+    },
+    {
+     "id": 152,
+     "value": "Невозвратные категории"
+    },
+    {
+     "id": 158,
+     "value": "Невозвратная для инвентаризации ДКП"
+    },
+    {
+     "id": 161,
+     "value": "Охлажденка для шоппера"
+    }
+   ],
+   "stock_discount_product_count": "0",
+   "stock_discount_product_left": "0",
+   "retailer": null,
+   "store": null,
+   "bmpl_values": {},
+   "discount_percent": 0,
+   "score_details": {
+    "feedback_count": 5,
+    "feedback_source": "ВкусВилл",
+    "comment_count": 3
+   }
+  },
+  {
+   "id": "902576",
+   "sku": "15293594",
+   "retailer_sku": "902576",
+   "available": true,
+   "legacy_offer_id": 29243599515,
+   "name": "Сыр твердый Dolce Granto Пармезан 40% БЗМЖ 200 г",
+   "price": 419.99,
+   "original_price": 419.99,
+   "discount": 0,
+   "human_volume": "200 г",
+   "volume": 200,
+   "volume_type": "g",
+   "items_per_pack": 1,
+   "discount_ends_at": "2026-10-28T00:00:00.000+00:00",
+   "price_type": "per_item",
+   "grams_per_unit": 200,
+   "unit_price": 419.99,
+   "original_unit_price": 419.99,
+   "promo_badge_ids": [],
+   "score": 4,
+   "labels": [],
+   "image_urls": [
+    "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzE1MjkzNTk0L29yaWdpbmFsLzEvMjAyNi0wOC0xMiUyMDE1JTNBMTQlM0E1NC4xMTI0NjclMkIwMCUzQTAwLzE1MjkzNTk0XzEuanBn"
+   ],
+   "requirements": [],
+   "slug": "syr-tverdyy-dolce-granto-parmezan-40-bzmzh-200-g",
+   "max_select_quantity": 999,
+   "canonical_url": "https://sbermarket.ru/products/15293594-syr-tverdyy-dolce-granto-parmezan-40-bzmzh-200-g",
+   "vat_info": null,
+   "bmpl_info": {},
+   "max_per_order": 5,
+   "ads_meta": null,
+   "with_options": false,
+   "is_beneficial": false,
+   "store_id": "276",
+   "price_per_base_human_volume": "",
+   "prices_bank": null,
+   "sale_conditions": [
+    {
+     "id": 154,
+     "value": "Невозвратные категории для отмен"
+    },
+    {
+     "id": 152,
+     "value": "Невозвратные категории"
+    },
+    {
+     "id": 158,
+     "value": "Невозвратная для инвентаризации ДКП"
+    },
+    {
+     "id": 161,
+     "value": "Охлажденка для шоппера"
+    }
+   ],
+   "stock_discount_product_count": "0",
+   "stock_discount_product_left": "0",
+   "retailer": null,
+   "store": null,
+   "bmpl_values": {},
+   "discount_percent": 0,
+   "score_details": {
+    "feedback_count": 12,
+    "feedback_source": "ВкусВилл",
+    "comment_count": 11
+   }
+  },
+  {
+   "id": "466713",
+   "sku": "32642452",
+   "retailer_sku": "466713",
+   "available": true,
+   "legacy_offer_id": 40623627780,
+   "name": "Сыр твердый Mario Parmigiani Пармезан 48% 180 г",
+   "price": 329.99,
+   "original_price": 329.99,
+   "discount": 0,
+   "human_volume": "180 г",
+   "volume": 180,
+   "volume_type": "g",
+   "items_per_pack": 1,
+   "discount_ends_at": "1970-01-01T00:00:00.000+00:00",
+   "price_type": "per_item",
+   "grams_per_unit": 180,
+   "unit_price": 329.99,
+   "original_unit_price": 329.99,
+   "promo_badge_ids": [],
+   "score": 2,
+   "labels": [],
+   "image_urls": [
+    "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzMyNjQyNDUyL29yaWdpbmFsLzEvMjAyNC0wNi0xNFQxMCUzQTA1JTNBNDcuOTI2NDk3JTJCMDAlM0EwMC8zMjY0MjQ1Ml8xLmpwZw=="
+   ],
+   "requirements": [],
+   "slug": "syr-tverdyy-mario-parmigiani-parmezan-48-180-g",
+   "max_select_quantity": 999,
+   "canonical_url": "https://sbermarket.ru/products/32642452-syr-tverdyy-mario-parmigiani-parmezan-48-180-g",
+   "vat_info": null,
+   "bmpl_info": {},
+   "max_per_order": 6,
+   "ads_meta": null,
+   "with_options": false,
+   "is_beneficial": false,
+   "store_id": "276",
+   "price_per_base_human_volume": "",
+   "prices_bank": null,
+   "sale_conditions": [
+    {
+     "id": 154,
+     "value": "Невозвратные категории для отмен"
+    },
+    {
+     "id": 152,
+     "value": "Невозвратные категории"
+    },
+    {
+     "id": 158,
+     "value": "Невозвратная для инвентаризации ДКП"
+    },
+    {
+     "id": 161,
+     "value": "Охлажденка для шоппера"
+    }
+   ],
+   "stock_discount_product_count": "0",
+   "stock_discount_product_left": "0",
+   "retailer": null,
+   "store": null,
+   "bmpl_values": {},
+   "discount_percent": 0,
+   "score_details": {
+    "feedback_count": 1,
+    "feedback_source": "ВкусВилл",
+    "comment_count": 1
+   }
+  }
+ ],
+ "meta": {
+  "current_page": "1",
+  "next_page": "2",
+  "previous_page": null,
+  "total_pages": "3",
+  "per_page": "24",
+  "total_count": "65"
+ }
+}

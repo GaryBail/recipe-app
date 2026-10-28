@@ -1,0 +1,396 @@
+{
+ "products": [
+  {
+   "id": "3454700001",
+   "sku": "1313466",
+   "retailer_sku": "3454700001",
+   "available": true,
+   "legacy_offer_id": 28108489171,
+   "name": "Яйцо куриное столовое С1 10 шт",
+   "price": 78,
+   "original_price": 78,
+   "discount": 0,
+   "human_volume": "600 г",
+   "volume": 600,
+   "volume_type": "g",
+   "items_per_pack": 1,
+   "discount_ends_at": "1970-01-01T00:00:00.000+00:00",
+   "price_type": "per_item",
+   "grams_per_unit": 600,
+   "unit_price": 78,
+   "original_unit_price": 78,
+   "promo_badge_ids": [],
+   "score": 4.4,
+   "labels": [],
+   "image_urls": [
+    "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzEzMTM0NjYvb3JpZ2luYWwvMS8yMDI2LTA1LTA1JTIwMTAlM0EyNyUzQTQ3LjI3Mzk2MCUyQjAwJTNBMDAvMTMxMzQ2Nl8xLmpwZw=="
+   ],
+   "requirements": [],
+   "slug": "yaytso-kurinoe-stolovoe-s1-10-sht-68ba98d",
+   "max_select_quantity": 999,
+   "canonical_url": "https://sbermarket.ru/products/1313466-yaytso-kurinoe-stolovoe-s1-10-sht-68ba98d",
+   "vat_info": null,
+   "bmpl_info": {},
+   "max_per_order": 4,
+   "ads_meta": null,
+   "with_options": false,
+   "is_beneficial": false,
+   "store_id": "3879",
+   "price_per_base_human_volume": "",
+   "prices_bank": null,
+   "sale_conditions": [
+    {
+     "id": 154,
+     "value": "Невозвратные категории для отмен"
+    },
+    {
+     "id": 152,
+     "value": "Невозвратные категории"
+    },
+    {
+     "id": 158,
+     "value": "Невозвратная для инвентаризации ДКП"
+    }
+   ],
+   "stock_discount_product_count": "0",
+   "stock_discount_product_left": "0",
+   "retailer": null,
+   "store": null,
+   "bmpl_values": {},
+   "discount_percent": 0,
+   "score_details": {
+    "feedback_count": 462,
+    "feedback_source": "ВкусВилл",
+    "comment_count": 247
+   }
+  },
+  {
+   "id": "1000222654",
+   "sku": "74300",
+   "retailer_sku": "1000222654",
+   "available": true,
+   "legacy_offer_id": 28108488171,
+   "name": "Яйцо куриное Экстра С0 коричневое 10 шт",
+   "price": 139,
+   "original_price": 139,
+   "discount": 0,
+   "human_volume": "700 г",
+   "volume": 700,
+   "volume_type": "g",
+   "items_per_pack": 1,
+   "discount_ends_at": "1970-01-01T00:00:00.000+00:00",
+   "price_type": "per_item",
+   "grams_per_unit": 700,
+   "unit_price": 139,
+   "original_unit_price": 139,
+   "promo_badge_ids": [],
+   "score": 5,
+   "labels": [],
+   "image_urls": [
+    "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzc0MzAwL29yaWdpbmFsLzEvMjAyMi0wOC0yMlQxOCUzQTEzJTNBMDYuMDIzMDAwJTJCMDAlM0EwMC83NDMwMF8xLmpwZw=="
+   ],
+   "requirements": [],
+   "slug": "yaytso-kurinoe-ekstra-s0-korichnevoe-10-sht",
+   "max_select_quantity": 999,
+   "canonical_url": "https://sbermarket.ru/products/74300-yaytso-kurinoe-ekstra-s0-korichnevoe-10-sht",
+   "vat_info": null,
+   "bmpl_info": {},
+   "max_per_order": 35,
+   "ads_meta": null,
+   "with_options": false,
+   "is_beneficial": false,
+   "store_id": "3879",
+   "price_per_base_human_volume": "",
+   "prices_bank": null,
+   "sale_conditions": [
+    {
+     "id": 152,
+     "value": "Невозвратные категории"
+    },
+    {
+     "id": 154,
+     "value": "Невозвратные категории для отмен"
+    },
+    {
+     "id": 158,
+     "value": "Невозвратная для инвентаризации ДКП"
+    }
+   ],
+   "stock_discount_product_count": "0",
+   "stock_discount_product_left": "0",
+   "retailer": null,
+   "store": null,
+   "bmpl_values": {},
+   "discount_percent": 0,
+   "score_details": {
+    "feedback_count": 14,
+    "feedback_source": "ВкусВилл",
+    "comment_count": 4
+   }
+  },
+  {
+   "id": "2047000007",
+   "sku": "23827009",
+   "retailer_sku": "2047000007",
+   "available": true,
+   "legacy_offer_id": 28108494229,
+   "name": "Яйцо куриное Чамзинская птицефабрика С2 10 шт",
+   "price": 71,
+   "original_price": 71,
+   "discount": 0,
+   "human_volume": "500 г",
+   "volume": 500,
+   "volume_type": "g",
+   "items_per_pack": 1,
+   "discount_ends_at": "1970-01-01T00:00:00.000+00:00",
+   "price_type": "per_item",
+   "grams_per_unit": 500,
+   "unit_price": 71,
+   "original_unit_price": 71,
+   "promo_badge_ids": [],
+   "score": 4,
+   "labels": [],
+   "image_urls": [
+    "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzIzODI3MDA5L29yaWdpbmFsLzEvMjAyNi0wNC0wOSUyMDE1JTNBMDQlM0E1Ni4xNjMzMzklMkIwMCUzQTAwLzIzODI3MDA5XzEuanBn"
+   ],
+   "requirements": [],
+   "slug": "yaytso-kurinoe-chamzinskaya-ptitsefabrika-s2-10-sht-9e16da7",
+   "max_select_quantity": 999,
+   "canonical_url": "https://sbermarket.ru/products/23827009-yaytso-kurinoe-chamzinskaya-ptitsefabrika-s2-10-sht-9e16da7",
+   "vat_info": null,
+   "bmpl_info": {},
+   "max_per_order": 4,
+   "ads_meta": null,
+   "with_options": false,
+   "is_beneficial": false,
+   "store_id": "3879",
+   "price_per_base_human_volume": "",
+   "prices_bank": null,
+   "sale_conditions": [
+    {
+     "id": 154,
+     "value": "Невозвратные категории для отмен"
+    },
+    {
+     "id": 152,
+     "value": "Невозвратные категории"
+    },
+    {
+     "id": 158,
+     "value": "Невозвратная для инвентаризации ДКП"
+    }
+   ],
+   "stock_discount_product_count": "0",
+   "stock_discount_product_left": "0",
+   "retailer": null,
+   "store": null,
+   "bmpl_values": {},
+   "discount_percent": 0,
+   "score_details": {
+    "feedback_count": 144,
+    "feedback_source": "ВкусВилл",
+    "comment_count": 79
+   }
+  },
+  {
+   "id": "1000229895",
+   "sku": "15247592",
+   "retailer_sku": "1000229895",
+   "available": true,
+   "legacy_offer_id": 28108489761,
+   "name": "Яйцо куриное Синявское К завтраку с ярким желтком С0 белое 10 шт",
+   "price": 129.99,
+   "original_price": 129.99,
+   "discount": 0,
+   "human_volume": "700 г",
+   "volume": 700,
+   "volume_type": "g",
+   "items_per_pack": 1,
+   "discount_ends_at": "1970-01-01T00:00:00.000+00:00",
+   "price_type": "per_item",
+   "grams_per_unit": 700,
+   "unit_price": 129.99,
+   "original_unit_price": 129.99,
+   "promo_badge_ids": [],
+   "score": 5,
+   "labels": [],
+   "image_urls": [
+    "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzE1MjQ3NTkyL29yaWdpbmFsLzEvMjAyNi0wNC0wNyUyMDE1JTNBMjYlM0EwMi4yNjQzODclMkIwMCUzQTAwLzE1MjQ3NTkyXzEuanBn"
+   ],
+   "requirements": [],
+   "slug": "yaytso-kurinoe-sinyavskoe-k-zavtraku-s-yarkim-zheltkom-s0-beloe-10-sht",
+   "max_select_quantity": 999,
+   "canonical_url": "https://sbermarket.ru/products/15247592-yaytso-kurinoe-sinyavskoe-k-zavtraku-s-yarkim-zheltkom-s0-beloe-10-sht",
+   "vat_info": null,
+   "bmpl_info": {},
+   "max_per_order": 17,
+   "ads_meta": null,
+   "with_options": false,
+   "is_beneficial": false,
+   "store_id": "3879",
+   "price_per_base_human_volume": "",
+   "prices_bank": null,
+   "sale_conditions": [
+    {
+     "id": 154,
+     "value": "Невозвратные категории для отмен"
+    },
+    {
+     "id": 152,
+     "value": "Невозвратные категории"
+    },
+    {
+     "id": 158,
+     "value": "Невозвратная для инвентаризации ДКП"
+    }
+   ],
+   "stock_discount_product_count": "0",
+   "stock_discount_product_left": "0",
+   "retailer": null,
+   "store": null,
+   "bmpl_values": {},
+   "discount_percent": 0,
+   "score_details": {
+    "feedback_count": 9,
+    "feedback_source": "ВкусВилл",
+    "comment_count": 0
+   }
+  },
+  {
+   "id": "1000247384",
+   "sku": "1435945",
+   "retailer_sku": "1000247384",
+   "available": true,
+   "legacy_offer_id": 30398937352,
+   "name": "Яйцо куриное Ешь Хорошее С1 белое 10 шт",
+   "price": 112.99,
+   "original_price": 129.99,
+   "discount": 17,
+   "human_volume": "600 г",
+   "volume": 600,
+   "volume_type": "g",
+   "items_per_pack": 1,
+   "discount_ends_at": "2026-11-10T23:59:59.000+00:00",
+   "price_type": "per_item",
+   "grams_per_unit": 600,
+   "unit_price": 112.99,
+   "original_unit_price": 129.99,
+   "promo_badge_ids": [],
+   "score": 5,
+   "labels": [],
+   "image_urls": [
+    "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzE0MzU5NDUvb3JpZ2luYWwvMS8yMDI2LTA0LTIwJTIwMTUlM0ExMyUzQTA3LjM1NjY0NiUyQjAwJTNBMDAvMTQzNTk0NV8xLmpwZw=="
+   ],
+   "requirements": [],
+   "slug": "yaytso-kurinoe-esh-horoshee-s1-beloe-10-sht-a40eec9",
+   "max_select_quantity": 999,
+   "canonical_url": "https://sbermarket.ru/products/1435945-yaytso-kurinoe-esh-horoshee-s1-beloe-10-sht-a40eec9",
+   "vat_info": null,
+   "bmpl_info": {},
+   "max_per_order": 26,
+   "ads_meta": null,
+   "with_options": false,
+   "is_beneficial": false,
+   "store_id": "3879",
+   "price_per_base_human_volume": "",
+   "prices_bank": null,
+   "sale_conditions": [
+    {
+     "id": 154,
+     "value": "Невозвратные категории для отмен"
+    },
+    {
+     "id": 152,
+     "value": "Невозвратные категории"
+    },
+    {
+     "id": 158,
+     "value": "Невозвратная для инвентаризации ДКП"
+    }
+   ],
+   "stock_discount_product_count": "0",
+   "stock_discount_product_left": "0",
+   "retailer": null,
+   "store": null,
+   "bmpl_values": {},
+   "discount_percent": 0,
+   "score_details": {
+    "feedback_count": 3,
+    "feedback_source": "ВкусВилл",
+    "comment_count": 3
+   }
+  },
+  {
+   "id": "1000247190",
+   "sku": "106547",
+   "retailer_sku": "1000247190",
+   "available": true,
+   "legacy_offer_id": 40982179543,
+   "name": "Яйцо куриное Yaratelle СО белое 10 шт",
+   "price": 119.99,
+   "original_price": 119.99,
+   "discount": 0,
+   "human_volume": "700 г",
+   "volume": 700,
+   "volume_type": "g",
+   "items_per_pack": 1,
+   "discount_ends_at": "1970-01-01T00:00:00.000+00:00",
+   "price_type": "per_item",
+   "grams_per_unit": 700,
+   "unit_price": 119.99,
+   "original_unit_price": 119.99,
+   "promo_badge_ids": [],
+   "score": 4.6,
+   "labels": [],
+   "image_urls": [
+    "https://imgproxy.kuper.ru/imgproxy/width-auto/czM6Ly9zYi1vYnMtcHJvZC1jb250ZW50LWltYWdlczAxL3Byb2R1Y3RzLzEwNjU0Ny9vcmlnaW5hbC8xLzIwMjYtMDUtMTMlMjAxNSUzQTI2JTNBMjYuMTMxNDA0JTJCMDAlM0EwMC8xMDY1NDdfMS5qcGc="
+   ],
+   "requirements": [],
+   "slug": "yaytso-kurinoe-yaratelle-so-beloe-10-sht",
+   "max_select_quantity": 999,
+   "canonical_url": "https://sbermarket.ru/products/106547-yaytso-kurinoe-yaratelle-so-beloe-10-sht",
+   "vat_info": null,
+   "bmpl_info": {},
+   "max_per_order": 63,
+   "ads_meta": null,
+   "with_options": false,
+   "is_beneficial": false,
+   "store_id": "3879",
+   "price_per_base_human_volume": "",
+   "prices_bank": null,
+   "sale_conditions": [
+    {
+     "id": 154,
+     "value": "Невозвратные категории для отмен"
+    },
+    {
+     "id": 152,
+     "value": "Невозвратные категории"
+    },
+    {
+     "id": 158,
+     "value": "Невозвратная для инвентаризации ДКП"
+    }
+   ],
+   "stock_discount_product_count": "0",
+   "stock_discount_product_left": "0",
+   "retailer": null,
+   "store": null,
+   "bmpl_values": {},
+   "discount_percent": 0,
+   "score_details": {
+    "feedback_count": 38,
+    "feedback_source": "ВкусВилл",
+    "comment_count": 8
+   }
+  }
+ ],
+ "meta": {
+  "current_page": "1",
+  "next_page": "2",
+  "previous_page": null,
+  "total_pages": "22",
+  "per_page": "24",
+  "total_count": "508"
+ }
+}

@@ -1,0 +1,98 @@
+{
+ "data": {
+  "shelves_data": {
+   "shop": {
+    "6b9121f0-b4b1-48b8-81ca-e65261574313": {
+     "id": "135212",
+     "minimum_order_amount": 800,
+     "retailer": {
+      "id": "23939",
+      "name": "Лента",
+      "slug": "lentagp"
+     }
+    },
+    "55ffd09f-4b14-4044-82c6-d7db28c8de8b": {
+     "id": "82",
+     "minimum_order_amount": 800,
+     "retailer": {
+      "id": "1",
+      "name": "METRO",
+      "slug": "metro"
+     }
+    },
+    "ed8441c2-8eca-4ae8-9662-5a6df13240ee": {
+     "id": "276",
+     "minimum_order_amount": 800,
+     "retailer": {
+      "id": "15",
+      "name": "АШАН",
+      "slug": "auchan"
+     }
+    },
+    "a58432bb-43a1-42c7-8cca-107764e058fa": {
+     "id": "3879",
+     "minimum_order_amount": 700,
+     "retailer": {
+      "id": "122",
+      "name": "Магнит",
+      "slug": "magnit_express"
+     }
+    },
+    "69642d68-6589-4589-9fdc-9997eac4746d": {
+     "id": "4527",
+     "minimum_order_amount": 500,
+     "retailer": {
+      "id": "24",
+      "name": "О'КЕЙ",
+      "slug": "okey"
+     }
+    },
+    "4f533c52-c9f5-45a0-a6d7-e3ce5234bf92": {
+     "id": "24945",
+     "minimum_order_amount": 700,
+     "retailer": {
+      "id": "123",
+      "name": "М.Косметик",
+      "slug": "magnitkosmetikbd"
+     }
+    },
+    "2a2e4dfb-a824-4750-8609-d59fc196ce72": {
+     "id": "132745",
+     "minimum_order_amount": 0,
+     "retailer": {
+      "id": "23259",
+      "name": "Азбука вкуса",
+      "slug": "azbuka-vkusa"
+     }
+    },
+    "cdefc52b-bcd9-4338-b087-b0c12b4d33cc": {
+     "id": "60847",
+     "minimum_order_amount": 0,
+     "retailer": {
+      "id": "9",
+      "name": "ВкусВилл",
+      "slug": "vkusvill"
+     }
+    },
+    "97a60dd3-a796-4acb-a06d-38055629f256": {
+     "id": "187181",
+     "minimum_order_amount": 500,
+     "retailer": {
+      "id": "20826",
+      "name": "Petshopru",
+      "slug": "petshopspb"
+     }
+    },
+    "122a5c36-e59c-44da-82d4-fe8c39d2c621": {
+     "id": "186550",
+     "minimum_order_amount": 1000,
+     "retailer": {
+      "id": "36007",
+      "name": "Tefal",
+      "slug": "tefal-ooo-giper"
+     }
+    }
+   }
+  }
+ }
+}

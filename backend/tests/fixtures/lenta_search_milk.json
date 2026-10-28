@@ -1,0 +1,285 @@
+{
+ "items": [
+  {
+   "categoryId": 3,
+   "count": 11,
+   "id": 1333,
+   "images": [
+    {
+     "id": 1333,
+     "pathIcon": "https://cdn.api.lenta.com/resample/webp/100x100/photo/1333/catalog-image/dea4dc7a-0ccc-4efb-9a5c-40438380ce90.png",
+     "pathLarge": "https://cdn.api.lenta.com/resample/webp/900x900/photo/1333/catalog-image/dea4dc7a-0ccc-4efb-9a5c-40438380ce90.png",
+     "pathMedium": "https://cdn.api.lenta.com/resample/webp/500x500/photo/1333/catalog-image/dea4dc7a-0ccc-4efb-9a5c-40438380ce90.png",
+     "pathOriginal": "https://cdn.api.lenta.com/resample/webp/0x0/photo/1333/catalog-image/dea4dc7a-0ccc-4efb-9a5c-40438380ce90.png",
+     "pathPreview": "https://cdn.api.lenta.com/resample/webp/250x250/photo/1333/catalog-image/dea4dc7a-0ccc-4efb-9a5c-40438380ce90.png",
+     "position": 1
+    }
+   ],
+   "isWeight": false,
+   "name": "Молоко пастеризованное ЛЕНТА 3,2%, без змж, 930мл",
+   "prices": {
+    "cost": 9999,
+    "costRegular": 11999,
+    "discount": 2000,
+    "discountPercentage": 17,
+    "isLoyaltyCardPrice": false,
+    "isPromoactionPrice": true,
+    "price": 9999,
+    "priceRegular": 11999
+   },
+   "slug": "moloko-past32-pet-butylka-bez-zmzh-rossiya-930-ml",
+   "storeId": 15,
+   "weight": {
+    "gross": 970,
+    "net": 0,
+    "package": "930 мл"
+   }
+  },
+  {
+   "categoryId": 3,
+   "count": 24,
+   "id": 667331,
+   "images": [
+    {
+     "id": 667331,
+     "pathIcon": "https://cdn.api.lenta.com/resample/webp/100x100/photo/667331/237014aa-bd52-40dc-8a26-def97006ef04.png",
+     "pathLarge": "https://cdn.api.lenta.com/resample/webp/900x900/photo/667331/237014aa-bd52-40dc-8a26-def97006ef04.png",
+     "pathMedium": "https://cdn.api.lenta.com/resample/webp/500x500/photo/667331/237014aa-bd52-40dc-8a26-def97006ef04.png",
+     "pathOriginal": "https://cdn.api.lenta.com/resample/webp/0x0/photo/667331/237014aa-bd52-40dc-8a26-def97006ef04.png",
+     "pathPreview": "https://cdn.api.lenta.com/resample/webp/250x250/photo/667331/237014aa-bd52-40dc-8a26-def97006ef04.png",
+     "position": 1
+    }
+   ],
+   "isWeight": false,
+   "name": "Молоко ультрапастеризованное ЛЕНТА LIFE низколактозное 1,8%, без змж, 950мл",
+   "prices": {
+    "cost": 13699,
+    "costRegular": 17399,
+    "discount": 3700,
+    "discountPercentage": 21,
+    "isLoyaltyCardPrice": false,
+    "isPromoactionPrice": true,
+    "price": 13699,
+    "priceRegular": 17399
+   },
+   "slug": "moloko-upast-pitevoe-nizkolaktoznoe-18-bez-zmzh-rossiya-950ml",
+   "storeId": 15,
+   "weight": {
+    "gross": 1013,
+    "net": 0,
+    "package": "950мл"
+   }
+  },
+  {
+   "categoryId": 3,
+   "count": 100,
+   "id": 80424,
+   "images": [
+    {
+     "id": 80424,
+     "pathIcon": "https://cdn.api.lenta.com/resample/webp/100x100/photo/80424/catalog-image/b3359e15-00e8-46d3-a300-b2e3bd2fb3fe.png",
+     "pathLarge": "https://cdn.api.lenta.com/resample/webp/900x900/photo/80424/catalog-image/b3359e15-00e8-46d3-a300-b2e3bd2fb3fe.png",
+     "pathMedium": "https://cdn.api.lenta.com/resample/webp/500x500/photo/80424/catalog-image/b3359e15-00e8-46d3-a300-b2e3bd2fb3fe.png",
+     "pathOriginal": "https://cdn.api.lenta.com/resample/webp/0x0/photo/80424/catalog-image/b3359e15-00e8-46d3-a300-b2e3bd2fb3fe.png",
+     "pathPreview": "https://cdn.api.lenta.com/resample/webp/250x250/photo/80424/catalog-image/b3359e15-00e8-46d3-a300-b2e3bd2fb3fe.png",
+     "position": 1
+    }
+   ],
+   "isWeight": false,
+   "name": "Молоко пастеризованное ПРОСТОКВАШИНО 2,5%, без змж, 930мл",
+   "prices": {
+    "cost": 9999,
+    "costRegular": 12499,
+    "discount": 2500,
+    "discountPercentage": 20,
+    "isLoyaltyCardPrice": false,
+    "isPromoactionPrice": true,
+    "price": 9999,
+    "priceRegular": 12499
+   },
+   "slug": "moloko-past-pitevoe-25-pet-bez-zmzh-rossiya-930ml",
+   "storeId": 15,
+   "weight": {
+    "gross": 960,
+    "net": 0,
+    "package": "930мл"
+   }
+  },
+  {
+   "categoryId": 3,
+   "count": 97,
+   "id": 179799,
+   "images": [
+    {
+     "id": 179799,
+     "pathIcon": "https://cdn.api.lenta.com/resample/webp/100x100/photo/179799/catalog-image/03b5cc8d-706a-48d9-bf13-4198440c0639.png",
+     "pathLarge": "https://cdn.api.lenta.com/resample/webp/900x900/photo/179799/catalog-image/03b5cc8d-706a-48d9-bf13-4198440c0639.png",
+     "pathMedium": "https://cdn.api.lenta.com/resample/webp/500x500/photo/179799/catalog-image/03b5cc8d-706a-48d9-bf13-4198440c0639.png",
+     "pathOriginal": "https://cdn.api.lenta.com/resample/webp/0x0/photo/179799/catalog-image/03b5cc8d-706a-48d9-bf13-4198440c0639.png",
+     "pathPreview": "https://cdn.api.lenta.com/resample/webp/250x250/photo/179799/catalog-image/03b5cc8d-706a-48d9-bf13-4198440c0639.png",
+     "position": 1
+    }
+   ],
+   "isWeight": false,
+   "name": "Молоко пастеризованное ДОМИК В ДЕРЕВНЕ 2,5%, без змж, 930мл",
+   "prices": {
+    "cost": 8999,
+    "costRegular": 12499,
+    "discount": 3500,
+    "discountPercentage": 28,
+    "isLoyaltyCardPrice": false,
+    "isPromoactionPrice": true,
+    "price": 8999,
+    "priceRegular": 12499
+   },
+   "slug": "moloko-past-25-bez-zmzh-rossiya-930ml",
+   "storeId": 15,
+   "weight": {
+    "gross": 985,
+    "net": 0,
+    "package": "930мл"
+   }
+  },
+  {
+   "categoryId": 3,
+   "count": 18,
+   "id": 656620,
+   "images": [
+    {
+     "id": 656620,
+     "pathIcon": "https://cdn.api.lenta.com/resample/webp/100x100/photo/656620/5c38fc46-6e47-42c6-81db-e4b32125d72d.png",
+     "pathLarge": "https://cdn.api.lenta.com/resample/webp/900x900/photo/656620/5c38fc46-6e47-42c6-81db-e4b32125d72d.png",
+     "pathMedium": "https://cdn.api.lenta.com/resample/webp/500x500/photo/656620/5c38fc46-6e47-42c6-81db-e4b32125d72d.png",
+     "pathOriginal": "https://cdn.api.lenta.com/resample/webp/0x0/photo/656620/5c38fc46-6e47-42c6-81db-e4b32125d72d.png",
+     "pathPreview": "https://cdn.api.lenta.com/resample/webp/250x250/photo/656620/5c38fc46-6e47-42c6-81db-e4b32125d72d.png",
+     "position": 1
+    }
+   ],
+   "isWeight": false,
+   "name": "Молоко пастеризованное СЕВЕРНОЕ МОЛОКО Вологодское 2,5%, без змж, 930г",
+   "prices": {
+    "cost": 8499,
+    "costRegular": 10499,
+    "discount": 2000,
+    "discountPercentage": 19,
+    "isLoyaltyCardPrice": false,
+    "isPromoactionPrice": true,
+    "price": 8499,
+    "priceRegular": 10499
+   },
+   "slug": "moloko-pasterizovannoe-vologodskoe-pitevoe-25-bez-zmzh-pet-rossiya-930g",
+   "storeId": 15,
+   "weight": {
+    "gross": 957,
+    "net": 0,
+    "package": "930г"
+   }
+  },
+  {
+   "categoryId": 3,
+   "count": 19,
+   "id": 93598,
+   "images": [
+    {
+     "id": 93598,
+     "pathIcon": "https://cdn.api.lenta.com/resample/webp/100x100/photo/93598/999a65a5-9d80-4a89-9865-e8a7c5be5c65.png",
+     "pathLarge": "https://cdn.api.lenta.com/resample/webp/900x900/photo/93598/999a65a5-9d80-4a89-9865-e8a7c5be5c65.png",
+     "pathMedium": "https://cdn.api.lenta.com/resample/webp/500x500/photo/93598/999a65a5-9d80-4a89-9865-e8a7c5be5c65.png",
+     "pathOriginal": "https://cdn.api.lenta.com/resample/webp/0x0/photo/93598/999a65a5-9d80-4a89-9865-e8a7c5be5c65.png",
+     "pathPreview": "https://cdn.api.lenta.com/resample/webp/250x250/photo/93598/999a65a5-9d80-4a89-9865-e8a7c5be5c65.png",
+     "position": 1
+    }
+   ],
+   "isWeight": false,
+   "name": "Молоко пастеризованное МЗ ПИСКАРЕВСКИЙ Пискарёвское 2,5%, без змж, 900мл",
+   "prices": {
+    "cost": 8099,
+    "costRegular": 8099,
+    "discount": 0,
+    "discountPercentage": 0,
+    "isLoyaltyCardPrice": false,
+    "isPromoactionPrice": false,
+    "price": 8099,
+    "priceRegular": 8099
+   },
+   "slug": "moloko-past-pitevoe-piskarevskoe-25-bez-zmzh-rossiya-900ml",
+   "storeId": 15,
+   "weight": {
+    "gross": 950,
+    "net": 0,
+    "package": "900мл"
+   }
+  },
+  {
+   "categoryId": 3,
+   "count": 75,
+   "id": 206807,
+   "images": [
+    {
+     "id": 206807,
+     "pathIcon": "https://cdn.api.lenta.com/resample/webp/100x100/photo/206807/catalog-image/0586369b-40bf-4c14-bcfa-f11a103a93bb.png",
+     "pathLarge": "https://cdn.api.lenta.com/resample/webp/900x900/photo/206807/catalog-image/0586369b-40bf-4c14-bcfa-f11a103a93bb.png",
+     "pathMedium": "https://cdn.api.lenta.com/resample/webp/500x500/photo/206807/catalog-image/0586369b-40bf-4c14-bcfa-f11a103a93bb.png",
+     "pathOriginal": "https://cdn.api.lenta.com/resample/webp/0x0/photo/206807/catalog-image/0586369b-40bf-4c14-bcfa-f11a103a93bb.png",
+     "pathPreview": "https://cdn.api.lenta.com/resample/webp/250x250/photo/206807/catalog-image/0586369b-40bf-4c14-bcfa-f11a103a93bb.png",
+     "position": 1
+    }
+   ],
+   "isWeight": false,
+   "name": "Молоко пастеризованное МЗ ПИСКАРЕВСКИЙ Пискарёвское 2,5%, без змж, 1000мл",
+   "prices": {
+    "cost": 10699,
+    "costRegular": 10699,
+    "discount": 0,
+    "discountPercentage": 0,
+    "isLoyaltyCardPrice": false,
+    "isPromoactionPrice": false,
+    "price": 10699,
+    "priceRegular": 10699
+   },
+   "slug": "moloko-past-piskarevskoe-25-pp-bez-zmzh-rossiya-1000ml",
+   "storeId": 15,
+   "weight": {
+    "gross": 1030,
+    "net": 0,
+    "package": "1000мл"
+   }
+  },
+  {
+   "categoryId": 3,
+   "count": 1302,
+   "id": 445793,
+   "images": [
+    {
+     "id": 445793,
+     "pathIcon": "https://cdn.api.lenta.com/resample/webp/100x100/photo/445793/a7781037-22cd-40df-a9e9-6d065db94a83.png",
+     "pathLarge": "https://cdn.api.lenta.com/resample/webp/900x900/photo/445793/a7781037-22cd-40df-a9e9-6d065db94a83.png",
+     "pathMedium": "https://cdn.api.lenta.com/resample/webp/500x500/photo/445793/a7781037-22cd-40df-a9e9-6d065db94a83.png",
+     "pathOriginal": "https://cdn.api.lenta.com/resample/webp/0x0/photo/445793/a7781037-22cd-40df-a9e9-6d065db94a83.png",
+     "pathPreview": "https://cdn.api.lenta.com/resample/webp/250x250/photo/445793/a7781037-22cd-40df-a9e9-6d065db94a83.png",
+     "position": 4
+    }
+   ],
+   "isWeight": false,
+   "name": "Молоко ультрапастеризованное СЕЛО ЗЕЛЕНОЕ 3,2%, без змж, 950мл",
+   "prices": {
+    "cost": 10399,
+    "costRegular": 12999,
+    "discount": 2600,
+    "discountPercentage": 20,
+    "isLoyaltyCardPrice": false,
+    "isPromoactionPrice": true,
+    "price": 10399,
+    "priceRegular": 12999
+   },
+   "slug": "moloko-upast-32--bez-zmzh-rossiya-950ml",
+   "storeId": 15,
+   "weight": {
+    "gross": 1008,
+    "net": 0,
+    "package": "950мл"
+   }
+  }
+ ],
+ "total": 301
+}

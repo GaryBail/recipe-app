@@ -25,7 +25,7 @@ jobs:
 
       - name: Start container
         run: |
-          docker run -d --name api -p 8000:8000 --shm-size=1g \
+          docker run -d --name api -p 8000:8000 \
             -e PRICE_WATCH=0 recipe-api
           for i in $(seq 1 30); do
             curl -fsS localhost:8000/health && break
@@ -35,7 +35,7 @@ jobs:
       - name: Smoke test API
         run: |
           set -e
-          curl -fsS localhost:8000/cities | grep -q msk
+          curl -fsS localhost:8000/cities | grep -q spb
           code=$(curl -s -o /dev/null -w '%{http_code}' -X POST localhost:8000/auth/register \
             -H 'Content-Type: application/json' \
             -d '{"email":"ci@example.com","password":"secret123","display_name":"CI"}')
@@ -44,15 +44,15 @@ jobs:
           docker logs api 2>&1 | grep -q "ваш код подтверждения"
           docker exec api python -c "import sqlite3; print(sqlite3.connect('/data/community.db').execute('select count(*) from users').fetchone())"
 
-      # Пробный поиск на настоящих сайтах. Сервер GitHub находится не в России,
-      # поэтому магазины могут не ответить — это не ошибка сборки.
+      # Пробный поиск в настоящих магазинах (Петербург). Сервер GitHub находится не в России,
+      # и Купер иногда отвечает проверкой на бота — это не ошибка сборки.
       - name: Try real store search (informational)
         continue-on-error: true
         run: |
-          for store in pyaterochka perekrestok; do
+          for store in lenta magnit auchan vkusvill kuper; do
             start=$(date +%s)
-            body=$(curl -sS --max-time 240 -w '\nHTTP %{http_code}' \
-              "localhost:8000/search?store=$store&city=msk&q=%D0%BC%D0%BE%D0%BB%D0%BE%D0%BA%D0%BE" 2>&1 || true)
+            body=$(curl -sS --max-time 60 -w '\nHTTP %{http_code}' \
+              "localhost:8000/search?store=$store&city=spb&q=%D0%BC%D0%BE%D0%BB%D0%BE%D0%BA%D0%BE" 2>&1 || true)
             took=$(( $(date +%s) - start ))
             summary=$(echo "$body" | python3 -c "
           import sys, json

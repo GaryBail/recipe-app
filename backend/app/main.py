@@ -94,20 +94,24 @@ def limit(s: Stores, key: str, rule: tuple[int, int]) -> None:
 
 
 def default_adapters() -> list[StoreAdapter]:
-    from .stores.perekrestok import PerekrestokAdapter
-    from .stores.pyaterochka import PyaterochkaAdapter
+    """Магазины: Лента (приоритетная сеть), Магнит, Ашан, ВкусВилл и Купер как агрегатор.
+    Сети X5 (Пятёрочка, Перекрёсток) намеренно не подключаем. STORES — список через запятую,
+    чтобы временно выключить магазин; KUPER_RETAILER — какую сеть показывать через Купер."""
+    from .stores.auchan import AuchanAdapter
+    from .stores.kuper import KuperAdapter
+    from .stores.lenta import LentaAdapter
+    from .stores.magnit import MagnitAdapter
     from .stores.vkusvill import VkusVillAdapter
 
-    return [PerekrestokAdapter(headless=headless_mode()), PyaterochkaAdapter(headless=headless_mode()),
-            VkusVillAdapter()]
-
-
-def headless_mode(raw: str | None = None) -> bool | str:
-    """HEADLESS: 1 — скрытый браузер, 0 — окно (для отладки), virtual — виртуальный экран Xvfb (на сервере)."""
-    raw = (raw if raw is not None else os.getenv("HEADLESS", "1")).strip().lower()
-    if raw == "virtual":
-        return "virtual"
-    return raw != "0"
+    factories = {
+        "lenta": LentaAdapter,
+        "magnit": MagnitAdapter,
+        "auchan": AuchanAdapter,
+        "vkusvill": VkusVillAdapter,
+        "kuper": lambda: KuperAdapter(os.getenv("KUPER_RETAILER", "Лента")),
+    }
+    enabled = [x.strip() for x in os.getenv("STORES", ",".join(factories)).split(",") if x.strip() in factories]
+    return [factories[x]() for x in enabled]
 
 
 def push_from_env() -> PushSender:
@@ -455,7 +459,7 @@ def watches_router(s: Stores, current_user) -> APIRouter:
     @r.put("/{client_id}")
     async def upsert_watch(client_id: str, body: WatchIn, user: dict = Depends(current_user)):
         if body.city_id not in WATCH_CITIES:
-            raise HTTPException(422, "Слежение за ценами пока работает только для Москвы")
+            raise HTTPException(422, "Слежение за ценами пока работает только для Санкт-Петербурга")
         if len(client_id) > 64:
             raise HTTPException(422, "Слишком длинный id")
         try:

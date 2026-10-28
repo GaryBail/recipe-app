@@ -1,0 +1,285 @@
+{
+ "items": [
+  {
+   "categoryId": 144,
+   "count": 15,
+   "id": 300886,
+   "images": [
+    {
+     "id": 300886,
+     "pathIcon": "https://cdn.api.lenta.com/resample/webp/100x100/photo/300886/catalog-image/d7b65216-7744-463b-b93d-b47ea6f7cf9a.png",
+     "pathLarge": "https://cdn.api.lenta.com/resample/webp/900x900/photo/300886/catalog-image/d7b65216-7744-463b-b93d-b47ea6f7cf9a.png",
+     "pathMedium": "https://cdn.api.lenta.com/resample/webp/500x500/photo/300886/catalog-image/d7b65216-7744-463b-b93d-b47ea6f7cf9a.png",
+     "pathOriginal": "https://cdn.api.lenta.com/resample/webp/0x0/photo/300886/catalog-image/d7b65216-7744-463b-b93d-b47ea6f7cf9a.png",
+     "pathPreview": "https://cdn.api.lenta.com/resample/webp/250x250/photo/300886/catalog-image/d7b65216-7744-463b-b93d-b47ea6f7cf9a.png",
+     "position": 1
+    }
+   ],
+   "isWeight": true,
+   "name": "Картофель, весовой",
+   "prices": {
+    "cost": 3499,
+    "costRegular": 3999,
+    "discount": 500,
+    "discountPercentage": 13,
+    "isLoyaltyCardPrice": false,
+    "isPromoactionPrice": true,
+    "price": 3499,
+    "priceRegular": 3999
+   },
+   "slug": "kartofel-ves-1kg",
+   "storeId": 15,
+   "weight": {
+    "gross": 1000,
+    "net": 1000,
+    "package": ""
+   }
+  },
+  {
+   "categoryId": 144,
+   "count": 42,
+   "id": 684309,
+   "images": [
+    {
+     "id": 684309,
+     "pathIcon": "https://cdn.api.lenta.com/resample/webp/100x100/photo/684309/68cbe06e-f20f-49f3-8f9d-4e284e4bde24.png",
+     "pathLarge": "https://cdn.api.lenta.com/resample/webp/900x900/photo/684309/68cbe06e-f20f-49f3-8f9d-4e284e4bde24.png",
+     "pathMedium": "https://cdn.api.lenta.com/resample/webp/500x500/photo/684309/68cbe06e-f20f-49f3-8f9d-4e284e4bde24.png",
+     "pathOriginal": "https://cdn.api.lenta.com/resample/webp/0x0/photo/684309/68cbe06e-f20f-49f3-8f9d-4e284e4bde24.png",
+     "pathPreview": "https://cdn.api.lenta.com/resample/webp/250x250/photo/684309/68cbe06e-f20f-49f3-8f9d-4e284e4bde24.png",
+     "position": 1
+    }
+   ],
+   "isWeight": false,
+   "name": "Картофель фри BONVIDA, 1,5кг",
+   "prices": {
+    "cost": 57599,
+    "costRegular": 62999,
+    "discount": 5400,
+    "discountPercentage": 9,
+    "isLoyaltyCardPrice": false,
+    "isPromoactionPrice": true,
+    "price": 57599,
+    "priceRegular": 62999
+   },
+   "slug": "kartofel-fri-zam-1500g",
+   "storeId": 15,
+   "weight": {
+    "gross": 1510,
+    "net": 0,
+    "package": "1500г"
+   }
+  },
+  {
+   "categoryId": 144,
+   "count": 168,
+   "id": 118887,
+   "images": [
+    {
+     "id": 118887,
+     "pathIcon": "https://cdn.api.lenta.com/resample/webp/100x100/photo/118887/pos-image/0ba888c8-5db6-46a8-8cde-78d70484bc93.png",
+     "pathLarge": "https://cdn.api.lenta.com/resample/webp/900x900/photo/118887/pos-image/0ba888c8-5db6-46a8-8cde-78d70484bc93.png",
+     "pathMedium": "https://cdn.api.lenta.com/resample/webp/500x500/photo/118887/pos-image/0ba888c8-5db6-46a8-8cde-78d70484bc93.png",
+     "pathOriginal": "https://cdn.api.lenta.com/resample/webp/0x0/photo/118887/pos-image/0ba888c8-5db6-46a8-8cde-78d70484bc93.png",
+     "pathPreview": "https://cdn.api.lenta.com/resample/webp/250x250/photo/118887/pos-image/0ba888c8-5db6-46a8-8cde-78d70484bc93.png",
+     "position": 1
+    }
+   ],
+   "isWeight": true,
+   "name": "Картофель белый мытый, весовой",
+   "prices": {
+    "cost": 6999,
+    "costRegular": 7999,
+    "discount": 1000,
+    "discountPercentage": 13,
+    "isLoyaltyCardPrice": false,
+    "isPromoactionPrice": true,
+    "price": 3500,
+    "priceRegular": 4000
+   },
+   "slug": "kartofel-belyjj-mytyjj-ves",
+   "storeId": 15,
+   "weight": {
+    "gross": 500,
+    "net": 500,
+    "package": ""
+   }
+  },
+  {
+   "categoryId": 144,
+   "count": 32,
+   "id": 370937,
+   "images": [
+    {
+     "id": 370937,
+     "pathIcon": "https://cdn.api.lenta.com/resample/webp/100x100/photo/370937/3f65abd2-2e21-43a6-8f2c-9a58af3c7ead.png",
+     "pathLarge": "https://cdn.api.lenta.com/resample/webp/900x900/photo/370937/3f65abd2-2e21-43a6-8f2c-9a58af3c7ead.png",
+     "pathMedium": "https://cdn.api.lenta.com/resample/webp/500x500/photo/370937/3f65abd2-2e21-43a6-8f2c-9a58af3c7ead.png",
+     "pathOriginal": "https://cdn.api.lenta.com/resample/webp/0x0/photo/370937/3f65abd2-2e21-43a6-8f2c-9a58af3c7ead.png",
+     "pathPreview": "https://cdn.api.lenta.com/resample/webp/250x250/photo/370937/3f65abd2-2e21-43a6-8f2c-9a58af3c7ead.png",
+     "position": 1
+    }
+   ],
+   "isWeight": false,
+   "name": "Картофель фри замороженный ЛЕНТА, 700г",
+   "prices": {
+    "cost": 28799,
+    "costRegular": 28799,
+    "discount": 0,
+    "discountPercentage": 0,
+    "isLoyaltyCardPrice": false,
+    "isPromoactionPrice": false,
+    "price": 28799,
+    "priceRegular": 28799
+   },
+   "slug": "kartofel-fri-zam-700g",
+   "storeId": 15,
+   "weight": {
+    "gross": 709,
+    "net": 0,
+    "package": "700г"
+   }
+  },
+  {
+   "categoryId": 144,
+   "count": 481,
+   "id": 41425,
+   "images": [
+    {
+     "id": 41425,
+     "pathIcon": "https://cdn.api.lenta.com/resample/webp/100x100/photo/41425/catalog-image/4f71e9a2-cc9a-4ef6-b125-987a1ccc8410.png",
+     "pathLarge": "https://cdn.api.lenta.com/resample/webp/900x900/photo/41425/catalog-image/4f71e9a2-cc9a-4ef6-b125-987a1ccc8410.png",
+     "pathMedium": "https://cdn.api.lenta.com/resample/webp/500x500/photo/41425/catalog-image/4f71e9a2-cc9a-4ef6-b125-987a1ccc8410.png",
+     "pathOriginal": "https://cdn.api.lenta.com/resample/webp/0x0/photo/41425/catalog-image/4f71e9a2-cc9a-4ef6-b125-987a1ccc8410.png",
+     "pathPreview": "https://cdn.api.lenta.com/resample/webp/250x250/photo/41425/catalog-image/4f71e9a2-cc9a-4ef6-b125-987a1ccc8410.png",
+     "position": 1
+    }
+   ],
+   "isWeight": true,
+   "name": "Картофель белый отборный, весовой",
+   "prices": {
+    "cost": 7399,
+    "costRegular": 8599,
+    "discount": 1200,
+    "discountPercentage": 14,
+    "isLoyaltyCardPrice": false,
+    "isPromoactionPrice": true,
+    "price": 3700,
+    "priceRegular": 4300
+   },
+   "slug": "kartofel-otbornyjj-belyjj-ves",
+   "storeId": 15,
+   "weight": {
+    "gross": 500,
+    "net": 500,
+    "package": ""
+   }
+  },
+  {
+   "categoryId": 144,
+   "count": 26,
+   "id": 669417,
+   "images": [
+    {
+     "id": 669417,
+     "pathIcon": "https://cdn.api.lenta.com/resample/webp/100x100/photo/669417/9e575987-397d-495d-8174-509d6aadf395.png",
+     "pathLarge": "https://cdn.api.lenta.com/resample/webp/900x900/photo/669417/9e575987-397d-495d-8174-509d6aadf395.png",
+     "pathMedium": "https://cdn.api.lenta.com/resample/webp/500x500/photo/669417/9e575987-397d-495d-8174-509d6aadf395.png",
+     "pathOriginal": "https://cdn.api.lenta.com/resample/webp/0x0/photo/669417/9e575987-397d-495d-8174-509d6aadf395.png",
+     "pathPreview": "https://cdn.api.lenta.com/resample/webp/250x250/photo/669417/9e575987-397d-495d-8174-509d6aadf395.png",
+     "position": 1
+    }
+   ],
+   "isWeight": false,
+   "name": "Картофель замороженный ЛЕНТА дольки в кожуре, 700г",
+   "prices": {
+    "cost": 28199,
+    "costRegular": 28199,
+    "discount": 0,
+    "discountPercentage": 0,
+    "isLoyaltyCardPrice": false,
+    "isPromoactionPrice": false,
+    "price": 28199,
+    "priceRegular": 28199
+   },
+   "slug": "kartofel-dolki-v-kozhure-zam-700g",
+   "storeId": 15,
+   "weight": {
+    "gross": 709,
+    "net": 0,
+    "package": "700г"
+   }
+  },
+  {
+   "categoryId": 144,
+   "count": 197,
+   "id": 181019,
+   "images": [
+    {
+     "id": 181019,
+     "pathIcon": "https://cdn.api.lenta.com/resample/webp/100x100/photo/181019/e0ed2c65-eeac-4a45-9897-a76dbe7e75ea.png",
+     "pathLarge": "https://cdn.api.lenta.com/resample/webp/900x900/photo/181019/e0ed2c65-eeac-4a45-9897-a76dbe7e75ea.png",
+     "pathMedium": "https://cdn.api.lenta.com/resample/webp/500x500/photo/181019/e0ed2c65-eeac-4a45-9897-a76dbe7e75ea.png",
+     "pathOriginal": "https://cdn.api.lenta.com/resample/webp/0x0/photo/181019/e0ed2c65-eeac-4a45-9897-a76dbe7e75ea.png",
+     "pathPreview": "https://cdn.api.lenta.com/resample/webp/250x250/photo/181019/e0ed2c65-eeac-4a45-9897-a76dbe7e75ea.png",
+     "position": 1
+    }
+   ],
+   "isWeight": true,
+   "name": "Картофель красный, весовой",
+   "prices": {
+    "cost": 7399,
+    "costRegular": 8599,
+    "discount": 1200,
+    "discountPercentage": 14,
+    "isLoyaltyCardPrice": false,
+    "isPromoactionPrice": true,
+    "price": 7399,
+    "priceRegular": 8599
+   },
+   "slug": "kartofel-krasnyjj-ves",
+   "storeId": 15,
+   "weight": {
+    "gross": 1000,
+    "net": 1000,
+    "package": ""
+   }
+  },
+  {
+   "categoryId": 144,
+   "count": 54,
+   "id": 422456,
+   "images": [
+    {
+     "id": 422456,
+     "pathIcon": "https://cdn.api.lenta.com/resample/webp/100x100/photo/422456/23006c9d-b11d-448d-af2b-078de8b99f1d.png",
+     "pathLarge": "https://cdn.api.lenta.com/resample/webp/900x900/photo/422456/23006c9d-b11d-448d-af2b-078de8b99f1d.png",
+     "pathMedium": "https://cdn.api.lenta.com/resample/webp/500x500/photo/422456/23006c9d-b11d-448d-af2b-078de8b99f1d.png",
+     "pathOriginal": "https://cdn.api.lenta.com/resample/webp/0x0/photo/422456/23006c9d-b11d-448d-af2b-078de8b99f1d.png",
+     "pathPreview": "https://cdn.api.lenta.com/resample/webp/250x250/photo/422456/23006c9d-b11d-448d-af2b-078de8b99f1d.png",
+     "position": 1
+    }
+   ],
+   "isWeight": true,
+   "name": "Картофель Беби мытый, фасованный, весовой",
+   "prices": {
+    "cost": 11999,
+    "costRegular": 11999,
+    "discount": 0,
+    "discountPercentage": 0,
+    "isLoyaltyCardPrice": false,
+    "isPromoactionPrice": false,
+    "price": 23998,
+    "priceRegular": 23998
+   },
+   "slug": "kartofel-bebi-mytyjj-fas-ves",
+   "storeId": 15,
+   "weight": {
+    "gross": 2000,
+    "net": 2000,
+    "package": ""
+   }
+  }
+ ],
+ "total": 128
+}

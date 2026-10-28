@@ -1,0 +1,289 @@
+{
+ "items": [
+  {
+   "id": null,
+   "name": null,
+   "products": [
+    {
+     "id": 43134206,
+     "productId": 587645,
+     "code": "kp-syr-parmezan-yang-40-bzmzh",
+     "name": "Сыр  полутвердый Пармезан Янг АШАН Красная птица Parmesan Young 40%, ~ 0,3 кг",
+     "gimaId": "350839",
+     "basketStep": 0.3,
+     "active": true,
+     "isAdult": false,
+     "isB2b": true,
+     "is_new": false,
+     "stock": {
+      "qty": 5.81,
+      "storeId": 45,
+      "not_available": false
+     },
+     "price": {
+      "value": 120,
+      "currency": "RUB",
+      "per": "weight_100g"
+     },
+     "image": {
+      "id": 35588610
+     },
+     "imageUrl": "https://www.auchan.ru/files/original/35588610",
+     "brandName": "АШАН Красная птица",
+     "rate": {
+      "rating": 4.1,
+      "reviews_qnt": 25
+     },
+     "in_combo": false,
+     "package_display": " "
+    },
+    {
+     "id": 58397886,
+     "productId": 671349,
+     "code": "syr-parmezan-40-natura-180-g",
+     "name": "Сыр твердый Пармезан Parmesan Natura брусок 40% БЗМЖ, 180 г",
+     "gimaId": "468471",
+     "basketStep": 1,
+     "active": true,
+     "isAdult": false,
+     "isB2b": true,
+     "is_new": false,
+     "stock": {
+      "qty": 17,
+      "storeId": 45,
+      "not_available": false
+     },
+     "price": {
+      "value": 229.99,
+      "currency": "RUB",
+      "per": "item"
+     },
+     "image": {
+      "id": 36918045
+     },
+     "imageUrl": "https://www.auchan.ru/files/original/36918045",
+     "brandName": "Natura",
+     "rate": {
+      "rating": 4.5,
+      "reviews_qnt": 21
+     },
+     "in_combo": false,
+     "package_display": "180 г"
+    },
+    {
+     "id": 63766704,
+     "productId": 728979,
+     "code": "parmezan-kolot-80g-bzmzh-kiprin",
+     "name": "Сыр твердый пармезан «Киприно» Алтареджио колотый 45% БЗМЖ, 80 г",
+     "gimaId": "534504",
+     "basketStep": 1,
+     "active": true,
+     "isAdult": false,
+     "isB2b": true,
+     "is_new": false,
+     "stock": {
+      "qty": 11,
+      "storeId": 45,
+      "not_available": false
+     },
+     "price": {
+      "value": 169.96,
+      "currency": "RUB",
+      "per": "item"
+     },
+     "image": {
+      "id": 37864014
+     },
+     "imageUrl": "https://www.auchan.ru/files/original/37864014",
+     "brandName": "Киприно",
+     "rate": {
+      "rating": 5,
+      "reviews_qnt": 3
+     },
+     "in_combo": false,
+     "package_display": "80 г"
+    },
+    {
+     "id": 44041341,
+     "productId": 605031,
+     "code": "syr-parmezan-syrobog-40-180g",
+     "name": "Сыр твердый Пармезан «Сыробогатов» Premium брусок 40% БЗМЖ, 180 г",
+     "gimaId": "377157",
+     "basketStep": 1,
+     "active": true,
+     "isAdult": false,
+     "isB2b": true,
+     "is_new": false,
+     "stock": {
+      "qty": 10,
+      "storeId": 45,
+      "not_available": false
+     },
+     "price": {
+      "value": 219.99,
+      "currency": "RUB",
+      "per": "item"
+     },
+     "oldPrice": {
+      "value": 309.99,
+      "currency": "RUB",
+      "per": "item"
+     },
+     "discount": {
+      "id": 44041341,
+      "value": 90,
+      "value_type": 2,
+      "change": 90,
+      "size": 29,
+      "date_start": "2026-10-08",
+      "date_end": "2026-11-04",
+      "is_pl_discount": false
+     },
+     "image": {
+      "id": 35551530
+     },
+     "imageUrl": "https://www.auchan.ru/files/original/35551530",
+     "brandName": "Сыробогатов",
+     "rate": {
+      "rating": 4.4,
+      "reviews_qnt": 19
+     },
+     "in_combo": false,
+     "package_display": null
+    },
+    {
+     "id": 5218440,
+     "productId": 72087,
+     "code": "syr_fas_parmezan_tm_la_paulina",
+     "name": "Сыр твердый La paulina Пармезан 45% БЗМЖ Аргентина, ~ 0,3 кг",
+     "gimaId": "333755",
+     "basketStep": 0.3,
+     "active": true,
+     "isAdult": false,
+     "isB2b": true,
+     "is_new": false,
+     "stock": {
+      "qty": 5.2,
+      "storeId": 45,
+      "not_available": false
+     },
+     "price": {
+      "value": 230,
+      "currency": "RUB",
+      "per": "weight_100g"
+     },
+     "image": {
+      "id": 5364034
+     },
+     "imageUrl": "https://www.auchan.ru/files/original/5364034",
+     "brandName": "La Paulina",
+     "rate": {
+      "rating": 4.8,
+      "reviews_qnt": 39
+     },
+     "in_combo": false,
+     "package_display": " "
+    },
+    {
+     "id": 46125054,
+     "productId": 562941,
+     "code": "syr-parmez-9m-botticello-180g",
+     "name": "Сыр твердый Пармезан Botticello 40% БЗМЖ, 180 г",
+     "gimaId": "317370",
+     "basketStep": 1,
+     "active": true,
+     "isAdult": false,
+     "isB2b": true,
+     "is_new": false,
+     "stock": {
+      "qty": 8,
+      "storeId": 45,
+      "not_available": false
+     },
+     "price": {
+      "value": 469.96,
+      "currency": "RUB",
+      "per": "item"
+     },
+     "image": {
+      "id": 34951653
+     },
+     "imageUrl": "https://www.auchan.ru/files/original/34951653",
+     "brandName": "Botticello",
+     "rate": {
+      "rating": 4.2,
+      "reviews_qnt": 6
+     },
+     "in_combo": false,
+     "package_display": "180 г"
+    },
+    {
+     "id": 19898524,
+     "productId": 300085,
+     "code": "syr-parmezan-natura-pro-15og",
+     "name": "Сыр твердый Пармезан Natura Selection 45% БЗМЖ, 150 г",
+     "gimaId": "110506",
+     "basketStep": 1,
+     "active": true,
+     "isAdult": false,
+     "isB2b": true,
+     "is_new": false,
+     "stock": {
+      "qty": 13,
+      "storeId": 45,
+      "not_available": false
+     },
+     "price": {
+      "value": 249.99,
+      "currency": "RUB",
+      "per": "item"
+     },
+     "image": {
+      "id": 34313037
+     },
+     "imageUrl": "https://www.auchan.ru/files/original/34313037",
+     "brandName": "Natura",
+     "rate": {
+      "rating": 3.8,
+      "reviews_qnt": 12
+     },
+     "in_combo": false,
+     "package_display": "150 г"
+    },
+    {
+     "id": 13983333,
+     "productId": 197104,
+     "code": "kp-parmezan-tertyy-150-g",
+     "name": "Сыр твердый тертый АШАН Красная птица Пармезан БЗМЖ, 150 г",
+     "gimaId": "915394",
+     "basketStep": 1,
+     "active": true,
+     "isAdult": false,
+     "isB2b": true,
+     "is_new": false,
+     "stock": {
+      "qty": 17,
+      "storeId": 45,
+      "not_available": false
+     },
+     "price": {
+      "value": 199.99,
+      "currency": "RUB",
+      "per": "item"
+     },
+     "image": {
+      "id": 30360520
+     },
+     "imageUrl": "https://www.auchan.ru/files/original/30360520",
+     "brandName": "АШАН Красная птица",
+     "rate": {
+      "rating": 4.6,
+      "reviews_qnt": 47
+     },
+     "in_combo": false,
+     "package_display": "150 г"
+    }
+   ]
+  }
+ ]
+}

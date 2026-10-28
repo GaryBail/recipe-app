@@ -35,7 +35,7 @@ class PriceAdapter:
 WATCH = {
     "name": "Моя карбонара",
     "recipe_title": "Паста карбонара",
-    "city_id": "msk",
+    "city_id": "spb",
     "lines": [
         {"product_id": "parmesan", "query": "Сыр пармезан", "required_amount": 60, "unit": "g"},
         {"product_id": "pasta", "query": "Спагетти", "required_amount": 200, "unit": "g"},
@@ -45,8 +45,8 @@ WATCH = {
 
 @pytest.fixture
 def setup(tmp_path):
-    pyat = PriceAdapter("pyaterochka", {"Сыр пармезан": "300", "Спагетти": "100"})
-    perek = PriceAdapter("perekrestok", {"Сыр пармезан": "350", "Спагетти": "90"})
+    pyat = PriceAdapter("lenta", {"Сыр пармезан": "300", "Спагетти": "100"})
+    perek = PriceAdapter("magnit", {"Сыр пармезан": "350", "Спагетти": "90"})
     push = RecordingPush()
     with make_client(tmp_path, adapters=(pyat, perek), push=push) as client:
         moment = {"now": datetime(2026, 10, 20, 9, 0, tzinfo=timezone.utc)}  # 12:00 МСК
@@ -68,8 +68,8 @@ def test_watch_crud_and_validation(setup):
     assert r.status_code == 200 and r.json()["name"] == "Моя карбонара"
     assert [w["client_id"] for w in client.get("/watches", headers=headers).json()] == ["b1"]
 
-    spb = dict(WATCH, city_id="spb")
-    assert client.put("/watches/b2", json=spb, headers=headers).status_code == 422
+    other = dict(WATCH, city_id="msk")  # пока следим только за Петербургом
+    assert client.put("/watches/b2", json=other, headers=headers).status_code == 422
 
     assert client.delete("/watches/b1", headers=headers).status_code == 204
     assert client.get("/watches", headers=headers).json() == []
@@ -93,13 +93,13 @@ def test_refresh_dedupes_queries_and_computes_baskets(setup):
     result = run(watcher)
     # два пользователя, одинаковые товары — по одному запросу на товар в каждом магазине
     assert sorted(pyat.calls) == ["Спагетти", "Сыр пармезан"]
-    assert result["requests"] == {"pyaterochka": 2, "perekrestok": 2}
+    assert result["requests"] == {"lenta": 2, "magnit": 2}
 
     watch = client.get("/watches/a", headers=alice).json()
-    # 300 + 100 в Пятёрочке против 350 + 90 в Перекрёстке
-    assert watch["best"] == {"store_id": "pyaterochka", "total": "400.00"}
-    assert {s["store_id"]: s["total"] for s in watch["stores"]} == {"pyaterochka": "400.00",
-                                                                    "perekrestok": "440.00"}
+    # 300 + 100 в Ленте против 350 + 90 в Магните
+    assert watch["best"] == {"store_id": "lenta", "total": "400.00"}
+    assert {s["store_id"]: s["total"] for s in watch["stores"]} == {"lenta": "400.00",
+                                                                    "magnit": "440.00"}
 
 
 def test_daily_limit_reminder_and_price_drop(setup):
@@ -113,7 +113,7 @@ def test_daily_limit_reminder_and_price_drop(setup):
     items = client.get("/notifications", headers=headers).json()["items"]
     assert items[0]["kind"] == "reminder"
     assert items[0]["build_id"] == "local-build-1"
-    assert "400 ₽" in items[0]["body"] and "Пятёрочке" in items[0]["body"]
+    assert "400 ₽" in items[0]["body"] and "Ленте" in items[0]["body"]
     assert push.sent[-1]["data"] == {"kind": "reminder", "local_build_id": "local-build-1"}
 
     # в тот же день — ничего, даже если подешевело
@@ -155,9 +155,9 @@ def test_store_errors_do_not_break_run(setup):
         raise RuntimeError("капча")
     perek.search = broken
     result = run(watcher)
-    assert result["requests"] == {"pyaterochka": 2, "perekrestok": 0}
+    assert result["requests"] == {"lenta": 2, "magnit": 0}
     stores = client.get("/watches/x", headers=headers).json()["stores"]
-    assert [s["store_id"] for s in stores] == ["pyaterochka"]
+    assert [s["store_id"] for s in stores] == ["lenta"]
 
 
 def test_changing_watch_resets_history(setup):

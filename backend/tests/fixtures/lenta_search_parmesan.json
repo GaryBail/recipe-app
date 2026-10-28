@@ -1,0 +1,285 @@
+{
+ "items": [
+  {
+   "categoryId": 2,
+   "count": 66,
+   "id": 584029,
+   "images": [
+    {
+     "id": 584029,
+     "pathIcon": "https://cdn.api.lenta.com/resample/webp/100x100/photo/584029/e56ee690-a17f-4bce-a2a8-1e99d6b6540e.png",
+     "pathLarge": "https://cdn.api.lenta.com/resample/webp/900x900/photo/584029/e56ee690-a17f-4bce-a2a8-1e99d6b6540e.png",
+     "pathMedium": "https://cdn.api.lenta.com/resample/webp/500x500/photo/584029/e56ee690-a17f-4bce-a2a8-1e99d6b6540e.png",
+     "pathOriginal": "https://cdn.api.lenta.com/resample/webp/0x0/photo/584029/e56ee690-a17f-4bce-a2a8-1e99d6b6540e.png",
+     "pathPreview": "https://cdn.api.lenta.com/resample/webp/250x250/photo/584029/e56ee690-a17f-4bce-a2a8-1e99d6b6540e.png",
+     "position": 1
+    }
+   ],
+   "isWeight": true,
+   "name": "Сыр МИР ВКУСА Пармезан 40%, без змж, весовой",
+   "prices": {
+    "cost": 94999,
+    "costRegular": 142099,
+    "discount": 47100,
+    "discountPercentage": 33,
+    "isLoyaltyCardPrice": false,
+    "isPromoactionPrice": true,
+    "price": 19000,
+    "priceRegular": 28420
+   },
+   "slug": "syr-parmezan-40-bez-zmzh-ves-belarus",
+   "storeId": 15,
+   "weight": {
+    "gross": 200,
+    "net": 200,
+    "package": ""
+   }
+  },
+  {
+   "categoryId": 2,
+   "count": 76,
+   "id": 539587,
+   "images": [
+    {
+     "id": 539587,
+     "pathIcon": "https://cdn.api.lenta.com/resample/webp/100x100/photo/539587/8b8f2d8e-151c-4f61-a477-a3812a39b247.png",
+     "pathLarge": "https://cdn.api.lenta.com/resample/webp/900x900/photo/539587/8b8f2d8e-151c-4f61-a477-a3812a39b247.png",
+     "pathMedium": "https://cdn.api.lenta.com/resample/webp/500x500/photo/539587/8b8f2d8e-151c-4f61-a477-a3812a39b247.png",
+     "pathOriginal": "https://cdn.api.lenta.com/resample/webp/0x0/photo/539587/8b8f2d8e-151c-4f61-a477-a3812a39b247.png",
+     "pathPreview": "https://cdn.api.lenta.com/resample/webp/250x250/photo/539587/8b8f2d8e-151c-4f61-a477-a3812a39b247.png",
+     "position": 1
+    }
+   ],
+   "isWeight": true,
+   "name": "Сыр ЛЕНТА PREMIUM/PREMIUM CLUB Пармезан 45%, без змж, весовой",
+   "prices": {
+    "cost": 121099,
+    "costRegular": 149999,
+    "discount": 28900,
+    "discountPercentage": 19,
+    "isLoyaltyCardPrice": false,
+    "isPromoactionPrice": true,
+    "price": 36330,
+    "priceRegular": 45000
+   },
+   "slug": "syr-parmezan-45-bez-zmzh-ves-rossiya",
+   "storeId": 15,
+   "weight": {
+    "gross": 300,
+    "net": 300,
+    "package": ""
+   }
+  },
+  {
+   "categoryId": 2,
+   "count": 14,
+   "id": 741816,
+   "images": [
+    {
+     "id": 741816,
+     "pathIcon": "https://cdn.api.lenta.com/resample/webp/100x100/photo/741816/5e020ed4-6cb3-477c-a23c-b4f50324a5e5.png",
+     "pathLarge": "https://cdn.api.lenta.com/resample/webp/900x900/photo/741816/5e020ed4-6cb3-477c-a23c-b4f50324a5e5.png",
+     "pathMedium": "https://cdn.api.lenta.com/resample/webp/500x500/photo/741816/5e020ed4-6cb3-477c-a23c-b4f50324a5e5.png",
+     "pathOriginal": "https://cdn.api.lenta.com/resample/webp/0x0/photo/741816/5e020ed4-6cb3-477c-a23c-b4f50324a5e5.png",
+     "pathPreview": "https://cdn.api.lenta.com/resample/webp/250x250/photo/741816/5e020ed4-6cb3-477c-a23c-b4f50324a5e5.png",
+     "position": 1
+    }
+   ],
+   "isWeight": false,
+   "name": "Сыр СЫРОБОГАТОВ Пармезан 40%, без змж, 180г",
+   "prices": {
+    "cost": 21499,
+    "costRegular": 37299,
+    "discount": 15800,
+    "discountPercentage": 42,
+    "isLoyaltyCardPrice": false,
+    "isPromoactionPrice": true,
+    "price": 21499,
+    "priceRegular": 37299
+   },
+   "slug": "syr-parmezan-40-bez-zmzh-rossiya-180g",
+   "storeId": 15,
+   "weight": {
+    "gross": 194,
+    "net": 0,
+    "package": "180г"
+   }
+  },
+  {
+   "categoryId": 2,
+   "count": 17,
+   "id": 721175,
+   "images": [
+    {
+     "id": 721175,
+     "pathIcon": "https://cdn.api.lenta.com/resample/webp/100x100/photo/721175/e5b37e31-ab44-4d6d-a814-1a1a65bae4ea.png",
+     "pathLarge": "https://cdn.api.lenta.com/resample/webp/900x900/photo/721175/e5b37e31-ab44-4d6d-a814-1a1a65bae4ea.png",
+     "pathMedium": "https://cdn.api.lenta.com/resample/webp/500x500/photo/721175/e5b37e31-ab44-4d6d-a814-1a1a65bae4ea.png",
+     "pathOriginal": "https://cdn.api.lenta.com/resample/webp/0x0/photo/721175/e5b37e31-ab44-4d6d-a814-1a1a65bae4ea.png",
+     "pathPreview": "https://cdn.api.lenta.com/resample/webp/250x250/photo/721175/e5b37e31-ab44-4d6d-a814-1a1a65bae4ea.png",
+     "position": 1
+    }
+   ],
+   "isWeight": false,
+   "name": "Сыр PREMIUM CLUB Пармезан 45%, без змж, 200г",
+   "prices": {
+    "cost": 32699,
+    "costRegular": 39999,
+    "discount": 7300,
+    "discountPercentage": 18,
+    "isLoyaltyCardPrice": false,
+    "isPromoactionPrice": true,
+    "price": 32699,
+    "priceRegular": 39999
+   },
+   "slug": "syr-parmezan-45-fas-bez-zmzh-rossiya-200g",
+   "storeId": 15,
+   "weight": {
+    "gross": 230,
+    "net": 0,
+    "package": "200г"
+   }
+  },
+  {
+   "categoryId": 2,
+   "count": 59,
+   "id": 916593,
+   "images": [
+    {
+     "id": 916593,
+     "pathIcon": "https://cdn.api.lenta.com/resample/webp/100x100/photo/916593/catalog-image/e200e1f4-e33e-42a5-b028-a4a5499a8ccc.png",
+     "pathLarge": "https://cdn.api.lenta.com/resample/webp/900x900/photo/916593/catalog-image/e200e1f4-e33e-42a5-b028-a4a5499a8ccc.png",
+     "pathMedium": "https://cdn.api.lenta.com/resample/webp/500x500/photo/916593/catalog-image/e200e1f4-e33e-42a5-b028-a4a5499a8ccc.png",
+     "pathOriginal": "https://cdn.api.lenta.com/resample/webp/0x0/photo/916593/catalog-image/e200e1f4-e33e-42a5-b028-a4a5499a8ccc.png",
+     "pathPreview": "https://cdn.api.lenta.com/resample/webp/250x250/photo/916593/catalog-image/e200e1f4-e33e-42a5-b028-a4a5499a8ccc.png",
+     "position": 1
+    }
+   ],
+   "isWeight": false,
+   "name": "Сыр NATURA Пармезан 40%, без змж, 180г",
+   "prices": {
+    "cost": 26699,
+    "costRegular": 36999,
+    "discount": 10300,
+    "discountPercentage": 28,
+    "isLoyaltyCardPrice": false,
+    "isPromoactionPrice": true,
+    "price": 26699,
+    "priceRegular": 36999
+   },
+   "slug": "syr-parmezan-40-bez-zmzh-rossiya-180g",
+   "storeId": 15,
+   "weight": {
+    "gross": 183,
+    "net": 0,
+    "package": "180г"
+   }
+  },
+  {
+   "categoryId": 2,
+   "count": 17,
+   "id": 478938,
+   "images": [
+    {
+     "id": 478938,
+     "pathIcon": "https://cdn.api.lenta.com/resample/webp/100x100/photo/478938/ee921977-7fd5-4688-8238-b744e879ec6e.png",
+     "pathLarge": "https://cdn.api.lenta.com/resample/webp/900x900/photo/478938/ee921977-7fd5-4688-8238-b744e879ec6e.png",
+     "pathMedium": "https://cdn.api.lenta.com/resample/webp/500x500/photo/478938/ee921977-7fd5-4688-8238-b744e879ec6e.png",
+     "pathOriginal": "https://cdn.api.lenta.com/resample/webp/0x0/photo/478938/ee921977-7fd5-4688-8238-b744e879ec6e.png",
+     "pathPreview": "https://cdn.api.lenta.com/resample/webp/250x250/photo/478938/ee921977-7fd5-4688-8238-b744e879ec6e.png",
+     "position": 1
+    }
+   ],
+   "isWeight": false,
+   "name": "Сыр DOLCE Пармезан 40%, без змж, 200г",
+   "prices": {
+    "cost": 32999,
+    "costRegular": 50899,
+    "discount": 17900,
+    "discountPercentage": 35,
+    "isLoyaltyCardPrice": false,
+    "isPromoactionPrice": true,
+    "price": 32999,
+    "priceRegular": 50899
+   },
+   "slug": "syr-parmezan-40-bez-zmzh-rossiya-200g",
+   "storeId": 15,
+   "weight": {
+    "gross": 203,
+    "net": 0,
+    "package": "200г"
+   }
+  },
+  {
+   "categoryId": 2,
+   "count": 8,
+   "id": 695699,
+   "images": [
+    {
+     "id": 695699,
+     "pathIcon": "https://cdn.api.lenta.com/resample/webp/100x100/photo/695699/catalog-image/6c145a50-13d7-4932-ac67-0fe3446a1bc8.png",
+     "pathLarge": "https://cdn.api.lenta.com/resample/webp/900x900/photo/695699/catalog-image/6c145a50-13d7-4932-ac67-0fe3446a1bc8.png",
+     "pathMedium": "https://cdn.api.lenta.com/resample/webp/500x500/photo/695699/catalog-image/6c145a50-13d7-4932-ac67-0fe3446a1bc8.png",
+     "pathOriginal": "https://cdn.api.lenta.com/resample/webp/0x0/photo/695699/catalog-image/6c145a50-13d7-4932-ac67-0fe3446a1bc8.png",
+     "pathPreview": "https://cdn.api.lenta.com/resample/webp/250x250/photo/695699/catalog-image/6c145a50-13d7-4932-ac67-0fe3446a1bc8.png",
+     "position": 1
+    }
+   ],
+   "isWeight": false,
+   "name": "Сыр CHEESE GALLERY Пармезан 3 месяца 40%, без змж, 150г",
+   "prices": {
+    "cost": 25699,
+    "costRegular": 37899,
+    "discount": 12200,
+    "discountPercentage": 32,
+    "isLoyaltyCardPrice": false,
+    "isPromoactionPrice": true,
+    "price": 25699,
+    "priceRegular": 37899
+   },
+   "slug": "syr-parmezan-3-mes-40-bez-zmzh-rossiya-150g",
+   "storeId": 15,
+   "weight": {
+    "gross": 155,
+    "net": 0,
+    "package": "150г"
+   }
+  },
+  {
+   "categoryId": 2,
+   "count": 6,
+   "id": 741308,
+   "images": [
+    {
+     "id": 741308,
+     "pathIcon": "https://cdn.api.lenta.com/resample/webp/100x100/photo/741308/59b62838-5ef5-4a99-8cfa-4e8cf59e9896.png",
+     "pathLarge": "https://cdn.api.lenta.com/resample/webp/900x900/photo/741308/59b62838-5ef5-4a99-8cfa-4e8cf59e9896.png",
+     "pathMedium": "https://cdn.api.lenta.com/resample/webp/500x500/photo/741308/59b62838-5ef5-4a99-8cfa-4e8cf59e9896.png",
+     "pathOriginal": "https://cdn.api.lenta.com/resample/webp/0x0/photo/741308/59b62838-5ef5-4a99-8cfa-4e8cf59e9896.png",
+     "pathPreview": "https://cdn.api.lenta.com/resample/webp/250x250/photo/741308/59b62838-5ef5-4a99-8cfa-4e8cf59e9896.png",
+     "position": 1
+    }
+   ],
+   "isWeight": false,
+   "name": "Сыр твердый SCHONFELD Пармезан 40%, без змж, 180г",
+   "prices": {
+    "cost": 44399,
+    "costRegular": 63599,
+    "discount": 19200,
+    "discountPercentage": 30,
+    "isLoyaltyCardPrice": false,
+    "isPromoactionPrice": true,
+    "price": 44399,
+    "priceRegular": 63599
+   },
+   "slug": "syr-tverdyjj-parmezan-40-bez-zmzh-rossiya-180g",
+   "storeId": 15,
+   "weight": {
+    "gross": 190,
+    "net": 0,
+    "package": "180г"
+   }
+  }
+ ],
+ "total": 37
+}

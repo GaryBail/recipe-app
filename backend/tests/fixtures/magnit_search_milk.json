@@ -1,0 +1,441 @@
+{
+ "category": null,
+ "correctedTerm": null,
+ "items": [
+  {
+   "catalogType": "2",
+   "gallery": [
+    {
+     "type": "IMAGE",
+     "url": "https://images-foodtech.magnit.ru/zX_6j4eTgg_91LrNMoVaL5JdeWyKgAhbGG2D0Vpj-Ow/rs:fit:416:416/plain/s3://img-dostavka/catalog/uf/938/938e9989c9d83502e418d3475f494c85/9f583f3362b2871d6735f8dfd726db41.jpeg@webp"
+    }
+   ],
+   "id": "1000191939",
+   "isAdditionalActionRequired": false,
+   "isBiometryRequired": false,
+   "isForAdults": false,
+   "isInFavorites": null,
+   "isLowStock": null,
+   "name": "Молоко Пискаревское пастеризованное 2.5% 1л",
+   "needPassport": false,
+   "orderProperties": {
+    "minOrderQuantity": 1,
+    "orderStepQuantity": 1
+   },
+   "orders": null,
+   "pickupOnly": false,
+   "price": 10999,
+   "productId": "1000191939",
+   "promotion": {
+    "discountPercent": null,
+    "endDate": null,
+    "isPromotion": false,
+    "oldPrice": null
+   },
+   "quantity": 28,
+   "ratings": {
+    "commentsCount": 219,
+    "external": null,
+    "rating": 4.8,
+    "scoresCount": 3323
+   },
+   "seoCode": "piskarevskoe_moloko_past_2_5_1l_pyur_p_piskarevskiy_mz",
+   "service": "express",
+   "skuGroupId": null,
+   "skuIds": null,
+   "storeCode": "699422",
+   "targetCart": "express",
+   "weighted": {
+    "isWeighted": false,
+    "minStep": null,
+    "shelfLabel": null,
+    "shelfWeight": null,
+    "step": null,
+    "unitLabel": null,
+    "unitPrice": null
+   }
+  },
+  {
+   "catalogType": "2",
+   "gallery": [
+    {
+     "type": "IMAGE",
+     "url": "https://images-foodtech.magnit.ru/B0sNYuv5rFJGGOHR1zA2XMDIV814dS-gRnxvhOJ3FZk/rs:fit:416:416/plain/s3://img-dostavka/catalog/uf/072/072d15fe72fc34fa424ce14fb23a7567/f32c17ade150c7a2b490c05807eda1b8.jpeg@webp"
+    }
+   ],
+   "id": "1000445487",
+   "isAdditionalActionRequired": false,
+   "isBiometryRequired": false,
+   "isForAdults": false,
+   "isInFavorites": null,
+   "isLowStock": null,
+   "name": "Молоко Северное молоко Вологодское пастеризованное 2.5% 930г",
+   "needPassport": false,
+   "orderProperties": {
+    "minOrderQuantity": 1,
+    "orderStepQuantity": 1
+   },
+   "orders": null,
+   "pickupOnly": false,
+   "price": 9000,
+   "productId": "1000445487",
+   "promotion": {
+    "discountPercent": null,
+    "endDate": null,
+    "isPromotion": false,
+    "oldPrice": null
+   },
+   "quantity": 11,
+   "ratings": {
+    "commentsCount": 191,
+    "external": null,
+    "rating": 4.9,
+    "scoresCount": 4167
+   },
+   "seoCode": "severnoe_moloko_moloko_vologodskoe_pasterizovannoe_2_5_930g_pl_but",
+   "service": "express",
+   "skuGroupId": null,
+   "skuIds": null,
+   "storeCode": "699422",
+   "targetCart": "express",
+   "weighted": {
+    "isWeighted": false,
+    "minStep": null,
+    "shelfLabel": null,
+    "shelfWeight": null,
+    "step": null,
+    "unitLabel": null,
+    "unitPrice": null
+   }
+  },
+  {
+   "cashback": 500,
+   "catalogType": "2",
+   "gallery": [
+    {
+     "type": "IMAGE",
+     "url": "https://images-foodtech.magnit.ru/xSOUIM6YWSQX1ouMK4eYoOmUnmjIZZW1GSyifzm9Ejs/rs:fit:416:416/plain/s3://img-dostavka/catalog/uf/ec3/ec3139e0993622597931b780affdca42/0cb896666151f40b18ec06179f2fa78a.jpeg@webp"
+    }
+   ],
+   "id": "1000445488",
+   "isAdditionalActionRequired": false,
+   "isBiometryRequired": false,
+   "isForAdults": false,
+   "isInFavorites": null,
+   "isLowStock": null,
+   "name": "Молоко Северное Молоко пастеризованное 3.2% 930г",
+   "needPassport": false,
+   "orderProperties": {
+    "minOrderQuantity": 1,
+    "orderStepQuantity": 1
+   },
+   "orders": null,
+   "pickupOnly": false,
+   "price": 9900,
+   "productId": "1000445488",
+   "promotion": {
+    "discountPercent": null,
+    "endDate": null,
+    "isPromotion": false,
+    "oldPrice": null
+   },
+   "quantity": 18,
+   "ratings": {
+    "commentsCount": 108,
+    "external": null,
+    "rating": 4.9,
+    "scoresCount": 1965
+   },
+   "seoCode": "severnoe_moloko_moloko_vologodskoe_pasterizovannoe_3_2_930g_pl_but",
+   "service": "express",
+   "skuGroupId": null,
+   "skuIds": null,
+   "storeCode": "699422",
+   "targetCart": "express",
+   "weighted": {
+    "isWeighted": false,
+    "minStep": null,
+    "shelfLabel": null,
+    "shelfWeight": null,
+    "step": null,
+    "unitLabel": null,
+    "unitPrice": null
+   }
+  },
+  {
+   "catalogType": "2",
+   "gallery": [
+    {
+     "type": "IMAGE",
+     "url": "https://images-foodtech.magnit.ru/XWFsOUuldcGrZgRrXj-X5uS6Q8RQpE_28jRPxYwyOjw/rs:fit:416:416/plain/s3://img-dostavka/catalog/pim/goods/1899800733/image/0fc205ab9182ad7917a6f42ff4fc6b8b.jpeg@webp"
+    }
+   ],
+   "id": "1899800733",
+   "isAdditionalActionRequired": false,
+   "isBiometryRequired": false,
+   "isForAdults": false,
+   "isInFavorites": null,
+   "isLowStock": null,
+   "name": "Молоко Простоквашино пастеризованное 2.5% 930мл",
+   "needPassport": false,
+   "orderProperties": {
+    "minOrderQuantity": 1,
+    "orderStepQuantity": 1
+   },
+   "orders": null,
+   "pickupOnly": false,
+   "price": 9499,
+   "productId": "1899800733",
+   "promotion": {
+    "discountPercent": null,
+    "endDate": null,
+    "isPromotion": false,
+    "oldPrice": null
+   },
+   "quantity": 2,
+   "ratings": {
+    "commentsCount": 1921,
+    "external": null,
+    "rating": 4.9,
+    "scoresCount": 49416
+   },
+   "seoCode": "moloko_prostokvashino_pasterizovannoe_2_5_930ml",
+   "service": "express",
+   "skuGroupId": null,
+   "skuIds": null,
+   "storeCode": "699422",
+   "targetCart": "express",
+   "weighted": {
+    "isWeighted": false,
+    "minStep": null,
+    "shelfLabel": null,
+    "shelfWeight": null,
+    "step": null,
+    "unitLabel": null,
+    "unitPrice": null
+   }
+  },
+  {
+   "catalogType": "2",
+   "gallery": [
+    {
+     "type": "IMAGE",
+     "url": "https://images-foodtech.magnit.ru/6MvatBsh9GLROnrJE3LExdrA40j9OOjdILwdTWzKe6s/rs:fit:416:416/plain/s3://img-dostavka/catalog/pim/goods/8000026015/image/479c66f4fcc5a21c2af8e2e55b0de140.jpeg@webp"
+    }
+   ],
+   "id": "8000026015",
+   "isAdditionalActionRequired": false,
+   "isBiometryRequired": false,
+   "isForAdults": false,
+   "isInFavorites": null,
+   "isLowStock": null,
+   "name": "Молоко пастеризованное Домик в Деревне 3.2% 1.4л",
+   "needPassport": false,
+   "orderProperties": {
+    "minOrderQuantity": 1,
+    "orderStepQuantity": 1
+   },
+   "orders": null,
+   "pickupOnly": false,
+   "price": 13899,
+   "productId": "8000026015",
+   "promotion": {
+    "discountPercent": null,
+    "endDate": null,
+    "isPromotion": false,
+    "oldPrice": null
+   },
+   "quantity": 19,
+   "ratings": {
+    "commentsCount": 677,
+    "external": null,
+    "rating": 4.9,
+    "scoresCount": 15316
+   },
+   "seoCode": "domik_v_derevne_moloko_past_3_2_1_4l_pl_bu",
+   "service": "express",
+   "skuGroupId": null,
+   "skuIds": null,
+   "storeCode": "699422",
+   "targetCart": "express",
+   "weighted": {
+    "isWeighted": false,
+    "minStep": null,
+    "shelfLabel": null,
+    "shelfWeight": null,
+    "step": null,
+    "unitLabel": null,
+    "unitPrice": null
+   }
+  },
+  {
+   "catalogType": "2",
+   "gallery": [
+    {
+     "type": "IMAGE",
+     "url": "https://images-foodtech.magnit.ru/L5YH_-HjQdEjo5Zr-0fw10brRR43AQFgulJlla5pqIw/rs:fit:416:416/plain/s3://img-dostavka/catalog/uf/bb2/bb261143a2223ba62dfb9184cb418a16/6efdb2032b6f234e8435695939bb0727.jpeg@webp"
+    }
+   ],
+   "id": "1000462062",
+   "isAdditionalActionRequired": false,
+   "isBiometryRequired": false,
+   "isForAdults": false,
+   "isInFavorites": null,
+   "isLowStock": null,
+   "name": "Молоко Простоквашино пастеризованное 3.2% 1.4л",
+   "needPassport": false,
+   "orderProperties": {
+    "minOrderQuantity": 1,
+    "orderStepQuantity": 1
+   },
+   "orders": null,
+   "pickupOnly": false,
+   "price": 15999,
+   "productId": "1000462062",
+   "promotion": {
+    "discountPercent": null,
+    "endDate": null,
+    "isPromotion": false,
+    "oldPrice": null
+   },
+   "quantity": 5,
+   "ratings": {
+    "commentsCount": 505,
+    "external": null,
+    "rating": 4.9,
+    "scoresCount": 11382
+   },
+   "seoCode": "prostokvashino_moloko_past_3_2_1_4l_pl_but",
+   "service": "express",
+   "skuGroupId": null,
+   "skuIds": null,
+   "storeCode": "699422",
+   "targetCart": "express",
+   "weighted": {
+    "isWeighted": false,
+    "minStep": null,
+    "shelfLabel": null,
+    "shelfWeight": null,
+    "step": null,
+    "unitLabel": null,
+    "unitPrice": null
+   }
+  },
+  {
+   "catalogType": "2",
+   "gallery": [
+    {
+     "type": "IMAGE",
+     "url": "https://images-foodtech.magnit.ru/A4k-OsJF8g_-oqMTs-TsbA3hkO4usQDmH4nTLS0jQOI/rs:fit:416:416/plain/s3://img-dostavka/catalog/pim/goods/8000026014/image/1694d0255f01c00fd1a21fc05c6a1535.jpeg@webp"
+    }
+   ],
+   "id": "8000026014",
+   "isAdditionalActionRequired": false,
+   "isBiometryRequired": false,
+   "isForAdults": false,
+   "isInFavorites": null,
+   "isLowStock": null,
+   "name": "Молоко пастеризованное Домик в Деревне 3.2% 930мл",
+   "needPassport": false,
+   "orderProperties": {
+    "minOrderQuantity": 1,
+    "orderStepQuantity": 1
+   },
+   "orders": null,
+   "pickupOnly": false,
+   "price": 10499,
+   "productId": "8000026014",
+   "promotion": {
+    "discountPercent": null,
+    "endDate": null,
+    "isPromotion": false,
+    "oldPrice": null
+   },
+   "quantity": 17,
+   "ratings": {
+    "commentsCount": 216,
+    "external": null,
+    "rating": 4.9,
+    "scoresCount": 4955
+   },
+   "seoCode": "domik_v_derevne_moloko_past_3_2_930ml_pl_but",
+   "service": "express",
+   "skuGroupId": null,
+   "skuIds": null,
+   "storeCode": "699422",
+   "targetCart": "express",
+   "weighted": {
+    "isWeighted": false,
+    "minStep": null,
+    "shelfLabel": null,
+    "shelfWeight": null,
+    "step": null,
+    "unitLabel": null,
+    "unitPrice": null
+   }
+  },
+  {
+   "catalogType": "2",
+   "gallery": [
+    {
+     "type": "IMAGE",
+     "url": "https://images-foodtech.magnit.ru/A1ZnQK1H_TFES8DtEhAGa6QF2KDf515zmvbgjbiEYwQ/rs:fit:416:416/plain/s3://img-dostavka/catalog/uf/043/04373286f7cd178ec0ba1deb0b3663c4/6f05a69a1cfe065b058298ad9933297f.jpeg@webp"
+    }
+   ],
+   "id": "1000139951",
+   "isAdditionalActionRequired": false,
+   "isBiometryRequired": false,
+   "isForAdults": false,
+   "isInFavorites": null,
+   "isLowStock": null,
+   "name": "Молоко Мозырские Молочные продукты стерилизованное 3.2% 1л",
+   "needPassport": false,
+   "orderProperties": {
+    "minOrderQuantity": 1,
+    "orderStepQuantity": 1
+   },
+   "orders": null,
+   "pickupOnly": false,
+   "price": 8900,
+   "productId": "1000139951",
+   "promotion": {
+    "discountPercent": null,
+    "endDate": null,
+    "isPromotion": false,
+    "oldPrice": null
+   },
+   "quantity": 18,
+   "ratings": {
+    "commentsCount": 471,
+    "external": null,
+    "rating": 4.9,
+    "scoresCount": 4244
+   },
+   "seoCode": "moloko_steriliz_3_2_1l_t_pak_mozyrskie_molochnye_produkty",
+   "service": "express",
+   "skuGroupId": null,
+   "skuIds": null,
+   "storeCode": "699422",
+   "targetCart": "express",
+   "weighted": {
+    "isWeighted": false,
+    "minStep": null,
+    "shelfLabel": null,
+    "shelfWeight": null,
+    "step": null,
+    "unitLabel": null,
+    "unitPrice": null
+   }
+  }
+ ],
+ "pagination": {
+  "hasMore": true,
+  "limit": 10,
+  "nextOffset": 10,
+  "offset": 0,
+  "totalCount": 53
+ },
+ "resultId": "3fee14a1-c3ab-4297-b994-948f8fc8472d",
+ "term": "молоко",
+ "videoDelay": 1
+}

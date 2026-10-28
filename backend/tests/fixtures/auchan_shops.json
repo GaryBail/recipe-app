@@ -1,0 +1,100 @@
+{
+ "shops": [
+  {
+   "merchant_id": 24,
+   "name": "Боровая",
+   "region_id": 2,
+   "address_string": "г Санкт-Петербург, Фрунзенский р-н, ул Боровая, д 47",
+   "geo_lat": "59.914132",
+   "geo_lon": "30.341926",
+   "is_visible": true,
+   "delivery": {
+    "price": 239
+   }
+  },
+  {
+   "merchant_id": 704,
+   "name": "Гулливер",
+   "region_id": 2,
+   "address_string": "г Санкт-Петербург, Приморский р-н, Торфяная дорога, д 7",
+   "geo_lat": "59.990197",
+   "geo_lon": "30.256273",
+   "is_visible": true,
+   "delivery": {
+    "price": 239
+   }
+  },
+  {
+   "merchant_id": 101,
+   "name": "Дыбенко",
+   "region_id": 2,
+   "address_string": "Ленинградская обл, Всеволожский р-н, г Кудрово, Мурманское шоссе 12-й км, стр 1",
+   "geo_lat": "59.895335",
+   "geo_lon": "30.513423",
+   "is_visible": true,
+   "delivery": {
+    "price": 239
+   }
+  },
+  {
+   "merchant_id": 31,
+   "name": "Лето",
+   "region_id": 2,
+   "address_string": "г Санкт-Петербург, Московский р-н, Пулковское шоссе, д 25 к 1",
+   "geo_lat": "59.820816",
+   "geo_lon": "30.318797",
+   "is_visible": true,
+   "delivery": {
+    "price": 239
+   }
+  },
+  {
+   "merchant_id": 102,
+   "name": "Парнас",
+   "region_id": 2,
+   "address_string": "Ленинградская область, Всеволожский район, Бугровское сельское поселение, КАД, 117-й километр, внешнее кольцо, 1",
+   "geo_lat": "60.091347",
+   "geo_lon": "30.380484",
+   "is_visible": true,
+   "delivery": {
+    "price": 239
+   }
+  },
+  {
+   "merchant_id": 55,
+   "name": "СПб Космонавт",
+   "region_id": 2,
+   "address_string": "г Санкт-Петербург, Московский р-н, пр-кт Космонавтов, д 14",
+   "geo_lat": "59.868567",
+   "geo_lon": "30.348724",
+   "is_visible": true,
+   "delivery": {
+    "price": 239
+   }
+  },
+  {
+   "merchant_id": 44,
+   "name": "Северный",
+   "region_id": 2,
+   "address_string": "г Санкт-Петербург, Калининский р-н, пр-кт Культуры, д 41",
+   "geo_lat": "60.054032",
+   "geo_lon": "30.387361",
+   "is_visible": true,
+   "delivery": {
+    "price": 239
+   }
+  },
+  {
+   "merchant_id": 705,
+   "name": "Эврика",
+   "region_id": 2,
+   "address_string": "г Санкт-Петербург, Невский р-н, ул Седова, д 11А",
+   "geo_lat": "59.900196",
+   "geo_lon": "30.400934",
+   "is_visible": true,
+   "delivery": {
+    "price": 239
+   }
+  }
+ ]
+}
