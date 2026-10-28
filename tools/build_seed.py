@@ -9,7 +9,7 @@
 import json
 from pathlib import Path
 
-SEED_VERSION = 4
+SEED_VERSION = 5
 
 # Рубрики рецептов: id → (название, SF Symbol, иллюстрация)
 # Иллюстрации — Fluent Emoji 3D (Microsoft, MIT): RecipeApp/Resources/Food/food-<имя>.png
@@ -846,7 +846,23 @@ R += [
 ]
 
 
+# Кухни для своих рецептов каталога (по умолчанию — русская).
+OWN_CUISINES = {
+    "carbonara": "italian", "bolognese": "italian", "khachapuri": "georgian", "kharcho": "georgian",
+    "plov": "uzbek", "greek-salad": "other", "caesar": "other", "shakshuka": "other", "shawarma": "other",
+    "brownie": "other", "waffles": "other", "french-toast": "other", "hot-sandwiches": "other",
+    "baked-salmon": "other", "country-potatoes": "other",
+}
+
+
 def main():
+    import import_cookbook as cookbook
+
+    for r in R:
+        r["cuisine"] = OWN_CUISINES.get(r["id"], "russian")
+    added = cookbook.extend(P, R, RUBRICS, recipe)
+    print(f"из кулинарной книги добавлено: {added}")
+
     products = []
     for cat, items in P.items():
         for pid, name, brand, kcal, p, f, c, extra in items:
@@ -873,6 +889,7 @@ def main():
     seed = {
         "version": SEED_VERSION,
         "rubrics": [{"id": k, "title": v[0], "symbol": v[1], "icon": v[2]} for k, v in RUBRICS.items()],
+        "cuisines": [{"id": k, "title": v, "icon": cookbook.CUISINE_ICONS[k]} for k, v in cookbook.CUISINE_TITLES.items()],
         "products": products,
         "recipes": R,
     }

@@ -40,6 +40,7 @@ struct HomeView: View {
     @State private var rubric: String? = nil
     @State private var showNewRecipe = false
     @State private var filters: Set<RecipeFilter> = []
+    @State private var cuisine: String? = nil
     @AppStorage(DietProfile.allergensKey) private var allergens = ""
     @AppStorage(DietProfile.vegetarianKey) private var vegetarian = false
 
@@ -60,10 +61,13 @@ struct HomeView: View {
         let profile = profile
         return recipes.filter { recipe in
             (rubric == nil || recipe.rubric == rubric)
+                && (cuisine == nil || recipe.cuisine == cuisine)
                 && (query.isEmpty
                     || recipe.title.lowercased().contains(query)
                     || recipe.ingredients.contains { $0.title.lowercased().contains(query) })
-                && filters.allSatisfy { $0.matches(recipe, kcalPerServing: kcal(recipe), profile: profile) }
+                && filters.allSatisfy {
+                    $0.matches(recipe, kcalPerServing: $0 == .light ? kcal(recipe) : nil, profile: profile)
+                }
         }
     }
 
@@ -82,6 +86,7 @@ struct HomeView: View {
                         hero
                         popularSection
                         collectionsSection
+                        cuisineChips
                         rubricChips
                         filterChips
                     }
@@ -116,7 +121,12 @@ struct HomeView: View {
     private var gridTitle: String {
         if !search.isEmpty { return filtered.isEmpty ? "Ничего не нашлось" : "Найдено" }
         if filtered.isEmpty { return "Ничего не подошло — снимите часть фильтров" }
-        let base = rubric.flatMap { Rubric.named($0)?.title } ?? "Все рецепты"
+        let cuisineTitle: String? = cuisine.flatMap { id in
+            Cuisine.named(id).map { c in id == "other" ? "Другие кухни" : "\(c.title) кухня" }
+        }
+        let parts = [cuisineTitle,
+                     rubric.flatMap { Rubric.named($0)?.title }].compactMap { $0 }
+        let base = parts.isEmpty ? "Все рецепты" : parts.joined(separator: " · ")
         return filters.isEmpty ? base : "\(base): \(filtered.count)"
     }
 
@@ -228,6 +238,42 @@ struct HomeView: View {
                         }
                         .buttonStyle(AntPressStyle())
                         .appear(index: index)
+                    }
+                }
+                .padding(.vertical, 2)
+            }
+            .scrollClipDisabled()
+        }
+    }
+
+    /// Кухни мира: русская, итальянская, японская…
+    private var cuisineChips: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            AntSectionHeader(title: "Кухни мира")
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 10) {
+                    ForEach(Cuisine.all.filter { c in recipes.contains { $0.cuisine == c.id } }) { c in
+                        Button {
+                            withAnimation(.snappy) { cuisine = cuisine == c.id ? nil : c.id }
+                        } label: {
+                            VStack(spacing: 4) {
+                                if let image = UIImage(named: "food-\(c.icon)") {
+                                    Image(uiImage: image).resizable().scaledToFit().frame(width: 34, height: 34)
+                                }
+                                Text(c.title)
+                                    .font(.caption.weight(.medium))
+                                    .lineLimit(1)
+                            }
+                            .frame(width: 84, height: 70)
+                            .foregroundStyle(cuisine == c.id ? Color.white : Ant.text)
+                            .background(cuisine == c.id ? Ant.primary : Ant.bgContainer,
+                                        in: RoundedRectangle(cornerRadius: Ant.radiusLG, style: .continuous))
+                            .overlay(RoundedRectangle(cornerRadius: Ant.radiusLG, style: .continuous)
+                                .strokeBorder(cuisine == c.id ? Color.clear : Ant.borderSecondary))
+                        }
+                        .buttonStyle(AntPressStyle())
+                        .accessibilityLabel("\(c.title) кухня")
+                        .accessibilityAddTraits(cuisine == c.id ? .isSelected : [])
                     }
                 }
                 .padding(.vertical, 2)

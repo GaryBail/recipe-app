@@ -74,7 +74,7 @@ final class CartComparatorTests: XCTestCase {
         let url = try XCTUnwrap(Bundle(for: RecipeAppTestsMarker.self).url(forResource: "seed", withExtension: "json")
                                 ?? Bundle.main.url(forResource: "seed", withExtension: "json"))
         let seed = try SeedLoader.decode(Data(contentsOf: url))
-        XCTAssertEqual(seed.recipes.count, 75)
+        XCTAssertEqual(seed.recipes.count, 337)
         XCTAssertTrue(seed.products.allSatisfy { $0.nutrition != nil }, "у всех продуктов есть КБЖУ")
 
         // У каждого ингредиента должен быть хотя бы один продукт в его категории.

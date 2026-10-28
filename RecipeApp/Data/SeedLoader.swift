@@ -9,6 +9,7 @@ enum SeedLoader {
     struct SeedFile: Decodable {
         let version: Int?
         let rubrics: [Rubric]?
+        let cuisines: [Cuisine]?
         let products: [ProductDTO]
         let recipes: [RecipeDTO]
     }
@@ -42,6 +43,7 @@ enum SeedLoader {
         let cookMinutes: Int?
         let featured: Bool?
         let icon: String?
+        let cuisine: String?
     }
 
     struct IngredientDTO: Decodable {
@@ -121,6 +123,7 @@ enum SeedLoader {
             recipe.cookMinutes = r.cookMinutes ?? recipe.cookMinutes
             recipe.featured = r.featured ?? false
             recipe.icon = r.icon ?? recipe.icon
+            recipe.cuisine = r.cuisine ?? recipe.cuisine
 
             // Ингредиенты обновляем по id: на них ссылаются сборки пользователя.
             let current = Dictionary(recipe.ingredients.map { ($0.id, $0) }, uniquingKeysWith: { a, _ in a })
@@ -154,4 +157,15 @@ struct Rubric: Decodable, Identifiable, Hashable {
     static let all: [Rubric] = SeedLoader.load()?.rubrics ?? []
 
     static func named(_ id: String) -> Rubric? { all.first { $0.id == id } }
+}
+
+/// Кухня мира («Итальянская», «Японская»…).
+struct Cuisine: Decodable, Identifiable, Hashable {
+    let id: String
+    let title: String
+    let icon: String
+
+    static let all: [Cuisine] = SeedLoader.load()?.cuisines ?? []
+
+    static func named(_ id: String) -> Cuisine? { all.first { $0.id == id } }
 }

@@ -35,20 +35,25 @@ enum Allergen: String, CaseIterable, Identifiable, Sendable {
         switch self {
         case .milk:
             return ["milk", "kefir", "cream", "sour-cream", "tvorog", "butter", "hard-cheese", "semi-hard-cheese",
-                    "feta", "suluguni", "processed-cheese", "sausage", "frankfurters", "chocolate"]
+                    "feta", "suluguni", "processed-cheese", "sausage", "frankfurters", "chocolate", "yogurt",
+                    "soft-cheese", "fresh-cheese", "mozzarella", "condensed-milk", "milk-powder", "ice-cream", "ghee",
+                    "cocoa-chips"]
         case .eggs:
-            return ["eggs", "mayonnaise", "noodles"]
+            return ["eggs", "mayonnaise", "noodles", "pasta-long", "noodles-wheat"]
         case .gluten:
             return ["flour", "spaghetti", "pasta-short", "noodles", "bread", "semolina", "pearl-barley", "lavash",
-                    "oats", "sausage", "frankfurters", "crab-sticks"]
+                    "oats", "sausage", "frankfurters", "crab-sticks", "pasta-long", "noodles-wheat", "bread-white",
+                    "breadcrumbs", "biscuits", "dough-sheets", "bulgur", "soy-sauce", "asian-sauces", "miso",
+                    "tortillas"]
         case .fish:
-            return ["salmon", "herring", "white-fish", "canned-fish"]
+            return ["salmon", "herring", "white-fish", "canned-fish", "fish-sauce", "seaweed"]
         case .seafood:
-            return ["crab-sticks"]
+            return ["crab-sticks", "shrimp", "seafood"]
         case .nuts:
-            return []
+            return ["nuts", "nut-paste"]
         case .pork:
-            return ["pork", "pork-cured", "smoked-meat", "ham", "minced-meat", "sausage", "smoked-sausage", "frankfurters"]
+            return ["pork", "pork-cured", "smoked-meat", "ham", "minced-meat", "sausage", "smoked-sausage", "frankfurters",
+                    "pork-belly", "jamon", "pate", "animal-fat"]
         }
     }
 }
@@ -57,12 +62,15 @@ enum Allergen: String, CaseIterable, Identifiable, Sendable {
 enum RecipeTraits {
     static let meatCategories: Set<String> = [
         "beef", "pork", "pork-cured", "minced-meat", "chicken-fillet", "chicken-thighs", "chicken-liver",
-        "sausage", "smoked-sausage", "frankfurters", "ham", "smoked-meat",
+        "sausage", "smoked-sausage", "frankfurters", "ham", "smoked-meat", "lamb", "veal", "rabbit",
+        "chicken-whole", "pork-belly", "jamon", "pate", "bones", "animal-fat", "broth",
     ]
-    static let fishCategories: Set<String> = ["salmon", "herring", "white-fish", "canned-fish", "crab-sticks"]
+    static let fishCategories: Set<String> = ["salmon", "herring", "white-fish", "canned-fish", "crab-sticks",
+                                              "shrimp", "seafood", "fish-sauce"]
     static let animalCategories: Set<String> = [
         "milk", "kefir", "cream", "sour-cream", "tvorog", "butter", "hard-cheese", "semi-hard-cheese", "feta",
-        "suluguni", "processed-cheese", "eggs", "mayonnaise", "honey",
+        "suluguni", "processed-cheese", "eggs", "mayonnaise", "honey", "yogurt", "soft-cheese", "fresh-cheese",
+        "mozzarella", "condensed-milk", "milk-powder", "ice-cream", "ghee", "gelatin",
     ]
 
     static func categories(_ recipe: Recipe) -> Set<String> { Set(recipe.ingredients.map(\.categoryId)) }

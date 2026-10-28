@@ -26,8 +26,10 @@ final class Recipe {
     var steps: [String]
     /// Рецепт создан пользователем (можно удалить).
     var isUserCreated: Bool = false
-    /// Рубрика каталога: breakfast, soup, salad, main, side, pastry.
+    /// Рубрика каталога: breakfast, soup, salad, main, side, pastry, sauce.
     var rubric: String = ""
+    /// Кухня: russian, italian, georgian… (пусто — своя без кухни).
+    var cuisine: String = ""
     var cookMinutes: Int = 0
     /// Иллюстрация (RecipeApp/Resources/Food/food-<icon>.png).
     var icon: String = ""

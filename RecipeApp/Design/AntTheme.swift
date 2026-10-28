@@ -72,6 +72,7 @@ enum Ant {
         case "main": return orange
         case "side": return cyan
         case "pastry": return magenta
+        case "sauce": return purple
         default: return blue
         }
     }

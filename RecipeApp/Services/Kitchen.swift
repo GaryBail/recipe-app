@@ -6,7 +6,9 @@ import SwiftData
 enum FridgeMatcher {
     /// То, что почти всегда есть дома: не требуем отмечать.
     static let staples: Set<String> = ["black-pepper", "paprika", "sunflower-oil", "olive-oil", "sugar", "vinegar",
-                                       "baking-powder"]
+                                       "baking-powder", "frying-oil", "cumin", "coriander-seed", "turmeric",
+                                       "spice-mix", "chili-powder", "warm-spices", "dried-herbs", "seeds-spices",
+                                       "vanilla"]
 
     struct Result: Identifiable {
         let recipe: Recipe
@@ -243,26 +245,37 @@ enum ShoppingList {
     static func department(for categoryId: String) -> (order: Int, title: String) {
         switch categoryId {
         case "tomatoes", "cucumbers", "onion", "garlic", "carrot", "beetroot", "potato", "cabbage", "pumpkin",
-             "mushrooms", "radish", "lettuce", "herbs", "lemon", "apples", "bell-pepper", "eggplant", "zucchini":
+             "mushrooms", "radish", "lettuce", "herbs", "lemon", "apples", "bell-pepper", "eggplant", "zucchini",
+             "spinach", "leek", "fennel", "celery", "daikon", "avocado", "lime", "citrus", "ginger", "chili",
+             "green-beans", "cauliflower", "napa-cabbage", "bean-sprouts", "shiitake", "tropical-fruit", "banana",
+             "pear", "berries", "melon", "plums", "okra", "horseradish", "lemongrass":
             return (0, "Овощи и фрукты")
         case "milk", "kefir", "cream", "sour-cream", "tvorog", "butter", "hard-cheese", "semi-hard-cheese", "feta",
-             "suluguni", "processed-cheese", "eggs":
+             "suluguni", "processed-cheese", "eggs", "yogurt", "soft-cheese", "fresh-cheese", "mozzarella",
+             "condensed-milk", "ice-cream", "ghee", "tofu", "kimchi":
             return (1, "Молочное и яйца")
         case "beef", "pork", "minced-meat", "chicken-fillet", "chicken-thighs", "chicken-liver", "pork-cured",
-             "sausage", "smoked-sausage", "frankfurters", "ham", "smoked-meat":
+             "sausage", "smoked-sausage", "frankfurters", "ham", "smoked-meat", "lamb", "veal", "rabbit",
+             "chicken-whole", "pork-belly", "jamon", "pate", "bones", "animal-fat":
             return (2, "Мясо и колбасы")
-        case "salmon", "herring", "white-fish", "crab-sticks":
+        case "salmon", "herring", "white-fish", "crab-sticks", "shrimp", "seafood":
             return (3, "Рыба")
-        case "bread", "lavash":
+        case "bread", "lavash", "bread-white", "tortillas", "dough-sheets":
             return (4, "Хлеб")
         case "flour", "semolina", "oats", "buckwheat", "rice", "millet", "pearl-barley", "lentils", "split-peas",
              "spaghetti", "pasta-short", "noodles", "sugar", "yeast", "baking-powder", "cocoa", "raisins", "honey",
-             "chocolate":
+             "chocolate", "rice-paper", "noodles-rice", "noodles-wheat", "pasta-long", "bulgur", "chickpeas",
+             "dry-beans", "corn-flour", "starch", "breadcrumbs", "biscuits", "rice-cakes", "gelatin", "nuts",
+             "nut-paste", "sesame", "brown-sugar", "cocoa-chips", "dried-fruit", "milk-powder", "syrup",
+             "bean-paste", "coffee-tea", "crackers", "dried-mushrooms", "seaweed":
             return (5, "Бакалея")
         case "pickles", "sauerkraut", "peas", "corn", "canned-beans", "canned-fish", "canned-tomatoes",
-             "tomato-paste", "olives", "mayonnaise", "vinegar", "sunflower-oil", "olive-oil":
+             "tomato-paste", "olives", "mayonnaise", "vinegar", "sunflower-oil", "olive-oil", "coconut-milk",
+             "fish-sauce", "soy-sauce", "asian-sauces", "miso", "chili-paste", "ketchup", "mustard", "sesame-oil",
+             "frying-oil", "pickled-veg", "hominy", "broth", "tamarind", "juice", "alcohol", "citrus-juice":
             return (6, "Консервы, масла, соусы")
-        case "black-pepper", "paprika":
+        case "black-pepper", "paprika", "cumin", "coriander-seed", "turmeric", "spice-mix", "chili-powder",
+             "warm-spices", "dried-herbs", "saffron", "vanilla", "seeds-spices":
             return (7, "Специи")
         default:
             return (8, "Другое")
