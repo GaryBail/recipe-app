@@ -94,12 +94,15 @@ final class NutritionAndCatalogTests: XCTestCase {
         for recipe in recipes where !recipe.isUserCreated {
             let s = NutritionCalculator.recipeSummary(recipe, products: products)
             XCTAssertTrue(s.missing.isEmpty, "\(recipe.title): нет данных для \(s.missing)")
-            XCTAssertGreaterThan(s.perServing(recipe.servings).kcal, 50, recipe.title)
+            // соусы и лёгкие салаты бывают совсем некалорийными — проверяем только, что посчитано
+            XCTAssertGreaterThan(s.perServing(recipe.servings).kcal, recipe.rubric == "sauce" || recipe.rubric == "salad" ? 5 : 50,
+                                 recipe.title)
         }
     }
 
     func testRubricsLoaded() {
-        XCTAssertEqual(Rubric.all.map(\.id), ["breakfast", "soup", "salad", "main", "side", "pastry"])
+        XCTAssertEqual(Rubric.all.map(\.id), ["breakfast", "soup", "salad", "main", "side", "pastry", "sauce"])
+        XCTAssertEqual(Cuisine.named("japanese")?.title, "Японская")
         XCTAssertEqual(Rubric.named("soup")?.title, "Супы")
     }
 
