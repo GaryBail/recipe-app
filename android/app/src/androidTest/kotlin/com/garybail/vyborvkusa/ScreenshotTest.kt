@@ -9,7 +9,6 @@ import androidx.compose.ui.semantics.getOrNull
 import androidx.compose.ui.test.SemanticsMatcher
 import androidx.compose.ui.test.hasContentDescription
 import androidx.compose.ui.test.hasText
-import androidx.test.espresso.Espresso
 import androidx.test.rule.GrantPermissionRule
 import androidx.compose.ui.test.hasTestTag
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
@@ -161,7 +160,6 @@ class ScreenshotTest {
         rule.onNodeWithTag("bell").performClick()
         rule.waitUntilAtLeastOneExists(hasText("Отличный выбор сыра", substring = true), timeoutMillis = 15_000)
         shot("notifications")
-        Espresso.pressBack()
 
         tab("community")
         rule.waitUntilAtLeastOneExists(hasTestTag("community-build"), timeoutMillis = 20_000)
