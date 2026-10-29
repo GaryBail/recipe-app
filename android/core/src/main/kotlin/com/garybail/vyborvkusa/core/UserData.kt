@@ -82,7 +82,9 @@ data class Build(
         val recipe = catalog.recipe(recipeId) ?: return emptyList()
         return recipe.ingredients.mapNotNull { ingredient ->
             val product = product(ingredient, catalog) ?: return@mapNotNull null
-            CartLine(product.id, product.barcode, product.displayName,
+            // Свой продукт («Антоновка с дачи») магазины не найдут — ищем по категории («Яблоки»).
+            val query = if (product.id.startsWith("user-")) catalog.categoryTitle(product.categoryId) else product.displayName
+            CartLine(product.id, product.barcode, query,
                      recipe.scaledAmount(ingredient, effectiveServings(recipe)), ingredient.unit)
         }
     }

@@ -306,6 +306,16 @@ class CoreTests {
     }
 
     @Test
+    fun ownProductsAreSearchedByCategory() {
+        val pie = Recipe("user-pie", "Пирог", "", 6, emptyList(),
+                         listOf(Ingredient("a", "Яблоки", "apples", 500.0, MeasureUnit.GRAMS, 0)), isUserCreated = true)
+        val withMine = catalog.with(listOf(pie), listOf(Product("user-p-antonovka", "Антоновка с дачи", null, "apples")))
+        val line = Build("b", "Пирог", "user-pie", mapOf("a" to "user-p-antonovka"), 0).cartLines(withMine).single()
+        assertEquals(withMine.categoryTitle("apples"), line.title)
+        assertEquals("user-pie", withMine.recipes.first().id)
+    }
+
+    @Test
     fun pkceMatchesRfc7636Example() {
         // Пример из RFC 7636, приложение B.
         assertEquals("E9Melhoa2OwvFrEMTJguCHaoeK1t8URWbuGJSstw-cM",

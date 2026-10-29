@@ -138,7 +138,7 @@ private fun QuoteCard(q: CartQuote, best: Boolean, expanded: Boolean, onToggle: 
                         if (q.store.id in CartTransfer.stores) AntTag("корзина целиком", ant.purple)
                     }
                 }
-                Text(rub(q.total), fontWeight = FontWeight.Bold, fontSize = 20.sp,
+                Text(if (q.lines.isEmpty()) "—" else rub(q.total), fontWeight = FontWeight.Bold, fontSize = 20.sp,
                      color = if (best) ant.green.text else ant.text)
             }
             val delivery = when {
