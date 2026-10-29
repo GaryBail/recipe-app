@@ -166,6 +166,13 @@ class AuthStore:
                 city_id TEXT,
                 created_at TEXT NOT NULL
             );
+            CREATE TABLE IF NOT EXISTS social_logins (
+                provider TEXT NOT NULL,
+                subject TEXT NOT NULL,
+                user_id TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+                created_at TEXT NOT NULL,
+                PRIMARY KEY (provider, subject)
+            );
             CREATE TABLE IF NOT EXISTS sessions (
                 token_hash TEXT PRIMARY KEY,
                 user_id TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
@@ -254,6 +261,31 @@ class AuthStore:
             )
             created = True
             self.db.commit()
+            row = self._user(user_id)
+        return self.public(row), self._new_session(row["id"]), created
+
+    def social_login(self, provider: str, subject: str, email: str | None,
+                     display_name: str | None) -> tuple[dict[str, Any], str, bool]:
+        """Вход через VK ID / Яндекс ID. Как и с Apple, не привязываем к аккаунту с тем же email
+        автоматически: иначе чужой email, зарегистрированный без подтверждения, «перехватил» бы вход.
+        Почту провайдер уже проверил, поэтому новый аккаунт сразу считается подтверждённым."""
+        row = self.db.execute(
+            "SELECT u.* FROM social_logins s JOIN users u ON u.id = s.user_id WHERE s.provider = ? AND s.subject = ?",
+            (provider, subject)).fetchone()
+        created = False
+        if row is None:
+            email = email.strip().lower() if email else None
+            taken = email is not None and self.db.execute(
+                "SELECT 1 FROM users WHERE email = ?", (email,)).fetchone() is not None
+            user_id = uuid.uuid4().hex
+            name = (display_name or "").strip()[:50] or "Пользователь"
+            self.db.execute(
+                "INSERT INTO users (id, email, display_name, created_at, email_verified) VALUES (?, ?, ?, ?, 1)",
+                (user_id, None if taken else email, name, _now()))
+            self.db.execute("INSERT INTO social_logins (provider, subject, user_id, created_at) VALUES (?, ?, ?, ?)",
+                            (provider, subject, user_id, _now()))
+            self.db.commit()
+            created = True
             row = self._user(user_id)
         return self.public(row), self._new_session(row["id"]), created
 

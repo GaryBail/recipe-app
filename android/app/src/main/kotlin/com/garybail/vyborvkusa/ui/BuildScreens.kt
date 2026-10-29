@@ -76,6 +76,11 @@ fun BuildEditorScreen(model: AppModel, loaded: AppModel.Loaded, nav: Nav, recipe
         }
     }
     var expanded by rememberSaveable { mutableStateOf<String?>(recipe.ingredients.firstOrNull()?.id) }
+    // «Чаще выбирают»: что берут другие пользователи для этого рецепта (если сервер подключён).
+    var choices by remember { mutableStateOf<com.garybail.vyborvkusa.core.Choices?>(null) }
+    androidx.compose.runtime.LaunchedEffect(recipe.id) {
+        choices = model.community()?.let { runCatching { it.choices(recipe.id) }.getOrNull() }
+    }
 
     ScreenScaffold(
         title = if (existing == null) "Новая сборка" else "Изменить сборку",
@@ -103,6 +108,17 @@ fun BuildEditorScreen(model: AppModel, loaded: AppModel.Loaded, nav: Nav, recipe
                 Text("Выберите продукт для каждого ингредиента — по ним посчитаем КБЖУ и сравним цены в магазинах.",
                      color = ant.textSecondary, fontSize = 14.sp)
             }
+            val popular = choices
+            if (popular != null && popular.builds > 0) {
+                item {
+                    OutlinedButton(onClick = {
+                        for ((ingredientId, list) in popular.ingredients) {
+                            val top = list.maxByOrNull { it.count } ?: continue
+                            if (catalog.product(top.product.id) != null) selection[ingredientId] = top.product.id
+                        }
+                    }, modifier = Modifier.fillMaxWidth()) { Text("Выбрать как большинство (${popular.builds} сборок)") }
+                }
+            }
             items(recipe.ingredients, key = { it.id }) { ing ->
                 val products = catalog.productsByCategory[ing.categoryId].orEmpty()
                 val chosen = selection[ing.id]?.let(catalog::product)
@@ -126,7 +142,14 @@ fun BuildEditorScreen(model: AppModel, loaded: AppModel.Loaded, nav: Nav, recipe
                                     verticalAlignment = Alignment.CenterVertically) {
                                     RadioButton(selected = selection[ing.id] == p.id, onClick = { selection[ing.id] = p.id })
                                     Column(Modifier.weight(1f)) {
-                                        Text(p.name, color = ant.text)
+                                        Row(verticalAlignment = Alignment.CenterVertically) {
+                                            Text(p.name, color = ant.text)
+                                            val count = choices?.ingredients?.get(ing.id)?.firstOrNull { it.product.id == p.id }?.count
+                                            if (count != null && count > 0) {
+                                                Spacer(Modifier.width(6.dp))
+                                                AntTag("чаще выбирают · $count", ant.volcano)
+                                            }
+                                        }
                                         val meta = listOfNotNull(p.brand, p.nutrition?.let { "${it.kcal.toInt()} ккал/100 г" })
                                         if (meta.isNotEmpty()) Text(meta.joinToString(" · "), fontSize = 12.sp, color = ant.textTertiary)
                                     }
@@ -197,6 +220,7 @@ fun BuildScreen(model: AppModel, loaded: AppModel.Loaded, nav: Nav, id: String) 
                     }
                 }
                 item { PriceWatchCard(model, nav, id, build.isWatched) }
+                item { PublishCard(model, nav, build) }
                 item {
                     SectionTitle("Продукты") { ServingsStepper(servings, { model.setBuildServings(id, it) }) }
                 }
@@ -254,5 +278,45 @@ fun BuildScreen(model: AppModel, loaded: AppModel.Loaded, nav: Nav, id: String) 
             },
             dismissButton = { TextButton(onClick = { confirmDelete = false }) { Text("Отмена") } },
         )
+    }
+}
+
+/** Публикация сборки в сообществе (вместе со своим рецептом). */
+@Composable
+private fun PublishCard(model: AppModel, nav: Nav, build: com.garybail.vyborvkusa.core.Build) {
+    val ant = Ant.colors
+    val scope = rememberCoroutineScope()
+    var busy by remember { mutableStateOf(false) }
+    var error by remember { mutableStateOf<String?>(null) }
+    val account = model.account
+    AntCard {
+        Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+            Text("Сообщество", fontWeight = FontWeight.SemiBold, color = ant.text)
+            when {
+                build.authorName != null -> Text("Сборка ${build.authorName} из сообщества.", fontSize = 13.sp, color = ant.textSecondary)
+                account == null -> {
+                    Text("Поделитесь сборкой — другие увидят ваш выбор продуктов и смогут оценить.", fontSize = 13.sp,
+                         color = ant.textSecondary)
+                    OutlinedButton(onClick = { nav.auth() }) { Text("Войти, чтобы опубликовать") }
+                }
+                !account.isEmailVerified -> Text("Подтвердите почту в профиле, чтобы публиковать сборки.", fontSize = 13.sp,
+                                                  color = ant.textSecondary)
+                build.remoteId != null -> {
+                    AntTag("Опубликовано", ant.green)
+                    Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        OutlinedButton(onClick = { nav.communityBuild(build.remoteId!!) }) { Text("Открыть") }
+                        TextButton(onClick = {
+                            busy = true
+                            scope.launch { error = model.unpublish(build.id); busy = false }
+                        }, enabled = !busy) { Text("Снять с публикации") }
+                    }
+                }
+                else -> Button(onClick = {
+                    busy = true
+                    scope.launch { error = model.publish(build.id); busy = false }
+                }, enabled = !busy, modifier = Modifier.testTag("publish")) { Text("Опубликовать в сообществе") }
+            }
+            error?.let { Text(it, color = ant.error, fontSize = 13.sp) }
+        }
     }
 }

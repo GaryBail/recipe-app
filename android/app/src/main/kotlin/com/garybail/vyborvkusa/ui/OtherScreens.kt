@@ -67,15 +67,30 @@ fun FavoritesScreen(model: AppModel, loaded: AppModel.Loaded, nav: Nav) {
     ScreenScaffold("Избранное") { padding ->
         Column(Modifier.padding(padding)) {
             SingleChoiceSegmentedButtonRow(Modifier.fillMaxWidth().padding(horizontal = 16.dp)) {
-                listOf("Рецепты", "Мои сборки").forEachIndexed { i, title ->
+                listOf("Избранное", "Сборки", "Мои рецепты").forEachIndexed { i, title ->
                     SegmentedButton(selected = tab == i, onClick = { tab = i },
-                                    shape = SegmentedButtonDefaults.itemShape(i, 2)) { Text(title) }
+                                    shape = SegmentedButtonDefaults.itemShape(i, 3), modifier = Modifier.testTag("segment-$i")) {
+                        Text(title, maxLines = 1, fontSize = 13.sp)
+                    }
                 }
             }
             if (tab == 0) {
                 if (favorites.isEmpty()) EmptyState("Пока пусто", "Нажмите ♡ на странице рецепта — он появится здесь.",
                                                     icon = "cooking")
                 else RecipeGrid(favorites, loaded, nav)
+            } else if (tab == 2) {
+                val mine = loaded.catalog.recipes.filter { it.isUserCreated }
+                RecipeGrid(mine, loaded, nav) {
+                    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                        Button(onClick = { nav.newRecipe() }, modifier = Modifier.fillMaxWidth().testTag("new-recipe")) {
+                            Text("+ Свой рецепт")
+                        }
+                        if (mine.isEmpty()) {
+                            Text("Запишите семейный рецепт: подберём к нему продукты, посчитаем КБЖУ и сравним цены.",
+                                 color = Ant.colors.textSecondary, fontSize = 14.sp)
+                        }
+                    }
+                }
             } else {
                 if (data.builds.isEmpty()) {
                     EmptyState("Сборок нет", "Откройте рецепт и нажмите «Выбрать продукты».", icon = "shallow-pan-of-food")
@@ -89,7 +104,9 @@ fun FavoritesScreen(model: AppModel, loaded: AppModel.Loaded, nav: Nav) {
                                     Spacer(Modifier.width(12.dp))
                                     Column {
                                         Text(b.name, fontWeight = FontWeight.SemiBold, color = Ant.colors.text)
-                                        Text(recipe?.title.orEmpty(), fontSize = 13.sp, color = Ant.colors.textSecondary)
+                                        Text(listOfNotNull(recipe?.title, b.authorName?.let { "от $it" }).joinToString(" · "),
+                                             fontSize = 13.sp, color = Ant.colors.textSecondary)
+                                        if (b.remoteId != null) AntTag("В сообществе", Ant.colors.purple)
                                     }
                                 }
                             }
@@ -112,7 +129,7 @@ fun ProfileScreen(model: AppModel, nav: Nav) {
     val settings = model.data.settings
     val ant = Ant.colors
     var server by rememberSaveable { mutableStateOf(settings.serverUrl) }
-    ScreenScaffold("Профиль") { padding ->
+    ScreenScaffold("Профиль", actions = { NotificationsBell(model, nav) }) { padding ->
         LazyColumn(Modifier.padding(padding).fillMaxSize().testTag("profile"), contentPadding = PaddingValues(16.dp),
                    verticalArrangement = Arrangement.spacedBy(12.dp)) {
             item { SectionTitle("Аккаунт") }

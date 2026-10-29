@@ -129,6 +129,29 @@ class AuthApi(private val api: ApiClient) {
     suspend fun logout() {
         runCatching { api.send("POST", "auth/logout") }
     }
+
+    // ---------- VK ID и Яндекс ID ----------
+
+    @Serializable
+    private class Providers(val providers: List<String> = emptyList())
+
+    @Serializable
+    private class StartResponse(val url: String)
+
+    @Serializable
+    private class OAuthBody(val code: String, val codeVerifier: String, val deviceId: String?, val state: String?)
+
+    /** Какие способы входа настроены на сервере: "vk", "yandex". */
+    suspend fun oauthProviders(): List<String> =
+        api.json.decodeFromString(Providers.serializer(), api.send("GET", "auth/oauth/providers")).providers
+
+    /** Адрес страницы входа провайдера. */
+    suspend fun oauthStart(provider: String, state: String, codeChallenge: String): String = api.json.decodeFromString(
+        StartResponse.serializer(),
+        api.send("GET", "auth/oauth/$provider/start?state=$state&code_challenge=$codeChallenge")).url
+
+    suspend fun oauthLogin(provider: String, code: String, codeVerifier: String, deviceId: String?, state: String?) =
+        session(api.send("POST", "auth/oauth/$provider", body(OAuthBody(code, codeVerifier, deviceId, state))))
 }
 
 // ---------- Слежение за ценой ----------

@@ -304,4 +304,13 @@ class CoreTests {
             "stores": [{"store_id": "lenta", "total": "412.50", "complete": true, "missing": 0}]}""")
         assertEquals("Лента", WatchApi.storeName(watch.best!!.storeId))
     }
+
+    @Test
+    fun pkceMatchesRfc7636Example() {
+        // Пример из RFC 7636, приложение B.
+        assertEquals("E9Melhoa2OwvFrEMTJguCHaoeK1t8URWbuGJSstw-cM",
+                     Pkce.challenge("dBjftJeZ4CVP-mB92K27uhbUJU1p1r_wW1gFWFOEjXk"))
+        val token = Pkce.randomToken()
+        assertTrue(token.length >= 43 && token.all { it.isLetterOrDigit() || it == '-' || it == '_' })
+    }
 }

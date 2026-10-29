@@ -32,6 +32,19 @@ class Catalog(
     }
 
     fun recipe(id: String): Recipe? = recipesById[id]
+
+    /** Каталог вместе со своими рецептами и продуктами пользователя (свои рецепты — первыми). */
+    fun with(extraRecipes: List<Recipe>, extraProducts: List<Product>): Catalog {
+        if (extraRecipes.isEmpty() && extraProducts.isEmpty()) return this
+        val base = recipes.filter { !it.isUserCreated }
+        val ids = extraRecipes.map { it.id }.toSet()
+        val baseProducts = products.filter { !it.id.startsWith("user-") }
+        val baseIds = baseProducts.map { it.id }.toSet()
+        return Catalog(version, extraRecipes + base.filter { it.id !in ids },
+                       baseProducts + extraProducts.filter { it.id !in baseIds }.distinctBy { it.id },
+                       rubrics, cuisines, departments, categories.values.toList())
+    }
+
     fun product(id: String): Product? = productsById[id]
     fun category(id: String): CategoryInfo? = categories[id]
     fun rubric(id: String): Rubric? = rubrics.firstOrNull { it.id == id }

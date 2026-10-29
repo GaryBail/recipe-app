@@ -24,13 +24,22 @@ android {
     }
 
     // Тестовый ключ подписи лежит в репозитории, чтобы новые сборки ставились поверх старых.
-    // Для RuStore / Google Play нужен отдельный ключ, который в репозиторий не попадает.
+    // Ключ для RuStore в репозиторий не попадает: CI берёт его из секретов GitHub (см. android/README.md).
+    val releaseKeystore = System.getenv("RELEASE_KEYSTORE")?.let { file(it) }?.takeIf { it.exists() }
     signingConfigs {
         create("test") {
             storeFile = file("test.keystore")
             storePassword = "vyborvkusa"
             keyAlias = "test"
             keyPassword = "vyborvkusa"
+        }
+        if (releaseKeystore != null) {
+            create("release") {
+                storeFile = releaseKeystore
+                storePassword = System.getenv("RELEASE_KEYSTORE_PASSWORD")
+                keyAlias = System.getenv("RELEASE_KEY_ALIAS")
+                keyPassword = System.getenv("RELEASE_KEY_PASSWORD")
+            }
         }
     }
 
@@ -40,7 +49,7 @@ android {
         }
         release {
             isMinifyEnabled = false
-            signingConfig = signingConfigs.getByName("test")
+            signingConfig = signingConfigs.getByName(if (releaseKeystore != null) "release" else "test")
         }
     }
 
@@ -89,6 +98,9 @@ dependencies {
     implementation("androidx.compose.material:material-icons-core")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0")
+    implementation("androidx.exifinterface:exifinterface:1.3.7")
+    // Фоновая проверка уведомлений — работает и на телефонах без сервисов Google.
+    implementation("androidx.work:work-runtime-ktx:2.10.0")
     debugImplementation("androidx.compose.ui:ui-tooling")
 
     testImplementation("junit:junit:4.13.2")

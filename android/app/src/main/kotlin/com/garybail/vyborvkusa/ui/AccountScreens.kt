@@ -102,6 +102,8 @@ fun AuthScreen(model: AppModel, nav: Nav) {
     var busy by remember { mutableStateOf(false) }
 
     LaunchedEffect(model.account) { if (model.account != null) nav.back() }
+    LaunchedEffect(model.serverUrl) { model.loadOAuthProviders() }
+    val context = androidx.compose.ui.platform.LocalContext.current
 
     fun run(action: suspend () -> Unit) {
         busy = true
@@ -168,6 +170,23 @@ fun AuthScreen(model: AppModel, nav: Nav) {
             }
             if (mode == 1) {
                 Text("После регистрации пришлём код подтверждения на почту.", fontSize = 13.sp, color = ant.textSecondary)
+            }
+            if (mode < 2 && model.oauthProviders.isNotEmpty()) {
+                Text("или", color = ant.textTertiary, modifier = Modifier.align(Alignment.CenterHorizontally))
+                for (p in listOf("vk", "yandex").filter { it in model.oauthProviders }) {
+                    OutlinedButton(onClick = {
+                        model.oauthError = null
+                        scope.launch {
+                            model.startOAuth(p)?.let { url ->
+                                context.startActivity(android.content.Intent(android.content.Intent.ACTION_VIEW,
+                                                                             android.net.Uri.parse(url)))
+                            }
+                        }
+                    }, modifier = Modifier.fillMaxWidth().testTag("oauth-$p")) {
+                        Text(if (p == "vk") "Войти через VK ID" else "Войти с Яндекс ID")
+                    }
+                }
+                model.oauthError?.let { Text(it, color = ant.error) }
             }
             if (mode == 0) TextButton(onClick = { mode = 2; error = null }) { Text("Забыли пароль?") }
             if (mode == 2) TextButton(onClick = { mode = 0; codeSent = false; error = null }) { Text("Вернуться ко входу") }

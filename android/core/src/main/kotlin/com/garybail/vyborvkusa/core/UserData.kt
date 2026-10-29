@@ -17,6 +17,12 @@ data class UserData(
     val settings: Settings = Settings(),
     /** Порции, выбранные на странице рецепта: recipeId → порции. */
     val recipeServings: Map<String, Int> = emptyMap(),
+    /** Свои рецепты и рецепты, сохранённые из сообщества (id начинается с «user-»). */
+    val userRecipes: List<CommunityRecipe> = emptyList(),
+    /** Продукты, которых нет в каталоге: свои и из чужих сборок. */
+    val userProducts: List<CommunityProduct> = emptyList(),
+    /** id уведомлений, о которых уже показали системное уведомление. */
+    val notifiedIds: List<Long> = emptyList(),
 ) {
     fun isFavorite(recipeId: String) = recipeId in favorites
 
@@ -61,6 +67,11 @@ data class Build(
     val servings: Int? = null,
     /** Включено слежение за ценой (подписка на сервере, id подписки = id сборки). */
     val isWatched: Boolean = false,
+    /** id опубликованной копии в сообществе. */
+    val remoteId: String? = null,
+    /** Сборка сохранена из сообщества: чья и откуда. */
+    val authorName: String? = null,
+    val sourceRemoteId: String? = null,
 ) {
     fun effectiveServings(recipe: Recipe) = servings ?: recipe.servings
 

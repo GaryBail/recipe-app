@@ -13,12 +13,14 @@ from dataclasses import dataclass
 from datetime import datetime, timezone
 from typing import Any
 
-from fastapi import APIRouter, BackgroundTasks, Depends, FastAPI, Header, HTTPException, Request
+from fastapi import APIRouter, BackgroundTasks, Depends, FastAPI, Header, HTTPException, Query, Request
+from fastapi.responses import RedirectResponse
 from pydantic import BaseModel, Field
 
 from .auth import (AppleLoginIn, AppleTokenError, AppleTokenVerifier, AuthStore, ChangePasswordIn, CodeIn,
                    CodeTooSoon, EmailTaken, ForgotIn, LoginIn, ProfileUpdateIn, RegisterIn, ResetIn)
 from .mailer import Mailer, code_email, mailer_from_env
+from .oauth import OAuthError, app_redirect, providers_from_env
 from .ratelimit import RateLimiter, wait_text
 from .community import BlockIn, CommunityStore, PublishIn, RatingIn, ReportIn, open_db
 from .models import CartLineRequest
@@ -67,6 +69,14 @@ class Stores:
     limiter: RateLimiter
     watches: Any = None
     recipes: Any = None
+    oauth: Any = None  # {"yandex": YandexOAuth, "vk": VKOAuth} — только настроенные
+
+
+class OAuthIn(BaseModel):
+    code: str = Field(min_length=1, max_length=1000)
+    code_verifier: str = Field(min_length=43, max_length=128)
+    device_id: str | None = Field(default=None, max_length=300)
+    state: str | None = Field(default=None, max_length=100)
 
 
 # Лимиты: (сколько, за сколько секунд)
@@ -241,6 +251,41 @@ def auth_router(s: Stores, current_user, token_dep) -> APIRouter:
         except AppleTokenError as e:
             raise HTTPException(401, f"Не удалось проверить вход через Apple: {e}")
         user, token, created = s.auth.apple_login(claims["sub"], claims.get("email"), body.display_name)
+        return session(user, token, created)
+
+    # ---------- VK ID и Яндекс ID (см. app/oauth.py) ----------
+
+    def provider(name: str):
+        p = (s.oauth or {}).get(name)
+        if p is None:
+            raise HTTPException(404, "Этот способ входа не настроен на сервере")
+        return p
+
+    @r.get("/oauth/providers")
+    async def oauth_providers():
+        return {"providers": sorted(s.oauth or {})}
+
+    @r.get("/oauth/{name}/start")
+    async def oauth_start(name: str, state: str = Query(min_length=8, max_length=100),
+                          code_challenge: str = Query(min_length=43, max_length=128)):
+        return {"url": provider(name).authorize_url(state, code_challenge)}
+
+    @r.get("/oauth/{name}/callback")
+    async def oauth_callback(name: str, request: Request):
+        provider(name)
+        return RedirectResponse(app_redirect(name, request.url.query), status_code=302)
+
+    @r.post("/oauth/{name}")
+    async def oauth_login(name: str, body: OAuthIn, request: Request):
+        p = provider(name)
+        ip_key = f"oauth:ip:{client_ip(request)}"
+        limit(s, ip_key, LOGIN_PER_IP)
+        s.limiter.hit(ip_key)
+        try:
+            identity = await p.identity(body.code, body.code_verifier, device_id=body.device_id, state=body.state)
+        except OAuthError as e:
+            raise HTTPException(401, f"Не удалось войти: {e}")
+        user, token, created = s.auth.social_login(identity.provider, identity.subject, identity.email, identity.name)
         return session(user, token, created)
 
     @r.get("/me")
@@ -510,7 +555,7 @@ def notifications_router(s: Stores, current_user) -> APIRouter:
 def create_app(service: PriceService | None = None, db_path: str | None = None,
                apple: AppleTokenVerifier | None = None, push: PushSender | None = None,
                mailer: Mailer | None = None, limiter_clock=None, price_watch: bool | None = None,
-               media_dir: str | None = None) -> FastAPI:
+               media_dir: str | None = None, oauth: dict | None = None) -> FastAPI:
     holder: dict[str, Any] = {}
 
     db = open_db(db_path or os.getenv("COMMUNITY_DB", "community.db"))
@@ -521,6 +566,7 @@ def create_app(service: PriceService | None = None, db_path: str | None = None,
         notifications=NotificationStore(db),
         apple=apple or AppleTokenVerifier(audience=os.getenv("APPLE_BUNDLE_ID", "com.garybail.recipeapp")),
         push=push or push_from_env(),
+        oauth=oauth if oauth is not None else providers_from_env(),
         mailer=mailer or mailer_from_env(),
         limiter=RateLimiter(db, clock=limiter_clock) if limiter_clock else RateLimiter(db),
     )

@@ -10,6 +10,12 @@ import com.garybail.vyborvkusa.core.ApiClient
 import com.garybail.vyborvkusa.core.ApiException
 import com.garybail.vyborvkusa.core.AuthApi
 import com.garybail.vyborvkusa.core.Build
+import com.garybail.vyborvkusa.core.CommunityApi
+import com.garybail.vyborvkusa.core.CommunityBuild
+import com.garybail.vyborvkusa.core.CommunityProduct
+import com.garybail.vyborvkusa.core.CommunityRecipe
+import com.garybail.vyborvkusa.core.NotificationList
+import com.garybail.vyborvkusa.core.Pkce
 import com.garybail.vyborvkusa.core.SessionResponse
 import com.garybail.vyborvkusa.core.WatchApi
 import com.garybail.vyborvkusa.core.Catalog
@@ -52,6 +58,14 @@ class AppModel(private val app: Application) {
 
     var loaded by mutableStateOf<Loaded?>(null)
         private set
+
+    /** Каталог из seed.json; к нему добавляются свои рецепты и продукты пользователя. */
+    private var baseCatalog: Catalog? = null
+
+    private fun rebuildLoaded() {
+        val base = baseCatalog ?: return
+        loaded = Loaded(base.with(data.userRecipes.map { it.toRecipe() }, data.userProducts.map { it.toProduct() }))
+    }
     var data by mutableStateOf(UserData())
         private set
 
@@ -163,10 +177,11 @@ class AppModel(private val app: Application) {
                         runCatching { file.copyTo(File(app.filesDir, "user.broken.json"), overwrite = true) }  // не теряем
                         UserData()
                     }
-                Loaded(catalog) to user
+                catalog to user
             }
             data = user
-            loaded = catalog
+            baseCatalog = catalog
+            rebuildLoaded()
             refreshAccount()
         }
     }
@@ -174,7 +189,9 @@ class AppModel(private val app: Application) {
     // ---------- Сохранение ----------
 
     fun update(transform: (UserData) -> UserData) {
+        val old = data
         data = transform(data)
+        if (old.userRecipes != data.userRecipes || old.userProducts != data.userProducts) rebuildLoaded()
         val snapshot = data
         saveJob?.cancel()
         saveJob = scope.launch {
@@ -248,4 +265,147 @@ class AppModel(private val app: Application) {
     fun clearShopping() = update { it.copy(shopping = emptyList()) }
 
     fun updateSettings(transform: (Settings) -> Settings) = update { it.copy(settings = transform(it.settings)) }
+
+    // ---------- Свои рецепты ----------
+
+    /** Сохраняет свой рецепт (новый или изменённый) и продукты для своих категорий. */
+    fun saveUserRecipe(recipe: CommunityRecipe, products: List<CommunityProduct>) = update { d ->
+        val recipes = if (d.userRecipes.any { it.id == recipe.id }) d.userRecipes.map { if (it.id == recipe.id) recipe else it }
+                      else listOf(recipe) + d.userRecipes
+        d.copy(userRecipes = recipes, userProducts = (d.userProducts + products).distinctBy { it.id })
+    }
+
+    fun deleteUserRecipe(id: String) {
+        StepPhotos.deleteAll(app, id)
+        update { d ->
+            d.copy(userRecipes = d.userRecipes.filter { it.id != id }, builds = d.builds.filter { it.recipeId != id },
+                   favorites = d.favorites - id)
+        }
+    }
+
+    // ---------- Сообщество ----------
+
+    fun community(): CommunityApi? = api()?.let(::CommunityApi)
+
+    /** Публикует сборку (вместе со своим рецептом); возвращает текст ошибки или null. */
+    suspend fun publish(buildId: String): String? {
+        val loaded = loaded ?: return null
+        val build = data.builds.firstOrNull { it.id == buildId } ?: return null
+        val recipe = loaded.catalog.recipe(build.recipeId) ?: return "Рецепт не найден"
+        val client = community() ?: return "Укажите адрес сервера в профиле."
+        val request = CommunityApi.publishRequest(build, recipe, loaded.catalog) ?: return "В сборке нет выбранных продуктов."
+        return try {
+            val published = client.publish(request)
+            update { d -> d.copy(builds = d.builds.map { if (it.id == buildId) it.copy(remoteId = published.id) else it }) }
+            null
+        } catch (e: Exception) {
+            e.message ?: "Не удалось опубликовать"
+        }
+    }
+
+    suspend fun unpublish(buildId: String): String? {
+        val build = data.builds.firstOrNull { it.id == buildId } ?: return null
+        val remote = build.remoteId ?: return null
+        val client = community() ?: return "Укажите адрес сервера в профиле."
+        return try {
+            client.delete(remote)
+            update { d -> d.copy(builds = d.builds.map { if (it.id == buildId) it.copy(remoteId = null) else it }) }
+            null
+        } catch (e: Exception) {
+            e.message ?: "Не удалось снять с публикации"
+        }
+    }
+
+    /** Сохраняет чужую сборку себе: свой рецепт автора и продукты не из каталога — тоже. Возвращает id сборки. */
+    fun saveCommunityBuild(remote: CommunityBuild): String {
+        val existing = data.builds.firstOrNull { it.sourceRemoteId == remote.id }
+        if (existing != null) return existing.id
+        val catalog = baseCatalog
+        val id = UUID.randomUUID().toString()
+        update { d ->
+            val needRecipe = catalog?.recipe(remote.recipe.id) == null && d.userRecipes.none { it.id == remote.recipe.id }
+            val newProducts = remote.items.map { it.product }.filter { catalog?.product(it.id) == null }
+            d.copy(
+                userRecipes = if (needRecipe) listOf(remote.recipe) + d.userRecipes else d.userRecipes,
+                userProducts = (d.userProducts + newProducts).distinctBy { it.id },
+                builds = listOf(Build(id, remote.name, remote.recipe.id,
+                                      remote.items.associate { it.ingredientId to it.product.id },
+                                      System.currentTimeMillis(), authorName = remote.authorName,
+                                      sourceRemoteId = remote.id)) + d.builds,
+            )
+        }
+        return id
+    }
+
+    // ---------- Уведомления ----------
+
+    var unreadCount by mutableStateOf(0)
+        private set
+
+    suspend fun notifications(): NotificationList? {
+        if (account == null) return null
+        val list = community()?.let { runCatching { it.notifications() }.getOrNull() } ?: return null
+        unreadCount = list.unreadCount
+        return list
+    }
+
+    suspend fun markNotificationsRead(ids: List<Long>) {
+        community()?.let { runCatching { it.markRead(ids) } }
+        unreadCount = 0
+    }
+
+    /** Запомнить, о каких уведомлениях уже показали системное (фоновая проверка). */
+    fun rememberNotified(ids: List<Long>) = update { it.copy(notifiedIds = (it.notifiedIds + ids).takeLast(200)) }
+
+    // ---------- Переходы из уведомлений ----------
+
+    /** Экран, который нужно открыть (например, после нажатия на системное уведомление). */
+    var pendingRoute by mutableStateOf<String?>(null)
+
+    // ---------- Вход через VK ID и Яндекс ID ----------
+
+    /** Способы входа, настроенные на сервере. */
+    var oauthProviders by mutableStateOf<List<String>>(emptyList())
+        private set
+    var oauthError by mutableStateOf<String?>(null)
+
+    suspend fun loadOAuthProviders() {
+        val api = api() ?: return
+        oauthProviders = runCatching { AuthApi(api).oauthProviders() }.getOrDefault(emptyList())
+    }
+
+    /** Адрес страницы входа; code_verifier и state запоминаем до возврата из браузера. */
+    suspend fun startOAuth(provider: String): String? {
+        val api = api() ?: return null
+        val verifier = Pkce.randomToken()
+        val state = Pkce.randomToken(16)
+        prefs.edit().putString("oauth_provider", provider).putString("oauth_verifier", verifier)
+            .putString("oauth_state", state).apply()
+        return runCatching { AuthApi(api).oauthStart(provider, state, Pkce.challenge(verifier)) }
+            .onFailure { oauthError = it.message }.getOrNull()
+    }
+
+    /** Браузер вернул в приложение: vyborvkusa://oauth/<провайдер>?code=…&state=…[&device_id=…] */
+    fun handleOAuthRedirect(uri: android.net.Uri) {
+        if (uri.scheme != "vyborvkusa" || uri.host != "oauth") return
+        val provider = uri.lastPathSegment ?: return
+        val saved = prefs.getString("oauth_state", null)
+        val verifier = prefs.getString("oauth_verifier", null)
+        val code = uri.getQueryParameter("code")
+        val state = uri.getQueryParameter("state")
+        prefs.edit().remove("oauth_state").remove("oauth_verifier").remove("oauth_provider").apply()
+        when {
+            uri.getQueryParameter("error") != null -> { oauthError = "Вход отменён"; return }
+            code == null || verifier == null || saved == null || state != saved || provider !in setOf("vk", "yandex") -> {
+                oauthError = "Не удалось завершить вход — попробуйте ещё раз"
+                return
+            }
+        }
+        val api = api() ?: return
+        scope.launch {
+            runCatching {
+                storeSession(AuthApi(api).oauthLogin(provider, code!!, verifier!!, uri.getQueryParameter("device_id"), state))
+            }.onFailure { oauthError = it.message ?: "Не удалось войти" }
+        }
+    }
 }

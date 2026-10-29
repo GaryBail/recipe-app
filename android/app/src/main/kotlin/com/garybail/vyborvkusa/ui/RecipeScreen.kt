@@ -23,13 +23,17 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Delete
+import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.Share
 import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.material.icons.filled.Warning
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
+import androidx.compose.material3.TextButton
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -38,7 +42,12 @@ import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.graphics.asImageBitmap
+import com.garybail.vyborvkusa.StepPhotos
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -73,11 +82,16 @@ fun RecipeScreen(model: AppModel, loaded: AppModel.Loaded, nav: Nav, id: String)
     val warnings = data.settings.diet.warnings(recipe, loaded.traits)
     val builds = data.builds.filter { it.recipeId == id }
     val palette = ant.rubric(recipe.rubric)
+    var confirmDelete by remember { mutableStateOf(false) }
 
     ScreenScaffold(
         title = recipe.title,
         onBack = { nav.back() },
         actions = {
+            if (recipe.isUserCreated) {
+                IconButton(onClick = { nav.editRecipe(id) }) { Icon(Icons.Filled.Edit, "Изменить рецепт") }
+                IconButton(onClick = { confirmDelete = true }) { Icon(Icons.Filled.Delete, "Удалить рецепт") }
+            }
             IconButton(onClick = { model.toggleFavorite(id) }, modifier = Modifier.testTag("favorite")) {
                 Icon(if (favorite) Icons.Filled.Favorite else Icons.Filled.FavoriteBorder,
                      if (favorite) "Убрать из избранного" else "В избранное",
@@ -184,15 +198,31 @@ fun RecipeScreen(model: AppModel, loaded: AppModel.Loaded, nav: Nav, id: String)
                     item { NutritionCard(summary.perServing(recipe.servings), DailyNorm(data.settings.dailyKcal.toDouble())) }
                 }
                 item { SectionTitle("Приготовление") }
-                itemsIndexed(recipe.steps) { i, step -> StepRow(i + 1, step) }
+                itemsIndexed(recipe.steps) { i, step ->
+                    StepRow(i + 1, step, photo = if (recipe.isUserCreated) StepPhotos.file(context, id, i + 1) else null)
+                }
             }
             SnackbarHost(snackbar, Modifier.align(Alignment.BottomCenter))
         }
     }
+
+    if (confirmDelete) {
+        AlertDialog(
+            onDismissRequest = { confirmDelete = false },
+            title = { Text("Удалить рецепт?") },
+            text = { Text("Рецепт, его сборки и фото шагов пропадут с телефона.") },
+            confirmButton = {
+                TextButton(onClick = { confirmDelete = false; nav.back(); model.deleteUserRecipe(id) }) {
+                    Text("Удалить", color = ant.error)
+                }
+            },
+            dismissButton = { TextButton(onClick = { confirmDelete = false }) { Text("Отмена") } },
+        )
+    }
 }
 
 @Composable
-fun StepRow(number: Int, text: String) {
+fun StepRow(number: Int, text: String, photo: java.io.File? = null) {
     val ant = Ant.colors
     Row(Modifier.fillMaxWidth()) {
         Box(Modifier.size(28.dp).clip(CircleShape).background(ant.primary), contentAlignment = Alignment.Center) {
@@ -201,6 +231,16 @@ fun StepRow(number: Int, text: String) {
         Spacer(Modifier.width(12.dp))
         Column(Modifier.weight(1f)) {
             Text(text, color = ant.text)
+            if (photo != null) {
+                val bitmap = remember(photo.path, photo.lastModified()) {
+                    android.graphics.BitmapFactory.decodeFile(photo.path)?.asImageBitmap()
+                }
+                if (bitmap != null) {
+                    Spacer(Modifier.height(6.dp))
+                    androidx.compose.foundation.Image(bitmap, null, contentScale = androidx.compose.ui.layout.ContentScale.Crop,
+                        modifier = Modifier.fillMaxWidth().height(180.dp).clip(RoundedCornerShape(AntSize.radius)))
+                }
+            }
             StepTimer.duration(text)?.let {
                 Spacer(Modifier.height(4.dp))
                 AntTag("⏱ ${StepTimer.format(it)}", ant.cyan)

@@ -12,6 +12,7 @@ import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.ShoppingCart
+import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.Badge
 import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.Icon
@@ -44,6 +45,7 @@ private val tabs = listOf(
     Tab("home", "Рецепты", Icons.Filled.Home),
     Tab("favorites", "Избранное", Icons.Filled.Favorite),
     Tab("shopping", "Покупки", Icons.Filled.ShoppingCart),
+    Tab("community", "Сообщество", Icons.Filled.Star),
     Tab("profile", "Профиль", Icons.Filled.Person),
 )
 
@@ -61,6 +63,10 @@ class Nav(private val controller: NavHostController) {
     fun fridge() = controller.navigate("fridge")
     fun cooking(recipeId: String) = controller.navigate("cooking/$recipeId")
     fun auth() = controller.navigate("auth")
+    fun communityBuild(id: String) = controller.navigate("community-build/$id")
+    fun notifications() = controller.navigate("notifications")
+    fun newRecipe() = controller.navigate("recipe-edit")
+    fun editRecipe(id: String) = controller.navigate("recipe-edit?id=$id")
     /** Вкладка всегда открывает свой первый экран (а не последний из истории). */
     fun tab(route: String) = controller.navigate(route) {
         popUpTo(controller.graph.findStartDestination().id)
@@ -69,9 +75,11 @@ class Nav(private val controller: NavHostController) {
 }
 
 @Composable
-fun AppRoot(model: AppModel) {
+fun AppRoot(model: AppModel, onLoggedIn: () -> Unit = {}) {
     VyborVkusaTheme {
         val loaded = model.loaded
+        // После входа в аккаунт спрашиваем разрешение на уведомления (Android 13+).
+        androidx.compose.runtime.LaunchedEffect(model.account?.id) { if (model.account != null) onLoggedIn() }
         if (loaded == null) Splash() else MainContent(model, loaded)
     }
 }
@@ -86,6 +94,14 @@ private fun MainContent(model: AppModel, loaded: AppModel.Loaded) {
         var selectedTab by androidx.compose.runtime.saveable.rememberSaveable { androidx.compose.runtime.mutableStateOf("home") }
         if (current != null && tabs.any { it.route == current } && current != selectedTab) selectedTab = current
         val openShopping = model.data.shopping.count { !it.isChecked }
+        // Открыть экран по нажатию на системное уведомление.
+        val pending = model.pendingRoute
+        androidx.compose.runtime.LaunchedEffect(pending) {
+            if (pending != null) {
+                model.pendingRoute = null
+                controller.navigate(pending)
+            }
+        }
 
         Scaffold(
             containerColor = Ant.colors.bgLayout,
@@ -103,7 +119,7 @@ private fun MainContent(model: AppModel, loaded: AppModel.Loaded) {
                                         Icon(tab.icon, null)
                                     }
                                 },
-                                label = { Text(tab.title) },
+                                label = { Text(tab.title, maxLines = 1, softWrap = false) },
                                 modifier = Modifier.testTag("tab-${tab.route}"),
                             )
                         }
@@ -117,6 +133,14 @@ private fun MainContent(model: AppModel, loaded: AppModel.Loaded) {
                 composable("shopping") { ShoppingScreen(model, loaded) }
                 composable("profile") { ProfileScreen(model, nav) }
                 composable("auth") { AuthScreen(model, nav) }
+                composable("community") { CommunityScreen(model, loaded, nav) }
+                composable("community-build/{id}") {
+                    CommunityBuildScreen(model, loaded, nav, it.arguments?.getString("id").orEmpty())
+                }
+                composable("notifications") { NotificationsScreen(model, nav) }
+                composable("recipe-edit?id={id}", arguments = listOf(navArgument("id") { type = NavType.StringType; nullable = true })) {
+                    RecipeEditorScreen(model, loaded, nav, it.arguments?.getString("id"))
+                }
                 composable("recipe/{id}") { RecipeScreen(model, loaded, nav, it.arguments?.getString("id").orEmpty()) }
                 composable(
                     "build-edit?recipe={recipe}&build={build}",
