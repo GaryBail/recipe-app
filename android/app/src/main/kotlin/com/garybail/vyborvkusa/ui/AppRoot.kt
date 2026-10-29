@@ -29,6 +29,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
@@ -119,7 +120,7 @@ private fun MainContent(model: AppModel, loaded: AppModel.Loaded) {
                                         Icon(tab.icon, null)
                                     }
                                 },
-                                label = { Text(tab.title, maxLines = 1, softWrap = false) },
+                                label = { Text(tab.title, maxLines = 1, softWrap = false, fontSize = 11.sp) },
                                 modifier = Modifier.testTag("tab-${tab.route}"),
                             )
                         }

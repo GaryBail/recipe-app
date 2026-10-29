@@ -4,7 +4,13 @@ import android.graphics.Bitmap
 import androidx.compose.ui.graphics.asAndroidBitmap
 import androidx.compose.ui.test.ExperimentalTestApi
 import androidx.compose.ui.test.captureToImage
+import androidx.compose.ui.semantics.SemanticsProperties
+import androidx.compose.ui.semantics.getOrNull
+import androidx.compose.ui.test.SemanticsMatcher
 import androidx.compose.ui.test.hasContentDescription
+import androidx.compose.ui.test.hasText
+import androidx.test.espresso.Espresso
+import androidx.test.rule.GrantPermissionRule
 import androidx.compose.ui.test.hasTestTag
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onAllNodesWithTag
@@ -28,7 +34,12 @@ import org.junit.runner.RunWith
 @OptIn(ExperimentalTestApi::class)
 @RunWith(AndroidJUnit4::class)
 class ScreenshotTest {
-    @get:Rule
+    @get:Rule(order = 0)
+    val permissions: GrantPermissionRule =
+        if (android.os.Build.VERSION.SDK_INT >= 33) GrantPermissionRule.grant(android.Manifest.permission.POST_NOTIFICATIONS)
+        else GrantPermissionRule.grant()
+
+    @get:Rule(order = 1)
     val rule = createAndroidComposeRule<MainActivity>()
 
     private var index = 0
@@ -104,7 +115,7 @@ class ScreenshotTest {
 
         tab("favorites")
         shot("favorites")
-        rule.onNodeWithText("Мои сборки").performClick()
+        rule.onNodeWithTag("segment-1").performClick()
         shot("my-builds")
 
         tab("profile")
@@ -122,5 +133,65 @@ class ScreenshotTest {
         rule.onNodeWithTag("fridge-query").performTextInput("молок")
         rule.onAllNodesWithText("Молок", substring = true).onFirst().performClick()
         shot("fridge")
+
+        // Дальше — с настоящим сервером (CI запускает его рядом с эмулятором и передаёт адрес).
+        val server = InstrumentationRegistry.getArguments().getString("serverUrl") ?: return
+        withServer(server)
+    }
+
+    private val anyQuote = SemanticsMatcher("quote-*") {
+        it.config.getOrNull(SemanticsProperties.TestTag)?.startsWith("quote-") == true
+    }
+
+    private fun withServer(server: String) {
+        tab("profile")
+        rule.waitUntilExactlyOneExists(hasTestTag("profile"))
+        rule.onNodeWithTag("profile").performScrollToNode(hasTestTag("server-url"))
+        rule.onNodeWithTag("server-url").performTextInput(server)
+        rule.onNodeWithTag("profile").performScrollToNode(hasTestTag("login"))
+        rule.onNodeWithTag("login").performClick()
+        rule.waitUntilExactlyOneExists(hasTestTag("auth-email"))
+        rule.onNodeWithTag("auth-email").performTextInput("demo@vyborvkusa.test")
+        rule.onNodeWithTag("auth-password").performTextInput("demo12345")
+        shot("login")
+        rule.onNodeWithTag("auth-submit").performClick()
+        rule.waitUntilExactlyOneExists(hasTestTag("bell"), timeoutMillis = 20_000)
+        shot("profile-account")
+
+        rule.onNodeWithTag("bell").performClick()
+        rule.waitUntilAtLeastOneExists(hasText("Отличный выбор сыра", substring = true), timeoutMillis = 15_000)
+        shot("notifications")
+        Espresso.pressBack()
+
+        tab("community")
+        rule.waitUntilAtLeastOneExists(hasTestTag("community-build"), timeoutMillis = 20_000)
+        shot("community")
+        rule.onAllNodesWithText("Бабушкин пирог", substring = true).onFirst().performClick()
+        rule.waitUntilExactlyOneExists(hasTestTag("community-build-detail"), timeoutMillis = 15_000)
+        shot("community-build")
+        rule.onNodeWithTag("save-community").performClick()
+        rule.waitUntilExactlyOneExists(hasTestTag("build"))
+        shot("saved-build")
+
+        // Живые цены Ленты, Магнита, Ашана, ВкусВилла и Купера через наш сервер.
+        rule.onNodeWithTag("compare").performClick()
+        rule.waitUntilAtLeastOneExists(anyQuote, timeoutMillis = 120_000)
+        shot("compare-live")
+        rule.onAllNodes(anyQuote).onFirst().performClick()
+        shot("compare-live-details")
+
+        tab("favorites")
+        rule.onNodeWithTag("segment-2").performClick()
+        rule.onNodeWithTag("new-recipe").performClick()
+        rule.waitUntilExactlyOneExists(hasTestTag("recipe-title"))
+        rule.onNodeWithTag("recipe-title").performTextInput("Сырники по-маминому")
+        rule.onNodeWithTag("ingredient-title").performTextInput("Творог")
+        rule.waitUntilAtLeastOneExists(hasTestTag("category-option"))
+        rule.onAllNodesWithTag("category-option").onFirst().performClick()
+        rule.onNodeWithTag("ingredient-amount").performTextInput("400")
+        shot("recipe-editor")
+        rule.onNodeWithTag("save-recipe").performClick()
+        rule.waitUntilExactlyOneExists(hasTestTag("recipe"))
+        shot("own-recipe")
     }
 }

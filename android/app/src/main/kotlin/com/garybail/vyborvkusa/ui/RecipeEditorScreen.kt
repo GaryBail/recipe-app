@@ -188,7 +188,9 @@ fun RecipeEditorScreen(model: AppModel, loaded: AppModel.Loaded, nav: Nav, recip
                             if (options.isNotEmpty()) {
                                 Text("Из каталога — подберём продукты и цены:", fontSize = 12.sp, color = ant.textTertiary)
                                 FlowRow(horizontalArrangement = Arrangement.spacedBy(6.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
-                                    options.forEach { (cid, ctitle) -> AntCheckableTag(ctitle, false, { d.categoryId = cid }) }
+                                    options.forEach { (cid, ctitle) ->
+                                        AntCheckableTag(ctitle, false, { d.categoryId = cid }, Modifier.testTag("category-option"))
+                                    }
                                 }
                             }
                         }

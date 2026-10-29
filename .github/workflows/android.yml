@@ -86,6 +86,19 @@ jobs:
           distribution: temurin
           java-version: "17"
       - uses: gradle/actions/setup-gradle@v4
+      # Настоящий сервер рядом с эмулятором: тестовые пользователи и сборки (tools/seed_demo.py).
+      # Эмулятор видит компьютер, на котором запущен, по адресу 10.0.2.2.
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Start demo server
+        working-directory: backend
+        run: |
+          pip install -q -r requirements.txt
+          python ../tools/seed_demo.py "$RUNNER_TEMP/demo.db"
+          COMMUNITY_DB="$RUNNER_TEMP/demo.db" MEDIA_DIR="$RUNNER_TEMP/media" PRICE_WATCH=0 \
+            nohup uvicorn app.main:app --host 0.0.0.0 --port 8000 > "$RUNNER_TEMP/server.log" 2>&1 &
+          for i in $(seq 1 30); do curl -fsS localhost:8000/health && break; sleep 1; done
       - name: Enable KVM
         run: |
           echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
@@ -102,14 +115,13 @@ jobs:
           working-directory: android
           # Каждая строка — отдельный shell: статус теста сохраняем в файл, чтобы забрать скриншоты и после сбоя.
           script: |
-            ./gradlew --no-daemon :app:connectedDebugAndroidTest > connected.log 2>&1; echo $? > status.txt
+            ./gradlew --no-daemon :app:connectedDebugAndroidTest -Pandroid.testInstrumentationRunnerArguments.serverUrl=http://10.0.2.2:8000 > connected.log 2>&1; echo $? > status.txt
             mkdir -p screenshots && adb pull /data/local/tmp/screens/. screenshots/ || true
             grep -E "FAILED|Exception|AssertionError|expected|not found|failed" connected.log | head -30 | sed 's/^/::error::/' || true
             test "$(cat status.txt)" = "0"
-      - name: Pull screenshots after failure
+      - name: Server log on failure
         if: failure()
-        working-directory: android
-        run: ls screenshots 2>/dev/null || true
+        run: tail -n 30 "$RUNNER_TEMP/server.log" | sed 's/%/%25/g' | awk 'BEGIN{ORS="%0A"} {print}' | sed 's/^/::notice title=server log::/'; echo
       - name: Publish to android-screenshots branch
         if: always()
         working-directory: android

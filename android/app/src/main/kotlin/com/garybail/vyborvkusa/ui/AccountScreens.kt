@@ -134,7 +134,7 @@ fun AuthScreen(model: AppModel, nav: Nav) {
             }
             OutlinedTextField(email, { email = it }, label = { Text("Email") }, singleLine = true,
                               keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
-                              modifier = Modifier.fillMaxWidth())
+                              modifier = Modifier.fillMaxWidth().testTag("auth-email"))
             if (mode == 2 && codeSent) {
                 OutlinedTextField(code, { code = it.filter(Char::isDigit).take(6) }, label = { Text("Код из письма") },
                                   singleLine = true, keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
@@ -144,7 +144,7 @@ fun AuthScreen(model: AppModel, nav: Nav) {
                 OutlinedTextField(password, { password = it }, label = { Text(if (mode == 2) "Новый пароль" else "Пароль") },
                                   singleLine = true, visualTransformation = PasswordVisualTransformation(),
                                   keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
-                                  modifier = Modifier.fillMaxWidth(),
+                                  modifier = Modifier.fillMaxWidth().testTag("auth-password"),
                                   supportingText = { if (mode != 0) Text("Не короче 8 символов") })
             }
             error?.let { Text(it, color = ant.error) }
@@ -158,7 +158,7 @@ fun AuthScreen(model: AppModel, nav: Nav) {
                     }
                 },
                 enabled = !busy && email.contains("@"),
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier.fillMaxWidth().testTag("auth-submit"),
             ) {
                 if (busy) CircularProgressIndicator(Modifier.height(20.dp).width(20.dp), strokeWidth = 2.dp)
                 else Text(when {
